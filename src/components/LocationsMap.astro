@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from "../lib/site-config";
+import WhatsAppCTA from "./WhatsAppCTA.astro";
 ---
 
 <div class="grid gap-6 sm:grid-cols-2">
@@ -16,6 +17,13 @@ import { siteConfig } from "../lib/site-config";
         >
           Ver en Google Maps →
         </a>
+        <div class="mt-4">
+          <WhatsAppCTA
+            label={`WhatsApp ${location.name}`}
+            number={location.whatsappNumber}
+            class="!px-4 !py-2 text-sm"
+          />
+        </div>
       </div>
     ))
   }

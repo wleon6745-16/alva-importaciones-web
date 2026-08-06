@@ -6,7 +6,7 @@ export function organizationSchema() {
     "@type": "Organization",
     name: siteConfig.name,
     url: siteConfig.url,
-    logo: new URL("/brand/alva-logo.svg", siteConfig.url).toString(),
+    logo: new URL("/brand/alva-icon-512.png", siteConfig.url).toString(),
     sameAs: [siteConfig.instagram],
   };
 }
@@ -16,7 +16,7 @@ export function localBusinessSchemas() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: `${siteConfig.name} - ${location.name}`,
-    image: new URL("/brand/alva-logo.svg", siteConfig.url).toString(),
+    image: new URL("/brand/alva-icon-512.png", siteConfig.url).toString(),
     address: {
       "@type": "PostalAddress",
       streetAddress: location.address,

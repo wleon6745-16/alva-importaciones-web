@@ -4,6 +4,7 @@ import { whatsappLink } from "../lib/site-config";
 interface Props {
   label?: string;
   message?: string;
+  number?: string;
   variant?: "solid" | "outline";
   pulse?: boolean;
   class?: string;
@@ -12,6 +13,7 @@ interface Props {
 const {
   label = "Chatea por WhatsApp",
   message,
+  number,
   variant = "solid",
   pulse = false,
   class: className = "",
@@ -27,7 +29,7 @@ const variants = {
 ---
 
 <a
-  href={whatsappLink(message)}
+  href={whatsappLink(message, number)}
   target="_blank"
   rel="noopener noreferrer"
   class={`${base} ${variants[variant]} ${pulse ? "cta-pulse" : ""} ${className}`}

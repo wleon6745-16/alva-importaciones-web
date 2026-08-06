@@ -8,8 +8,6 @@ export const siteConfig = {
     "Importadora de insumos de uñas, capilares y maquillaje en Portoviejo, Manabí. Consulta precios y disponibilidad al instante por WhatsApp.",
   url: "https://alvaimportaciones.com", // TODO: dominio real
   instagram: "https://www.instagram.com/alvaimportaciones/",
-  // TODO: confirmar si es un número único o uno por local
-  whatsappNumber: "593000000000", // TODO: número real, formato internacional sin '+'
   whatsappMessage: "Hola, quisiera consultar sobre un producto",
   hours: [
     { days: "Lunes a sábado", time: "9:00 – 18:00" },
@@ -17,16 +15,18 @@ export const siteConfig = {
   ],
   locations: [
     {
-      name: "Local 1 - Portoviejo",
+      name: "Matriz",
       // TODO: dirección exacta / link de Google Maps
       address: "Portoviejo, Manabí, Ecuador",
       mapsUrl: "https://maps.google.com/?q=Alva+Importaciones+Portoviejo",
+      whatsappNumber: "593999526807",
     },
     {
-      name: "Local 2 - Portoviejo",
+      name: "Sucursal",
       // TODO: dirección exacta / link de Google Maps
       address: "Portoviejo, Manabí, Ecuador",
       mapsUrl: "https://maps.google.com/?q=Alva+Importaciones+Portoviejo",
+      whatsappNumber: "593963946590",
     },
   ],
   brands: [
@@ -41,7 +41,10 @@ export const siteConfig = {
   ],
 } as const;
 
-export function whatsappLink(message = siteConfig.whatsappMessage) {
+// Número de la Matriz usado como WhatsApp principal para los CTA generales del sitio.
+export const primaryWhatsappNumber = siteConfig.locations[0].whatsappNumber;
+
+export function whatsappLink(message = siteConfig.whatsappMessage, number = primaryWhatsappNumber) {
   const text = encodeURIComponent(message);
-  return `https://wa.me/${siteConfig.whatsappNumber}?text=${text}`;
+  return `https://wa.me/${number}?text=${text}`;
 }
