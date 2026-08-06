@@ -1,0 +1,25 @@
+---
+import { siteConfig } from "../lib/site-config";
+---
+
+<div class="grid gap-6 sm:grid-cols-2">
+  {
+    siteConfig.locations.map((location) => (
+      <div class="glass-card rounded-2xl p-6">
+        <h3 class="font-display text-lg text-primary-800">{location.name}</h3>
+        <p class="mt-2 text-sm text-ink-muted">{location.address}</p>
+        <a
+          href={location.mapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-4 inline-block text-sm font-semibold text-primary-700 hover:underline"
+        >
+          Ver en Google Maps →
+        </a>
+      </div>
+    ))
+  }
+</div>
+<p class="mt-4 text-xs text-ink-muted">
+  * Direcciones exactas pendientes de confirmación — actualizar en <code>src/lib/site-config.ts</code>.
+</p>

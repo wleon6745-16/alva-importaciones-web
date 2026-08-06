@@ -1,0 +1,41 @@
+---
+import { whatsappLink } from "../lib/site-config";
+
+interface Props {
+  label?: string;
+  message?: string;
+  variant?: "solid" | "outline";
+  pulse?: boolean;
+  class?: string;
+}
+
+const {
+  label = "Chatea por WhatsApp",
+  message,
+  variant = "solid",
+  pulse = false,
+  class: className = "",
+} = Astro.props;
+
+const base =
+  "inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition-transform duration-200 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700";
+
+const variants = {
+  solid: "bg-primary-800 text-white shadow-lg shadow-primary-900/20 hover:bg-primary-700",
+  outline: "border-2 border-primary-800 text-primary-800 hover:bg-primary-800 hover:text-white",
+};
+---
+
+<a
+  href={whatsappLink(message)}
+  target="_blank"
+  rel="noopener noreferrer"
+  class={`${base} ${variants[variant]} ${pulse ? "cta-pulse" : ""} ${className}`}
+>
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+    <path
+      d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.53 1.36 5.07L2 22l5.19-1.44a9.87 9.87 0 0 0 4.85 1.24h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.51 2 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.08.86.82-3-.2-.31a8.2 8.2 0 0 1-1.26-4.44c0-4.55 3.7-8.25 8.24-8.25 2.2 0 4.27.86 5.83 2.42a8.2 8.2 0 0 1 2.41 5.83c0 4.55-3.7 8.22-8.26 8.22Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.22-1.45-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.23.25-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28Z"
+    ></path>
+  </svg>
+  {label}
+</a>
