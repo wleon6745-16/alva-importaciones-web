@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteConfig } from "../lib/site-config";
+---
+
+<BaseLayout
+  title="Términos y Condiciones"
+  description="Términos y condiciones de Alva Importaciones."
+  path="/terminos"
+  noindex
+>
+  <section class="mx-auto max-w-3xl px-6 py-20">
+    <h1 class="font-display text-3xl text-primary-900">Términos y Condiciones</h1>
+    <div class="prose mt-8 max-w-none text-ink-muted">
+      <h2 class="font-display text-xl text-ink">Garantía y cambios</h2>
+      <p>
+        Nuestros productos tienen garantía por daño de fábrica. Para cambios, devoluciones o
+        casos distintos, una asesora confirma el proceso a seguir.
+      </p>
+      <h2 class="font-display text-xl text-ink">Horario de atención</h2>
+      <ul>
+        {siteConfig.hours.map((h) => <li>{h.days}: {h.time}</li>)}
+      </ul>
+      <h2 class="font-display text-xl text-ink">Curso de uñas acrílicas</h2>
+      <p>
+        La inscripción al curso requiere una matrícula de $10 para separar el cupo. El
+        horario de clase se confirma según la disponibilidad vigente.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

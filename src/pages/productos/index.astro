@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionReveal from "../../components/SectionReveal.astro";
+import CategoryCard from "../../components/CategoryCard.astro";
+import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
+import nailsImage from "../../assets/products/unas/nails-1.jpg";
+import hairImage from "../../assets/products/capilares/hair-3.png";
+import makeupImage from "../../assets/products/maquillaje/makeup-3.jpg";
+
+const categories = [
+  {
+    title: "Uñas / Nailart",
+    description: "Acrílicos, geles, esmaltes y todo lo necesario para nail art profesional.",
+    image: nailsImage,
+    href: "/productos/unas",
+  },
+  {
+    title: "Capilares",
+    description: "Tratamientos y productos capilares de marcas reconocidas.",
+    image: hairImage,
+    href: "/productos/capilares",
+  },
+  {
+    title: "Maquillaje",
+    description: "Maquillaje de marcas como Milani y La Girl USA.",
+    image: makeupImage,
+    href: "/productos/maquillaje",
+  },
+];
+---
+
+<BaseLayout
+  title="Productos"
+  description="Insumos de uñas, capilares y maquillaje disponibles en Alva Importaciones, Portoviejo."
+  path="/productos"
+>
+  <section class="hero-glow px-6 py-20 text-center">
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Catálogo</p>
+    <h1 class="mt-4 font-display text-4xl text-primary-900">Nuestros productos</h1>
+    <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-muted">
+      Estas son nuestras categorías. El precio y la disponibilidad exacta de cada producto los
+      confirmamos al instante por WhatsApp.
+    </p>
+  </section>
+
+  <SectionReveal as="section" class="px-6 pb-20">
+    <div class="mx-auto grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {categories.map((c) => <CategoryCard {...c} />)}
+    </div>
+  </SectionReveal>
+
+  <SectionReveal as="section" class="bg-blush-50 px-6 py-16 text-center">
+    <h2 class="font-display text-2xl text-primary-900">¿Buscas algo puntual?</h2>
+    <p class="mt-3 text-ink-muted">Pregúntanos directamente, tenemos precio y stock al instante.</p>
+    <WhatsAppCTA label="Consultar por WhatsApp" class="mt-6" />
+  </SectionReveal>
+</BaseLayout>

@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionReveal from "../components/SectionReveal.astro";
+import WhatsAppCTA from "../components/WhatsAppCTA.astro";
+import { courseSchema, breadcrumbSchema } from "../lib/structured-data";
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Inicio", path: "/" },
+  { name: "Cursos", path: "/cursos" },
+]);
+
+const highlights = [
+  { label: "Duración", value: "6 meses" },
+  { label: "Inversión", value: "$60 / mes (o 2 pagos de $30)" },
+  { label: "Matrícula", value: "$10 para separar tu cupo" },
+  { label: "Horario", value: "Se confirma según cupos disponibles" },
+];
+---
+
+<BaseLayout
+  title="Curso Profesional de Uñas Acrílicas"
+  description="Curso profesional de uñas acrílicas en Portoviejo. 6 meses, $60 al mes, matrícula $10."
+  path="/cursos"
+  structuredData={[courseSchema(), breadcrumbs]}
+>
+  <section class="hero-glow px-6 py-20 text-center">
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Formación</p>
+    <h1 class="mt-4 font-display text-4xl text-primary-900">
+      Curso Profesional de Uñas Acrílicas
+    </h1>
+    <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-muted">
+      Conviértete en nail artist profesional con una formación completa de 6 meses, dictada
+      por Alva Importaciones en Portoviejo.
+    </p>
+  </section>
+
+  <SectionReveal as="section" class="px-6 pb-16">
+    <div class="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
+      {
+        highlights.map((h) => (
+          <div class="glass-card rounded-2xl p-6">
+            <p class="text-sm font-semibold uppercase tracking-wide text-primary-700">
+              {h.label}
+            </p>
+            <p class="mt-2 font-display text-xl text-ink">{h.value}</p>
+          </div>
+        ))
+      }
+    </div>
+  </SectionReveal>
+
+  <SectionReveal as="section" class="bg-blush-50 px-6 py-16 text-center">
+    <h2 class="font-display text-2xl text-primary-900">¿Lista para reservar tu cupo?</h2>
+    <p class="mx-auto mt-3 max-w-xl text-ink-muted">
+      Una asesora te confirma qué horario está abierto actualmente y cómo separar tu lugar
+      con la matrícula.
+    </p>
+    <WhatsAppCTA
+      label="Reservar mi cupo"
+      class="mt-6"
+      message="Hola, quisiera información para inscribirme al curso de uñas acrílicas"
+    />
+  </SectionReveal>
+</BaseLayout>

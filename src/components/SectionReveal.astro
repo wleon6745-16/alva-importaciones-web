@@ -3,13 +3,14 @@ interface Props {
   class?: string;
   as?: "div" | "section";
   delay?: number;
+  id?: string;
 }
 
-const { class: className = "", as = "div", delay = 0 } = Astro.props;
+const { class: className = "", as = "div", delay = 0, ...rest } = Astro.props;
 const Tag = as;
 ---
 
-<Tag class:list={["reveal-on-scroll", className]} style={`transition-delay: ${delay}ms`}>
+<Tag class:list={["reveal-on-scroll", className]} style={`transition-delay: ${delay}ms`} {...rest}>
   <slot />
 </Tag>
 

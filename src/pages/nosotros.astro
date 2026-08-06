@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionReveal from "../components/SectionReveal.astro";
+import WhatsAppCTA from "../components/WhatsAppCTA.astro";
+import { siteConfig } from "../lib/site-config";
+import nailsImage from "../assets/products/unas/nails-2.jpg";
+---
+
+<BaseLayout
+  title="Nosotros"
+  description="Conoce la historia de Alva Importaciones, importadora de belleza en Portoviejo, Manabí."
+  path="/nosotros"
+>
+  <section class="hero-glow px-6 py-20">
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Nosotros</p>
+      <h1 class="mt-4 font-display text-4xl text-primary-900">{siteConfig.tagline}</h1>
+      <p class="mt-6 text-lg text-ink-muted">
+        Somos {siteConfig.name}, una importadora y distribuidora de productos de belleza en
+        Portoviejo. Trabajamos con marcas reconocidas de uñas, capilares y maquillaje, y
+        formamos a nuevas nail artists a través de nuestro curso profesional.
+      </p>
+    </div>
+  </section>
+
+  <SectionReveal as="section" class="px-6 py-20">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
+      <Image
+        src={nailsImage}
+        alt="Producto de uñas Alva Importaciones"
+        class="w-full rounded-3xl object-cover shadow-xl"
+        width={640}
+        height={480}
+      />
+      <div>
+        <h2 class="font-display text-3xl text-primary-900">Cercanía, marca y calidad</h2>
+        <p class="mt-6 text-ink-muted">
+          Desde nuestros locales en Portoviejo atendemos tanto a clientas particulares como a
+          profesionales que compran al por mayor. Manejamos marcas como {siteConfig.brands.slice(0, 4).join(", ")}
+          y más.
+        </p>
+        <p class="mt-4 text-ink-muted">
+          Para que comprar sea más fácil, sumamos un asistente por WhatsApp que responde con
+          precios y disponibilidad real al instante — sin perder el trato cercano de siempre.
+        </p>
+        <WhatsAppCTA label="Escríbenos" class="mt-8" />
+      </div>
+    </div>
+  </SectionReveal>
+
+  <SectionReveal as="section" class="bg-blush-50 px-6 py-16 text-center">
+    <a
+      href={siteConfig.instagram}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="font-display text-2xl text-primary-800 hover:underline"
+    >
+      Síguenos en Instagram @alvaimportaciones →
+    </a>
+  </SectionReveal>
+</BaseLayout>
