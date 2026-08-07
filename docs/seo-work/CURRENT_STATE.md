@@ -7,10 +7,10 @@
 ## Control de tarea (automático)
 
 <!-- AUTO:SUMMARY:START -->
-- Fase actual: 1
-- Tarea actual: SEO-001
+- Fase actual: 2
+- Tarea actual: SEO-002
 - Estado de la tarea actual: completed
-- Última actualización: 2026-08-07T03:34:31.327Z
+- Última actualización: 2026-08-07T21:10:41.538Z
 <!-- AUTO:SUMMARY:END -->
 
 ## Git
@@ -45,17 +45,25 @@ que no se repitan:
   `BreadcrumbList`, sitemap vía `@astrojs/sitemap`, `robots.txt` estático.
 - Deployment: `Dockerfile` + `nginx.conf` standalone (sin probar en producción real).
 
-## Fase actual: 1 — Sistema de planificación y punto de restauración
+## Próxima tarea: SEO-003 — Slugs y páginas individuales de muebles
 
-## Tarea actual: SEO-001 — Crear sistema persistente de trabajo
+Aún no iniciada (`npm run task:start -- SEO-003` la marca `in_progress`). Ver
+`tasks/seo-tasks.json` para la definición completa (criterios de aceptación, comandos de
+validación) y `docs/seo-work/NEXT_SESSION.md` para las instrucciones completas de cómo abordarla.
 
-Ver `tasks/seo-tasks.json` para la definición completa (criterios de aceptación, comandos de
-validación).
+## Tareas completadas en el sistema de control
+
+- **SEO-001** — Sistema persistente de trabajo. Ver `docs/seo-work/sessions/session-01.md`.
+- **SEO-002** — Fuente central del catálogo (sanitizada). Ver
+  `docs/seo-work/sessions/session-02.md`. Resultado: `src/types/product.ts`,
+  `scripts/sync-public-catalog.ts`, `src/data/products.generated.json` (25 productos de muebles),
+  `src/pages/productos/muebles.astro` migrado a consumir el JSON. Decisión: sin conexión en vivo
+  a la base de datos de `ASISTENTE` por ahora (documentado, no es un conflicto de datos).
 
 ## Tareas pendientes
 
-Ver `tasks/seo-tasks.json` — Fases 2 a 16 (SEO-002 a SEO-016), todas en estado `pending`,
-bloqueadas por dependencias hasta que SEO-001 se complete.
+Ver `tasks/seo-tasks.json` — Fases 3 a 16 (SEO-003 a SEO-016), todas en estado `pending`,
+bloqueadas por dependencias hasta que la tarea previa se complete.
 
 ## Errores conocidos
 

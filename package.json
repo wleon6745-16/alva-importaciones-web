@@ -15,7 +15,8 @@
     "task:start": "node scripts/tasks.mjs start",
     "task:complete": "node scripts/tasks.mjs complete",
     "task:fail": "node scripts/tasks.mjs fail",
-    "task:validate": "node scripts/tasks.mjs validate"
+    "task:validate": "node scripts/tasks.mjs validate",
+    "catalog:sync": "node scripts/sync-public-catalog.ts"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.2",

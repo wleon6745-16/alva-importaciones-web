@@ -4,239 +4,48 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import SectionReveal from "../../components/SectionReveal.astro";
 import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
 import { breadcrumbSchema } from "../../lib/structured-data";
+import type { Product } from "../../types/product";
+import productsData from "../../data/products.generated.json";
 
-import camillaHidraulica from "../../assets/products/muebles/camilla-hidraulica-multiusos.jpg";
-import camillaLifting from "../../assets/products/muebles/camilla-lifting-multiusos.jpg";
-import camilla3Niveles from "../../assets/products/muebles/camilla-3-niveles.jpg";
-import sillon1 from "../../assets/products/muebles/sillon-peluqueria-1.jpg";
-import sillon2 from "../../assets/products/muebles/sillon-peluqueria-2.jpg";
-import sillon3 from "../../assets/products/muebles/sillon-peluqueria-3.jpg";
-import sillon4 from "../../assets/products/muebles/sillon-peluqueria-4.jpg";
-import sillon5 from "../../assets/products/muebles/sillon-peluqueria-5.jpg";
-import sillon6 from "../../assets/products/muebles/sillon-peluqueria-6.jpg";
-import sillon7 from "../../assets/products/muebles/sillon-peluqueria-7.jpg";
-import sillonLavaCabeza from "../../assets/products/muebles/sillon-lava-cabeza.jpg";
-import butacaFrancia from "../../assets/products/muebles/butaca-francia.jpg";
-import sillaConcha from "../../assets/products/muebles/silla-concha-pedicura.jpg";
-import sillonReina from "../../assets/products/muebles/sillon-reina-pedicura.jpg";
-import butacaSantander from "../../assets/products/muebles/butaca-santander.jpg";
-import butacaStyle from "../../assets/products/muebles/butaca-style.jpg";
-import sillaEstela from "../../assets/products/muebles/silla-estela.jpg";
-import mesaSillaConcha from "../../assets/products/muebles/mesa-silla-concha-manicura.jpg";
-import butacaMonet from "../../assets/products/muebles/butaca-monet.jpg";
-import carritoAuxiliar from "../../assets/products/muebles/carrito-auxiliar.jpg";
-import sillaBarberiaSt2200 from "../../assets/products/muebles/silla-barberia-st2200.jpg";
-import sillaBarberiaSt2001 from "../../assets/products/muebles/silla-barberia-st2001.jpg";
-import sillaAmobladaHidraulica from "../../assets/products/muebles/silla-amoblada-hidraulica.jpg";
-import lavacabezas from "../../assets/products/muebles/lavacabezas-st3000.jpg";
-import tinaSpaElectrica from "../../assets/products/muebles/tina-spa-electrica.jpg";
+const products = (productsData.products as Product[]).filter((p) => p.category === "muebles");
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "../../assets/products/muebles/*.{jpg,jpeg,png,webp}",
+  { eager: true },
+);
+
+function imageFor(filename: string): ImageMetadata {
+  const entry = images[`../../assets/products/muebles/${filename}`];
+  if (!entry) throw new Error(`Imagen no encontrada para: ${filename}`);
+  return entry.default;
+}
+
+function priceLabel(product: Product): string {
+  if (product.price === undefined) return "Consultar precio";
+  const isWhole = Number.isInteger(product.price);
+  return `$${product.price.toFixed(isWhole ? 0 : 2)}`;
+}
+
+const SUBCATEGORY_TITLES: Record<string, string> = {
+  camillas: "Camillas",
+  "sillones-y-sillas-de-peluqueria-barberia": "Sillones y sillas de peluquería / barbería",
+  "butacas-y-sillas": "Butacas y sillas",
+  "mesas-de-trabajo": "Mesas de trabajo",
+  "equipo-y-accesorios-de-salon": "Equipo y accesorios de salón",
+};
+
+const SUBCATEGORY_ORDER = Object.keys(SUBCATEGORY_TITLES);
+
+const sections = SUBCATEGORY_ORDER.map((subcategory) => ({
+  title: SUBCATEGORY_TITLES[subcategory],
+  items: products.filter((p) => p.subcategory === subcategory),
+})).filter((section) => section.items.length > 0);
 
 const breadcrumbs = breadcrumbSchema([
   { name: "Inicio", path: "/" },
   { name: "Productos", path: "/productos" },
   { name: "Muebles", path: "/productos/muebles" },
 ]);
-
-const camillas = [
-  {
-    name: "Camilla hidráulica multiusos",
-    price: "$155",
-    code: "8833",
-    features: ["Base metálica", "Autoportante", "Reposamanos", "Portátil"],
-    image: camillaHidraulica,
-  },
-  {
-    name: "Camilla para lifting multiusos",
-    price: "$110",
-    code: "8181",
-    features: ["Portátil", "Autosoportante", "Base metálica"],
-    image: camillaLifting,
-  },
-  {
-    name: "Camilla multiuso 3 niveles",
-    price: "$208",
-    code: "9974",
-    features: [
-      "Niveles de inclinación ajustables",
-      "Cubierta de fácil limpieza",
-      "Cómoda y antideslizante",
-      "Color negro",
-    ],
-    image: camilla3Niveles,
-  },
-];
-
-const sillones = [
-  {
-    name: "Sillón de peluquería ST-2202",
-    price: "$345",
-    features: ["Base redonda", "Cuero de fácil limpieza", "Hidráulico", "Soporte para pies"],
-    image: sillon1,
-  },
-  {
-    name: "Sillón de peluquería ST-2215-1",
-    price: "$335",
-    features: ["Soporte para brazos", "Cuero de fácil limpieza", "Base metálica", "Hidráulico"],
-    image: sillon2,
-  },
-  {
-    name: "Sillón de peluquería",
-    price: "$349",
-    features: ["Reclinable", "Soporte para pies", "Hidráulico", "Reposamanos"],
-    image: sillon3,
-  },
-  {
-    name: "Sillón de peluquería",
-    price: "$359",
-    features: ["Reclinable", "Hidráulico", "Base metálica", "Soporte de pies estático"],
-    image: sillon4,
-  },
-  {
-    name: "Sillón de peluquería",
-    price: "$279",
-    features: ["Reclinable", "Base metálica", "Cubierta de cuero", "Soporte de pies estático"],
-    image: sillon5,
-  },
-  {
-    name: "Sillón de peluquería",
-    price: "$240",
-    features: ["Diseño sencillo", "Reclinable", "Base metálica", "Acolchonado"],
-    image: sillon6,
-  },
-  {
-    name: "Sillón de peluquería ST-2009-1",
-    price: "$237",
-    features: ["Reclinable", "Cubierta de cuero", "Base metálica", "Hidráulico"],
-    image: sillon7,
-  },
-  {
-    name: "Sillón lava cabeza",
-    price: "$365",
-    features: ["Acolchonado", "Poza cabeza de cerámica", "Cubierta de cuero", "Diseño elegante"],
-    image: sillonLavaCabeza,
-  },
-  {
-    name: "Silla de barbería SILETI ST-2200",
-    price: "$295",
-    code: "11002",
-    features: ["Reclinable", "Altura ajustable (hidráulico)", "Acolchado premium", "Estructura resistente"],
-    image: sillaBarberiaSt2200,
-  },
-  {
-    name: "Silla de barbería SILETI ST-2001",
-    price: "$230",
-    code: "10362",
-    features: ["Reclinable", "Sistema hidráulico", "Acolchado premium", "Reposapiés cómodo"],
-    image: sillaBarberiaSt2001,
-  },
-];
-
-const butacasYSillas = [
-  {
-    name: "Butaca Francia",
-    price: "$99",
-    code: "10399",
-    features: ["Máximo confort y ergonomía", "Acabado elegante", "Base metálica"],
-    image: butacaFrancia,
-  },
-  {
-    name: "Silla concha para pedicure",
-    price: "$250",
-    code: "10394",
-    features: ["Set de pedicura", "Base resistente"],
-    image: sillaConcha,
-  },
-  {
-    name: "Sillón Reina para pedicure",
-    price: "$350",
-    code: "10393",
-    features: ["Máximo confort y ergonomía", "Acabado elegante", "Recubierto en cuero"],
-    image: sillonReina,
-  },
-  {
-    name: "Butaca Santander",
-    price: "$65",
-    code: "10408",
-    features: ["Acabado elegante"],
-    image: butacaSantander,
-  },
-  {
-    name: "Butaca Style",
-    price: "$80",
-    code: "10400",
-    features: ["Máximo confort y ergonomía", "Acabado elegante", "Base metálica"],
-    image: butacaStyle,
-  },
-  {
-    name: "Silla Estela",
-    price: "$45",
-    code: "10411",
-    features: ["Acabado elegante"],
-    image: sillaEstela,
-  },
-  {
-    name: "Butaca Monet",
-    price: "$220",
-    code: "10404",
-    features: ["Cómoda y elegante", "Base ultra resistente", "Fácil limpieza"],
-    image: butacaMonet,
-  },
-  {
-    name: "Silla amoblada hidráulica",
-    price: "$48",
-    code: "10171",
-    features: ["Giratoria", "Altura ajustable", "Disponible en varios colores"],
-    image: sillaAmobladaHidraulica,
-  },
-];
-
-const mesas = [
-  {
-    name: "Set mesa + silla concha para manicura",
-    price: "$350",
-    code: "10392",
-    features: ["Organizador de esmaltes doble", "Dos cajones + espacio amplio", "Reposamanos + puff de espera"],
-    image: mesaSillaConcha,
-  },
-];
-
-const equipoYAccesorios = [
-  {
-    name: "Carrito auxiliar multiuso",
-    price: "$17.50",
-    code: "11842",
-    features: ["3 niveles", "Bandejas de malla", "Ruedas giratorias 360°", "Estructura de acero"],
-    image: carritoAuxiliar,
-  },
-  {
-    name: "Lavacabezas SILETI ST-3000-1",
-    features: ["Reclinable", "Lavabo profundo de diseño anatómico", "Acolchado premium"],
-    image: lavacabezas,
-  },
-  {
-    name: "Tina spa eléctrica",
-    price: "$36",
-    code: "8248",
-    features: ["Masaje relajante con rodillos", "Hidromasaje", "Uso profesional en salón"],
-    image: tinaSpaElectrica,
-  },
-];
-
-interface FurnitureItem {
-  name: string;
-  price?: string;
-  code?: string;
-  features: string[];
-  image: ImageMetadata;
-}
-
-const sections: { title: string; items: FurnitureItem[] }[] = [
-  { title: "Camillas", items: camillas },
-  { title: "Sillones y sillas de peluquería / barbería", items: sillones },
-  { title: "Butacas y sillas", items: butacasYSillas },
-  { title: "Mesas de trabajo", items: mesas },
-  { title: "Equipo y accesorios de salón", items: equipoYAccesorios },
-];
 ---
 
 <BaseLayout
@@ -267,8 +76,8 @@ const sections: { title: string; items: FurnitureItem[] }[] = [
               <div class="glass-card flex flex-col overflow-hidden rounded-2xl shadow-md">
                 <div class="aspect-square overflow-hidden bg-white">
                   <Image
-                    src={item.image}
-                    alt={item.name}
+                    src={imageFor(item.image)}
+                    alt={item.imageAlt}
                     width={500}
                     height={500}
                     class="h-full w-full object-contain"
@@ -276,7 +85,7 @@ const sections: { title: string; items: FurnitureItem[] }[] = [
                 </div>
                 <div class="flex flex-1 flex-col gap-2 p-5">
                   <h3 class="font-display text-lg text-primary-800">{item.name}</h3>
-                  <p class="text-xl font-semibold text-ink">{item.price ?? "Consultar precio"}</p>
+                  <p class="text-xl font-semibold text-ink">{priceLabel(item)}</p>
                   {item.features.length > 0 && (
                     <ul class="mt-1 space-y-1 text-sm text-ink-muted">
                       {item.features.map((f) => (

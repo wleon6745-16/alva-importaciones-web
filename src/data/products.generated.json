@@ -1,0 +1,428 @@
+{
+  "generatedAt": "2026-08-07T21:08:11.709Z",
+  "source": "manual-seed:scripts/sync-public-catalog.ts (migrado desde muebles.astro, 2026-08-07)",
+  "products": [
+    {
+      "id": "muebles-camilla-hidraulica-multiusos",
+      "slug": "camilla-hidraulica-multiusos",
+      "name": "Camilla hidráulica multiusos",
+      "category": "muebles",
+      "subcategory": "camillas",
+      "code": "8833",
+      "price": 155,
+      "currency": "USD",
+      "features": [
+        "Base metálica",
+        "Autoportante",
+        "Reposamanos",
+        "Portátil"
+      ],
+      "image": "camilla-hidraulica-multiusos.jpg",
+      "imageAlt": "Camilla hidráulica multiusos"
+    },
+    {
+      "id": "muebles-camilla-para-lifting-multiusos",
+      "slug": "camilla-para-lifting-multiusos",
+      "name": "Camilla para lifting multiusos",
+      "category": "muebles",
+      "subcategory": "camillas",
+      "code": "8181",
+      "price": 110,
+      "currency": "USD",
+      "features": [
+        "Portátil",
+        "Autosoportante",
+        "Base metálica"
+      ],
+      "image": "camilla-lifting-multiusos.jpg",
+      "imageAlt": "Camilla para lifting multiusos"
+    },
+    {
+      "id": "muebles-camilla-multiuso-3-niveles",
+      "slug": "camilla-multiuso-3-niveles",
+      "name": "Camilla multiuso 3 niveles",
+      "category": "muebles",
+      "subcategory": "camillas",
+      "code": "9974",
+      "price": 208,
+      "currency": "USD",
+      "features": [
+        "Niveles de inclinación ajustables",
+        "Cubierta de fácil limpieza",
+        "Cómoda y antideslizante",
+        "Color negro"
+      ],
+      "image": "camilla-3-niveles.jpg",
+      "imageAlt": "Camilla multiuso 3 niveles"
+    },
+    {
+      "id": "muebles-sillon-de-peluqueria-st-2202",
+      "slug": "sillon-de-peluqueria-st-2202",
+      "name": "Sillón de peluquería ST-2202",
+      "category": "muebles",
+      "subcategory": "sillones-y-sillas-de-peluqueria-barberia",
+      "price": 345,
+      "currency": "USD",
+      "features": [
+        "Base redonda",
+        "Cuero de fácil limpieza",
+        "Hidráulico",
+        "Soporte para pies"
+      ],
+      "image": "sillon-peluqueria-1.jpg",
+      "imageAlt": "Sillón de peluquería ST-2202"
+    },
+    {
+      "id": "muebles-sillon-de-peluqueria-st-2215-1",
+      "slug": "sillon-de-peluqueria-st-2215-1",
+      "name": "Sillón de peluquería ST-2215-1",
+      "category": "muebles",
+      "subcategory": "sillones-y-sillas-de-peluqueria-barberia",
+      "price": 335,
+      "currency": "USD",
+      "features": [
+        "Soporte para brazos",
+        "Cuero de fácil limpieza",
+        "Base metálica",
+        "Hidráulico"
+      ],
+      "image": "sillon-peluqueria-2.jpg",
+      "imageAlt": "Sillón de peluquería ST-2215-1"
+    },
+    {
+      "id": "muebles-sillon-de-peluqueria",
+      "slug": "sillon-de-peluqueria",
+      "name": "Sillón de peluquería",
+      "category": "muebles",
+      "subcategory": "sillones-y-sillas-de-peluqueria-barberia",
+      "price": 349,
+      "currency": "USD",
+      "features": [
+        "Reclinable",
+        "Soporte para pies",
+        "Hidráulico",
+        "Reposamanos"
+      ],
+      "image": "sillon-peluqueria-3.jpg",
+      "imageAlt": "Sillón de peluquería"
+    },
+    {
+      "id": "muebles-sillon-de-peluqueria-4",
+      "slug": "sillon-de-peluqueria-4",
+      "name": "Sillón de peluquería",
+      "category": "muebles",
+      "subcategory": "sillones-y-sillas-de-peluqueria-barberia",
+      "price": 359,
+      "currency": "USD",
+      "features": [
+        "Reclinable",
+        "Hidráulico",
+        "Base metálica",
+        "Soporte de pies estático"
+      ],
+      "image": "sillon-peluqueria-4.jpg",
+      "imageAlt": "Sillón de peluquería"
+    },
+    {
+      "id": "muebles-sillon-de-peluqueria-5",
+      "slug": "sillon-de-peluqueria-5",
+      "name": "Sillón de peluquería",
+      "category": "muebles",
+      "subcategory": "sillones-y-sillas-de-peluqueria-barberia",
+      "price": 279,
+      "currency": "USD",
+      "features": [
+        "Reclinable",
+        "Base metálica",
+        "Cubierta de cuero",
+        "Soporte de pies estático"
+      ],
+      "image": "sillon-peluqueria-5.jpg",
+      "imageAlt": "Sillón de peluquería"
+    },
+    {
+      "id": "muebles-sillon-de-peluqueria-6",
+      "slug": "sillon-de-peluqueria-6",
+      "name": "Sillón de peluquería",
+      "category": "muebles",
+      "subcategory": "sillones-y-sillas-de-peluqueria-barberia",
+      "price": 240,
+      "currency": "USD",
+      "features": [
+        "Diseño sencillo",
+        "Reclinable",
+        "Base metálica",
+        "Acolchonado"
+      ],
+      "image": "sillon-peluqueria-6.jpg",
+      "imageAlt": "Sillón de peluquería"
+    },
+    {
+      "id": "muebles-sillon-de-peluqueria-st-2009-1",
+      "slug": "sillon-de-peluqueria-st-2009-1",
+      "name": "Sillón de peluquería ST-2009-1",
+      "category": "muebles",
+      "subcategory": "sillones-y-sillas-de-peluqueria-barberia",
+      "price": 237,
+      "currency": "USD",
+      "features": [
+        "Reclinable",
+        "Cubierta de cuero",
+        "Base metálica",
+        "Hidráulico"
+      ],
+      "image": "sillon-peluqueria-7.jpg",
+      "imageAlt": "Sillón de peluquería ST-2009-1"
+    },
+    {
+      "id": "muebles-sillon-lava-cabeza",
+      "slug": "sillon-lava-cabeza",
+      "name": "Sillón lava cabeza",
+      "category": "muebles",
+      "subcategory": "sillones-y-sillas-de-peluqueria-barberia",
+      "price": 365,
+      "currency": "USD",
+      "features": [
+        "Acolchonado",
+        "Poza cabeza de cerámica",
+        "Cubierta de cuero",
+        "Diseño elegante"
+      ],
+      "image": "sillon-lava-cabeza.jpg",
+      "imageAlt": "Sillón lava cabeza"
+    },
+    {
+      "id": "muebles-silla-de-barberia-sileti-st-2200",
+      "slug": "silla-de-barberia-sileti-st-2200",
+      "name": "Silla de barbería SILETI ST-2200",
+      "category": "muebles",
+      "subcategory": "sillones-y-sillas-de-peluqueria-barberia",
+      "code": "11002",
+      "price": 295,
+      "currency": "USD",
+      "features": [
+        "Reclinable",
+        "Altura ajustable (hidráulico)",
+        "Acolchado premium",
+        "Estructura resistente"
+      ],
+      "image": "silla-barberia-st2200.jpg",
+      "imageAlt": "Silla de barbería SILETI ST-2200"
+    },
+    {
+      "id": "muebles-silla-de-barberia-sileti-st-2001",
+      "slug": "silla-de-barberia-sileti-st-2001",
+      "name": "Silla de barbería SILETI ST-2001",
+      "category": "muebles",
+      "subcategory": "sillones-y-sillas-de-peluqueria-barberia",
+      "code": "10362",
+      "price": 230,
+      "currency": "USD",
+      "features": [
+        "Reclinable",
+        "Sistema hidráulico",
+        "Acolchado premium",
+        "Reposapiés cómodo"
+      ],
+      "image": "silla-barberia-st2001.jpg",
+      "imageAlt": "Silla de barbería SILETI ST-2001"
+    },
+    {
+      "id": "muebles-butaca-francia",
+      "slug": "butaca-francia",
+      "name": "Butaca Francia",
+      "category": "muebles",
+      "subcategory": "butacas-y-sillas",
+      "code": "10399",
+      "price": 99,
+      "currency": "USD",
+      "features": [
+        "Máximo confort y ergonomía",
+        "Acabado elegante",
+        "Base metálica"
+      ],
+      "image": "butaca-francia.jpg",
+      "imageAlt": "Butaca Francia"
+    },
+    {
+      "id": "muebles-silla-concha-para-pedicure",
+      "slug": "silla-concha-para-pedicure",
+      "name": "Silla concha para pedicure",
+      "category": "muebles",
+      "subcategory": "butacas-y-sillas",
+      "code": "10394",
+      "price": 250,
+      "currency": "USD",
+      "features": [
+        "Set de pedicura",
+        "Base resistente"
+      ],
+      "image": "silla-concha-pedicura.jpg",
+      "imageAlt": "Silla concha para pedicure"
+    },
+    {
+      "id": "muebles-sillon-reina-para-pedicure",
+      "slug": "sillon-reina-para-pedicure",
+      "name": "Sillón Reina para pedicure",
+      "category": "muebles",
+      "subcategory": "butacas-y-sillas",
+      "code": "10393",
+      "price": 350,
+      "currency": "USD",
+      "features": [
+        "Máximo confort y ergonomía",
+        "Acabado elegante",
+        "Recubierto en cuero"
+      ],
+      "image": "sillon-reina-pedicura.jpg",
+      "imageAlt": "Sillón Reina para pedicure"
+    },
+    {
+      "id": "muebles-butaca-santander",
+      "slug": "butaca-santander",
+      "name": "Butaca Santander",
+      "category": "muebles",
+      "subcategory": "butacas-y-sillas",
+      "code": "10408",
+      "price": 65,
+      "currency": "USD",
+      "features": [
+        "Acabado elegante"
+      ],
+      "image": "butaca-santander.jpg",
+      "imageAlt": "Butaca Santander"
+    },
+    {
+      "id": "muebles-butaca-style",
+      "slug": "butaca-style",
+      "name": "Butaca Style",
+      "category": "muebles",
+      "subcategory": "butacas-y-sillas",
+      "code": "10400",
+      "price": 80,
+      "currency": "USD",
+      "features": [
+        "Máximo confort y ergonomía",
+        "Acabado elegante",
+        "Base metálica"
+      ],
+      "image": "butaca-style.jpg",
+      "imageAlt": "Butaca Style"
+    },
+    {
+      "id": "muebles-silla-estela",
+      "slug": "silla-estela",
+      "name": "Silla Estela",
+      "category": "muebles",
+      "subcategory": "butacas-y-sillas",
+      "code": "10411",
+      "price": 45,
+      "currency": "USD",
+      "features": [
+        "Acabado elegante"
+      ],
+      "image": "silla-estela.jpg",
+      "imageAlt": "Silla Estela"
+    },
+    {
+      "id": "muebles-butaca-monet",
+      "slug": "butaca-monet",
+      "name": "Butaca Monet",
+      "category": "muebles",
+      "subcategory": "butacas-y-sillas",
+      "code": "10404",
+      "price": 220,
+      "currency": "USD",
+      "features": [
+        "Cómoda y elegante",
+        "Base ultra resistente",
+        "Fácil limpieza"
+      ],
+      "image": "butaca-monet.jpg",
+      "imageAlt": "Butaca Monet"
+    },
+    {
+      "id": "muebles-silla-amoblada-hidraulica",
+      "slug": "silla-amoblada-hidraulica",
+      "name": "Silla amoblada hidráulica",
+      "category": "muebles",
+      "subcategory": "butacas-y-sillas",
+      "code": "10171",
+      "price": 48,
+      "currency": "USD",
+      "features": [
+        "Giratoria",
+        "Altura ajustable",
+        "Disponible en varios colores"
+      ],
+      "image": "silla-amoblada-hidraulica.jpg",
+      "imageAlt": "Silla amoblada hidráulica"
+    },
+    {
+      "id": "muebles-set-mesa-silla-concha-para-manicura",
+      "slug": "set-mesa-silla-concha-para-manicura",
+      "name": "Set mesa + silla concha para manicura",
+      "category": "muebles",
+      "subcategory": "mesas-de-trabajo",
+      "code": "10392",
+      "price": 350,
+      "currency": "USD",
+      "features": [
+        "Organizador de esmaltes doble",
+        "Dos cajones + espacio amplio",
+        "Reposamanos + puff de espera"
+      ],
+      "image": "mesa-silla-concha-manicura.jpg",
+      "imageAlt": "Set mesa + silla concha para manicura"
+    },
+    {
+      "id": "muebles-carrito-auxiliar-multiuso",
+      "slug": "carrito-auxiliar-multiuso",
+      "name": "Carrito auxiliar multiuso",
+      "category": "muebles",
+      "subcategory": "equipo-y-accesorios-de-salon",
+      "code": "11842",
+      "price": 17.5,
+      "currency": "USD",
+      "features": [
+        "3 niveles",
+        "Bandejas de malla",
+        "Ruedas giratorias 360°",
+        "Estructura de acero"
+      ],
+      "image": "carrito-auxiliar.jpg",
+      "imageAlt": "Carrito auxiliar multiuso"
+    },
+    {
+      "id": "muebles-lavacabezas-sileti-st-3000-1",
+      "slug": "lavacabezas-sileti-st-3000-1",
+      "name": "Lavacabezas SILETI ST-3000-1",
+      "category": "muebles",
+      "subcategory": "equipo-y-accesorios-de-salon",
+      "features": [
+        "Reclinable",
+        "Lavabo profundo de diseño anatómico",
+        "Acolchado premium"
+      ],
+      "image": "lavacabezas-st3000.jpg",
+      "imageAlt": "Lavacabezas SILETI ST-3000-1"
+    },
+    {
+      "id": "muebles-tina-spa-electrica",
+      "slug": "tina-spa-electrica",
+      "name": "Tina spa eléctrica",
+      "category": "muebles",
+      "subcategory": "equipo-y-accesorios-de-salon",
+      "code": "8248",
+      "price": 36,
+      "currency": "USD",
+      "features": [
+        "Masaje relajante con rodillos",
+        "Hidromasaje",
+        "Uso profesional en salón"
+      ],
+      "image": "tina-spa-electrica.jpg",
+      "imageAlt": "Tina spa eléctrica"
+    }
+  ]
+}

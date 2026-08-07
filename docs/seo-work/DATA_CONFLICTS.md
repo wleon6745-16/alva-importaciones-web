@@ -73,6 +73,25 @@ el usuario (o una sesión futura con instrucción explícita) los confirme.
 
 ---
 
+## LIMITACIÓN-001 — Sin conexión en vivo a la base de datos de ASISTENTE (no es un conflicto)
+
+- **Contexto**: `NEXT_SESSION.md` (post Sesión 1) sugería evaluar si `scripts/sync-public-catalog.ts`
+  debía leer en vivo la tabla `products` de `assistant_sacc` (Docker/Postgres del repo
+  `ASISTENTE`) en vez de depender de un seed manual.
+- **Decisión (Sesión 2, 2026-08-07)**: no conectar en vivo por ahora. El sitio se compila estático
+  (`astro build`) y no tiene backend propio en producción donde guardar credenciales de Postgres
+  de forma segura; hacerlo hoy implicaría exponer credenciales en el repo o en el entorno de build.
+- **Estado actual**: `scripts/sync-public-catalog.ts` usa un seed manual (los mismos 25 productos
+  ya publicados, sanitizados) documentado como tal en el propio script.
+- **Impacto**: el catálogo público no se actualiza automáticamente si cambian precios/stock en
+  SACC. Hay que volver a editar el seed y correr `npm run catalog:sync` a mano mientras esto no
+  se resuelva.
+- **Acción pendiente**: si se decide sincronizar en vivo más adelante, definir dónde vivirían las
+  credenciales de solo lectura (variable de entorno en CI/build, nunca en el repo) antes de
+  implementarlo.
+
+---
+
 ## Cómo registrar un nuevo conflicto
 
 ```text
