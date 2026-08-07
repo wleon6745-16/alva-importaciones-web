@@ -1,0 +1,23 @@
+# PLANTILLA — no instalada. Ver docs/AUTOMATED_TASKS.md antes de usar en un servidor real.
+# Ajustar WorkingDirectory, User, EnvironmentFile y ExecStart a la ruta/usuario reales.
+# Requiere que exista "npm run seo:validate" (se crea en la Sesion 14 del plan).
+
+[Unit]
+Description=Alva Importaciones - validacion SEO diaria
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/alva-importaciones-web
+EnvironmentFile=-/opt/alva-importaciones-web/.env
+ExecStart=/usr/bin/npm run seo:validate
+Restart=on-failure
+RestartSec=60
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=alva-seo-validation
+
+[Install]
+WantedBy=multi-user.target

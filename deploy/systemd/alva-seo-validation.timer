@@ -1,0 +1,13 @@
+# PLANTILLA — no instalada. Ver docs/AUTOMATED_TASKS.md antes de usar en un servidor real.
+# Dispara alva-seo-validation.service una vez al dia.
+
+[Unit]
+Description=Ejecuta alva-seo-validation.service una vez al dia
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+RandomizedDelaySec=600
+
+[Install]
+WantedBy=timers.target

@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# raw task validation logs (noisy terminal captures, not meant for history)
+tasks/evidence/*.log
+!tasks/evidence/.gitkeep

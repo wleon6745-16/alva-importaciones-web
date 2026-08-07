@@ -1,0 +1,13 @@
+# PLANTILLA — no instalada. Ver docs/AUTOMATED_TASKS.md antes de usar en un servidor real.
+# Dispara alva-catalog-sync.service cada 6 horas.
+
+[Unit]
+Description=Ejecuta alva-catalog-sync.service cada 6 horas
+
+[Timer]
+OnCalendar=*-*-* 00/6:00:00
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

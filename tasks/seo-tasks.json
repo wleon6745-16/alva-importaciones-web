@@ -1,0 +1,418 @@
+{
+  "project": "alva-seo-ai-search",
+  "repo": "alva-importaciones-web",
+  "relatedRepo": "ASISTENTE (read-only source for catalog data)",
+  "currentPhase": 1,
+  "currentTask": "SEO-001",
+  "statesAllowed": [
+    "pending",
+    "in_progress",
+    "blocked",
+    "completed",
+    "failed",
+    "manual_review"
+  ],
+  "tasks": [
+    {
+      "id": "SEO-001",
+      "phase": 1,
+      "title": "Crear sistema persistente de trabajo",
+      "status": "completed",
+      "priority": "critical",
+      "dependencies": [],
+      "estimatedSession": 1,
+      "acceptanceCriteria": [
+        "Existen los archivos de control en docs/seo-work/",
+        "Existe tasks/seo-tasks.json con las 16 fases",
+        "Existen los scripts task:status, task:next, task:start, task:complete, task:fail, task:validate",
+        "NEXT_SESSION.md permite reanudar el trabajo en SEO-002 sin releer la conversación",
+        "npm run build sigue pasando",
+        "El repositorio queda limpio (git status sin cambios sueltos) tras el commit"
+      ],
+      "validationCommands": [
+        "npm run build",
+        "git diff --check"
+      ],
+      "commitMessage": "chore: add persistent SEO work orchestration",
+      "completedAt": "2026-08-07T03:34:31.318Z"
+    },
+    {
+      "id": "SEO-002",
+      "phase": 2,
+      "title": "Fuente central del catálogo (sanitizada)",
+      "status": "pending",
+      "priority": "critical",
+      "dependencies": [
+        "SEO-001"
+      ],
+      "estimatedSession": 1,
+      "acceptanceCriteria": [
+        "Existe src/types/product.ts con un tipo Product tipado",
+        "Existe src/data/products.generated.json generado, no editado a mano en producción",
+        "Los 25 productos de muebles existentes quedan migrados a datos (muebles.astro los consume, no los hardcodea)",
+        "No existen costos ni márgenes en el JSON",
+        "No existen datos de clientes en el JSON",
+        "No existen credenciales ni tokens en ningún archivo nuevo",
+        "JSON válido (parseable)",
+        "IDs únicos",
+        "Slugs únicos y estables",
+        "npm run build sigue pasando y /productos/muebles se ve igual que antes"
+      ],
+      "validationCommands": [
+        "npm run build"
+      ],
+      "commitMessage": "feat: add sanitized public catalog synchronization"
+    },
+    {
+      "id": "SEO-003",
+      "phase": 3,
+      "title": "Slugs y páginas individuales de muebles",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": [
+        "SEO-002"
+      ],
+      "estimatedSession": 1,
+      "acceptanceCriteria": [
+        "Ruta dinámica /productos/muebles/[slug]/ implementada",
+        "Diseño de producto reutilizable con breadcrumbs, galería, características, especificaciones y productos relacionados",
+        "Productos incompletos (sin precio, sin código) se manejan sin romper el build",
+        "No hay slugs duplicados",
+        "Todas las páginas de producto tienen un solo h1",
+        "No existen productos sin nombre",
+        "No hay enlaces internos rotos hacia estas páginas",
+        "Las páginas se generan correctamente en el build estático"
+      ],
+      "validationCommands": [
+        "npm run build"
+      ],
+      "commitMessage": "feat: add indexable furniture product pages"
+    },
+    {
+      "id": "SEO-004",
+      "phase": 4,
+      "title": "WhatsApp contextual y conversiones",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": [
+        "SEO-003"
+      ],
+      "estimatedSession": 1,
+      "acceptanceCriteria": [
+        "Cada página de producto genera un mensaje de WhatsApp con nombre, código y URL de la página",
+        "Se usa el número oficial configurado en site-config.ts (respetando el conflicto documentado en DATA_CONFLICTS.md, sin resolverlo por cuenta propia)",
+        "Existe un evento de analítica whatsapp_click con product_id, product_name, category, page_path, branch",
+        "No se envía información personal en el evento",
+        "La URL de WhatsApp está correctamente codificada (encodeURIComponent)",
+        "Los CTA funcionan en vista móvil"
+      ],
+      "validationCommands": [
+        "npm run build"
+      ],
+      "commitMessage": "feat: add contextual WhatsApp product enquiries"
+    },
+    {
+      "id": "SEO-005",
+      "phase": 5,
+      "title": "Metadatos y Schema de productos",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": [
+        "SEO-003"
+      ],
+      "estimatedSession": 1,
+      "acceptanceCriteria": [
+        "SEO del layout centralizado (reutiliza src/lib/seo.ts existente)",
+        "Títulos únicos por página de producto",
+        "Meta descriptions únicas y útiles",
+        "Canonical absoluta (no localhost) en cada página",
+        "Open Graph completo",
+        "JSON-LD Product + Brand + BreadcrumbList válido por producto",
+        "Offer solo con datos confiables (precio real conocido, sin inventar disponibilidad)",
+        "Sin reseñas falsas (no se genera aggregateRating ni review sin datos reales)"
+      ],
+      "validationCommands": [
+        "npm run build"
+      ],
+      "commitMessage": "feat: add product metadata and structured data"
+    },
+    {
+      "id": "SEO-006",
+      "phase": 6,
+      "title": "Categorías y enlaces internos",
+      "status": "pending",
+      "priority": "medium",
+      "dependencies": [
+        "SEO-002"
+      ],
+      "estimatedSession": 1,
+      "acceptanceCriteria": [
+        "Páginas de categoría (muebles, uñas, maquillaje, capilares) con introducción original propia",
+        "Productos relacionados y subcategorías enlazados donde aplique",
+        "Filtros (si existen) no son indexables (noindex o no generan URLs únicas)",
+        "FAQ visibles donde aporten valor real",
+        "Enlaces hacia productos y guías funcionando",
+        "Paginación implementada si el volumen de productos lo justifica"
+      ],
+      "validationCommands": [
+        "npm run build"
+      ],
+      "commitMessage": "feat: improve category SEO and internal linking"
+    },
+    {
+      "id": "SEO-007",
+      "phase": 7,
+      "title": "Sucursales y SEO local",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": [
+        "SEO-001"
+      ],
+      "estimatedSession": 1,
+      "acceptanceCriteria": [
+        "Página general de locales y una página por sucursal",
+        "Dirección real, horario, teléfono/WhatsApp y mapa por sucursal",
+        "Fotografías reales por sucursal donde existan",
+        "JSON-LD LocalBusiness por sucursal",
+        "Área atendida confirmada (no inventada)",
+        "Ningún dato no verificado se presenta como verificado (ver MANUAL_ACTIONS.md)"
+      ],
+      "validationCommands": [
+        "npm run build"
+      ],
+      "commitMessage": "feat: add branch pages and local business SEO"
+    },
+    {
+      "id": "SEO-008",
+      "phase": 8,
+      "title": "Páginas comerciales locales",
+      "status": "pending",
+      "priority": "medium",
+      "dependencies": [
+        "SEO-002",
+        "SEO-006",
+        "SEO-007"
+      ],
+      "estimatedSession": 1,
+      "acceptanceCriteria": [
+        "Rutas creadas: /muebles-para-salon-de-belleza-portoviejo/, /sillas-de-barberia-portoviejo/, /camillas-esteticas-portoviejo/, /productos-para-unas-portoviejo/, /equipamiento-para-peluquerias-manabi/, /cursos-de-unas-portoviejo/",
+        "Cada página tiene contenido propio (no duplicado entre sí)",
+        "Cada página enlaza productos reales existentes",
+        "Cada página tiene una intención de búsqueda distinta y clara"
+      ],
+      "validationCommands": [
+        "npm run build"
+      ],
+      "commitMessage": "feat: add local commercial landing pages"
+    },
+    {
+      "id": "SEO-009",
+      "phase": 9,
+      "title": "Información comercial de Telegram (validada)",
+      "status": "pending",
+      "priority": "medium",
+      "dependencies": [
+        "SEO-001"
+      ],
+      "estimatedSession": 1,
+      "acceptanceCriteria": [
+        "Existe scripts/extract-telegram-commercial-data.ts (extractor controlado, no automágico)",
+        "Existe reports/telegram-data-candidates.md con candidatos detectados (FAQ, características, cursos, políticas, horarios)",
+        "Los conflictos detectados se registran en DATA_CONFLICTS.md, no se resuelven inventando",
+        "Ningún dato de Telegram se publica como oficial sin pasar por este proceso de contraste"
+      ],
+      "validationCommands": [
+        "npm run build"
+      ],
+      "commitMessage": "feat: extract verified commercial knowledge from Telegram"
+    },
+    {
+      "id": "SEO-010",
+      "phase": 10,
+      "title": "Guías para búsqueda y buscadores con IA",
+      "status": "pending",
+      "priority": "medium",
+      "dependencies": [
+        "SEO-002",
+        "SEO-006"
+      ],
+      "estimatedSession": 1,
+      "acceptanceCriteria": [
+        "Guías creadas: /guias/como-elegir-silla-barberia/, /guias/como-equipar-salon-belleza/, /guias/que-camilla-estetica-comprar/, /guias/materiales-para-empezar-negocio-unas/, /guias/cuidados-muebles-salon-belleza/",
+        "Contenido verificable (no inventa especificaciones de producto)",
+        "Cada guía enlaza productos relacionados reales",
+        "Cada guía incluye preguntas frecuentes",
+        "Autor institucional y fecha real",
+        "JSON-LD Article o BlogPosting válido",
+        "Enlaces internos hacia categorías/productos"
+      ],
+      "validationCommands": [
+        "npm run build"
+      ],
+      "commitMessage": "feat: add buyer guides for organic and AI search"
+    },
+    {
+      "id": "SEO-011",
+      "phase": 11,
+      "title": "Robots, sitemap, llms.txt e IndexNow",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": [
+        "SEO-003",
+        "SEO-006",
+        "SEO-008",
+        "SEO-010"
+      ],
+      "estimatedSession": 1,
+      "acceptanceCriteria": [
+        "robots.txt revisado, permite OAI-SearchBot y bots legítimos equivalentes",
+        "robots.txt bloquea rutas privadas/administrativas si existieran",
+        "Sitemap validado, incluye páginas de producto y excluye filtros/rutas no indexables",
+        "Existe llms.txt describiendo el sitio para agentes/LLMs",
+        "IndexNow implementado y documentado (clave fuera del repo en texto plano)",
+        "Configuración documentada en docs/AUTOMATED_TASKS.md"
+      ],
+      "validationCommands": [
+        "npm run build"
+      ],
+      "commitMessage": "feat: improve crawler discovery and IndexNow support"
+    },
+    {
+      "id": "SEO-012",
+      "phase": 12,
+      "title": "Uñas, maquillaje y capilares (páginas individuales)",
+      "status": "pending",
+      "priority": "medium",
+      "dependencies": [
+        "SEO-003"
+      ],
+      "estimatedSession": 1,
+      "acceptanceCriteria": [
+        "Se publican únicamente productos con nombre identificable, imagen correcta, categoría y descripción suficiente",
+        "Marca/referencia/código incluido cuando exista en la fuente",
+        "Correspondencia confiable con la base/fuente original (sin inventar datos faltantes)",
+        "Mismo patrón de página individual que Sesión 3 (reutilizado, no duplicado)"
+      ],
+      "validationCommands": [
+        "npm run build"
+      ],
+      "commitMessage": "feat: add beauty category product pages"
+    },
+    {
+      "id": "SEO-013",
+      "phase": 13,
+      "title": "Imágenes, rendimiento y accesibilidad",
+      "status": "pending",
+      "priority": "medium",
+      "dependencies": [
+        "SEO-003",
+        "SEO-012"
+      ],
+      "estimatedSession": 1,
+      "acceptanceCriteria": [
+        "Imágenes en WebP o AVIF vía astro:assets",
+        "srcset y dimensiones explícitas",
+        "Lazy loading fuera del viewport inicial",
+        "LCP y CLS revisados en las páginas más pesadas",
+        "Menú móvil accesible",
+        "Contraste de color conforme a WCAG AA para texto sobre la paleta de marca",
+        "Foco visible en elementos interactivos",
+        "Jerarquía de encabezados correcta en todas las páginas",
+        "Textos alternativos descriptivos en todas las imágenes de producto",
+        "Botones con área táctil y aria-label donde el texto visible no baste"
+      ],
+      "validationCommands": [
+        "npm run build"
+      ],
+      "commitMessage": "perf: optimize images accessibility and core web vitals"
+    },
+    {
+      "id": "SEO-014",
+      "phase": 14,
+      "title": "Validador SEO automático",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": [
+        "SEO-005",
+        "SEO-006",
+        "SEO-011"
+      ],
+      "estimatedSession": 1,
+      "acceptanceCriteria": [
+        "Existe scripts/validate-seo.ts y el comando npm run seo:validate",
+        "Detecta títulos duplicados",
+        "Detecta descripciones duplicadas",
+        "Detecta canonical faltante o con localhost",
+        "Detecta ausencia de h1 o múltiples h1",
+        "Detecta imágenes sin texto alternativo",
+        "Detecta slugs duplicados",
+        "Detecta JSON-LD inválido",
+        "Detecta enlaces internos rotos",
+        "Detecta páginas huérfanas",
+        "Detecta productos con información insuficiente"
+      ],
+      "validationCommands": [
+        "npm run build",
+        "npm run seo:validate"
+      ],
+      "commitMessage": "test: add automated SEO validation"
+    },
+    {
+      "id": "SEO-015",
+      "phase": 15,
+      "title": "Pruebas integrales y estabilización",
+      "status": "pending",
+      "priority": "critical",
+      "dependencies": [
+        "SEO-004",
+        "SEO-005",
+        "SEO-007",
+        "SEO-008",
+        "SEO-009",
+        "SEO-010",
+        "SEO-011",
+        "SEO-012",
+        "SEO-013",
+        "SEO-014"
+      ],
+      "estimatedSession": 1,
+      "acceptanceCriteria": [
+        "npm run build pasa",
+        "npm run seo:validate pasa sin errores bloqueantes",
+        "git diff --check sin problemas",
+        "Navegación móvil probada en las páginas clave",
+        "Botones de WhatsApp probados end-to-end",
+        "Sitemap, robots.txt y Schema verificados manualmente",
+        "Página 404 verificada",
+        "Sincronización del catálogo probada con fallo simulado (debe conservar la última versión válida)"
+      ],
+      "validationCommands": [
+        "npm run build",
+        "npm run seo:validate",
+        "git diff --check"
+      ],
+      "commitMessage": "fix: stabilize SEO catalog implementation"
+    },
+    {
+      "id": "SEO-016",
+      "phase": 16,
+      "title": "Preparación de producción",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": [
+        "SEO-015"
+      ],
+      "estimatedSession": 1,
+      "acceptanceCriteria": [
+        "Documentación de despliegue completa (variables de entorno, dominio, HTTPS, redirecciones)",
+        "docs/seo-work/MANUAL_ACTIONS.md actualizado con el checklist final (Search Console, Bing Webmaster Tools, Bing Places, Google Business Profile, IndexNow, analítica)",
+        "Ningún secreto en el repo",
+        "Plantillas systemd/cron documentadas y listas pero no instaladas sin confirmación"
+      ],
+      "validationCommands": [
+        "npm run build"
+      ],
+      "commitMessage": "docs: add production SEO deployment checklist"
+    }
+  ]
+}
