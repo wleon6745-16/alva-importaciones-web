@@ -8,12 +8,22 @@ import ChatDemo from "../components/ChatDemo.tsx";
 import TestimonialCarousel from "../components/TestimonialCarousel.tsx";
 import { siteConfig } from "../lib/site-config";
 
-import heroImage from "../assets/products/hero/hero-nails.jpg";
+import heroImage from "../assets/products/muebles/camilla-hidraulica-multiusos.jpg";
 import nailsImage from "../assets/products/unas/nails-1.jpg";
 import hairImage from "../assets/products/capilares/hair-3.png";
 import makeupImage from "../assets/products/maquillaje/makeup-3.jpg";
+import mueblesImage from "../assets/products/muebles/sillon-peluqueria-3.jpg";
+import sillonDestacado from "../assets/products/muebles/sillon-peluqueria-1.jpg";
+import camillaDestacada from "../assets/products/muebles/camilla-3-niveles.jpg";
+import mesaDestacada from "../assets/products/muebles/mesa-silla-concha-manicura.jpg";
 
 const categories = [
+  {
+    title: "Muebles para salón",
+    description: "Camillas, sillones de peluquería, butacas y mesas de trabajo.",
+    image: mueblesImage,
+    href: "/productos/muebles",
+  },
   {
     title: "Uñas / Nailart",
     description: "Acrílicos, geles, esmaltes y todo lo necesario para nail art profesional.",
@@ -33,6 +43,12 @@ const categories = [
     href: "/productos/maquillaje",
   },
 ];
+
+const mueblesDestacados = [
+  { name: "Sillón de peluquería ST-2202", price: "$345", image: sillonDestacado },
+  { name: "Camilla multiuso 3 niveles", price: "$208", image: camillaDestacada },
+  { name: "Set mesa + silla concha", price: "$350", image: mesaDestacada },
+];
 ---
 
 <BaseLayout title={siteConfig.name} description={siteConfig.description} path="/">
@@ -43,19 +59,20 @@ const categories = [
           {siteConfig.tagline}
         </p>
         <h1 class="mt-4 font-display text-4xl leading-tight text-primary-900 sm:text-5xl">
-          Todo lo que necesitas para tu negocio de belleza, en un solo lugar
+          Equipa tu salón de belleza con muebles profesionales
         </h1>
         <p class="mt-6 max-w-xl text-lg text-ink-muted">
-          Importamos y distribuimos insumos de uñas, capilares y maquillaje en Portoviejo.
-          Consulta precios y disponibilidad al instante, sin salir de WhatsApp.
+          Camillas, sillones de peluquería, butacas y mesas de trabajo — además de insumos de
+          uñas, capilares y maquillaje. Todo en Portoviejo, con precio y disponibilidad al
+          instante por WhatsApp.
         </p>
         <div class="mt-8 flex flex-wrap gap-4">
           <WhatsAppCTA label="Chatea por WhatsApp" pulse />
           <a
-            href="/productos"
+            href="/productos/muebles"
             class="inline-flex items-center gap-2 rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 transition-transform hover:scale-105 hover:bg-primary-800 hover:text-white"
           >
-            Ver productos
+            Ver muebles
           </a>
         </div>
       </div>
@@ -63,10 +80,10 @@ const categories = [
       <div class="relative">
         <Image
           src={heroImage}
-          alt="Productos de uñas Alva Importaciones"
-          class="mx-auto w-full max-w-md rounded-3xl object-cover shadow-2xl"
+          alt="Camilla hidráulica multiusos - Alva Importaciones"
+          class="mx-auto w-full max-w-md rounded-3xl bg-white object-contain p-6 shadow-2xl"
           width={640}
-          height={800}
+          height={640}
         />
       </div>
     </div>
@@ -74,11 +91,57 @@ const categories = [
 
   <SectionReveal as="section" class="px-6 py-20">
     <div class="mx-auto max-w-6xl">
+      <p class="text-center text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">
+        Lo más nuevo
+      </p>
+      <h2 class="mt-2 text-center font-display text-3xl text-primary-900">
+        Muebles para tu salón
+      </h2>
+      <p class="mx-auto mt-3 max-w-2xl text-center text-ink-muted">
+        Camillas, sillones y estaciones de trabajo listos para tu negocio.
+      </p>
+      <div class="mt-12 grid gap-6 sm:grid-cols-3">
+        {
+          mueblesDestacados.map((m) => (
+            <a
+              href="/productos/muebles"
+              class="glass-card group overflow-hidden rounded-2xl shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div class="aspect-square overflow-hidden bg-white">
+                <Image
+                  src={m.image}
+                  alt={m.name}
+                  width={500}
+                  height={500}
+                  class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div class="p-5">
+                <h3 class="font-display text-lg text-primary-800">{m.name}</h3>
+                <p class="mt-1 text-lg font-semibold text-ink">{m.price}</p>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+      <div class="mt-10 text-center">
+        <a
+          href="/productos/muebles"
+          class="inline-flex items-center gap-2 rounded-full bg-primary-800 px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-primary-700"
+        >
+          Ver todos los muebles →
+        </a>
+      </div>
+    </div>
+  </SectionReveal>
+
+  <SectionReveal as="section" class="px-6 py-20">
+    <div class="mx-auto max-w-6xl">
       <h2 class="text-center font-display text-3xl text-primary-900">Nuestras categorías</h2>
       <p class="mx-auto mt-3 max-w-2xl text-center text-ink-muted">
         Explora lo que tenemos disponible. Precio y stock exactos siempre por WhatsApp.
       </p>
-      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {categories.map((c) => <CategoryCard {...c} />)}
       </div>
     </div>

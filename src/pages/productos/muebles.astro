@@ -1,0 +1,257 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionReveal from "../../components/SectionReveal.astro";
+import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
+import { breadcrumbSchema } from "../../lib/structured-data";
+
+import camillaHidraulica from "../../assets/products/muebles/camilla-hidraulica-multiusos.jpg";
+import camillaLifting from "../../assets/products/muebles/camilla-lifting-multiusos.jpg";
+import camilla3Niveles from "../../assets/products/muebles/camilla-3-niveles.jpg";
+import sillon1 from "../../assets/products/muebles/sillon-peluqueria-1.jpg";
+import sillon2 from "../../assets/products/muebles/sillon-peluqueria-2.jpg";
+import sillon3 from "../../assets/products/muebles/sillon-peluqueria-3.jpg";
+import sillon4 from "../../assets/products/muebles/sillon-peluqueria-4.jpg";
+import sillon5 from "../../assets/products/muebles/sillon-peluqueria-5.jpg";
+import sillon6 from "../../assets/products/muebles/sillon-peluqueria-6.jpg";
+import sillon7 from "../../assets/products/muebles/sillon-peluqueria-7.jpg";
+import sillonLavaCabeza from "../../assets/products/muebles/sillon-lava-cabeza.jpg";
+import butacaFrancia from "../../assets/products/muebles/butaca-francia.jpg";
+import sillaConcha from "../../assets/products/muebles/silla-concha-pedicura.jpg";
+import sillonReina from "../../assets/products/muebles/sillon-reina-pedicura.jpg";
+import butacaSantander from "../../assets/products/muebles/butaca-santander.jpg";
+import butacaStyle from "../../assets/products/muebles/butaca-style.jpg";
+import sillaEstela from "../../assets/products/muebles/silla-estela.jpg";
+import mesaSillaConcha from "../../assets/products/muebles/mesa-silla-concha-manicura.jpg";
+import butacaMonet from "../../assets/products/muebles/butaca-monet.jpg";
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Inicio", path: "/" },
+  { name: "Productos", path: "/productos" },
+  { name: "Muebles", path: "/productos/muebles" },
+]);
+
+const camillas = [
+  {
+    name: "Camilla hidráulica multiusos",
+    price: "$155",
+    code: "8833",
+    features: ["Base metálica", "Autoportante", "Reposamanos", "Portátil"],
+    image: camillaHidraulica,
+  },
+  {
+    name: "Camilla para lifting multiusos",
+    price: "$110",
+    code: "8181",
+    features: ["Portátil", "Autosoportante", "Base metálica"],
+    image: camillaLifting,
+  },
+  {
+    name: "Camilla multiuso 3 niveles",
+    price: "$208",
+    code: "9974",
+    features: [
+      "Niveles de inclinación ajustables",
+      "Cubierta de fácil limpieza",
+      "Cómoda y antideslizante",
+      "Color negro",
+    ],
+    image: camilla3Niveles,
+  },
+];
+
+const sillones = [
+  {
+    name: "Sillón de peluquería ST-2202",
+    price: "$345",
+    features: ["Base redonda", "Cuero de fácil limpieza", "Hidráulico", "Soporte para pies"],
+    image: sillon1,
+  },
+  {
+    name: "Sillón de peluquería ST-2215-1",
+    price: "$335",
+    features: ["Soporte para brazos", "Cuero de fácil limpieza", "Base metálica", "Hidráulico"],
+    image: sillon2,
+  },
+  {
+    name: "Sillón de peluquería",
+    price: "$349",
+    features: ["Reclinable", "Soporte para pies", "Hidráulico", "Reposamanos"],
+    image: sillon3,
+  },
+  {
+    name: "Sillón de peluquería",
+    price: "$359",
+    features: ["Reclinable", "Hidráulico", "Base metálica", "Soporte de pies estático"],
+    image: sillon4,
+  },
+  {
+    name: "Sillón de peluquería",
+    price: "$279",
+    features: ["Reclinable", "Base metálica", "Cubierta de cuero", "Soporte de pies estático"],
+    image: sillon5,
+  },
+  {
+    name: "Sillón de peluquería",
+    price: "$240",
+    features: ["Diseño sencillo", "Reclinable", "Base metálica", "Acolchonado"],
+    image: sillon6,
+  },
+  {
+    name: "Sillón de peluquería ST-2009-1",
+    price: "$237",
+    features: ["Reclinable", "Cubierta de cuero", "Base metálica", "Hidráulico"],
+    image: sillon7,
+  },
+  {
+    name: "Sillón lava cabeza",
+    price: "$365",
+    features: ["Acolchonado", "Poza cabeza de cerámica", "Cubierta de cuero", "Diseño elegante"],
+    image: sillonLavaCabeza,
+  },
+];
+
+const butacasYSillas = [
+  {
+    name: "Butaca Francia",
+    price: "$99",
+    code: "10399",
+    features: ["Máximo confort y ergonomía", "Acabado elegante", "Base metálica"],
+    image: butacaFrancia,
+  },
+  {
+    name: "Silla concha para pedicure",
+    price: "$250",
+    code: "10394",
+    features: ["Set de pedicura", "Base resistente"],
+    image: sillaConcha,
+  },
+  {
+    name: "Sillón Reina para pedicure",
+    price: "$350",
+    code: "10393",
+    features: ["Máximo confort y ergonomía", "Acabado elegante", "Recubierto en cuero"],
+    image: sillonReina,
+  },
+  {
+    name: "Butaca Santander",
+    price: "$65",
+    code: "10408",
+    features: ["Acabado elegante"],
+    image: butacaSantander,
+  },
+  {
+    name: "Butaca Style",
+    price: "$80",
+    code: "10400",
+    features: ["Máximo confort y ergonomía", "Acabado elegante", "Base metálica"],
+    image: butacaStyle,
+  },
+  {
+    name: "Silla Estela",
+    price: "$45",
+    code: "10411",
+    features: ["Acabado elegante"],
+    image: sillaEstela,
+  },
+  {
+    name: "Butaca Monet",
+    price: "$220",
+    code: "10404",
+    features: ["Cómoda y elegante", "Base ultra resistente", "Fácil limpieza"],
+    image: butacaMonet,
+  },
+];
+
+const mesas = [
+  {
+    name: "Set mesa + silla concha para manicura",
+    price: "$350",
+    code: "10392",
+    features: ["Organizador de esmaltes doble", "Dos cajones + espacio amplio", "Reposamanos + puff de espera"],
+    image: mesaSillaConcha,
+  },
+];
+
+interface FurnitureItem {
+  name: string;
+  price: string;
+  code?: string;
+  features: string[];
+  image: ImageMetadata;
+}
+
+const sections: { title: string; items: FurnitureItem[] }[] = [
+  { title: "Camillas", items: camillas },
+  { title: "Sillones de peluquería", items: sillones },
+  { title: "Butacas y sillas", items: butacasYSillas },
+  { title: "Mesas de trabajo", items: mesas },
+];
+---
+
+<BaseLayout
+  title="Muebles para Salón de Belleza"
+  description="Camillas, sillones de peluquería, butacas y mesas de trabajo para salones de belleza en Portoviejo. Precios y disponibilidad por WhatsApp."
+  path="/productos/muebles"
+  structuredData={[breadcrumbs]}
+>
+  <section class="hero-glow px-6 py-16 text-center">
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Destacado</p>
+    <h1 class="mt-4 font-display text-4xl text-primary-900 sm:text-5xl">
+      Muebles para tu salón de belleza
+    </h1>
+    <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-muted">
+      Camillas, sillones de peluquería, butacas y mesas de trabajo, listos para equipar o
+      renovar tu espacio en Portoviejo.
+    </p>
+    <WhatsAppCTA label="Consultar por WhatsApp" pulse class="mt-8" message="Hola, quisiera consultar sobre muebles para mi salón" />
+  </section>
+
+  {
+    sections.map((section) => (
+      <SectionReveal as="section" class="px-6 py-16">
+        <div class="mx-auto max-w-6xl">
+          <h2 class="font-display text-3xl text-primary-900">{section.title}</h2>
+          <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {section.items.map((item) => (
+              <div class="glass-card flex flex-col overflow-hidden rounded-2xl shadow-md">
+                <div class="aspect-square overflow-hidden bg-white">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={500}
+                    height={500}
+                    class="h-full w-full object-contain"
+                  />
+                </div>
+                <div class="flex flex-1 flex-col gap-2 p-5">
+                  <h3 class="font-display text-lg text-primary-800">{item.name}</h3>
+                  <p class="text-xl font-semibold text-ink">{item.price}</p>
+                  {item.features.length > 0 && (
+                    <ul class="mt-1 space-y-1 text-sm text-ink-muted">
+                      {item.features.map((f) => (
+                        <li>• {f}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {item.code && <p class="text-xs text-ink-muted">Cód: {item.code}</p>}
+                  <WhatsAppCTA
+                    label="Consultar"
+                    class="mt-auto !px-4 !py-2 text-sm"
+                    message={`Hola, quisiera consultar sobre: ${item.name}`}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionReveal>
+    ))
+  }
+
+  <SectionReveal as="section" class="bg-blush-50 px-6 py-16 text-center">
+    <h2 class="font-display text-2xl text-primary-900">¿No encuentras lo que buscas?</h2>
+    <p class="mt-3 text-ink-muted">Pregúntanos, seguimos ampliando el catálogo de muebles.</p>
+    <WhatsAppCTA label="Consultar por WhatsApp" class="mt-6" />
+  </SectionReveal>
+</BaseLayout>

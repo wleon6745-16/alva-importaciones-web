@@ -5,7 +5,7 @@ export const siteConfig = {
   name: "Alva Importaciones",
   tagline: "Belleza Perfecta",
   description:
-    "Importadora de insumos de uñas, capilares y maquillaje en Portoviejo, Manabí. Consulta precios y disponibilidad al instante por WhatsApp.",
+    "Muebles para salón de belleza (camillas, sillones de peluquería, butacas y mesas de trabajo) e insumos de uñas, capilares y maquillaje en Portoviejo, Manabí. Consulta precios y disponibilidad al instante por WhatsApp.",
   url: "https://alvaimportaciones.com", // TODO: dominio real
   instagram: "https://www.instagram.com/alvaimportaciones/",
   whatsappMessage: "Hola, quisiera consultar sobre un producto",
@@ -16,16 +16,20 @@ export const siteConfig = {
   locations: [
     {
       name: "Matriz",
-      // TODO: dirección exacta / link de Google Maps
-      address: "Portoviejo, Manabí, Ecuador",
-      mapsUrl: "https://maps.google.com/?q=Alva+Importaciones+Portoviejo",
+      // Dirección real, tomada de las publicaciones del canal de Telegram de Alva Importaciones.
+      address: "Calle Quito, diagonal a Av. Manabí, Portoviejo, Manabí",
+      mapsUrl:
+        "https://www.google.com/maps/search/?api=1&query=" +
+        encodeURIComponent("Calle Quito, diagonal a Av. Manabí, Portoviejo, Manabí"),
       whatsappNumber: "593999526807",
     },
     {
       name: "Sucursal",
-      // TODO: dirección exacta / link de Google Maps
-      address: "Portoviejo, Manabí, Ecuador",
-      mapsUrl: "https://maps.google.com/?q=Alva+Importaciones+Portoviejo",
+      // Dirección real ("nueva sucursal"), tomada de las publicaciones del canal de Telegram.
+      address: "Calle 9 de Octubre, entre Ricaurte y Olmedo, Portoviejo, Manabí",
+      mapsUrl:
+        "https://www.google.com/maps/search/?api=1&query=" +
+        encodeURIComponent("Calle 9 de Octubre, entre Ricaurte y Olmedo, Portoviejo, Manabí"),
       whatsappNumber: "593963946590",
     },
   ],
