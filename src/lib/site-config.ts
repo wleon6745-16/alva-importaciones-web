@@ -16,16 +16,18 @@ export const siteConfig = {
   locations: [
     {
       name: "Matriz",
-      // Dirección real, tomada de las publicaciones del canal de Telegram de Alva Importaciones.
-      address: "Calle Quito, diagonal a Av. Manabí, Portoviejo, Manabí",
+      // Dirección verificada contra la tabla tenant_branches de la base de datos de ASISTENTE
+      // (registro "Matriz" / "Bodega Matriz", tenant Alva) el 2026-08-06.
+      address: "Calle Quito, entre Av. Manabí y García Moreno, Portoviejo, Manabí",
       mapsUrl:
         "https://www.google.com/maps/search/?api=1&query=" +
-        encodeURIComponent("Calle Quito, diagonal a Av. Manabí, Portoviejo, Manabí"),
+        encodeURIComponent("Calle Quito, entre Av. Manabí y García Moreno, Portoviejo, Manabí"),
       whatsappNumber: "593999526807",
     },
     {
       name: "Sucursal",
-      // Dirección real ("nueva sucursal"), tomada de las publicaciones del canal de Telegram.
+      // Dirección verificada contra la tabla tenant_branches de la base de datos de ASISTENTE
+      // (registro "Local 9 de Octubre", tenant Alva) el 2026-08-06.
       address: "Calle 9 de Octubre, entre Ricaurte y Olmedo, Portoviejo, Manabí",
       mapsUrl:
         "https://www.google.com/maps/search/?api=1&query=" +

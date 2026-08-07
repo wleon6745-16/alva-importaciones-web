@@ -36,8 +36,23 @@ el usuario (o una sesión futura con instrucción explícita) los confirme.
 - **Impacto**: si en realidad son dos productos distintos que comparten código por error del
   negocio, falta un mueble por publicar (la silla SILETI ST-4100-1, sin foto propia verificada
   como distinta de la camilla).
-- **Acción pendiente**: confirmar si `COD:9974` es la camilla, la silla de barbería, o si el
-  negocio reutiliza códigos por error. Ver `MANUAL_ACTIONS.md`.
+- **RESUELTO 2026-08-06**: verificado contra la base de datos real de `ASISTENTE`
+  (tabla `products`, tenant Alva, base `assistant_sacc` vía `docker exec asistente-db-1 psql`).
+  El registro autoritativo es:
+
+  ```text
+  id_sacc=19993  codigo=9974  nombre="SILETI CAMILLA 3 TIEMPOS NEGRO ST-4100-1"
+  categoria=LIFTING  subcategoria=ACCESORIOS C  stock=0
+  precios={"1":"215","2":"213","3":"210","4":"208",...}
+  ```
+
+  Es la **camilla**, no una silla de barbería — el post de `messages2.html` que decía "SILLA DE
+  BARBERIA SILETI ST-4100-1" tiene un error de tipeo/categorización del propio negocio al
+  redactar la publicación. No hay un mueble nuevo que publicar; la ficha ya existente
+  "Camilla multiuso 3 niveles" en `/productos/muebles` es correcta. Dato adicional encontrado: el
+  producto tiene **stock 0** en SACC al momento de la verificación (el sitio no muestra stock en
+  vivo hoy, así que esto no afecta la página, pero es relevante para Sesión 2 si se conecta stock
+  real).
 
 ---
 

@@ -62,6 +62,26 @@ bloqueadas por dependencias hasta que SEO-001 se complete.
 - Ninguno bloqueante en el build actual.
 - Ver `DATA_CONFLICTS.md` para inconsistencias de datos (no son errores de código).
 
+## Addendum post-SEO-001 (mismo día, misma sesión)
+
+Tras completar SEO-001, el usuario pidió verificar CONFLICT-002 contra la base de datos real
+antes de continuar. Se consultó `asistente-db-1` (Docker, Postgres) directamente:
+
+- **CONFLICT-002 resuelto**: `codigo=9974` en la tabla `products` es
+  "SILETI CAMILLA 3 TIEMPOS NEGRO ST-4100-1" (categoría LIFTING) — confirma que es la camilla ya
+  publicada, no una silla de barbería distinta. Detalle en `DATA_CONFLICTS.md`.
+- **Direcciones verificadas** contra `tenant_branches`: la de Matriz se corrigió (antes decía
+  "diagonal a Av. Manabí", la base de datos dice "entre Av. Manabí y García Moreno" — más
+  preciso). La de Sucursal coincidía exactamente con lo ya publicado. Actualizado en
+  `src/lib/site-config.ts`.
+- **Descubrimiento importante para SEO-002**: la tabla `products` de esa base de datos tiene el
+  catálogo real y actualizado (código, nombre, categoría, precios por nivel, stock). Es candidata
+  fuerte a ser la fuente autorizada de `catalog:sync`, en vez de depender solo del export de
+  Telegram. Ver nota completa en `NEXT_SESSION.md`.
+- **CONFLICT-001 (número de WhatsApp de la Sucursal) sigue sin resolver**: se revisó
+  `tenant_channels` en la misma base de datos y está vacía (no hay canal de WhatsApp configurado
+  ahí todavía), así que no aportó el dato. Sigue pendiente de confirmación humana.
+
 ## Archivos modificados en esta sesión (Sesión 1)
 
 - Nuevo: `docs/seo-work/MASTER_PLAN.md`

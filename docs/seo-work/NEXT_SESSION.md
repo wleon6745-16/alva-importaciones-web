@@ -17,6 +17,23 @@ Objetivo: crear una fuente pública y segura de productos para Astro, reutilizan
 existe (el catálogo de muebles ya cargado a mano en `src/pages/productos/muebles.astro`) más lo
 que se pueda extraer de `ASISTENTE` (backend/SACC) sin exponer datos privados.
 
+**Importante, descubierto el 2026-08-06 (ver `DECISIONS.md`):** la base de datos real de
+`ASISTENTE` está accesible en Docker y tiene una tabla `products` con el catálogo real y
+actualizado (columnas: `codigo`, `nombre`, `categoria`, `subcategoria`, `precios` jsonb por
+nivel, `stock`, `marca`, `imagen_url`, `descripcion`, `tenant_id`, etc.). Se verificó consultando:
+
+```bash
+docker exec asistente-db-1 psql -U sacc_user -d assistant_sacc -c "SELECT ... FROM products WHERE ..."
+```
+
+Esto es candidato fuerte a ser la fuente autorizada real de `catalog:sync`, mucho mejor que
+depender solo del export manual de Telegram. Evaluar en esta sesión si conviene que
+`scripts/sync-public-catalog.ts` lea de ahí directamente (con las credenciales de
+`docker-compose.yml` del repo `ASISTENTE`, en modo solo lectura) en vez de, o además de, usar
+`muebles.astro` como semilla. Si se usa la base de datos: **nunca exponer `costo` ni campos de
+margen** (revisar qué claves trae el jsonb `precios` — en el ejemplo visto solo eran precios de
+venta por nivel, pero verificar antes de confiar en eso para todo el catálogo).
+
 ## 3. Qué archivos revisar
 
 - `src/pages/productos/muebles.astro` — fuente de verdad actual de los 25 productos de muebles

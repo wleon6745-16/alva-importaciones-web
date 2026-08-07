@@ -84,6 +84,29 @@ actualiza al cerrar — por eso el protocolo de cierre de sesión es obligatorio
 
 ---
 
+---
+
+Fecha: 2026-08-06
+Decisión: Los conflictos de datos que se puedan verificar contra la base de datos real de
+`ASISTENTE` (contenedor Docker `asistente-db-1`, Postgres, base `assistant_sacc`) se resuelven
+consultándola directamente, en lugar de dejarlos como "pendiente de confirmación humana"
+indefinidamente.
+Motivo: El usuario indicó explícitamente "HAY QUE VERIFICAR EN LA BASE DE DATOS" al ver
+CONFLICT-002 marcado como sin resolver, y la base de datos con el contenedor corriendo estaba
+disponible (`docker exec asistente-db-1 psql -U sacc_user -d assistant_sacc`). Con eso se
+resolvió CONFLICT-002 (código 9974 = camilla, no silla) y se verificaron las direcciones de
+Matriz/Sucursal contra `tenant_branches` (la de Matriz se corrigió de "diagonal a Av. Manabí" a
+"entre Av. Manabí y García Moreno", más precisa).
+Alternativas descartadas: dejar todo bajo `MANUAL_ACTIONS.md` esperando confirmación del cliente
+incluso cuando el dato ya existe en un sistema propio consultable.
+Archivos afectados: `docs/seo-work/DATA_CONFLICTS.md`, `docs/seo-work/MANUAL_ACTIONS.md`,
+`src/lib/site-config.ts` (dirección de Matriz).
+Riesgo: bajo. Importante para Sesión 2 (SEO-002): la tabla `products` de esa misma base de datos
+tiene el catálogo real (código, nombre, categoría, precios por nivel, stock) — es candidata
+fuerte a ser la "fuente autorizada" de `catalog:sync`, en vez de depender solo del export de
+Telegram cargado a mano. No se implementó la sincronización en vivo todavía (fuera de alcance de
+esta sesión), pero queda anotado en `NEXT_SESSION.md` para que SEO-002 lo evalúe.
+
 ## Cómo registrar una nueva decisión
 
 ```text
