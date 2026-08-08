@@ -45,3 +45,23 @@ Pruebas: `npm run build` exitoso (12 páginas); `/productos/muebles` verificado 
 Errores: ninguno bloqueante (se corrigió en la misma sesión un formato de precio `$17.5` →
 `$17.50` antes de completar la tarea).
 Siguiente tarea: SEO-003 — Slugs y páginas individuales de muebles. Ver `NEXT_SESSION.md`.
+
+---
+
+Sesión: 03
+Fecha: 2026-08-08
+Duración aproximada: ~45 min
+Objetivo: Slugs y páginas individuales de muebles (Fase 3 del `MASTER_PLAN.md`).
+Trabajo completado: `src/pages/productos/muebles/[slug].astro` (25 páginas de producto vía
+`getStaticPaths`, breadcrumbs, imagen, precio/código opcionales, características, CTA de
+WhatsApp, relacionados por subcategoría); listado (`muebles.astro`) enlazado a cada página de
+producto.
+Trabajo no completado: ninguno dentro del alcance de SEO-003.
+Commits: ver hash reportado al final de la sesión en el mensaje al usuario.
+Pruebas: `npm run build` exitoso (37 páginas); verificado un solo `<h1>` por página de producto;
+caso sin precio/código probado; navegación real en navegador desde el listado hasta un producto.
+Errores: se encontró y corrigió un bug de scope de `getStaticPaths` (hoisted a module scope por
+Astro, no puede leer un `const` declarado fuera de la función) que rompía el build al generar las
+páginas de producto — documentado en `docs/seo-work/sessions/session-03.md` para no repetirlo en
+SEO-012.
+Siguiente tarea: SEO-004 — WhatsApp contextual y conversiones. Ver `NEXT_SESSION.md`.

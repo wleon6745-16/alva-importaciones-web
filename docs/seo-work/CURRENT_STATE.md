@@ -7,10 +7,10 @@
 ## Control de tarea (automático)
 
 <!-- AUTO:SUMMARY:START -->
-- Fase actual: 2
-- Tarea actual: SEO-002
+- Fase actual: 3
+- Tarea actual: SEO-003
 - Estado de la tarea actual: completed
-- Última actualización: 2026-08-07T21:10:41.538Z
+- Última actualización: 2026-08-08T06:47:45.556Z
 <!-- AUTO:SUMMARY:END -->
 
 ## Git
@@ -45,9 +45,9 @@ que no se repitan:
   `BreadcrumbList`, sitemap vía `@astrojs/sitemap`, `robots.txt` estático.
 - Deployment: `Dockerfile` + `nginx.conf` standalone (sin probar en producción real).
 
-## Próxima tarea: SEO-003 — Slugs y páginas individuales de muebles
+## Próxima tarea: SEO-004 — WhatsApp contextual y conversiones
 
-Aún no iniciada (`npm run task:start -- SEO-003` la marca `in_progress`). Ver
+Aún no iniciada (`npm run task:start -- SEO-004` la marca `in_progress`). Ver
 `tasks/seo-tasks.json` para la definición completa (criterios de aceptación, comandos de
 validación) y `docs/seo-work/NEXT_SESSION.md` para las instrucciones completas de cómo abordarla.
 
@@ -59,15 +59,21 @@ validación) y `docs/seo-work/NEXT_SESSION.md` para las instrucciones completas 
   `scripts/sync-public-catalog.ts`, `src/data/products.generated.json` (25 productos de muebles),
   `src/pages/productos/muebles.astro` migrado a consumir el JSON. Decisión: sin conexión en vivo
   a la base de datos de `ASISTENTE` por ahora (documentado, no es un conflicto de datos).
+- **SEO-003** — Slugs y páginas individuales de muebles. Ver
+  `docs/seo-work/sessions/session-03.md`. Resultado: `src/pages/productos/muebles/[slug].astro`
+  (25 páginas de producto indexables, breadcrumbs, relacionados, CTA de WhatsApp), listado
+  enlazado a cada producto. Bug de scope de `getStaticPaths` encontrado y corregido (ver detalle
+  en la sesión) — relevante para SEO-012, que reutiliza el mismo patrón.
 
 ## Tareas pendientes
 
-Ver `tasks/seo-tasks.json` — Fases 3 a 16 (SEO-003 a SEO-016), todas en estado `pending`,
+Ver `tasks/seo-tasks.json` — Fases 4 a 16 (SEO-004 a SEO-016), todas en estado `pending`,
 bloqueadas por dependencias hasta que la tarea previa se complete.
 
 ## Errores conocidos
 
-- Ninguno bloqueante en el build actual.
+- Ninguno bloqueante en el build actual. (El bug de `getStaticPaths` de SEO-003 ya está
+  corregido; ver `docs/seo-work/sessions/session-03.md` para que no se repita en SEO-012.)
 - Ver `DATA_CONFLICTS.md` para inconsistencias de datos (no son errores de código).
 
 ## Addendum post-SEO-001 (mismo día, misma sesión)

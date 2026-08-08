@@ -74,17 +74,23 @@ const breadcrumbs = breadcrumbSchema([
           <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {section.items.map((item) => (
               <div class="glass-card flex flex-col overflow-hidden rounded-2xl shadow-md">
-                <div class="aspect-square overflow-hidden bg-white">
-                  <Image
-                    src={imageFor(item.image)}
-                    alt={item.imageAlt}
-                    width={500}
-                    height={500}
-                    class="h-full w-full object-contain"
-                  />
-                </div>
+                <a href={`/productos/muebles/${item.slug}/`} class="block">
+                  <div class="aspect-square overflow-hidden bg-white">
+                    <Image
+                      src={imageFor(item.image)}
+                      alt={item.imageAlt}
+                      width={500}
+                      height={500}
+                      class="h-full w-full object-contain"
+                    />
+                  </div>
+                </a>
                 <div class="flex flex-1 flex-col gap-2 p-5">
-                  <h3 class="font-display text-lg text-primary-800">{item.name}</h3>
+                  <h3 class="font-display text-lg text-primary-800">
+                    <a href={`/productos/muebles/${item.slug}/`} class="hover:text-primary-600">
+                      {item.name}
+                    </a>
+                  </h3>
                   <p class="text-xl font-semibold text-ink">{priceLabel(item)}</p>
                   {item.features.length > 0 && (
                     <ul class="mt-1 space-y-1 text-sm text-ink-muted">
