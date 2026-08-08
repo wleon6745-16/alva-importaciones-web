@@ -4,6 +4,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import SectionReveal from "../../../components/SectionReveal.astro";
 import WhatsAppCTA from "../../../components/WhatsAppCTA.astro";
 import { breadcrumbSchema } from "../../../lib/structured-data";
+import { siteConfig } from "../../../lib/site-config";
 import type { Product } from "../../../types/product";
 import productsData from "../../../data/products.generated.json";
 
@@ -56,6 +57,7 @@ const related = muebles
   .slice(0, 4);
 
 const pagePath = `/productos/muebles/${product.slug}/`;
+const pageUrl = new URL(pagePath, siteConfig.url).toString();
 
 const breadcrumbs = breadcrumbSchema([
   { name: "Inicio", path: "/" },
@@ -123,7 +125,10 @@ const description = `${product.name}. ${product.features.slice(0, 2).join(", ")}
           label="Consultar por WhatsApp"
           pulse
           class="mt-2 w-fit"
-          message={`Hola, quisiera consultar sobre: ${product.name}${product.code ? ` (Cód: ${product.code})` : ""}`}
+          message={`Hola, quisiera consultar sobre: ${product.name}${product.code ? ` (Cód: ${product.code})` : ""} - ${pageUrl}`}
+          productId={product.id}
+          productName={product.name}
+          category={product.category}
         />
       </div>
     </div>

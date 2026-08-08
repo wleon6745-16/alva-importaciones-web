@@ -4,120 +4,76 @@
 
 1. `docs/seo-work/CURRENT_STATE.md`
 2. Este archivo completo
-3. La tarea `SEO-004` en `tasks/seo-tasks.json`
-4. `docs/seo-work/DATA_CONFLICTS.md` → CONFLICT-001 (número de WhatsApp de la Sucursal, sin
-   resolver — no lo resuelvas por tu cuenta)
+3. La tarea `SEO-005` en `tasks/seo-tasks.json`
 
 ## 2. Qué tarea ejecutar
 
-**SEO-004 — WhatsApp contextual y conversiones**, Fase 4.
+**SEO-005 — Metadatos y Schema de productos**, Fase 5.
 
-Antes de tocar código: `npm run task:start -- SEO-004`.
+Antes de tocar código: `npm run task:start -- SEO-005`.
 
-Objetivo: que cada página de producto genere un mensaje de WhatsApp más completo (nombre, código,
-URL de la página) y que cada clic en un CTA de WhatsApp dispare un evento de analítica
-`whatsapp_click`, aunque todavía no haya ningún proveedor de analítica instalado.
+## 3. Problema real a resolver: títulos duplicados
 
-## 3. Contexto importante: no existe analítica instalada todavía
-
-Se verificó en esta sesión (búsqueda exhaustiva) que el repo **no tiene ningún proveedor de
-analítica** (nada de GA4, GTM, Plausible, Fathom, Umami, Meta Pixel — cero `<script>` de
-tracking, cero dependencia en `package.json`). Instalar un proveedor real es una decisión que
-requiere datos de cuenta del cliente (Measurement ID, dominio verificado, etc.) — eso es
-`MANUAL_ACTIONS.md` / Sesión 16, no esta tarea.
-
-**Enfoque recomendado para SEO-004**: no instalar ningún proveedor. En su lugar, hacer que el
-clic en cada CTA de WhatsApp empuje un evento al patrón estándar de `window.dataLayer` (el mismo
-que usa Google Tag Manager/GA4, así que cuando se instale un proveedor real en el futuro no hay
-que tocar este código, solo agregar el script del proveedor):
-
-```js
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  event: "whatsapp_click",
-  product_id: "...",      // solo en páginas de producto
-  product_name: "...",    // solo en páginas de producto
-  category: "...",        // solo en páginas de producto
-  page_path: location.pathname,
-  branch: "matriz" | "sucursal", // según qué número se está usando
-});
-```
-
-Esto cumple el criterio de aceptación ("existe un evento de analítica whatsapp_click con
-product_id, product_name, category, page_path, branch") de forma verificable sin depender de una
-cuenta externa. Verificar manualmente en el navegador con la consola: `window.dataLayer` debe
-llenarse al hacer clic.
+Hay 4 productos con el **mismo nombre exacto** "Sillón de peluquería" (slugs
+`sillon-de-peluqueria`, `-4`, `-5`, `-6` — precios $349/$359/$279/$240). Hoy
+`[slug].astro` usa `title={product.name}` sin más, así que esas 4 páginas generan el mismo
+`<title>`. Hay que desambiguar el título (no el nombre visible del producto, que se queda igual)
+cuando haya nombres duplicados dentro de la categoría — por ejemplo agregando el precio:
+`"Sillón de peluquería - $349"`. Calcular la duplicidad contando cuántos productos de `muebles`
+comparten `product.name` y aplicar el sufijo solo en ese caso, para no ensuciar los títulos que
+ya son únicos.
 
 ## 4. Qué archivos revisar
 
-- `src/components/WhatsAppCTA.astro` — hoy es un `<a href={whatsappLink(...)}>` plano, sin
-  `onclick` ni tracking. Necesita aceptar props opcionales para los datos del evento (p. ej.
-  `productId`, `productName`, `category`, `branch`) y disparar el `dataLayer.push` en el clic
-  (puede ser un `<script>` inline con `data-*` attributes leídos por un listener, ya que es un
-  componente `.astro` sin framework — revisar cómo se hace scripting inline en el resto del sitio,
-  ver `SectionReveal.astro` como referencia de patrón `<script>` + `IntersectionObserver`).
-- `src/pages/productos/muebles/[slug].astro` — el CTA principal de producto (SEO-003) hoy solo
-  arma `message` con nombre y código. Hay que añadir la URL de la página al mensaje también
-  (`Astro.url` o construir con `siteConfig.url` + `pagePath`), y pasar `productId`/`productName`/
-  `category`/`branch` al `WhatsAppCTA` para el evento de analítica.
-- `src/lib/site-config.ts` — de aquí sale `primaryWhatsappNumber` (Matriz) y
-  `siteConfig.locations` (para saber qué `branch` corresponde a qué número). El CONFLICT-001 (
-  número de Sucursal) sigue sin resolver: usar el número ya configurado, no inventar ni "corregir"
-  por tu cuenta.
-- `src/pages/productos/muebles.astro` — el CTA de cada tarjeta del listado también debería llevar
-  los mismos datos de producto para el evento (mismo patrón que la página individual).
+- `src/pages/productos/muebles/[slug].astro` — título, descripción, canonical, OG ya viven aquí
+  (via `BaseLayout`). Falta: JSON-LD `Product` + `Brand`, imagen OG específica del producto, y el
+  fix de título duplicado del punto 3.
+- `src/lib/structured-data.ts` — añadir una función `productSchema(product, pageUrl, imageUrl)`
+  aquí, siguiendo el patrón de `breadcrumbSchema`/`organizationSchema`.
+- `src/lib/site-config.ts` — no tiene marcas por producto; para el campo `brand` de Schema.org,
+  usar "SILETI" para los 3 productos cuyo nombre ya la menciona (`silla-de-barberia-sileti-*`,
+  `lavacabezas-sileti-*`) y `siteConfig.name` ("Alva Importaciones") como fallback para el resto
+  (son productos revendidos sin marca propia identificada — no es un dato inventado, es la
+  identidad del vendedor).
 
 ## 5. Qué resultado se espera
 
-- Mensaje de WhatsApp en páginas de producto incluye nombre + código (si existe) + URL absoluta
-  de la página.
-- Número usado sigue siendo el configurado en `site-config.ts` (Matriz por defecto para CTAs
-  generales; si se decide usar el de Sucursal en algún contexto, debe ser explícito y documentado,
-  no un cambio silencioso).
-- Evento `whatsapp_click` (vía `window.dataLayer.push`) disparado al hacer clic en cualquier CTA
-  de WhatsApp de producto, con `product_id`, `product_name`, `category`, `page_path`, `branch`.
-  Los CTAs genéricos (no de producto, p. ej. el del header o el de `/contacto`) pueden omitir los
-  campos de producto pero deben seguir disparando el evento con `page_path` y `branch` al menos.
-- Sin datos personales en el evento (nunca nombre/teléfono de un cliente real — solo datos del
-  producto/página, que son públicos).
-- URL de WhatsApp sigue codificada con `encodeURIComponent` (ya lo hace `whatsappLink()`, no
-  romper eso).
-- Verificado manualmente en vista móvil (usar `resize_window` a preset `mobile` en el navegador)
-  que los CTA son clicables y con área táctil suficiente.
+- Títulos únicos en las 25 páginas de producto (incluye el fix de los 4 "Sillón de peluquería").
+- Meta descriptions ya son razonablemente únicas (incluyen precio + 2 features), pero revisar que
+  sigan siéndolo tras cualquier cambio.
+- Canonical absoluta (ya lo es, verificar que sigue).
+- Open Graph completo — usar la imagen del producto (no el genérico `/og-image.jpg`) como
+  `og:image`/`twitter:image` en cada página de producto. Se puede resolver con
+  `getImage()` de `astro:assets` sobre el resultado de `imageFor()` y construir la URL absoluta.
+- JSON-LD `Product` (name, image, description, sku=code si existe, brand, category) + `Brand` +
+  `BreadcrumbList` (ya existe) por producto.
+- `offers` **solo** cuando `product.price !== undefined` — sin inventar disponibilidad
+  (`availability`) ni condición del artículo si no se tiene certeza.
+- Sin `aggregateRating` ni `review` en ningún producto (no hay reseñas reales).
 - `npm run build` sigue pasando.
 
 ## 6. Qué comandos ejecutar
 
 ```bash
 cd "C:\Users\wleon\Proyectos\alva-importaciones-web"
-git status
-npm run task:status
-npm run task:start -- SEO-004
+npm run task:start -- SEO-005
 # ... trabajo ...
 npm run build
-npm run task:validate
-npm run task:complete -- SEO-004
+npm run task:complete -- SEO-005
 ```
 
 ## 7. Qué NO debe modificarse todavía
 
-- No instalar ningún proveedor de analítica real (GA4/GTM/Plausible/etc.) — solo el
-  `dataLayer.push` genérico descrito arriba. Instalar un proveedor real es de `MANUAL_ACTIONS.md`
-  (requiere credenciales del cliente).
-- No resolver CONFLICT-001 (número de WhatsApp de la Sucursal) — sigue pendiente de confirmación
-  humana.
-- No añadir Schema.org / JSON-LD de producto todavía — eso es SEO-005, la siguiente tarea.
-- No tocar `src/data/products.generated.json` a mano — si hace falta un dato nuevo, se cambia el
-  seed en `scripts/sync-public-catalog.ts` y se corre `npm run catalog:sync`.
+- No tocar `src/data/products.generated.json` a mano — cambios de datos van en el seed de
+  `scripts/sync-public-catalog.ts` + `npm run catalog:sync`.
+- No inventar `aggregateRating`, `review`, `availability` ni `itemCondition` sin dato real.
+- Página de listado (`muebles.astro`) no necesita JSON-LD `Product` — eso es solo para páginas de
+  producto individuales.
 
 ## 8. Qué hacer si la tarea falla
 
-1. No marcar `SEO-004` como `completed`.
-2. Ejecutar `npm run task:fail -- SEO-004` y escribir la razón cuando el script la pida (o
-   editar `tasks/seo-tasks.json` a mano si el script no cubre el caso).
-3. Documentar en `docs/seo-work/CURRENT_STATE.md` → "Errores conocidos" exactamente qué falló,
-   con el comando y el error.
-4. Dejar el `git status` limpio (commitear lo estable, descartar/guardar en stash lo que no lo
-   esté, nunca dejarlo mezclado sin explicación).
-5. Reescribir este archivo (`NEXT_SESSION.md`) con instrucciones para retomar `SEO-004` desde el
-   punto exacto donde falló (no desde cero).
+1. No marcar `SEO-005` como `completed`.
+2. `npm run task:fail -- SEO-005` con la razón.
+3. Documentar en `CURRENT_STATE.md` → "Errores conocidos".
+4. Dejar `git status` limpio.
+5. Reescribir este archivo con el punto exacto de retoma.

@@ -4,6 +4,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import SectionReveal from "../../components/SectionReveal.astro";
 import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
 import { breadcrumbSchema } from "../../lib/structured-data";
+import { siteConfig } from "../../lib/site-config";
 import type { Product } from "../../types/product";
 import productsData from "../../data/products.generated.json";
 
@@ -103,7 +104,10 @@ const breadcrumbs = breadcrumbSchema([
                   <WhatsAppCTA
                     label="Consultar"
                     class="mt-auto !px-4 !py-2 text-sm"
-                    message={`Hola, quisiera consultar sobre: ${item.name}`}
+                    message={`Hola, quisiera consultar sobre: ${item.name} - ${new URL(`/productos/muebles/${item.slug}/`, siteConfig.url).toString()}`}
+                    productId={item.id}
+                    productName={item.name}
+                    category={item.category}
                   />
                 </div>
               </div>

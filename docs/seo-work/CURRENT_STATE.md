@@ -7,10 +7,10 @@
 ## Control de tarea (automático)
 
 <!-- AUTO:SUMMARY:START -->
-- Fase actual: 3
-- Tarea actual: SEO-003
+- Fase actual: 4
+- Tarea actual: SEO-004
 - Estado de la tarea actual: completed
-- Última actualización: 2026-08-08T06:47:45.556Z
+- Última actualización: 2026-08-08T06:56:34.837Z
 <!-- AUTO:SUMMARY:END -->
 
 ## Git
@@ -45,9 +45,9 @@ que no se repitan:
   `BreadcrumbList`, sitemap vía `@astrojs/sitemap`, `robots.txt` estático.
 - Deployment: `Dockerfile` + `nginx.conf` standalone (sin probar en producción real).
 
-## Próxima tarea: SEO-004 — WhatsApp contextual y conversiones
+## Próxima tarea: SEO-005 — Metadatos y Schema de productos
 
-Aún no iniciada (`npm run task:start -- SEO-004` la marca `in_progress`). Ver
+Aún no iniciada (`npm run task:start -- SEO-005` la marca `in_progress`). Ver
 `tasks/seo-tasks.json` para la definición completa (criterios de aceptación, comandos de
 validación) y `docs/seo-work/NEXT_SESSION.md` para las instrucciones completas de cómo abordarla.
 
@@ -64,10 +64,13 @@ validación) y `docs/seo-work/NEXT_SESSION.md` para las instrucciones completas 
   (25 páginas de producto indexables, breadcrumbs, relacionados, CTA de WhatsApp), listado
   enlazado a cada producto. Bug de scope de `getStaticPaths` encontrado y corregido (ver detalle
   en la sesión) — relevante para SEO-012, que reutiliza el mismo patrón.
+- **SEO-004** — WhatsApp contextual y conversiones. Ver `docs/seo-work/sessions/session-04.md`.
+  Resultado: `WhatsAppCTA.astro` con evento `whatsapp_click` vía `dataLayer.push` (sin proveedor
+  de analítica instalado — patrón genérico GTM/GA4), mensaje de WhatsApp de producto con URL.
 
 ## Tareas pendientes
 
-Ver `tasks/seo-tasks.json` — Fases 4 a 16 (SEO-004 a SEO-016), todas en estado `pending`,
+Ver `tasks/seo-tasks.json` — Fases 5 a 16 (SEO-005 a SEO-016), todas en estado `pending`,
 bloqueadas por dependencias hasta que la tarea previa se complete.
 
 ## Errores conocidos

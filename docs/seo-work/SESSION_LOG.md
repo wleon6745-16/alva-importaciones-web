@@ -65,3 +65,20 @@ Astro, no puede leer un `const` declarado fuera de la función) que rompía el b
 páginas de producto — documentado en `docs/seo-work/sessions/session-03.md` para no repetirlo en
 SEO-012.
 Siguiente tarea: SEO-004 — WhatsApp contextual y conversiones. Ver `NEXT_SESSION.md`.
+
+---
+
+Sesión: 04
+Fecha: 2026-08-08
+Duración aproximada: ~25 min
+Objetivo: WhatsApp contextual y conversiones (Fase 4).
+Trabajo completado: `WhatsAppCTA.astro` con props de tracking (`productId`, `productName`,
+`category`, `branch`) y `dataLayer.push("whatsapp_click", ...)` en cada clic (sin proveedor de
+analítica instalado, patrón GTM/GA4 genérico); mensaje de WhatsApp de producto ahora incluye la
+URL de la página.
+Trabajo no completado: ninguno dentro del alcance.
+Pruebas: `npm run build` OK (37 páginas); verificado en navegador (viewport móvil) que el CTA
+mide 48px de alto y que el clic llena `window.dataLayer` con los 5 campos esperados sin datos
+personales.
+Errores: ninguno.
+Siguiente tarea: SEO-005 — Metadatos y Schema de productos. Ver `NEXT_SESSION.md`.
