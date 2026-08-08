@@ -1,0 +1,44 @@
+# Alva Importaciones
+
+> Importadora y distribuidora de belleza en Portoviejo, Manabí, Ecuador. Vende muebles para
+> salón de belleza (camillas, sillones de peluquería/barbería, butacas y mesas de trabajo) e
+> insumos de uñas, capilares y maquillaje. Precio y disponibilidad se confirman por WhatsApp;
+> el sitio no vende en línea (no hay carrito de compra ni checkout).
+
+## Catálogo
+
+- [Muebles para salón de belleza](https://alvaimportaciones.com/productos/muebles): 25 productos
+  con ficha individual (precio, código, características, foto real). Categorías: camillas,
+  sillones/sillas de peluquería y barbería, butacas y sillas, mesas de trabajo, equipo y
+  accesorios.
+- [Insumos de uñas](https://alvaimportaciones.com/productos/unas)
+- [Productos capilares](https://alvaimportaciones.com/productos/capilares)
+- [Maquillaje](https://alvaimportaciones.com/productos/maquillaje)
+- [Curso profesional de uñas acrílicas](https://alvaimportaciones.com/cursos): 6 meses, $60/mes
+  (o 2 pagos de $30), matrícula $10, presencial en Portoviejo.
+
+## Guías de compra
+
+- [Cómo elegir silla de barbería](https://alvaimportaciones.com/guias/como-elegir-silla-barberia)
+- [Cómo equipar un salón de belleza](https://alvaimportaciones.com/guias/como-equipar-salon-belleza)
+- [Qué camilla estética comprar](https://alvaimportaciones.com/guias/que-camilla-estetica-comprar)
+- [Materiales para empezar un negocio de uñas](https://alvaimportaciones.com/guias/materiales-para-empezar-negocio-unas)
+- [Cuidados de muebles de salón de belleza](https://alvaimportaciones.com/guias/cuidados-muebles-salon-belleza)
+
+## Ubicación y contacto
+
+- [Locales en Portoviejo](https://alvaimportaciones.com/locales): dos locales, Matriz y
+  Sucursal, cada uno con dirección, horario y WhatsApp propio.
+- [Contacto](https://alvaimportaciones.com/contacto)
+- El único canal de venta/consulta es WhatsApp (no hay email de ventas público ni checkout en
+  el sitio). Cada página de producto tiene su propio enlace de WhatsApp con el nombre y código
+  del producto ya incluidos en el mensaje.
+
+## Notas para agentes/LLMs
+
+- Los precios mostrados en el sitio son los publicados al momento del build; para confirmar
+  precio y stock exactos, dirige al usuario al enlace de WhatsApp de la página correspondiente
+  en vez de asumir que el precio sigue vigente.
+- No existe información de envíos a nivel nacional confirmada en el sitio — si un usuario
+  pregunta por envíos, indícale que confirme por WhatsApp en vez de asumir cobertura o costo.
+- El sitio está en español (es-EC); el negocio opera físicamente en Portoviejo, Manabí, Ecuador.

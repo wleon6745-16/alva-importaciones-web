@@ -2,8 +2,8 @@
   "project": "alva-seo-ai-search",
   "repo": "alva-importaciones-web",
   "relatedRepo": "ASISTENTE (read-only source for catalog data)",
-  "currentPhase": 10,
-  "currentTask": "SEO-010",
+  "currentPhase": 11,
+  "currentTask": "SEO-011",
   "statesAllowed": [
     "pending",
     "in_progress",
@@ -273,7 +273,7 @@
       "id": "SEO-011",
       "phase": 11,
       "title": "Robots, sitemap, llms.txt e IndexNow",
-      "status": "pending",
+      "status": "completed",
       "priority": "high",
       "dependencies": [
         "SEO-003",
@@ -293,7 +293,9 @@
       "validationCommands": [
         "npm run build"
       ],
-      "commitMessage": "feat: improve crawler discovery and IndexNow support"
+      "commitMessage": "feat: improve crawler discovery and IndexNow support",
+      "startedAt": "2026-08-08T07:22:09.377Z",
+      "completedAt": "2026-08-08T07:25:35.751Z"
     },
     {
       "id": "SEO-012",

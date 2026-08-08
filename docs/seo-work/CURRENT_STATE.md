@@ -7,10 +7,10 @@
 ## Control de tarea (automático)
 
 <!-- AUTO:SUMMARY:START -->
-- Fase actual: 10
-- Tarea actual: SEO-010
+- Fase actual: 11
+- Tarea actual: SEO-011
 - Estado de la tarea actual: completed
-- Última actualización: 2026-08-08T07:21:21.706Z
+- Última actualización: 2026-08-08T07:25:35.755Z
 <!-- AUTO:SUMMARY:END -->
 
 ## Git
@@ -45,7 +45,7 @@ que no se repitan:
   `BreadcrumbList`, sitemap vía `@astrojs/sitemap`, `robots.txt` estático.
 - Deployment: `Dockerfile` + `nginx.conf` standalone (sin probar en producción real).
 
-## Próxima tarea: SEO-011 — Robots, sitemap, llms.txt e IndexNow
+## Próxima tarea: SEO-012 — Uñas, maquillaje y capilares (páginas individuales)
 
 Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
 
@@ -80,10 +80,13 @@ Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
   Hallazgo: posible política de envíos nacionales sin confirmar (`MANUAL_ACTIONS.md` #14).
 - **SEO-010** — Guías para búsqueda y buscadores con IA. Ver
   `docs/seo-work/sessions/session-10.md`. Resultado: 5 guías + índice, Article+FAQPage JSON-LD.
+- **SEO-011** — Robots, sitemap, llms.txt e IndexNow. Ver `docs/seo-work/sessions/session-11.md`.
+  Resultado: `robots.txt` con bots de IA, `llms.txt`, IndexNow implementado sin clave real
+  todavía (`MANUAL_ACTIONS.md` #10).
 
 ## Tareas pendientes
 
-Ver `tasks/seo-tasks.json` — Fases 11 a 16 (SEO-011 a SEO-016), todas en estado `pending`,
+Ver `tasks/seo-tasks.json` — Fases 12 a 16 (SEO-012 a SEO-016), todas en estado `pending`,
 bloqueadas por dependencias hasta que la tarea previa se complete.
 
 ## Errores conocidos

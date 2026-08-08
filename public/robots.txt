@@ -1,4 +1,39 @@
 User-agent: *
 Allow: /
 
+# Buscadores tradicionales
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Bots de búsqueda/asistentes con IA
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# No hay rutas privadas ni administrativas en este sitio estático (verificado en SEO-011,
+# ver docs/seo-work/sessions/session-11.md) — nada que bloquear todavía.
+
 Sitemap: https://alvaimportaciones.com/sitemap-index.xml

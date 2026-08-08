@@ -37,12 +37,21 @@ error.
 
 ## 4. IndexNow
 
-- **Comando**: `npm run indexnow` (se crea en Sesión 11)
-- Se ejecuta **después** de una publicación exitosa.
-- Envía únicamente las URLs modificadas en esa publicación, nunca el sitio completo salvo la
-  primera vez.
-- La clave de IndexNow es un secreto: vive en variables de entorno del hosting real, nunca en el
-  repo en texto plano (ver `docs/seo-work/MANUAL_ACTIONS.md` #10).
+- **Implementado en Sesión 11** (`SEO-011`). Dos scripts:
+  - `scripts/indexnow-prepare-keyfile.mjs` — corre automáticamente antes de `astro build`
+    (hook `prebuild` en `package.json`). Si existe la variable de entorno `INDEXNOW_KEY`, escribe
+    `public/{key}.txt` (el archivo de verificación que IndexNow exige en la raíz del sitio) para
+    que quede incluido en `dist/` al compilar. Si la variable no existe, no hace nada — el build
+    sigue funcionando normal, IndexNow simplemente no está activo.
+  - `scripts/indexnow-submit.mjs` (`npm run indexnow`) — se ejecuta **después** de un despliegue
+    exitoso. Sin argumentos, envía todas las URLs de `dist/sitemap-0.xml`; con argumentos
+    (`npm run indexnow -- https://alvaimportaciones.com/productos/muebles/nuevo-producto/`),
+    envía solo esas URLs — usar esta forma en el día a día, no la del sitemap completo, salvo la
+    primera activación.
+- La clave (`INDEXNOW_KEY`) es un secreto: **nunca vive en el repo en texto plano**. Se configura
+  como variable de entorno del hosting real (o un `.env` local, ya excluido por `.gitignore`).
+  Ver `docs/seo-work/MANUAL_ACTIONS.md` #10 — falta que el usuario genere/obtenga la clave real
+  y la configure en el entorno de producción; hasta entonces ambos scripts son no-ops seguros.
 
 ## 5. Revisión de enlaces
 

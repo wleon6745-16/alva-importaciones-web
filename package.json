@@ -7,6 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "node scripts/indexnow-prepare-keyfile.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
@@ -17,7 +18,8 @@
     "task:fail": "node scripts/tasks.mjs fail",
     "task:validate": "node scripts/tasks.mjs validate",
     "catalog:sync": "node scripts/sync-public-catalog.ts",
-    "telegram:extract": "node scripts/extract-telegram-commercial-data.ts"
+    "telegram:extract": "node scripts/extract-telegram-commercial-data.ts",
+    "indexnow": "node scripts/indexnow-submit.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.2",

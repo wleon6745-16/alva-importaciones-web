@@ -168,3 +168,19 @@ Pruebas: `npm run build` OK (52 páginas); h1 único por página; JSON-LD verifi
 Errores: se encontró y corrigió un bug de zona horaria en el formateo de fecha ("7 de agosto" en
 vez de "8 de agosto") — documentado en `docs/seo-work/sessions/session-10.md`.
 Siguiente tarea: SEO-011 — Robots, sitemap, llms.txt e IndexNow. Ver `NEXT_SESSION.md`.
+
+---
+
+Sesión: 11
+Fecha: 2026-08-08
+Duración aproximada: ~20 min
+Objetivo: Robots, sitemap, llms.txt e IndexNow (Fase 11).
+Trabajo completado: `robots.txt` con bots de IA explícitos; `llms.txt` nuevo; IndexNow
+implementado (`indexnow-prepare-keyfile.mjs` como hook `prebuild`, `indexnow-submit.mjs` vía
+`npm run indexnow`), sin clave real (no existe todavía, ver `MANUAL_ACTIONS.md` #10) — ambos
+scripts no-op seguro sin `INDEXNOW_KEY`, probados con clave falsa.
+Pruebas: `npm run build` OK (52 páginas); `dist/robots.txt`/`dist/llms.txt` verificados; sitemap
+con 51 URLs (25 de producto, 404 excluido correctamente); scripts de IndexNow probados
+manualmente con y sin clave.
+Errores: ninguno.
+Siguiente tarea: SEO-012 — Uñas, maquillaje y capilares (páginas individuales). Ver `NEXT_SESSION.md`.
