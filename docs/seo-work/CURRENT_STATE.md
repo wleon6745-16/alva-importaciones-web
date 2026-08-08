@@ -7,10 +7,10 @@
 ## Control de tarea (automático)
 
 <!-- AUTO:SUMMARY:START -->
-- Fase actual: 4
-- Tarea actual: SEO-004
+- Fase actual: 5
+- Tarea actual: SEO-005
 - Estado de la tarea actual: completed
-- Última actualización: 2026-08-08T06:56:34.837Z
+- Última actualización: 2026-08-08T06:59:39.747Z
 <!-- AUTO:SUMMARY:END -->
 
 ## Git
@@ -45,11 +45,9 @@ que no se repitan:
   `BreadcrumbList`, sitemap vía `@astrojs/sitemap`, `robots.txt` estático.
 - Deployment: `Dockerfile` + `nginx.conf` standalone (sin probar en producción real).
 
-## Próxima tarea: SEO-005 — Metadatos y Schema de productos
+## Próxima tarea: SEO-006 — Categorías y enlaces internos
 
-Aún no iniciada (`npm run task:start -- SEO-005` la marca `in_progress`). Ver
-`tasks/seo-tasks.json` para la definición completa (criterios de aceptación, comandos de
-validación) y `docs/seo-work/NEXT_SESSION.md` para las instrucciones completas de cómo abordarla.
+Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
 
 ## Tareas completadas en el sistema de control
 
@@ -67,10 +65,13 @@ validación) y `docs/seo-work/NEXT_SESSION.md` para las instrucciones completas 
 - **SEO-004** — WhatsApp contextual y conversiones. Ver `docs/seo-work/sessions/session-04.md`.
   Resultado: `WhatsAppCTA.astro` con evento `whatsapp_click` vía `dataLayer.push` (sin proveedor
   de analítica instalado — patrón genérico GTM/GA4), mensaje de WhatsApp de producto con URL.
+- **SEO-005** — Metadatos y Schema de productos. Ver `docs/seo-work/sessions/session-05.md`.
+  Resultado: `productSchema()` (Product+Brand+Offer condicional), títulos únicos (fix de 4
+  duplicados), OG image por producto.
 
 ## Tareas pendientes
 
-Ver `tasks/seo-tasks.json` — Fases 5 a 16 (SEO-005 a SEO-016), todas en estado `pending`,
+Ver `tasks/seo-tasks.json` — Fases 6 a 16 (SEO-006 a SEO-016), todas en estado `pending`,
 bloqueadas por dependencias hasta que la tarea previa se complete.
 
 ## Errores conocidos

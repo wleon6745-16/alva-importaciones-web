@@ -1,9 +1,9 @@
 ---
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import SectionReveal from "../../../components/SectionReveal.astro";
 import WhatsAppCTA from "../../../components/WhatsAppCTA.astro";
-import { breadcrumbSchema } from "../../../lib/structured-data";
+import { breadcrumbSchema, productSchema } from "../../../lib/structured-data";
 import { siteConfig } from "../../../lib/site-config";
 import type { Product } from "../../../types/product";
 import productsData from "../../../data/products.generated.json";
@@ -69,13 +69,25 @@ const breadcrumbs = breadcrumbSchema([
 const description = `${product.name}. ${product.features.slice(0, 2).join(", ")}. Precio: ${priceLabel(
   product,
 )}. Consulta disponibilidad por WhatsApp en Portoviejo, Manabí.`;
+
+// Varios productos comparten el mismo nombre exacto (p. ej. 4 "Sillón de peluquería" sin código
+// ni modelo distinto en el nombre) — el <title> tiene que ser único aunque el nombre visible del
+// producto se mantenga igual, así que se desambigua con el precio solo cuando hace falta.
+const sameNameCount = muebles.filter((p) => p.name === product.name).length;
+const pageTitle = sameNameCount > 1 ? `${product.name} - ${priceLabel(product)}` : product.name;
+
+const optimizedImage = await getImage({ src: imageFor(product.image), width: 1200, height: 1200 });
+const imageUrl = new URL(optimizedImage.src, siteConfig.url).toString();
+
+const productLd = productSchema(product, pageUrl, imageUrl);
 ---
 
 <BaseLayout
-  title={product.name}
+  title={pageTitle}
   description={description}
   path={pagePath}
-  structuredData={[breadcrumbs]}
+  image={optimizedImage.src}
+  structuredData={[breadcrumbs, productLd]}
 >
   <nav aria-label="Breadcrumb" class="px-6 pt-8 text-sm text-ink-muted">
     <ol class="mx-auto flex max-w-6xl flex-wrap items-center gap-2">

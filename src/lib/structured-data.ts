@@ -1,4 +1,5 @@
 import { siteConfig } from "./site-config";
+import type { Product } from "../types/product";
 
 export function organizationSchema() {
   return {
@@ -62,6 +63,52 @@ export function courseSchema() {
       sameAs: siteConfig.url,
     },
   };
+}
+
+/**
+ * `brand` no viene en el catálogo sanitizado (SEO-002) salvo que el nombre del producto ya la
+ * mencione explícitamente (p. ej. "SILETI"). Para el resto se usa el vendedor (Alva
+ * Importaciones) como marca — no es un dato inventado, es la identidad real de quien lo vende.
+ */
+function brandNameFor(product: Product): string {
+  if (product.brand) return product.brand;
+  const match = product.name.match(/\bSILETI\b/i);
+  return match ? "SILETI" : siteConfig.name;
+}
+
+export function productSchema(product: Product, pageUrl: string, imageUrl: string) {
+  const schema: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    image: [imageUrl],
+    description: product.features.join(", "),
+    category: product.subcategory ?? product.category,
+    brand: {
+      "@type": "Brand",
+      name: brandNameFor(product),
+    },
+    url: pageUrl,
+  };
+
+  if (product.code) schema.sku = product.code;
+
+  // Solo se declara `offers` cuando hay un precio real conocido — nunca se inventa
+  // disponibilidad ni condición del artículo (ver DATA_CONFLICTS.md / MASTER_PLAN.md).
+  if (product.price !== undefined) {
+    schema.offers = {
+      "@type": "Offer",
+      url: pageUrl,
+      priceCurrency: product.currency ?? "USD",
+      price: product.price,
+      seller: {
+        "@type": "Organization",
+        name: siteConfig.name,
+      },
+    };
+  }
+
+  return schema;
 }
 
 export function breadcrumbSchema(items: { name: string; path: string }[]) {

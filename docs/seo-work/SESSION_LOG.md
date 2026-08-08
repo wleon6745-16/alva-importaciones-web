@@ -82,3 +82,18 @@ mide 48px de alto y que el clic llena `window.dataLayer` con los 5 campos espera
 personales.
 Errores: ninguno.
 Siguiente tarea: SEO-005 — Metadatos y Schema de productos. Ver `NEXT_SESSION.md`.
+
+---
+
+Sesión: 05
+Fecha: 2026-08-08
+Duración aproximada: ~20 min
+Objetivo: Metadatos y Schema de productos (Fase 5).
+Trabajo completado: `productSchema()` en `structured-data.ts` (Product + Brand + Offer solo con
+precio real, sin availability/itemCondition/reviews inventados); títulos únicos en las 25
+páginas de producto (fix de 4 duplicados "Sillón de peluquería" desambiguados por precio); OG
+image propia por producto vía `getImage()`.
+Pruebas: `npm run build` OK; 25 títulos y 25 descripciones verificados únicos; JSON-LD validado
+parseando el HTML generado; cero `aggregateRating`/`review` en todo el catálogo.
+Errores: ninguno.
+Siguiente tarea: SEO-006 — Categorías y enlaces internos. Ver `NEXT_SESSION.md`.
