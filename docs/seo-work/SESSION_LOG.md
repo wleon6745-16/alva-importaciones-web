@@ -112,3 +112,17 @@ Pruebas: `npm run build` OK; anclas/ids verificados; FAQ con 4 entidades; enlace
 verificados en `/productos/unas`.
 Errores: ninguno.
 Siguiente tarea: SEO-007 — Sucursales y SEO local. Ver `NEXT_SESSION.md`.
+
+---
+
+Sesión: 07
+Fecha: 2026-08-08
+Duración aproximada: ~20 min
+Objetivo: Sucursales y SEO local (Fase 7).
+Trabajo completado: `/locales` (general) + `/locales/[branch]` (Matriz, Sucursal) con dirección
+real, horario, WhatsApp por sucursal, mapa y JSON-LD `LocalBusiness` propio (`areaServed`
+Portoviejo). `LocationsMap.astro` en `/contacto` enlaza a las páginas nuevas.
+Pruebas: `npm run build` OK (40 páginas); JSON-LD verificado; números de WhatsApp por sucursal
+verificados correctos.
+Errores: ninguno.
+Siguiente tarea: SEO-008 — Páginas comerciales locales. Ver `NEXT_SESSION.md`.

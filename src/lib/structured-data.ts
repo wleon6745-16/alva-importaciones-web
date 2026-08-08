@@ -12,18 +12,28 @@ export function organizationSchema() {
   };
 }
 
-export function localBusinessSchemas() {
-  return siteConfig.locations.map((location) => ({
+type Location = (typeof siteConfig.locations)[number];
+
+export function localBusinessSchema(location: Location, pageUrl?: string) {
+  return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: `${siteConfig.name} - ${location.name}`,
     image: new URL("/brand/alva-icon-512.png", siteConfig.url).toString(),
+    url: pageUrl,
+    telephone: `+${location.whatsappNumber}`,
     address: {
       "@type": "PostalAddress",
       streetAddress: location.address,
       addressLocality: "Portoviejo",
       addressRegion: "Manabí",
       addressCountry: "EC",
+    },
+    // Área atendida = la ciudad donde está el local (dato ya verificado en la dirección, no
+    // se infiere ni se inventa un radio de cobertura no confirmado).
+    areaServed: {
+      "@type": "City",
+      name: "Portoviejo",
     },
     hasMap: location.mapsUrl,
     openingHoursSpecification: [
@@ -47,7 +57,11 @@ export function localBusinessSchemas() {
         closes: "13:00",
       },
     ],
-  }));
+  };
+}
+
+export function localBusinessSchemas() {
+  return siteConfig.locations.map((location) => localBusinessSchema(location));
 }
 
 export function courseSchema() {

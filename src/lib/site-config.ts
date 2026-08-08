@@ -15,6 +15,7 @@ export const siteConfig = {
   ],
   locations: [
     {
+      slug: "matriz",
       name: "Matriz",
       // Dirección verificada contra la tabla tenant_branches de la base de datos de ASISTENTE
       // (registro "Matriz" / "Bodega Matriz", tenant Alva) el 2026-08-06.
@@ -25,6 +26,7 @@ export const siteConfig = {
       whatsappNumber: "593999526807",
     },
     {
+      slug: "sucursal",
       name: "Sucursal",
       // Dirección verificada contra la tabla tenant_branches de la base de datos de ASISTENTE
       // (registro "Local 9 de Octubre", tenant Alva) el 2026-08-06.

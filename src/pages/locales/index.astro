@@ -1,0 +1,87 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionReveal from "../../components/SectionReveal.astro";
+import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
+import { siteConfig } from "../../lib/site-config";
+import { breadcrumbSchema, localBusinessSchemas } from "../../lib/structured-data";
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Inicio", path: "/" },
+  { name: "Locales", path: "/locales" },
+]);
+---
+
+<BaseLayout
+  title="Nuestros locales en Portoviejo"
+  description="Encuentra la dirección, horario y WhatsApp de los dos locales de Alva Importaciones en Portoviejo, Manabí: Matriz y Sucursal."
+  path="/locales"
+  structuredData={[...localBusinessSchemas(), breadcrumbs]}
+>
+  <section class="hero-glow px-6 py-16 text-center">
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Locales</p>
+    <h1 class="mt-4 font-display text-4xl text-primary-900 sm:text-5xl">
+      Visítanos en Portoviejo
+    </h1>
+    <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-muted">
+      Tenemos dos locales en Portoviejo, Manabí. Elige el más cercano para ver el catálogo de
+      muebles e insumos en persona.
+    </p>
+  </section>
+
+  <SectionReveal as="section" class="px-6 pb-16">
+    <div class="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
+      {
+        siteConfig.locations.map((location) => (
+          <div class="glass-card flex flex-col gap-3 rounded-2xl p-6">
+            <h2 class="font-display text-2xl text-primary-900">
+              <a href={`/locales/${location.slug}/`} class="hover:text-primary-700">
+                {location.name}
+              </a>
+            </h2>
+            <p class="text-sm text-ink-muted">{location.address}</p>
+            <ul class="text-sm text-ink-muted">
+              {siteConfig.hours.map((h) => (
+                <li>
+                  {h.days}: {h.time}
+                </li>
+              ))}
+            </ul>
+            <a
+              href={location.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm font-semibold text-primary-700 hover:underline"
+            >
+              Ver en Google Maps →
+            </a>
+            <div class="mt-2 flex flex-wrap gap-3">
+              <WhatsAppCTA
+                label={`WhatsApp ${location.name}`}
+                number={location.whatsappNumber}
+                class="!px-4 !py-2 text-sm"
+                branch={location.slug}
+              />
+              <a
+                href={`/locales/${location.slug}/`}
+                class="inline-flex items-center rounded-full border-2 border-primary-800 px-4 py-2 text-sm font-semibold text-primary-800 hover:bg-primary-800 hover:text-white"
+              >
+                Ver detalle
+              </a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </SectionReveal>
+
+  <SectionReveal as="section" class="bg-blush-50 px-6 py-16 text-center">
+    <h2 class="font-display text-2xl text-primary-900">¿Buscas el catálogo?</h2>
+    <p class="mt-3 text-ink-muted">Consulta muebles para salón de belleza disponibles ahora.</p>
+    <a
+      href="/productos/muebles"
+      class="mt-6 inline-block rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 hover:bg-primary-800 hover:text-white"
+    >
+      Ver catálogo de muebles
+    </a>
+  </SectionReveal>
+</BaseLayout>

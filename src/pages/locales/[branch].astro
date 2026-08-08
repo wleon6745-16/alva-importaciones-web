@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionReveal from "../../components/SectionReveal.astro";
+import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
+import { siteConfig } from "../../lib/site-config";
+import { breadcrumbSchema, localBusinessSchema } from "../../lib/structured-data";
+
+// Igual que en `productos/muebles/[slug].astro` (ver SEO-003): `getStaticPaths` corre en
+// module scope y no puede cerrar sobre un `const` declarado en el resto del frontmatter, así
+// que lee directamente de `siteConfig`, que sí es module-scope (import).
+export function getStaticPaths() {
+  return siteConfig.locations.map((location) => ({
+    params: { branch: location.slug },
+    props: { location },
+  }));
+}
+
+interface Props {
+  location: (typeof siteConfig.locations)[number];
+}
+
+const { location } = Astro.props;
+
+const pagePath = `/locales/${location.slug}/`;
+const pageUrl = new URL(pagePath, siteConfig.url).toString();
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Inicio", path: "/" },
+  { name: "Locales", path: "/locales" },
+  { name: location.name, path: pagePath },
+]);
+
+const businessLd = localBusinessSchema(location, pageUrl);
+---
+
+<BaseLayout
+  title={`Local ${location.name} — Portoviejo`}
+  description={`Dirección, horario y WhatsApp del local ${location.name} de Alva Importaciones en ${location.address}.`}
+  path={pagePath}
+  structuredData={[businessLd, breadcrumbs]}
+>
+  <nav aria-label="Breadcrumb" class="px-6 pt-8 text-sm text-ink-muted">
+    <ol class="mx-auto flex max-w-4xl flex-wrap items-center gap-2">
+      <li><a href="/" class="hover:text-primary-700">Inicio</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/locales" class="hover:text-primary-700">Locales</a></li>
+      <li aria-hidden="true">/</li>
+      <li aria-current="page" class="text-ink">{location.name}</li>
+    </ol>
+  </nav>
+
+  <SectionReveal as="section" class="px-6 py-10">
+    <div class="mx-auto max-w-2xl">
+      <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Local</p>
+      <h1 class="mt-4 font-display text-4xl text-primary-900">{location.name}</h1>
+      <p class="mt-4 text-lg text-ink-muted">{location.address}</p>
+
+      <div class="glass-card mt-8 rounded-2xl p-6">
+        <h2 class="font-display text-lg text-primary-800">Horario de atención</h2>
+        <ul class="mt-3 space-y-1 text-ink-muted">
+          {
+            siteConfig.hours.map((h) => (
+              <li>
+                {h.days}: {h.time}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="mt-8 flex flex-wrap gap-4">
+        <WhatsAppCTA
+          label={`WhatsApp ${location.name}`}
+          number={location.whatsappNumber}
+          pulse
+          branch={location.slug}
+        />
+        <a
+          href={location.mapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 hover:bg-primary-800 hover:text-white"
+        >
+          Ver en Google Maps
+        </a>
+      </div>
+    </div>
+  </SectionReveal>
+
+  <SectionReveal as="section" class="bg-blush-50 px-6 py-16 text-center">
+    <h2 class="font-display text-2xl text-primary-900">¿Buscas el otro local?</h2>
+    <p class="mt-3 text-ink-muted">Consulta todas nuestras ubicaciones en Portoviejo.</p>
+    <a
+      href="/locales"
+      class="mt-6 inline-block rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 hover:bg-primary-800 hover:text-white"
+    >
+      Ver todos los locales
+    </a>
+  </SectionReveal>
+</BaseLayout>

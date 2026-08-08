@@ -7,10 +7,10 @@
 ## Control de tarea (automático)
 
 <!-- AUTO:SUMMARY:START -->
-- Fase actual: 6
-- Tarea actual: SEO-006
+- Fase actual: 7
+- Tarea actual: SEO-007
 - Estado de la tarea actual: completed
-- Última actualización: 2026-08-08T07:04:09.883Z
+- Última actualización: 2026-08-08T07:08:14.056Z
 <!-- AUTO:SUMMARY:END -->
 
 ## Git
@@ -45,7 +45,7 @@ que no se repitan:
   `BreadcrumbList`, sitemap vía `@astrojs/sitemap`, `robots.txt` estático.
 - Deployment: `Dockerfile` + `nginx.conf` standalone (sin probar en producción real).
 
-## Próxima tarea: SEO-007 — Sucursales y SEO local
+## Próxima tarea: SEO-008 — Páginas comerciales locales
 
 Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
 
@@ -71,10 +71,12 @@ Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
 - **SEO-006** — Categorías y enlaces internos. Ver `docs/seo-work/sessions/session-06.md`.
   Resultado: `RelatedCategories.astro`, nav de subcategorías + anclas en muebles, FAQ visible +
   JSON-LD. Filtros/paginación no aplican todavía (documentado).
+- **SEO-007** — Sucursales y SEO local. Ver `docs/seo-work/sessions/session-07.md`. Resultado:
+  `/locales` + `/locales/[branch]` con LocalBusiness JSON-LD propio por sucursal.
 
 ## Tareas pendientes
 
-Ver `tasks/seo-tasks.json` — Fases 7 a 16 (SEO-007 a SEO-016), todas en estado `pending`,
+Ver `tasks/seo-tasks.json` — Fases 8 a 16 (SEO-008 a SEO-016), todas en estado `pending`,
 bloqueadas por dependencias hasta que la tarea previa se complete.
 
 ## Errores conocidos
