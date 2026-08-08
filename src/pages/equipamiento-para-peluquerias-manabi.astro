@@ -1,0 +1,45 @@
+---
+import SectionReveal from "../components/SectionReveal.astro";
+import LocalLandingLayout from "../components/LocalLandingLayout.astro";
+import ProductGrid from "../components/ProductGrid.astro";
+import type { Product } from "../types/product";
+import productsData from "../data/products.generated.json";
+
+const products = (productsData.products as Product[]).filter((p) => p.category === "muebles");
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "../assets/products/muebles/*.{jpg,jpeg,png,webp}",
+  { eager: true },
+);
+
+function imageFor(filename: string): ImageMetadata {
+  return images[`../assets/products/muebles/${filename}`].default;
+}
+
+const equipmentSlugs = [
+  "lavacabezas-sileti-st-3000-1",
+  "sillon-lava-cabeza",
+  "carrito-auxiliar-multiuso",
+  "tina-spa-electrica",
+];
+
+const equipment = equipmentSlugs
+  .map((slug) => products.find((p) => p.slug === slug))
+  .filter((p): p is Product => Boolean(p))
+  .map((p) => ({ ...p, image: imageFor(p.image) }));
+---
+
+<LocalLandingLayout
+  title="Equipamiento para Peluquerías en Manabí"
+  description="Lavacabezas, carritos auxiliares y tina spa para peluquerías en Manabí. Consulta precio y disponibilidad por WhatsApp."
+  path="/equipamiento-para-peluquerias-manabi"
+  breadcrumbLabel="Equipamiento para peluquerías en Manabí"
+  kicker="Manabí"
+  heading="Equipamiento para peluquerías en Manabí"
+  intro="Desde nuestros locales en Portoviejo atendemos consultas de toda la provincia de Manabí: lavacabezas, carritos auxiliares y equipo complementario para peluquerías y salones."
+  ctaMessage="Hola, quisiera consultar sobre equipamiento para mi peluquería en Manabí"
+>
+  <SectionReveal as="section" class="px-6 pb-16">
+    <ProductGrid items={equipment} basePath="/productos/muebles" />
+  </SectionReveal>
+</LocalLandingLayout>

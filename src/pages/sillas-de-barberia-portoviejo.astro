@@ -1,0 +1,39 @@
+---
+import SectionReveal from "../components/SectionReveal.astro";
+import LocalLandingLayout from "../components/LocalLandingLayout.astro";
+import ProductGrid from "../components/ProductGrid.astro";
+import type { Product } from "../types/product";
+import productsData from "../data/products.generated.json";
+
+const products = (productsData.products as Product[]).filter((p) => p.category === "muebles");
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "../assets/products/muebles/*.{jpg,jpeg,png,webp}",
+  { eager: true },
+);
+
+function imageFor(filename: string): ImageMetadata {
+  return images[`../assets/products/muebles/${filename}`].default;
+}
+
+// Sillas/sillones de peluquería y barbería, excluyendo el lavacabezas (no es una silla,
+// aparece en /equipamiento-para-peluquerias-manabi en su lugar).
+const chairs = products
+  .filter((p) => p.subcategory === "sillones-y-sillas-de-peluqueria-barberia" && !p.name.includes("lava cabeza"))
+  .map((p) => ({ ...p, image: imageFor(p.image) }));
+---
+
+<LocalLandingLayout
+  title="Sillas de Barbería en Portoviejo"
+  description="Sillas y sillones de barbería hidráulicos, reclinables, con base metálica, disponibles en Portoviejo. Consulta precio y stock por WhatsApp."
+  path="/sillas-de-barberia-portoviejo"
+  breadcrumbLabel="Sillas de barbería en Portoviejo"
+  kicker="Barberías"
+  heading="Sillas de barbería en Portoviejo"
+  intro="Sillas y sillones reclinables, con sistema hidráulico y base metálica, para barberías y peluquerías en Portoviejo. Incluye modelos de la línea SILETI."
+  ctaMessage="Hola, quisiera consultar sobre sillas de barbería disponibles en Portoviejo"
+>
+  <SectionReveal as="section" class="px-6 pb-16">
+    <ProductGrid items={chairs} basePath="/productos/muebles" />
+  </SectionReveal>
+</LocalLandingLayout>

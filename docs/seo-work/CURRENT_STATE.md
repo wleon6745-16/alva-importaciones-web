@@ -7,10 +7,10 @@
 ## Control de tarea (automático)
 
 <!-- AUTO:SUMMARY:START -->
-- Fase actual: 7
-- Tarea actual: SEO-007
+- Fase actual: 8
+- Tarea actual: SEO-008
 - Estado de la tarea actual: completed
-- Última actualización: 2026-08-08T07:08:14.056Z
+- Última actualización: 2026-08-08T07:12:51.163Z
 <!-- AUTO:SUMMARY:END -->
 
 ## Git
@@ -45,7 +45,7 @@ que no se repitan:
   `BreadcrumbList`, sitemap vía `@astrojs/sitemap`, `robots.txt` estático.
 - Deployment: `Dockerfile` + `nginx.conf` standalone (sin probar en producción real).
 
-## Próxima tarea: SEO-008 — Páginas comerciales locales
+## Próxima tarea: SEO-009 — Información comercial de Telegram (validada)
 
 Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
 
@@ -73,10 +73,12 @@ Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
   JSON-LD. Filtros/paginación no aplican todavía (documentado).
 - **SEO-007** — Sucursales y SEO local. Ver `docs/seo-work/sessions/session-07.md`. Resultado:
   `/locales` + `/locales/[branch]` con LocalBusiness JSON-LD propio por sucursal.
+- **SEO-008** — Páginas comerciales locales. Ver `docs/seo-work/sessions/session-08.md`.
+  Resultado: 6 landing pages de intención local, todas enlazando productos reales.
 
 ## Tareas pendientes
 
-Ver `tasks/seo-tasks.json` — Fases 8 a 16 (SEO-008 a SEO-016), todas en estado `pending`,
+Ver `tasks/seo-tasks.json` — Fases 9 a 16 (SEO-009 a SEO-016), todas en estado `pending`,
 bloqueadas por dependencias hasta que la tarea previa se complete.
 
 ## Errores conocidos

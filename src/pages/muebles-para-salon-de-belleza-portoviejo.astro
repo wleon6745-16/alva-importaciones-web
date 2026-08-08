@@ -1,0 +1,57 @@
+---
+import SectionReveal from "../components/SectionReveal.astro";
+import LocalLandingLayout from "../components/LocalLandingLayout.astro";
+import ProductGrid from "../components/ProductGrid.astro";
+import type { Product } from "../types/product";
+import productsData from "../data/products.generated.json";
+
+const products = (productsData.products as Product[]).filter((p) => p.category === "muebles");
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "../assets/products/muebles/*.{jpg,jpeg,png,webp}",
+  { eager: true },
+);
+
+function imageFor(filename: string): ImageMetadata {
+  return images[`../assets/products/muebles/${filename}`].default;
+}
+
+// Una selección representativa de cada subcategoría, no el catálogo completo (ese vive en
+// /productos/muebles) — el objetivo de esta página es la intención de búsqueda local amplia.
+const featuredSlugs = [
+  "camilla-multiuso-3-niveles",
+  "sillon-de-peluqueria-st-2202",
+  "silla-de-barberia-sileti-st-2200",
+  "sillon-reina-para-pedicure",
+  "set-mesa-silla-concha-para-manicura",
+  "carrito-auxiliar-multiuso",
+];
+
+const featured = featuredSlugs
+  .map((slug) => products.find((p) => p.slug === slug))
+  .filter((p): p is Product => Boolean(p))
+  .map((p) => ({ ...p, image: imageFor(p.image) }));
+---
+
+<LocalLandingLayout
+  title="Muebles para Salón de Belleza en Portoviejo"
+  description="Equipa tu salón de belleza en Portoviejo con camillas, sillones de peluquería/barbería, butacas de manicura y mesas de trabajo. Precio y disponibilidad por WhatsApp."
+  path="/muebles-para-salon-de-belleza-portoviejo"
+  breadcrumbLabel="Muebles para salón de belleza en Portoviejo"
+  kicker="Equipamiento local"
+  heading="Muebles para salón de belleza en Portoviejo"
+  intro="Si estás montando o renovando un salón de belleza en Portoviejo, aquí tienes una muestra de lo que manejamos: camillas, sillones de peluquería y barbería, butacas para manicura/pedicura, mesas de trabajo y equipo auxiliar."
+  ctaMessage="Hola, estoy equipando un salón de belleza en Portoviejo y quisiera asesoría sobre muebles"
+>
+  <SectionReveal as="section" class="px-6 pb-16">
+    <ProductGrid items={featured} basePath="/productos/muebles" />
+    <div class="mt-10 text-center">
+      <a
+        href="/productos/muebles"
+        class="inline-block rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 hover:bg-primary-800 hover:text-white"
+      >
+        Ver el catálogo completo de muebles →
+      </a>
+    </div>
+  </SectionReveal>
+</LocalLandingLayout>

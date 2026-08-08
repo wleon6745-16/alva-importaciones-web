@@ -2,8 +2,8 @@
   "project": "alva-seo-ai-search",
   "repo": "alva-importaciones-web",
   "relatedRepo": "ASISTENTE (read-only source for catalog data)",
-  "currentPhase": 7,
-  "currentTask": "SEO-007",
+  "currentPhase": 8,
+  "currentTask": "SEO-008",
   "statesAllowed": [
     "pending",
     "in_progress",
@@ -198,7 +198,7 @@
       "id": "SEO-008",
       "phase": 8,
       "title": "Páginas comerciales locales",
-      "status": "pending",
+      "status": "completed",
       "priority": "medium",
       "dependencies": [
         "SEO-002",
@@ -215,7 +215,9 @@
       "validationCommands": [
         "npm run build"
       ],
-      "commitMessage": "feat: add local commercial landing pages"
+      "commitMessage": "feat: add local commercial landing pages",
+      "startedAt": "2026-08-08T07:09:05.789Z",
+      "completedAt": "2026-08-08T07:12:51.161Z"
     },
     {
       "id": "SEO-009",

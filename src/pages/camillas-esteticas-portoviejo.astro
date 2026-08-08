@@ -1,0 +1,37 @@
+---
+import SectionReveal from "../components/SectionReveal.astro";
+import LocalLandingLayout from "../components/LocalLandingLayout.astro";
+import ProductGrid from "../components/ProductGrid.astro";
+import type { Product } from "../types/product";
+import productsData from "../data/products.generated.json";
+
+const products = (productsData.products as Product[]).filter((p) => p.category === "muebles");
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "../assets/products/muebles/*.{jpg,jpeg,png,webp}",
+  { eager: true },
+);
+
+function imageFor(filename: string): ImageMetadata {
+  return images[`../assets/products/muebles/${filename}`].default;
+}
+
+const camillas = products
+  .filter((p) => p.subcategory === "camillas")
+  .map((p) => ({ ...p, image: imageFor(p.image) }));
+---
+
+<LocalLandingLayout
+  title="Camillas Estéticas en Portoviejo"
+  description="Camillas estéticas portátiles e hidráulicas para faciales, masajes y tratamientos, disponibles en Portoviejo. Consulta precio y stock por WhatsApp."
+  path="/camillas-esteticas-portoviejo"
+  breadcrumbLabel="Camillas estéticas en Portoviejo"
+  kicker="Estética"
+  heading="Camillas estéticas en Portoviejo"
+  intro="Camillas portátiles e hidráulicas, con base metálica y diseño autoportante, para faciales, masajes y tratamientos estéticos en Portoviejo."
+  ctaMessage="Hola, quisiera consultar sobre camillas estéticas disponibles en Portoviejo"
+>
+  <SectionReveal as="section" class="px-6 pb-16">
+    <ProductGrid items={camillas} basePath="/productos/muebles" />
+  </SectionReveal>
+</LocalLandingLayout>

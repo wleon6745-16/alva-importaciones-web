@@ -1,0 +1,46 @@
+---
+import SectionReveal from "../components/SectionReveal.astro";
+import LocalLandingLayout from "../components/LocalLandingLayout.astro";
+
+// Mismos datos reales que /cursos (ver courseSchema() en structured-data.ts) — esta página no
+// inventa condiciones nuevas, solo re-encuadra el mismo curso para la intención de búsqueda
+// local "cursos de uñas Portoviejo" y enlaza al detalle completo.
+const highlights = [
+  { label: "Duración", value: "6 meses" },
+  { label: "Inversión", value: "$60 / mes (o 2 pagos de $30)" },
+  { label: "Matrícula", value: "$10 para separar tu cupo" },
+  { label: "Modalidad", value: "Presencial en Portoviejo" },
+];
+---
+
+<LocalLandingLayout
+  title="Cursos de Uñas en Portoviejo"
+  description="Curso profesional de uñas acrílicas en Portoviejo, 6 meses, $60 al mes, matrícula $10. Formación presencial dictada por Alva Importaciones."
+  path="/cursos-de-unas-portoviejo"
+  breadcrumbLabel="Cursos de uñas en Portoviejo"
+  kicker="Formación"
+  heading="Cursos de uñas en Portoviejo"
+  intro="Formamos nuevas nail artists en Portoviejo con un curso profesional de uñas acrílicas de 6 meses, dictado presencialmente en nuestros locales."
+  ctaMessage="Hola, quisiera información sobre el curso de uñas en Portoviejo"
+>
+  <SectionReveal as="section" class="px-6 pb-16">
+    <div class="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
+      {
+        highlights.map((h) => (
+          <div class="glass-card rounded-2xl p-6">
+            <p class="text-sm font-semibold uppercase tracking-wide text-primary-700">{h.label}</p>
+            <p class="mt-2 font-display text-xl text-ink">{h.value}</p>
+          </div>
+        ))
+      }
+    </div>
+    <div class="mt-10 text-center">
+      <a
+        href="/cursos"
+        class="inline-block rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 hover:bg-primary-800 hover:text-white"
+      >
+        Ver todos los detalles del curso →
+      </a>
+    </div>
+  </SectionReveal>
+</LocalLandingLayout>

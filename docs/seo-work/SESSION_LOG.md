@@ -126,3 +126,17 @@ Pruebas: `npm run build` OK (40 páginas); JSON-LD verificado; números de Whats
 verificados correctos.
 Errores: ninguno.
 Siguiente tarea: SEO-008 — Páginas comerciales locales. Ver `NEXT_SESSION.md`.
+
+---
+
+Sesión: 08
+Fecha: 2026-08-08
+Duración aproximada: ~20 min
+Objetivo: Páginas comerciales locales (Fase 8).
+Trabajo completado: 6 landing pages de intención local (muebles, sillas de barbería, camillas,
+uñas, equipamiento Manabí, cursos de uñas), cada una con contenido propio enlazando productos
+reales; se quitó una afirmación de "envíos" no verificada antes de terminar.
+Pruebas: `npm run build` OK (46 páginas); h1/título/descripción únicos verificados; enlaces a
+producto verificados contra slugs reales.
+Errores: ninguno.
+Siguiente tarea: SEO-009 — Información comercial de Telegram (validada). Ver `NEXT_SESSION.md`.

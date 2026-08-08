@@ -1,0 +1,62 @@
+---
+import SectionReveal from "../components/SectionReveal.astro";
+import LocalLandingLayout from "../components/LocalLandingLayout.astro";
+import ProductGrid from "../components/ProductGrid.astro";
+import type { Product } from "../types/product";
+import productsData from "../data/products.generated.json";
+
+const products = (productsData.products as Product[]).filter((p) => p.category === "muebles");
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "../assets/products/muebles/*.{jpg,jpeg,png,webp}",
+  { eager: true },
+);
+
+function imageFor(filename: string): ImageMetadata {
+  return images[`../assets/products/muebles/${filename}`].default;
+}
+
+// El catálogo sanitizado (SEO-002) todavía solo cubre muebles con datos individuales por
+// producto; los insumos de uñas (acrílicos, geles, esmaltes) viven como galería genérica en
+// /productos/unas (pendiente de SEO-012). Esta página enlaza a esa categoría y, mientras tanto,
+// destaca el mobiliario real para manicura/pedicura que sí tiene ficha propia.
+const nailFurnitureSlugs = [
+  "silla-concha-para-pedicure",
+  "sillon-reina-para-pedicure",
+  "set-mesa-silla-concha-para-manicura",
+];
+
+const nailFurniture = nailFurnitureSlugs
+  .map((slug) => products.find((p) => p.slug === slug))
+  .filter((p): p is Product => Boolean(p))
+  .map((p) => ({ ...p, image: imageFor(p.image) }));
+---
+
+<LocalLandingLayout
+  title="Productos para Uñas en Portoviejo"
+  description="Insumos y mobiliario para manicura y pedicura en Portoviejo: acrílicos, geles, esmaltes, sillas concha, sillones y mesas de manicura. Consulta por WhatsApp."
+  path="/productos-para-unas-portoviejo"
+  breadcrumbLabel="Productos para uñas en Portoviejo"
+  kicker="Nail art"
+  heading="Productos para uñas en Portoviejo"
+  intro="Insumos de uñas (acrílicos, geles, esmaltes) y el mobiliario especializado para manicura y pedicura que necesitas para atender en tu salón en Portoviejo."
+  ctaMessage="Hola, quisiera consultar sobre productos para uñas disponibles en Portoviejo"
+>
+  <SectionReveal as="section" class="px-6 pb-10 text-center">
+    <a
+      href="/productos/unas"
+      class="inline-block rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 hover:bg-primary-800 hover:text-white"
+    >
+      Ver insumos de uñas (acrílicos, geles, esmaltes) →
+    </a>
+  </SectionReveal>
+
+  <SectionReveal as="section" class="px-6 pb-16">
+    <h2 class="mx-auto max-w-6xl font-display text-2xl text-primary-900">
+      Mobiliario para manicura y pedicura
+    </h2>
+    <div class="mt-8">
+      <ProductGrid items={nailFurniture} basePath="/productos/muebles" />
+    </div>
+  </SectionReveal>
+</LocalLandingLayout>

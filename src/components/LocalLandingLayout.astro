@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionReveal from "../components/SectionReveal.astro";
+import WhatsAppCTA from "../components/WhatsAppCTA.astro";
+import { breadcrumbSchema } from "../lib/structured-data";
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  breadcrumbLabel: string;
+  kicker: string;
+  heading: string;
+  intro: string;
+  ctaMessage: string;
+}
+
+const { title, description, path, breadcrumbLabel, kicker, heading, intro, ctaMessage } = Astro.props;
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Inicio", path: "/" },
+  { name: breadcrumbLabel, path },
+]);
+---
+
+<BaseLayout title={title} description={description} path={path} structuredData={[breadcrumbs]}>
+  <section class="hero-glow px-6 py-16 text-center">
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">{kicker}</p>
+    <h1 class="mt-4 font-display text-4xl text-primary-900 sm:text-5xl">{heading}</h1>
+    <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-muted">{intro}</p>
+    <WhatsAppCTA label="Consultar por WhatsApp" pulse class="mt-8" message={ctaMessage} />
+  </section>
+
+  <slot />
+
+  <SectionReveal as="section" class="bg-blush-50 px-6 py-16 text-center">
+    <h2 class="font-display text-2xl text-primary-900">¿Tienes dudas?</h2>
+    <p class="mt-3 text-ink-muted">Escríbenos por WhatsApp, te respondemos al instante.</p>
+    <WhatsAppCTA label="Consultar por WhatsApp" class="mt-6" message={ctaMessage} />
+  </SectionReveal>
+</BaseLayout>
