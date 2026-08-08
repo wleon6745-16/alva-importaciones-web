@@ -1,0 +1,35 @@
+---
+interface Props {
+  /** slug de la categoría actual (para excluirla de la lista) */
+  current: "muebles" | "unas" | "capilares" | "maquillaje";
+}
+
+const { current } = Astro.props;
+
+const CATEGORIES = [
+  { slug: "muebles", title: "Muebles para salón", href: "/productos/muebles" },
+  { slug: "unas", title: "Uñas / Nailart", href: "/productos/unas" },
+  { slug: "capilares", title: "Capilares", href: "/productos/capilares" },
+  { slug: "maquillaje", title: "Maquillaje", href: "/productos/maquillaje" },
+] as const;
+
+const others = CATEGORIES.filter((c) => c.slug !== current);
+---
+
+<div class="mx-auto max-w-3xl">
+  <h2 class="font-display text-2xl text-primary-900">Otras categorías</h2>
+  <ul class="mt-6 flex flex-wrap justify-center gap-3">
+    {
+      others.map((c) => (
+        <li>
+          <a
+            href={c.href}
+            class="inline-block rounded-full border-2 border-primary-800 px-5 py-2 text-sm font-semibold text-primary-800 transition-colors hover:bg-primary-800 hover:text-white"
+          >
+            {c.title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

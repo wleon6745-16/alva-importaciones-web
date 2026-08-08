@@ -3,7 +3,8 @@ import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import SectionReveal from "../../components/SectionReveal.astro";
 import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
-import { breadcrumbSchema } from "../../lib/structured-data";
+import RelatedCategories from "../../components/RelatedCategories.astro";
+import { breadcrumbSchema, faqSchema } from "../../lib/structured-data";
 import { siteConfig } from "../../lib/site-config";
 import type { Product } from "../../types/product";
 import productsData from "../../data/products.generated.json";
@@ -38,6 +39,7 @@ const SUBCATEGORY_TITLES: Record<string, string> = {
 const SUBCATEGORY_ORDER = Object.keys(SUBCATEGORY_TITLES);
 
 const sections = SUBCATEGORY_ORDER.map((subcategory) => ({
+  subcategory,
   title: SUBCATEGORY_TITLES[subcategory],
   items: products.filter((p) => p.subcategory === subcategory),
 })).filter((section) => section.items.length > 0);
@@ -47,13 +49,37 @@ const breadcrumbs = breadcrumbSchema([
   { name: "Productos", path: "/productos" },
   { name: "Muebles", path: "/productos/muebles" },
 ]);
+
+const faqs = [
+  {
+    question: "¿Qué tipo de muebles tienen disponibles para salones de belleza?",
+    answer:
+      "Camillas, sillones de peluquería y barbería, butacas y sillas para manicura/pedicura, mesas de trabajo y equipo como lavacabezas y carritos auxiliares.",
+  },
+  {
+    question: "¿Cómo consulto el precio y la disponibilidad de un mueble?",
+    answer:
+      "Cada producto tiene un botón para consultar por WhatsApp con el nombre y código del mueble ya incluido, así te respondemos más rápido.",
+  },
+  {
+    question: "¿Puedo ver los muebles antes de comprar?",
+    answer:
+      "Sí, puedes visitarnos en nuestros locales de Matriz o Sucursal en Portoviejo. Encuentra las direcciones y el horario en la página de Contacto.",
+  },
+  {
+    question: "¿Los muebles publicados aquí son todo lo que tienen disponible?",
+    answer:
+      "Publicamos el catálogo que tenemos identificado y fotografiado; si no encuentras lo que buscas, escríbenos por WhatsApp y seguimos ampliando el catálogo.",
+  },
+];
+const faqLd = faqSchema(faqs);
 ---
 
 <BaseLayout
   title="Muebles para Salón de Belleza"
   description="Camillas, sillones de peluquería, butacas y mesas de trabajo para salones de belleza en Portoviejo. Precios y disponibilidad por WhatsApp."
   path="/productos/muebles"
-  structuredData={[breadcrumbs]}
+  structuredData={[breadcrumbs, faqLd]}
 >
   <section class="hero-glow px-6 py-16 text-center">
     <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Destacado</p>
@@ -67,9 +93,26 @@ const breadcrumbs = breadcrumbSchema([
     <WhatsAppCTA label="Consultar por WhatsApp" pulse class="mt-8" message="Hola, quisiera consultar sobre muebles para mi salón" />
   </section>
 
+  <nav aria-label="Categorías de muebles" class="px-6 pb-4">
+    <ul class="mx-auto flex max-w-6xl flex-wrap justify-center gap-3">
+      {
+        sections.map((section) => (
+          <li>
+            <a
+              href={`#${section.subcategory}`}
+              class="inline-block rounded-full border border-primary-200 px-4 py-2 text-sm font-medium text-primary-800 transition-colors hover:border-primary-800 hover:bg-primary-800 hover:text-white"
+            >
+              {section.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+
   {
     sections.map((section) => (
-      <SectionReveal as="section" class="px-6 py-16">
+      <SectionReveal as="section" id={section.subcategory} class="scroll-mt-24 px-6 py-16">
         <div class="mx-auto max-w-6xl">
           <h2 class="font-display text-3xl text-primary-900">{section.title}</h2>
           <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -122,5 +165,25 @@ const breadcrumbs = breadcrumbSchema([
     <h2 class="font-display text-2xl text-primary-900">¿No encuentras lo que buscas?</h2>
     <p class="mt-3 text-ink-muted">Pregúntanos, seguimos ampliando el catálogo de muebles.</p>
     <WhatsAppCTA label="Consultar por WhatsApp" class="mt-6" />
+  </SectionReveal>
+
+  <SectionReveal as="section" class="px-6 py-16">
+    <div class="mx-auto max-w-3xl">
+      <h2 class="font-display text-2xl text-primary-900">Preguntas frecuentes</h2>
+      <dl class="mt-8 space-y-6">
+        {
+          faqs.map((faq) => (
+            <div>
+              <dt class="font-display text-lg text-primary-800">{faq.question}</dt>
+              <dd class="mt-2 text-ink-muted">{faq.answer}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </SectionReveal>
+
+  <SectionReveal as="section" class="bg-blush-50 px-6 py-16 text-center">
+    <RelatedCategories current="muebles" />
   </SectionReveal>
 </BaseLayout>

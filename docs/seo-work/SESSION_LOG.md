@@ -97,3 +97,18 @@ Pruebas: `npm run build` OK; 25 títulos y 25 descripciones verificados únicos;
 parseando el HTML generado; cero `aggregateRating`/`review` en todo el catálogo.
 Errores: ninguno.
 Siguiente tarea: SEO-006 — Categorías y enlaces internos. Ver `NEXT_SESSION.md`.
+
+---
+
+Sesión: 06
+Fecha: 2026-08-08
+Duración aproximada: ~20 min
+Objetivo: Categorías y enlaces internos (Fase 6).
+Trabajo completado: `RelatedCategories.astro` (enlazado cruzado entre las 4 categorías); nav de
+subcategorías + anclas en `/productos/muebles`; FAQ visible + `FAQPage` JSON-LD (sin reclamos de
+política comercial no verificada, ver `MANUAL_ACTIONS.md` #5). Filtros y paginación: no aplican
+todavía (documentado, no son huecos pendientes).
+Pruebas: `npm run build` OK; anclas/ids verificados; FAQ con 4 entidades; enlaces cruzados
+verificados en `/productos/unas`.
+Errores: ninguno.
+Siguiente tarea: SEO-007 — Sucursales y SEO local. Ver `NEXT_SESSION.md`.

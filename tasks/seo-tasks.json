@@ -2,8 +2,8 @@
   "project": "alva-seo-ai-search",
   "repo": "alva-importaciones-web",
   "relatedRepo": "ASISTENTE (read-only source for catalog data)",
-  "currentPhase": 5,
-  "currentTask": "SEO-005",
+  "currentPhase": 6,
+  "currentTask": "SEO-006",
   "statesAllowed": [
     "pending",
     "in_progress",
@@ -148,7 +148,7 @@
       "id": "SEO-006",
       "phase": 6,
       "title": "Categorías y enlaces internos",
-      "status": "pending",
+      "status": "completed",
       "priority": "medium",
       "dependencies": [
         "SEO-002"
@@ -165,7 +165,9 @@
       "validationCommands": [
         "npm run build"
       ],
-      "commitMessage": "feat: improve category SEO and internal linking"
+      "commitMessage": "feat: improve category SEO and internal linking",
+      "startedAt": "2026-08-08T07:01:06.268Z",
+      "completedAt": "2026-08-08T07:04:09.879Z"
     },
     {
       "id": "SEO-007",
