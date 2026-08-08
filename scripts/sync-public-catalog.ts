@@ -28,6 +28,7 @@ interface SeedItem {
   name: string;
   price?: number;
   code?: string;
+  brand?: string;
   features: string[];
   image: string;
 }
@@ -244,6 +245,269 @@ const MUEBLES_SEED: SeedGroup[] = [
   },
 ];
 
+// Seed de SEO-012: curado a mano desde el export de Telegram (messages.html/messages2.html),
+// cruzando cada mensaje con su foto real adjunta (mismo mensaje = mismo producto = misma foto,
+// nunca una foto de otro mensaje). Solo se publican productos con nombre identificable, precio,
+// foto real y — cuando la fuente lo trae — código y marca. No es el catálogo completo del canal
+// (hay cientos de publicaciones más sin curar, ver reports/telegram-data-candidates.md); es una
+// primera selección representativa por categoría, ampliable en una sesión futura con el mismo
+// proceso.
+const UNAS_CATEGORY = "unas";
+const UNAS_SEED: SeedGroup[] = [
+  {
+    title: "Acrílicos y monómeros",
+    subcategory: "acrilicos-y-monomeros",
+    items: [
+      {
+        name: "Polvo acrílico Master Nails",
+        price: 4.0,
+        brand: "Master Nails",
+        features: ["Gran variedad de colores"],
+        image: "polvo-acrilico-master-nails.jpg",
+      },
+      {
+        name: "Primer Master Nails 2 en 1",
+        price: 8.7,
+        brand: "Master Nails",
+        features: ["2 en 1", "Presentación 15ml"],
+        image: "primer-master-nails-2en1.jpg",
+      },
+      {
+        name: "Monómero Master Nails 16 OZ",
+        price: 32.75,
+        brand: "Master Nails",
+        features: ["Presentación 16 oz", "Disponible también en 8, 4, 2 y 1 oz"],
+        image: "monomero-master-nails-16oz.jpg",
+      },
+      {
+        name: "Monómero E&A 1000 ml",
+        price: 9.5,
+        brand: "E&A",
+        features: ["Presentación 1000 ml"],
+        image: "monomero-ea-1000ml.jpg",
+      },
+    ],
+  },
+  {
+    title: "Esmaltes",
+    subcategory: "esmaltes",
+    items: [
+      {
+        name: "Esmalte Gelux Mía Secret",
+        price: 11.25,
+        brand: "Mía Secret",
+        features: [],
+        image: "esmalte-gelux-mia-secret.jpg",
+      },
+    ],
+  },
+  {
+    title: "Herramientas y equipo",
+    subcategory: "herramientas-y-equipo",
+    items: [
+      {
+        name: "Broca Umbrella pequeña Master Nails",
+        price: 5.0,
+        brand: "Master Nails",
+        features: [],
+        image: "broca-umbrella-pequena-master-nails.jpg",
+      },
+      {
+        name: "Limas lavables ZZAM",
+        price: 1.75,
+        brand: "ZZAM",
+        features: ["Grano 100/180", "Grano 120/180", "Grano 180/220"],
+        image: "limas-lavables-zzam.jpg",
+      },
+      {
+        name: "Lámpara de uñas SUN D7 208W",
+        price: 26.0,
+        code: "4877",
+        features: ["208W"],
+        image: "lampara-unas-sun-d7-208w.jpg",
+      },
+      {
+        name: "Drill inalámbrico Master Nails 35.000 RPM",
+        price: 145.0,
+        code: "7016",
+        brand: "Master Nails",
+        features: ["35.000 RPM", "60W"],
+        image: "drill-inalambrico-master-nails.jpg",
+      },
+    ],
+  },
+];
+
+const CAPILARES_CATEGORY = "capilares";
+const CAPILARES_SEED: SeedGroup[] = [
+  {
+    title: "Tratamientos y shampoos",
+    subcategory: "tratamientos-y-shampoos",
+    items: [
+      {
+        name: "Mascarilla lisso keratina Placenta Life",
+        price: 7.25,
+        code: "287",
+        brand: "Placenta Life",
+        features: [],
+        image: "mascarilla-lisso-keratina-placenta-life.jpg",
+      },
+      {
+        name: "Kit shampoo + acondicionador Salon Line",
+        price: 13.75,
+        code: "9313",
+        brand: "Salon Line",
+        features: [],
+        image: "kit-shampoo-acondicionador-salon-line.jpg",
+      },
+      {
+        name: "Keratina Ambroisie 250 ml Rene Chardon",
+        price: 45.0,
+        code: "4199",
+        brand: "Rene Chardon",
+        features: ["Presentación 250 ml"],
+        image: "keratina-ambroisie-250ml-rene-chardon.jpg",
+      },
+      {
+        name: "Crema de peinar SKALA Bomba de Vitaminas",
+        price: 8.25,
+        code: "10879",
+        brand: "SKALA",
+        features: [
+          "Fórmula con ácido hialurónico, aceite de ricino, proteínas vegetales, vitaminas A y E, D-Pantenol",
+          "Nutre profundamente y ayuda a recuperar el brillo natural",
+        ],
+        image: "crema-peinar-skala-bomba-vitaminas.jpg",
+      },
+      {
+        name: "Tónico capilar Poción Día y Noche",
+        price: 15.75,
+        code: "9729",
+        brand: "Poción",
+        features: [
+          "Tratamiento con nanotecnología liposomal",
+          "Ritual de aplicación día y noche",
+          "Enfocado en caída del cabello y crecimiento",
+        ],
+        image: "tonico-capilar-pocion-dia-noche.jpg",
+      },
+      {
+        name: "Shampoo control caspa Poción",
+        price: 13.0,
+        code: "11245",
+        brand: "Poción",
+        features: ["Ayuda a controlar la caspa visible", "Equilibra el cuero cabelludo", "Reduce la picazón"],
+        image: "shampoo-control-caspa-pocion.jpg",
+      },
+    ],
+  },
+  {
+    title: "Equipo capilar",
+    subcategory: "equipo-capilar",
+    items: [
+      {
+        name: "Plancha de cabello mini Lizze",
+        price: 36.0,
+        code: "6291",
+        brand: "Lizze",
+        features: [],
+        image: "plancha-cabello-mini-lizze.jpg",
+      },
+      {
+        name: "Máquina de cabello WAHL Edición Legend",
+        price: 148.75,
+        code: "8526",
+        brand: "WAHL",
+        features: [],
+        image: "maquina-cabello-wahl-legend.jpg",
+      },
+    ],
+  },
+];
+
+const MAQUILLAJE_CATEGORY = "maquillaje";
+const MAQUILLAJE_SEED: SeedGroup[] = [
+  {
+    title: "Ojos y labios",
+    subcategory: "ojos-y-labios",
+    items: [
+      {
+        name: "Paleta de sombras Satine",
+        price: 20.0,
+        code: "2510",
+        brand: "Satine",
+        features: [],
+        image: "paleta-sombras-satine.jpg",
+      },
+      {
+        name: "Labial mate Top Face",
+        price: 13.0,
+        code: "6033",
+        brand: "Top Face",
+        features: [],
+        image: "labial-mate-top-face.jpg",
+      },
+      {
+        name: "Labial Milani",
+        price: 14.85,
+        code: "3487",
+        brand: "Milani",
+        features: [],
+        image: "labial-milani.jpg",
+      },
+      {
+        name: "Máscara de pestañas OG Mega Plump",
+        price: 4.5,
+        code: "11159",
+        brand: "OG",
+        features: [],
+        image: "mascara-pestanas-og-mega-plump.jpg",
+      },
+    ],
+  },
+  {
+    title: "Rostro",
+    subcategory: "rostro",
+    items: [
+      {
+        name: "Sellador de maquillaje Beauty Creations",
+        price: 8.9,
+        code: "2602",
+        brand: "Beauty Creations",
+        features: [],
+        image: "sellador-maquillaje-beauty-creations.jpg",
+      },
+      {
+        name: "Polvo compacto Amorus",
+        price: 5.75,
+        brand: "Amorus",
+        features: ["Tonos: Natural Beige 05, Porcelain 09, Caramel Beige 11"],
+        image: "polvo-compacto-amorus.jpg",
+      },
+      {
+        name: "Spray fijador de maquillaje S.F.R. Color",
+        price: 3.0,
+        code: "10866",
+        brand: "S.F.R. Color",
+        features: [],
+        image: "spray-fijador-maquillaje-sfr-color.jpg",
+      },
+      {
+        name: "Base líquida Vogue Resist",
+        price: 6.25,
+        brand: "Vogue",
+        features: [
+          "Hasta 24h o 30h de cobertura",
+          "Resistente al sudor, la humedad y el agua",
+          "Acabado mate natural",
+          "Incluye protección solar",
+        ],
+        image: "base-liquida-vogue-resist.jpg",
+      },
+    ],
+  },
+];
+
 function slugify(value: string): string {
   return value
     .normalize("NFD")
@@ -300,7 +564,7 @@ function toProducts(category: string, groups: SeedGroup[]): Product[] {
         code: item.code,
         price: item.price,
         currency: item.price !== undefined ? "USD" : undefined,
-        brand: undefined,
+        brand: item.brand,
         features: item.features,
         image: item.image,
         imageAlt: item.name,
@@ -334,12 +598,19 @@ function assertSanitized(products: Product[]) {
 }
 
 function main() {
-  const products = toProducts(MUEBLES_CATEGORY, MUEBLES_SEED);
+  const products = [
+    ...toProducts(MUEBLES_CATEGORY, MUEBLES_SEED),
+    ...toProducts(UNAS_CATEGORY, UNAS_SEED),
+    ...toProducts(CAPILARES_CATEGORY, CAPILARES_SEED),
+    ...toProducts(MAQUILLAJE_CATEGORY, MAQUILLAJE_SEED),
+  ];
   assertSanitized(products);
 
   const output = {
     generatedAt: new Date().toISOString(),
-    source: "manual-seed:scripts/sync-public-catalog.ts (migrado desde muebles.astro, 2026-08-07)",
+    source:
+      "manual-seed:scripts/sync-public-catalog.ts (muebles migrado desde muebles.astro 2026-08-07; " +
+      "uñas/capilares/maquillaje curados desde el export de Telegram en SEO-012, 2026-08-08)",
     products,
   };
 

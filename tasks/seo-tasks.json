@@ -2,8 +2,8 @@
   "project": "alva-seo-ai-search",
   "repo": "alva-importaciones-web",
   "relatedRepo": "ASISTENTE (read-only source for catalog data)",
-  "currentPhase": 11,
-  "currentTask": "SEO-011",
+  "currentPhase": 12,
+  "currentTask": "SEO-012",
   "statesAllowed": [
     "pending",
     "in_progress",
@@ -301,7 +301,7 @@
       "id": "SEO-012",
       "phase": 12,
       "title": "Uñas, maquillaje y capilares (páginas individuales)",
-      "status": "pending",
+      "status": "completed",
       "priority": "medium",
       "dependencies": [
         "SEO-003"
@@ -316,7 +316,9 @@
       "validationCommands": [
         "npm run build"
       ],
-      "commitMessage": "feat: add beauty category product pages"
+      "commitMessage": "feat: add beauty category product pages",
+      "startedAt": "2026-08-08T07:26:27.461Z",
+      "completedAt": "2026-08-08T23:56:43.038Z"
     },
     {
       "id": "SEO-013",

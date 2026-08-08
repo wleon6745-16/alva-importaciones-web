@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-07T21:08:11.709Z",
-  "source": "manual-seed:scripts/sync-public-catalog.ts (migrado desde muebles.astro, 2026-08-07)",
+  "generatedAt": "2026-08-08T23:50:48.523Z",
+  "source": "manual-seed:scripts/sync-public-catalog.ts (muebles migrado desde muebles.astro 2026-08-07; uñas/capilares/maquillaje curados desde el export de Telegram en SEO-012, 2026-08-08)",
   "products": [
     {
       "id": "muebles-camilla-hidraulica-multiusos",
@@ -423,6 +423,385 @@
       ],
       "image": "tina-spa-electrica.jpg",
       "imageAlt": "Tina spa eléctrica"
+    },
+    {
+      "id": "unas-polvo-acrilico-master-nails",
+      "slug": "polvo-acrilico-master-nails",
+      "name": "Polvo acrílico Master Nails",
+      "category": "unas",
+      "subcategory": "acrilicos-y-monomeros",
+      "price": 4,
+      "currency": "USD",
+      "brand": "Master Nails",
+      "features": [
+        "Gran variedad de colores"
+      ],
+      "image": "polvo-acrilico-master-nails.jpg",
+      "imageAlt": "Polvo acrílico Master Nails"
+    },
+    {
+      "id": "unas-primer-master-nails-2-en-1",
+      "slug": "primer-master-nails-2-en-1",
+      "name": "Primer Master Nails 2 en 1",
+      "category": "unas",
+      "subcategory": "acrilicos-y-monomeros",
+      "price": 8.7,
+      "currency": "USD",
+      "brand": "Master Nails",
+      "features": [
+        "2 en 1",
+        "Presentación 15ml"
+      ],
+      "image": "primer-master-nails-2en1.jpg",
+      "imageAlt": "Primer Master Nails 2 en 1"
+    },
+    {
+      "id": "unas-monomero-master-nails-16-oz",
+      "slug": "monomero-master-nails-16-oz",
+      "name": "Monómero Master Nails 16 OZ",
+      "category": "unas",
+      "subcategory": "acrilicos-y-monomeros",
+      "price": 32.75,
+      "currency": "USD",
+      "brand": "Master Nails",
+      "features": [
+        "Presentación 16 oz",
+        "Disponible también en 8, 4, 2 y 1 oz"
+      ],
+      "image": "monomero-master-nails-16oz.jpg",
+      "imageAlt": "Monómero Master Nails 16 OZ"
+    },
+    {
+      "id": "unas-monomero-e-a-1000-ml",
+      "slug": "monomero-e-a-1000-ml",
+      "name": "Monómero E&A 1000 ml",
+      "category": "unas",
+      "subcategory": "acrilicos-y-monomeros",
+      "price": 9.5,
+      "currency": "USD",
+      "brand": "E&A",
+      "features": [
+        "Presentación 1000 ml"
+      ],
+      "image": "monomero-ea-1000ml.jpg",
+      "imageAlt": "Monómero E&A 1000 ml"
+    },
+    {
+      "id": "unas-esmalte-gelux-mia-secret",
+      "slug": "esmalte-gelux-mia-secret",
+      "name": "Esmalte Gelux Mía Secret",
+      "category": "unas",
+      "subcategory": "esmaltes",
+      "price": 11.25,
+      "currency": "USD",
+      "brand": "Mía Secret",
+      "features": [],
+      "image": "esmalte-gelux-mia-secret.jpg",
+      "imageAlt": "Esmalte Gelux Mía Secret"
+    },
+    {
+      "id": "unas-broca-umbrella-pequena-master-nails",
+      "slug": "broca-umbrella-pequena-master-nails",
+      "name": "Broca Umbrella pequeña Master Nails",
+      "category": "unas",
+      "subcategory": "herramientas-y-equipo",
+      "price": 5,
+      "currency": "USD",
+      "brand": "Master Nails",
+      "features": [],
+      "image": "broca-umbrella-pequena-master-nails.jpg",
+      "imageAlt": "Broca Umbrella pequeña Master Nails"
+    },
+    {
+      "id": "unas-limas-lavables-zzam",
+      "slug": "limas-lavables-zzam",
+      "name": "Limas lavables ZZAM",
+      "category": "unas",
+      "subcategory": "herramientas-y-equipo",
+      "price": 1.75,
+      "currency": "USD",
+      "brand": "ZZAM",
+      "features": [
+        "Grano 100/180",
+        "Grano 120/180",
+        "Grano 180/220"
+      ],
+      "image": "limas-lavables-zzam.jpg",
+      "imageAlt": "Limas lavables ZZAM"
+    },
+    {
+      "id": "unas-lampara-de-unas-sun-d7-208w",
+      "slug": "lampara-de-unas-sun-d7-208w",
+      "name": "Lámpara de uñas SUN D7 208W",
+      "category": "unas",
+      "subcategory": "herramientas-y-equipo",
+      "code": "4877",
+      "price": 26,
+      "currency": "USD",
+      "features": [
+        "208W"
+      ],
+      "image": "lampara-unas-sun-d7-208w.jpg",
+      "imageAlt": "Lámpara de uñas SUN D7 208W"
+    },
+    {
+      "id": "unas-drill-inalambrico-master-nails-35-000-rpm",
+      "slug": "drill-inalambrico-master-nails-35-000-rpm",
+      "name": "Drill inalámbrico Master Nails 35.000 RPM",
+      "category": "unas",
+      "subcategory": "herramientas-y-equipo",
+      "code": "7016",
+      "price": 145,
+      "currency": "USD",
+      "brand": "Master Nails",
+      "features": [
+        "35.000 RPM",
+        "60W"
+      ],
+      "image": "drill-inalambrico-master-nails.jpg",
+      "imageAlt": "Drill inalámbrico Master Nails 35.000 RPM"
+    },
+    {
+      "id": "capilares-mascarilla-lisso-keratina-placenta-life",
+      "slug": "mascarilla-lisso-keratina-placenta-life",
+      "name": "Mascarilla lisso keratina Placenta Life",
+      "category": "capilares",
+      "subcategory": "tratamientos-y-shampoos",
+      "code": "287",
+      "price": 7.25,
+      "currency": "USD",
+      "brand": "Placenta Life",
+      "features": [],
+      "image": "mascarilla-lisso-keratina-placenta-life.jpg",
+      "imageAlt": "Mascarilla lisso keratina Placenta Life"
+    },
+    {
+      "id": "capilares-kit-shampoo-acondicionador-salon-line",
+      "slug": "kit-shampoo-acondicionador-salon-line",
+      "name": "Kit shampoo + acondicionador Salon Line",
+      "category": "capilares",
+      "subcategory": "tratamientos-y-shampoos",
+      "code": "9313",
+      "price": 13.75,
+      "currency": "USD",
+      "brand": "Salon Line",
+      "features": [],
+      "image": "kit-shampoo-acondicionador-salon-line.jpg",
+      "imageAlt": "Kit shampoo + acondicionador Salon Line"
+    },
+    {
+      "id": "capilares-keratina-ambroisie-250-ml-rene-chardon",
+      "slug": "keratina-ambroisie-250-ml-rene-chardon",
+      "name": "Keratina Ambroisie 250 ml Rene Chardon",
+      "category": "capilares",
+      "subcategory": "tratamientos-y-shampoos",
+      "code": "4199",
+      "price": 45,
+      "currency": "USD",
+      "brand": "Rene Chardon",
+      "features": [
+        "Presentación 250 ml"
+      ],
+      "image": "keratina-ambroisie-250ml-rene-chardon.jpg",
+      "imageAlt": "Keratina Ambroisie 250 ml Rene Chardon"
+    },
+    {
+      "id": "capilares-crema-de-peinar-skala-bomba-de-vitaminas",
+      "slug": "crema-de-peinar-skala-bomba-de-vitaminas",
+      "name": "Crema de peinar SKALA Bomba de Vitaminas",
+      "category": "capilares",
+      "subcategory": "tratamientos-y-shampoos",
+      "code": "10879",
+      "price": 8.25,
+      "currency": "USD",
+      "brand": "SKALA",
+      "features": [
+        "Fórmula con ácido hialurónico, aceite de ricino, proteínas vegetales, vitaminas A y E, D-Pantenol",
+        "Nutre profundamente y ayuda a recuperar el brillo natural"
+      ],
+      "image": "crema-peinar-skala-bomba-vitaminas.jpg",
+      "imageAlt": "Crema de peinar SKALA Bomba de Vitaminas"
+    },
+    {
+      "id": "capilares-tonico-capilar-pocion-dia-y-noche",
+      "slug": "tonico-capilar-pocion-dia-y-noche",
+      "name": "Tónico capilar Poción Día y Noche",
+      "category": "capilares",
+      "subcategory": "tratamientos-y-shampoos",
+      "code": "9729",
+      "price": 15.75,
+      "currency": "USD",
+      "brand": "Poción",
+      "features": [
+        "Tratamiento con nanotecnología liposomal",
+        "Ritual de aplicación día y noche",
+        "Enfocado en caída del cabello y crecimiento"
+      ],
+      "image": "tonico-capilar-pocion-dia-noche.jpg",
+      "imageAlt": "Tónico capilar Poción Día y Noche"
+    },
+    {
+      "id": "capilares-shampoo-control-caspa-pocion",
+      "slug": "shampoo-control-caspa-pocion",
+      "name": "Shampoo control caspa Poción",
+      "category": "capilares",
+      "subcategory": "tratamientos-y-shampoos",
+      "code": "11245",
+      "price": 13,
+      "currency": "USD",
+      "brand": "Poción",
+      "features": [
+        "Ayuda a controlar la caspa visible",
+        "Equilibra el cuero cabelludo",
+        "Reduce la picazón"
+      ],
+      "image": "shampoo-control-caspa-pocion.jpg",
+      "imageAlt": "Shampoo control caspa Poción"
+    },
+    {
+      "id": "capilares-plancha-de-cabello-mini-lizze",
+      "slug": "plancha-de-cabello-mini-lizze",
+      "name": "Plancha de cabello mini Lizze",
+      "category": "capilares",
+      "subcategory": "equipo-capilar",
+      "code": "6291",
+      "price": 36,
+      "currency": "USD",
+      "brand": "Lizze",
+      "features": [],
+      "image": "plancha-cabello-mini-lizze.jpg",
+      "imageAlt": "Plancha de cabello mini Lizze"
+    },
+    {
+      "id": "capilares-maquina-de-cabello-wahl-edicion-legend",
+      "slug": "maquina-de-cabello-wahl-edicion-legend",
+      "name": "Máquina de cabello WAHL Edición Legend",
+      "category": "capilares",
+      "subcategory": "equipo-capilar",
+      "code": "8526",
+      "price": 148.75,
+      "currency": "USD",
+      "brand": "WAHL",
+      "features": [],
+      "image": "maquina-cabello-wahl-legend.jpg",
+      "imageAlt": "Máquina de cabello WAHL Edición Legend"
+    },
+    {
+      "id": "maquillaje-paleta-de-sombras-satine",
+      "slug": "paleta-de-sombras-satine",
+      "name": "Paleta de sombras Satine",
+      "category": "maquillaje",
+      "subcategory": "ojos-y-labios",
+      "code": "2510",
+      "price": 20,
+      "currency": "USD",
+      "brand": "Satine",
+      "features": [],
+      "image": "paleta-sombras-satine.jpg",
+      "imageAlt": "Paleta de sombras Satine"
+    },
+    {
+      "id": "maquillaje-labial-mate-top-face",
+      "slug": "labial-mate-top-face",
+      "name": "Labial mate Top Face",
+      "category": "maquillaje",
+      "subcategory": "ojos-y-labios",
+      "code": "6033",
+      "price": 13,
+      "currency": "USD",
+      "brand": "Top Face",
+      "features": [],
+      "image": "labial-mate-top-face.jpg",
+      "imageAlt": "Labial mate Top Face"
+    },
+    {
+      "id": "maquillaje-labial-milani",
+      "slug": "labial-milani",
+      "name": "Labial Milani",
+      "category": "maquillaje",
+      "subcategory": "ojos-y-labios",
+      "code": "3487",
+      "price": 14.85,
+      "currency": "USD",
+      "brand": "Milani",
+      "features": [],
+      "image": "labial-milani.jpg",
+      "imageAlt": "Labial Milani"
+    },
+    {
+      "id": "maquillaje-mascara-de-pestanas-og-mega-plump",
+      "slug": "mascara-de-pestanas-og-mega-plump",
+      "name": "Máscara de pestañas OG Mega Plump",
+      "category": "maquillaje",
+      "subcategory": "ojos-y-labios",
+      "code": "11159",
+      "price": 4.5,
+      "currency": "USD",
+      "brand": "OG",
+      "features": [],
+      "image": "mascara-pestanas-og-mega-plump.jpg",
+      "imageAlt": "Máscara de pestañas OG Mega Plump"
+    },
+    {
+      "id": "maquillaje-sellador-de-maquillaje-beauty-creations",
+      "slug": "sellador-de-maquillaje-beauty-creations",
+      "name": "Sellador de maquillaje Beauty Creations",
+      "category": "maquillaje",
+      "subcategory": "rostro",
+      "code": "2602",
+      "price": 8.9,
+      "currency": "USD",
+      "brand": "Beauty Creations",
+      "features": [],
+      "image": "sellador-maquillaje-beauty-creations.jpg",
+      "imageAlt": "Sellador de maquillaje Beauty Creations"
+    },
+    {
+      "id": "maquillaje-polvo-compacto-amorus",
+      "slug": "polvo-compacto-amorus",
+      "name": "Polvo compacto Amorus",
+      "category": "maquillaje",
+      "subcategory": "rostro",
+      "price": 5.75,
+      "currency": "USD",
+      "brand": "Amorus",
+      "features": [
+        "Tonos: Natural Beige 05, Porcelain 09, Caramel Beige 11"
+      ],
+      "image": "polvo-compacto-amorus.jpg",
+      "imageAlt": "Polvo compacto Amorus"
+    },
+    {
+      "id": "maquillaje-spray-fijador-de-maquillaje-s-f-r-color",
+      "slug": "spray-fijador-de-maquillaje-s-f-r-color",
+      "name": "Spray fijador de maquillaje S.F.R. Color",
+      "category": "maquillaje",
+      "subcategory": "rostro",
+      "code": "10866",
+      "price": 3,
+      "currency": "USD",
+      "brand": "S.F.R. Color",
+      "features": [],
+      "image": "spray-fijador-maquillaje-sfr-color.jpg",
+      "imageAlt": "Spray fijador de maquillaje S.F.R. Color"
+    },
+    {
+      "id": "maquillaje-base-liquida-vogue-resist",
+      "slug": "base-liquida-vogue-resist",
+      "name": "Base líquida Vogue Resist",
+      "category": "maquillaje",
+      "subcategory": "rostro",
+      "price": 6.25,
+      "currency": "USD",
+      "brand": "Vogue",
+      "features": [
+        "Hasta 24h o 30h de cobertura",
+        "Resistente al sudor, la humedad y el agua",
+        "Acabado mate natural",
+        "Incluye protección solar"
+      ],
+      "image": "base-liquida-vogue-resist.jpg",
+      "imageAlt": "Base líquida Vogue Resist"
     }
   ]
 }

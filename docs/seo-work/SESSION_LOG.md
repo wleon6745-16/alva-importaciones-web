@@ -184,3 +184,20 @@ con 51 URLs (25 de producto, 404 excluido correctamente); scripts de IndexNow pr
 manualmente con y sin clave.
 Errores: ninguno.
 Siguiente tarea: SEO-012 — Uñas, maquillaje y capilares (páginas individuales). Ver `NEXT_SESSION.md`.
+
+---
+
+Sesión: 12
+Fecha: 2026-08-08
+Duración aproximada: ~40 min
+Objetivo: Uñas, maquillaje y capilares con páginas individuales (Fase 12).
+Trabajo completado: 25 productos reales curados desde Telegram (9 uñas, 8 capilares, 8
+maquillaje), cada uno con foto real verificada del mismo mensaje, precio, y marca/código cuando
+la fuente lo traía; `products.generated.json` 25→50 productos; ruta dinámica compartida
+`productos/[category]/[slug].astro`; las 3 páginas de categoría ahora muestran productos reales
+agrupados por subcategoría en vez de la galería genérica.
+Pruebas: `npm run build` OK (77 páginas); h1 único por página; 0 títulos/descripciones
+duplicados en 50 productos; revisado en navegador.
+Errores: se repitió el bug de scope de `getStaticPaths` (ya documentado en SEO-003) al escribir
+la nueva ruta — corregido antes de commitear.
+Siguiente tarea: SEO-013 — Imágenes, rendimiento y accesibilidad. Ver `NEXT_SESSION.md`.

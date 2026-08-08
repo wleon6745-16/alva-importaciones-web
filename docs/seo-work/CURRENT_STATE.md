@@ -7,10 +7,10 @@
 ## Control de tarea (automático)
 
 <!-- AUTO:SUMMARY:START -->
-- Fase actual: 11
-- Tarea actual: SEO-011
+- Fase actual: 12
+- Tarea actual: SEO-012
 - Estado de la tarea actual: completed
-- Última actualización: 2026-08-08T07:25:35.755Z
+- Última actualización: 2026-08-08T23:56:43.042Z
 <!-- AUTO:SUMMARY:END -->
 
 ## Git
@@ -45,7 +45,7 @@ que no se repitan:
   `BreadcrumbList`, sitemap vía `@astrojs/sitemap`, `robots.txt` estático.
 - Deployment: `Dockerfile` + `nginx.conf` standalone (sin probar en producción real).
 
-## Próxima tarea: SEO-012 — Uñas, maquillaje y capilares (páginas individuales)
+## Próxima tarea: SEO-013 — Imágenes, rendimiento y accesibilidad
 
 Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
 
@@ -83,10 +83,14 @@ Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
 - **SEO-011** — Robots, sitemap, llms.txt e IndexNow. Ver `docs/seo-work/sessions/session-11.md`.
   Resultado: `robots.txt` con bots de IA, `llms.txt`, IndexNow implementado sin clave real
   todavía (`MANUAL_ACTIONS.md` #10).
+- **SEO-012** — Uñas, maquillaje y capilares (páginas individuales). Ver
+  `docs/seo-work/sessions/session-12.md`. Resultado: 25 productos reales curados desde Telegram
+  (foto+precio+marca/código verificados), `products.generated.json` con 50 productos,
+  `productos/[category]/[slug].astro` (ruta compartida para las 3 categorías).
 
 ## Tareas pendientes
 
-Ver `tasks/seo-tasks.json` — Fases 12 a 16 (SEO-012 a SEO-016), todas en estado `pending`,
+Ver `tasks/seo-tasks.json` — Fases 13 a 16 (SEO-013 a SEO-016), todas en estado `pending`,
 bloqueadas por dependencias hasta que la tarea previa se complete.
 
 ## Errores conocidos

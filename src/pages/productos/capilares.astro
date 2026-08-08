@@ -5,13 +5,40 @@ import SectionReveal from "../../components/SectionReveal.astro";
 import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
 import RelatedCategories from "../../components/RelatedCategories.astro";
 import { breadcrumbSchema } from "../../lib/structured-data";
+import { siteConfig } from "../../lib/site-config";
+import type { Product } from "../../types/product";
+import productsData from "../../data/products.generated.json";
 
-import img1 from "../../assets/products/capilares/hair-1.png";
-import img2 from "../../assets/products/capilares/hair-2.webp";
-import img3 from "../../assets/products/capilares/hair-3.png";
-import img4 from "../../assets/products/capilares/hair-4.jpg";
+const products = (productsData.products as Product[]).filter((p) => p.category === "capilares");
 
-const images = [img1, img2, img3, img4];
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "../../assets/products/capilares/*.{jpg,jpeg,png,webp}",
+  { eager: true },
+);
+function imageFor(filename: string): ImageMetadata {
+  const entry = images[`../../assets/products/capilares/${filename}`];
+  if (!entry) throw new Error(`Imagen no encontrada para: ${filename}`);
+  return entry.default;
+}
+
+function priceLabel(product: Product): string {
+  if (product.price === undefined) return "Consultar precio";
+  const isWhole = Number.isInteger(product.price);
+  return `$${product.price.toFixed(isWhole ? 0 : 2)}`;
+}
+
+const SUBCATEGORY_TITLES: Record<string, string> = {
+  "tratamientos-y-shampoos": "Tratamientos y shampoos",
+  "equipo-capilar": "Equipo capilar",
+};
+const SUBCATEGORY_ORDER = Object.keys(SUBCATEGORY_TITLES);
+
+const sections = SUBCATEGORY_ORDER.map((subcategory) => ({
+  subcategory,
+  title: SUBCATEGORY_TITLES[subcategory],
+  items: products.filter((p) => p.subcategory === subcategory),
+})).filter((section) => section.items.length > 0);
+
 const breadcrumbs = breadcrumbSchema([
   { name: "Inicio", path: "/" },
   { name: "Productos", path: "/productos" },
@@ -31,23 +58,63 @@ const breadcrumbs = breadcrumbSchema([
     <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-muted">
       Tratamientos y productos para el cuidado del cabello de marcas como Rodher y Lissia.
     </p>
+    <WhatsAppCTA label="Consultar por WhatsApp" pulse class="mt-8" message="Hola, quisiera consultar sobre productos capilares" />
   </section>
 
-  <SectionReveal as="section" class="px-6 pb-16">
-    <div class="mx-auto grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      {
-        images.map((img) => (
-          <div class="glass-card overflow-hidden rounded-2xl">
-            <Image src={img} alt="Producto capilar" class="aspect-square w-full object-cover" width={400} height={400} />
+  {
+    sections.map((section) => (
+      <SectionReveal as="section" id={section.subcategory} class="scroll-mt-24 px-6 py-16">
+        <div class="mx-auto max-w-6xl">
+          <h2 class="font-display text-3xl text-primary-900">{section.title}</h2>
+          <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {section.items.map((item) => (
+              <div class="glass-card flex flex-col overflow-hidden rounded-2xl shadow-md">
+                <a href={`/productos/capilares/${item.slug}/`} class="block">
+                  <div class="aspect-square overflow-hidden bg-white">
+                    <Image
+                      src={imageFor(item.image)}
+                      alt={item.imageAlt}
+                      width={500}
+                      height={500}
+                      class="h-full w-full object-contain"
+                    />
+                  </div>
+                </a>
+                <div class="flex flex-1 flex-col gap-2 p-5">
+                  <h3 class="font-display text-lg text-primary-800">
+                    <a href={`/productos/capilares/${item.slug}/`} class="hover:text-primary-600">
+                      {item.name}
+                    </a>
+                  </h3>
+                  <p class="text-xl font-semibold text-ink">{priceLabel(item)}</p>
+                  {item.features.length > 0 && (
+                    <ul class="mt-1 space-y-1 text-sm text-ink-muted">
+                      {item.features.map((f) => (
+                        <li>• {f}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {item.code && <p class="text-xs text-ink-muted">Cód: {item.code}</p>}
+                  <WhatsAppCTA
+                    label="Consultar"
+                    class="mt-auto !px-4 !py-2 text-sm"
+                    message={`Hola, quisiera consultar sobre: ${item.name} - ${new URL(`/productos/capilares/${item.slug}/`, siteConfig.url).toString()}`}
+                    productId={item.id}
+                    productName={item.name}
+                    category={item.category}
+                  />
+                </div>
+              </div>
+            ))}
           </div>
-        ))
-      }
-    </div>
-  </SectionReveal>
+        </div>
+      </SectionReveal>
+    ))
+  }
 
   <SectionReveal as="section" class="bg-blush-50 px-6 py-16 text-center">
-    <h2 class="font-display text-2xl text-primary-900">Precio y disponibilidad exactos por WhatsApp</h2>
-    <p class="mt-3 text-ink-muted">Cuéntanos qué producto buscas y te confirmamos al instante.</p>
+    <h2 class="font-display text-2xl text-primary-900">¿No encuentras lo que buscas?</h2>
+    <p class="mt-3 text-ink-muted">Seguimos ampliando el catálogo capilar — pregúntanos por WhatsApp.</p>
     <WhatsAppCTA label="Consultar por WhatsApp" class="mt-6" message="Hola, quisiera consultar sobre productos capilares" />
   </SectionReveal>
 

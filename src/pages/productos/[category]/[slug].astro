@@ -1,0 +1,194 @@
+---
+import { Image, getImage } from "astro:assets";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import SectionReveal from "../../../components/SectionReveal.astro";
+import WhatsAppCTA from "../../../components/WhatsAppCTA.astro";
+import { breadcrumbSchema, productSchema } from "../../../lib/structured-data";
+import { siteConfig } from "../../../lib/site-config";
+import type { Product } from "../../../types/product";
+import productsData from "../../../data/products.generated.json";
+
+// Rutas de esta página dinámica: uñas, capilares y maquillaje. Muebles tiene su propia ruta
+// dedicada (src/pages/productos/muebles/[slug].astro, ver SEO-003) y no se genera aquí.
+//
+// `getStaticPaths` corre en module scope al momento del build y NO puede cerrar sobre un
+// `const` declarado en el resto del frontmatter (que corre por render) — solo sobre imports.
+// Por eso la lista de categorías manejadas y el filtro de productos van inline aquí adentro, y
+// se repiten (con otro nombre) donde hagan falta en el resto del archivo. Mismo bug ya
+// encontrado y documentado en SEO-003 (ver docs/seo-work/sessions/session-03.md).
+export function getStaticPaths() {
+  const handledCategories = ["unas", "capilares", "maquillaje"];
+  const products = (productsData.products as Product[]).filter((p) => handledCategories.includes(p.category));
+  return products.map((product) => ({
+    params: { category: product.category, slug: product.slug },
+    props: { product },
+  }));
+}
+
+interface Props {
+  product: Product;
+}
+
+const { product } = Astro.props;
+
+const CATEGORY_TITLES: Record<string, string> = {
+  unas: "Uñas",
+  capilares: "Capilares",
+  maquillaje: "Maquillaje",
+};
+
+const SUBCATEGORY_TITLES: Record<string, string> = {
+  "acrilicos-y-monomeros": "Acrílicos y monómeros",
+  esmaltes: "Esmaltes",
+  "herramientas-y-equipo": "Herramientas y equipo",
+  "tratamientos-y-shampoos": "Tratamientos y shampoos",
+  "equipo-capilar": "Equipo capilar",
+  "ojos-y-labios": "Ojos y labios",
+  rostro: "Rostro",
+};
+
+const categoryProducts = (productsData.products as Product[]).filter((p) => p.category === product.category);
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "../../../assets/products/*/*.{jpg,jpeg,png,webp}",
+  { eager: true },
+);
+
+function imageFor(category: string, filename: string): ImageMetadata {
+  const entry = images[`../../../assets/products/${category}/${filename}`];
+  if (!entry) throw new Error(`Imagen no encontrada para: ${category}/${filename}`);
+  return entry.default;
+}
+
+function priceLabel(p: Product): string {
+  if (p.price === undefined) return "Consultar precio";
+  const isWhole = Number.isInteger(p.price);
+  return `$${p.price.toFixed(isWhole ? 0 : 2)}`;
+}
+
+const related = categoryProducts
+  .filter((p) => p.subcategory === product.subcategory && p.slug !== product.slug)
+  .slice(0, 4);
+
+const pagePath = `/productos/${product.category}/${product.slug}/`;
+const pageUrl = new URL(pagePath, siteConfig.url).toString();
+
+const categoryTitle = CATEGORY_TITLES[product.category] ?? product.category;
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Inicio", path: "/" },
+  { name: "Productos", path: "/productos" },
+  { name: categoryTitle, path: `/productos/${product.category}` },
+  { name: product.name, path: pagePath },
+]);
+
+const sameNameCount = categoryProducts.filter((p) => p.name === product.name).length;
+const pageTitle = sameNameCount > 1 ? `${product.name} - ${priceLabel(product)}` : product.name;
+
+const description = `${product.name}${product.brand ? ` (${product.brand})` : ""}. ${product.features
+  .slice(0, 2)
+  .join(", ")}. Precio: ${priceLabel(product)}. Consulta disponibilidad por WhatsApp en Portoviejo, Manabí.`;
+
+const optimizedImage = await getImage({ src: imageFor(product.category, product.image), width: 1200, height: 1200 });
+const imageUrl = new URL(optimizedImage.src, siteConfig.url).toString();
+
+const productLd = productSchema(product, pageUrl, imageUrl);
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={description}
+  path={pagePath}
+  image={optimizedImage.src}
+  structuredData={[breadcrumbs, productLd]}
+>
+  <nav aria-label="Breadcrumb" class="px-6 pt-8 text-sm text-ink-muted">
+    <ol class="mx-auto flex max-w-6xl flex-wrap items-center gap-2">
+      <li><a href="/" class="hover:text-primary-700">Inicio</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/productos" class="hover:text-primary-700">Productos</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href={`/productos/${product.category}`} class="hover:text-primary-700">{categoryTitle}</a></li>
+      <li aria-hidden="true">/</li>
+      <li aria-current="page" class="text-ink">{product.name}</li>
+    </ol>
+  </nav>
+
+  <SectionReveal as="section" class="px-6 py-10">
+    <div class="mx-auto grid max-w-5xl gap-10 md:grid-cols-2">
+      <div class="glass-card overflow-hidden rounded-2xl bg-white p-6">
+        <div class="aspect-square overflow-hidden">
+          <Image
+            src={imageFor(product.category, product.image)}
+            alt={product.imageAlt}
+            width={800}
+            height={800}
+            class="h-full w-full object-contain"
+          />
+        </div>
+      </div>
+      <div class="flex flex-col gap-4">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-700">
+          {SUBCATEGORY_TITLES[product.subcategory ?? ""] ?? categoryTitle}
+        </p>
+        <h1 class="font-display text-3xl text-primary-900 sm:text-4xl">{product.name}</h1>
+        <p class="text-2xl font-semibold text-ink">{priceLabel(product)}</p>
+        {product.brand && <p class="text-sm text-ink-muted">Marca: {product.brand}</p>}
+        {product.code && <p class="text-sm text-ink-muted">Código: {product.code}</p>}
+        {
+          product.features.length > 0 && (
+            <div>
+              <h2 class="font-display text-lg text-primary-800">Características</h2>
+              <ul class="mt-2 space-y-1 text-ink-muted">
+                {product.features.map((f) => (
+                  <li>• {f}</li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
+        <WhatsAppCTA
+          label="Consultar por WhatsApp"
+          pulse
+          class="mt-2 w-fit"
+          message={`Hola, quisiera consultar sobre: ${product.name}${product.code ? ` (Cód: ${product.code})` : ""} - ${pageUrl}`}
+          productId={product.id}
+          productName={product.name}
+          category={product.category}
+        />
+      </div>
+    </div>
+  </SectionReveal>
+
+  {
+    related.length > 0 && (
+      <SectionReveal as="section" class="bg-blush-50 px-6 py-16">
+        <div class="mx-auto max-w-6xl">
+          <h2 class="font-display text-2xl text-primary-900">También te puede interesar</h2>
+          <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {related.map((item) => (
+              <a
+                href={`/productos/${item.category}/${item.slug}/`}
+                class="glass-card block overflow-hidden rounded-2xl shadow-md transition-transform duration-200 hover:-translate-y-1"
+              >
+                <div class="aspect-square overflow-hidden bg-white">
+                  <Image
+                    src={imageFor(item.category, item.image)}
+                    alt={item.imageAlt}
+                    width={400}
+                    height={400}
+                    class="h-full w-full object-contain"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="font-display text-base text-primary-800">{item.name}</h3>
+                  <p class="text-sm font-semibold text-ink">{priceLabel(item)}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </SectionReveal>
+    )
+  }
+</BaseLayout>
