@@ -154,3 +154,17 @@ generado; hallazgo nuevo (envíos a todo el país, repetido en el canal) registr
 Pruebas: script ejecuta sin error; `npm run build` OK (46 páginas, sin cambios de contenido).
 Errores: ninguno.
 Siguiente tarea: SEO-010 — Guías para búsqueda y buscadores con IA. Ver `NEXT_SESSION.md`.
+
+---
+
+Sesión: 10
+Fecha: 2026-08-08
+Duración aproximada: ~25 min
+Objetivo: Guías para búsqueda y buscadores con IA (Fase 10).
+Trabajo completado: 5 guías (`GuideLayout.astro`, `articleSchema()`) + índice `/guias`, todas con
+Article+FAQPage+BreadcrumbList JSON-LD, autor institucional, fecha real, enlazando productos y
+categorías reales sin inventar especificaciones.
+Pruebas: `npm run build` OK (52 páginas); h1 único por página; JSON-LD verificado.
+Errores: se encontró y corrigió un bug de zona horaria en el formateo de fecha ("7 de agosto" en
+vez de "8 de agosto") — documentado en `docs/seo-work/sessions/session-10.md`.
+Siguiente tarea: SEO-011 — Robots, sitemap, llms.txt e IndexNow. Ver `NEXT_SESSION.md`.

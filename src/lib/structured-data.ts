@@ -140,6 +140,38 @@ export function faqSchema(items: { question: string; answer: string }[]) {
   };
 }
 
+export function articleSchema(options: {
+  headline: string;
+  description: string;
+  pageUrl: string;
+  datePublished: string;
+  imageUrl?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: options.headline,
+    description: options.description,
+    url: options.pageUrl,
+    datePublished: options.datePublished,
+    dateModified: options.datePublished,
+    author: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      logo: {
+        "@type": "ImageObject",
+        url: new URL("/brand/alva-icon-512.png", siteConfig.url).toString(),
+      },
+    },
+    ...(options.imageUrl ? { image: [options.imageUrl] } : {}),
+  };
+}
+
 export function breadcrumbSchema(items: { name: string; path: string }[]) {
   return {
     "@context": "https://schema.org",

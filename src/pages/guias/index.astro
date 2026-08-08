@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionReveal from "../../components/SectionReveal.astro";
+import { breadcrumbSchema } from "../../lib/structured-data";
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Inicio", path: "/" },
+  { name: "Guías", path: "/guias" },
+]);
+
+const guides = [
+  {
+    title: "Cómo elegir silla de barbería",
+    href: "/guias/como-elegir-silla-barberia",
+    description: "Hidráulica vs. fija, reclinación, base y otros factores antes de comprar.",
+  },
+  {
+    title: "Cómo equipar un salón de belleza",
+    href: "/guias/como-equipar-salon-belleza",
+    description: "Qué mueble priorizar en cada zona de servicio, según tu presupuesto.",
+  },
+  {
+    title: "Qué camilla estética comprar",
+    href: "/guias/que-camilla-estetica-comprar",
+    description: "Portátil, hidráulica o de niveles ajustables: cuál conviene según el uso.",
+  },
+  {
+    title: "Materiales para empezar un negocio de uñas",
+    href: "/guias/materiales-para-empezar-negocio-unas",
+    description: "Insumos, herramientas y mobiliario esencial para nail art.",
+  },
+  {
+    title: "Cuidados de muebles de salón de belleza",
+    href: "/guias/cuidados-muebles-salon-belleza",
+    description: "Mantenimiento de tapizado, sistema hidráulico y base metálica.",
+  },
+];
+---
+
+<BaseLayout
+  title="Guías para tu salón de belleza"
+  description="Guías prácticas sobre muebles, equipamiento y materiales para salones de belleza, barberías y negocios de uñas en Portoviejo."
+  path="/guias"
+  structuredData={[breadcrumbs]}
+>
+  <section class="hero-glow px-6 py-16 text-center">
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Guías</p>
+    <h1 class="mt-4 font-display text-4xl text-primary-900 sm:text-5xl">
+      Guías para tu salón de belleza
+    </h1>
+    <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-muted">
+      Consejos prácticos para elegir y cuidar el equipamiento de tu salón, barbería o negocio de
+      uñas.
+    </p>
+  </section>
+
+  <SectionReveal as="section" class="px-6 pb-16">
+    <div class="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
+      {
+        guides.map((g) => (
+          <a href={g.href} class="glass-card block rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-200">
+            <h2 class="font-display text-lg text-primary-900">{g.title}</h2>
+            <p class="mt-2 text-sm text-ink-muted">{g.description}</p>
+          </a>
+        ))
+      }
+    </div>
+  </SectionReveal>
+</BaseLayout>

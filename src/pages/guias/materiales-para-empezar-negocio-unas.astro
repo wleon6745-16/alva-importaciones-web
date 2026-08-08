@@ -1,0 +1,88 @@
+---
+import SectionReveal from "../../components/SectionReveal.astro";
+import GuideLayout from "../../components/GuideLayout.astro";
+import ProductGrid from "../../components/ProductGrid.astro";
+import type { Product } from "../../types/product";
+import productsData from "../../data/products.generated.json";
+
+const products = (productsData.products as Product[]).filter((p) => p.category === "muebles");
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "../../assets/products/muebles/*.{jpg,jpeg,png,webp}",
+  { eager: true },
+);
+function imageFor(filename: string): ImageMetadata {
+  return images[`../../assets/products/muebles/${filename}`].default;
+}
+
+const furnitureSlugs = ["set-mesa-silla-concha-para-manicura", "silla-concha-para-pedicure", "sillon-reina-para-pedicure"];
+const furniture = furnitureSlugs
+  .map((slug) => products.find((p) => p.slug === slug))
+  .filter((p): p is Product => Boolean(p))
+  .map((p) => ({ ...p, image: imageFor(p.image) }));
+
+const categories = [
+  "Insumos base: acrílicos, geles y esmaltes (ver categoría de uñas)",
+  "Herramientas de aplicación y limado",
+  "Mobiliario: mesa de manicura y silla/sillón para pedicura",
+];
+
+const faqs = [
+  {
+    question: "¿Qué necesito primero, insumos o mobiliario?",
+    answer:
+      "Depende de si ya tienes un espacio de trabajo. Si vas a atender en un local propio, el mobiliario (mesa + silla) suele ser la base; los insumos se reponen constantemente según la demanda.",
+  },
+  {
+    question: "¿Dónde veo el catálogo de insumos de uñas?",
+    answer:
+      "En la categoría de uñas del sitio, con acrílicos, geles y esmaltes de marcas como Master Nails y Mia Secret.",
+  },
+  {
+    question: "¿Ofrecen formación para nail art?",
+    answer:
+      "Sí, tenemos un curso profesional de uñas acrílicas de 6 meses — puedes ver los detalles en la página de cursos.",
+  },
+];
+---
+
+<GuideLayout
+  title="Materiales para empezar un negocio de uñas"
+  description="Qué necesitas para empezar un negocio de uñas: insumos base, herramientas y mobiliario de manicura/pedicura. Guía práctica con productos reales."
+  path="/guias/materiales-para-empezar-negocio-unas"
+  heading="Materiales para empezar un negocio de uñas"
+  intro="Si estás por iniciar como nail artist independiente o montar tu propio espacio, esta guía organiza lo esencial: insumos, herramientas y mobiliario."
+  datePublished="2026-08-08"
+  faqs={faqs}
+  ctaMessage="Hola, estoy empezando mi negocio de uñas y quisiera asesoría sobre qué necesito"
+>
+  <SectionReveal as="section" class="px-6 pb-16">
+    <div class="mx-auto max-w-3xl">
+      <h2 class="font-display text-2xl text-primary-900">Lo esencial</h2>
+      <ul class="mt-4 list-disc space-y-2 pl-5 text-ink-muted">
+        {categories.map((c) => <li>{c}</li>)}
+      </ul>
+      <div class="mt-6 flex flex-wrap gap-4">
+        <a
+          href="/productos/unas"
+          class="inline-block rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 hover:bg-primary-800 hover:text-white"
+        >
+          Ver insumos de uñas →
+        </a>
+        <a
+          href="/cursos"
+          class="inline-block rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 hover:bg-primary-800 hover:text-white"
+        >
+          Ver curso profesional →
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <h2 class="mx-auto max-w-3xl font-display text-2xl text-primary-900">Mobiliario recomendado</h2>
+      <div class="mt-8">
+        <ProductGrid items={furniture} basePath="/productos/muebles" />
+      </div>
+    </div>
+  </SectionReveal>
+</GuideLayout>

@@ -7,10 +7,10 @@
 ## Control de tarea (automático)
 
 <!-- AUTO:SUMMARY:START -->
-- Fase actual: 9
-- Tarea actual: SEO-009
+- Fase actual: 10
+- Tarea actual: SEO-010
 - Estado de la tarea actual: completed
-- Última actualización: 2026-08-08T07:16:45.555Z
+- Última actualización: 2026-08-08T07:21:21.706Z
 <!-- AUTO:SUMMARY:END -->
 
 ## Git
@@ -45,7 +45,7 @@ que no se repitan:
   `BreadcrumbList`, sitemap vía `@astrojs/sitemap`, `robots.txt` estático.
 - Deployment: `Dockerfile` + `nginx.conf` standalone (sin probar en producción real).
 
-## Próxima tarea: SEO-010 — Guías para búsqueda y buscadores con IA
+## Próxima tarea: SEO-011 — Robots, sitemap, llms.txt e IndexNow
 
 Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
 
@@ -78,10 +78,12 @@ Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
 - **SEO-009** — Información comercial de Telegram (validada). Ver
   `docs/seo-work/sessions/session-09.md`. Resultado: extractor + `reports/telegram-data-candidates.md`.
   Hallazgo: posible política de envíos nacionales sin confirmar (`MANUAL_ACTIONS.md` #14).
+- **SEO-010** — Guías para búsqueda y buscadores con IA. Ver
+  `docs/seo-work/sessions/session-10.md`. Resultado: 5 guías + índice, Article+FAQPage JSON-LD.
 
 ## Tareas pendientes
 
-Ver `tasks/seo-tasks.json` — Fases 10 a 16 (SEO-010 a SEO-016), todas en estado `pending`,
+Ver `tasks/seo-tasks.json` — Fases 11 a 16 (SEO-011 a SEO-016), todas en estado `pending`,
 bloqueadas por dependencias hasta que la tarea previa se complete.
 
 ## Errores conocidos

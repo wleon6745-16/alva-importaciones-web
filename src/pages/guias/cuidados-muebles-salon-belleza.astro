@@ -1,0 +1,68 @@
+---
+import SectionReveal from "../../components/SectionReveal.astro";
+import GuideLayout from "../../components/GuideLayout.astro";
+
+const tips = [
+  {
+    title: "Limpieza del tapizado",
+    body: "Limpia el cuero o cuerina con un paño húmedo y un limpiador suave después de cada uso; evita alcohol puro o solventes fuertes que resecan y agrietan el material con el tiempo.",
+  },
+  {
+    title: "Mantenimiento del sistema hidráulico",
+    body: "Revisa periódicamente que la palanca y el pistón hidráulico suban y bajen sin trabarse. Un uso brusco reduce la vida útil del mecanismo.",
+  },
+  {
+    title: "Base y estructura metálica",
+    body: "Mantén la base libre de residuos de producto (tintes, acrílicos) que puedan corroer el metal con el tiempo; sécala si se moja.",
+  },
+  {
+    title: "Camillas plegables",
+    body: "Al guardar una camilla portátil, ciérrala siguiendo el mecanismo original sin forzar las bisagras, para que los seguros no se desalineen.",
+  },
+];
+
+const faqs = [
+  {
+    question: "¿Cada cuánto debo limpiar los muebles del salón?",
+    answer:
+      "Lo ideal es una limpieza rápida del tapizado después de cada cliente y una revisión más completa (mecanismo hidráulico, base) al menos una vez al mes, según el volumen de uso.",
+  },
+  {
+    question: "¿Qué hago si un mueble empieza a fallar?",
+    answer:
+      "Si notas que el hidráulico no sostiene la altura o el tapizado se agrieta, es momento de evaluar reemplazo — puedes consultarnos por WhatsApp con fotos del mueble.",
+  },
+];
+---
+
+<GuideLayout
+  title="Cuidados de muebles de salón de belleza"
+  description="Consejos prácticos de mantenimiento para camillas, sillones y sillas de salón de belleza: limpieza del tapizado, sistema hidráulico y base metálica."
+  path="/guias/cuidados-muebles-salon-belleza"
+  heading="Cuidados de muebles de salón de belleza"
+  intro="Un buen mantenimiento alarga la vida útil de camillas, sillones y sillas de tu salón. Estos son cuidados básicos que puedes aplicar desde hoy."
+  datePublished="2026-08-08"
+  faqs={faqs}
+  ctaMessage="Hola, quisiera consultar sobre mantenimiento o reemplazo de muebles de mi salón"
+>
+  <SectionReveal as="section" class="px-6 pb-16">
+    <div class="mx-auto max-w-3xl space-y-6">
+      {
+        tips.map((tip) => (
+          <div class="glass-card rounded-2xl p-6">
+            <h2 class="font-display text-xl text-primary-900">{tip.title}</h2>
+            <p class="mt-2 text-ink-muted">{tip.body}</p>
+          </div>
+        ))
+      }
+    </div>
+    <div class="mt-10 text-center">
+      <a
+        href="/productos/muebles"
+        class="inline-block rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 hover:bg-primary-800 hover:text-white"
+      >
+        Ver catálogo de muebles →
+      </a>
+    </div>
+  </SectionReveal>
+</GuideLayout>

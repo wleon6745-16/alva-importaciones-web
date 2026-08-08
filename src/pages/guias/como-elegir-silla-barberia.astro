@@ -1,0 +1,97 @@
+---
+import SectionReveal from "../../components/SectionReveal.astro";
+import GuideLayout from "../../components/GuideLayout.astro";
+import ProductGrid from "../../components/ProductGrid.astro";
+import type { Product } from "../../types/product";
+import productsData from "../../data/products.generated.json";
+
+const products = (productsData.products as Product[]).filter((p) => p.category === "muebles");
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "../../assets/products/muebles/*.{jpg,jpeg,png,webp}",
+  { eager: true },
+);
+function imageFor(filename: string): ImageMetadata {
+  return images[`../../assets/products/muebles/${filename}`].default;
+}
+
+const chairSlugs = ["silla-de-barberia-sileti-st-2200", "silla-de-barberia-sileti-st-2001", "sillon-de-peluqueria-st-2202"];
+const chairs = chairSlugs
+  .map((slug) => products.find((p) => p.slug === slug))
+  .filter((p): p is Product => Boolean(p))
+  .map((p) => ({ ...p, image: imageFor(p.image) }));
+
+const faqs = [
+  {
+    question: "¿Silla hidráulica o de altura fija?",
+    answer:
+      "Para uso profesional a diario, una silla hidráulica reclinable es la opción más cómoda: ajusta la altura por cliente y reduce el esfuerzo físico del barbero. Todas las sillas de barbería de nuestro catálogo son hidráulicas y reclinables.",
+  },
+  {
+    question: "¿Qué diferencia hay entre las sillas SILETI y las sin marca de línea?",
+    answer:
+      "En nuestro catálogo, los modelos con línea SILETI (ST-2200, ST-2001) tienen el nombre de fabricante identificado en la publicación original; los demás sillones de peluquería no traían esa información en la fuente, pero comparten las mismas características principales (base metálica, hidráulico, reclinable).",
+  },
+  {
+    question: "¿Cómo consulto precio y disponibilidad exacta?",
+    answer:
+      "Cada silla tiene su ficha con precio y un botón de WhatsApp que ya incluye el nombre y código del modelo, para que te respondamos más rápido.",
+  },
+];
+---
+
+<GuideLayout
+  title="Cómo elegir silla de barbería"
+  description="Guía práctica para elegir la silla de barbería adecuada: hidráulica vs fija, reclinable, base y otros factores a considerar antes de comprar."
+  path="/guias/como-elegir-silla-barberia"
+  heading="Cómo elegir silla de barbería"
+  intro="Antes de comprar una silla de barbería, conviene tener claros unos pocos criterios: mecanismo de altura, reclinación, base y uso previsto. Esta guía resume qué mirar y qué modelos tenemos disponibles."
+  datePublished="2026-08-08"
+  faqs={faqs}
+  ctaMessage="Hola, quisiera asesoría para elegir una silla de barbería"
+>
+  <SectionReveal as="section" class="px-6 pb-16">
+    <div class="mx-auto max-w-3xl space-y-6 text-ink-muted">
+      <div>
+        <h2 class="font-display text-2xl text-primary-900">Qué mirar antes de comprar</h2>
+        <ul class="mt-4 list-disc space-y-2 pl-5">
+          <li>
+            <strong class="text-ink">Mecanismo hidráulico:</strong> permite subir/bajar la
+            silla según la altura del cliente, sin esfuerzo manual.
+          </li>
+          <li>
+            <strong class="text-ink">Reclinación:</strong> útil para afeitado y servicios que
+            requieren inclinar al cliente hacia atrás.
+          </li>
+          <li>
+            <strong class="text-ink">Base y estructura:</strong> una base metálica resistente
+            soporta mejor el uso diario en un local con alto tráfico de clientes.
+          </li>
+          <li>
+            <strong class="text-ink">Acolchado:</strong> el material de tapizado (cuero o
+            similar) influye en la limpieza diaria y la durabilidad.
+          </li>
+        </ul>
+      </div>
+      <p>
+        Todas las sillas de nuestro catálogo cumplen con hidráulico + reclinable + base metálica;
+        la diferencia principal entre modelos es el acolchado, el diseño y el precio.
+      </p>
+    </div>
+
+    <div class="mt-12">
+      <h2 class="mx-auto max-w-3xl font-display text-2xl text-primary-900">Modelos disponibles</h2>
+      <div class="mt-8">
+        <ProductGrid items={chairs} basePath="/productos/muebles" />
+      </div>
+      <div class="mt-8 text-center">
+        <a
+          href="/sillas-de-barberia-portoviejo"
+          class="inline-block rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 hover:bg-primary-800 hover:text-white"
+        >
+          Ver todas las sillas de barbería →
+        </a>
+      </div>
+    </div>
+  </SectionReveal>
+</GuideLayout>

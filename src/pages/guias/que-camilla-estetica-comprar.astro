@@ -1,0 +1,61 @@
+---
+import SectionReveal from "../../components/SectionReveal.astro";
+import GuideLayout from "../../components/GuideLayout.astro";
+import ProductGrid from "../../components/ProductGrid.astro";
+import type { Product } from "../../types/product";
+import productsData from "../../data/products.generated.json";
+
+const products = (productsData.products as Product[]).filter((p) => p.category === "muebles" && p.subcategory === "camillas");
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "../../assets/products/muebles/*.{jpg,jpeg,png,webp}",
+  { eager: true },
+);
+function imageFor(filename: string): ImageMetadata {
+  return images[`../../assets/products/muebles/${filename}`].default;
+}
+
+const camillas = products.map((p) => ({ ...p, image: imageFor(p.image) }));
+
+const faqs = [
+  {
+    question: "¿Camilla portátil o fija?",
+    answer:
+      "Una camilla portátil (plegable) es mejor si trabajas a domicilio o cambias de espacio; una camilla más robusta conviene si siempre va a estar en el mismo lugar del local.",
+  },
+  {
+    question: "¿Para qué sirve una camilla de niveles ajustables?",
+    answer:
+      "Los niveles de inclinación ajustables permiten adaptar la posición del cliente según el tratamiento (por ejemplo, más inclinada para ciertos masajes o faciales).",
+  },
+  {
+    question: "¿Cuál es la diferencia de precio entre modelos?",
+    answer:
+      "Varía según el mecanismo (hidráulico vs. portátil) y el número de niveles ajustables — cada ficha de producto muestra el precio y las características exactas del modelo.",
+  },
+];
+---
+
+<GuideLayout
+  title="Qué camilla estética comprar"
+  description="Guía para elegir camilla estética: diferencias entre camilla portátil, hidráulica y de niveles ajustables, con modelos y precios reales."
+  path="/guias/que-camilla-estetica-comprar"
+  heading="Qué camilla estética comprar"
+  intro="Camilla portátil, hidráulica o de niveles ajustables: cada una sirve para un tipo de trabajo distinto. Aquí comparamos las opciones disponibles."
+  datePublished="2026-08-08"
+  faqs={faqs}
+  ctaMessage="Hola, quisiera asesoría para elegir una camilla estética"
+>
+  <SectionReveal as="section" class="px-6 pb-16">
+    <div class="mx-auto max-w-3xl text-ink-muted">
+      <p>
+        Las tres camillas de nuestro catálogo cubren distintos casos de uso: una es hidráulica
+        multiusos, otra está pensada para lifting/faciales con estructura portátil, y la tercera
+        tiene 3 niveles de inclinación ajustables con cubierta de fácil limpieza.
+      </p>
+    </div>
+    <div class="mt-10">
+      <ProductGrid items={camillas} basePath="/productos/muebles" />
+    </div>
+  </SectionReveal>
+</GuideLayout>
