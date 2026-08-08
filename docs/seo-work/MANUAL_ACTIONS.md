@@ -19,6 +19,7 @@ bloquearse esperándolas salvo que se indique lo contrario.
 | 11 | Configurar el entorno de producción (hosting, HTTPS, redirecciones) | Depende de dónde se decida desplegar (no definido aún) | Sesión 16 | Pendiente |
 | 12 | Proveer el logo en formato vectorial fuente (AI/EPS/PSD) si existe, más allá de los PNG ya extraídos de las fotos JPG del cliente | Los assets actuales (`public/brand/*.png`) fueron generados por chroma-key desde JPGs; sirven pero no son ideales para todos los usos (p. ej. impresión) | Ninguna sesión de este plan depende de esto | Pendiente, no bloqueante |
 | 13 | Confirmar testimonios reales de clientes para reemplazar los de ejemplo en `TestimonialCarousel.tsx` | Requiere reseñas reales del negocio | Ninguna sesión de este plan depende de esto directamente | Pendiente, no bloqueante |
+| 14 | Confirmar si "Envíos a todo el país 🚛🇪🇨" (mencionado repetidas veces en publicaciones del canal de Telegram, ver `reports/telegram-data-candidates.md` sección Políticas, mensajes del 09.05.2026 y 26.06.2026) sigue siendo una política vigente y en qué condiciones (costo, transportadora, tiempos) | Es una promesa de marketing repetida en el canal oficial, pero no está verificada como política vigente ni documentada con detalle — no se ha usado en ninguna página del sitio todavía (ver SEO-008, se evitó deliberadamente una mención de envíos sin confirmar) | Cualquier página futura que quiera mencionar envíos/cobertura nacional | Pendiente |
 
 ## Cómo añadir una nueva acción manual
 

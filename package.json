@@ -16,7 +16,8 @@
     "task:complete": "node scripts/tasks.mjs complete",
     "task:fail": "node scripts/tasks.mjs fail",
     "task:validate": "node scripts/tasks.mjs validate",
-    "catalog:sync": "node scripts/sync-public-catalog.ts"
+    "catalog:sync": "node scripts/sync-public-catalog.ts",
+    "telegram:extract": "node scripts/extract-telegram-commercial-data.ts"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.2",

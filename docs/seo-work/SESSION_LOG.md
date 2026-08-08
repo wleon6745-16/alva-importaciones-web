@@ -140,3 +140,17 @@ Pruebas: `npm run build` OK (46 páginas); h1/título/descripción únicos verif
 producto verificados contra slugs reales.
 Errores: ninguno.
 Siguiente tarea: SEO-009 — Información comercial de Telegram (validada). Ver `NEXT_SESSION.md`.
+
+---
+
+Sesión: 09
+Fecha: 2026-08-08
+Duración aproximada: ~20 min
+Objetivo: Información comercial de Telegram validada (Fase 9).
+Trabajo completado: `scripts/extract-telegram-commercial-data.ts` (1109 mensajes leídos, 5
+categorías, comparación contra datos publicados); `reports/telegram-data-candidates.md`
+generado; hallazgo nuevo (envíos a todo el país, repetido en el canal) registrado en
+`MANUAL_ACTIONS.md` #14 sin publicarlo.
+Pruebas: script ejecuta sin error; `npm run build` OK (46 páginas, sin cambios de contenido).
+Errores: ninguno.
+Siguiente tarea: SEO-010 — Guías para búsqueda y buscadores con IA. Ver `NEXT_SESSION.md`.
