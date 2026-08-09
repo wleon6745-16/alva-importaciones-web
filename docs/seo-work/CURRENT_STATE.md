@@ -7,10 +7,10 @@
 ## Control de tarea (automático)
 
 <!-- AUTO:SUMMARY:START -->
-- Fase actual: 15
-- Tarea actual: SEO-015
+- Fase actual: 16
+- Tarea actual: SEO-016
 - Estado de la tarea actual: completed
-- Última actualización: 2026-08-09T00:15:14.074Z
+- Última actualización: 2026-08-09T00:19:01.786Z
 <!-- AUTO:SUMMARY:END -->
 
 ## Git
@@ -45,9 +45,14 @@ que no se repitan:
   `BreadcrumbList`, sitemap vía `@astrojs/sitemap`, `robots.txt` estático.
 - Deployment: `Dockerfile` + `nginx.conf` standalone (sin probar en producción real).
 
-## Próxima tarea: SEO-016 — Preparación de producción (última fase)
+## Estado del plan: COMPLETO
 
-Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
+Las 16 fases de `MASTER_PLAN.md` (SEO-001 a SEO-016) están `completed`. No quedan tareas
+pendientes en `tasks/seo-tasks.json`. Lo que falta para producción real es exclusivamente
+configuración de cuentas externas del negocio — ver "Checklist final de lanzamiento" en
+`docs/seo-work/MANUAL_ACTIONS.md` y la guía en `docs/DEPLOYMENT.md`. Si se abre trabajo nuevo
+(más productos por curar, resolver conflictos de datos, etc.), regístrese como una tarea nueva en
+`tasks/seo-tasks.json`.
 
 ## Tareas completadas en el sistema de control
 
@@ -97,10 +102,13 @@ Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
   Resultado: fix de `charset utf-8` faltante en `nginx.conf` (afectaba `robots.txt`/`llms.txt` en
   producción real); resiliencia de `catalog:sync` verificada con fallo simulado; WhatsApp
   end-to-end y Schema verificados en múltiples tipos de página.
+- **SEO-016** — Preparación de producción (última fase). Ver
+  `docs/seo-work/sessions/session-16.md`. Resultado: `docs/DEPLOYMENT.md`, fix de `Dockerfile`
+  (Node 20→22), checklist final en `MANUAL_ACTIONS.md`, verificación de que no hay secretos.
 
 ## Tareas pendientes
 
-Ver `tasks/seo-tasks.json` — Fase 16 (SEO-016, la última), en estado `pending`.
+Ninguna. Las 16 fases están completas.
 
 ## Errores conocidos
 

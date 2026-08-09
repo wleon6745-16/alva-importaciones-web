@@ -4,6 +4,36 @@ Ninguna de estas acciones puede completarla una sesión de Claude Code por sí s
 para que el usuario (Junior) las resuelva cuando pueda; las tareas de desarrollo no deben
 bloquearse esperándolas salvo que se indique lo contrario.
 
+## Checklist final de lanzamiento (SEO-016)
+
+El código y el contenido del plan (`SEO-001` a `SEO-015`) están completos y verificados
+(`npm run build` y `npm run seo:validate` pasan sin errores). Lo que queda antes de que el sitio
+esté realmente en producción y descubierto por buscadores/IA es **exclusivamente** esto — todo
+requiere acceso a cuentas del negocio, no puede completarlo una sesión de Claude Code:
+
+- [ ] **Dominio real** comprado/asignado, reemplazando el placeholder `alvaimportaciones.com` en
+      `astro.config.mjs` y `src/lib/site-config.ts` (fila #6 abajo). Ver `docs/DEPLOYMENT.md` §3.
+- [ ] **Hosting + HTTPS** configurados y el sitio sirviendo sobre el dominio real (fila #11). Ver
+      `docs/DEPLOYMENT.md` §3-5.
+- [ ] **Google Search Console**: verificar propiedad del dominio real, enviar
+      `https://<dominio>/sitemap-index.xml` (fila #7).
+- [ ] **Bing Webmaster Tools**: verificar propiedad, enviar el mismo sitemap (fila #8).
+- [ ] **Bing Places / Google Business Profile**: crear o reclamar las fichas de Matriz y
+      Sucursal con las direcciones ya verificadas en `/locales/matriz` y `/locales/sucursal`
+      (fila #9) — requiere verificación física/telefónica del negocio.
+- [ ] **IndexNow**: generar una clave real, configurarla como `INDEXNOW_KEY` en el entorno del
+      hosting (nunca en el repo), y correr `npm run indexnow` tras el primer despliegue (fila
+      #10; mecanismo ya implementado en SEO-011, ver `docs/AUTOMATED_TASKS.md` §4).
+- [ ] **Analítica** (GA4 u otra): decidir proveedor, instalar su script, y verificar que
+      `WhatsAppCTA.astro` (que ya empuja a `window.dataLayer`, ver SEO-004) llega correctamente
+      al proveedor elegido — no requiere cambios de código, solo el script del proveedor y su ID
+      (fila #10).
+
+Ninguno de estos pasos está bloqueado por trabajo de código pendiente — todos son configuración
+de cuentas externas que solo el dueño del negocio puede autorizar/ejecutar.
+
+## Tabla completa
+
 | # | Acción | Por qué es manual | Bloquea a | Estado |
 |---|---|---|---|---|
 | 1 | Confirmar cuál es el número real de WhatsApp de la Sucursal (ver `DATA_CONFLICTS.md` CONFLICT-001: `593963946590` vs `593963976590`) | Solo el negocio sabe cuál es correcto | Sesión 4, 7 | Pendiente |

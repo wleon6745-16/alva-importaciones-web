@@ -250,3 +250,19 @@ Pruebas: `npm run build` OK; `npm run seo:validate` OK (0 errores); `git diff --
 móvil con "Guías" verificado; 404 verificada.
 Errores: ninguno sin corregir (el hallazgo de charset fue el principal, ya resuelto).
 Siguiente tarea: SEO-016 — Preparación de producción. Ver `NEXT_SESSION.md`.
+
+---
+
+Sesión: 16
+Fecha: 2026-08-08
+Duración aproximada: ~15 min
+Objetivo: Preparación de producción — cierre del plan (Fase 16, última).
+Trabajo completado: `docs/DEPLOYMENT.md` (guía de despliegue completa); fix de `Dockerfile`
+(`node:20-alpine` → `node:22-alpine`, no coincidía con `engines` de `package.json` ni con los
+scripts `.ts` nuevos); checklist final consolidado en `MANUAL_ACTIONS.md`; verificación de que no
+hay secretos en el repo; confirmado que las plantillas systemd siguen sin instalar.
+Pruebas: `npm run build` OK; `npm run seo:validate` OK (0 errores); búsqueda de secretos en todo
+el repo trackeado sin resultados.
+Errores: ninguno sin corregir.
+**Las 16 fases de `MASTER_PLAN.md` están completas.** Lo que queda es configuración de cuentas
+externas del negocio, documentado en `MANUAL_ACTIONS.md` → "Checklist final de lanzamiento".
