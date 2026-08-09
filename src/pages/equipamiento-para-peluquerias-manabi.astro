@@ -40,6 +40,9 @@ const equipment = equipmentSlugs
   ctaMessage="Hola, quisiera consultar sobre equipamiento para mi peluquería en Manabí"
 >
   <SectionReveal as="section" class="px-6 pb-16">
-    <ProductGrid items={equipment} basePath="/productos/muebles" />
+    <h2 class="mx-auto max-w-6xl font-display text-2xl text-primary-900">Equipo disponible</h2>
+    <div class="mt-8">
+      <ProductGrid items={equipment} basePath="/productos/muebles" />
+    </div>
   </SectionReveal>
 </LocalLandingLayout>

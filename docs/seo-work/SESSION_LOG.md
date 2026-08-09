@@ -201,3 +201,19 @@ duplicados en 50 productos; revisado en navegador.
 Errores: se repitió el bug de scope de `getStaticPaths` (ya documentado en SEO-003) al escribir
 la nueva ruta — corregido antes de commitear.
 Siguiente tarea: SEO-013 — Imágenes, rendimiento y accesibilidad. Ver `NEXT_SESSION.md`.
+
+---
+
+Sesión: 13
+Fecha: 2026-08-08
+Duración aproximada: ~25 min
+Objetivo: Imágenes, rendimiento y accesibilidad (Fase 13).
+Trabajo completado: fix de jerarquía de encabezados (6 páginas con salto h1→h3, corregido);
+`loading="eager"`+`fetchpriority="high"`+`srcset` (densities) en imágenes LCP-críticas (producto
+y home); auditoría de contraste, foco visible, alt text (0 faltantes en 76 páginas) y menú móvil
+(accesible nativo, probado).
+Pruebas: `npm run build` OK (77 páginas); script de jerarquía 0 issues; script de alt 0 issues;
+srcset/eager verificados en HTML generado; menú móvil probado en navegador.
+Errores: ninguno sin corregir (el bug de jerarquía de encabezados fue el hallazgo principal, ya
+resuelto).
+Siguiente tarea: SEO-014 — Validador SEO automático. Ver `NEXT_SESSION.md`.

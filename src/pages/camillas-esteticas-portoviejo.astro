@@ -32,6 +32,9 @@ const camillas = products
   ctaMessage="Hola, quisiera consultar sobre camillas estéticas disponibles en Portoviejo"
 >
   <SectionReveal as="section" class="px-6 pb-16">
-    <ProductGrid items={camillas} basePath="/productos/muebles" />
+    <h2 class="mx-auto max-w-6xl font-display text-2xl text-primary-900">Camillas disponibles</h2>
+    <div class="mt-8">
+      <ProductGrid items={camillas} basePath="/productos/muebles" />
+    </div>
   </SectionReveal>
 </LocalLandingLayout>

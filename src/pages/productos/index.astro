@@ -51,6 +51,7 @@ const categories = [
   </section>
 
   <SectionReveal as="section" class="px-6 pb-20">
+    <h2 class="sr-only">Categorías de productos</h2>
     <div class="mx-auto grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {categories.map((c) => <CategoryCard {...c} />)}
     </div>

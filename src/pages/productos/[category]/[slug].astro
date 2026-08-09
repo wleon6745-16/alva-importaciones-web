@@ -123,6 +123,9 @@ const productLd = productSchema(product, pageUrl, imageUrl);
             alt={product.imageAlt}
             width={800}
             height={800}
+            densities={[1, 1.5, 2]}
+            loading="eager"
+            fetchpriority="high"
             class="h-full w-full object-contain"
           />
         </div>

@@ -2,8 +2,8 @@
   "project": "alva-seo-ai-search",
   "repo": "alva-importaciones-web",
   "relatedRepo": "ASISTENTE (read-only source for catalog data)",
-  "currentPhase": 12,
-  "currentTask": "SEO-012",
+  "currentPhase": 13,
+  "currentTask": "SEO-013",
   "statesAllowed": [
     "pending",
     "in_progress",
@@ -324,7 +324,7 @@
       "id": "SEO-013",
       "phase": 13,
       "title": "Imágenes, rendimiento y accesibilidad",
-      "status": "pending",
+      "status": "completed",
       "priority": "medium",
       "dependencies": [
         "SEO-003",
@@ -346,7 +346,9 @@
       "validationCommands": [
         "npm run build"
       ],
-      "commitMessage": "perf: optimize images accessibility and core web vitals"
+      "commitMessage": "perf: optimize images accessibility and core web vitals",
+      "startedAt": "2026-08-08T23:57:48.325Z",
+      "completedAt": "2026-08-09T00:03:41.342Z"
     },
     {
       "id": "SEO-014",

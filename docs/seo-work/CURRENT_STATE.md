@@ -7,10 +7,10 @@
 ## Control de tarea (automático)
 
 <!-- AUTO:SUMMARY:START -->
-- Fase actual: 12
-- Tarea actual: SEO-012
+- Fase actual: 13
+- Tarea actual: SEO-013
 - Estado de la tarea actual: completed
-- Última actualización: 2026-08-08T23:56:43.042Z
+- Última actualización: 2026-08-09T00:03:41.346Z
 <!-- AUTO:SUMMARY:END -->
 
 ## Git
@@ -45,7 +45,7 @@ que no se repitan:
   `BreadcrumbList`, sitemap vía `@astrojs/sitemap`, `robots.txt` estático.
 - Deployment: `Dockerfile` + `nginx.conf` standalone (sin probar en producción real).
 
-## Próxima tarea: SEO-013 — Imágenes, rendimiento y accesibilidad
+## Próxima tarea: SEO-014 — Validador SEO automático
 
 Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
 
@@ -87,10 +87,13 @@ Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
   `docs/seo-work/sessions/session-12.md`. Resultado: 25 productos reales curados desde Telegram
   (foto+precio+marca/código verificados), `products.generated.json` con 50 productos,
   `productos/[category]/[slug].astro` (ruta compartida para las 3 categorías).
+- **SEO-013** — Imágenes, rendimiento y accesibilidad. Ver `docs/seo-work/sessions/session-13.md`.
+  Resultado: fix de jerarquía de encabezados (6 páginas), srcset+eager en imágenes LCP, auditoría
+  de contraste/foco/alt/menú móvil sin más hallazgos bloqueantes.
 
 ## Tareas pendientes
 
-Ver `tasks/seo-tasks.json` — Fases 13 a 16 (SEO-013 a SEO-016), todas en estado `pending`,
+Ver `tasks/seo-tasks.json` — Fases 14 a 16 (SEO-014 a SEO-016), todas en estado `pending`,
 bloqueadas por dependencias hasta que la tarea previa se complete.
 
 ## Errores conocidos
