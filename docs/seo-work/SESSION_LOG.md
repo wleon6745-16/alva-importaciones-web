@@ -234,3 +234,19 @@ Pruebas: `npm run build && npm run seo:validate` → 0 errores, 12 avisos inform
 sin más características que las que trae la fuente).
 Errores: ninguno sin corregir.
 Siguiente tarea: SEO-015 — Pruebas integrales y estabilización. Ver `NEXT_SESSION.md`.
+
+---
+
+Sesión: 15
+Fecha: 2026-08-08
+Duración aproximada: ~20 min
+Objetivo: Pruebas integrales y estabilización (Fase 15).
+Trabajo completado: fix de `charset utf-8` faltante en `nginx.conf` (encontrado por mojibake real
+en `robots.txt`, habría afectado también a `llms.txt` en producción); prueba de resiliencia de
+`catalog:sync` con fallo simulado (confirma que preserva el catálogo válido, hash MD5 idéntico);
+WhatsApp end-to-end probado en 3 contextos con verificación de `dataLayer`; Schema verificado en
+8 tipos de página.
+Pruebas: `npm run build` OK; `npm run seo:validate` OK (0 errores); `git diff --check` OK; menú
+móvil con "Guías" verificado; 404 verificada.
+Errores: ninguno sin corregir (el hallazgo de charset fue el principal, ya resuelto).
+Siguiente tarea: SEO-016 — Preparación de producción. Ver `NEXT_SESSION.md`.

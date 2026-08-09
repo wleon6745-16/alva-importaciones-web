@@ -2,8 +2,8 @@
   "project": "alva-seo-ai-search",
   "repo": "alva-importaciones-web",
   "relatedRepo": "ASISTENTE (read-only source for catalog data)",
-  "currentPhase": 14,
-  "currentTask": "SEO-014",
+  "currentPhase": 15,
+  "currentTask": "SEO-015",
   "statesAllowed": [
     "pending",
     "in_progress",
@@ -387,7 +387,7 @@
       "id": "SEO-015",
       "phase": 15,
       "title": "Pruebas integrales y estabilización",
-      "status": "pending",
+      "status": "completed",
       "priority": "critical",
       "dependencies": [
         "SEO-004",
@@ -417,7 +417,9 @@
         "npm run seo:validate",
         "git diff --check"
       ],
-      "commitMessage": "fix: stabilize SEO catalog implementation"
+      "commitMessage": "fix: stabilize SEO catalog implementation",
+      "startedAt": "2026-08-09T00:10:29.789Z",
+      "completedAt": "2026-08-09T00:15:14.071Z"
     },
     {
       "id": "SEO-016",

@@ -7,10 +7,10 @@
 ## Control de tarea (automático)
 
 <!-- AUTO:SUMMARY:START -->
-- Fase actual: 14
-- Tarea actual: SEO-014
+- Fase actual: 15
+- Tarea actual: SEO-015
 - Estado de la tarea actual: completed
-- Última actualización: 2026-08-09T00:09:29.075Z
+- Última actualización: 2026-08-09T00:15:14.074Z
 <!-- AUTO:SUMMARY:END -->
 
 ## Git
@@ -45,7 +45,7 @@ que no se repitan:
   `BreadcrumbList`, sitemap vía `@astrojs/sitemap`, `robots.txt` estático.
 - Deployment: `Dockerfile` + `nginx.conf` standalone (sin probar en producción real).
 
-## Próxima tarea: SEO-015 — Pruebas integrales y estabilización
+## Próxima tarea: SEO-016 — Preparación de producción (última fase)
 
 Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
 
@@ -93,11 +93,14 @@ Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
 - **SEO-014** — Validador SEO automático. Ver `docs/seo-work/sessions/session-14.md`. Resultado:
   `scripts/validate-seo.ts` + `npm run seo:validate`; 12 páginas huérfanas reales encontradas y
   corregidas con enlaces internos (nav "Guías" + enlaces contextuales).
+- **SEO-015** — Pruebas integrales y estabilización. Ver `docs/seo-work/sessions/session-15.md`.
+  Resultado: fix de `charset utf-8` faltante en `nginx.conf` (afectaba `robots.txt`/`llms.txt` en
+  producción real); resiliencia de `catalog:sync` verificada con fallo simulado; WhatsApp
+  end-to-end y Schema verificados en múltiples tipos de página.
 
 ## Tareas pendientes
 
-Ver `tasks/seo-tasks.json` — Fases 15 a 16 (SEO-015 a SEO-016), todas en estado `pending`,
-bloqueadas por dependencias hasta que la tarea previa se complete.
+Ver `tasks/seo-tasks.json` — Fase 16 (SEO-016, la última), en estado `pending`.
 
 ## Errores conocidos
 
