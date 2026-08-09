@@ -1,0 +1,86 @@
+---
+// Muestra de campañas comerciales reales, curadas a mano desde el canal de Telegram del
+// negocio (ver docs/seo-work/sessions/session-17.md para el criterio de selección y
+// docs/CONTENT_WORKFLOW.md para cómo actualizar esta sección más adelante).
+//
+// Importante: estas son promociones YA PUBLICADAS en el pasado, no ofertas vigentes hoy — por
+// eso el encabezado dice "así son nuestras promociones" y no "promociones de esta semana". El
+// CTA principal de la sección manda a los canales donde sí se anuncian las promociones activas.
+import { Image } from "astro:assets";
+import comboManicurista from "../assets/promos/combo-manicurista.jpg";
+import promoLinda from "../assets/promos/promo-docena-linda.jpg";
+import activacionCapilarFacial from "../assets/promos/activacion-capilar-facial.jpg";
+import promoDrill from "../assets/promos/promo-drill-gratis.jpg";
+import { siteConfig } from "../lib/site-config";
+
+const promos = [
+  {
+    image: comboManicurista,
+    alt: "Combo Manicurista: mesa, silla concha, silla pequeña, puff de espera y reposamanos",
+    label: "Combo de muebles",
+  },
+  {
+    image: promoDrill,
+    alt: "Promoción: kit de esmaltes de regalo por la compra de un drill de uñas",
+    label: "Promo de herramientas",
+  },
+  {
+    image: promoLinda,
+    alt: "Promoción: esmalte de regalo por la compra de una docena Linda Professional",
+    label: "Promo de esmaltes",
+  },
+  {
+    image: activacionCapilarFacial,
+    alt: "Activación capilar y facial gratuita en la Sucursal del Centro",
+    label: "Evento en sucursal",
+  },
+];
+---
+
+<div class="mx-auto max-w-6xl">
+  <p class="text-center text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Así son nuestras promociones</p>
+  <h2 class="mt-2 text-center font-display text-3xl text-primary-900 sm:text-4xl">Combos y campañas reales</h2>
+  <p class="mx-auto mt-3 max-w-2xl text-center text-ink-muted">
+    Una muestra de campañas que hemos compartido con nuestra comunidad. Las promociones cambian
+    seguido — síguenos para no perderte las que están activas ahora mismo.
+  </p>
+
+  <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    {
+      promos.map((promo) => (
+        <div class="glass-card group overflow-hidden rounded-2xl shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div class="aspect-[4/5] overflow-hidden bg-white">
+            <Image
+              src={promo.image}
+              alt={promo.alt}
+              width={400}
+              height={500}
+              loading="lazy"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+          <p class="px-4 py-3 text-center text-sm font-semibold text-primary-800">{promo.label}</p>
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="mt-10 flex flex-wrap justify-center gap-4">
+    <a
+      href="https://whatsapp.com/channel/0029Vb6jnkrCRs1qmefXm93r"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 rounded-full bg-primary-800 px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-primary-700"
+    >
+      Seguir canal de WhatsApp →
+    </a>
+    <a
+      href={siteConfig.instagram}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 transition-transform hover:scale-105 hover:bg-primary-800 hover:text-white"
+    >
+      Seguir en Instagram →
+    </a>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+---
+import { siteConfig } from "../lib/site-config";
+
+const points = [
+  {
+    title: "Dos locales en Portoviejo",
+    body: "Matriz y Sucursal, para que compres cerca de ti y veas el producto en persona antes de llevarlo.",
+    href: "/locales",
+    cta: "Ver ubicaciones",
+  },
+  {
+    title: "Respuesta inmediata por WhatsApp",
+    body: "Precio, disponibilidad y asesoría directa — sin formularios ni esperas, desde cualquier página del catálogo.",
+    href: "/contacto",
+    cta: "Escribir por WhatsApp",
+  },
+  {
+    title: `${siteConfig.brands.length}+ marcas reconocidas`,
+    body: `${siteConfig.brands.slice(0, 4).join(", ")} y más, en muebles, uñas, capilares y maquillaje.`,
+    href: "/productos",
+    cta: "Ver catálogo",
+  },
+  {
+    title: "Formación profesional",
+    body: "Curso de uñas acrílicas de 6 meses para quienes quieren convertir la técnica en un negocio propio.",
+    href: "/cursos",
+    cta: "Ver el curso",
+  },
+];
+---
+
+<div class="mx-auto max-w-6xl">
+  <p class="text-center text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Por qué Alva</p>
+  <h2 class="mt-2 text-center font-display text-3xl text-primary-900 sm:text-4xl">
+    Un negocio real de Portoviejo, no una tienda anónima
+  </h2>
+
+  <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    {
+      points.map((point) => (
+        <div class="glass-card flex flex-col rounded-2xl p-6">
+          <h3 class="font-display text-lg text-primary-900">{point.title}</h3>
+          <p class="mt-2 flex-1 text-sm text-ink-muted">{point.body}</p>
+          <a href={point.href} class="mt-4 text-sm font-semibold text-primary-700 hover:underline">
+            {point.cta} →
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</div>

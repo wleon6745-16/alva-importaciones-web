@@ -12,6 +12,12 @@ export default defineConfig({
   integrations: [react(), sitemap()],
 
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    server: {
+      // Permite probar el servidor de desarrollo a través de un túnel ngrok (dominio cambia
+      // cada vez en el plan gratuito). Solo afecta a "astro dev"/"vite dev", no al build de
+      // producción ni al server.ts que sirve dist/.
+      allowedHosts: [".ngrok-free.dev", ".ngrok-free.app", ".ngrok.io", ".ngrok.app"]
+    }
   }
 });

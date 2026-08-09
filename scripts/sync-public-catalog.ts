@@ -82,6 +82,14 @@ const MUEBLES_SEED: SeedGroup[] = [
       {
         name: "Sillón de peluquería ST-2202",
         price: 345,
+        // Código añadido en la segunda pasada de calidad: DATA_CONFLICTS.md CONFLICT-003 ya
+        // había identificado COD:11004 para este mismo modelo (messages2.html, 29-06-2026,
+        // "Sillón de barbería SILETI ST-2202") como resolución opcional pendiente. Se confirma
+        // ahora porque la foto de catálogo indexada bajo ese mismo código (ASISTENTE/backend/
+        // assets/furniture-catalog/11004.jpeg) es visualmente el mismo sillón que la foto de
+        // Telegram ya publicada para este producto.
+        code: "11004",
+        brand: "SILETI",
         features: ["Base redonda", "Cuero de fácil limpieza", "Hidráulico", "Soporte para pies"],
         image: "sillon-peluqueria-1.jpg",
       },

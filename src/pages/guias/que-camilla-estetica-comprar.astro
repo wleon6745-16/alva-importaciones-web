@@ -21,40 +21,65 @@ const faqs = [
   {
     question: "¿Camilla portátil o fija?",
     answer:
-      "Una camilla portátil (plegable) es mejor si trabajas a domicilio o cambias de espacio; una camilla más robusta conviene si siempre va a estar en el mismo lugar del local.",
+      "Si atiendes a domicilio, cambias de sala con frecuencia, o el espacio del local se comparte con otro uso, la portátil se pliega y se guarda sin ocupar sitio. Si la camilla va a quedarse en el mismo lugar todo el tiempo, una más robusta suele dar mejor estabilidad durante el servicio.",
   },
   {
     question: "¿Para qué sirve una camilla de niveles ajustables?",
     answer:
-      "Los niveles de inclinación ajustables permiten adaptar la posición del cliente según el tratamiento (por ejemplo, más inclinada para ciertos masajes o faciales).",
+      "Cada tratamiento pide una posición distinta: un facial suele necesitar el respaldo más elevado, un masaje de espalda la superficie plana, y ciertos procedimientos requieren inclinaciones intermedias. Tener varios niveles evita improvisar con cojines o toallas para lograr el ángulo correcto.",
   },
   {
     question: "¿Cuál es la diferencia de precio entre modelos?",
     answer:
-      "Varía según el mecanismo (hidráulico vs. portátil) y el número de niveles ajustables — cada ficha de producto muestra el precio y las características exactas del modelo.",
+      "El mecanismo (hidráulico frente a portátil) y el número de niveles ajustables son los factores que más mueven el precio — cada ficha de producto tiene el valor exacto y las características del modelo.",
   },
 ];
 ---
 
 <GuideLayout
   title="Qué camilla estética comprar"
-  description="Guía para elegir camilla estética: diferencias entre camilla portátil, hidráulica y de niveles ajustables, con modelos y precios reales."
+  description="Guía para elegir camilla estética: cuándo conviene una portátil, cuándo una hidráulica, y por qué los niveles de inclinación importan en el tratamiento."
   path="/guias/que-camilla-estetica-comprar"
   heading="Qué camilla estética comprar"
-  intro="Camilla portátil, hidráulica o de niveles ajustables: cada una sirve para un tipo de trabajo distinto. Aquí comparamos las opciones disponibles."
+  intro="La camilla es donde el cliente pasa la mayor parte del tratamiento, así que su comodidad y la flexibilidad de posiciones influyen directamente en la calidad del servicio que puedes ofrecer."
   datePublished="2026-08-08"
   faqs={faqs}
   ctaMessage="Hola, quisiera asesoría para elegir una camilla estética"
 >
   <SectionReveal as="section" class="px-6 pb-16">
-    <div class="mx-auto max-w-3xl text-ink-muted">
-      <p>
-        Las tres camillas de nuestro catálogo cubren distintos casos de uso: una es hidráulica
-        multiusos, otra está pensada para lifting/faciales con estructura portátil, y la tercera
-        tiene 3 niveles de inclinación ajustables con cubierta de fácil limpieza.
-      </p>
+    <div class="mx-auto max-w-3xl space-y-8 text-ink-muted">
+      <div>
+        <h2 class="font-display text-2xl text-primary-900">Portátil vs. fija: la primera decisión</h2>
+        <p class="mt-3">
+          Una camilla portátil se pliega en minutos y cabe en el maletero de un auto — ideal para
+          quien atiende a domicilio o alterna entre espacios. Una camilla más robusta, pensada
+          para quedarse fija, suele ofrecer mayor estabilidad y una sensación más firme durante
+          el tratamiento, algo que el cliente nota especialmente en masajes de mayor presión.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-display text-2xl text-primary-900">Niveles de inclinación: no todos los tratamientos piden lo mismo</h2>
+        <p class="mt-3">
+          Un facial funciona mejor con el respaldo elevado para que el cliente esté semi-sentado;
+          un masaje corporal pide la superficie plana; ciertos procedimientos de lifting o
+          depilación requieren ángulos intermedios. Una camilla con varios niveles ajustables
+          resuelve todos esos casos sin necesidad de improvisar con toallas o cojines para
+          sostener la posición.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-display text-2xl text-primary-900">La superficie importa tanto como el mecanismo</h2>
+        <p class="mt-3">
+          Una cubierta de fácil limpieza, sin costuras porosas donde se acumulen residuos de
+          cremas o aceites, hace que la desinfección entre clientes sea rápida y confiable — un
+          punto que un cliente exigente sí llega a notar con el tiempo.
+        </p>
+      </div>
     </div>
-    <h2 class="mx-auto max-w-3xl font-display text-2xl text-primary-900">Modelos disponibles</h2>
+
+    <h2 class="mx-auto mt-12 max-w-3xl font-display text-2xl text-primary-900">Modelos disponibles</h2>
     <div class="mt-8">
       <ProductGrid items={camillas} basePath="/productos/muebles" />
     </div>

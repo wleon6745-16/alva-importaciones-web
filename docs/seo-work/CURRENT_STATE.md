@@ -45,7 +45,15 @@ que no se repitan:
   `BreadcrumbList`, sitemap vía `@astrojs/sitemap`, `robots.txt` estático.
 - Deployment: `Dockerfile` + `nginx.conf` standalone (sin probar en producción real).
 
-## Estado del plan: COMPLETO
+## Sesión 17 (2026-08-09): segunda pasada de calidad
+
+Fuera de las 16 fases del plan original (pedido directo del usuario). Ver
+`docs/seo-work/sessions/session-17.md` para el detalle completo: guías reescritas, nueva fuente
+de imágenes descubierta (`ASISTENTE/backend/assets/`), home rediseñada, promociones de Telegram
+curadas en la home, `docs/CONTENT_WORKFLOW.md` nuevo. `astro.config.mjs` también gana
+`server.allowedHosts` para poder probar por túnel ngrok (solo afecta `astro dev`).
+
+## Estado del plan original (16 fases): COMPLETO
 
 Las 16 fases de `MASTER_PLAN.md` (SEO-001 a SEO-016) están `completed`. No quedan tareas
 pendientes en `tasks/seo-tasks.json`. Lo que falta para producción real es exclusivamente

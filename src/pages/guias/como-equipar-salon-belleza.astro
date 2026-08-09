@@ -5,22 +5,22 @@ import GuideLayout from "../../components/GuideLayout.astro";
 const steps = [
   {
     title: "1. Zona de peluquería/barbería",
-    body: "Sillón o silla reclinable hidráulica, más un lavacabezas si vas a ofrecer lavado de cabello.",
+    body: "Es la estación que más horas de trabajo concentra en la mayoría de locales. Un sillón o silla reclinable hidráulica es la base; si vas a lavar cabello en el mismo espacio, súmale un lavacabezas para no depender de mover al cliente a otra zona.",
     href: "/productos/muebles#sillones-y-sillas-de-peluqueria-barberia",
   },
   {
     title: "2. Zona de estética/masajes",
-    body: "Camilla portátil o hidráulica, según el volumen de servicios y si necesitas moverla entre espacios.",
+    body: "Una camilla resuelve faciales, masajes y tratamientos corporales. Si el espacio es reducido o compartido con otro uso, una portátil se guarda al terminar el turno; si el servicio de estética es constante, una camilla fija con niveles ajustables da más control sobre la posición del cliente.",
     href: "/productos/muebles#camillas",
   },
   {
     title: "3. Zona de manicura/pedicura",
-    body: "Mesa de manicura y silla concha o sillón para pedicura, pensados para la comodidad del cliente durante el servicio.",
+    body: "La mesa de manicura es la vitrina del servicio: ahí el cliente ve de cerca el orden y la limpieza del trabajo. Para pedicura, una silla concha o un sillón dedicado evita improvisar con muebles que no están pensados para ese uso.",
     href: "/productos/muebles#mesas-de-trabajo",
   },
   {
     title: "4. Equipo complementario",
-    body: "Carritos auxiliares para tener herramientas a mano y tinas o accesorios según el servicio que ofrezcas.",
+    body: "Un carrito auxiliar mantiene herramientas y productos a la mano sin ir y venir del almacén cada vez. Son detalles que no se notan en una foto del local, pero que sí se notan en la fluidez del servicio, cliente tras cliente.",
     href: "/productos/muebles#equipo-y-accesorios-de-salon",
   },
 ];
@@ -29,28 +29,42 @@ const faqs = [
   {
     question: "¿Por dónde empiezo si tengo presupuesto limitado?",
     answer:
-      "Prioriza el mueble de la estación que más vas a usar: si tu servicio principal es peluquería, empieza por el sillón; si es estética, por la camilla. El resto se puede ir sumando.",
+      "Empieza por la estación que genera tus primeros ingresos. Si vas a abrir con un solo servicio (por ejemplo, solo peluquería), invierte ahí primero y de buena calidad — es mejor una estación completa y sólida que tres a medias. El resto se va sumando con el flujo del negocio.",
   },
   {
     question: "¿Puedo comprar los muebles por separado o solo en combos?",
     answer:
-      "Cada mueble se vende de forma individual y tiene su propia ficha de precio; puedes armar tu combinación según lo que necesites.",
+      "Cada mueble se vende de forma individual con su propio precio, así que puedes armar exactamente la combinación que tu local necesita, sin pagar por lo que no vas a usar todavía.",
+  },
+  {
+    question: "¿Qué zona conviene montar primero en un local nuevo?",
+    answer:
+      "La que defina tu identidad de negocio. Si te vas a posicionar como barbería, arranca por ahí con todo lo necesario para dar un buen servicio desde el primer cliente; las demás zonas se pueden ir sumando a medida que crece la cartera.",
   },
 ];
 ---
 
 <GuideLayout
   title="Cómo equipar un salón de belleza"
-  description="Guía paso a paso para equipar un salón de belleza: qué mueble priorizar en cada zona (peluquería, estética, manicura) y en qué orden comprar."
+  description="Guía paso a paso para equipar un salón de belleza desde cero: qué zona de servicio priorizar y en qué orden invertir según tu presupuesto."
   path="/guias/como-equipar-salon-belleza"
   heading="Cómo equipar un salón de belleza"
-  intro="Equipar un salón de belleza desde cero puede ser abrumador. Esta guía ordena las decisiones por zona de servicio, para que sepas qué priorizar según tu presupuesto."
+  intro="Montar un salón desde cero implica decidir en qué orden invertir un presupuesto que casi nunca alcanza para todo a la vez. La forma más práctica de decidir no es por lista de compras, sino por zona de servicio."
   datePublished="2026-08-08"
   faqs={faqs}
   ctaMessage="Hola, estoy equipando un salón de belleza y quisiera asesoría"
 >
   <SectionReveal as="section" class="px-6 pb-16">
-    <div class="mx-auto max-w-3xl space-y-8">
+    <div class="mx-auto max-w-3xl">
+      <p class="text-ink-muted">
+        Cada zona de un salón de belleza tiene su propio mueble protagonista y su propio ritmo de
+        uso. Pensar en zonas — no en una lista genérica — ayuda a decidir qué comprar primero, qué
+        puede esperar y qué combinaciones tienen más sentido según el tipo de negocio que estás
+        montando.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-8 max-w-3xl space-y-8">
       {
         steps.map((step) => (
           <div class="glass-card rounded-2xl p-6">
@@ -63,6 +77,25 @@ const faqs = [
         ))
       }
     </div>
+
+    <div class="mx-auto mt-12 max-w-3xl">
+      <h2 class="font-display text-2xl text-primary-900">Errores comunes al equipar un salón nuevo</h2>
+      <ul class="mt-4 list-disc space-y-2 pl-5 text-ink-muted">
+        <li>
+          Comprar muebles baratos "para empezar" y tener que reemplazarlos a los pocos meses —
+          termina costando más que invertir bien desde el inicio en la estación principal.
+        </li>
+        <li>
+          Descuidar el equipo complementario (carritos, accesorios) pensando que solo importan
+          los muebles grandes, cuando son los que sostienen la fluidez del día a día.
+        </li>
+        <li>
+          Equipar todas las zonas a la vez con presupuesto ajustado, en vez de hacer una estación
+          completa y sólida primero.
+        </li>
+      </ul>
+    </div>
+
     <div class="mt-10 text-center">
       <a
         href="/muebles-para-salon-de-belleza-portoviejo"

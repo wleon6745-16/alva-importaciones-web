@@ -266,3 +266,24 @@ el repo trackeado sin resultados.
 Errores: ninguno sin corregir.
 **Las 16 fases de `MASTER_PLAN.md` están completas.** Lo que queda es configuración de cuentas
 externas del negocio, documentado en `MANUAL_ACTIONS.md` → "Checklist final de lanzamiento".
+
+---
+
+Sesión: 17
+Fecha: 2026-08-09
+Duración aproximada: ~90 min
+Objetivo: Segunda pasada de calidad (pedido directo del usuario, fuera de las 16 fases del plan
+original) — contenido editorial, imágenes, promociones de Telegram, rediseño de home, mobile.
+Trabajo completado: 5 guías reescritas con voz editorial real; descubrimiento de un catálogo de
+fotos por código en `ASISTENTE/backend/assets/` (7 productos actualizados con fotos mejores, 1
+conflicto de datos resuelto — CONFLICT-003); home rediseñada (hero enmarcado sin upscaling,
+`PromoShowcase.astro` con 4 campañas reales curadas de Telegram, `CategoryCard.astro` estilo
+tile grande, `TrustSection.astro` reemplazando el carrusel de testimonios de ejemplo);
+`docs/CONTENT_WORKFLOW.md` nuevo documentando el flujo completo.
+Pruebas: `npm run build` y `npm run seo:validate` en verde tras cada bloque; jerarquía de
+encabezados re-verificada (0 saltos en 77 páginas); verificado en navegador que el hero no hace
+upscaling; verificado por HTTP directo que las imágenes cargan bien (se descartó una falsa alarma
+del panel de navegador de esta sesión).
+Errores: ninguno sin corregir. Se corrigió en la misma sesión un hero full-bleed que habría
+estirado una imagen de baja resolución.
+Siguiente: ver `docs/seo-work/sessions/session-17.md` sección "Pendientes".

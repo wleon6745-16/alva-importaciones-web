@@ -65,11 +65,13 @@ el usuario (o una sesión futura con instrucción explícita) los confirme.
   - `messages2.html` (29-06-2026): "Sillón de barbería SILETI ST-2202", **COD:11004**, $345 —
     mismo modelo y precio, nombre de marca ("SILETI") y de categoría ("barbería" en vez de
     "peluquería") distintos.
-- **Estado**: no se publicó la segunda entrada por ser, con alta probabilidad, el mismo producto
-  re-anunciado 9 meses después con la línea de marca "SILETI" añadida.
-- **Impacto**: bajo — es informativo. Si se confirma que es el mismo producto, se podría
-  enriquecer la ficha existente con el código `COD:11004` y el nombre de marca "SILETI".
-- **Acción pendiente**: opcional, confirmar y actualizar el código en la ficha existente.
+- **RESUELTO (segunda pasada de calidad, 2026-08-09)**: al revisar el catálogo de fotos
+  indexado por código en `ASISTENTE/backend/assets/furniture-catalog/`, la foto guardada bajo
+  `11004.jpeg` es visualmente el mismo sillón que la foto de Telegram ya publicada para
+  "Sillón de peluquería ST-2202" (mismo ángulo, mismo modelo, misma silla). Confirma que es el
+  mismo producto. Se actualizó la ficha con `code: "11004"` y `brand: "SILETI"`, y se reemplazó
+  la foto (la de Telegram tenía marca de agua/branding superpuesto; la de catálogo es una foto
+  de producto limpia). Ver `scripts/sync-public-catalog.ts`.
 
 ---
 

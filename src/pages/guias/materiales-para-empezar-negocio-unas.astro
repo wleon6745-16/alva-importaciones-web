@@ -21,61 +21,102 @@ const furniture = furnitureSlugs
   .filter((p): p is Product => Boolean(p))
   .map((p) => ({ ...p, image: imageFor(p.image) }));
 
-const categories = [
-  "Insumos base: acrílicos, geles y esmaltes (ver categoría de uñas)",
-  "Herramientas de aplicación y limado",
-  "Mobiliario: mesa de manicura y silla/sillón para pedicura",
-];
-
 const faqs = [
   {
     question: "¿Qué necesito primero, insumos o mobiliario?",
     answer:
-      "Depende de si ya tienes un espacio de trabajo. Si vas a atender en un local propio, el mobiliario (mesa + silla) suele ser la base; los insumos se reponen constantemente según la demanda.",
+      "Si vas a atender en un espacio propio o alquilado, el mobiliario suele ir primero — es la inversión que no se repone cada mes. Los insumos, en cambio, se reponen constantemente según la demanda, así que pueden empezar con lo esencial e irse ampliando con cada cliente nuevo.",
   },
   {
     question: "¿Dónde veo el catálogo de insumos de uñas?",
     answer:
-      "En la categoría de uñas del sitio, con acrílicos, geles y esmaltes de marcas como Master Nails y Mia Secret.",
+      "En la categoría de uñas del sitio, con acrílicos, monómeros, esmaltes y herramientas de marcas reconocidas como Master Nails y Mía Secret.",
   },
   {
     question: "¿Ofrecen formación para nail art?",
     answer:
-      "Sí, tenemos un curso profesional de uñas acrílicas de 6 meses — puedes ver los detalles en la página de cursos.",
+      "Sí, tenemos un curso profesional de uñas acrílicas de 6 meses — puedes ver los detalles completos en la página de cursos.",
   },
 ];
 ---
 
 <GuideLayout
   title="Materiales para empezar un negocio de uñas"
-  description="Qué necesitas para empezar un negocio de uñas: insumos base, herramientas y mobiliario de manicura/pedicura. Guía práctica con productos reales."
+  description="Qué necesitas realmente para empezar un negocio de uñas: cómo definir tu especialidad, insumos base, herramientas y mobiliario esenciales."
   path="/guias/materiales-para-empezar-negocio-unas"
   heading="Materiales para empezar un negocio de uñas"
-  intro="Si estás por iniciar como nail artist independiente o montar tu propio espacio, esta guía organiza lo esencial: insumos, herramientas y mobiliario."
+  intro="Entre insumos, herramientas y mobiliario es fácil comprar de más o de menos al empezar. Esta guía ordena las decisiones para que la primera inversión rinda de verdad."
   datePublished="2026-08-08"
   faqs={faqs}
   ctaMessage="Hola, estoy empezando mi negocio de uñas y quisiera asesoría sobre qué necesito"
 >
   <SectionReveal as="section" class="px-6 pb-16">
-    <div class="mx-auto max-w-3xl">
-      <h2 class="font-display text-2xl text-primary-900">Lo esencial</h2>
-      <ul class="mt-4 list-disc space-y-2 pl-5 text-ink-muted">
-        {categories.map((c) => <li>{c}</li>)}
-      </ul>
-      <div class="mt-6 flex flex-wrap gap-4">
-        <a
-          href="/productos/unas"
-          class="inline-block rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 hover:bg-primary-800 hover:text-white"
-        >
-          Ver insumos de uñas →
-        </a>
-        <a
-          href="/cursos"
-          class="inline-block rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 hover:bg-primary-800 hover:text-white"
-        >
-          Ver curso profesional →
-        </a>
+    <div class="mx-auto max-w-3xl space-y-8 text-ink-muted">
+      <div>
+        <h2 class="font-display text-2xl text-primary-900">Antes de comprar, define tu especialidad</h2>
+        <p class="mt-3">
+          No es lo mismo enfocarse en esculpido con acrílico, en gel o en semipermanente — cada
+          técnica pide un set de insumos distinto. Definir esto primero evita comprar productos
+          que terminan sin usarse porque no encajan con el servicio que realmente vas a ofrecer
+          a tus primeras clientas.
+        </p>
       </div>
+
+      <div>
+        <h2 class="font-display text-2xl text-primary-900">Los insumos base que no pueden faltar</h2>
+        <p class="mt-3">
+          Un buen monómero y polvo acrílico (o su equivalente en gel), un primer que prepare bien
+          la uña natural, y una gama de esmaltes o colores que cubra lo que tus clientas piden con
+          más frecuencia. Empezar con una paleta acotada pero de calidad rinde más que arrancar
+          con decenas de tonos que rotan poco.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-display text-2xl text-primary-900">Herramientas de precisión: se nota en el resultado</h2>
+        <p class="mt-3">
+          Brocas, limas y una lámpara de secado adecuada son la diferencia entre un acabado
+          prolijo y uno que se ve apurado. Es una de las áreas donde más vale invertir bien desde
+          el principio, porque una herramienta de mala calidad afecta directamente lo que la
+          clienta ve al final del servicio.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-display text-2xl text-primary-900">El mobiliario es tu carta de presentación</h2>
+        <p class="mt-3">
+          La mesa de manicura es lo primero que la clienta observa de cerca durante la cita —
+          orden, limpieza y buena iluminación en ese punto transmiten profesionalismo antes de
+          que empiece el trabajo. Para pedicura, un mueble pensado específicamente para ese
+          servicio (silla concha o sillón dedicado) hace que el proceso sea cómodo tanto para
+          quien atiende como para quien recibe el servicio.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-display text-2xl text-primary-900">La técnica pesa más que el inventario</h2>
+        <p class="mt-3">
+          Tener todos los insumos del mundo no reemplaza la formación. Si estás empezando,
+          conviene invertir en aprender bien la técnica antes de sobre-equiparse — un set
+          reducido en manos entrenadas da mejores resultados que un inventario completo sin la
+          práctica detrás.
+        </p>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-8 flex max-w-3xl flex-wrap gap-4">
+      <a
+        href="/productos/unas"
+        class="inline-block rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 hover:bg-primary-800 hover:text-white"
+      >
+        Ver insumos de uñas →
+      </a>
+      <a
+        href="/cursos"
+        class="inline-block rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 hover:bg-primary-800 hover:text-white"
+      >
+        Ver curso profesional →
+      </a>
     </div>
 
     <div class="mt-12">

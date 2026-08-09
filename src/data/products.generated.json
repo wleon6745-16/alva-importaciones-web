@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T23:50:48.523Z",
+  "generatedAt": "2026-08-09T00:55:57.468Z",
   "source": "manual-seed:scripts/sync-public-catalog.ts (muebles migrado desde muebles.astro 2026-08-07; uñas/capilares/maquillaje curados desde el export de Telegram en SEO-012, 2026-08-08)",
   "products": [
     {
@@ -61,8 +61,10 @@
       "name": "Sillón de peluquería ST-2202",
       "category": "muebles",
       "subcategory": "sillones-y-sillas-de-peluqueria-barberia",
+      "code": "11004",
       "price": 345,
       "currency": "USD",
+      "brand": "SILETI",
       "features": [
         "Base redonda",
         "Cuero de fácil limpieza",

@@ -25,58 +25,85 @@ const faqs = [
   {
     question: "¿Silla hidráulica o de altura fija?",
     answer:
-      "Para uso profesional a diario, una silla hidráulica reclinable es la opción más cómoda: ajusta la altura por cliente y reduce el esfuerzo físico del barbero. Todas las sillas de barbería de nuestro catálogo son hidráulicas y reclinables.",
+      "Para trabajar todo el día, la hidráulica gana casi siempre. Subir y bajar al cliente con una palanca evita que el barbero se agache o se estire constantemente, y eso se nota en la espalda después de la décima cita del día. La de altura fija solo tiene sentido en espacios muy pequeños o de bajísimo movimiento, donde el ahorro pesa más que la comodidad diaria.",
   },
   {
-    question: "¿Qué diferencia hay entre las sillas SILETI y las sin marca de línea?",
+    question: "¿Vale la pena pagar más por una silla con nombre de línea (SILETI) frente a una genérica?",
     answer:
-      "En nuestro catálogo, los modelos con línea SILETI (ST-2200, ST-2001) tienen el nombre de fabricante identificado en la publicación original; los demás sillones de peluquería no traían esa información en la fuente, pero comparten las mismas características principales (base metálica, hidráulico, reclinable).",
+      "La diferencia real suele estar en el acabado del tapizado, el ajuste de las piezas metálicas y qué tan bien envejece la hidráulica con el uso diario. Una silla con línea reconocida tiende a dar menos dolores de cabeza a los dos o tres años. Si el presupuesto es ajustado, un modelo sin marca de línea sigue siendo una opción válida para empezar.",
   },
   {
     question: "¿Cómo consulto precio y disponibilidad exacta?",
     answer:
-      "Cada silla tiene su ficha con precio y un botón de WhatsApp que ya incluye el nombre y código del modelo, para que te respondamos más rápido.",
+      "Cada silla tiene su ficha con precio, y el botón de WhatsApp ya lleva el nombre y el código del modelo cargado para que la respuesta sea inmediata.",
   },
 ];
 ---
 
 <GuideLayout
   title="Cómo elegir silla de barbería"
-  description="Guía práctica para elegir la silla de barbería adecuada: hidráulica vs fija, reclinable, base y otros factores a considerar antes de comprar."
+  description="Guía práctica para elegir la silla de barbería adecuada: sistema hidráulico, reclinación, base y tapizado. Qué mirar antes de comprar y por qué."
   path="/guias/como-elegir-silla-barberia"
   heading="Cómo elegir silla de barbería"
-  intro="Antes de comprar una silla de barbería, conviene tener claros unos pocos criterios: mecanismo de altura, reclinación, base y uso previsto. Esta guía resume qué mirar y qué modelos tenemos disponibles."
+  intro="La silla es la estación de trabajo del barbero: donde pasa la mayor parte del día y donde el cliente forma su primera impresión del local. Elegir mal sale caro dos veces — en el precio y en el reemplazo temprano."
   datePublished="2026-08-08"
   faqs={faqs}
   ctaMessage="Hola, quisiera asesoría para elegir una silla de barbería"
 >
   <SectionReveal as="section" class="px-6 pb-16">
-    <div class="mx-auto max-w-3xl space-y-6 text-ink-muted">
+    <div class="mx-auto max-w-3xl space-y-8 text-ink-muted">
       <div>
-        <h2 class="font-display text-2xl text-primary-900">Qué mirar antes de comprar</h2>
-        <ul class="mt-4 list-disc space-y-2 pl-5">
-          <li>
-            <strong class="text-ink">Mecanismo hidráulico:</strong> permite subir/bajar la
-            silla según la altura del cliente, sin esfuerzo manual.
-          </li>
-          <li>
-            <strong class="text-ink">Reclinación:</strong> útil para afeitado y servicios que
-            requieren inclinar al cliente hacia atrás.
-          </li>
-          <li>
-            <strong class="text-ink">Base y estructura:</strong> una base metálica resistente
-            soporta mejor el uso diario en un local con alto tráfico de clientes.
-          </li>
-          <li>
-            <strong class="text-ink">Acolchado:</strong> el material de tapizado (cuero o
-            similar) influye en la limpieza diaria y la durabilidad.
-          </li>
-        </ul>
+        <h2 class="font-display text-2xl text-primary-900">El sistema hidráulico marca la diferencia diaria</h2>
+        <p class="mt-3">
+          Ajustar la altura del cliente sin esfuerzo no es un lujo, es lo que evita que el
+          barbero termine el día con la espalda cargada. Una palanca hidráulica en buen estado
+          sube y baja con un solo movimiento y sostiene la posición sin ceder de a poco durante
+          el corte — esa firmeza es justamente lo primero que se nota cuando el mecanismo empieza
+          a fallar. Si el local recibe varios clientes por turno, este punto no es negociable.
+        </p>
       </div>
-      <p>
-        Todas las sillas de nuestro catálogo cumplen con hidráulico + reclinable + base metálica;
-        la diferencia principal entre modelos es el acolchado, el diseño y el precio.
-      </p>
+
+      <div>
+        <h2 class="font-display text-2xl text-primary-900">Reclinación: imprescindible para afeitado y ciertos servicios</h2>
+        <p class="mt-3">
+          Un afeitado a navaja, una mascarilla facial o un masaje de cuero cabelludo necesitan
+          inclinar al cliente hacia atrás con la cabeza apoyada. Sin reclinación, esos servicios
+          se vuelven incómodos tanto para el cliente como para quien atiende. Si el plan del
+          negocio incluye algo más que corte y barba, la reclinación deja de ser opcional.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-display text-2xl text-primary-900">Base y estructura: lo que aguanta el uso diario</h2>
+        <p class="mt-3">
+          Una base metálica sólida, sin partes plásticas en los puntos de apoyo, es lo que
+          separa una silla que dura años de una que empieza a rechinar a los pocos meses. En
+          locales con alto tráfico —varios cortes por hora, distintos pesos y estaturas— la
+          estructura recibe más estrés del que parece a simple vista.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-display text-2xl text-primary-900">Tapizado: la limpieza diaria depende de esto</h2>
+        <p class="mt-3">
+          El cuero o la cuerina de buena calidad se limpian en segundos entre cliente y cliente,
+          sin absorber tintes ni productos de barbería. Un tapizado de gama baja se mancha, se
+          agrieta con los desinfectantes y termina dando una imagen descuidada aunque el resto
+          del local esté impecable. Vale la pena revisar las costuras y el acolchado antes de
+          decidir, no solo el color.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-display text-2xl text-primary-900">¿Silla de barbería o sillón de peluquería?</h2>
+        <p class="mt-3">
+          En la práctica, ambas comparten el mismo tipo de mecanismo hidráulico y reclinable —
+          la diferencia suele estar en el diseño (más robusto y de líneas rectas en barbería,
+          más curvo en peluquería) y en detalles como el reposapiés. Si el local atiende ambos
+          públicos, cualquiera de las dos funciona bien; lo que realmente importa es el
+          mecanismo, la base y el tapizado, ya descritos arriba.
+        </p>
+      </div>
     </div>
 
     <div class="mt-12">
