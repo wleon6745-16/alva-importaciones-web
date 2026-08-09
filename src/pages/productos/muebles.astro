@@ -38,6 +38,18 @@ const SUBCATEGORY_TITLES: Record<string, string> = {
 
 const SUBCATEGORY_ORDER = Object.keys(SUBCATEGORY_TITLES);
 
+const LANDING_LINKS: Record<string, { href: string; label: string }> = {
+  camillas: { href: "/camillas-esteticas-portoviejo", label: "Ver camillas estéticas en Portoviejo →" },
+  "sillones-y-sillas-de-peluqueria-barberia": {
+    href: "/sillas-de-barberia-portoviejo",
+    label: "Ver sillas de barbería en Portoviejo →",
+  },
+  "equipo-y-accesorios-de-salon": {
+    href: "/equipamiento-para-peluquerias-manabi",
+    label: "Ver equipamiento para peluquerías en Manabí →",
+  },
+};
+
 const sections = SUBCATEGORY_ORDER.map((subcategory) => ({
   subcategory,
   title: SUBCATEGORY_TITLES[subcategory],
@@ -115,6 +127,14 @@ const faqLd = faqSchema(faqs);
       <SectionReveal as="section" id={section.subcategory} class="scroll-mt-24 px-6 py-16">
         <div class="mx-auto max-w-6xl">
           <h2 class="font-display text-3xl text-primary-900">{section.title}</h2>
+          {LANDING_LINKS[section.subcategory] && (
+            <a
+              href={LANDING_LINKS[section.subcategory].href}
+              class="mt-2 inline-block text-sm font-semibold text-primary-700 hover:underline"
+            >
+              {LANDING_LINKS[section.subcategory].label}
+            </a>
+          )}
           <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {section.items.map((item) => (
               <div class="glass-card flex flex-col overflow-hidden rounded-2xl shadow-md">

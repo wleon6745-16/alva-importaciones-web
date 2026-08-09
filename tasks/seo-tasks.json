@@ -2,8 +2,8 @@
   "project": "alva-seo-ai-search",
   "repo": "alva-importaciones-web",
   "relatedRepo": "ASISTENTE (read-only source for catalog data)",
-  "currentPhase": 13,
-  "currentTask": "SEO-013",
+  "currentPhase": 14,
+  "currentTask": "SEO-014",
   "statesAllowed": [
     "pending",
     "in_progress",
@@ -354,7 +354,7 @@
       "id": "SEO-014",
       "phase": 14,
       "title": "Validador SEO automático",
-      "status": "pending",
+      "status": "completed",
       "priority": "high",
       "dependencies": [
         "SEO-005",
@@ -379,7 +379,9 @@
         "npm run build",
         "npm run seo:validate"
       ],
-      "commitMessage": "test: add automated SEO validation"
+      "commitMessage": "test: add automated SEO validation",
+      "startedAt": "2026-08-09T00:05:23.690Z",
+      "completedAt": "2026-08-09T00:09:29.073Z"
     },
     {
       "id": "SEO-015",

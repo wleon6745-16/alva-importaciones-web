@@ -217,3 +217,20 @@ srcset/eager verificados en HTML generado; menú móvil probado en navegador.
 Errores: ninguno sin corregir (el bug de jerarquía de encabezados fue el hallazgo principal, ya
 resuelto).
 Siguiente tarea: SEO-014 — Validador SEO automático. Ver `NEXT_SESSION.md`.
+
+---
+
+Sesión: 14
+Fecha: 2026-08-08
+Duración aproximada: ~25 min
+Objetivo: Validador SEO automático (Fase 14).
+Trabajo completado: `scripts/validate-seo.ts` + `npm run seo:validate` (títulos/descripciones
+duplicados, canonical, h1, alt, JSON-LD, enlaces rotos, huérfanas, slugs duplicados, productos
+incompletos). Bug de scope corregido en la detección de huérfanas (normalización de URL). Tras
+el fix, se encontraron 12 páginas realmente huérfanas (guías + 6 landing locales) y se
+corrigieron añadiendo enlaces internos reales (nav global "Guías", enlaces contextuales desde
+muebles/unas/cursos).
+Pruebas: `npm run build && npm run seo:validate` → 0 errores, 12 avisos informativos (productos
+sin más características que las que trae la fuente).
+Errores: ninguno sin corregir.
+Siguiente tarea: SEO-015 — Pruebas integrales y estabilización. Ver `NEXT_SESSION.md`.

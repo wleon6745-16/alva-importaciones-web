@@ -7,10 +7,10 @@
 ## Control de tarea (automático)
 
 <!-- AUTO:SUMMARY:START -->
-- Fase actual: 13
-- Tarea actual: SEO-013
+- Fase actual: 14
+- Tarea actual: SEO-014
 - Estado de la tarea actual: completed
-- Última actualización: 2026-08-09T00:03:41.346Z
+- Última actualización: 2026-08-09T00:09:29.075Z
 <!-- AUTO:SUMMARY:END -->
 
 ## Git
@@ -45,7 +45,7 @@ que no se repitan:
   `BreadcrumbList`, sitemap vía `@astrojs/sitemap`, `robots.txt` estático.
 - Deployment: `Dockerfile` + `nginx.conf` standalone (sin probar en producción real).
 
-## Próxima tarea: SEO-014 — Validador SEO automático
+## Próxima tarea: SEO-015 — Pruebas integrales y estabilización
 
 Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
 
@@ -90,10 +90,13 @@ Aún no iniciada. Ver `tasks/seo-tasks.json` y `docs/seo-work/NEXT_SESSION.md`.
 - **SEO-013** — Imágenes, rendimiento y accesibilidad. Ver `docs/seo-work/sessions/session-13.md`.
   Resultado: fix de jerarquía de encabezados (6 páginas), srcset+eager en imágenes LCP, auditoría
   de contraste/foco/alt/menú móvil sin más hallazgos bloqueantes.
+- **SEO-014** — Validador SEO automático. Ver `docs/seo-work/sessions/session-14.md`. Resultado:
+  `scripts/validate-seo.ts` + `npm run seo:validate`; 12 páginas huérfanas reales encontradas y
+  corregidas con enlaces internos (nav "Guías" + enlaces contextuales).
 
 ## Tareas pendientes
 
-Ver `tasks/seo-tasks.json` — Fases 14 a 16 (SEO-014 a SEO-016), todas en estado `pending`,
+Ver `tasks/seo-tasks.json` — Fases 15 a 16 (SEO-015 a SEO-016), todas en estado `pending`,
 bloqueadas por dependencias hasta que la tarea previa se complete.
 
 ## Errores conocidos
