@@ -1,38 +1,48 @@
 ---
 // Muestra de campañas comerciales reales, curadas a mano desde el canal de Telegram del
-// negocio (ver docs/seo-work/sessions/session-17.md para el criterio de selección y
-// docs/CONTENT_WORKFLOW.md para cómo actualizar esta sección más adelante).
+// negocio (ver docs/CONTENT_WORKFLOW.md para el criterio de selección y cómo actualizar esta
+// sección más adelante).
 //
 // Importante: estas son promociones YA PUBLICADAS en el pasado, no ofertas vigentes hoy — por
 // eso el encabezado dice "así son nuestras promociones" y no "promociones de esta semana". El
 // CTA principal de la sección manda a los canales donde sí se anuncian las promociones activas.
+//
+// Las gráficas de campaña originales (diseño con texto/precio superpuesto) no se muestran tal
+// cual: en vez de eso, cada tarjeta usa una foto de producto limpia ya presente en el catálogo,
+// con nuestro propio texto (mismo criterio de marca que el resto del sitio), para mantener
+// consistencia visual — ver la sesión de calidad correspondiente para el detalle de esta
+// decisión.
 import { Image } from "astro:assets";
-import comboManicurista from "../assets/promos/combo-manicurista.jpg";
-import promoLinda from "../assets/promos/promo-docena-linda.jpg";
-import activacionCapilarFacial from "../assets/promos/activacion-capilar-facial.jpg";
-import promoDrill from "../assets/promos/promo-drill-gratis.jpg";
+import mesaConcha from "../assets/products/muebles/mesa-silla-concha-manicura.jpg";
+import drill from "../assets/products/unas/drill-inalambrico-master-nails.jpg";
+import esmalte from "../assets/products/unas/esmalte-gelux-mia-secret.jpg";
+import keratina from "../assets/products/capilares/keratina-ambroisie-250ml-rene-chardon.jpg";
 import { siteConfig } from "../lib/site-config";
 
 const promos = [
   {
-    image: comboManicurista,
-    alt: "Combo Manicurista: mesa, silla concha, silla pequeña, puff de espera y reposamanos",
-    label: "Combo de muebles",
+    image: mesaConcha,
+    alt: "Mesa de manicura con silla concha",
+    label: "Combo Manicurista",
+    body: "Mesa, silla concha, silla pequeña, puff de espera y reposamanos, con una lámpara UV/LED de regalo.",
   },
   {
-    image: promoDrill,
-    alt: "Promoción: kit de esmaltes de regalo por la compra de un drill de uñas",
-    label: "Promo de herramientas",
+    image: drill,
+    alt: "Drill inalámbrico para uñas",
+    label: "Drill + kit de regalo",
+    body: "Por la compra de un drill de uñas, kit de esmaltes de regalo para tus diseños.",
   },
   {
-    image: promoLinda,
-    alt: "Promoción: esmalte de regalo por la compra de una docena Linda Professional",
-    label: "Promo de esmaltes",
+    image: esmalte,
+    alt: "Esmalte en gel para uñas",
+    label: "Esmaltes: docena + 1 gratis",
+    body: "Por la compra de tu docena de esmaltes, un esmalte adicional totalmente gratis.",
   },
   {
-    image: activacionCapilarFacial,
-    alt: "Activación capilar y facial gratuita en la Sucursal del Centro",
-    label: "Evento en sucursal",
+    image: keratina,
+    alt: "Tratamiento capilar",
+    label: "Activación capilar + facial",
+    body: "Escaneo facial gratis, descuentos en skincare y asesoría personalizada en sucursal.",
   },
 ];
 ---
@@ -48,18 +58,21 @@ const promos = [
   <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
     {
       promos.map((promo) => (
-        <div class="glass-card group overflow-hidden rounded-2xl shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
-          <div class="aspect-[4/5] overflow-hidden bg-white">
+        <div class="glass-card group flex flex-col overflow-hidden rounded-2xl shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div class="aspect-square overflow-hidden bg-white">
             <Image
               src={promo.image}
               alt={promo.alt}
               width={400}
-              height={500}
+              height={400}
               loading="lazy"
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
             />
           </div>
-          <p class="px-4 py-3 text-center text-sm font-semibold text-primary-800">{promo.label}</p>
+          <div class="flex flex-1 flex-col gap-1 p-4">
+            <p class="font-display text-base text-primary-900">{promo.label}</p>
+            <p class="text-sm text-ink-muted">{promo.body}</p>
+          </div>
         </div>
       ))
     }

@@ -23,6 +23,31 @@ Hay **dos fuentes reales** de fotos de producto en este repo, ambas fuera del pr
    para curar el catálogo (SEO-002, SEO-012) y sigue siendo válida cuando el catálogo de códigos
    no tiene una foto para un producto dado.
 
+### 1.1 Muchas fotos de Telegram tienen overlay de marketing — recortarlas con `sharp`
+
+Buena parte de las fotos de muebles del export tienen un diseño superpuesto (título, flechas,
+iconos de características, y sobre todo una marca de agua translúcida "ALVA BEAUTY — Despierta
+tu belleza"). No sirven tal cual para tarjetas de producto limpias.
+
+`sharp` ya está disponible en `node_modules` (es dependencia interna de `astro:assets`, no hace
+falta instalarlo) y permite recortar sin depender de ImageMagick/ffmpeg (no están instalados en
+este entorno). Patrón usado en la Sesión 18:
+
+```js
+const sharp = require("sharp"); // ejecutar con `node` desde la raíz del repo, no desde /tmp
+const meta = await sharp(srcPath).metadata();
+const region = { left: Math.round(0.30*meta.width), top: Math.round(0.20*meta.height),
+                  width: Math.round(0.60*meta.width), height: Math.round(0.50*meta.height) };
+await sharp(srcPath).extract(region).toFile(outPath);
+```
+
+Proceso iterativo recomendado: generar un recorte de prueba con un nombre distinto (p. ej.
+`_cropped_archivo.jpg`), revisarlo visualmente, ajustar las fracciones si queda texto/marca de
+agua visible, repetir hasta que quede limpio, y solo entonces mover el archivo sobre el original
+(`git` ya versiona los binarios, así que un recorte que salga mal se puede revertir con
+`git checkout -- <archivo>`). No existe una coordenada única válida para todas las fotos — cada
+plantilla de marketing usada por el negocio pone el overlay en un sitio distinto.
+
 ## 2. Cómo se cruzan código ↔ foto (y por qué importa el orden)
 
 `src/data/products.generated.json` es siempre un archivo **generado**, nunca editado a mano — sale

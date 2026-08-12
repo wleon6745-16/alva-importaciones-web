@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T00:55:57.468Z",
+  "generatedAt": "2026-08-12T20:09:47.224Z",
   "source": "manual-seed:scripts/sync-public-catalog.ts (muebles migrado desde muebles.astro 2026-08-07; uñas/capilares/maquillaje curados desde el export de Telegram en SEO-012, 2026-08-08)",
   "products": [
     {
@@ -502,6 +502,35 @@
       "imageAlt": "Esmalte Gelux Mía Secret"
     },
     {
+      "id": "unas-cover-master-nails-1oz",
+      "slug": "cover-master-nails-1oz",
+      "name": "Cover Master Nails 1oz",
+      "category": "unas",
+      "subcategory": "esmaltes",
+      "price": 8.2,
+      "currency": "USD",
+      "brand": "Master Nails",
+      "features": [
+        "Gran variedad de colores",
+        "Presentación 1 oz"
+      ],
+      "image": "cover-master-nails-1oz.jpg",
+      "imageAlt": "Cover Master Nails 1oz"
+    },
+    {
+      "id": "unas-esmalte-rodher-varios-colores",
+      "slug": "esmalte-rodher-varios-colores",
+      "name": "Esmalte Rodher varios colores",
+      "category": "unas",
+      "subcategory": "esmaltes",
+      "price": 2,
+      "currency": "USD",
+      "brand": "Rodher",
+      "features": [],
+      "image": "esmalte-rodher-varios-colores.jpg",
+      "imageAlt": "Esmalte Rodher varios colores"
+    },
+    {
       "id": "unas-broca-umbrella-pequena-master-nails",
       "slug": "broca-umbrella-pequena-master-nails",
       "name": "Broca Umbrella pequeña Master Nails",
@@ -513,6 +542,19 @@
       "features": [],
       "image": "broca-umbrella-pequena-master-nails.jpg",
       "imageAlt": "Broca Umbrella pequeña Master Nails"
+    },
+    {
+      "id": "unas-broca-umbrella-mediana-master-nails",
+      "slug": "broca-umbrella-mediana-master-nails",
+      "name": "Broca Umbrella mediana Master Nails",
+      "category": "unas",
+      "subcategory": "herramientas-y-equipo",
+      "price": 5,
+      "currency": "USD",
+      "brand": "Master Nails",
+      "features": [],
+      "image": "broca-umbrella-mediana-master-nails.jpg",
+      "imageAlt": "Broca Umbrella mediana Master Nails"
     },
     {
       "id": "unas-limas-lavables-zzam",
@@ -547,6 +589,18 @@
       "imageAlt": "Lámpara de uñas SUN D7 208W"
     },
     {
+      "id": "unas-lampara-de-unas-media-luna",
+      "slug": "lampara-de-unas-media-luna",
+      "name": "Lámpara de uñas media luna",
+      "category": "unas",
+      "subcategory": "herramientas-y-equipo",
+      "price": 83,
+      "currency": "USD",
+      "features": [],
+      "image": "lampara-unas-media-luna.jpg",
+      "imageAlt": "Lámpara de uñas media luna"
+    },
+    {
       "id": "unas-drill-inalambrico-master-nails-35-000-rpm",
       "slug": "drill-inalambrico-master-nails-35-000-rpm",
       "name": "Drill inalámbrico Master Nails 35.000 RPM",
@@ -562,6 +616,78 @@
       ],
       "image": "drill-inalambrico-master-nails.jpg",
       "imageAlt": "Drill inalámbrico Master Nails 35.000 RPM"
+    },
+    {
+      "id": "unas-drill-inalambrico-enjoy-nail-35-000-rpm",
+      "slug": "drill-inalambrico-enjoy-nail-35-000-rpm",
+      "name": "Drill inalámbrico Enjoy Nail 35.000 RPM",
+      "category": "unas",
+      "subcategory": "herramientas-y-equipo",
+      "code": "6309",
+      "price": 50,
+      "currency": "USD",
+      "brand": "Enjoy Nail",
+      "features": [
+        "35.000 RPM"
+      ],
+      "image": "drill-inalambrico-enjoy-nail.jpg",
+      "imageAlt": "Drill inalámbrico Enjoy Nail 35.000 RPM"
+    },
+    {
+      "id": "unas-tijera-para-cuticula-staleks-pro",
+      "slug": "tijera-para-cuticula-staleks-pro",
+      "name": "Tijera para cutícula Staleks Pro",
+      "category": "unas",
+      "subcategory": "herramientas-y-equipo",
+      "code": "7828",
+      "price": 19.5,
+      "currency": "USD",
+      "brand": "Staleks Pro",
+      "features": [],
+      "image": "tijera-cuticula-staleks-pro-7828.jpg",
+      "imageAlt": "Tijera para cutícula Staleks Pro"
+    },
+    {
+      "id": "unas-tijera-para-cuticula-staleks-pro-6154",
+      "slug": "tijera-para-cuticula-staleks-pro-6154",
+      "name": "Tijera para cutícula Staleks Pro",
+      "category": "unas",
+      "subcategory": "herramientas-y-equipo",
+      "code": "6154",
+      "price": 18.5,
+      "currency": "USD",
+      "brand": "Staleks Pro",
+      "features": [],
+      "image": "tijera-cuticula-staleks-pro-6154.jpg",
+      "imageAlt": "Tijera para cutícula Staleks Pro"
+    },
+    {
+      "id": "unas-primer-para-pestanas-star-colors",
+      "slug": "primer-para-pestanas-star-colors",
+      "name": "Primer para pestañas Star Colors",
+      "category": "unas",
+      "subcategory": "herramientas-y-equipo",
+      "price": 14,
+      "currency": "USD",
+      "brand": "Star Colors",
+      "features": [],
+      "image": "primer-pestanas-star-colors.jpg",
+      "imageAlt": "Primer para pestañas Star Colors"
+    },
+    {
+      "id": "unas-combo-depila-ya-cera-en-perlas-olla",
+      "slug": "combo-depila-ya-cera-en-perlas-olla",
+      "name": "Combo depila ya (cera en perlas + olla)",
+      "category": "unas",
+      "subcategory": "herramientas-y-equipo",
+      "price": 12.5,
+      "currency": "USD",
+      "features": [
+        "Paquete de cera en perlas",
+        "Incluye olla para derretir la cera"
+      ],
+      "image": "combo-depila-ya.jpg",
+      "imageAlt": "Combo depila ya (cera en perlas + olla)"
     },
     {
       "id": "capilares-mascarilla-lisso-keratina-placenta-life",
@@ -661,6 +787,64 @@
       "imageAlt": "Shampoo control caspa Poción"
     },
     {
+      "id": "capilares-gorro-de-ducha-impermeable",
+      "slug": "gorro-de-ducha-impermeable",
+      "name": "Gorro de ducha impermeable",
+      "category": "capilares",
+      "subcategory": "tratamientos-y-shampoos",
+      "price": 1,
+      "currency": "USD",
+      "features": [
+        "Aísla eficazmente la humedad del cabello"
+      ],
+      "image": "gorro-ducha-impermeable.jpg",
+      "imageAlt": "Gorro de ducha impermeable"
+    },
+    {
+      "id": "capilares-reconstructor-capilar-tratamiento-kuul",
+      "slug": "reconstructor-capilar-tratamiento-kuul",
+      "name": "Reconstructor capilar Tratamiento Kuul",
+      "category": "capilares",
+      "subcategory": "tratamientos-y-shampoos",
+      "code": "5830",
+      "price": 17.3,
+      "currency": "USD",
+      "brand": "Kuul",
+      "features": [],
+      "image": "reconstructor-capilar-tratamiento-kuul.jpg",
+      "imageAlt": "Reconstructor capilar Tratamiento Kuul"
+    },
+    {
+      "id": "capilares-pack-bmt-keratina-shampoo-acondicionador-tratamiento",
+      "slug": "pack-bmt-keratina-shampoo-acondicionador-tratamiento",
+      "name": "Pack BMT Keratina (shampoo + acondicionador + tratamiento)",
+      "category": "capilares",
+      "subcategory": "tratamientos-y-shampoos",
+      "code": "5130",
+      "price": 21.25,
+      "currency": "USD",
+      "brand": "BMT",
+      "features": [
+        "Shampoo + acondicionador + tratamiento"
+      ],
+      "image": "pack-bmt-keratina.jpg",
+      "imageAlt": "Pack BMT Keratina (shampoo + acondicionador + tratamiento)"
+    },
+    {
+      "id": "capilares-cera-de-cabello-the-barberia",
+      "slug": "cera-de-cabello-the-barberia",
+      "name": "Cera de cabello The Barbería",
+      "category": "capilares",
+      "subcategory": "tratamientos-y-shampoos",
+      "code": "6125",
+      "price": 5,
+      "currency": "USD",
+      "brand": "The Barbería",
+      "features": [],
+      "image": "cera-cabello-the-barberia.jpg",
+      "imageAlt": "Cera de cabello The Barbería"
+    },
+    {
       "id": "capilares-plancha-de-cabello-mini-lizze",
       "slug": "plancha-de-cabello-mini-lizze",
       "name": "Plancha de cabello mini Lizze",
@@ -687,6 +871,50 @@
       "features": [],
       "image": "maquina-cabello-wahl-legend.jpg",
       "imageAlt": "Máquina de cabello WAHL Edición Legend"
+    },
+    {
+      "id": "capilares-maquina-de-cabello-wahl-magic-clip",
+      "slug": "maquina-de-cabello-wahl-magic-clip",
+      "name": "Máquina de cabello WAHL Magic Clip",
+      "category": "capilares",
+      "subcategory": "equipo-capilar",
+      "code": "5464",
+      "price": 137,
+      "currency": "USD",
+      "brand": "WAHL",
+      "features": [],
+      "image": "maquina-cabello-wahl-magic-clip.jpg",
+      "imageAlt": "Máquina de cabello WAHL Magic Clip"
+    },
+    {
+      "id": "capilares-secadora-de-cabello-realiss-2100w",
+      "slug": "secadora-de-cabello-realiss-2100w",
+      "name": "Secadora de cabello Realiss 2100W",
+      "category": "capilares",
+      "subcategory": "equipo-capilar",
+      "code": "10381",
+      "price": 48,
+      "currency": "USD",
+      "brand": "Realiss",
+      "features": [
+        "2100 watts"
+      ],
+      "image": "secadora-cabello-realiss-2100w.jpg",
+      "imageAlt": "Secadora de cabello Realiss 2100W"
+    },
+    {
+      "id": "capilares-tenaza-para-cabello-vulcan-taiff",
+      "slug": "tenaza-para-cabello-vulcan-taiff",
+      "name": "Tenaza para cabello Vulcan Taiff",
+      "category": "capilares",
+      "subcategory": "equipo-capilar",
+      "code": "11598",
+      "price": 95,
+      "currency": "USD",
+      "brand": "Taiff",
+      "features": [],
+      "image": "tenaza-cabello-vulcan-taiff.jpg",
+      "imageAlt": "Tenaza para cabello Vulcan Taiff"
     },
     {
       "id": "maquillaje-paleta-de-sombras-satine",
@@ -743,6 +971,61 @@
       "features": [],
       "image": "mascara-pestanas-og-mega-plump.jpg",
       "imageAlt": "Máscara de pestañas OG Mega Plump"
+    },
+    {
+      "id": "maquillaje-labial-flormar",
+      "slug": "labial-flormar",
+      "name": "Labial Flormar",
+      "category": "maquillaje",
+      "subcategory": "ojos-y-labios",
+      "code": "7447",
+      "price": 6,
+      "currency": "USD",
+      "brand": "Flormar",
+      "features": [],
+      "image": "labial-flormar.jpg",
+      "imageAlt": "Labial Flormar"
+    },
+    {
+      "id": "maquillaje-delineador-glitter-beauty-creations",
+      "slug": "delineador-glitter-beauty-creations",
+      "name": "Delineador glitter Beauty Creations",
+      "category": "maquillaje",
+      "subcategory": "ojos-y-labios",
+      "code": "10891",
+      "price": 6.3,
+      "currency": "USD",
+      "brand": "Beauty Creations",
+      "features": [],
+      "image": "delineador-glitter-beauty-creations.jpg",
+      "imageAlt": "Delineador glitter Beauty Creations"
+    },
+    {
+      "id": "maquillaje-labial-superstay-vinyl-ink-s-f-r-color",
+      "slug": "labial-superstay-vinyl-ink-s-f-r-color",
+      "name": "Labial Superstay Vinyl Ink S.F.R. Color",
+      "category": "maquillaje",
+      "subcategory": "ojos-y-labios",
+      "code": "10865",
+      "price": 2,
+      "currency": "USD",
+      "brand": "S.F.R. Color",
+      "features": [],
+      "image": "labial-superstay-vinyl-ink-sfr-color.jpg",
+      "imageAlt": "Labial Superstay Vinyl Ink S.F.R. Color"
+    },
+    {
+      "id": "maquillaje-paleta-de-sombras-duo-rose-quartz",
+      "slug": "paleta-de-sombras-duo-rose-quartz",
+      "name": "Paleta de sombras Duo Rose Quartz",
+      "category": "maquillaje",
+      "subcategory": "ojos-y-labios",
+      "code": "12006",
+      "price": 4.5,
+      "currency": "USD",
+      "features": [],
+      "image": "paleta-sombras-duo-rose-quartz.jpg",
+      "imageAlt": "Paleta de sombras Duo Rose Quartz"
     },
     {
       "id": "maquillaje-sellador-de-maquillaje-beauty-creations",
@@ -804,6 +1087,63 @@
       ],
       "image": "base-liquida-vogue-resist.jpg",
       "imageAlt": "Base líquida Vogue Resist"
+    },
+    {
+      "id": "maquillaje-iluminador-s-f-r-color",
+      "slug": "iluminador-s-f-r-color",
+      "name": "Iluminador S.F.R. Color",
+      "category": "maquillaje",
+      "subcategory": "rostro",
+      "code": "10860",
+      "price": 2,
+      "currency": "USD",
+      "brand": "S.F.R. Color",
+      "features": [
+        "Varios tonos"
+      ],
+      "image": "iluminador-sfr-color.jpg",
+      "imageAlt": "Iluminador S.F.R. Color"
+    },
+    {
+      "id": "maquillaje-corrector-essence-camouflage-matt",
+      "slug": "corrector-essence-camouflage-matt",
+      "name": "Corrector Essence Camouflage Matt",
+      "category": "maquillaje",
+      "subcategory": "rostro",
+      "code": "11357",
+      "price": 4.25,
+      "currency": "USD",
+      "brand": "Essence",
+      "features": [],
+      "image": "corrector-essence-camouflage-matt.jpg",
+      "imageAlt": "Corrector Essence Camouflage Matt"
+    },
+    {
+      "id": "maquillaje-mascarilla-correctora-blanco-polar",
+      "slug": "mascarilla-correctora-blanco-polar",
+      "name": "Mascarilla correctora Blanco Polar",
+      "category": "maquillaje",
+      "subcategory": "rostro",
+      "code": "9393",
+      "price": 12.5,
+      "currency": "USD",
+      "features": [],
+      "image": "mascarilla-correctora-blanco-polar.jpg",
+      "imageAlt": "Mascarilla correctora Blanco Polar"
+    },
+    {
+      "id": "maquillaje-contorno-de-ojos-byphasse",
+      "slug": "contorno-de-ojos-byphasse",
+      "name": "Contorno de ojos Byphasse",
+      "category": "maquillaje",
+      "subcategory": "rostro",
+      "code": "2086",
+      "price": 9.25,
+      "currency": "USD",
+      "brand": "Byphasse",
+      "features": [],
+      "image": "contorno-ojos-byphasse.jpg",
+      "imageAlt": "Contorno de ojos Byphasse"
     }
   ]
 }
