@@ -8,55 +8,71 @@
 # leer (destacado, disponible, galería, precio anterior, SEO title/description no existen todavía
 # en el modelo real; ver el reporte de la sesión para el porqué no se inventaron aquí).
 #
-# NOTAS DE VERIFICACIÓN (actualizado tras conectar Pages CMS en vivo — ver
-# docs/seo-work/sessions/session-21.md):
+# HISTORIAL DE ESTE ARCHIVO (ver docs/seo-work/sessions/session-20.md, -21.md y -22.md):
+#   - v1: una sola colección "products" con subfolders + un campo de imagen con
+#     `options.path: "{fields.category}"`, esperando que Pages CMS interpolara esa plantilla.
+#   - Confirmado en vivo (probado por el usuario) y luego confirmado leyendo el código fuente real
+#     de Pages CMS (fields/core/image/edit-component.tsx en github.com/hunvreus/pagescms): NO
+#     interpola. `options.path` se pasa literal a `normalizePath()` — sin ninguna función de
+#     plantillas de por medio. La vista previa de una foto existente sale rota porque Pages CMS
+#     resuelve la imagen concatenando directo `media.input` + el valor guardado, SIN buscar en
+#     subcarpetas — y el valor guardado nunca incluye la categoría.
+#   - v2 (esta versión): en vez de intentar que un solo campo elija dinámicamente entre carpetas,
+#     se volvió a 4 colecciones de productos (una por categoría), cada una con su propia fuente de
+#     medios de ruta FIJA — sin plantillas, sin interpolación, sin nada sin confirmar. Es el mismo
+#     patrón que ya se había validado funcionando con Decap CMS (Sesión 19), solo con la sintaxis
+#     real de Pages CMS. Cero cambios en los 74 JSON de producto ni en `imageFor()` — el campo
+#     `image` sigue guardando solo el nombre de archivo, exactamente igual que antes.
 #
-# Confirmado leyendo el código fuente de Pages CMS (types/field.ts, fields/core/image/*,
-# lib/config-schema.ts en github.com/hunvreus/pagescms):
-#   - "subfolders: true" en una colección SÍ existe y funciona (confirmado en vivo: el árbol de
-#     "Productos" navega correctamente por categoría). NO es una clave válida en una fuente de
-#     medios ("media:") — por eso no aparece más abajo.
-#   - Un campo de imagen NO tiene una clave "media:" propia — la selección de fuente va anidada
-#     en "options.media". Puesto directamente en el campo (como se hizo en la primera versión de
-#     este archivo) se ignora en silencio.
-#   - Pages CMS resuelve la imagen concatenando directo `media.input` + el valor guardado, SIN
-#     buscar en subcarpetas — por eso la vista previa de fotos existentes salía rota: el campo
-#     guarda solo el nombre de archivo ("butaca-francia.jpg"), pero el archivo real vive un nivel
-#     más abajo (`src/assets/products/muebles/butaca-francia.jpg`). La fuente de medios usa ahora
-#     "options.path: {fields.category}" en cada campo de imagen para completar ese nivel — el
-#     mismo mecanismo de plantillas ({fields.x}) que ya funciona en "filename" de la colección.
-#   - "readonly" sí existe como propiedad real de un campo (confirmado en types/field.ts) — no se
-#     aplicó a "slug"/"code" a propósito: probablemente también bloquearía escribirlos al crear un
-#     producto nuevo, lo cual sería peor que el riesgo que evita. La protección actual (texto de
-#     advertencia visible) se mantiene.
-#   - "text" (párrafo) y "number" sí son tipos de campo reales (confirmado en fields/core/).
-#
-# SIN CONFIRMAR TODAVÍA: que "options.path" en un campo de imagen acepte plantillas
-# "{fields.category}" igual que "filename" a nivel de colección — es el mecanismo con más
-# evidencia a favor que se encontró, pero no hay una prueba en vivo de esto específico todavía.
-# Verificar recargando Pages CMS y abriendo un producto existente (p. ej. "Butaca Francia" en
-# Muebles): si la foto se ve, funciona. Si sigue rota, avisar antes de seguir editando fotos desde
-# el panel.
+# LIMITACIÓN CONOCIDA Y ACEPTADA (promociones): las promociones sí quedan en una sola colección
+# (el orden de la sección en la home cruza las 4 categorías, así que partirla en 4 no tendría
+# sentido) apuntando a una fuente de medios que cubre las 4 carpetas de categoría a la vez. Eso
+# significa que la vista previa automática de la FOTO YA GUARDADA de una promoción puede seguir
+# saliendo rota por la misma razón que los productos antes de este cambio — Pages CMS no sabe en
+# cuál de las 4 carpetas buscar sin que alguien navegue. Con solo 4 promociones, editadas con poca
+# frecuencia, se aceptó este límite en vez de inventar una solución sin confirmar. Si esto molesta
+# en la práctica, la alternativa sería mover las promociones también a colecciones separadas por
+# categoría (mismo patrón que productos) — no se hizo todavía porque no se pidió y complica el
+# concepto de "orden" que hoy cruza las 4 categorías en una sola lista.
 
 media:
-  - name: product_photos
-    label: "Fotos de productos y promociones"
+  - name: muebles_photos
+    label: "Fotos de muebles"
+    input: src/assets/products/muebles
+    output: ""
+    extensions: [jpg, jpeg, png, webp]
+  - name: unas_photos
+    label: "Fotos de uñas"
+    input: src/assets/products/unas
+    output: ""
+    extensions: [jpg, jpeg, png, webp]
+  - name: capilares_photos
+    label: "Fotos de capilares"
+    input: src/assets/products/capilares
+    output: ""
+    extensions: [jpg, jpeg, png, webp]
+  - name: maquillaje_photos
+    label: "Fotos de maquillaje"
+    input: src/assets/products/maquillaje
+    output: ""
+    extensions: [jpg, jpeg, png, webp]
+  - name: all_product_photos
+    label: "Fotos de productos y promociones (las 4 categorías, para navegar a mano)"
     input: src/assets/products
     output: ""
     extensions: [jpg, jpeg, png, webp]
 
 content:
-  - name: products
-    label: "Productos"
+  - name: products-muebles
+    label: "Productos — Muebles"
+    label_singular: "Producto"
     type: collection
-    path: src/content/products
+    path: src/content/products/muebles
     format: json
-    subfolders: true
-    filename: "{fields.category}/{fields.slug}.json"
     view:
-      fields: [name, category, price, code]
+      fields: [name, price, code]
       primary: name
-      sort: [category, name]
+      sort: [name]
     fields:
       - name: slug
         label: "Slug (identifica la dirección web del producto)"
@@ -71,10 +87,9 @@ content:
         required: true
       - name: category
         label: "Categoría"
-        type: select
-        required: true
-        options:
-          values: [muebles, unas, capilares, maquillaje]
+        type: string
+        hidden: true
+        default: muebles
       - name: subcategory
         label: "Subcategoría"
         type: string
@@ -107,8 +122,211 @@ content:
         type: image
         required: true
         options:
-          media: product_photos
-          path: "{fields.category}"
+          media: muebles_photos
+      - name: imageAlt
+        label: "Texto alternativo de la foto (ALT)"
+        type: string
+        required: true
+        description: >-
+          Describe la foto en una frase corta, para accesibilidad y buscadores — no repitas solo
+          el nombre del producto.
+
+  - name: products-unas
+    label: "Productos — Uñas"
+    label_singular: "Producto"
+    type: collection
+    path: src/content/products/unas
+    format: json
+    view:
+      fields: [name, price, code]
+      primary: name
+      sort: [name]
+    fields:
+      - name: slug
+        label: "Slug (identifica la dirección web del producto)"
+        type: string
+        required: true
+        description: >-
+          No cambiar en un producto ya publicado — cambiarlo mueve la página a otra dirección y
+          rompe cualquier enlace que ya esté compartido o indexado en Google.
+      - name: name
+        label: "Nombre"
+        type: string
+        required: true
+      - name: category
+        label: "Categoría"
+        type: string
+        hidden: true
+        default: unas
+      - name: subcategory
+        label: "Subcategoría"
+        type: string
+        required: false
+      - name: code
+        label: "Código de producto"
+        type: string
+        required: false
+        description: >-
+          Código interno del negocio. Cambiarlo solo si el producto real cambió de código — se
+          usa para relacionarlo con el catálogo interno, no es un campo decorativo.
+      - name: price
+        label: "Precio (USD)"
+        type: number
+        required: false
+      - name: brand
+        label: "Marca"
+        type: string
+        required: false
+      - name: features
+        label: "Características"
+        type: list
+        required: false
+        fields:
+          - name: item
+            label: "Característica"
+            type: string
+      - name: image
+        label: "Foto principal"
+        type: image
+        required: true
+        options:
+          media: unas_photos
+      - name: imageAlt
+        label: "Texto alternativo de la foto (ALT)"
+        type: string
+        required: true
+        description: >-
+          Describe la foto en una frase corta, para accesibilidad y buscadores — no repitas solo
+          el nombre del producto.
+
+  - name: products-capilares
+    label: "Productos — Capilares"
+    label_singular: "Producto"
+    type: collection
+    path: src/content/products/capilares
+    format: json
+    view:
+      fields: [name, price, code]
+      primary: name
+      sort: [name]
+    fields:
+      - name: slug
+        label: "Slug (identifica la dirección web del producto)"
+        type: string
+        required: true
+        description: >-
+          No cambiar en un producto ya publicado — cambiarlo mueve la página a otra dirección y
+          rompe cualquier enlace que ya esté compartido o indexado en Google.
+      - name: name
+        label: "Nombre"
+        type: string
+        required: true
+      - name: category
+        label: "Categoría"
+        type: string
+        hidden: true
+        default: capilares
+      - name: subcategory
+        label: "Subcategoría"
+        type: string
+        required: false
+      - name: code
+        label: "Código de producto"
+        type: string
+        required: false
+        description: >-
+          Código interno del negocio. Cambiarlo solo si el producto real cambió de código — se
+          usa para relacionarlo con el catálogo interno, no es un campo decorativo.
+      - name: price
+        label: "Precio (USD)"
+        type: number
+        required: false
+      - name: brand
+        label: "Marca"
+        type: string
+        required: false
+      - name: features
+        label: "Características"
+        type: list
+        required: false
+        fields:
+          - name: item
+            label: "Característica"
+            type: string
+      - name: image
+        label: "Foto principal"
+        type: image
+        required: true
+        options:
+          media: capilares_photos
+      - name: imageAlt
+        label: "Texto alternativo de la foto (ALT)"
+        type: string
+        required: true
+        description: >-
+          Describe la foto en una frase corta, para accesibilidad y buscadores — no repitas solo
+          el nombre del producto.
+
+  - name: products-maquillaje
+    label: "Productos — Maquillaje"
+    label_singular: "Producto"
+    type: collection
+    path: src/content/products/maquillaje
+    format: json
+    view:
+      fields: [name, price, code]
+      primary: name
+      sort: [name]
+    fields:
+      - name: slug
+        label: "Slug (identifica la dirección web del producto)"
+        type: string
+        required: true
+        description: >-
+          No cambiar en un producto ya publicado — cambiarlo mueve la página a otra dirección y
+          rompe cualquier enlace que ya esté compartido o indexado en Google.
+      - name: name
+        label: "Nombre"
+        type: string
+        required: true
+      - name: category
+        label: "Categoría"
+        type: string
+        hidden: true
+        default: maquillaje
+      - name: subcategory
+        label: "Subcategoría"
+        type: string
+        required: false
+      - name: code
+        label: "Código de producto"
+        type: string
+        required: false
+        description: >-
+          Código interno del negocio. Cambiarlo solo si el producto real cambió de código — se
+          usa para relacionarlo con el catálogo interno, no es un campo decorativo.
+      - name: price
+        label: "Precio (USD)"
+        type: number
+        required: false
+      - name: brand
+        label: "Marca"
+        type: string
+        required: false
+      - name: features
+        label: "Características"
+        type: list
+        required: false
+        fields:
+          - name: item
+            label: "Característica"
+            type: string
+      - name: image
+        label: "Foto principal"
+        type: image
+        required: true
+        options:
+          media: maquillaje_photos
       - name: imageAlt
         label: "Texto alternativo de la foto (ALT)"
         type: string
@@ -119,6 +337,7 @@ content:
 
   - name: promos
     label: "Promociones"
+    label_singular: "Promoción"
     type: collection
     path: src/content/promos
     format: json
@@ -147,8 +366,10 @@ content:
         type: image
         required: true
         options:
-          media: product_photos
-          path: "{fields.imageCategory}"
+          media: all_product_photos
+        description: >-
+          Si la vista previa de una foto ya guardada sale rota, es una limitación conocida (ver
+          comentario al inicio de este archivo) — la foto sigue funcionando bien en el sitio.
       - name: imageAlt
         label: "Texto alternativo de la foto (ALT)"
         type: string
