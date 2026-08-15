@@ -1,0 +1,11 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Debe coincidir con el nombre del Worker ya creado en el dashboard de Cloudflare.
+  "name": "alva-importaciones-web",
+  "compatibility_date": "2026-08-15",
+  // Sitio 100% estático (astro.config.mjs -> output: "static"), sin SSR ni bindings:
+  // solo se sirven los archivos de dist/, no hace falta "main" ni adapter de Astro.
+  "assets": {
+    "directory": "./dist"
+  }
+}
