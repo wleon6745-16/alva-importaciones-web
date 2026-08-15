@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  // TODO: reemplazar por el dominio real cuando se compre/asigne
+  // Dominio real, confirmado 2026-08-15 — ya agregado a Cloudflare por el usuario.
   site: 'https://alvaimportaciones.com',
   integrations: [react(), sitemap()],
 

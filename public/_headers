@@ -1,0 +1,11 @@
+# Cloudflare Pages: sin esto, algunos archivos de texto plano se sirven sin "charset=UTF-8"
+# explícito en Content-Type, y clientes/HTTP por defecto pueden asumir ISO-8859-1 — el mismo
+# bug de acentos/ñ rotos ya encontrado una vez con nginx (ver SEO-015,
+# docs/seo-work/sessions/session-15.md). robots.txt y llms.txt tienen texto en español con
+# tildes y ñ, así que van explícitos aquí.
+
+/robots.txt
+  Content-Type: text/plain; charset=UTF-8
+
+/llms.txt
+  Content-Type: text/plain; charset=UTF-8

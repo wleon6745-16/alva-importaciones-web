@@ -6,7 +6,7 @@ export const siteConfig = {
   tagline: "Belleza Perfecta",
   description:
     "Muebles para salón de belleza (camillas, sillones de peluquería, butacas y mesas de trabajo) e insumos de uñas, capilares y maquillaje en Portoviejo, Manabí. Consulta precios y disponibilidad al instante por WhatsApp.",
-  url: "https://alvaimportaciones.com", // TODO: dominio real
+  url: "https://alvaimportaciones.com", // dominio real, confirmado 2026-08-15
   instagram: "https://www.instagram.com/alvaimportaciones/",
   whatsappMessage: "Hola, quisiera consultar sobre un producto",
   hours: [
