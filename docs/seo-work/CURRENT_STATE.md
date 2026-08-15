@@ -16,6 +16,8 @@
 ## Git
 
 - Repositorio: `C:\Users\wleon\Proyectos\alva-importaciones-web`
+- Remoto: `origin` → `https://github.com/wleon6745-16/alva-importaciones-web` (público), agregado
+  en la Sesión 19; `master` y `feature/alva-seo-ai-discovery` ya empujados con upstream configurado.
 - Rama actual: `feature/alva-seo-ai-discovery`
 - Rama base: `master`
 - Último commit en `master` al crear esta rama: `dc46b8c` — "Add 6 more furniture/equipment
