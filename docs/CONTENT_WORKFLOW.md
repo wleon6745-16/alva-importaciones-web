@@ -133,58 +133,74 @@ ni se resumen automáticamente. Si se agrega una guía nueva:
 - Debe enlazar productos reales (`ProductGrid`) y, cuando exista, la landing comercial
   relacionada (`/muebles-para-salon-de-belleza-portoviejo`, etc.).
 
-## 6. Panel de administración sin tocar código (Pages CMS)
+## 6. Panel de administración sin tocar código (Decap CMS + DecapBridge)
 
-**CMS-1 (2026-08-15): se reemplazó Decap CMS por [Pages CMS](https://pagescms.org).** La razón
-completa está en el reporte de esa sesión — resumen: Decap dependía de Git Gateway, una pieza que
-Netlify marcó como deprecada ("nuevas configuraciones no se recomiendan"); Pages CMS se conecta
-directo a GitHub vía una GitHub App (sin depender de qué hosting sirva el sitio), soporta login
-por enlace mágico de correo (sin que la persona necesite entender Git/GitHub), y su formato de
-colección con subcarpetas encaja mejor con `src/content/products/<categoría>/`.
+**Solución final (2026-08-15), después de comparar tres CMS distintos.** El historial completo
+está en `docs/seo-work/sessions/session-19.md` a `-24.md`, resumen:
 
-**Diferencia importante con la versión anterior**: Pages CMS **no vive en una ruta de este sitio**
-(no hay `/admin` en `alvaimportaciones.com`) — se administra desde `app.pagescms.org` (o una
-instancia propia, si algún día se prefiere auto-hospedar), conectado directo a este repositorio de
-GitHub. La configuración de las colecciones vive en `.pages.yml` en la raíz del repo.
+1. **Decap CMS** (Sesión 19): probado funcionando de punta a punta en local — listado correcto,
+   edición de todos los campos, imagen con preview real, y un guardado real verificado byte a
+   byte en el archivo. Se dejó de usar solo porque Git Gateway (la pieza de Netlify que hacía
+   falta para producción) está deprecada — no por ningún problema de funcionamiento.
+2. **Pages CMS** (CMS-1, Sesión 20-22): se conecta directo a GitHub sin depender de Netlify, pero
+   tuvo un bug de caché sin corregir (colecciones nuevas no siempre se descubrían,
+   [pages-cms/pages-cms#301](https://github.com/pages-cms/pages-cms/issues/301)) y necesitó
+   reestructurar productos en 4 colecciones para que la vista previa de fotos funcionara.
+3. **Sveltia CMS** (Sesión 23-24, spike controlado): cargó y leyó los datos correctamente, pero
+   **guardar no escribía al archivo real en tres intentos independientes** (incluido uno hecho a
+   mano por el usuario, sin ninguna automatización de por medio) — falla silenciosa e inaceptable
+   para un panel que va a usar alguien no técnico.
+
+**Se volvió a Decap CMS**, la única de las tres con un guardado real verificado, y se resolvió el
+problema de producción con **[DecapBridge](https://decapbridge.com)** — un reemplazo gratuito
+hecho específicamente para sustituir Netlify Identity + Git Gateway, sin depender de qué hosting
+sirva el sitio ni requerir mantener un servidor propio.
 
 ### Qué se puede editar
 
-- **Productos** (`src/content/products/<categoría>/<slug>.json`): una sola colección con
-  subcarpetas habilitadas (`subfolders: true`) — a diferencia de Decap, no hizo falta duplicarla
-  por categoría. Campos: nombre, slug, categoría, subcategoría, código, precio, marca,
-  características, foto principal y su texto alternativo (ALT). Estos son exactamente los campos
-  que existen hoy en `src/content.config.ts` — no se agregaron campos nuevos (destacado,
-  disponible, galería, precio anterior, SEO title/description no existen todavía en el modelo
-  real; agregarlos requeriría un cambio de schema aparte, no forma parte de este cambio de CMS).
-- **Promociones** (`src/content/promos/*.json`): título, descripción, categoría/foto, ALT y orden
-  — los mismos campos que ya existían, sin rediseñar `PromoShowcase.astro`.
-- La foto se sube directo desde el panel (queda en `src/assets/products/<categoría>/`, con
-  subcarpetas habilitadas en la fuente de medios) o se puede escribir el nombre de un archivo que
-  ya exista ahí — el código de las páginas sigue esperando solo el nombre del archivo, no una ruta
-  completa (`imageFor(categoria, filename)` con `import.meta.glob`, sin cambios).
+- **Productos** (`src/content/products/<categoría>/<slug>.json`): una colección por categoría
+  (Muebles, Uñas, Capilares, Maquillaje) — Decap no lee subcarpetas dentro de una sola colección,
+  por eso hay 4 en vez de 1 (mismo patrón ya validado en la Sesión 19). Campos: nombre, slug,
+  categoría (oculta, fija según la colección), subcategoría, código, precio, marca,
+  características, foto principal y su texto alternativo (ALT) — exactamente los campos que
+  existen hoy en `src/content.config.ts`, sin agregar campos nuevos (destacado, disponible,
+  galería, precio anterior, SEO title/description no existen todavía en el modelo real).
+- **Promociones** (`src/content/promos/*.json`): título, descripción, categoría/foto, ALT y orden.
+- La foto se sube directo desde el panel (queda en `src/assets/products/<categoría>/`) o se puede
+  escribir el nombre de un archivo que ya exista ahí — el campo guarda solo el nombre del archivo,
+  no una ruta completa, tal como espera `imageFor(categoria, filename)` en el código de las
+  páginas. Sin cambios en ese código.
 - `slug` y `code` llevan una advertencia visible en el propio campo explicando que no deben
-  cambiarse en un producto ya publicado (no se confirmó que Pages CMS tenga un modo "solo
-  lectura" por campo — la advertencia de texto es la protección que sí se pudo confirmar).
+  cambiarse en un producto ya publicado.
 
-### Cómo conectarlo (pendiente — requiere una acción manual)
+### Cómo probarlo/usarlo en local (funciona ya, sin ninguna cuenta)
 
-`.pages.yml` ya está listo, pero conectar Pages CMS requiere que el dueño de la cuenta de GitHub
-instale su GitHub App en este repositorio — es un consentimiento OAuth que solo puede dar esa
-persona desde su propio navegador, no algo que se pueda automatizar. Pasos:
+```bash
+npm run admin            # levanta decap-server en localhost:8081 (terminal aparte)
+astro dev --background   # el sitio normal
+```
 
-1. Entrar a [app.pagescms.org](https://app.pagescms.org) e iniciar sesión con la cuenta de GitHub
-   dueña del repo (`wleon6745-16`).
-2. Instalar la GitHub App de Pages CMS, dándole acceso al repositorio
-   `wleon6745-16/alva-importaciones-web` (y a ningún otro, si la pantalla de instalación lo
-   permite elegir por repositorio).
-3. Conectar el repo dentro de Pages CMS — debería detectar `.pages.yml` automáticamente y mostrar
-   las colecciones "Productos" y "Promociones".
-4. **Antes de confiar el catálogo real al panel**, revisar los puntos marcados como "sin verificar
-   en vivo" en los comentarios de `.pages.yml` (formato del campo de foto, si las categorías se
-   reparten solas en subcarpetas, nombres exactos de un par de tipos de campo) — se dejaron
-   documentados ahí mismo porque no se pudieron probar sin este paso manual.
-5. Invitar a la persona de ALVA que va a administrar contenido por correo (enlace mágico, sin
-   necesitar cuenta de GitHub) desde la gestión de usuarios de Pages CMS.
+Abrir `http://localhost:4321/admin/index.html`. Con `local_backend: true` en `config.yml`, Decap
+detecta automáticamente el `decap-server` local — sin login, sin GitHub, sin cuentas externas.
+Verificado de nuevo en esta sesión: las 5 colecciones cargan sus entradas reales, la foto de
+Butaca Francia se previsualiza, y un guardado real de prueba (cambio de precio) se escribió
+correctamente en el archivo — confirmado con `git diff`, no solo con el mensaje de la interfaz.
+
+### Producción (pendiente — requiere una cuenta externa)
+
+`public/admin/config.yml` ya está configurado para DecapBridge, pero con un valor de ejemplo
+(`TU-SITE-ID`) en `identity_url` que hay que reemplazar por el real. Pasos (ninguno lo puede hacer
+una sesión de Claude Code — crear una cuenta externa solo lo puede autorizar el dueño del
+negocio):
+
+1. Crear una cuenta gratuita en [decapbridge.com](https://decapbridge.com).
+2. Crear un "Site" ahí conectado al repositorio `wleon6745-16/alva-importaciones-web`.
+3. Copiar el "Site ID" real que genera DecapBridge y reemplazar `TU-SITE-ID` en
+   `public/admin/config.yml` → `backend.identity_url`.
+4. Invitar por correo a la persona de ALVA que va a administrar contenido, desde el panel de
+   DecapBridge.
+5. Con eso, `/admin` en el dominio de producción real pedirá login (gestionado por DecapBridge) y
+   guardará los cambios como commits reales en GitHub.
 
 ## 7. Checklist rápido para una sesión futura de actualización de contenido
 

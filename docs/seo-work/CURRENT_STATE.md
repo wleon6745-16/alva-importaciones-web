@@ -108,6 +108,28 @@ requería Decap); `robots.txt` ya no bloquea `/admin` (no existe esa ruta); `src
 (solo un comentario actualizado). `npm run build` (101 páginas) y `npm run seo:validate` (0
 errores) verificados después del cambio.
 
+## Sesiones 21-25 (2026-08-15): Pages CMS y Sveltia CMS descartados, vuelta a Decap CMS
+
+Pages CMS resultó tener dos problemas reales encontrados en pruebas en vivo: un bug de caché sin
+corregir en su propio proyecto ([pages-cms/pages-cms#301](https://github.com/pages-cms/pages-cms/issues/301))
+que a veces impedía descubrir colecciones nuevas, y la vista previa de fotos que necesitó
+reestructurar productos en 4 colecciones (Sesión 22) para funcionar. A pedido del usuario se hizo
+un spike controlado de **Sveltia CMS** (Sesión 23-24): cargó y leyó los datos correctamente
+(incluida la lista de características como ítems con botón "Agregar", exactamente como se pedía),
+pero **guardar no escribía al archivo real en modo local — confirmado en tres intentos
+independientes**, incluido uno hecho a mano por el usuario sin ninguna automatización de por
+medio. Falla silenciosa (la interfaz decía "guardado" sin haber guardado nada), inaceptable para
+un panel pensado para alguien no técnico.
+
+**Solución final: se volvió a Decap CMS** (Sesión 25) — la única de las tres con un guardado real
+verificado funcionando (ya en la Sesión 19, y re-verificado en esta sesión con un cambio de precio
+de prueba confirmado con `git diff`, no solo con el mensaje de la interfaz). El problema original
+que motivó dejar Decap (Git Gateway deprecado) se resolvió con **[DecapBridge](https://decapbridge.com)**,
+un reemplazo gratuito hecho específicamente para esto — pendiente solo de que el usuario cree la
+cuenta y conecte el repo (`MANUAL_ACTIONS.md` #17, no automatizable). `.pages.yml` eliminado.
+`public/admin/` (Decap, 4 colecciones de productos + promociones) y `npm run admin` restaurados.
+Ver `docs/seo-work/sessions/session-25.md` para el detalle completo.
+
 ## Estado del plan original (16 fases): COMPLETO
 
 Las 16 fases de `MASTER_PLAN.md` (SEO-001 a SEO-016) están `completed`. No quedan tareas
@@ -226,9 +248,10 @@ antes de continuar. Se consultó `asistente-db-1` (Docker, Postgres) directament
 
 ## Estado del build
 
-✅ `npm run build` y `npm run seo:validate` pasan sin errores (verificado 2026-08-15 tras CMS-1 —
-101 páginas generadas, 74 productos, 4 promociones, sitemap OK, sin rastro de `/admin` ni de
-Decap en `dist/`).
+✅ `npm run build` y `npm run seo:validate` pasan sin errores (verificado 2026-08-15 tras volver a
+Decap CMS como solución final — 101 páginas generadas, 74 productos, 4 promociones, sitemap OK).
+Panel `/admin` probado en vivo con `decap-server` local: las 5 colecciones cargan, foto de
+"Butaca Francia" se previsualiza, guardado real de prueba verificado con `git diff` y revertido.
 
 ## Estado de las pruebas
 

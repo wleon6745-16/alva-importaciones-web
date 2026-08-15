@@ -28,10 +28,12 @@ requiere acceso a cuentas del negocio, no puede completarlo una sesión de Claud
       `WhatsAppCTA.astro` (que ya empuja a `window.dataLayer`, ver SEO-004) llega correctamente
       al proveedor elegido — no requiere cambios de código, solo el script del proveedor y su ID
       (fila #10).
-- [ ] **Panel de administración de contenido (Pages CMS)** (fuera del plan original, agregado en
-      Sesión 19 con Decap CMS, reemplazado por Pages CMS en CMS-1/Sesión 20): instalar la GitHub
-      App de Pages CMS en el repo y conectar desde `app.pagescms.org` (fila #17). No depende de
-      dónde se hospede el sitio — ver `docs/CONTENT_WORKFLOW.md` §6.
+- [ ] **Panel de administración de contenido (Decap CMS + DecapBridge)** (fuera del plan
+      original, agregado en Sesión 19; se probaron Pages CMS y Sveltia CMS como alternativas y
+      ninguna funcionó de forma confiable — volvió a Decap, ver `docs/CONTENT_WORKFLOW.md` §6):
+      crear cuenta en `decapbridge.com`, conectar el repo, y reemplazar `TU-SITE-ID` en
+      `public/admin/config.yml` (fila #17). Ya funciona en local sin esto — ver
+      `docs/CONTENT_WORKFLOW.md` §6.
 
 Ninguno de estos pasos está bloqueado por trabajo de código pendiente — todos son configuración
 de cuentas externas que solo el dueño del negocio puede autorizar/ejecutar.
@@ -59,13 +61,13 @@ no puede ejecutar sin permisos de administrador.
 | 8 | Configurar Bing Webmaster Tools | Requiere cuenta Microsoft | Sesión 16 | Pendiente |
 | 9 | Configurar Bing Places / Google Business Profile | Requiere verificación física del negocio (postal/telefónica) | Sesión 7, 16 | Pendiente |
 | 10 | Añadir claves de IndexNow, analítica (GA4 u otra) y cualquier otro secreto | No deben vivir en el repo en texto plano; requieren variables de entorno del hosting real | Sesión 4, 11, 16 | Pendiente |
-| 11 | Configurar el entorno de producción (hosting, HTTPS, redirecciones) | Depende de dónde se decida desplegar (no definido aún) | Sesión 16 | Pendiente |
+| 11 | Configurar el entorno de producción (hosting, HTTPS, redirecciones) | Depende de dónde se decida desplegar | Sesión 16 | Pendiente. **Actualización 2026-08-15**: el usuario confirmó que ya tiene el dominio agregado a Cloudflare — el hosting concreto (Cloudflare Pages u otro) y el despliegue en sí todavía no se han hecho. |
 | 12 | Proveer el logo en formato vectorial fuente (AI/EPS/PSD) si existe, más allá de los PNG ya extraídos de las fotos JPG del cliente | Los assets actuales (`public/brand/*.png`) fueron generados por chroma-key desde JPGs; sirven pero no son ideales para todos los usos (p. ej. impresión) | Ninguna sesión de este plan depende de esto | Pendiente, no bloqueante |
 | 13 | Confirmar testimonios reales de clientes para reemplazar los de ejemplo en `TestimonialCarousel.tsx` | Requiere reseñas reales del negocio | Ninguna sesión de este plan depende de esto directamente | Pendiente, no bloqueante. **Actualización 2026-08-09**: el componente se quitó de la home en la segunda pasada de calidad (usaba personas genéricas tipo "Clienta frecuente" en vez de testimonios reales — no encajaba con el tono comercial buscado). El archivo sigue en `src/components/TestimonialCarousel.tsx` sin usarse, listo para reactivarse el día que existan testimonios reales con nombre y contexto verificados. |
 | 14 | Confirmar si "Envíos a todo el país 🚛🇪🇨" (mencionado repetidas veces en publicaciones del canal de Telegram, ver `reports/telegram-data-candidates.md` sección Políticas, mensajes del 09.05.2026 y 26.06.2026) sigue siendo una política vigente y en qué condiciones (costo, transportadora, tiempos) | Es una promesa de marketing repetida en el canal oficial, pero no está verificada como política vigente ni documentada con detalle — no se ha usado en ninguna página del sitio todavía (ver SEO-008, se evitó deliberadamente una mención de envíos sin confirmar) | Cualquier página futura que quiera mencionar envíos/cobertura nacional | Pendiente |
 | 15 | Ampliar el cruce foto-por-código (`ASISTENTE/backend/assets/`) contra el resto del catálogo — solo 7 de 50 productos tuvieron match exacto por código en la segunda pasada de calidad; hay ~1440 códigos indexados sin cruzar todavía, y varias fotos sin código legible (broca, esmaltes, monómeros de Master Nails/Mía Secret) que podrían tener match por marca+nombre con revisión manual | Requiere comparación visual humana para confirmar que la foto corresponde al mismo modelo/color exacto (ver metodología en `docs/CONTENT_WORKFLOW.md`) | Ninguna sesión bloqueada — es una mejora incremental de calidad de imagen | Pendiente, no bloqueante |
 | 16 | ~~Subir `alva-importaciones-web` a un repo de GitHub~~ | — | — | **Resuelto 2026-08-15**: repo público `https://github.com/wleon6745-16/alva-importaciones-web`, ramas `master` y `feature/alva-seo-ai-discovery` empujadas (`git remote add origin` + `git push -u`). |
-| 17 | Instalar la GitHub App de Pages CMS en `wleon6745-16/alva-importaciones-web` desde `app.pagescms.org` y conectar el repo (reemplaza la fila anterior, que pedía Netlify Identity + Git Gateway para Decap — CMS-1, 2026-08-15, reemplazó Decap por Pages CMS precisamente porque esa pieza de Netlify está deprecada) | Requiere que el dueño de la cuenta de GitHub (`wleon6745-16`) dé el consentimiento OAuth de instalación — no se puede automatizar desde una sesión de Claude Code | Panel de administración de contenido en uso real | Pendiente — ya no bloqueada, el repo está en GitHub. `.pages.yml` ya está listo en la raíz del repo. |
+| 17 | Crear cuenta en `decapbridge.com`, conectar `wleon6745-16/alva-importaciones-web`, y reemplazar `TU-SITE-ID` por el Site ID real en `public/admin/config.yml` → `backend.identity_url` (después de probar Pages CMS y Sveltia CMS y encontrar problemas reales en ambos, se volvió a Decap CMS — solución final, ver `docs/CONTENT_WORKFLOW.md` §6) | Requiere crear una cuenta externa — no se puede automatizar desde una sesión de Claude Code | Panel de administración de contenido en producción (ya funciona en local sin esto) | Pendiente — ya no bloqueada, el repo está en GitHub. |
 
 ## Cómo añadir una nueva acción manual
 

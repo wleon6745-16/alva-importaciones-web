@@ -1,0 +1,165 @@
+# Panel de administración de contenido (Decap CMS) para Alva Importaciones — solución final,
+# después de comparar Decap, Pages CMS y Sveltia CMS. Decap es la única de las tres que se probó
+# funcionando de punta a punta en este proyecto: listado correcto de las 25 fichas de muebles,
+# edición de todos los campos, imagen con preview real, y un guardado real verificado byte a byte
+# en el archivo (ver docs/seo-work/sessions/session-19.md). Pages CMS tuvo un bug de caché sin
+# corregir que ocultaba colecciones nuevas; Sveltia CMS no lograba escribir al disco en modo local
+# en tres intentos seguidos, incluyendo uno hecho a mano por el usuario (ver
+# docs/seo-work/sessions/session-20.md a -24.md para el historial completo).
+#
+# USO LOCAL (funciona ya, sin ninguna cuenta ni configuración adicional):
+#   1. npm run admin            (levanta decap-server en localhost:8081, terminal aparte)
+#   2. astro dev --background   (el sitio normal)
+#   3. Abrir http://localhost:4321/admin/index.html
+#
+# USO EN PRODUCCIÓN (pendiente de una acción manual — ver docs/seo-work/MANUAL_ACTIONS.md):
+#   Git Gateway (la pieza clásica de Netlify Identity + Git Gateway) está deprecada por Netlify.
+#   En su lugar, este archivo usa DecapBridge (https://decapbridge.com) — un reemplazo gratuito
+#   hecho específicamente para esto, sin necesidad de mantener servidor propio. Falta:
+#     1. Crear una cuenta en decapbridge.com y un "Site" ahí para este repo de GitHub.
+#     2. Copiar el "Site ID" real que genera y reemplazar TU-SITE-ID abajo por ese valor.
+#     3. Invitar por correo a la persona de ALVA que va a administrar contenido, desde el panel
+#        de DecapBridge.
+#   Ninguno de estos pasos lo puede hacer una sesión de Claude Code — requieren crear una cuenta
+#   externa, algo que solo el dueño del negocio puede autorizar.
+
+backend:
+  name: git-gateway
+  identity_url: https://auth.decapbridge.com/sites/TU-SITE-ID
+  gateway_url: https://gateway.decapbridge.com
+  branch: main
+
+local_backend: true
+
+publish_mode: simple
+
+media_folder: "src/assets/products/uploads"
+public_folder: "/src/assets/products/uploads"
+
+collections:
+  - &products-base
+    name: "products-muebles"
+    label: "Productos — Muebles"
+    label_singular: "Producto"
+    folder: "src/content/products/muebles"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{fields.slug}}"
+    identifier_field: "name"
+    summary: "{{name}} — {{price}}"
+    fields: &products-fields
+      - { label: "Slug (URL, sin espacios ni tildes)", name: "slug", widget: "string", pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Solo minúsculas, números y guiones"], hint: "No cambiar en un producto ya publicado — cambiarlo mueve la página a otra dirección y rompe cualquier enlace ya compartido o indexado en Google." }
+      - { label: "Nombre", name: "name", widget: "string" }
+      - { label: "Categoría", name: "category", widget: "hidden", default: "muebles" }
+      - { label: "Subcategoría", name: "subcategory", widget: "string", required: false }
+      - { label: "Código", name: "code", widget: "string", required: false, hint: "Código interno del negocio. Cambiarlo solo si el producto real cambió de código." }
+      - { label: "Precio (USD)", name: "price", widget: "number", value_type: "float", required: false }
+      - { label: "Moneda", name: "currency", widget: "hidden", default: "USD", required: false }
+      - { label: "Marca", name: "brand", widget: "string", required: false }
+      - { label: "Características", name: "features", widget: "list", field: { label: "Característica", name: "item", widget: "string" }, required: false }
+      - label: "Foto del producto"
+        name: "image"
+        widget: "image"
+        media_folder: "/src/assets/products/muebles"
+        public_folder: ""
+        hint: "Sube la foto o escribe el nombre exacto de un archivo que ya exista en src/assets/products/muebles/"
+      - { label: "Texto alternativo de la foto (ALT)", name: "imageAlt", widget: "string" }
+
+  - <<: *products-base
+    name: "products-unas"
+    label: "Productos — Uñas"
+    folder: "src/content/products/unas"
+    fields:
+      - { label: "Slug (URL, sin espacios ni tildes)", name: "slug", widget: "string", pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Solo minúsculas, números y guiones"], hint: "No cambiar en un producto ya publicado — cambiarlo mueve la página a otra dirección y rompe cualquier enlace ya compartido o indexado en Google." }
+      - { label: "Nombre", name: "name", widget: "string" }
+      - { label: "Categoría", name: "category", widget: "hidden", default: "unas" }
+      - { label: "Subcategoría", name: "subcategory", widget: "string", required: false }
+      - { label: "Código", name: "code", widget: "string", required: false, hint: "Código interno del negocio. Cambiarlo solo si el producto real cambió de código." }
+      - { label: "Precio (USD)", name: "price", widget: "number", value_type: "float", required: false }
+      - { label: "Moneda", name: "currency", widget: "hidden", default: "USD", required: false }
+      - { label: "Marca", name: "brand", widget: "string", required: false }
+      - { label: "Características", name: "features", widget: "list", field: { label: "Característica", name: "item", widget: "string" }, required: false }
+      - label: "Foto del producto"
+        name: "image"
+        widget: "image"
+        media_folder: "/src/assets/products/unas"
+        public_folder: ""
+        hint: "Sube la foto o escribe el nombre exacto de un archivo que ya exista en src/assets/products/unas/"
+      - { label: "Texto alternativo de la foto (ALT)", name: "imageAlt", widget: "string" }
+
+  - <<: *products-base
+    name: "products-capilares"
+    label: "Productos — Capilares"
+    folder: "src/content/products/capilares"
+    fields:
+      - { label: "Slug (URL, sin espacios ni tildes)", name: "slug", widget: "string", pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Solo minúsculas, números y guiones"], hint: "No cambiar en un producto ya publicado — cambiarlo mueve la página a otra dirección y rompe cualquier enlace ya compartido o indexado en Google." }
+      - { label: "Nombre", name: "name", widget: "string" }
+      - { label: "Categoría", name: "category", widget: "hidden", default: "capilares" }
+      - { label: "Subcategoría", name: "subcategory", widget: "string", required: false }
+      - { label: "Código", name: "code", widget: "string", required: false, hint: "Código interno del negocio. Cambiarlo solo si el producto real cambió de código." }
+      - { label: "Precio (USD)", name: "price", widget: "number", value_type: "float", required: false }
+      - { label: "Moneda", name: "currency", widget: "hidden", default: "USD", required: false }
+      - { label: "Marca", name: "brand", widget: "string", required: false }
+      - { label: "Características", name: "features", widget: "list", field: { label: "Característica", name: "item", widget: "string" }, required: false }
+      - label: "Foto del producto"
+        name: "image"
+        widget: "image"
+        media_folder: "/src/assets/products/capilares"
+        public_folder: ""
+        hint: "Sube la foto o escribe el nombre exacto de un archivo que ya exista en src/assets/products/capilares/"
+      - { label: "Texto alternativo de la foto (ALT)", name: "imageAlt", widget: "string" }
+
+  - <<: *products-base
+    name: "products-maquillaje"
+    label: "Productos — Maquillaje"
+    folder: "src/content/products/maquillaje"
+    fields:
+      - { label: "Slug (URL, sin espacios ni tildes)", name: "slug", widget: "string", pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Solo minúsculas, números y guiones"], hint: "No cambiar en un producto ya publicado — cambiarlo mueve la página a otra dirección y rompe cualquier enlace ya compartido o indexado en Google." }
+      - { label: "Nombre", name: "name", widget: "string" }
+      - { label: "Categoría", name: "category", widget: "hidden", default: "maquillaje" }
+      - { label: "Subcategoría", name: "subcategory", widget: "string", required: false }
+      - { label: "Código", name: "code", widget: "string", required: false, hint: "Código interno del negocio. Cambiarlo solo si el producto real cambió de código." }
+      - { label: "Precio (USD)", name: "price", widget: "number", value_type: "float", required: false }
+      - { label: "Moneda", name: "currency", widget: "hidden", default: "USD", required: false }
+      - { label: "Marca", name: "brand", widget: "string", required: false }
+      - { label: "Características", name: "features", widget: "list", field: { label: "Característica", name: "item", widget: "string" }, required: false }
+      - label: "Foto del producto"
+        name: "image"
+        widget: "image"
+        media_folder: "/src/assets/products/maquillaje"
+        public_folder: ""
+        hint: "Sube la foto o escribe el nombre exacto de un archivo que ya exista en src/assets/products/maquillaje/"
+      - { label: "Texto alternativo de la foto (ALT)", name: "imageAlt", widget: "string" }
+
+  - name: "promos"
+    label: "Promociones"
+    label_singular: "Promoción"
+    folder: "src/content/promos"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{fields.order}}-{{fields.label}}"
+    identifier_field: "label"
+    summary: "{{order}} — {{label}}"
+    fields:
+      - { label: "Título de la promoción", name: "label", widget: "string" }
+      - { label: "Descripción", name: "body", widget: "text" }
+      - label: "Categoría de la foto"
+        name: "imageCategory"
+        widget: "select"
+        options:
+          - { label: "Muebles", value: "muebles" }
+          - { label: "Uñas", value: "unas" }
+          - { label: "Capilares", value: "capilares" }
+          - { label: "Maquillaje", value: "maquillaje" }
+      - label: "Foto de la promoción"
+        name: "image"
+        widget: "image"
+        media_folder: "/src/assets/products/{{fields.imageCategory}}"
+        public_folder: ""
+        hint: "Sube la foto o escribe el nombre exacto de un archivo que ya exista en src/assets/products/<categoría>/"
+      - { label: "Texto alternativo de la foto", name: "imageAlt", widget: "string" }
+      - { label: "Orden (1 = primero)", name: "order", widget: "number", value_type: "int" }

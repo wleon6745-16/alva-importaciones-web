@@ -19,7 +19,8 @@
     "task:validate": "node scripts/tasks.mjs validate",
     "telegram:extract": "node scripts/extract-telegram-commercial-data.ts",
     "indexnow": "node scripts/indexnow-submit.mjs",
-    "seo:validate": "node scripts/validate-seo.ts"
+    "seo:validate": "node scripts/validate-seo.ts",
+    "admin": "decap-server"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.2",
@@ -34,5 +35,8 @@
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "decap-server": "^3.10.0"
   }
 }

@@ -86,30 +86,29 @@ de activarlas, y una confirmación explícita del usuario antes de instalarlas (
 Vercel/Netlify, o contenedor sin `systemctl`), la misma lógica (`npm run seo:validate`) se
 dispara como *scheduled function*/cron del proveedor en su lugar.
 
-## 7. Panel de administración de contenido (Pages CMS)
+## 7. Panel de administración de contenido (Decap CMS + DecapBridge)
 
-**CMS-1 (2026-08-15): reemplaza a Decap CMS** — ver `docs/CONTENT_WORKFLOW.md` §6 para el detalle
-completo y el razonamiento. Diferencia clave para el despliegue: **Pages CMS no vive en una ruta
-de este sitio** (no hay `/admin` en `alvaimportaciones.com` ni build especial que preparar para
-él) — se conecta directo a GitHub vía una GitHub App y se administra desde `app.pagescms.org`. Eso
-significa que **la elección de dónde se hospeda el sitio (Netlify, Cloudflare Pages, Vercel, etc.)
-es completamente independiente de la elección del CMS** — a diferencia de Decap, que solo daba
-autenticación "sin configuración extra" si el hosting era Netlify.
+**Solución final (2026-08-15)**, después de comparar Decap, Pages CMS y Sveltia CMS en pruebas
+reales — ver `docs/CONTENT_WORKFLOW.md` §6 para el detalle completo. Decap fue la única de las
+tres con un guardado verificado funcionando de punta a punta; el problema de autenticación en
+producción (Git Gateway deprecado) se resuelve con **DecapBridge**, gratuito y sin depender de qué
+hosting sirva el sitio.
 
-Pendiente (acción manual, no puede automatizarse porque requiere un consentimiento OAuth del dueño
-de la cuenta de GitHub):
+Pendiente (acción manual, no puede automatizarse porque requiere crear una cuenta externa):
 
-1. Instalar la GitHub App de Pages CMS en `wleon6745-16/alva-importaciones-web` desde
-   [app.pagescms.org](https://app.pagescms.org).
-2. Conectar el repo — Pages CMS debería detectar `.pages.yml` (ya está en la raíz del repo) y
-   mostrar las colecciones de productos y promociones.
-3. Invitar por correo (enlace mágico, sin cuenta de GitHub) a quien vaya a administrar contenido.
+1. Crear cuenta en [decapbridge.com](https://decapbridge.com) y un "Site" ahí para
+   `wleon6745-16/alva-importaciones-web`.
+2. Reemplazar `TU-SITE-ID` por el Site ID real en `public/admin/config.yml` →
+   `backend.identity_url`.
+3. Invitar por correo a quien vaya a administrar contenido, desde el panel de DecapBridge.
 
 Ver `docs/seo-work/MANUAL_ACTIONS.md` para el estado de este pendiente.
 
 ## 8. Checklist previo al primer despliegue real
 
-- [ ] Dominio real comprado/asignado y actualizado en `astro.config.mjs` + `site-config.ts`.
+- [x] Dominio: en proceso — el usuario confirmó (2026-08-15) que ya tiene el dominio agregado a
+      Cloudflare. Falta actualizar `astro.config.mjs` (`site`) y `src/lib/site-config.ts` (`url`)
+      con el dominio real cuando esté decidido, y todavía no se ha desplegado nada.
 - [ ] HTTPS configurado (certificado válido, HTTP→HTTPS forzado).
 - [ ] `npm run build && npm run seo:validate` pasa sin errores contra el dominio real.
 - [ ] Ver `docs/seo-work/MANUAL_ACTIONS.md` para el checklist completo de Search Console, Bing

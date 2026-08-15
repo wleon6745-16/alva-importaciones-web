@@ -346,3 +346,49 @@ Errores: ninguno introducido — `src/content.config.ts`, `src/content/products/
 `src/content/promos/` y `src/lib/products.ts` no cambiaron funcionalmente.
 Siguiente: instalar la GitHub App de Pages CMS y conectar el repo (acción manual del usuario), y
 solo entonces verificar en vivo los puntos marcados como pendientes en `.pages.yml`.
+
+---
+
+Sesión: 21-24 (Pages CMS y Sveltia CMS descartados)
+Fecha: 2026-08-15
+Objetivo: pruebas en vivo de Pages CMS conectado de verdad, y luego un spike controlado de
+Sveltia CMS como alternativa, ambos a pedido del usuario tras encontrar problemas reales.
+Trabajo completado: Pages CMS reestructurado a 4 colecciones de productos + fuentes de medios
+fijas (Sesión 22) para arreglar la vista previa de fotos; encontrado un bug de caché sin corregir
+del propio Pages CMS que a veces impedía descubrir colecciones nuevas
+(pages-cms/pages-cms#301); spike de Sveltia CMS (`public/admin/` temporal, `.pages.yml`
+conservado sin tocar) que sí leyó los 25 productos de muebles y todos sus campos correctamente,
+pero **guardar no escribía al archivo real** en modo local — confirmado en tres intentos
+independientes, incluido uno hecho a mano por el usuario.
+Trabajo no completado: ninguna de las dos alternativas quedó lista para producción.
+Pruebas: verificación exhaustiva vía `git diff`/`mtime` del archivo real (no solo el mensaje de la
+interfaz) en cada intento de guardado de Sveltia — los tres fallaron de forma idéntica.
+Errores: ninguno introducido al repo real — ambos CMS se probaron sin tocar los 74+4 JSON reales
+más allá de una prueba de escritura que se revirtió cada vez.
+Siguiente: ver Sesión 25 — se volvió a Decap CMS.
+
+---
+
+Sesión: 25 (solución final de CMS)
+Fecha: 2026-08-15
+Objetivo: implementar una solución de administración de contenido definitiva, sin conocimientos
+de programación, después de que Pages CMS y Sveltia CMS no dieran un resultado confiable.
+Trabajo completado: `.pages.yml` eliminado; spike de Sveltia eliminado; Decap CMS restaurado en
+`public/admin/` (4 colecciones de productos + promociones, mismo patrón validado en la Sesión 19);
+`decap-server` reinstalado, `npm run admin` restaurado; `robots.txt` y `scripts/validate-seo.ts`
+actualizados para `/admin` de nuevo; backend de producción configurado para DecapBridge (gratuito,
+reemplaza Netlify Identity + Git Gateway, que está deprecado) en vez de Git Gateway directo;
+documentación (`CONTENT_WORKFLOW.md`, `DEPLOYMENT.md`, `MANUAL_ACTIONS.md`, `CURRENT_STATE.md`)
+actualizada para reflejar la decisión final.
+Trabajo no completado: conectar DecapBridge en producción (requiere que el usuario cree una
+cuenta externa — no automatizable).
+Pruebas: `npm run build` (101 páginas) y `npm run seo:validate` (0 errores) verificados; panel
+`/admin` probado en vivo con `decap-server` local — las 5 colecciones cargan sus entradas reales,
+la foto de "Butaca Francia" se previsualiza, y un guardado de prueba (precio 99 → 99.03) se
+verificó escrito en el archivo real con `git diff` (no solo el mensaje de la interfaz) y se
+revirtió a 99 antes de continuar.
+Errores: ninguno — `src/content.config.ts`, `src/content/products/`, `src/content/promos/`,
+`src/lib/products.ts` y `imageFor()` sin cambios funcionales en todo el proceso.
+Siguiente: crear cuenta en decapbridge.com y conectar el repo (acción manual del usuario,
+`MANUAL_ACTIONS.md` #17); cuando el usuario decida el hosting definitivo (ya tiene el dominio en
+Cloudflare), retomar el checklist de `DEPLOYMENT.md`.
