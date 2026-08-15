@@ -1,0 +1,16 @@
+{
+  "slug": "drill-inalambrico-master-nails-35-000-rpm",
+  "name": "Drill inalámbrico Master Nails 35.000 RPM",
+  "category": "unas",
+  "subcategory": "herramientas-y-equipo",
+  "code": "7016",
+  "price": 145,
+  "currency": "USD",
+  "brand": "Master Nails",
+  "features": [
+    "35.000 RPM",
+    "60W"
+  ],
+  "image": "drill-inalambrico-master-nails.jpg",
+  "imageAlt": "Drill inalámbrico Master Nails 35.000 RPM"
+}

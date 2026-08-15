@@ -1,0 +1,14 @@
+{
+  "slug": "combo-depila-ya-cera-en-perlas-olla",
+  "name": "Combo depila ya (cera en perlas + olla)",
+  "category": "unas",
+  "subcategory": "herramientas-y-equipo",
+  "price": 12.5,
+  "currency": "USD",
+  "features": [
+    "Paquete de cera en perlas",
+    "Incluye olla para derretir la cera"
+  ],
+  "image": "combo-depila-ya.jpg",
+  "imageAlt": "Combo depila ya (cera en perlas + olla)"
+}

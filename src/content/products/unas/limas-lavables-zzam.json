@@ -1,0 +1,16 @@
+{
+  "slug": "limas-lavables-zzam",
+  "name": "Limas lavables ZZAM",
+  "category": "unas",
+  "subcategory": "herramientas-y-equipo",
+  "price": 1.75,
+  "currency": "USD",
+  "brand": "ZZAM",
+  "features": [
+    "Grano 100/180",
+    "Grano 120/180",
+    "Grano 180/220"
+  ],
+  "image": "limas-lavables-zzam.jpg",
+  "imageAlt": "Limas lavables ZZAM"
+}

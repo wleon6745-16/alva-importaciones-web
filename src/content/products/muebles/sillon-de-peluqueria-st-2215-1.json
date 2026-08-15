@@ -1,0 +1,16 @@
+{
+  "slug": "sillon-de-peluqueria-st-2215-1",
+  "name": "Sillón de peluquería ST-2215-1",
+  "category": "muebles",
+  "subcategory": "sillones-y-sillas-de-peluqueria-barberia",
+  "price": 335,
+  "currency": "USD",
+  "features": [
+    "Soporte para brazos",
+    "Cuero de fácil limpieza",
+    "Base metálica",
+    "Hidráulico"
+  ],
+  "image": "sillon-peluqueria-2.jpg",
+  "imageAlt": "Sillón de peluquería ST-2215-1"
+}

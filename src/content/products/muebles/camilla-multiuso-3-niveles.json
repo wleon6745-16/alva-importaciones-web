@@ -1,0 +1,17 @@
+{
+  "slug": "camilla-multiuso-3-niveles",
+  "name": "Camilla multiuso 3 niveles",
+  "category": "muebles",
+  "subcategory": "camillas",
+  "code": "9974",
+  "price": 208,
+  "currency": "USD",
+  "features": [
+    "Niveles de inclinación ajustables",
+    "Cubierta de fácil limpieza",
+    "Cómoda y antideslizante",
+    "Color negro"
+  ],
+  "image": "camilla-3-niveles.jpg",
+  "imageAlt": "Camilla multiuso 3 niveles"
+}

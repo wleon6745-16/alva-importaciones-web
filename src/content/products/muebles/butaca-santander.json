@@ -1,0 +1,14 @@
+{
+  "slug": "butaca-santander",
+  "name": "Butaca Santander",
+  "category": "muebles",
+  "subcategory": "butacas-y-sillas",
+  "code": "10408",
+  "price": 65,
+  "currency": "USD",
+  "features": [
+    "Acabado elegante"
+  ],
+  "image": "butaca-santander.jpg",
+  "imageAlt": "Butaca Santander"
+}

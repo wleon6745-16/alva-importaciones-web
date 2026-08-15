@@ -1,0 +1,16 @@
+{
+  "slug": "butaca-monet",
+  "name": "Butaca Monet",
+  "category": "muebles",
+  "subcategory": "butacas-y-sillas",
+  "code": "10404",
+  "price": 220,
+  "currency": "USD",
+  "features": [
+    "Cómoda y elegante",
+    "Base ultra resistente",
+    "Fácil limpieza"
+  ],
+  "image": "butaca-monet.jpg",
+  "imageAlt": "Butaca Monet"
+}

@@ -28,9 +28,23 @@ requiere acceso a cuentas del negocio, no puede completarlo una sesión de Claud
       `WhatsAppCTA.astro` (que ya empuja a `window.dataLayer`, ver SEO-004) llega correctamente
       al proveedor elegido — no requiere cambios de código, solo el script del proveedor y su ID
       (fila #10).
+- [ ] **Panel de administración `/admin` en producción** (Decap CMS, fuera del plan original,
+      agregado en Sesión 19): subir el repo a GitHub, desplegar en Netlify, activar Identity +
+      Git Gateway (filas #16-17). Sin esto, `/admin` no funciona en el dominio real — pero **sí
+      funciona ya en local** con `npm run admin` + `astro dev --background`, sin depender de
+      nada de esto (ver `docs/CONTENT_WORKFLOW.md` §6).
 
 Ninguno de estos pasos está bloqueado por trabajo de código pendiente — todos son configuración
 de cuentas externas que solo el dueño del negocio puede autorizar/ejecutar.
+
+Nota aparte (no bloqueante): Docker Desktop en esta máquina no está arrancando el motor
+(`HCS_E_SERVICE_NOT_AVAILABLE` al correr `docker ps`, diagnosticado en la Sesión 19 — el servicio
+de virtualización de Windows no responde incluso después de reiniciar Docker Desktop). El sitio
+**no depende de Docker para nada durante el desarrollo** (`astro dev` es suficiente); el
+`Dockerfile`/`nginx.conf` del repo solo hacen falta si se elige ese método de despliegue en
+producción. Arreglar Docker en esta máquina requiere una acción a nivel de Windows
+(activar/reparar Hyper-V o el servicio de Contenedores de Windows) que una sesión de Claude Code
+no puede ejecutar sin permisos de administrador.
 
 ## Tabla completa
 
@@ -51,6 +65,8 @@ de cuentas externas que solo el dueño del negocio puede autorizar/ejecutar.
 | 13 | Confirmar testimonios reales de clientes para reemplazar los de ejemplo en `TestimonialCarousel.tsx` | Requiere reseñas reales del negocio | Ninguna sesión de este plan depende de esto directamente | Pendiente, no bloqueante. **Actualización 2026-08-09**: el componente se quitó de la home en la segunda pasada de calidad (usaba personas genéricas tipo "Clienta frecuente" en vez de testimonios reales — no encajaba con el tono comercial buscado). El archivo sigue en `src/components/TestimonialCarousel.tsx` sin usarse, listo para reactivarse el día que existan testimonios reales con nombre y contexto verificados. |
 | 14 | Confirmar si "Envíos a todo el país 🚛🇪🇨" (mencionado repetidas veces en publicaciones del canal de Telegram, ver `reports/telegram-data-candidates.md` sección Políticas, mensajes del 09.05.2026 y 26.06.2026) sigue siendo una política vigente y en qué condiciones (costo, transportadora, tiempos) | Es una promesa de marketing repetida en el canal oficial, pero no está verificada como política vigente ni documentada con detalle — no se ha usado en ninguna página del sitio todavía (ver SEO-008, se evitó deliberadamente una mención de envíos sin confirmar) | Cualquier página futura que quiera mencionar envíos/cobertura nacional | Pendiente |
 | 15 | Ampliar el cruce foto-por-código (`ASISTENTE/backend/assets/`) contra el resto del catálogo — solo 7 de 50 productos tuvieron match exacto por código en la segunda pasada de calidad; hay ~1440 códigos indexados sin cruzar todavía, y varias fotos sin código legible (broca, esmaltes, monómeros de Master Nails/Mía Secret) que podrían tener match por marca+nombre con revisión manual | Requiere comparación visual humana para confirmar que la foto corresponde al mismo modelo/color exacto (ver metodología en `docs/CONTENT_WORKFLOW.md`) | Ninguna sesión bloqueada — es una mejora incremental de calidad de imagen | Pendiente, no bloqueante |
+| 16 | Subir `alva-importaciones-web` a un repo de GitHub (hoy el repo es solo local, sin remoto configurado, y no hay `gh` CLI autenticado en esta máquina) | Requiere una cuenta/organización de GitHub del negocio y decidir si el repo es público o privado | Panel `/admin` en producción (fila #17), y cualquier CI/CD futuro | Pendiente |
+| 17 | Desplegar el sitio en Netlify conectado a ese repo, y activar Identity + Git Gateway en Site settings | Requiere cuenta de Netlify del negocio y la fila #16 ya resuelta; es la forma más simple de que `/admin` (Decap CMS) funcione en producción sin crear una OAuth app aparte | Panel `/admin` en producción | Pendiente, bloqueada por fila #16 |
 
 ## Cómo añadir una nueva acción manual
 

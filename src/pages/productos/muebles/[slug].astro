@@ -5,14 +5,15 @@ import SectionReveal from "../../../components/SectionReveal.astro";
 import WhatsAppCTA from "../../../components/WhatsAppCTA.astro";
 import { breadcrumbSchema, productSchema } from "../../../lib/structured-data";
 import { siteConfig } from "../../../lib/site-config";
+import { getProductsByCategory } from "../../../lib/products";
 import type { Product } from "../../../types/product";
-import productsData from "../../../data/products.generated.json";
 
 // `getStaticPaths` runs in module scope at build time, separate from the rest of this
 // frontmatter (which runs per-render) — it can't close over a `const` declared out here,
-// only over imports. So the muebles list is (re)computed independently in each scope.
-export function getStaticPaths() {
-  const muebles = (productsData.products as Product[]).filter((p) => p.category === "muebles");
+// only over imports/awaited calls made inside itself. So the muebles list is (re)fetched
+// independently in each scope.
+export async function getStaticPaths() {
+  const muebles = await getProductsByCategory("muebles");
   return muebles.map((product) => ({
     params: { slug: product.slug },
     props: { product },
@@ -25,7 +26,7 @@ interface Props {
 
 const { product } = Astro.props;
 
-const muebles = (productsData.products as Product[]).filter((p) => p.category === "muebles");
+const muebles = await getProductsByCategory("muebles");
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "../../../assets/products/muebles/*.{jpg,jpeg,png,webp}",

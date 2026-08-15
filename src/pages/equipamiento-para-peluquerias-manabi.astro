@@ -2,10 +2,10 @@
 import SectionReveal from "../components/SectionReveal.astro";
 import LocalLandingLayout from "../components/LocalLandingLayout.astro";
 import ProductGrid from "../components/ProductGrid.astro";
+import { getProductsByCategory } from "../lib/products";
 import type { Product } from "../types/product";
-import productsData from "../data/products.generated.json";
 
-const products = (productsData.products as Product[]).filter((p) => p.category === "muebles");
+const products = await getProductsByCategory("muebles");
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "../assets/products/muebles/*.{jpg,jpeg,png,webp}",

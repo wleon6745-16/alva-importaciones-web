@@ -6,10 +6,10 @@ import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
 import RelatedCategories from "../../components/RelatedCategories.astro";
 import { breadcrumbSchema } from "../../lib/structured-data";
 import { siteConfig } from "../../lib/site-config";
+import { getProductsByCategory } from "../../lib/products";
 import type { Product } from "../../types/product";
-import productsData from "../../data/products.generated.json";
 
-const products = (productsData.products as Product[]).filter((p) => p.category === "capilares");
+const products = await getProductsByCategory("capilares");
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "../../assets/products/capilares/*.{jpg,jpeg,png,webp}",

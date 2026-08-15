@@ -1,0 +1,16 @@
+{
+  "slug": "set-mesa-silla-concha-para-manicura",
+  "name": "Set mesa + silla concha para manicura",
+  "category": "muebles",
+  "subcategory": "mesas-de-trabajo",
+  "code": "10392",
+  "price": 350,
+  "currency": "USD",
+  "features": [
+    "Organizador de esmaltes doble",
+    "Dos cajones + espacio amplio",
+    "Reposamanos + puff de espera"
+  ],
+  "image": "mesa-silla-concha-manicura.jpg",
+  "imageAlt": "Set mesa + silla concha para manicura"
+}

@@ -11,7 +11,29 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const DIST = path.join(ROOT, "dist");
-const PRODUCTS_PATH = path.join(ROOT, "src", "data", "products.generated.json");
+const PRODUCTS_CONTENT_DIR = path.join(ROOT, "src", "content", "products");
+
+/** Lee todos los productos desde src/content/products/<categoria>/<slug>.json (Content Collection). */
+function loadProducts(): Array<{
+  id: string;
+  slug: string;
+  name?: string;
+  category: string;
+  image?: string;
+  features?: string[];
+}> {
+  const products: ReturnType<typeof loadProducts> = [];
+  for (const category of readdirSync(PRODUCTS_CONTENT_DIR, { withFileTypes: true })) {
+    if (!category.isDirectory()) continue;
+    const categoryDir = path.join(PRODUCTS_CONTENT_DIR, category.name);
+    for (const file of readdirSync(categoryDir)) {
+      if (!file.endsWith(".json")) continue;
+      const data = JSON.parse(readFileSync(path.join(categoryDir, file), "utf-8"));
+      products.push({ ...data, id: `${category.name}-${data.slug}`, category: category.name });
+    }
+  }
+  return products;
+}
 
 interface Issue {
   severity: "error" | "warning";
@@ -45,12 +67,16 @@ function main() {
     console.error(`No existe ${path.relative(ROOT, DIST)}. Corre "npm run build" primero.`);
     process.exit(1);
   }
-  if (!existsSync(PRODUCTS_PATH)) {
-    console.error(`No existe ${path.relative(ROOT, PRODUCTS_PATH)}. Corre "npm run catalog:sync" primero.`);
+  if (!existsSync(PRODUCTS_CONTENT_DIR)) {
+    console.error(`No existe ${path.relative(ROOT, PRODUCTS_CONTENT_DIR)}.`);
     process.exit(1);
   }
 
-  const files = walkHtmlFiles(DIST).filter((f) => !f.endsWith("404.html"));
+  // El panel de administración (Decap CMS) es un app shell sin contenido indexable — no aplica
+  // el checklist de SEO de páginas normales (title/description/canonical/h1).
+  const files = walkHtmlFiles(DIST).filter(
+    (f) => !f.endsWith("404.html") && !f.includes(`${path.sep}admin${path.sep}`),
+  );
   const pages = files.map((f) => {
     const html = readFileSync(f, "utf-8");
     return { file: f, url: urlPathFor(f), html };
@@ -173,14 +199,7 @@ function main() {
   }
 
   // 11. Slugs duplicados y productos con información insuficiente (desde el catálogo, no del HTML)
-  const products = JSON.parse(readFileSync(PRODUCTS_PATH, "utf-8")).products as Array<{
-    id: string;
-    slug: string;
-    name?: string;
-    category: string;
-    image?: string;
-    features?: string[];
-  }>;
+  const products = loadProducts();
   const slugsByCategory = new Map<string, string[]>();
   for (const p of products) {
     const key = `${p.category}/${p.slug}`;

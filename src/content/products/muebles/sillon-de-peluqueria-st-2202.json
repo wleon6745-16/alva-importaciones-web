@@ -1,0 +1,18 @@
+{
+  "slug": "sillon-de-peluqueria-st-2202",
+  "name": "Sillón de peluquería ST-2202",
+  "category": "muebles",
+  "subcategory": "sillones-y-sillas-de-peluqueria-barberia",
+  "code": "11004",
+  "price": 345,
+  "currency": "USD",
+  "brand": "SILETI",
+  "features": [
+    "Base redonda",
+    "Cuero de fácil limpieza",
+    "Hidráulico",
+    "Soporte para pies"
+  ],
+  "image": "sillon-peluqueria-1.jpg",
+  "imageAlt": "Sillón de peluquería ST-2202"
+}

@@ -1,0 +1,16 @@
+{
+  "slug": "camilla-para-lifting-multiusos",
+  "name": "Camilla para lifting multiusos",
+  "category": "muebles",
+  "subcategory": "camillas",
+  "code": "8181",
+  "price": 110,
+  "currency": "USD",
+  "features": [
+    "Portátil",
+    "Autosoportante",
+    "Base metálica"
+  ],
+  "image": "camilla-lifting-multiusos.jpg",
+  "imageAlt": "Camilla para lifting multiusos"
+}

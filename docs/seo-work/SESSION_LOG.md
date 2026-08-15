@@ -287,3 +287,32 @@ del panel de navegador de esta sesión).
 Errores: ninguno sin corregir. Se corrigió en la misma sesión un hero full-bleed que habría
 estirado una imagen de baja resolución.
 Siguiente: ver `docs/seo-work/sessions/session-17.md` sección "Pendientes".
+
+---
+
+Sesión: 19
+Fecha: 2026-08-15
+Duración aproximada: ~90 min
+Objetivo: Panel de administración sin código (pedido directo del usuario) — requirió migrar antes
+el catálogo a Astro Content Collections. Fuera de las 16 fases del plan original.
+Trabajo completado: `src/content.config.ts` + `src/content/products/<categoría>/<slug>.json` (74
+archivos) + `src/content/promos/*.json` (4 archivos) reemplazando
+`src/data/products.generated.json`/`scripts/sync-public-catalog.ts` (eliminados); `src/lib/products.ts`
+nuevo; 14 archivos consumidores migrados; `scripts/validate-seo.ts` actualizado; panel `/admin`
+(Decap CMS) con 5 colecciones, probado end-to-end en navegador incluyendo un guardado real
+verificado en disco; `npm run admin` (`decap-server`) nuevo; `robots.txt` y `seo:validate`
+ajustados para excluir `/admin`; documentación actualizada (`CONTENT_WORKFLOW.md`,
+`AUTOMATED_TASKS.md`, `DEPLOYMENT.md`, `MANUAL_ACTIONS.md`).
+Trabajo no completado: panel en producción (requiere GitHub + Netlify Identity/Git Gateway, sin
+configurar — ver `MANUAL_ACTIONS.md` #16-17); Docker Desktop en esta máquina sigue sin arrancar
+(no bloqueante).
+Pruebas: `npm run build` (101 páginas) y `npm run seo:validate` (0 errores) verificados antes y
+después de la migración de datos; panel `/admin` verificado en navegador (Browser pane): listado
+de entradas en las 5 colecciones, carga de campos e imagen, guardado de prueba confirmado
+escribiéndose en el archivo real y revertido después.
+Errores: dos hallazgos empíricos de Decap CMS corregidos en la misma sesión — folder collections
+no leen subcarpetas (se separó en 4 colecciones por categoría) y necesitan `extension`/`format`
+explícitos para JSON (sin YAML por defecto no listaba nada). Ver `docs/seo-work/sessions/session-19.md`
+para el detalle.
+Siguiente: resolver GitHub/Netlify para producción cuando el usuario lo decida; ver
+`docs/seo-work/sessions/session-19.md` sección "Pendientes".

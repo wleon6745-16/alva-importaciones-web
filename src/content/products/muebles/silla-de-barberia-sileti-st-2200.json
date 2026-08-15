@@ -1,0 +1,17 @@
+{
+  "slug": "silla-de-barberia-sileti-st-2200",
+  "name": "Silla de barbería SILETI ST-2200",
+  "category": "muebles",
+  "subcategory": "sillones-y-sillas-de-peluqueria-barberia",
+  "code": "11002",
+  "price": 295,
+  "currency": "USD",
+  "features": [
+    "Reclinable",
+    "Altura ajustable (hidráulico)",
+    "Acolchado premium",
+    "Estructura resistente"
+  ],
+  "image": "silla-barberia-st2200.jpg",
+  "imageAlt": "Silla de barbería SILETI ST-2200"
+}

@@ -50,9 +50,11 @@ plantilla de marketing usada por el negocio pone el overlay en un sitio distinto
 
 ## 2. Cómo se cruzan código ↔ foto (y por qué importa el orden)
 
-`src/data/products.generated.json` es siempre un archivo **generado**, nunca editado a mano — sale
-de `scripts/sync-public-catalog.ts`, que contiene el "seed" (los datos curados a mano) por
-categoría. El campo `code` de cada producto es la clave para buscar una foto mejor:
+Desde la migración a Astro Content Collections (Sesión 19), cada producto es su propio archivo
+fuente en `src/content/products/<categoría>/<slug>.json` — **no hay generación intermedia**: ese
+archivo JSON es directamente lo que lee el sitio (vía `src/content.config.ts` + `src/lib/products.ts`),
+y se edita a mano o desde el panel `/admin` (ver §6 más abajo). El campo `code` de cada producto es
+la clave para buscar una foto mejor:
 
 1. Si el producto tiene `code`, buscar `{code}.*` en `furniture-catalog/` (muebles) o
    `{code}-*.*` en `product-images/alva/**/` (uñas/capilares/maquillaje).
@@ -63,17 +65,18 @@ categoría. El campo `code` de cada producto es la clave para buscar una foto me
 3. Si no hay match por código (la mayoría de productos sin código, o códigos no indexados
    todavía en `ASISTENTE`), la foto de Telegram sigue siendo la mejor disponible — no inventar
    ni usar una foto de un producto distinto solo por rellenar.
-4. Copiar el archivo elegido a `src/assets/products/{categoria}/{nombre-descriptivo}.jpg`
-   (mismo nombre que ya usa el producto en el seed, para no tener que tocar código de página).
-5. Correr `npm run catalog:sync` para regenerar `products.generated.json`.
+4. Copiar el archivo elegido a `src/assets/products/{categoria}/{nombre-descriptivo}.jpg`.
+5. Poner ese mismo nombre de archivo en el campo `image` del JSON del producto (a mano, o subiendo
+   la foto desde el campo "Foto del producto" en `/admin` — ver §6).
 
 Un script de referencia (no forma parte del repo, se recreó como scratch en la sesión) que
 automatiza el paso 1 completo:
 
 ```js
 // Recorre ASISTENTE/backend/assets buscando archivos "{code}*.{jpg,png,webp}" y los cruza
-// contra products.generated.json por el campo `code`. Ver docs/seo-work/sessions/session-17.md
-// para el resultado de la última corrida (7 matches de 50 productos con código).
+// contra los productos de src/content/products/**/*.json por el campo `code`. Ver
+// docs/seo-work/sessions/session-17.md para el resultado de la última corrida (7 matches de 50
+// productos con código, cuando el catálogo todavía era un solo JSON generado).
 ```
 
 Si se quiere repetir esta búsqueda con más profundidad (fuzzy match por marca/nombre para
@@ -130,14 +133,55 @@ ni se resumen automáticamente. Si se agrega una guía nueva:
 - Debe enlazar productos reales (`ProductGrid`) y, cuando exista, la landing comercial
   relacionada (`/muebles-para-salon-de-belleza-portoviejo`, etc.).
 
-## 5. Checklist rápido para una sesión futura de actualización de contenido
+## 6. Panel de administración sin tocar código (`/admin`, Decap CMS)
 
-1. `npm run catalog:sync` después de cualquier cambio en `scripts/sync-public-catalog.ts`.
-2. `npm run build && npm run seo:validate` antes de dar por terminado cualquier cambio visual o
+Desde la Sesión 19 existe un panel visual en `/admin` para editar productos y promociones sin
+abrir un editor de código — pensado para que alguien del negocio (no necesariamente técnico) pueda
+actualizar precios, características, fotos y promociones directamente. Vive en
+`public/admin/index.html` + `public/admin/config.yml` (Decap CMS, cargado desde un CDN público,
+sin dependencias nuevas en el sitio en sí).
+
+### Qué puede editar
+
+- **Productos** (`src/content/products/<categoría>/<slug>.json`): una colección por categoría
+  (Muebles, Uñas, Capilares, Maquillaje) — nombre, precio, marca, código, características, foto y
+  su texto alternativo. Decap CMS no lee subcarpetas dentro de una sola colección, por eso hay 4
+  colecciones en vez de 1 (ver comentario en `config.yml`).
+- **Promociones** (`src/content/promos/*.json`): la sección "Así son nuestras promociones" de la
+  home — título, descripción, categoría/foto y orden.
+- La foto se puede subir directo desde el panel (queda en `src/assets/products/<categoría>/`) o
+  escribir el nombre exacto de un archivo que ya exista ahí — el campo solo guarda el nombre del
+  archivo, no una ruta completa, porque así es como el código de las páginas busca la imagen
+  (`imageFor(categoria, filename)` con `import.meta.glob`).
+
+### Cómo probarlo/usarlo en local (ya funciona, verificado en la Sesión 19)
+
+```bash
+npm run admin            # levanta decap-server en localhost:8081 (terminal aparte)
+astro dev --background   # el sitio normal
+```
+
+Abrir `http://localhost:4321/admin/index.html` (el trailing slash `/admin/` sin `index.html` da
+404 en el dev server de Astro por una razón no diagnosticada — usar la ruta completa). Con
+`local_backend: true` en `config.yml`, Decap detecta automáticamente el `decap-server` local y
+guarda los cambios directo en los archivos del repo — sin login, sin GitHub, sin Netlify. Cualquier
+cambio hecho ahí sigue necesitando `git add`/`commit` como cualquier otro cambio de archivo.
+
+### Producción (pendiente de configuración externa)
+
+El `backend` de `config.yml` está configurado para Netlify Identity + Git Gateway (la opción que
+no requiere crear una OAuth app aparte). Requiere que el repo esté en GitHub y el sitio desplegado
+en Netlify — ver `docs/DEPLOYMENT.md` §7 y `docs/seo-work/MANUAL_ACTIONS.md` para el checklist
+completo. Hasta que eso esté hecho, `/admin` en producción no podrá guardar cambios (el modo local
+de arriba sí funciona siempre, sin depender de esto).
+
+## 7. Checklist rápido para una sesión futura de actualización de contenido
+
+1. `npm run build && npm run seo:validate` antes de dar por terminado cualquier cambio visual o
    de contenido.
-3. Si se agregan o cambian fotos, verificar que el archivo de origen tenga resolución suficiente
+2. Si se agregan o cambian fotos, verificar que el archivo de origen tenga resolución suficiente
    para donde se va a usar (mínimo ~700px de lado para tarjetas grandes; para un hero a pantalla
    completa se necesitaría bastante más — ver la lección aprendida en
    `docs/seo-work/sessions/session-17.md` sobre el hero de la home).
-4. Revisar visualmente en navegador (desktop y mobile) antes de considerar el cambio terminado —
+3. Revisar visualmente en navegador (desktop y mobile) antes de considerar el cambio terminado —
    un build exitoso no garantiza que se vea bien.

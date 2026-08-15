@@ -1,0 +1,15 @@
+{
+  "slug": "silla-concha-para-pedicure",
+  "name": "Silla concha para pedicure",
+  "category": "muebles",
+  "subcategory": "butacas-y-sillas",
+  "code": "10394",
+  "price": 250,
+  "currency": "USD",
+  "features": [
+    "Set de pedicura",
+    "Base resistente"
+  ],
+  "image": "silla-concha-pedicura.jpg",
+  "imageAlt": "Silla concha para pedicure"
+}

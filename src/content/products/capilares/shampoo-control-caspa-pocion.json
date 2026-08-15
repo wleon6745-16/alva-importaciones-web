@@ -1,0 +1,17 @@
+{
+  "slug": "shampoo-control-caspa-pocion",
+  "name": "Shampoo control caspa Poción",
+  "category": "capilares",
+  "subcategory": "tratamientos-y-shampoos",
+  "code": "11245",
+  "price": 13,
+  "currency": "USD",
+  "brand": "Poción",
+  "features": [
+    "Ayuda a controlar la caspa visible",
+    "Equilibra el cuero cabelludo",
+    "Reduce la picazón"
+  ],
+  "image": "shampoo-control-caspa-pocion.jpg",
+  "imageAlt": "Shampoo control caspa Poción"
+}

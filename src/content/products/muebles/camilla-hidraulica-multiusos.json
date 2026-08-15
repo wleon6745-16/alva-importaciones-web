@@ -1,0 +1,17 @@
+{
+  "slug": "camilla-hidraulica-multiusos",
+  "name": "Camilla hidráulica multiusos",
+  "category": "muebles",
+  "subcategory": "camillas",
+  "code": "8833",
+  "price": 155,
+  "currency": "USD",
+  "features": [
+    "Base metálica",
+    "Autoportante",
+    "Reposamanos",
+    "Portátil"
+  ],
+  "image": "camilla-hidraulica-multiusos.jpg",
+  "imageAlt": "Camilla hidráulica multiusos"
+}

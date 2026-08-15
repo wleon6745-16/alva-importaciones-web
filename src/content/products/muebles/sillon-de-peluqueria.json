@@ -1,0 +1,16 @@
+{
+  "slug": "sillon-de-peluqueria",
+  "name": "Sillón de peluquería",
+  "category": "muebles",
+  "subcategory": "sillones-y-sillas-de-peluqueria-barberia",
+  "price": 349,
+  "currency": "USD",
+  "features": [
+    "Reclinable",
+    "Soporte para pies",
+    "Hidráulico",
+    "Reposamanos"
+  ],
+  "image": "sillon-peluqueria-3.jpg",
+  "imageAlt": "Sillón de peluquería"
+}

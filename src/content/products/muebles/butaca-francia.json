@@ -1,0 +1,16 @@
+{
+  "slug": "butaca-francia",
+  "name": "Butaca Francia",
+  "category": "muebles",
+  "subcategory": "butacas-y-sillas",
+  "code": "10399",
+  "price": 99,
+  "currency": "USD",
+  "features": [
+    "Máximo confort y ergonomía",
+    "Acabado elegante",
+    "Base metálica"
+  ],
+  "image": "butaca-francia.jpg",
+  "imageAlt": "Butaca Francia"
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "tonico-capilar-pocion-dia-y-noche",
+  "name": "Tónico capilar Poción Día y Noche",
+  "category": "capilares",
+  "subcategory": "tratamientos-y-shampoos",
+  "code": "9729",
+  "price": 15.75,
+  "currency": "USD",
+  "brand": "Poción",
+  "features": [
+    "Tratamiento con nanotecnología liposomal",
+    "Ritual de aplicación día y noche",
+    "Enfocado en caída del cabello y crecimiento"
+  ],
+  "image": "tonico-capilar-pocion-dia-noche.jpg",
+  "imageAlt": "Tónico capilar Poción Día y Noche"
+}

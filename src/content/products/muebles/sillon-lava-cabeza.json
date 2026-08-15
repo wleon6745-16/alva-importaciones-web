@@ -1,0 +1,16 @@
+{
+  "slug": "sillon-lava-cabeza",
+  "name": "Sillón lava cabeza",
+  "category": "muebles",
+  "subcategory": "sillones-y-sillas-de-peluqueria-barberia",
+  "price": 365,
+  "currency": "USD",
+  "features": [
+    "Acolchonado",
+    "Poza cabeza de cerámica",
+    "Cubierta de cuero",
+    "Diseño elegante"
+  ],
+  "image": "sillon-lava-cabeza.jpg",
+  "imageAlt": "Sillón lava cabeza"
+}

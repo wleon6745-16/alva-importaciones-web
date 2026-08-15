@@ -1,0 +1,15 @@
+{
+  "slug": "pack-bmt-keratina-shampoo-acondicionador-tratamiento",
+  "name": "Pack BMT Keratina (shampoo + acondicionador + tratamiento)",
+  "category": "capilares",
+  "subcategory": "tratamientos-y-shampoos",
+  "code": "5130",
+  "price": 21.25,
+  "currency": "USD",
+  "brand": "BMT",
+  "features": [
+    "Shampoo + acondicionador + tratamiento"
+  ],
+  "image": "pack-bmt-keratina.jpg",
+  "imageAlt": "Pack BMT Keratina (shampoo + acondicionador + tratamiento)"
+}

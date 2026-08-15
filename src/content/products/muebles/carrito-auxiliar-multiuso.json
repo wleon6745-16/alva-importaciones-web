@@ -1,0 +1,17 @@
+{
+  "slug": "carrito-auxiliar-multiuso",
+  "name": "Carrito auxiliar multiuso",
+  "category": "muebles",
+  "subcategory": "equipo-y-accesorios-de-salon",
+  "code": "11842",
+  "price": 17.5,
+  "currency": "USD",
+  "features": [
+    "3 niveles",
+    "Bandejas de malla",
+    "Ruedas giratorias 360°",
+    "Estructura de acero"
+  ],
+  "image": "carrito-auxiliar.jpg",
+  "imageAlt": "Carrito auxiliar multiuso"
+}

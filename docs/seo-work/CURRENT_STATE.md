@@ -53,6 +53,42 @@ de imágenes descubierta (`ASISTENTE/backend/assets/`), home rediseñada, promoc
 curadas en la home, `docs/CONTENT_WORKFLOW.md` nuevo. `astro.config.mjs` también gana
 `server.allowedHosts` para poder probar por túnel ngrok (solo afecta `astro dev`).
 
+## Sesión 18 (2026-08-15): más productos de Telegram, fotos limpias, promos rediseñadas
+
+Fuera de las 16 fases del plan original. Catálogo ampliado de 50 a 74 productos reales curados
+desde el export de Telegram; 17 fotos de muebles con overlay de marketing recortadas limpias con
+`sharp`; fotos de portada de categoría reemplazadas; `PromoShowcase.astro` rediseñado de nuevo
+(las gráficas de campaña originales no encajaban con la marca).
+
+## Sesión 19 (2026-08-15): Content Collections + panel de administración (Decap CMS)
+
+Pedido directo del usuario ("cómo puedo administrar sin tocar código las fotos, descripciones,
+promociones"). Ver `docs/seo-work/sessions/session-19.md` para el detalle completo. Resumen:
+
+- **Migración de datos**: el catálogo pasó de un único `src/data/products.generated.json`
+  generado por `scripts/sync-public-catalog.ts` a Astro Content Collections — un archivo por
+  producto en `src/content/products/<categoría>/<slug>.json` (74 archivos), validado por Zod en
+  `src/content.config.ts` nuevo. `src/lib/products.ts` nuevo expone `getAllProducts()` /
+  `getProductsByCategory()` para que las 14 páginas que antes importaban el JSON generado sigan
+  funcionando igual. Promociones (`PromoShowcase.astro`) migradas igual a
+  `src/content/promos/*.json`. `scripts/sync-public-catalog.ts` y el JSON generado, eliminados —
+  ya no existe paso de generación intermedio.
+- **Panel `/admin`**: Decap CMS (`public/admin/index.html` + `config.yml`), verificado
+  funcionando en local con `npm run admin` (`decap-server`) + `astro dev` — probado en navegador:
+  las 4 colecciones de productos (una por categoría, porque Decap no lee subcarpetas dentro de una
+  sola colección) y la de promociones cargan sus entradas, y un guardado de prueba (cambio de
+  precio, revertido después) se escribió correctamente en el archivo JSON real. En producción
+  requiere GitHub + Netlify Identity/Git Gateway, todavía sin configurar (ver `MANUAL_ACTIONS.md`
+  filas #16-17) — el repo no tiene remoto de GitHub.
+- **Otros ajustes**: `scripts/validate-seo.ts` reescrito para leer del nuevo directorio de
+  contenido y excluir `/admin` del checklist de SEO (es un app shell, no contenido indexable);
+  `robots.txt` bloquea `/admin/` explícitamente (además del `noindex` de la página); `package.json`
+  gana `npm run admin` y pierde `catalog:sync`. `npm run build` y `npm run seo:validate` pasan
+  limpios al cerrar la sesión.
+- **Docker**: se investigó por pedido del usuario (el motor no arranca,
+  `HCS_E_SERVICE_NOT_AVAILABLE`, ver `MANUAL_ACTIONS.md`) — no es necesario para el sitio, quedó
+  sin resolver como nota no bloqueante.
+
 ## Estado del plan original (16 fases): COMPLETO
 
 Las 16 fases de `MASTER_PLAN.md` (SEO-001 a SEO-016) están `completed`. No quedan tareas
@@ -171,7 +207,9 @@ antes de continuar. Se consultó `asistente-db-1` (Docker, Postgres) directament
 
 ## Estado del build
 
-✅ `npm run build` pasa sin errores (verificado 2026-08-06, 12 páginas generadas, sitemap OK).
+✅ `npm run build` y `npm run seo:validate` pasan sin errores (verificado 2026-08-15 tras la
+migración a Content Collections de la Sesión 19 — 101 páginas generadas, 74 productos, sitemap
+OK).
 
 ## Estado de las pruebas
 

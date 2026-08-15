@@ -1,0 +1,14 @@
+{
+  "slug": "polvo-compacto-amorus",
+  "name": "Polvo compacto Amorus",
+  "category": "maquillaje",
+  "subcategory": "rostro",
+  "price": 5.75,
+  "currency": "USD",
+  "brand": "Amorus",
+  "features": [
+    "Tonos: Natural Beige 05, Porcelain 09, Caramel Beige 11"
+  ],
+  "image": "polvo-compacto-amorus.jpg",
+  "imageAlt": "Polvo compacto Amorus"
+}

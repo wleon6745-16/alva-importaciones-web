@@ -5,20 +5,21 @@ import SectionReveal from "../../../components/SectionReveal.astro";
 import WhatsAppCTA from "../../../components/WhatsAppCTA.astro";
 import { breadcrumbSchema, productSchema } from "../../../lib/structured-data";
 import { siteConfig } from "../../../lib/site-config";
+import { getAllProducts } from "../../../lib/products";
 import type { Product } from "../../../types/product";
-import productsData from "../../../data/products.generated.json";
 
 // Rutas de esta página dinámica: uñas, capilares y maquillaje. Muebles tiene su propia ruta
 // dedicada (src/pages/productos/muebles/[slug].astro, ver SEO-003) y no se genera aquí.
 //
 // `getStaticPaths` corre en module scope al momento del build y NO puede cerrar sobre un
-// `const` declarado en el resto del frontmatter (que corre por render) — solo sobre imports.
-// Por eso la lista de categorías manejadas y el filtro de productos van inline aquí adentro, y
-// se repiten (con otro nombre) donde hagan falta en el resto del archivo. Mismo bug ya
-// encontrado y documentado en SEO-003 (ver docs/seo-work/sessions/session-03.md).
-export function getStaticPaths() {
+// `const` declarado en el resto del frontmatter (que corre por render) — solo sobre imports/
+// awaits hechos dentro de sí misma. Por eso la lista de categorías manejadas y el filtro de
+// productos van inline aquí adentro, y se repiten (con otro nombre) donde hagan falta en el
+// resto del archivo. Mismo bug ya encontrado y documentado en SEO-003 (ver
+// docs/seo-work/sessions/session-03.md).
+export async function getStaticPaths() {
   const handledCategories = ["unas", "capilares", "maquillaje"];
-  const products = (productsData.products as Product[]).filter((p) => handledCategories.includes(p.category));
+  const products = (await getAllProducts()).filter((p) => handledCategories.includes(p.category));
   return products.map((product) => ({
     params: { category: product.category, slug: product.slug },
     props: { product },
@@ -47,7 +48,7 @@ const SUBCATEGORY_TITLES: Record<string, string> = {
   rostro: "Rostro",
 };
 
-const categoryProducts = (productsData.products as Product[]).filter((p) => p.category === product.category);
+const categoryProducts = (await getAllProducts()).filter((p) => p.category === product.category);
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "../../../assets/products/*/*.{jpg,jpeg,png,webp}",

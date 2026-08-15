@@ -1,0 +1,17 @@
+{
+  "slug": "base-liquida-vogue-resist",
+  "name": "Base líquida Vogue Resist",
+  "category": "maquillaje",
+  "subcategory": "rostro",
+  "price": 6.25,
+  "currency": "USD",
+  "brand": "Vogue",
+  "features": [
+    "Hasta 24h o 30h de cobertura",
+    "Resistente al sudor, la humedad y el agua",
+    "Acabado mate natural",
+    "Incluye protección solar"
+  ],
+  "image": "base-liquida-vogue-resist.jpg",
+  "imageAlt": "Base líquida Vogue Resist"
+}

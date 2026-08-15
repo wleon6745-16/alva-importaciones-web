@@ -1,0 +1,16 @@
+{
+  "slug": "sillon-reina-para-pedicure",
+  "name": "Sillón Reina para pedicure",
+  "category": "muebles",
+  "subcategory": "butacas-y-sillas",
+  "code": "10393",
+  "price": 350,
+  "currency": "USD",
+  "features": [
+    "Máximo confort y ergonomía",
+    "Acabado elegante",
+    "Recubierto en cuero"
+  ],
+  "image": "sillon-reina-pedicura.jpg",
+  "imageAlt": "Sillón Reina para pedicure"
+}

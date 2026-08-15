@@ -1,0 +1,15 @@
+{
+  "slug": "iluminador-s-f-r-color",
+  "name": "Iluminador S.F.R. Color",
+  "category": "maquillaje",
+  "subcategory": "rostro",
+  "code": "10860",
+  "price": 2,
+  "currency": "USD",
+  "brand": "S.F.R. Color",
+  "features": [
+    "Varios tonos"
+  ],
+  "image": "iluminador-sfr-color.jpg",
+  "imageAlt": "Iluminador S.F.R. Color"
+}

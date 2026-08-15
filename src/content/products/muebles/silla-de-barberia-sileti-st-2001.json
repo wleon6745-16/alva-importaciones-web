@@ -1,0 +1,17 @@
+{
+  "slug": "silla-de-barberia-sileti-st-2001",
+  "name": "Silla de barbería SILETI ST-2001",
+  "category": "muebles",
+  "subcategory": "sillones-y-sillas-de-peluqueria-barberia",
+  "code": "10362",
+  "price": 230,
+  "currency": "USD",
+  "features": [
+    "Reclinable",
+    "Sistema hidráulico",
+    "Acolchado premium",
+    "Reposapiés cómodo"
+  ],
+  "image": "silla-barberia-st2001.jpg",
+  "imageAlt": "Silla de barbería SILETI ST-2001"
+}

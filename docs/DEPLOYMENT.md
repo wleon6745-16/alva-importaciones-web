@@ -83,10 +83,35 @@ docker run -p 80:80 alva-web
 ajustar `WorkingDirectory`, `User` y `EnvironmentFile` a la ruta/usuario reales del servidor antes
 de activarlas, y una confirmación explícita del usuario antes de instalarlas (ver
 `docs/AUTOMATED_TASKS.md`). Si el hosting no soporta systemd (proveedor gestionado tipo
-Vercel/Netlify, o contenedor sin `systemctl`), la misma lógica (`npm run catalog:sync`,
-`npm run seo:validate`) se dispara como *scheduled function*/cron del proveedor en su lugar.
+Vercel/Netlify, o contenedor sin `systemctl`), la misma lógica (`npm run seo:validate`) se
+dispara como *scheduled function*/cron del proveedor en su lugar.
 
-## 7. Checklist previo al primer despliegue real
+## 7. Panel de administración de contenido (Decap CMS)
+
+El sitio incluye un panel en `/admin` (Decap CMS) para editar productos y promociones sin tocar
+código — ver `docs/CONTENT_WORKFLOW.md` §6 para el uso día a día. Funciona en dos modos:
+
+- **Local (ya funciona, sin configuración adicional)**: `npm run admin` (levanta
+  `decap-server` en `localhost:8081`) en una terminal, `astro dev --background` en otra, y abrir
+  `http://localhost:4321/admin/index.html`. Los cambios se guardan directo en los archivos del
+  repo local (`src/content/products/`, `src/content/promos/`) — hay que hacer `git add`/`commit`
+  igual que con cualquier otro cambio de código.
+- **Producción (requiere configuración externa, no instalada todavía)**: el `backend` en
+  `public/admin/config.yml` está configurado como `git-gateway`, pensado para desplegar el sitio
+  en **Netlify** con **Identity + Git Gateway** activados — es la combinación que no requiere
+  crear una OAuth app aparte. Pasos pendientes (ver `docs/seo-work/MANUAL_ACTIONS.md`):
+  1. Subir este repo a GitHub (no tiene remoto configurado todavía).
+  2. Crear el sitio en Netlify conectado a ese repo de GitHub.
+  3. Activar Netlify Identity en el sitio, invitar al correo del usuario que va a administrar
+     contenido.
+  4. Activar Git Gateway (Site settings → Identity → Services).
+  5. Con eso, `/admin` en el dominio de producción pedirá login de Netlify Identity y guardará
+     los cambios como commits reales en GitHub.
+  - Si se despliega en un hosting distinto a Netlify, `backend.name: git-gateway` no sirve —
+    hay que cambiar a `backend.name: github` con una OAuth app propia (más trabajo de
+    configuración; avisar antes de hacer ese cambio).
+
+## 8. Checklist previo al primer despliegue real
 
 - [ ] Dominio real comprado/asignado y actualizado en `astro.config.mjs` + `site-config.ts`.
 - [ ] HTTPS configurado (certificado válido, HTTP→HTTPS forzado).
