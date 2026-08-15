@@ -316,3 +316,33 @@ explícitos para JSON (sin YAML por defecto no listaba nada). Ver `docs/seo-work
 para el detalle.
 Siguiente: resolver GitHub/Netlify para producción cuando el usuario lo decida; ver
 `docs/seo-work/sessions/session-19.md` sección "Pendientes".
+
+---
+
+Sesión: 20 (CMS-1)
+Fecha: 2026-08-15
+Duración aproximada: ~2 horas (auditoría + implementación)
+Objetivo: auditoría comparativa Decap CMS vs. Pages CMS pedida por el usuario, y ejecución de la
+recomendación aprobada (reemplazar Decap por Pages CMS), conservando íntegra la arquitectura de
+Content Collections de la Sesión 19.
+Trabajo completado: auditoría (confirmó 74 productos/4 promos/101 páginas intactos, cero impacto
+del panel en el bundle público, causa real del 404 de `/admin/` identificada como artefacto del
+dev server — no existe en el build de producción, verificado con `astro preview`); investigación
+con documentación actual (Git Gateway deprecado por Netlify; Pages CMS soporta JSON + subcarpetas
+nativamente + login por correo sin GitHub); reemplazo ejecutado: `public/admin/`, `decap-server` y
+`npm run admin` eliminados; `.pages.yml` nuevo (1 colección de productos con subcarpetas en vez de
+4); `robots.txt` sin `Disallow: /admin/` (ya no existe esa ruta); comentarios que mencionaban Decap
+actualizados en `src/content.config.ts`, `src/lib/products.ts`, `PromoShowcase.astro` (sin cambios
+funcionales); documentación (`CONTENT_WORKFLOW.md`, `DEPLOYMENT.md`, `MANUAL_ACTIONS.md`)
+actualizada.
+Trabajo no completado: conexión real de Pages CMS (requiere que el dueño de la cuenta de GitHub
+instale la GitHub App — consentimiento OAuth que no se puede automatizar, ver `MANUAL_ACTIONS.md`
+#17); por lo mismo, varios detalles de `.pages.yml` quedaron marcados como "sin verificar en vivo"
+en el propio archivo (formato del campo de imagen, reparto automático en subcarpetas, un par de
+nombres de tipo de campo) — no se pudo probar Pages CMS de punta a punta en esta sesión.
+Pruebas: `npm run build` y `npm run seo:validate` verificados después del cambio — ver
+`docs/seo-work/sessions/session-20.md` para las cifras exactas.
+Errores: ninguno introducido — `src/content.config.ts`, `src/content/products/`,
+`src/content/promos/` y `src/lib/products.ts` no cambiaron funcionalmente.
+Siguiente: instalar la GitHub App de Pages CMS y conectar el repo (acción manual del usuario), y
+solo entonces verificar en vivo los puntos marcados como pendientes en `.pages.yml`.

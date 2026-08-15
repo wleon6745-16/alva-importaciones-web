@@ -28,11 +28,10 @@ requiere acceso a cuentas del negocio, no puede completarlo una sesión de Claud
       `WhatsAppCTA.astro` (que ya empuja a `window.dataLayer`, ver SEO-004) llega correctamente
       al proveedor elegido — no requiere cambios de código, solo el script del proveedor y su ID
       (fila #10).
-- [ ] **Panel de administración `/admin` en producción** (Decap CMS, fuera del plan original,
-      agregado en Sesión 19): subir el repo a GitHub, desplegar en Netlify, activar Identity +
-      Git Gateway (filas #16-17). Sin esto, `/admin` no funciona en el dominio real — pero **sí
-      funciona ya en local** con `npm run admin` + `astro dev --background`, sin depender de
-      nada de esto (ver `docs/CONTENT_WORKFLOW.md` §6).
+- [ ] **Panel de administración de contenido (Pages CMS)** (fuera del plan original, agregado en
+      Sesión 19 con Decap CMS, reemplazado por Pages CMS en CMS-1/Sesión 20): instalar la GitHub
+      App de Pages CMS en el repo y conectar desde `app.pagescms.org` (fila #17). No depende de
+      dónde se hospede el sitio — ver `docs/CONTENT_WORKFLOW.md` §6.
 
 Ninguno de estos pasos está bloqueado por trabajo de código pendiente — todos son configuración
 de cuentas externas que solo el dueño del negocio puede autorizar/ejecutar.
@@ -66,7 +65,7 @@ no puede ejecutar sin permisos de administrador.
 | 14 | Confirmar si "Envíos a todo el país 🚛🇪🇨" (mencionado repetidas veces en publicaciones del canal de Telegram, ver `reports/telegram-data-candidates.md` sección Políticas, mensajes del 09.05.2026 y 26.06.2026) sigue siendo una política vigente y en qué condiciones (costo, transportadora, tiempos) | Es una promesa de marketing repetida en el canal oficial, pero no está verificada como política vigente ni documentada con detalle — no se ha usado en ninguna página del sitio todavía (ver SEO-008, se evitó deliberadamente una mención de envíos sin confirmar) | Cualquier página futura que quiera mencionar envíos/cobertura nacional | Pendiente |
 | 15 | Ampliar el cruce foto-por-código (`ASISTENTE/backend/assets/`) contra el resto del catálogo — solo 7 de 50 productos tuvieron match exacto por código en la segunda pasada de calidad; hay ~1440 códigos indexados sin cruzar todavía, y varias fotos sin código legible (broca, esmaltes, monómeros de Master Nails/Mía Secret) que podrían tener match por marca+nombre con revisión manual | Requiere comparación visual humana para confirmar que la foto corresponde al mismo modelo/color exacto (ver metodología en `docs/CONTENT_WORKFLOW.md`) | Ninguna sesión bloqueada — es una mejora incremental de calidad de imagen | Pendiente, no bloqueante |
 | 16 | ~~Subir `alva-importaciones-web` a un repo de GitHub~~ | — | — | **Resuelto 2026-08-15**: repo público `https://github.com/wleon6745-16/alva-importaciones-web`, ramas `master` y `feature/alva-seo-ai-discovery` empujadas (`git remote add origin` + `git push -u`). |
-| 17 | Desplegar el sitio en Netlify conectado al repo de GitHub (fila #16, ya resuelta), y activar Identity + Git Gateway en Site settings | Requiere cuenta de Netlify del negocio; es la forma más simple de que `/admin` (Decap CMS) funcione en producción sin crear una OAuth app aparte | Panel `/admin` en producción | Pendiente — ya no bloqueada, el repo está en GitHub |
+| 17 | Instalar la GitHub App de Pages CMS en `wleon6745-16/alva-importaciones-web` desde `app.pagescms.org` y conectar el repo (reemplaza la fila anterior, que pedía Netlify Identity + Git Gateway para Decap — CMS-1, 2026-08-15, reemplazó Decap por Pages CMS precisamente porque esa pieza de Netlify está deprecada) | Requiere que el dueño de la cuenta de GitHub (`wleon6745-16`) dé el consentimiento OAuth de instalación — no se puede automatizar desde una sesión de Claude Code | Panel de administración de contenido en uso real | Pendiente — ya no bloqueada, el repo está en GitHub. `.pages.yml` ya está listo en la raíz del repo. |
 
 ## Cómo añadir una nueva acción manual
 

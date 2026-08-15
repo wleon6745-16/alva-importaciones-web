@@ -86,30 +86,26 @@ de activarlas, y una confirmación explícita del usuario antes de instalarlas (
 Vercel/Netlify, o contenedor sin `systemctl`), la misma lógica (`npm run seo:validate`) se
 dispara como *scheduled function*/cron del proveedor en su lugar.
 
-## 7. Panel de administración de contenido (Decap CMS)
+## 7. Panel de administración de contenido (Pages CMS)
 
-El sitio incluye un panel en `/admin` (Decap CMS) para editar productos y promociones sin tocar
-código — ver `docs/CONTENT_WORKFLOW.md` §6 para el uso día a día. Funciona en dos modos:
+**CMS-1 (2026-08-15): reemplaza a Decap CMS** — ver `docs/CONTENT_WORKFLOW.md` §6 para el detalle
+completo y el razonamiento. Diferencia clave para el despliegue: **Pages CMS no vive en una ruta
+de este sitio** (no hay `/admin` en `alvaimportaciones.com` ni build especial que preparar para
+él) — se conecta directo a GitHub vía una GitHub App y se administra desde `app.pagescms.org`. Eso
+significa que **la elección de dónde se hospeda el sitio (Netlify, Cloudflare Pages, Vercel, etc.)
+es completamente independiente de la elección del CMS** — a diferencia de Decap, que solo daba
+autenticación "sin configuración extra" si el hosting era Netlify.
 
-- **Local (ya funciona, sin configuración adicional)**: `npm run admin` (levanta
-  `decap-server` en `localhost:8081`) en una terminal, `astro dev --background` en otra, y abrir
-  `http://localhost:4321/admin/index.html`. Los cambios se guardan directo en los archivos del
-  repo local (`src/content/products/`, `src/content/promos/`) — hay que hacer `git add`/`commit`
-  igual que con cualquier otro cambio de código.
-- **Producción (requiere configuración externa, no instalada todavía)**: el `backend` en
-  `public/admin/config.yml` está configurado como `git-gateway`, pensado para desplegar el sitio
-  en **Netlify** con **Identity + Git Gateway** activados — es la combinación que no requiere
-  crear una OAuth app aparte. Pasos pendientes (ver `docs/seo-work/MANUAL_ACTIONS.md`):
-  1. Subir este repo a GitHub (no tiene remoto configurado todavía).
-  2. Crear el sitio en Netlify conectado a ese repo de GitHub.
-  3. Activar Netlify Identity en el sitio, invitar al correo del usuario que va a administrar
-     contenido.
-  4. Activar Git Gateway (Site settings → Identity → Services).
-  5. Con eso, `/admin` en el dominio de producción pedirá login de Netlify Identity y guardará
-     los cambios como commits reales en GitHub.
-  - Si se despliega en un hosting distinto a Netlify, `backend.name: git-gateway` no sirve —
-    hay que cambiar a `backend.name: github` con una OAuth app propia (más trabajo de
-    configuración; avisar antes de hacer ese cambio).
+Pendiente (acción manual, no puede automatizarse porque requiere un consentimiento OAuth del dueño
+de la cuenta de GitHub):
+
+1. Instalar la GitHub App de Pages CMS en `wleon6745-16/alva-importaciones-web` desde
+   [app.pagescms.org](https://app.pagescms.org).
+2. Conectar el repo — Pages CMS debería detectar `.pages.yml` (ya está en la raíz del repo) y
+   mostrar las colecciones de productos y promociones.
+3. Invitar por correo (enlace mágico, sin cuenta de GitHub) a quien vaya a administrar contenido.
+
+Ver `docs/seo-work/MANUAL_ACTIONS.md` para el estado de este pendiente.
 
 ## 8. Checklist previo al primer despliegue real
 

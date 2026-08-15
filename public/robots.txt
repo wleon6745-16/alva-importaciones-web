@@ -1,51 +1,41 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
 
 # Buscadores tradicionales
 User-agent: Googlebot
 Allow: /
-Disallow: /admin/
 
 User-agent: Bingbot
 Allow: /
-Disallow: /admin/
 
 # Bots de búsqueda/asistentes con IA
 User-agent: OAI-SearchBot
 Allow: /
-Disallow: /admin/
 
 User-agent: ChatGPT-User
 Allow: /
-Disallow: /admin/
 
 User-agent: GPTBot
 Allow: /
-Disallow: /admin/
 
 User-agent: PerplexityBot
 Allow: /
-Disallow: /admin/
 
 User-agent: Perplexity-User
 Allow: /
-Disallow: /admin/
 
 User-agent: ClaudeBot
 Allow: /
-Disallow: /admin/
 
 User-agent: anthropic-ai
 Allow: /
-Disallow: /admin/
 
 User-agent: Google-Extended
 Allow: /
-Disallow: /admin/
 
-# Panel de administración de contenido (Decap CMS, agregado al migrar el catálogo a Content
-# Collections) — no indexable, ya lleva noindex, pero se bloquea también aquí por si algún bot
-# no respeta la meta tag.
+# No hay rutas privadas ni administrativas bajo este dominio (CMS-1, 2026-08-15): el panel de
+# administración de contenido no vive en /admin ni en ninguna otra ruta de este sitio — se
+# administra desde un servicio externo (Pages CMS) conectado directo al repositorio de GitHub.
+# Ver docs/CONTENT_WORKFLOW.md §6.
 
 Sitemap: https://alvaimportaciones.com/sitemap-index.xml

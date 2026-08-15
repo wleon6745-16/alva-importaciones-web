@@ -133,47 +133,58 @@ ni se resumen automáticamente. Si se agrega una guía nueva:
 - Debe enlazar productos reales (`ProductGrid`) y, cuando exista, la landing comercial
   relacionada (`/muebles-para-salon-de-belleza-portoviejo`, etc.).
 
-## 6. Panel de administración sin tocar código (`/admin`, Decap CMS)
+## 6. Panel de administración sin tocar código (Pages CMS)
 
-Desde la Sesión 19 existe un panel visual en `/admin` para editar productos y promociones sin
-abrir un editor de código — pensado para que alguien del negocio (no necesariamente técnico) pueda
-actualizar precios, características, fotos y promociones directamente. Vive en
-`public/admin/index.html` + `public/admin/config.yml` (Decap CMS, cargado desde un CDN público,
-sin dependencias nuevas en el sitio en sí).
+**CMS-1 (2026-08-15): se reemplazó Decap CMS por [Pages CMS](https://pagescms.org).** La razón
+completa está en el reporte de esa sesión — resumen: Decap dependía de Git Gateway, una pieza que
+Netlify marcó como deprecada ("nuevas configuraciones no se recomiendan"); Pages CMS se conecta
+directo a GitHub vía una GitHub App (sin depender de qué hosting sirva el sitio), soporta login
+por enlace mágico de correo (sin que la persona necesite entender Git/GitHub), y su formato de
+colección con subcarpetas encaja mejor con `src/content/products/<categoría>/`.
 
-### Qué puede editar
+**Diferencia importante con la versión anterior**: Pages CMS **no vive en una ruta de este sitio**
+(no hay `/admin` en `alvaimportaciones.com`) — se administra desde `app.pagescms.org` (o una
+instancia propia, si algún día se prefiere auto-hospedar), conectado directo a este repositorio de
+GitHub. La configuración de las colecciones vive en `.pages.yml` en la raíz del repo.
 
-- **Productos** (`src/content/products/<categoría>/<slug>.json`): una colección por categoría
-  (Muebles, Uñas, Capilares, Maquillaje) — nombre, precio, marca, código, características, foto y
-  su texto alternativo. Decap CMS no lee subcarpetas dentro de una sola colección, por eso hay 4
-  colecciones en vez de 1 (ver comentario en `config.yml`).
-- **Promociones** (`src/content/promos/*.json`): la sección "Así son nuestras promociones" de la
-  home — título, descripción, categoría/foto y orden.
-- La foto se puede subir directo desde el panel (queda en `src/assets/products/<categoría>/`) o
-  escribir el nombre exacto de un archivo que ya exista ahí — el campo solo guarda el nombre del
-  archivo, no una ruta completa, porque así es como el código de las páginas busca la imagen
-  (`imageFor(categoria, filename)` con `import.meta.glob`).
+### Qué se puede editar
 
-### Cómo probarlo/usarlo en local (ya funciona, verificado en la Sesión 19)
+- **Productos** (`src/content/products/<categoría>/<slug>.json`): una sola colección con
+  subcarpetas habilitadas (`subfolders: true`) — a diferencia de Decap, no hizo falta duplicarla
+  por categoría. Campos: nombre, slug, categoría, subcategoría, código, precio, marca,
+  características, foto principal y su texto alternativo (ALT). Estos son exactamente los campos
+  que existen hoy en `src/content.config.ts` — no se agregaron campos nuevos (destacado,
+  disponible, galería, precio anterior, SEO title/description no existen todavía en el modelo
+  real; agregarlos requeriría un cambio de schema aparte, no forma parte de este cambio de CMS).
+- **Promociones** (`src/content/promos/*.json`): título, descripción, categoría/foto, ALT y orden
+  — los mismos campos que ya existían, sin rediseñar `PromoShowcase.astro`.
+- La foto se sube directo desde el panel (queda en `src/assets/products/<categoría>/`, con
+  subcarpetas habilitadas en la fuente de medios) o se puede escribir el nombre de un archivo que
+  ya exista ahí — el código de las páginas sigue esperando solo el nombre del archivo, no una ruta
+  completa (`imageFor(categoria, filename)` con `import.meta.glob`, sin cambios).
+- `slug` y `code` llevan una advertencia visible en el propio campo explicando que no deben
+  cambiarse en un producto ya publicado (no se confirmó que Pages CMS tenga un modo "solo
+  lectura" por campo — la advertencia de texto es la protección que sí se pudo confirmar).
 
-```bash
-npm run admin            # levanta decap-server en localhost:8081 (terminal aparte)
-astro dev --background   # el sitio normal
-```
+### Cómo conectarlo (pendiente — requiere una acción manual)
 
-Abrir `http://localhost:4321/admin/index.html` (el trailing slash `/admin/` sin `index.html` da
-404 en el dev server de Astro por una razón no diagnosticada — usar la ruta completa). Con
-`local_backend: true` en `config.yml`, Decap detecta automáticamente el `decap-server` local y
-guarda los cambios directo en los archivos del repo — sin login, sin GitHub, sin Netlify. Cualquier
-cambio hecho ahí sigue necesitando `git add`/`commit` como cualquier otro cambio de archivo.
+`.pages.yml` ya está listo, pero conectar Pages CMS requiere que el dueño de la cuenta de GitHub
+instale su GitHub App en este repositorio — es un consentimiento OAuth que solo puede dar esa
+persona desde su propio navegador, no algo que se pueda automatizar. Pasos:
 
-### Producción (pendiente de configuración externa)
-
-El `backend` de `config.yml` está configurado para Netlify Identity + Git Gateway (la opción que
-no requiere crear una OAuth app aparte). Requiere que el repo esté en GitHub y el sitio desplegado
-en Netlify — ver `docs/DEPLOYMENT.md` §7 y `docs/seo-work/MANUAL_ACTIONS.md` para el checklist
-completo. Hasta que eso esté hecho, `/admin` en producción no podrá guardar cambios (el modo local
-de arriba sí funciona siempre, sin depender de esto).
+1. Entrar a [app.pagescms.org](https://app.pagescms.org) e iniciar sesión con la cuenta de GitHub
+   dueña del repo (`wleon6745-16`).
+2. Instalar la GitHub App de Pages CMS, dándole acceso al repositorio
+   `wleon6745-16/alva-importaciones-web` (y a ningún otro, si la pantalla de instalación lo
+   permite elegir por repositorio).
+3. Conectar el repo dentro de Pages CMS — debería detectar `.pages.yml` automáticamente y mostrar
+   las colecciones "Productos" y "Promociones".
+4. **Antes de confiar el catálogo real al panel**, revisar los puntos marcados como "sin verificar
+   en vivo" en los comentarios de `.pages.yml` (formato del campo de foto, si las categorías se
+   reparten solas en subcarpetas, nombres exactos de un par de tipos de campo) — se dejaron
+   documentados ahí mismo porque no se pudieron probar sin este paso manual.
+5. Invitar a la persona de ALVA que va a administrar contenido por correo (enlace mágico, sin
+   necesitar cuenta de GitHub) desde la gestión de usuarios de Pages CMS.
 
 ## 7. Checklist rápido para una sesión futura de actualización de contenido
 

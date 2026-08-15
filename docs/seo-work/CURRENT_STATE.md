@@ -91,6 +91,23 @@ promociones"). Ver `docs/seo-work/sessions/session-19.md` para el detalle comple
   `HCS_E_SERVICE_NOT_AVAILABLE`, ver `MANUAL_ACTIONS.md`) — no es necesario para el sitio, quedó
   sin resolver como nota no bloqueante.
 
+## CMS-1 / Sesión 20 (2026-08-15): reemplazo de Decap CMS por Pages CMS
+
+Auditoría comparativa (pedida por el usuario) encontró que Git Gateway — la pieza que Decap usaba
+para autenticar en producción — está deprecada por Netlify ("nuevas configuraciones no se
+recomiendan"). Se reemplazó Decap por [Pages CMS](https://pagescms.org), que se conecta directo a
+GitHub vía GitHub App (sin depender del hosting) y soporta login por correo sin necesitar cuenta
+de GitHub. Ver `docs/seo-work/sessions/session-20.md` para el detalle completo, incluidos los
+puntos de `.pages.yml` que no se pudieron verificar en vivo (instalar la GitHub App requiere una
+acción manual del dueño de la cuenta de GitHub, todavía pendiente — ver `MANUAL_ACTIONS.md` #17).
+
+Resumen: `public/admin/`, `decap-server` y el script `npm run admin` eliminados; `.pages.yml`
+nuevo en la raíz del repo (una sola colección de productos con subcarpetas, en vez de las 4 que
+requería Decap); `robots.txt` ya no bloquea `/admin` (no existe esa ruta); `src/content.config.ts`,
+`src/content/products/`, `src/content/promos/` y `src/lib/products.ts` **sin cambios funcionales**
+(solo un comentario actualizado). `npm run build` (101 páginas) y `npm run seo:validate` (0
+errores) verificados después del cambio.
+
 ## Estado del plan original (16 fases): COMPLETO
 
 Las 16 fases de `MASTER_PLAN.md` (SEO-001 a SEO-016) están `completed`. No quedan tareas
@@ -209,9 +226,9 @@ antes de continuar. Se consultó `asistente-db-1` (Docker, Postgres) directament
 
 ## Estado del build
 
-✅ `npm run build` y `npm run seo:validate` pasan sin errores (verificado 2026-08-15 tras la
-migración a Content Collections de la Sesión 19 — 101 páginas generadas, 74 productos, sitemap
-OK).
+✅ `npm run build` y `npm run seo:validate` pasan sin errores (verificado 2026-08-15 tras CMS-1 —
+101 páginas generadas, 74 productos, 4 promociones, sitemap OK, sin rastro de `/admin` ni de
+Decap en `dist/`).
 
 ## Estado de las pruebas
 

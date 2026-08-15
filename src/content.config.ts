@@ -1,6 +1,6 @@
-// Colecciones de contenido editables desde Decap CMS (panel en /admin) sin tocar código.
-// Cada producto/promoción vive en su propio archivo JSON dentro de src/content/. Ver
-// docs/CONTENT_WORKFLOW.md para el flujo completo de edición.
+// Colecciones de contenido editables sin tocar código (vía un CMS externo conectado al repo de
+// GitHub — ver docs/CONTENT_WORKFLOW.md §6 para cuál y cómo). Cada producto/promoción vive en su
+// propio archivo JSON dentro de src/content/.
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 

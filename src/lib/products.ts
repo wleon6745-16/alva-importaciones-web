@@ -1,6 +1,6 @@
 // Wrapper sobre la Content Collection "products" (src/content/products/) que reconstruye el
 // mismo shape que usaba antes products.generated.json — así el resto de páginas casi no cambia
-// al migrar de un JSON generado a archivos de contenido editables desde /admin (Decap CMS).
+// al migrar de un JSON generado a archivos de contenido editables sin tocar código.
 import { getCollection } from "astro:content";
 import type { Product } from "../types/product";
 

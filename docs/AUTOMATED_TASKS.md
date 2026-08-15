@@ -16,8 +16,8 @@ catálogo vivía en un único `src/data/products.generated.json` **generado** po
 `scripts/sync-public-catalog.ts`, y había que correr `npm run catalog:sync` después de tocar el
 seed. Ese paso **ya no existe**: cada producto es su propio archivo fuente en
 `src/content/products/<categoría>/<slug>.json` (validado por Zod en `src/content.config.ts`,
-tipado por Astro), editado directamente a mano o desde el panel `/admin` (Decap CMS, ver
-`docs/CONTENT_WORKFLOW.md` §6). No hay build intermedio que pueda quedar desincronizado.
+tipado por Astro), editado directamente a mano o desde Pages CMS (ver `docs/CONTENT_WORKFLOW.md`
+§6). No hay build intermedio que pueda quedar desincronizado.
 
 - **Validación de datos incompletos**: cubierta por `npm run seo:validate` (sección
   `product-incomplete` del reporte — nombre/imagen faltante son error, características vacías son
@@ -38,7 +38,7 @@ tipado por Astro), editado directamente a mano o desde el panel `/admin` (Decap 
 - **Comando sugerido**: `npm run site:update` (aún no existe en `package.json`)
 - **Debe ejecutar en orden**: `build` → `seo:validate`.
 - Desplegar **solo si ambos pasos pasan**. Ya no hay un paso de sincronización de catálogo
-  aparte (ver §1) — cualquier edición hecha a mano o desde `/admin` ya está en
+  aparte (ver §1) — cualquier edición hecha a mano o desde Pages CMS ya está en
   `src/content/products/` antes de este comando.
 
 ## 4. IndexNow

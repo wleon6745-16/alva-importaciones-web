@@ -72,11 +72,7 @@ function main() {
     process.exit(1);
   }
 
-  // El panel de administración (Decap CMS) es un app shell sin contenido indexable — no aplica
-  // el checklist de SEO de páginas normales (title/description/canonical/h1).
-  const files = walkHtmlFiles(DIST).filter(
-    (f) => !f.endsWith("404.html") && !f.includes(`${path.sep}admin${path.sep}`),
-  );
+  const files = walkHtmlFiles(DIST).filter((f) => !f.endsWith("404.html"));
   const pages = files.map((f) => {
     const html = readFileSync(f, "utf-8");
     return { file: f, url: urlPathFor(f), html };
