@@ -8,31 +8,41 @@
 # leer (destacado, disponible, galería, precio anterior, SEO title/description no existen todavía
 # en el modelo real; ver el reporte de la sesión para el porqué no se inventaron aquí).
 #
-# PUNTOS SIN VERIFICAR EN VIVO (no se pudo probar Pages CMS de punta a punta porque instalar su
-# GitHub App requiere una acción manual del dueño de la cuenta de GitHub — ver más abajo). Revisar
-# esto en el primer login real antes de confiar el catálogo real a este archivo:
-#   1. Si "output: ''" en la fuente de medios (abajo) guarda solo el nombre del archivo, tal como
-#      necesita `imageFor()` en el código, o si guarda una ruta completa. Si guarda una ruta, hay
-#      que ajustar `imageFor()` en los archivos que la definen (buscar "function imageFor" en
-#      src/pages/ y src/components/) para quitar el prefijo antes de buscar la imagen — cambio de
-#      una línea por archivo, no aplicado todavía porque no hay forma de confirmar cuál de los dos
-#      casos es real sin haber iniciado sesión.
-#   2. Si "subfolders: true" + el patrón de "filename" reparten un producto nuevo en
-#      src/content/products/<categoría>/ automáticamente según el campo "category", o si hay que
-#      elegir la subcarpeta a mano al crear cada producto.
-#   3. Los tipos de campo "text" (párrafo simple) y "number" se usan abajo por ser el nombre más
-#      común en este tipo de herramientas — no se pudo confirmar contra la referencia completa de
-#      tipos de campo de Pages CMS.
-#   4. No se encontró confirmación de que exista un modo "solo lectura" para un campo puntual. Por
-#      eso "slug" y "code" no están técnicamente bloqueados, solo llevan una advertencia visible
-#      (ver "description" de cada uno) — es la única protección que se pudo confirmar que existe.
+# NOTAS DE VERIFICACIÓN (actualizado tras conectar Pages CMS en vivo — ver
+# docs/seo-work/sessions/session-21.md):
+#
+# Confirmado leyendo el código fuente de Pages CMS (types/field.ts, fields/core/image/*,
+# lib/config-schema.ts en github.com/hunvreus/pagescms):
+#   - "subfolders: true" en una colección SÍ existe y funciona (confirmado en vivo: el árbol de
+#     "Productos" navega correctamente por categoría). NO es una clave válida en una fuente de
+#     medios ("media:") — por eso no aparece más abajo.
+#   - Un campo de imagen NO tiene una clave "media:" propia — la selección de fuente va anidada
+#     en "options.media". Puesto directamente en el campo (como se hizo en la primera versión de
+#     este archivo) se ignora en silencio.
+#   - Pages CMS resuelve la imagen concatenando directo `media.input` + el valor guardado, SIN
+#     buscar en subcarpetas — por eso la vista previa de fotos existentes salía rota: el campo
+#     guarda solo el nombre de archivo ("butaca-francia.jpg"), pero el archivo real vive un nivel
+#     más abajo (`src/assets/products/muebles/butaca-francia.jpg`). La fuente de medios usa ahora
+#     "options.path: {fields.category}" en cada campo de imagen para completar ese nivel — el
+#     mismo mecanismo de plantillas ({fields.x}) que ya funciona en "filename" de la colección.
+#   - "readonly" sí existe como propiedad real de un campo (confirmado en types/field.ts) — no se
+#     aplicó a "slug"/"code" a propósito: probablemente también bloquearía escribirlos al crear un
+#     producto nuevo, lo cual sería peor que el riesgo que evita. La protección actual (texto de
+#     advertencia visible) se mantiene.
+#   - "text" (párrafo) y "number" sí son tipos de campo reales (confirmado en fields/core/).
+#
+# SIN CONFIRMAR TODAVÍA: que "options.path" en un campo de imagen acepte plantillas
+# "{fields.category}" igual que "filename" a nivel de colección — es el mecanismo con más
+# evidencia a favor que se encontró, pero no hay una prueba en vivo de esto específico todavía.
+# Verificar recargando Pages CMS y abriendo un producto existente (p. ej. "Butaca Francia" en
+# Muebles): si la foto se ve, funciona. Si sigue rota, avisar antes de seguir editando fotos desde
+# el panel.
 
 media:
   - name: product_photos
     label: "Fotos de productos y promociones"
     input: src/assets/products
     output: ""
-    subfolders: true
     extensions: [jpg, jpeg, png, webp]
 
 content:
@@ -96,7 +106,9 @@ content:
         label: "Foto principal"
         type: image
         required: true
-        media: product_photos
+        options:
+          media: product_photos
+          path: "{fields.category}"
       - name: imageAlt
         label: "Texto alternativo de la foto (ALT)"
         type: string
@@ -134,7 +146,9 @@ content:
         label: "Foto"
         type: image
         required: true
-        media: product_photos
+        options:
+          media: product_photos
+          path: "{fields.imageCategory}"
       - name: imageAlt
         label: "Texto alternativo de la foto (ALT)"
         type: string
