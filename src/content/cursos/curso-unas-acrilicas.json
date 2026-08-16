@@ -1,0 +1,14 @@
+{
+  "slug": "curso-unas-acrilicas",
+  "title": "Curso Profesional de Uñas Acrílicas",
+  "description": "Curso profesional de uñas acrílicas en Portoviejo. 6 meses, $60 al mes, matrícula $10.",
+  "intro": "Conviértete en nail artist profesional con una formación completa de 6 meses, dictada por Alva Importaciones en Portoviejo.",
+  "highlights": [
+    { "label": "Duración", "value": "6 meses" },
+    { "label": "Inversión", "value": "$60 / mes (o 2 pagos de $30)" },
+    { "label": "Matrícula", "value": "$10 para separar tu cupo" },
+    { "label": "Horario", "value": "Se confirma según cupos disponibles" }
+  ],
+  "ctaLabel": "Reservar mi cupo",
+  "ctaMessage": "Hola, quisiera información para inscribirme al curso de uñas acrílicas"
+}

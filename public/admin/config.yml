@@ -184,3 +184,66 @@ collections:
         hint: "Sube la foto o escribe el nombre exacto de un archivo que ya exista en src/assets/products/<categoría>/"
       - { label: "Texto alternativo de la foto", name: "imageAlt", widget: "string" }
       - { label: "Orden (1 = primero)", name: "order", widget: "number", value_type: "int" }
+
+  - name: "cursos"
+    label: "Cursos"
+    label_singular: "Curso"
+    folder: "src/content/cursos"
+    create: true
+    delete: false
+    extension: "json"
+    format: "json"
+    slug: "{{fields.slug}}"
+    identifier_field: "title"
+    fields:
+      - { label: "Slug (URL, no cambiar en un curso ya publicado)", name: "slug", widget: "string", pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Solo minúsculas, números y guiones"] }
+      - { label: "Título del curso", name: "title", widget: "string" }
+      - { label: "Descripción (para buscadores, 1-2 líneas)", name: "description", widget: "text" }
+      - { label: "Texto de introducción (debajo del título)", name: "intro", widget: "text" }
+      - label: "Datos destacados"
+        name: "highlights"
+        widget: "list"
+        summary: "{{fields.label}}: {{fields.value}}"
+        fields:
+          - { label: "Etiqueta (ej. Duración)", name: "label", widget: "string" }
+          - { label: "Valor (ej. 6 meses)", name: "value", widget: "string" }
+      - { label: "Texto del botón de WhatsApp", name: "ctaLabel", widget: "string" }
+      - { label: "Mensaje que arma el botón de WhatsApp", name: "ctaMessage", widget: "string" }
+
+  - name: "guias"
+    label: "Guías"
+    label_singular: "Guía"
+    folder: "src/content/guias"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{fields.slug}}"
+    identifier_field: "title"
+    fields:
+      - { label: "Slug (URL, no cambiar en una guía ya publicada)", name: "slug", widget: "string", pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Solo minúsculas, números y guiones"] }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción (para buscadores, 1-2 líneas)", name: "description", widget: "text" }
+      - { label: "Introducción (debajo del título, en la página de la guía)", name: "intro", widget: "text" }
+      - { label: "Resumen corto (tarjeta en el listado de Guías)", name: "listSummary", widget: "string" }
+      - { label: "Fecha de publicación", name: "datePublished", widget: "date", date_format: "YYYY-MM-DD", format: "YYYY-MM-DD" }
+      - { label: "Mensaje del botón de WhatsApp", name: "ctaMessage", widget: "string" }
+      - label: "Preguntas frecuentes"
+        name: "faqs"
+        widget: "list"
+        summary: "{{fields.question}}"
+        default: []
+        fields:
+          - { label: "Pregunta", name: "question", widget: "string" }
+          - { label: "Respuesta", name: "answer", widget: "text" }
+      - label: "Productos relacionados (opcional)"
+        name: "relatedProductSlugs"
+        widget: "list"
+        default: []
+        hint: "Escribe el slug exacto del producto (lo ves en la URL de su ficha, ej. camilla-multiuso-3-niveles). Deben ser productos de la categoría Muebles."
+        field: { label: "Slug del producto", name: "slug", widget: "string" }
+      - { label: "Título de la sección de productos relacionados", name: "relatedProductsHeading", widget: "string", default: "Modelos disponibles", required: false }
+      - label: "Contenido de la guía"
+        name: "body"
+        widget: "markdown"
+        hint: "Usa ## para los subtítulos de cada sección. El texto y los enlaces se ven tal como los escribas."

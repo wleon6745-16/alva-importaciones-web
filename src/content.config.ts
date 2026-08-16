@@ -35,4 +35,37 @@ const promos = defineCollection({
   }),
 });
 
-export const collections = { products, promos };
+const cursos = defineCollection({
+  loader: glob({ pattern: "**/*.json", base: "./src/content/cursos" }),
+  schema: z.object({
+    slug: z.string(),
+    title: z.string(),
+    description: z.string(),
+    intro: z.string(),
+    highlights: z.array(z.object({ label: z.string(), value: z.string() })),
+    ctaLabel: z.string().default("Reservar mi cupo"),
+    ctaMessage: z.string(),
+  }),
+});
+
+const guias = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/guias" }),
+  schema: z.object({
+    slug: z.string(),
+    title: z.string(),
+    description: z.string(),
+    intro: z.string(),
+    // Texto corto para la tarjeta en /guias — distinto del `intro` (más largo, va en la propia
+    // página de la guía).
+    listSummary: z.string(),
+    datePublished: z.string(),
+    faqs: z.array(z.object({ question: z.string(), answer: z.string() })).default([]),
+    // Slugs exactos de src/content/products/**/*.json (cualquier categoría) a mostrar como
+    // "modelos relacionados" al final de la guía. Opcional — no todas las guías tienen.
+    relatedProductSlugs: z.array(z.string()).default([]),
+    relatedProductsHeading: z.string().default("Modelos disponibles"),
+    ctaMessage: z.string(),
+  }),
+});
+
+export const collections = { products, promos, cursos, guias };

@@ -70,6 +70,53 @@
       radial-gradient(circle at 50% 100%, color-mix(in srgb, var(--color-blush-100) 80%, transparent), transparent 60%);
   }
 
+  /* Estilo del cuerpo Markdown de las guías (src/content/guias/*.md, editable desde /admin) —
+     no hay plugin de Tailwind Typography instalado; estas reglas imitan a mano el espaciado y
+     los tokens de color ya usados en el resto del sitio (ver componentes de guía anteriores). */
+  .guide-content {
+    max-width: 48rem;
+    margin-inline: auto;
+  }
+
+  .guide-content h2 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--color-primary-900);
+  }
+
+  .guide-content > h2:first-child {
+    margin-top: 0;
+  }
+
+  .guide-content p {
+    margin-top: 0.75rem;
+    color: var(--color-ink-muted);
+  }
+
+  .guide-content ul {
+    margin-top: 1rem;
+    list-style: disc;
+    padding-left: 1.25rem;
+    color: var(--color-ink-muted);
+  }
+
+  .guide-content li + li {
+    margin-top: 0.5rem;
+  }
+
+  .guide-content a {
+    color: var(--color-primary-700);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .guide-content strong {
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+
   .cta-pulse {
     animation: cta-pulse 2.4s ease-in-out infinite;
   }

@@ -1,4 +1,5 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import SectionReveal from "../../components/SectionReveal.astro";
 import { breadcrumbSchema } from "../../lib/structured-data";
@@ -8,33 +9,12 @@ const breadcrumbs = breadcrumbSchema([
   { name: "Guías", path: "/guias" },
 ]);
 
-const guides = [
-  {
-    title: "Cómo elegir silla de barbería",
-    href: "/guias/como-elegir-silla-barberia",
-    description: "Hidráulica vs. fija, reclinación, base y otros factores antes de comprar.",
-  },
-  {
-    title: "Cómo equipar un salón de belleza",
-    href: "/guias/como-equipar-salon-belleza",
-    description: "Qué mueble priorizar en cada zona de servicio, según tu presupuesto.",
-  },
-  {
-    title: "Qué camilla estética comprar",
-    href: "/guias/que-camilla-estetica-comprar",
-    description: "Portátil, hidráulica o de niveles ajustables: cuál conviene según el uso.",
-  },
-  {
-    title: "Materiales para empezar un negocio de uñas",
-    href: "/guias/materiales-para-empezar-negocio-unas",
-    description: "Insumos, herramientas y mobiliario esencial para nail art.",
-  },
-  {
-    title: "Cuidados de muebles de salón de belleza",
-    href: "/guias/cuidados-muebles-salon-belleza",
-    description: "Mantenimiento de tapizado, sistema hidráulico y base metálica.",
-  },
-];
+const guiasEntries = await getCollection("guias");
+const guides = guiasEntries.map((g) => ({
+  title: g.data.title,
+  href: `/guias/${g.data.slug}`,
+  description: g.data.listSummary,
+}));
 ---
 
 <BaseLayout

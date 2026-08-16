@@ -64,13 +64,12 @@ export function localBusinessSchemas() {
   return siteConfig.locations.map((location) => localBusinessSchema(location));
 }
 
-export function courseSchema() {
+export function courseSchema(name: string, description: string) {
   return {
     "@context": "https://schema.org",
     "@type": "Course",
-    name: "Curso Profesional de Uñas Acrílicas",
-    description:
-      "Curso profesional de uñas acrílicas de 6 meses, dictado por Alva Importaciones en Portoviejo. Incluye facilidades de pago.",
+    name,
+    description,
     provider: {
       "@type": "Organization",
       name: siteConfig.name,

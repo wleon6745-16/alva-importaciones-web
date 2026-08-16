@@ -7,5 +7,77 @@
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      // Vista previa (panel derecho al editar) con foto + nombre + precio, como se ve la ficha
+      // real en el sitio — en vez del formulario en blanco por defecto. `h` y `createClass` son
+      // globales que expone decap-cms.js para este caso exacto (sin paso de build/JSX).
+      // Usa widgetFor("image") (el mismo mecanismo que ya resuelve la foto en el formulario de
+      // edición) en vez de reconstruir la URL a mano con getAsset — con public_folder: "" en
+      // config.yml, getAsset devuelve el nombre de archivo tal cual, sin resolver, y la imagen
+      // sale rota.
+      var ProductPreview = createClass({
+        render: function () {
+          var entry = this.props.entry;
+          var name = entry.getIn(["data", "name"]);
+          var price = entry.getIn(["data", "price"]);
+          var priceLabel = price ? "$" + price : "Consultar precio";
+
+          return h(
+            "div",
+            { style: { fontFamily: "sans-serif", maxWidth: "320px", padding: "16px" } },
+            h(
+              "div",
+              {
+                style: {
+                  aspectRatio: "1 / 1",
+                  overflow: "hidden",
+                  background: "#fff",
+                  borderRadius: "12px",
+                  border: "1px solid #eee",
+                },
+              },
+              this.props.widgetFor("image")
+            ),
+            h("h2", { style: { marginTop: "12px", fontSize: "18px", color: "#ce113b" } }, name),
+            h("p", { style: { fontWeight: 600, color: "#141414" } }, priceLabel)
+          );
+        },
+      });
+
+      var PromoPreview = createClass({
+        render: function () {
+          var entry = this.props.entry;
+          var label = entry.getIn(["data", "label"]);
+          var body = entry.getIn(["data", "body"]);
+
+          return h(
+            "div",
+            { style: { fontFamily: "sans-serif", maxWidth: "320px", padding: "16px" } },
+            h(
+              "div",
+              {
+                style: {
+                  aspectRatio: "1 / 1",
+                  overflow: "hidden",
+                  background: "#fff",
+                  borderRadius: "12px",
+                  border: "1px solid #eee",
+                },
+              },
+              this.props.widgetFor("image")
+            ),
+            h("h2", { style: { marginTop: "12px", fontSize: "18px", color: "#ce113b" } }, label),
+            h("p", { style: { color: "#63636b" } }, body)
+          );
+        },
+      });
+
+      ["products-muebles", "products-unas", "products-capilares", "products-maquillaje"].forEach(
+        function (name) {
+          CMS.registerPreviewTemplate(name, ProductPreview);
+        }
+      );
+      CMS.registerPreviewTemplate("promos", PromoPreview);
+    </script>
   </body>
 </html>

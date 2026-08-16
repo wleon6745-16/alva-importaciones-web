@@ -1,4 +1,5 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionReveal from "../components/SectionReveal.astro";
 import WhatsAppCTA from "../components/WhatsAppCTA.astro";
@@ -9,28 +10,24 @@ const breadcrumbs = breadcrumbSchema([
   { name: "Cursos", path: "/cursos" },
 ]);
 
-const highlights = [
-  { label: "Duración", value: "6 meses" },
-  { label: "Inversión", value: "$60 / mes (o 2 pagos de $30)" },
-  { label: "Matrícula", value: "$10 para separar tu cupo" },
-  { label: "Horario", value: "Se confirma según cupos disponibles" },
-];
+// Un solo curso activo hoy — se toma el primero de la colección editable desde /admin.
+const [curso] = await getCollection("cursos");
+const { title, description, intro, highlights, ctaLabel, ctaMessage } = curso.data;
 ---
 
 <BaseLayout
-  title="Curso Profesional de Uñas Acrílicas"
-  description="Curso profesional de uñas acrílicas en Portoviejo. 6 meses, $60 al mes, matrícula $10."
+  title={title}
+  description={description}
   path="/cursos"
-  structuredData={[courseSchema(), breadcrumbs]}
+  structuredData={[courseSchema(title, description), breadcrumbs]}
 >
   <section class="hero-glow px-6 py-20 text-center">
     <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Formación</p>
     <h1 class="mt-4 font-display text-4xl text-primary-900">
-      Curso Profesional de Uñas Acrílicas
+      {title}
     </h1>
     <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-muted">
-      Conviértete en nail artist profesional con una formación completa de 6 meses, dictada
-      por Alva Importaciones en Portoviejo.
+      {intro}
     </p>
   </section>
 
@@ -55,11 +52,7 @@ const highlights = [
       Una asesora te confirma qué horario está abierto actualmente y cómo separar tu lugar
       con la matrícula.
     </p>
-    <WhatsAppCTA
-      label="Reservar mi cupo"
-      class="mt-6"
-      message="Hola, quisiera información para inscribirme al curso de uñas acrílicas"
-    />
+    <WhatsAppCTA label={ctaLabel} class="mt-6" message={ctaMessage} />
     <a href="/cursos-de-unas-portoviejo" class="mt-4 block text-sm font-semibold text-primary-700 hover:underline">
       Ver también: cursos de uñas en Portoviejo →
     </a>

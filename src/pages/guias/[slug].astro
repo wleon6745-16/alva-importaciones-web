@@ -1,0 +1,79 @@
+---
+import { getCollection, render } from "astro:content";
+import SectionReveal from "../../components/SectionReveal.astro";
+import GuideLayout from "../../components/GuideLayout.astro";
+import ProductGrid from "../../components/ProductGrid.astro";
+import { getAllProducts } from "../../lib/products";
+
+export async function getStaticPaths() {
+  const guias = await getCollection("guias");
+  return guias.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const {
+  title,
+  description,
+  intro,
+  datePublished,
+  faqs,
+  relatedProductSlugs,
+  relatedProductsHeading,
+  ctaMessage,
+} = entry.data;
+const { Content } = await render(entry);
+
+let relatedProducts: Awaited<ReturnType<typeof getAllProducts>> = [];
+if (relatedProductSlugs.length > 0) {
+  const allProducts = await getAllProducts();
+  const images = import.meta.glob<{ default: ImageMetadata }>(
+    "../../assets/products/*/*.{jpg,jpeg,png,webp}",
+    { eager: true },
+  );
+  relatedProducts = relatedProductSlugs
+    .map((slug) => allProducts.find((p) => p.slug === slug))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p))
+    .map((p) => {
+      const entry = images[`../../assets/products/${p.category}/${p.image}`];
+      if (!entry) throw new Error(`Imagen no encontrada para: ${p.category}/${p.image}`);
+      return { ...p, image: entry.default };
+    });
+}
+---
+
+<GuideLayout
+  title={title}
+  description={description}
+  path={`/guias/${entry.data.slug}`}
+  heading={title}
+  intro={intro}
+  datePublished={datePublished}
+  faqs={faqs}
+  ctaMessage={ctaMessage}
+>
+  <SectionReveal as="section" class="px-6 pb-16">
+    <div class="guide-content">
+      <Content />
+    </div>
+
+    {
+      relatedProducts.length > 0 && (
+        <div class="mt-12">
+          <h2 class="mx-auto max-w-3xl font-display text-2xl text-primary-900">
+            {relatedProductsHeading}
+          </h2>
+          <div class="mt-8">
+            {/* Asume que todos los relatedProductSlugs de una misma guía son de la categoría
+                "muebles" (cierto para las 5 guías actuales) — ProductGrid solo acepta un
+                basePath por grilla. Si una guía futura mezcla categorías, hay que extender
+                ProductGrid para aceptar basePath por ítem. */}
+            <ProductGrid items={relatedProducts} basePath="/productos/muebles" />
+          </div>
+        </div>
+      )
+    }
+  </SectionReveal>
+</GuideLayout>
