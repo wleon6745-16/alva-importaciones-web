@@ -9,3 +9,12 @@
 
 /llms.txt
   Content-Type: text/plain; charset=UTF-8
+
+# Seguridad básica (auditoría SEO-Analytics 2026-08-16) — headers sin riesgo de romper nada:
+# no incluye CSP todavía a propósito, porque una CSP mal calibrada puede bloquear GA4/imágenes/
+# fuentes silenciosamente; queda documentado como pendiente en SEO_ANALYTICS_BASELINE.md en vez
+# de aplicarla sin poder probar cada página contra ella.
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin

@@ -74,12 +74,17 @@ const businessLd = localBusinessSchema(location, pageUrl);
           number={location.whatsappNumber}
           pulse
           branch={location.slug}
+          source="location"
+          pageType="location"
         />
         <a
           href={location.mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 hover:bg-primary-800 hover:text-white"
+          data-track-event="click_maps"
+          data-track-source="location"
+          data-track-branch={location.slug}
         >
           Ver en Google Maps
         </a>

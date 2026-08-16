@@ -1,0 +1,29 @@
+---
+// Carga condicional de Google Analytics 4 + inicialización del tracking de clics/impresiones.
+// Sin PUBLIC_GA_MEASUREMENT_ID configurada, no se renderiza ningún <script> de gtag.js — el
+// sitio funciona exactamente igual, solo que dataLayer.push() no llega a ningún proveedor real.
+// Ver docs/ANALYTICS.md.
+const gaId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+---
+
+{
+  gaId && (
+    <>
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
+      <script define:vars={{ gaId }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", gaId);
+      </script>
+    </>
+  )
+}
+
+<script>
+  import { initClickTracking, initViewTracking } from "../lib/analytics";
+  initClickTracking();
+  initViewTracking();
+</script>

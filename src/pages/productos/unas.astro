@@ -60,7 +60,7 @@ const breadcrumbs = breadcrumbSchema([
       Monómeros, acrílicos, geles, esmaltes y accesorios de marcas como Master Nails y Mia
       Secret.
     </p>
-    <WhatsAppCTA label="Consultar por WhatsApp" pulse class="mt-8" message="Hola, quisiera consultar sobre productos de uñas" />
+    <WhatsAppCTA label="Consultar por WhatsApp" pulse class="mt-8" message="Hola, quisiera consultar sobre productos de uñas" source="category" pageType="category" category="unas" ctaLocation="hero" />
   </section>
 
   {
@@ -104,6 +104,9 @@ const breadcrumbs = breadcrumbSchema([
                     productId={item.id}
                     productName={item.name}
                     category={item.category}
+                    source="product"
+                    pageType="category"
+                    ctaLocation="grid"
                   />
                 </div>
               </div>
@@ -117,7 +120,7 @@ const breadcrumbs = breadcrumbSchema([
   <SectionReveal as="section" class="bg-blush-50 px-6 py-16 text-center">
     <h2 class="font-display text-2xl text-primary-900">¿No encuentras lo que buscas?</h2>
     <p class="mt-3 text-ink-muted">Seguimos ampliando el catálogo de uñas — pregúntanos por WhatsApp.</p>
-    <WhatsAppCTA label="Consultar por WhatsApp" class="mt-6" message="Hola, quisiera consultar sobre productos de uñas" />
+    <WhatsAppCTA label="Consultar por WhatsApp" class="mt-6" message="Hola, quisiera consultar sobre productos de uñas" source="category" pageType="category" category="unas" ctaLocation="bottom" />
     <a href="/productos-para-unas-portoviejo" class="mt-4 inline-block text-sm font-semibold text-primary-700 hover:underline">
       Ver también: productos para uñas en Portoviejo →
     </a>

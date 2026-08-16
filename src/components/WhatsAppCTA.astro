@@ -8,11 +8,21 @@ interface Props {
   variant?: "solid" | "outline";
   pulse?: boolean;
   class?: string;
-  /** Datos opcionales para el evento de analítica whatsapp_click (ver dataLayer más abajo). */
+  /** Datos para el evento click_whatsapp (ver src/lib/analytics.ts). */
   productId?: string;
   productName?: string;
   category?: string;
   branch?: string;
+  /** De dónde viene el clic — header, product, category, promotion, course, contact, home,
+   *  location, guide, about, not_found, catalog, floating_button, etc. Obligatorio en la
+   *  práctica: sin esto el evento no dice de qué parte del sitio salió el lead. */
+  source?: string;
+  /** Tipo de página donde vive el botón (product, category, home, guide, course...). */
+  pageType?: string;
+  /** Posición del botón dentro de la página (hero, mid, bottom, floating...). */
+  ctaLocation?: string;
+  /** Nombres de evento adicionales a disparar en el mismo clic (ej. ["click_course_contact"]). */
+  extraTrackEvents?: string[];
 }
 
 const {
@@ -26,7 +36,13 @@ const {
   productName,
   category,
   branch = number && number !== siteConfig.locations[0].whatsappNumber ? "sucursal" : "matriz",
+  source,
+  pageType,
+  ctaLocation,
+  extraTrackEvents = [],
 } = Astro.props;
+
+const trackEvents = ["click_whatsapp", ...extraTrackEvents].join(" ");
 
 const base =
   "inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition-transform duration-200 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700";
@@ -42,11 +58,14 @@ const variants = {
   target="_blank"
   rel="noopener noreferrer"
   class={`${base} ${variants[variant]} ${pulse ? "cta-pulse" : ""} ${className} whatsapp-cta`}
-  data-whatsapp-cta
-  data-product-id={productId}
-  data-product-name={productName}
-  data-category={category}
-  data-branch={branch}
+  data-track-event={trackEvents}
+  data-track-source={source}
+  data-track-page-type={pageType}
+  data-track-cta-location={ctaLocation}
+  data-track-product-code={productId}
+  data-track-product-name={productName}
+  data-track-category={category}
+  data-track-branch={branch}
 >
   <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
     <path
@@ -55,28 +74,3 @@ const variants = {
   </svg>
   {label}
 </a>
-
-<script>
-  // Evento genérico compatible con el patrón dataLayer de GTM/GA4. No hay proveedor de
-  // analítica instalado todavía (ver docs/seo-work/NEXT_SESSION.md de SEO-004) — este push
-  // queda listo para que, cuando se instale uno, empiece a recibir datos sin tocar este código.
-  declare global {
-    interface Window {
-      dataLayer?: unknown[];
-    }
-  }
-
-  document.querySelectorAll<HTMLAnchorElement>("[data-whatsapp-cta]").forEach((link) => {
-    link.addEventListener("click", () => {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: "whatsapp_click",
-        product_id: link.dataset.productId || undefined,
-        product_name: link.dataset.productName || undefined,
-        category: link.dataset.category || undefined,
-        page_path: window.location.pathname,
-        branch: link.dataset.branch || undefined,
-      });
-    });
-  });
-</script>

@@ -39,7 +39,15 @@ const year = new Date().getFullYear();
       <h4 class="text-sm font-semibold uppercase tracking-wide text-blush-100/70">Síguenos</h4>
       <ul class="mt-4 space-y-2 text-sm">
         <li>
-          <a href={siteConfig.instagram} target="_blank" rel="noopener noreferrer" class="hover:text-white">
+          <a
+            href={siteConfig.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-white"
+            data-track-event="click_social"
+            data-track-platform="instagram"
+            data-track-source="footer"
+          >
             Instagram
           </a>
         </li>

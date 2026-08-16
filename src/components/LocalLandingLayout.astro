@@ -28,7 +28,7 @@ const breadcrumbs = breadcrumbSchema([
     <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">{kicker}</p>
     <h1 class="mt-4 font-display text-4xl text-primary-900 sm:text-5xl">{heading}</h1>
     <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-muted">{intro}</p>
-    <WhatsAppCTA label="Consultar por WhatsApp" pulse class="mt-8" message={ctaMessage} />
+    <WhatsAppCTA label="Consultar por WhatsApp" pulse class="mt-8" message={ctaMessage} source="local_landing" pageType="local_landing" ctaLocation="hero" />
   </section>
 
   <slot />
@@ -36,6 +36,6 @@ const breadcrumbs = breadcrumbSchema([
   <SectionReveal as="section" class="bg-blush-50 px-6 py-16 text-center">
     <h2 class="font-display text-2xl text-primary-900">¿Tienes dudas?</h2>
     <p class="mt-3 text-ink-muted">Escríbenos por WhatsApp, te respondemos al instante.</p>
-    <WhatsAppCTA label="Consultar por WhatsApp" class="mt-6" message={ctaMessage} />
+    <WhatsAppCTA label="Consultar por WhatsApp" class="mt-6" message={ctaMessage} source="local_landing" pageType="local_landing" ctaLocation="bottom" />
   </SectionReveal>
 </BaseLayout>

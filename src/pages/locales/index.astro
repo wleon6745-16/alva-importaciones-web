@@ -51,6 +51,9 @@ const breadcrumbs = breadcrumbSchema([
               target="_blank"
               rel="noopener noreferrer"
               class="text-sm font-semibold text-primary-700 hover:underline"
+              data-track-event="click_maps"
+              data-track-source="location"
+              data-track-branch={location.slug}
             >
               Ver en Google Maps →
             </a>
@@ -60,6 +63,8 @@ const breadcrumbs = breadcrumbSchema([
                 number={location.whatsappNumber}
                 class="!px-4 !py-2 text-sm"
                 branch={location.slug}
+                source="location"
+                pageType="location"
               />
               <a
                 href={`/locales/${location.slug}/`}

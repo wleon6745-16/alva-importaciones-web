@@ -52,7 +52,15 @@ const { title, description, intro, highlights, ctaLabel, ctaMessage } = curso.da
       Una asesora te confirma qué horario está abierto actualmente y cómo separar tu lugar
       con la matrícula.
     </p>
-    <WhatsAppCTA label={ctaLabel} class="mt-6" message={ctaMessage} />
+    <WhatsAppCTA
+      label={ctaLabel}
+      class="mt-6"
+      message={ctaMessage}
+      source="course"
+      pageType="course"
+      ctaLocation="bottom"
+      extraTrackEvents={["click_course_contact"]}
+    />
     <a href="/cursos-de-unas-portoviejo" class="mt-4 block text-sm font-semibold text-primary-700 hover:underline">
       Ver también: cursos de uñas en Portoviejo →
     </a>

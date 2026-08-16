@@ -102,7 +102,7 @@ const faqLd = faqSchema(faqs);
       Camillas, sillones de peluquería, butacas y mesas de trabajo, listos para equipar o
       renovar tu espacio en Portoviejo.
     </p>
-    <WhatsAppCTA label="Consultar por WhatsApp" pulse class="mt-8" message="Hola, quisiera consultar sobre muebles para mi salón" />
+    <WhatsAppCTA label="Consultar por WhatsApp" pulse class="mt-8" message="Hola, quisiera consultar sobre muebles para mi salón" source="category" pageType="category" category="muebles" ctaLocation="hero" />
   </section>
 
   <nav aria-label="Categorías de muebles" class="px-6 pb-4">
@@ -171,6 +171,9 @@ const faqLd = faqSchema(faqs);
                     productId={item.id}
                     productName={item.name}
                     category={item.category}
+                    source="product"
+                    pageType="category"
+                    ctaLocation="grid"
                   />
                 </div>
               </div>
@@ -184,7 +187,7 @@ const faqLd = faqSchema(faqs);
   <SectionReveal as="section" class="bg-blush-50 px-6 py-16 text-center">
     <h2 class="font-display text-2xl text-primary-900">¿No encuentras lo que buscas?</h2>
     <p class="mt-3 text-ink-muted">Pregúntanos, seguimos ampliando el catálogo de muebles.</p>
-    <WhatsAppCTA label="Consultar por WhatsApp" class="mt-6" />
+    <WhatsAppCTA label="Consultar por WhatsApp" class="mt-6" source="category" pageType="category" category="muebles" ctaLocation="bottom" />
   </SectionReveal>
 
   <SectionReveal as="section" class="px-6 py-16">

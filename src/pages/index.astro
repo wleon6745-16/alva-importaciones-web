@@ -74,7 +74,7 @@ const mueblesDestacados = [
           instante por WhatsApp.
         </p>
         <div class="mt-8 flex flex-wrap gap-4">
-          <WhatsAppCTA label="Chatea por WhatsApp" pulse />
+          <WhatsAppCTA label="Chatea por WhatsApp" pulse source="home" pageType="home" ctaLocation="hero" />
           <a
             href="/productos/muebles"
             class="inline-flex items-center gap-2 rounded-full border-2 border-white px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-white hover:text-primary-900"
@@ -135,6 +135,12 @@ const mueblesDestacados = [
                   label="Consultar"
                   class="mt-1 w-fit !px-4 !py-2 text-sm"
                   message={`Hola, quisiera consultar sobre: ${m.name}`}
+                  source="home"
+                  pageType="home"
+                  ctaLocation="product_highlight"
+                  productId={m.slug}
+                  productName={m.name}
+                  category="muebles"
                 />
               </div>
             </div>
@@ -182,7 +188,7 @@ const mueblesDestacados = [
           WhatsApp en segundos: precios actualizados, disponibilidad real y sugerencias si
           un producto se agotó. Cuando hace falta, una asesora toma la conversación.
         </p>
-        <WhatsAppCTA label="Pruébalo por WhatsApp" class="mt-8" />
+        <WhatsAppCTA label="Pruébalo por WhatsApp" class="mt-8" source="home" pageType="home" ctaLocation="chat_demo" />
       </div>
       <ChatDemo client:visible />
     </div>
@@ -227,7 +233,7 @@ const mueblesDestacados = [
         te ayudamos al instante.
       </p>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <WhatsAppCTA label="Chatea por WhatsApp" variant="outline" class="!border-white !text-white hover:!bg-white hover:!text-primary-800" />
+        <WhatsAppCTA label="Chatea por WhatsApp" variant="outline" class="!border-white !text-white hover:!bg-white hover:!text-primary-800" source="home" pageType="home" ctaLocation="bottom" />
         <a
           href="/locales"
           class="inline-flex items-center gap-2 rounded-full border-2 border-white px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-white hover:text-primary-800"

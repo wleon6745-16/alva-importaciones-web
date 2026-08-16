@@ -6,6 +6,10 @@
   // Sitio 100% estático (astro.config.mjs -> output: "static"), sin SSR ni bindings:
   // solo se sirven los archivos de dist/, no hace falta "main" ni adapter de Astro.
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
+    // Sin esto, una URL inexistente devuelve 404 con cuerpo vacío (detectado en la auditoría de
+    // producción del 2026-08-16) — con esto sirve dist/404.html (con enlaces a inicio/productos/
+    // contacto) manteniendo el status 404 real.
+    "not_found_handling": "404-page"
   }
 }

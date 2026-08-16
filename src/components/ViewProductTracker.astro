@@ -1,0 +1,31 @@
+---
+// Dispara view_product una sola vez al cargar una página de detalle de producto. Componente
+// aparte (en vez de un <script> embebido en cada [slug].astro) para no duplicar la lógica en
+// las dos rutas de producto (productos/muebles/[slug].astro y productos/[category]/[slug].astro).
+interface Props {
+  productCode?: string;
+  productName: string;
+  category: string;
+  brand?: string;
+}
+
+const { productCode, productName, category, brand } = Astro.props;
+---
+
+<script define:vars={{ productCode, productName, category, brand }}>
+  window.__trackViewProduct = { productCode, productName, category, brand };
+</script>
+<script>
+  import { trackEvent } from "../lib/analytics";
+  const data = (
+    window as unknown as {
+      __trackViewProduct: { productCode?: string; productName: string; category: string; brand?: string };
+    }
+  ).__trackViewProduct;
+  trackEvent("view_product", {
+    product_code: data.productCode,
+    product_name: data.productName,
+    category: data.category,
+    brand: data.brand,
+  });
+</script>

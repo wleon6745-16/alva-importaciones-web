@@ -40,7 +40,11 @@ const promos = promoEntries.map((entry) => ({
   <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
     {
       promos.map((promo) => (
-        <div class="glass-card group flex flex-col overflow-hidden rounded-2xl shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+        <div
+          class="glass-card group flex flex-col overflow-hidden rounded-2xl shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
+          data-track-view-event="view_promotion"
+          data-track-view-promotion-label={promo.label}
+        >
           <div class="aspect-square overflow-hidden bg-white">
             <Image
               src={promo.imageAsset}
@@ -66,6 +70,9 @@ const promos = promoEntries.map((entry) => ({
       target="_blank"
       rel="noopener noreferrer"
       class="inline-flex items-center gap-2 rounded-full bg-primary-800 px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-primary-700"
+      data-track-event="click_social"
+      data-track-platform="whatsapp_channel"
+      data-track-source="promotions"
     >
       Seguir canal de WhatsApp →
     </a>
@@ -74,6 +81,9 @@ const promos = promoEntries.map((entry) => ({
       target="_blank"
       rel="noopener noreferrer"
       class="inline-flex items-center gap-2 rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 transition-transform hover:scale-105 hover:bg-primary-800 hover:text-white"
+      data-track-event="click_social"
+      data-track-platform="instagram"
+      data-track-source="promotions"
     >
       Seguir en Instagram →
     </a>
