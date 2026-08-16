@@ -24,7 +24,7 @@
 backend:
   name: git-gateway
   repo: wleon6745-16/alva-importaciones-web
-  branch: main
+  branch: feature/alva-seo-ai-discovery
   auth_type: pkce
   base_url: https://auth.decapbridge.com
   auth_endpoint: /sites/8f798637-5c80-46e7-b07d-e6ab7282e823/pkce
