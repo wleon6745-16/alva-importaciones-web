@@ -12,22 +12,43 @@
 #   2. astro dev --background   (el sitio normal)
 #   3. Abrir http://localhost:4321/admin/index.html
 #
-# USO EN PRODUCCIÓN (pendiente de una acción manual — ver docs/seo-work/MANUAL_ACTIONS.md):
-#   Git Gateway (la pieza clásica de Netlify Identity + Git Gateway) está deprecada por Netlify.
-#   En su lugar, este archivo usa DecapBridge (https://decapbridge.com) — un reemplazo gratuito
-#   hecho específicamente para esto, sin necesidad de mantener servidor propio. Falta:
-#     1. Crear una cuenta en decapbridge.com y un "Site" ahí para este repo de GitHub.
-#     2. Copiar el "Site ID" real que genera y reemplazar TU-SITE-ID abajo por ese valor.
-#     3. Invitar por correo a la persona de ALVA que va a administrar contenido, desde el panel
-#        de DecapBridge.
-#   Ninguno de estos pasos lo puede hacer una sesión de Claude Code — requieren crear una cuenta
-#   externa, algo que solo el dueño del negocio puede autorizar.
+# USO EN PRODUCCIÓN: resuelto 2026-08-16. Git Gateway (la pieza clásica de Netlify Identity +
+#   Git Gateway) está deprecada por Netlify; en su lugar, este archivo usa DecapBridge
+#   (https://decapbridge.com) — un reemplazo gratuito hecho específicamente para esto, sin
+#   necesidad de mantener servidor propio. Cuenta creada, sitio conectado a
+#   wleon6745-16/alva-importaciones-web, autenticación PKCE (el bloque `backend` de abajo viene
+#   generado directo por DecapBridge, con el Site ID real ya incluido). Falta solo invitar por
+#   correo a la persona de ALVA que va a administrar contenido, desde el panel de DecapBridge —
+#   no automatizable desde una sesión de Claude Code.
 
 backend:
   name: git-gateway
-  identity_url: https://auth.decapbridge.com/sites/TU-SITE-ID
-  gateway_url: https://gateway.decapbridge.com
+  repo: wleon6745-16/alva-importaciones-web
   branch: main
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/8f798637-5c80-46e7-b07d-e6ab7282e823/pkce
+  auth_token_endpoint: /sites/8f798637-5c80-46e7-b07d-e6ab7282e823/token
+  gateway_url: https://gateway.decapbridge.com
+
+  # Para ver quién hizo qué cambio en el historial de git
+  commit_messages:
+    create: Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    update: Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    delete: Delete {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    uploadMedia: Upload "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    deleteMedia: Delete "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
+
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
+
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+
+site_url: https://alvaimportaciones.com
 
 local_backend: true
 
