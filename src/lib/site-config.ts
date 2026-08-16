@@ -23,7 +23,9 @@ export const siteConfig = {
       mapsUrl:
         "https://www.google.com/maps/search/?api=1&query=" +
         encodeURIComponent("Calle Quito, entre Av. Manabí y García Moreno, Portoviejo, Manabí"),
-      whatsappNumber: "593999526807",
+      // Corregido 2026-08-16 (confirmado directo por el usuario) — el 593999526807 anterior era
+      // incorrecto.
+      whatsappNumber: "593959298275",
     },
     {
       slug: "sucursal",
@@ -34,7 +36,9 @@ export const siteConfig = {
       mapsUrl:
         "https://www.google.com/maps/search/?api=1&query=" +
         encodeURIComponent("Calle 9 de Octubre, entre Ricaurte y Olmedo, Portoviejo, Manabí"),
-      whatsappNumber: "593963946590",
+      // CONFLICT-001 resuelto 2026-08-16 (confirmado directo por el usuario): es 76, no 46 —
+      // coincide con lo visto en el canal de Telegram. Ver docs/seo-work/DATA_CONFLICTS.md.
+      whatsappNumber: "593963976590",
     },
   ],
   brands: [

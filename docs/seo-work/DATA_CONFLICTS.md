@@ -14,12 +14,22 @@ el usuario (o una sesión futura con instrucción explícita) los confirme.
     de Alva Importaciones (`messages2.html`, mensaje del 04-08-2026, promoción de insumos de uñas).
 - **Diferencia exacta**: `593963946590` (configurado) vs `593963976590` (visto en Telegram) — difieren
   en el 5º-6º dígito local (`46` vs `76`).
-- **Estado**: sin resolver. No se ha cambiado el número configurado.
+- **Estado**: **Resuelto 2026-08-16** — el usuario confirmó directo en el chat que es
+  `0963976590` (→ `593963976590`), coincidiendo con lo visto en Telegram, no con el `46` que se
+  había registrado antes. Actualizado en `src/lib/site-config.ts` (Sucursal).
 - **Impacto**: si el número configurado es incorrecto, los CTA de WhatsApp de la Sucursal en el
   sitio (`/contacto`, WhatsApp genérico si se usara ese número) fallarían o llegarían a un
   destinatario equivocado.
-- **Acción pendiente**: confirmar con el cliente cuál de los dos números es el real. Ver
-  `MANUAL_ACTIONS.md`.
+
+## CONFLICT-003 — Número de WhatsApp de la Matriz también estaba mal
+
+- Al confirmar CONFLICT-001, el usuario señaló de paso (2026-08-16) que el número de la Matriz
+  (calle Quito) configurado, `593999526807`, también era incorrecto — el real es `0959298275`
+  (→ `593959298275`).
+- **Impacto**: este es el número usado como `primaryWhatsappNumber` en todo el sitio (CTA
+  genérico de producto, home, etc. — no solo `/locales/matriz`), así que el alcance era mayor
+  que el de CONFLICT-001.
+- **Estado**: **Resuelto 2026-08-16**, actualizado en `src/lib/site-config.ts` (Matriz).
 
 ---
 
