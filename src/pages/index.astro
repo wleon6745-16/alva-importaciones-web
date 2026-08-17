@@ -8,6 +8,7 @@ import ChatDemo from "../components/ChatDemo.tsx";
 import PromoShowcase from "../components/PromoShowcase.astro";
 import TrustSection from "../components/TrustSection.astro";
 import { siteConfig } from "../lib/site-config";
+import { categories as categoryMeta } from "../lib/categories";
 
 import heroImage from "../assets/products/muebles/camilla-3-niveles.jpg";
 import nailsImage from "../assets/products/unas/monomero-master-nails-16oz.jpg";
@@ -55,48 +56,88 @@ const mueblesDestacados = [
 <BaseLayout title={siteConfig.name} description={siteConfig.description} path="/">
   <section class="relative overflow-hidden bg-primary-900">
     <div
-      class="absolute inset-0 opacity-40"
-      style="background-image: radial-gradient(circle at 20% 20%, rgba(227,28,77,0.35), transparent 55%), radial-gradient(circle at 80% 80%, rgba(227,28,77,0.25), transparent 50%);"
+      class="pointer-events-none absolute inset-0 opacity-50"
+      style="background-image: radial-gradient(circle at 15% 15%, rgba(227,28,77,0.4), transparent 55%), radial-gradient(circle at 85% 85%, rgba(227,28,77,0.25), transparent 50%);"
+      aria-hidden="true"
     >
     </div>
 
-    <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 sm:py-28 lg:grid-cols-2">
-      <div>
+    <div class="relative mx-auto grid max-w-6xl items-center gap-16 px-6 py-20 sm:py-28 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:py-32">
+      <SectionReveal>
         <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blush-100">
           {siteConfig.tagline}
         </p>
-        <h1 class="mt-4 font-display text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
-          Equipa tu salón con muebles y marcas profesionales
-        </h1>
+        <h1 class="text-display-xl mt-5 text-white">El proveedor completo para tu salón de belleza</h1>
         <p class="mt-6 max-w-lg text-lg text-white/80">
-          Camillas, sillones de peluquería, butacas y mesas de trabajo — además de insumos de
-          uñas, capilares y maquillaje. Todo en Portoviejo, con precio y disponibilidad al
-          instante por WhatsApp.
+          Muebles, insumos de uñas, tratamientos capilares y maquillaje profesional — todo en
+          Portoviejo, con precio y disponibilidad al instante por WhatsApp.
         </p>
+
+        <ul class="mt-6 flex flex-wrap gap-2" aria-label="Categorías disponibles">
+          {
+            categoryMeta.map((category) => (
+              <li>
+                <a
+                  href={category.href}
+                  class="inline-flex items-center rounded-full border border-white/25 px-4 py-1.5 text-sm text-white/90 transition-colors hover:border-white/60 hover:bg-white/10"
+                >
+                  {category.shortLabel}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+
         <div class="mt-8 flex flex-wrap gap-4">
           <WhatsAppCTA label="Chatea por WhatsApp" pulse source="home" pageType="home" ctaLocation="hero" />
           <a
-            href="/productos/muebles"
-            class="inline-flex items-center gap-2 rounded-full border-2 border-white px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-white hover:text-primary-900"
+            href="/productos"
+            class="inline-flex items-center gap-2 rounded-full border-2 border-white px-6 py-3 font-semibold text-white transition-transform duration-200 hover:scale-105 hover:bg-white hover:text-primary-900"
           >
-            Ver catálogo de muebles
+            Ver catálogo completo
           </a>
         </div>
-      </div>
+      </SectionReveal>
 
-      <div class="relative mx-auto w-full max-w-sm lg:max-w-md">
-        <div class="absolute -inset-4 rounded-[2rem] bg-primary-700/30 blur-2xl"></div>
-        <Image
-          src={heroImage}
-          alt="Camilla profesional Alva Importaciones"
-          class="relative w-full rounded-3xl bg-white object-cover shadow-2xl"
-          width={708}
-          height={800}
-          densities={[1, 1.5, 2]}
-          loading="eager"
-          fetchpriority="high"
-        />
-      </div>
+      <SectionReveal delay={140} class="relative mx-auto aspect-[5/6] w-full max-w-md lg:max-w-none">
+        <div class="editorial-overlay group absolute inset-x-0 top-0 aspect-[4/5] w-[76%] overflow-hidden rounded-[1.75rem] shadow-2xl">
+          <Image
+            src={heroImage}
+            alt="Camilla profesional Alva Importaciones"
+            class="media-zoom h-full w-full bg-white object-cover"
+            width={640}
+            height={800}
+            densities={[1, 1.5, 2]}
+            loading="eager"
+            fetchpriority="high"
+          />
+          <div class="editorial-overlay pointer-events-none absolute inset-0"></div>
+        </div>
+
+        <div class="group absolute bottom-0 right-0 aspect-square w-[48%] overflow-hidden rounded-2xl border-4 border-cream shadow-xl">
+          <Image
+            src={nailsImage}
+            alt="Insumos profesionales para uñas Alva Importaciones"
+            class="media-zoom h-full w-full bg-white object-cover"
+            width={420}
+            height={420}
+            densities={[1, 1.5, 2]}
+            loading="eager"
+          />
+        </div>
+
+        <div class="group absolute -left-2 bottom-10 hidden aspect-square w-[36%] overflow-hidden rounded-2xl border-4 border-cream shadow-lg sm:block lg:-left-6">
+          <Image
+            src={makeupImage}
+            alt="Maquillaje profesional Alva Importaciones"
+            class="media-zoom h-full w-full bg-white object-cover"
+            width={320}
+            height={320}
+            densities={[1, 1.5, 2]}
+            loading="eager"
+          />
+        </div>
+      </SectionReveal>
     </div>
   </section>
 

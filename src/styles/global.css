@@ -13,7 +13,9 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
   /* Paleta real de marca (tomada del logo oficial de Alva Importaciones):
-     negro/blanco como base + rojo #CE113B como acento de marca. */
+     negro/blanco como base + rojo #CE113B como acento de marca. ALVA 2.0 (fase
+     visual) no cambia esta paleta -- solo agrega tokens de apoyo derivados de
+     los mismos colores para dar mas profundidad (overlays, superficies). */
   --color-primary-900: #121212;
   --color-primary-800: #ce113b;
   --color-primary-700: #e31c4d;
@@ -23,6 +25,32 @@
   --color-cream: #ffffff;
   --color-ink: #141414;
   --color-ink-muted: #63636b;
+
+  /* --- ALVA 2.0 — fase visual: tokens editoriales, misma paleta --- */
+
+  /* Escala tipografica display fluida (clamp = mismo salto de impacto en
+     360px que en 1440px, sin breakpoints manuales por componente). */
+  --text-display-xl: clamp(2.75rem, 2rem + 3.2vw, 5.5rem);
+  --text-display-lg: clamp(2.25rem, 1.7rem + 2.4vw, 4rem);
+  --text-display-md: clamp(1.75rem, 1.4rem + 1.5vw, 2.75rem);
+  --text-display-sm: clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem);
+
+  /* Ritmo de easing/duracion consistente para todo el movimiento del sitio
+     (hover, reveal, transiciones) -- un solo lenguaje de movimiento, no uno
+     distinto por componente (ver docs/ALVA_2.0_VISUAL_REPORT.md seccion F). */
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 200ms;
+  --duration-base: 450ms;
+  --duration-slow: 700ms;
+
+  /* Overlay de foto con tinte de marca (mosaico de categorias, hero) --
+     mismo negro de siempre, con una pizca del rojo de marca en vez de un
+     overlay neutro, para que hasta las fotos en reposo se sientan ALVA. */
+  --gradient-editorial-overlay: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-primary-900) 0%, transparent) 45%,
+    color-mix(in srgb, var(--color-primary-900) 78%, var(--color-primary-800) 8%) 100%
+  );
 }
 
 @layer base {
@@ -127,6 +155,70 @@
     }
     50% {
       box-shadow: 0 0 0 10px color-mix(in srgb, var(--color-primary-700) 0%, transparent);
+    }
+  }
+
+  /* --- ALVA 2.0 — fase visual --- */
+
+  /* Ritmo vertical consistente entre secciones -- reemplaza el px-6 py-16/20
+     ad-hoc repetido en cada pagina por una sola escala fluida. */
+  .section-y {
+    padding-block: clamp(3.5rem, 3rem + 2.5vw, 6.5rem);
+  }
+
+  .text-display-xl {
+    font-family: var(--font-display);
+    font-size: var(--text-display-xl);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+  }
+
+  .text-display-lg {
+    font-family: var(--font-display);
+    font-size: var(--text-display-lg);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+  }
+
+  .text-display-md {
+    font-family: var(--font-display);
+    font-size: var(--text-display-md);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  .text-display-sm {
+    font-family: var(--font-display);
+    font-size: var(--text-display-sm);
+    line-height: 1.2;
+  }
+
+  /* Overlay editorial con tinte de marca, usado por el mosaico de categorias
+     y el hero -- ver --gradient-editorial-overlay arriba. */
+  .editorial-overlay {
+    background: var(--gradient-editorial-overlay);
+  }
+
+  /* Zoom de imagen muy sutil al hover/focus del contenedor -- el mismo
+     lenguaje de "profundidad" en cards de categoria, producto y mosaico.
+     object-fit ya viene del componente Image; esto solo anima el transform. */
+  .media-zoom {
+    transition: transform var(--duration-slow) var(--ease-premium);
+  }
+
+  .group:hover .media-zoom,
+  .group:focus-within .media-zoom {
+    transform: scale(1.06);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .media-zoom {
+      transition: none;
+    }
+
+    .group:hover .media-zoom,
+    .group:focus-within .media-zoom {
+      transform: none;
     }
   }
 }
