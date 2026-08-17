@@ -7,14 +7,19 @@ interface Props {
   description: string;
   image: ImageMetadata;
   href: string;
+  /** Proporción del tile — permite tiles anchos en un mosaico sin bifurcar el componente por categoría. */
+  aspectClass?: string;
 }
 
-const { title, description, image, href } = Astro.props;
+const { title, description, image, href, aspectClass = "aspect-[3/4]" } = Astro.props;
 ---
 
 <a
   href={href}
-  class="group relative flex aspect-[3/4] overflow-hidden rounded-3xl shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
+  class:list={[
+    "group relative flex overflow-hidden rounded-3xl shadow-lg transition-transform duration-300 ease-[var(--ease-premium)] hover:-translate-y-1 hover:shadow-2xl",
+    aspectClass,
+  ]}
 >
   <Image
     src={image}
@@ -22,11 +27,11 @@ const { title, description, image, href } = Astro.props;
     loading="lazy"
     width={600}
     height={800}
-    class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+    class="media-zoom absolute inset-0 h-full w-full object-cover"
   />
-  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+  <div class="editorial-overlay pointer-events-none absolute inset-0"></div>
   <div class="relative mt-auto flex flex-col gap-1 p-6 text-white">
-    <h3 class="font-display text-2xl">{title}</h3>
+    <h3 class="text-display-sm">{title}</h3>
     <p class="text-sm text-white/85">{description}</p>
     <span class="mt-3 inline-flex w-fit items-center gap-1 text-sm font-semibold tracking-wide text-white transition-transform duration-300 group-hover:translate-x-1">
       Ver más →
