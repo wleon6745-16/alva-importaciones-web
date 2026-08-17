@@ -1,9 +1,9 @@
 ---
-import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import SectionReveal from "../../components/SectionReveal.astro";
 import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
 import RelatedCategories from "../../components/RelatedCategories.astro";
+import ProductCardRich from "../../components/ProductCardRich.astro";
 import { breadcrumbSchema, faqSchema } from "../../lib/structured-data";
 import { siteConfig } from "../../lib/site-config";
 import { getProductsByCategory } from "../../lib/products";
@@ -137,46 +137,17 @@ const faqLd = faqSchema(faqs);
           )}
           <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {section.items.map((item) => (
-              <div class="glass-card flex flex-col overflow-hidden rounded-2xl shadow-md">
-                <a href={`/productos/muebles/${item.slug}/`} class="block">
-                  <div class="aspect-square overflow-hidden bg-white">
-                    <Image
-                      src={imageFor(item.image)}
-                      alt={item.imageAlt}
-                      width={500}
-                      height={500}
-                      class="h-full w-full object-contain"
-                    />
-                  </div>
-                </a>
-                <div class="flex flex-1 flex-col gap-2 p-5">
-                  <h3 class="font-display text-lg text-primary-800">
-                    <a href={`/productos/muebles/${item.slug}/`} class="hover:text-primary-600">
-                      {item.name}
-                    </a>
-                  </h3>
-                  <p class="text-xl font-semibold text-ink">{priceLabel(item)}</p>
-                  {item.features.length > 0 && (
-                    <ul class="mt-1 space-y-1 text-sm text-ink-muted">
-                      {item.features.map((f) => (
-                        <li>• {f}</li>
-                      ))}
-                    </ul>
-                  )}
-                  {item.code && <p class="text-xs text-ink-muted">Cód: {item.code}</p>}
-                  <WhatsAppCTA
-                    label="Consultar"
-                    class="mt-auto !px-4 !py-2 text-sm"
-                    message={`Hola, quisiera consultar sobre: ${item.name} - ${new URL(`/productos/muebles/${item.slug}/`, siteConfig.url).toString()}`}
-                    productId={item.id}
-                    productName={item.name}
-                    category={item.category}
-                    source="product"
-                    pageType="category"
-                    ctaLocation="grid"
-                  />
-                </div>
-              </div>
+              <ProductCardRich
+                slug={item.slug}
+                category={item.category}
+                id={item.id}
+                name={item.name}
+                priceLabel={priceLabel(item)}
+                features={item.features}
+                code={item.code}
+                image={imageFor(item.image)}
+                imageAlt={item.imageAlt}
+              />
             ))}
           </div>
         </div>

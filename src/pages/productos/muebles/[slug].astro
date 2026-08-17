@@ -1,8 +1,10 @@
 ---
-import { Image, getImage } from "astro:assets";
+import { getImage } from "astro:assets";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import SectionReveal from "../../../components/SectionReveal.astro";
-import WhatsAppCTA from "../../../components/WhatsAppCTA.astro";
+import ProductGallery from "../../../components/ProductGallery.astro";
+import ProductActionPanel from "../../../components/ProductActionPanel.astro";
+import RelatedProducts from "../../../components/RelatedProducts.astro";
 import ViewProductTracker from "../../../components/ViewProductTracker.astro";
 import { breadcrumbSchema, productSchema } from "../../../lib/structured-data";
 import { siteConfig } from "../../../lib/site-config";
@@ -104,53 +106,19 @@ const productLd = productSchema(product, pageUrl, imageUrl);
   </nav>
 
   <SectionReveal as="section" class="px-6 py-10">
-    <div class="mx-auto grid max-w-5xl gap-10 md:grid-cols-2">
-      <div class="glass-card overflow-hidden rounded-2xl bg-white p-6">
-        <div class="aspect-square overflow-hidden">
-          <Image
-            src={imageFor(product.image)}
-            alt={product.imageAlt}
-            width={800}
-            height={800}
-            densities={[1, 1.5, 2]}
-            loading="eager"
-            fetchpriority="high"
-            class="h-full w-full object-contain"
-          />
-        </div>
-      </div>
-      <div class="flex flex-col gap-4">
-        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-700">
-          {SUBCATEGORY_TITLES[product.subcategory ?? ""] ?? "Muebles"}
-        </p>
-        <h1 class="font-display text-3xl text-primary-900 sm:text-4xl">{product.name}</h1>
-        <p class="text-2xl font-semibold text-ink">{priceLabel(product)}</p>
-        {product.code && <p class="text-sm text-ink-muted">Código: {product.code}</p>}
-        {
-          product.features.length > 0 && (
-            <div>
-              <h2 class="font-display text-lg text-primary-800">Características</h2>
-              <ul class="mt-2 space-y-1 text-ink-muted">
-                {product.features.map((f) => (
-                  <li>• {f}</li>
-                ))}
-              </ul>
-            </div>
-          )
-        }
-        <WhatsAppCTA
-          label="Consultar por WhatsApp"
-          pulse
-          class="mt-2 w-fit"
-          message={`Hola, quisiera consultar sobre: ${product.name}${product.code ? ` (Cód: ${product.code})` : ""} - ${pageUrl}`}
-          productId={product.id}
-          productName={product.name}
-          category={product.category}
-          source="product"
-          pageType="product"
-          ctaLocation="detail"
-        />
-      </div>
+    <div class="mx-auto grid max-w-5xl gap-10 md:grid-cols-2 md:items-start">
+      <ProductGallery image={imageFor(product.image)} alt={product.imageAlt} />
+      <ProductActionPanel
+        eyebrow={SUBCATEGORY_TITLES[product.subcategory ?? ""] ?? "Muebles"}
+        name={product.name}
+        priceLabel={priceLabel(product)}
+        code={product.code}
+        features={product.features}
+        whatsappMessage={`Hola, quisiera consultar sobre: ${product.name}${product.code ? ` (Cód: ${product.code})` : ""} - ${pageUrl}`}
+        productId={product.id}
+        productName={product.name}
+        category={product.category}
+      />
     </div>
   </SectionReveal>
 
@@ -159,28 +127,15 @@ const productLd = productSchema(product, pageUrl, imageUrl);
       <SectionReveal as="section" class="bg-blush-50 px-6 py-16">
         <div class="mx-auto max-w-6xl">
           <h2 class="font-display text-2xl text-primary-900">También te puede interesar</h2>
-          <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {related.map((item) => (
-              <a
-                href={`/productos/muebles/${item.slug}/`}
-                class="glass-card block overflow-hidden rounded-2xl shadow-md transition-transform duration-200 hover:-translate-y-1"
-              >
-                <div class="aspect-square overflow-hidden bg-white">
-                  <Image
-                    src={imageFor(item.image)}
-                    alt={item.imageAlt}
-                    width={400}
-                    height={400}
-                    class="h-full w-full object-contain"
-                  />
-                </div>
-                <div class="p-4">
-                  <h3 class="font-display text-base text-primary-800">{item.name}</h3>
-                  <p class="text-sm font-semibold text-ink">{priceLabel(item)}</p>
-                </div>
-              </a>
-            ))}
-          </div>
+          <RelatedProducts
+            items={related.map((item) => ({
+              href: `/productos/muebles/${item.slug}/`,
+              image: imageFor(item.image),
+              imageAlt: item.imageAlt,
+              name: item.name,
+              priceLabel: priceLabel(item),
+            }))}
+          />
         </div>
       </SectionReveal>
     )

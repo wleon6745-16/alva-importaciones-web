@@ -1,0 +1,56 @@
+---
+import WhatsAppCTA from "./WhatsAppCTA.astro";
+
+interface Props {
+  eyebrow: string;
+  name: string;
+  priceLabel: string;
+  brand?: string;
+  code?: string;
+  features: string[];
+  whatsappMessage: string;
+  productId: string;
+  productName: string;
+  category: string;
+}
+
+const { eyebrow, name, priceLabel, brand, code, features, whatsappMessage, productId, productName, category } =
+  Astro.props;
+---
+
+<div class="flex flex-col gap-4">
+  <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-700">{eyebrow}</p>
+  <h1 class="text-display-md text-primary-900">{name}</h1>
+  <p class="text-2xl font-semibold text-ink">{priceLabel}</p>
+  {brand && <p class="text-sm text-ink-muted">Marca: {brand}</p>}
+  {code && <p class="text-sm text-ink-muted">Código: {code}</p>}
+  {
+    features.length > 0 && (
+      <div>
+        <h2 class="font-display text-lg text-primary-800">Características</h2>
+        <ul class="mt-2 space-y-1 text-ink-muted">
+          {features.map((f) => (
+            <li>• {f}</li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+  {/* Zona de acción: flex-wrap para que un futuro botón ("Preguntar al asistente",
+     compra) se sume sin reestructurar -- no se agrega ningún botón placeholder porque
+     mostraría una acción no funcional a clientes reales (ver ALVA 2.0 fase visual, "no
+     implementar todavía": carrito/checkout). */}
+  <div class="mt-2 flex flex-wrap items-center gap-4">
+    <WhatsAppCTA
+      label="Consultar por WhatsApp"
+      pulse
+      message={whatsappMessage}
+      productId={productId}
+      productName={productName}
+      category={category}
+      source="product"
+      pageType="product"
+      ctaLocation="detail"
+    />
+  </div>
+</div>
