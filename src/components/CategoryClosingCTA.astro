@@ -1,0 +1,60 @@
+---
+import WhatsAppCTA from "./WhatsAppCTA.astro";
+import { categories } from "../lib/categories";
+
+interface Props {
+  /** slug de la categoría actual (para excluirla de "Otras categorías") */
+  current: string;
+  description: string;
+  whatsappMessage: string;
+  extraLink?: { href: string; label: string };
+}
+
+const { current, description, whatsappMessage, extraLink } = Astro.props;
+const others = categories.filter((c) => c.slug !== current);
+---
+
+<div class="mx-auto max-w-3xl text-center">
+  <h2 class="text-display-md text-primary-900">¿No encuentras lo que buscas?</h2>
+  <p class="mt-3 text-ink-muted">{description}</p>
+
+  {/* flex-wrap: espacio listo para un futuro CTA "Preguntar al asistente" junto al de
+     WhatsApp, sin reestructurar (no se conecta el Web Channel en esta fase). */}
+  <div class="mt-6 flex flex-wrap items-center justify-center gap-4">
+    <WhatsAppCTA
+      label="Consultar por WhatsApp"
+      message={whatsappMessage}
+      category={current}
+      source="category"
+      pageType="category"
+      ctaLocation="bottom"
+    />
+    {
+      extraLink && (
+        <a href={extraLink.href} class="text-sm font-semibold text-primary-700 hover:underline">
+          {extraLink.label} →
+        </a>
+      )
+    }
+  </div>
+
+  {
+    others.length > 0 && (
+      <div class="mt-10 border-t border-primary-900/10 pt-8">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-ink-muted">Otras categorías</p>
+        <ul class="mt-4 flex flex-wrap justify-center gap-3">
+          {others.map((c) => (
+            <li>
+              <a
+                href={c.href}
+                class="inline-block rounded-full border-2 border-primary-800 px-5 py-2 text-sm font-semibold text-primary-800 transition-colors hover:bg-primary-800 hover:text-white"
+              >
+                {c.shortLabel}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+</div>

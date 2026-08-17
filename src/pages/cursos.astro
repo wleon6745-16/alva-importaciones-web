@@ -21,7 +21,7 @@ const { title, description, intro, highlights, ctaLabel, ctaMessage } = curso.da
   path="/cursos"
   structuredData={[courseSchema(title, description), breadcrumbs]}
 >
-  <section class="hero-glow px-6 py-20 text-center">
+  <section class="hero-glow px-6 py-16 text-center">
     <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Formación</p>
     <h1 class="mt-4 font-display text-4xl text-primary-900">
       {title}
@@ -31,22 +31,27 @@ const { title, description, intro, highlights, ctaLabel, ctaMessage } = curso.da
     </p>
   </section>
 
-  <SectionReveal as="section" class="px-6 pb-16">
-    <div class="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
-      {
-        highlights.map((h) => (
-          <div class="glass-card rounded-2xl p-6">
-            <p class="text-sm font-semibold uppercase tracking-wide text-primary-700">
-              {h.label}
-            </p>
-            <p class="mt-2 font-display text-xl text-ink">{h.value}</p>
-          </div>
-        ))
-      }
+  <SectionReveal as="section" class="px-6 pb-14">
+    {/* Un solo panel con divisores sutiles (en vez de 4 tarjetas flotantes
+       separadas) -- lee como una sola ficha del programa, no como bloques
+       sueltos con aire de más entre ellos. */}
+    <div class="mx-auto max-w-4xl overflow-hidden rounded-2xl border border-blush-100 bg-blush-100 shadow-sm">
+      <div class="grid grid-cols-1 gap-px sm:grid-cols-2">
+        {
+          highlights.map((h) => (
+            <div class="bg-white p-6">
+              <p class="text-sm font-semibold uppercase tracking-wide text-primary-700">
+                {h.label}
+              </p>
+              <p class="mt-2 font-display text-xl text-ink">{h.value}</p>
+            </div>
+          ))
+        }
+      </div>
     </div>
   </SectionReveal>
 
-  <SectionReveal as="section" class="bg-blush-50 px-6 py-16 text-center">
+  <SectionReveal as="section" class="bg-blush-50 px-6 py-14 text-center">
     <h2 class="font-display text-2xl text-primary-900">¿Lista para reservar tu cupo?</h2>
     <p class="mx-auto mt-3 max-w-xl text-ink-muted">
       Una asesora te confirma qué horario está abierto actualmente y cómo separar tu lugar

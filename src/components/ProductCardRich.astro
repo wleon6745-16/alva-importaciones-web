@@ -10,43 +10,37 @@ interface Props {
   id: string;
   name: string;
   priceLabel: string;
+  /** Se muestra solo la primera como bajada breve -- no una lista completa (ver detalle de producto para el resto). */
   features: string[];
+  brand?: string;
   code?: string;
   image: ImageMetadata;
   imageAlt: string;
 }
 
-const { slug, category, id, name, priceLabel, features, code, image, imageAlt } = Astro.props;
+const { slug, category, id, name, priceLabel, features, brand, code, image, imageAlt } = Astro.props;
 const href = `/productos/${category}/${slug}/`;
 ---
 
-<div class="group glass-card flex flex-col overflow-hidden rounded-2xl shadow-md transition-[box-shadow] duration-[var(--duration-base)] ease-[var(--ease-premium)] hover:shadow-xl">
+<div class="group glass-card flex flex-col overflow-hidden rounded-2xl shadow-md transition-[transform,box-shadow] duration-[var(--duration-base)] ease-[var(--ease-premium)] hover:-translate-y-1 hover:shadow-xl">
   <a href={href} class="block">
     <div class="aspect-square overflow-hidden bg-white">
       <Image src={image} alt={imageAlt} width={500} height={500} class="media-zoom h-full w-full object-contain" />
     </div>
   </a>
-  <div class="flex flex-1 flex-col gap-2 p-5">
-    <h3 class="font-display text-lg text-primary-800">
-      <a href={href} class="hover:text-primary-600">
+  <div class="flex flex-1 flex-col gap-1.5 p-5">
+    {brand && <p class="text-xs font-semibold uppercase tracking-[0.15em] text-primary-700">{brand}</p>}
+    <h3 class="font-display text-lg leading-snug text-primary-900">
+      <a href={href} class="hover:text-primary-700">
         {name}
       </a>
     </h3>
-    <p class="text-xl font-semibold text-ink">{priceLabel}</p>
-    {
-      features.length > 0 && (
-        <ul class="mt-1 space-y-1 text-sm text-ink-muted">
-          {features.map((f) => (
-            <li>• {f}</li>
-          ))}
-        </ul>
-      )
-    }
-    {code && <p class="text-xs text-ink-muted">Cód: {code}</p>}
+    {features[0] && <p class="line-clamp-1 text-sm text-ink-muted">{features[0]}</p>}
+    <p class="mt-1 text-xl font-semibold text-ink">{priceLabel}</p>
     <WhatsAppCTA
       label="Consultar"
-      class="mt-auto !px-4 !py-2 text-sm"
-      message={`Hola, quisiera consultar sobre: ${name} - ${new URL(href, siteConfig.url).toString()}`}
+      class="mt-3 w-fit !px-4 !py-2 text-sm"
+      message={`Hola, quisiera consultar sobre: ${name}${code ? ` (Cód: ${code})` : ""} - ${new URL(href, siteConfig.url).toString()}`}
       productId={id}
       productName={name}
       category={category}
