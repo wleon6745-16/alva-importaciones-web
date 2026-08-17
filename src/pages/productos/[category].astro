@@ -1,0 +1,88 @@
+---
+// Rutas dinámicas para categorías reales de SACC que todavía NO tienen
+// catálogo curado a mano (facial, accesorios, lifting, barbería, corporal --
+// ver storefront_category_config en ASISTENTE). Las 4 categorías con
+// catálogo curado (muebles/unas/capilares/maquillaje) siguen usando sus
+// archivos .astro dedicados -- se excluyen aquí explícitamente para no
+// generar una ruta duplicada ni cambiar sus URLs ya indexadas (ver punto 21
+// del pedido de Fase 2: "no romper URLs indexadas").
+//
+// Solo se generan páginas para categorías habilitadas en la taxonomía
+// pública (enabled=true en storefront_category_config) -- una categoría
+// deshabilitada (ej. Servicios) simplemente no aparece.
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionReveal from "../../components/SectionReveal.astro";
+import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
+import CategoryClosingCTA from "../../components/CategoryClosingCTA.astro";
+import CatalogExplorer from "../../components/CatalogExplorer.tsx";
+import { breadcrumbSchema } from "../../lib/structured-data";
+import { storefrontApiUrl, storefrontChannelId } from "../../lib/storefront-config";
+
+export async function getStaticPaths() {
+  const curatedSlugs = new Set(["muebles", "unas", "capilares", "maquillaje"]);
+  const entries = await getCollection("storefrontCatalog");
+  return entries
+    .filter((entry) => !curatedSlugs.has(entry.data.categorySlug))
+    .map((entry) => ({ params: { category: entry.data.categorySlug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { categoryLabel, categorySlug, description, productCount, brands, firstPage, firstPageTotal } = entry.data;
+const hasMore = firstPageTotal > firstPage.length;
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Inicio", path: "/" },
+  { name: "Productos", path: "/productos" },
+  { name: categoryLabel, path: `/productos/${categorySlug}` },
+]);
+---
+
+<BaseLayout
+  title={categoryLabel}
+  description={description ?? `${categoryLabel} — catálogo real de Alva Importaciones, Portoviejo. Precio público, consulta disponibilidad por WhatsApp.`}
+  path={`/productos/${categorySlug}`}
+  structuredData={[breadcrumbs]}
+>
+  <section class="hero-glow px-6 py-16 text-center">
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Categoría</p>
+    <h1 class="mt-4 font-display text-4xl text-primary-900">{categoryLabel}</h1>
+    <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-muted">
+      Catálogo real — {productCount.toLocaleString("es-EC")} productos con precio público. Disponibilidad exacta por
+      WhatsApp.
+    </p>
+    <WhatsAppCTA
+      label="Consultar por WhatsApp"
+      pulse
+      class="mt-8"
+      message={`Hola, quisiera consultar sobre productos de ${categoryLabel.toLowerCase()}`}
+      source="category"
+      pageType="category"
+      category={categorySlug}
+      ctaLocation="hero"
+    />
+  </section>
+
+  <SectionReveal as="section" class="px-6 py-16">
+    <div class="mx-auto max-w-6xl">
+      <CatalogExplorer
+        client:visible
+        apiBaseUrl={storefrontApiUrl}
+        channelId={storefrontChannelId}
+        categorySlug={categorySlug}
+        initialItems={firstPage}
+        initialBrands={brands}
+        initialTotal={firstPageTotal}
+        initialHasMore={hasMore}
+      />
+    </div>
+  </SectionReveal>
+
+  <SectionReveal as="section" class="bg-blush-50 px-6 py-14">
+    <CategoryClosingCTA
+      current={categorySlug}
+      description={`Seguimos ampliando el catálogo de ${categoryLabel.toLowerCase()} — pregúntanos por WhatsApp.`}
+      whatsappMessage={`Hola, quisiera consultar sobre productos de ${categoryLabel.toLowerCase()}`}
+    />
+  </SectionReveal>
+</BaseLayout>

@@ -1,0 +1,569 @@
+{
+  "categorySlug": "corporal",
+  "categoryLabel": "Corporal",
+  "description": null,
+  "featured": false,
+  "productCount": 245,
+  "brands": [
+    {
+      "name": "NIVEA",
+      "count": 22
+    },
+    {
+      "name": "THE FRUIT COMPANY",
+      "count": 21
+    },
+    {
+      "name": "GLAM BEAUTY",
+      "count": 18
+    },
+    {
+      "name": "MOLLIE",
+      "count": 14
+    },
+    {
+      "name": "LMAR",
+      "count": 11
+    },
+    {
+      "name": "NADS",
+      "count": 10
+    },
+    {
+      "name": "L'DIOR",
+      "count": 9
+    },
+    {
+      "name": "BABARIA",
+      "count": 8
+    },
+    {
+      "name": "MARIA JOSE",
+      "count": 6
+    },
+    {
+      "name": "BYPHASSE",
+      "count": 5
+    },
+    {
+      "name": "CLANS",
+      "count": 5
+    },
+    {
+      "name": "DOLL",
+      "count": 5
+    },
+    {
+      "name": "COQUETA",
+      "count": 4
+    },
+    {
+      "name": "MAXYBELT",
+      "count": 4
+    },
+    {
+      "name": "MIA SECRET",
+      "count": 4
+    },
+    {
+      "name": "THE FRUIT LAB",
+      "count": 4
+    },
+    {
+      "name": "AICHUN BEAUTY",
+      "count": 3
+    },
+    {
+      "name": "ANGELINO",
+      "count": 3
+    },
+    {
+      "name": "BYOTEA",
+      "count": 3
+    },
+    {
+      "name": "EMBELLECER",
+      "count": 3
+    },
+    {
+      "name": "GARNIER",
+      "count": 3
+    },
+    {
+      "name": "SUTTON",
+      "count": 3
+    },
+    {
+      "name": "BIOTANIK",
+      "count": 2
+    },
+    {
+      "name": "GLAM NAILS",
+      "count": 2
+    },
+    {
+      "name": "HAPPY BABY",
+      "count": 2
+    },
+    {
+      "name": "OG",
+      "count": 2
+    },
+    {
+      "name": "OSSION",
+      "count": 2
+    },
+    {
+      "name": "REVUELE",
+      "count": 2
+    },
+    {
+      "name": "ZZAM",
+      "count": 2
+    },
+    {
+      "name": "ADDICT",
+      "count": 1
+    },
+    {
+      "name": "BEAUTY CREATIONS",
+      "count": 1
+    },
+    {
+      "name": "CERAVE",
+      "count": 1
+    },
+    {
+      "name": "DEAR DERM",
+      "count": 1
+    },
+    {
+      "name": "DEEP FRESH",
+      "count": 1
+    },
+    {
+      "name": "FACE CREAM",
+      "count": 1
+    },
+    {
+      "name": "HUDA BEAUTY",
+      "count": 1
+    },
+    {
+      "name": "MAXE",
+      "count": 1
+    },
+    {
+      "name": "PETITE",
+      "count": 1
+    },
+    {
+      "name": "ST. IVES",
+      "count": 1
+    },
+    {
+      "name": "STAR HAIR",
+      "count": 1
+    },
+    {
+      "name": "THUYA",
+      "count": 1
+    },
+    {
+      "name": "TOCOBO",
+      "count": 1
+    },
+    {
+      "name": "VIOLETTA",
+      "count": 1
+    }
+  ],
+  "firstPage": [
+    {
+      "publicProductId": "d4e6aa6d-1538-406a-9eca-e9786de9d967",
+      "code": "4634",
+      "name": "ACEITE ANGELINO ALOE VERA & ALGODON 100ML",
+      "slug": "aceite-angelino-aloe-vera-algodon-100ml-4634",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ACEITE DE CUTICULA",
+      "brand": "ANGELINO",
+      "publicPrice": 1.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "a59dc9b7-4fa1-4a8a-9125-042679b9a97b",
+      "code": "10638",
+      "name": "ACEITE CLANS PARA BEBE 125ML",
+      "slug": "aceite-clans-para-bebe-125ml-10638",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "COLONIA",
+      "brand": "CLANS",
+      "publicPrice": 1.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "cfee9273-b52f-44de-92b2-e18c9366c203",
+      "code": "3590",
+      "name": "ACEITE DE ALMENDRA EMBELLECER 125ML",
+      "slug": "aceite-de-almendra-embellecer-125ml-3590",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "EMBELLECER",
+      "publicPrice": 3.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "7736f611-2771-49b4-8d69-feaffa778e4d",
+      "code": "3589",
+      "name": "ACEITE DE COCO EMBELLECER 125ML",
+      "slug": "aceite-de-coco-embellecer-125ml-3589",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "EMBELLECER",
+      "publicPrice": 3.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "443be21d-6a63-4d14-b862-01d0fba661e8",
+      "code": "3588",
+      "name": "ACEITE DE NARANJA EMBELLECER 125ML",
+      "slug": "aceite-de-naranja-embellecer-125ml-3588",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "EMBELLECER",
+      "publicPrice": 3.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "d5a08bdd-6cc4-4443-a32b-e785386a8ec4",
+      "code": "3587",
+      "name": "ACEITE DE UVA EMBELLECER 125ML",
+      "slug": "aceite-de-uva-embellecer-125ml-3587",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 3.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "44dc8b34-17c7-4b49-aa3a-2a1a04ffd319",
+      "code": "431",
+      "name": "AGUA MICELAR NIVEA EFECTO MATE 400ML",
+      "slug": "agua-micelar-nivea-efecto-mate-400ml-431",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "NIVEA",
+      "publicPrice": 10.4,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "ae775cf8-1fe3-4da1-a63e-e36b8242f424",
+      "code": "5634",
+      "name": "AGUA TERMAL AVENE AEROSOL 300ML",
+      "slug": "agua-termal-avene-aerosol-300ml-5634",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": null,
+      "publicPrice": 21.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "9eb6f444-f575-4ca8-9c02-8188bd2adaa8",
+      "code": "7647",
+      "name": "ALCOHOL CLANS 120ML",
+      "slug": "alcohol-clans-120ml-7647",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ALCOHOL",
+      "brand": "CLANS",
+      "publicPrice": 1.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "0e947ba9-d9d2-403f-9f7b-b40a6f2c8247",
+      "code": "11162",
+      "name": "AURUM BODY GLOW OG 01 WARN BRONCE 25ML SF9243-01",
+      "slug": "aurum-body-glow-og-01-warn-bronce-25ml-sf9243-01-11162",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "CREMA DE CUERPO",
+      "brand": "OG",
+      "publicPrice": 6,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "e32818d2-5dd6-468b-964f-c154d86c9702",
+      "code": "11163",
+      "name": "AURUM BODY GLOW OG 02 GOLDEN BRONCE 25ML SF9243-02",
+      "slug": "aurum-body-glow-og-02-golden-bronce-25ml-sf9243-02-11163",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "CREMA DE CUERPO",
+      "brand": "OG",
+      "publicPrice": 6.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "bce16479-8d86-45e8-b2a3-0f3d66f56931",
+      "code": "6903",
+      "name": "BANDA DEPILACION KONSUNG WA202B",
+      "slug": "banda-depilacion-konsung-wa202b-6903",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 1.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "a462ee39-bd40-43ad-b173-e557fe08b27b",
+      "code": "6539",
+      "name": "BANDA DEPILACION ZZAM PAQUETE 100U ZZ240",
+      "slug": "banda-depilacion-zzam-paquete-100u-zz240-6539",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "ZZAM",
+      "publicPrice": 2,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "6c04dd80-453e-49ee-a0bf-45e831967748",
+      "code": "5141",
+      "name": "BANDA DEPILADORA R-PD001-2",
+      "slug": "banda-depiladora-r-pd001-2-5141",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ABLANDADOR DE CANAS",
+      "brand": null,
+      "publicPrice": 2.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "c611bafd-b382-4bd5-b130-75244e13187c",
+      "code": "5023",
+      "name": "BLOQUEADOR SOLAR MARIA JOSE SACHET 15ML",
+      "slug": "bloqueador-solar-maria-jose-sachet-15ml-5023",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "PRIMER",
+      "brand": "MARIA JOSE",
+      "publicPrice": 1.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "e73e9ed8-bba2-4abe-a78d-427d4bd47f7c",
+      "code": "5429",
+      "name": "BRASIER CON CORDON FREEBRA",
+      "slug": "brasier-con-cordon-freebra-5429",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 3.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "d39399ce-c044-41ba-9c49-0576a78fcd28",
+      "code": "8597",
+      "name": "BROCHA GLAM BEAUTY PARA MASCARILLA VNC948",
+      "slug": "brocha-glam-beauty-para-mascarilla-vnc948-8597",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 1.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "f63fc101-56e8-438a-9b86-02cd948dc137",
+      "code": "9036",
+      "name": "CALENTADO DE PARAFINA KONSUNG 500CC WN408-1B",
+      "slug": "calentado-de-parafina-konsung-500cc-wn408-1b-9036",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "OLLA DE CERA",
+      "brand": null,
+      "publicPrice": 15.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "e9364615-6a81-4096-a970-93b89786dfa0",
+      "code": "2946",
+      "name": "CALENTADOR DE CERA GLAM BEAUTY 40W VA192",
+      "slug": "calentador-de-cera-glam-beauty-40w-va192-2946",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 6.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "756ba833-1482-4e9a-8ec4-a6e7ca6c7a86",
+      "code": "5363",
+      "name": "CALENTADOR DE CERA ROLL ON DEPILATORY HEATER DQ06-2",
+      "slug": "calentador-de-cera-roll-on-depilatory-heater-dq06-2-5363",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 6,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "b14b855a-7a10-4608-abda-18e31ddf7d1d",
+      "code": "6112",
+      "name": "CALENTADOR DE CERA ROLL-ON MAXE MX-555",
+      "slug": "calentador-de-cera-roll-on-maxe-mx-555-6112",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "OLLA DE CERA",
+      "brand": "MAXE",
+      "publicPrice": 8.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "d6e0cfea-48bc-4d21-bfd3-9c76f362ca05",
+      "code": "8181",
+      "name": "CAMILLA SPA NEGRA RETRACTIL SE3833-1",
+      "slug": "camilla-spa-negra-retractil-se3833-1-8181",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 110,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "0218f970-7464-4e3b-aceb-79e28f755bd6",
+      "code": "11503",
+      "name": "CAMILLAS PLEGABLES IMPORTADA MZE142",
+      "slug": "camillas-plegables-importada-mze142-11503",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 98,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "fd7e2037-72d1-4d61-9fb0-a9b356c5aa55",
+      "code": "4555",
+      "name": "CEPILLO FACIAL UÑAS REDONDO MANG R-CRPL",
+      "slug": "cepillo-facial-unas-redondo-mang-r-crpl-4555",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "CEPILLO DE UÑAS",
+      "brand": null,
+      "publicPrice": 1,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    }
+  ],
+  "firstPageTotal": 245,
+  "fetchedAt": "2026-08-17T04:33:33.472Z"
+}

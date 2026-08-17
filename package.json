@@ -7,7 +7,8 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "node scripts/indexnow-prepare-keyfile.mjs",
+    "prebuild": "node scripts/indexnow-prepare-keyfile.mjs && node scripts/fetch-storefront-snapshot.ts",
+    "storefront:sync": "node scripts/fetch-storefront-snapshot.ts",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",

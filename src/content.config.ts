@@ -68,4 +68,40 @@ const guias = defineCollection({
   }),
 });
 
-export const collections = { products, promos, cursos, guias };
+// Snapshot en build-time del catalogo real (ASISTENTE Storefront API), un
+// archivo por categoria -- ver scripts/fetch-storefront-snapshot.ts. Datos
+// generados, no editados a mano. Independiente de la coleccion "products"
+// (catalogo curado): esta trae el catalogo completo real de SACC, aquella
+// trae los 74 productos curados con foto/descripcion editorial.
+const publicCategoryRef = z.object({ slug: z.string(), label: z.string() }).nullable();
+
+const storefrontProduct = z.object({
+  publicProductId: z.string(),
+  code: z.string().nullable(),
+  name: z.string(),
+  slug: z.string(),
+  category: publicCategoryRef,
+  subcategory: z.string().nullable(),
+  brand: z.string().nullable(),
+  publicPrice: z.number().nullable(),
+  currency: z.literal("USD"),
+  imageUrl: z.string().nullable(),
+  shortDescription: z.string().nullable(),
+});
+
+const storefrontCatalog = defineCollection({
+  loader: glob({ pattern: "*.json", base: "./src/content/storefront" }),
+  schema: z.object({
+    categorySlug: z.string(),
+    categoryLabel: z.string(),
+    description: z.string().nullable(),
+    featured: z.boolean(),
+    productCount: z.number(),
+    brands: z.array(z.object({ name: z.string(), count: z.number() })),
+    firstPage: z.array(storefrontProduct),
+    firstPageTotal: z.number(),
+    fetchedAt: z.string(),
+  }),
+});
+
+export const collections = { products, promos, cursos, guias, storefrontCatalog };

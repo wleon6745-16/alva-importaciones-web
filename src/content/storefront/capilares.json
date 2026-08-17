@@ -1,0 +1,1025 @@
+{
+  "categorySlug": "capilares",
+  "categoryLabel": "Capilar",
+  "description": null,
+  "featured": false,
+  "productCount": 2904,
+  "brands": [
+    {
+      "name": "ECHOS LINE",
+      "count": 161
+    },
+    {
+      "name": "MAXYBELT",
+      "count": 157
+    },
+    {
+      "name": "LA COLORS",
+      "count": 139
+    },
+    {
+      "name": "LISSIA",
+      "count": 132
+    },
+    {
+      "name": "STAR HAIR",
+      "count": 126
+    },
+    {
+      "name": "FARMAVITA",
+      "count": 97
+    },
+    {
+      "name": "BIOTANIK",
+      "count": 87
+    },
+    {
+      "name": "SALON LINE",
+      "count": 78
+    },
+    {
+      "name": "KATIVA",
+      "count": 68
+    },
+    {
+      "name": "CHOCOLIFE",
+      "count": 67
+    },
+    {
+      "name": "THYMS",
+      "count": 63
+    },
+    {
+      "name": "PROKPIL",
+      "count": 52
+    },
+    {
+      "name": "PLACENTA LIFE",
+      "count": 47
+    },
+    {
+      "name": "KUUL",
+      "count": 45
+    },
+    {
+      "name": "COLORET",
+      "count": 44
+    },
+    {
+      "name": "LANTEN",
+      "count": 44
+    },
+    {
+      "name": "BMT",
+      "count": 43
+    },
+    {
+      "name": "MEICYS",
+      "count": 42
+    },
+    {
+      "name": "MOLLIE",
+      "count": 42
+    },
+    {
+      "name": "VL",
+      "count": 40
+    },
+    {
+      "name": "LMAR",
+      "count": 38
+    },
+    {
+      "name": "ELVIVE",
+      "count": 35
+    },
+    {
+      "name": "MARIA JOSE",
+      "count": 35
+    },
+    {
+      "name": "VIZIO",
+      "count": 34
+    },
+    {
+      "name": "KBELLE",
+      "count": 33
+    },
+    {
+      "name": "ZZAM",
+      "count": 30
+    },
+    {
+      "name": "SALON IN",
+      "count": 29
+    },
+    {
+      "name": "COQUETTE",
+      "count": 27
+    },
+    {
+      "name": "RENE CHARDON",
+      "count": 23
+    },
+    {
+      "name": "SISTEMA",
+      "count": 23
+    },
+    {
+      "name": "POCION",
+      "count": 22
+    },
+    {
+      "name": "SANO",
+      "count": 21
+    },
+    {
+      "name": "NAISSANT",
+      "count": 20
+    },
+    {
+      "name": "SONIA VEGA",
+      "count": 20
+    },
+    {
+      "name": "MARYAM",
+      "count": 19
+    },
+    {
+      "name": "ROLDA",
+      "count": 19
+    },
+    {
+      "name": "FIRENZE",
+      "count": 18
+    },
+    {
+      "name": "GARNIER",
+      "count": 17
+    },
+    {
+      "name": "SENTIENCE",
+      "count": 16
+    },
+    {
+      "name": "MAKEY PLUSS",
+      "count": 15
+    },
+    {
+      "name": "GOTAS DE SEDA",
+      "count": 14
+    },
+    {
+      "name": "BH TIGI",
+      "count": 13
+    },
+    {
+      "name": "BIOESTETIC",
+      "count": 13
+    },
+    {
+      "name": "OSSION",
+      "count": 12
+    },
+    {
+      "name": "YAMÁ",
+      "count": 12
+    },
+    {
+      "name": "COLOR TONE",
+      "count": 11
+    },
+    {
+      "name": "HAIR REPUBLIC",
+      "count": 10
+    },
+    {
+      "name": "LUDAMA",
+      "count": 10
+    },
+    {
+      "name": "TERMIX",
+      "count": 10
+    },
+    {
+      "name": "TIMCO",
+      "count": 10
+    },
+    {
+      "name": "VANDUX",
+      "count": 10
+    },
+    {
+      "name": "AZEIDA",
+      "count": 9
+    },
+    {
+      "name": "LIZZE",
+      "count": 9
+    },
+    {
+      "name": "MATIZZE",
+      "count": 9
+    },
+    {
+      "name": "PUCHERITO",
+      "count": 9
+    },
+    {
+      "name": "REALISS",
+      "count": 9
+    },
+    {
+      "name": "AFRO LOVE",
+      "count": 8
+    },
+    {
+      "name": "BELOTTI",
+      "count": 8
+    },
+    {
+      "name": "HAR",
+      "count": 8
+    },
+    {
+      "name": "ISSUE",
+      "count": 8
+    },
+    {
+      "name": "LP",
+      "count": 8
+    },
+    {
+      "name": "MARYLLIN",
+      "count": 8
+    },
+    {
+      "name": "MAXE",
+      "count": 8
+    },
+    {
+      "name": "NATIVA",
+      "count": 8
+    },
+    {
+      "name": "VIVA COLOR",
+      "count": 8
+    },
+    {
+      "name": "BRILHO",
+      "count": 7
+    },
+    {
+      "name": "FAMASU",
+      "count": 7
+    },
+    {
+      "name": "GLAM BEAUTY",
+      "count": 7
+    },
+    {
+      "name": "HAPPY BABY",
+      "count": 7
+    },
+    {
+      "name": "KINOE",
+      "count": 7
+    },
+    {
+      "name": "RUCHA",
+      "count": 7
+    },
+    {
+      "name": "CALA",
+      "count": 6
+    },
+    {
+      "name": "DOMPEL",
+      "count": 6
+    },
+    {
+      "name": "SKALA",
+      "count": 6
+    },
+    {
+      "name": "VINILADY",
+      "count": 6
+    },
+    {
+      "name": "AMORE",
+      "count": 5
+    },
+    {
+      "name": "BYPHASSE",
+      "count": 5
+    },
+    {
+      "name": "DROMATIC",
+      "count": 5
+    },
+    {
+      "name": "GUMMY",
+      "count": 5
+    },
+    {
+      "name": "KERAPRIME",
+      "count": 5
+    },
+    {
+      "name": "LAVOUCHE",
+      "count": 5
+    },
+    {
+      "name": "AMY BEAUTY",
+      "count": 4
+    },
+    {
+      "name": "BANDIDO",
+      "count": 4
+    },
+    {
+      "name": "CLANS",
+      "count": 4
+    },
+    {
+      "name": "FRUCTIS",
+      "count": 4
+    },
+    {
+      "name": "RENCEL",
+      "count": 4
+    },
+    {
+      "name": "TAIFF",
+      "count": 4
+    },
+    {
+      "name": "TOUCH",
+      "count": 4
+    },
+    {
+      "name": "ANGELINO",
+      "count": 3
+    },
+    {
+      "name": "CLOVER",
+      "count": 3
+    },
+    {
+      "name": "FRESH&CO",
+      "count": 3
+    },
+    {
+      "name": "GLAM",
+      "count": 3
+    },
+    {
+      "name": "GLAM NAILS",
+      "count": 3
+    },
+    {
+      "name": "HENBOR",
+      "count": 3
+    },
+    {
+      "name": "HERBAL BEAUTY",
+      "count": 3
+    },
+    {
+      "name": "J-LASH",
+      "count": 3
+    },
+    {
+      "name": "KERATON",
+      "count": 3
+    },
+    {
+      "name": "L'DIOR",
+      "count": 3
+    },
+    {
+      "name": "MIA SECRET",
+      "count": 3
+    },
+    {
+      "name": "PILUSS",
+      "count": 3
+    },
+    {
+      "name": "PLASMA",
+      "count": 3
+    },
+    {
+      "name": "ROCIO DE ORO",
+      "count": 3
+    },
+    {
+      "name": "SKAFE",
+      "count": 3
+    },
+    {
+      "name": "WAER",
+      "count": 3
+    },
+    {
+      "name": "ABELLA",
+      "count": 2
+    },
+    {
+      "name": "BABARIA",
+      "count": 2
+    },
+    {
+      "name": "BIGEN",
+      "count": 2
+    },
+    {
+      "name": "DISAAR",
+      "count": 2
+    },
+    {
+      "name": "HIDROXON",
+      "count": 2
+    },
+    {
+      "name": "HOT TOOLS",
+      "count": 2
+    },
+    {
+      "name": "LEALE",
+      "count": 2
+    },
+    {
+      "name": "NOVEX",
+      "count": 2
+    },
+    {
+      "name": "PROLUX",
+      "count": 2
+    },
+    {
+      "name": "REFLEX",
+      "count": 2
+    },
+    {
+      "name": "REVUELE",
+      "count": 2
+    },
+    {
+      "name": "STARS COLORS",
+      "count": 2
+    },
+    {
+      "name": "TONI&GUY",
+      "count": 2
+    },
+    {
+      "name": "WAHL",
+      "count": 2
+    },
+    {
+      "name": "BARBASOL",
+      "count": 1
+    },
+    {
+      "name": "BUNEE",
+      "count": 1
+    },
+    {
+      "name": "DEMERT",
+      "count": 1
+    },
+    {
+      "name": "DUO",
+      "count": 1
+    },
+    {
+      "name": "E&A",
+      "count": 1
+    },
+    {
+      "name": "ECI",
+      "count": 1
+    },
+    {
+      "name": "ENKOR",
+      "count": 1
+    },
+    {
+      "name": "FLORMAR",
+      "count": 1
+    },
+    {
+      "name": "G9",
+      "count": 1
+    },
+    {
+      "name": "ITALIA",
+      "count": 1
+    },
+    {
+      "name": "ITELY",
+      "count": 1
+    },
+    {
+      "name": "JAGUAR",
+      "count": 1
+    },
+    {
+      "name": "JAYSUING",
+      "count": 1
+    },
+    {
+      "name": "JOSE FERNANDO",
+      "count": 1
+    },
+    {
+      "name": "KARITE",
+      "count": 1
+    },
+    {
+      "name": "KISS LOVELY",
+      "count": 1
+    },
+    {
+      "name": "KLEANCOLOR",
+      "count": 1
+    },
+    {
+      "name": "KONZIL",
+      "count": 1
+    },
+    {
+      "name": "L&D",
+      "count": 1
+    },
+    {
+      "name": "LISAP",
+      "count": 1
+    },
+    {
+      "name": "MARY MAY",
+      "count": 1
+    },
+    {
+      "name": "MASTER NAILS",
+      "count": 1
+    },
+    {
+      "name": "MISS SUMMER",
+      "count": 1
+    },
+    {
+      "name": "NABI",
+      "count": 1
+    },
+    {
+      "name": "NEW FASHION",
+      "count": 1
+    },
+    {
+      "name": "NOTRE",
+      "count": 1
+    },
+    {
+      "name": "PETITE MAISON",
+      "count": 1
+    },
+    {
+      "name": "PX LOOK",
+      "count": 1
+    },
+    {
+      "name": "RAQUEL",
+      "count": 1
+    },
+    {
+      "name": "REVOX",
+      "count": 1
+    },
+    {
+      "name": "RODHER",
+      "count": 1
+    },
+    {
+      "name": "SILETI",
+      "count": 1
+    },
+    {
+      "name": "TECNO ELECTRA",
+      "count": 1
+    },
+    {
+      "name": "THUYA",
+      "count": 1
+    },
+    {
+      "name": "URBAN",
+      "count": 1
+    },
+    {
+      "name": "VANITY",
+      "count": 1
+    },
+    {
+      "name": "VGR",
+      "count": 1
+    },
+    {
+      "name": "WAX",
+      "count": 1
+    },
+    {
+      "name": "YOUTHAIR",
+      "count": 1
+    }
+  ],
+  "firstPage": [
+    {
+      "publicProductId": "6f223ef7-2c26-495f-84e8-ba59a4489328",
+      "code": "1718",
+      "name": "250ML",
+      "slug": "250ml-1718",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "SHAMPOO",
+      "brand": "LMAR",
+      "publicPrice": 8.4,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "56a00e5b-7580-4548-b108-b4239f4ecb85",
+      "code": "1431",
+      "name": "ABLANDADOR DE CANAS",
+      "slug": "ablandador-de-canas-1431",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "SHAMPOO",
+      "brand": "LA COLORS",
+      "publicPrice": 0.6,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "ca8800db-0668-4794-9713-a80b064b83aa",
+      "code": "1341",
+      "name": "ABLANDADOR DE CANAS ISSUE 15ML",
+      "slug": "ablandador-de-canas-issue-15ml-1341",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ABLANDADOR DE CANAS",
+      "brand": "ISSUE",
+      "publicPrice": 1,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "c576e4c1-d5d8-4263-bafe-4686f6986487",
+      "code": "5125",
+      "name": "ABLANDADOR DE CANAS PRAKTIAMPOLLA DUO 17ML",
+      "slug": "ablandador-de-canas-praktiampolla-duo-17ml-5125",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ABLANDADOR DE CANAS",
+      "brand": null,
+      "publicPrice": 0.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "ee03c451-248e-4977-b9e9-4f9056210588",
+      "code": "6747",
+      "name": "ACCESORIO DE CABELLO STAR HAIR PARA TRENZAS VNC828",
+      "slug": "accesorio-de-cabello-star-hair-para-trenzas-vnc828-6747",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "STAR HAIR",
+      "publicPrice": 0.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "b1cf5fc0-e256-4a15-ab81-e339e0e1383b",
+      "code": "6748",
+      "name": "ACCESORIO DE CABELLO STAR HAIR PARA TRENZAS VNC829",
+      "slug": "accesorio-de-cabello-star-hair-para-trenzas-vnc829-6748",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "STAR HAIR",
+      "publicPrice": 0.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "95cdd3cb-f8ae-4ddc-8ee0-4c254e25f537",
+      "code": "2465",
+      "name": "ACEIITE DE ARGAN ECHOS LNE 30ML",
+      "slug": "aceiite-de-argan-echos-lne-30ml-2465",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "PRIMER",
+      "brand": "ECHOS LINE",
+      "publicPrice": 14,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "9d899abb-1697-477e-b636-8401a2aaf903",
+      "code": "437",
+      "name": "ACEITE CHOCOLIFE RANH MACADAMIA Y CAMELIA 30ML",
+      "slug": "aceite-chocolife-ranh-macadamia-y-camelia-30ml-437",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "SERUM",
+      "brand": "CHOCOLIFE",
+      "publicPrice": 9.8,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "210368b6-08e5-42fa-9e90-1cfaf1a9bdbc",
+      "code": "7643",
+      "name": "ACEITE DE ARGAN CLANS DE MOROCCO 60ML",
+      "slug": "aceite-de-argan-clans-de-morocco-60ml-7643",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "SERUM",
+      "brand": "CLANS",
+      "publicPrice": 2.9,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "d7465473-bdd3-448b-99bd-3fe6578335cb",
+      "code": "347",
+      "name": "ACEITE DE ARGAN MARIA JOSE 60ML",
+      "slug": "aceite-de-argan-maria-jose-60ml-347",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "SILICONA",
+      "brand": "MARIA JOSE",
+      "publicPrice": 6.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "66fdd7ae-cc71-405e-a32b-ccb9d6de3ee2",
+      "code": "2091",
+      "name": "ACEITE DE ARGAN MAXYBELT OLEO MILAGROSO 55ML",
+      "slug": "aceite-de-argan-maxybelt-oleo-milagroso-55ml-2091",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "SILICONA",
+      "brand": "MAXYBELT",
+      "publicPrice": 9.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "8a46f704-031d-489a-b398-9398c1631601",
+      "code": "2797",
+      "name": "ACEITE DE ARGAN THYMS OLEO CAPILLAR 60ML",
+      "slug": "aceite-de-argan-thyms-oleo-capillar-60ml-2797",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "SERUM",
+      "brand": "THYMS",
+      "publicPrice": 4.3,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "dc67e534-c0f7-4578-b115-ba1c90dc1ab2",
+      "code": "5297",
+      "name": "ACEITE DE COCO SONIA VEGA 15ML",
+      "slug": "aceite-de-coco-sonia-vega-15ml-5297",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACEITE DE CUTICULA",
+      "brand": "SONIA VEGA",
+      "publicPrice": 1.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "c3e34807-968b-49bc-bda4-4e7b05048886",
+      "code": "4890",
+      "name": "ACEITE DE COCO SONIA VEGA 60ML",
+      "slug": "aceite-de-coco-sonia-vega-60ml-4890",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACEITE DE CUTICULA",
+      "brand": "SONIA VEGA",
+      "publicPrice": 7.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "aa60bcab-7ac6-4e78-9b90-d552dabbf2df",
+      "code": "5730",
+      "name": "ACEITE DE CUTICULA PRECIOSA",
+      "slug": "aceite-de-cuticula-preciosa-5730",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "SHAMPOO",
+      "brand": "LA COLORS",
+      "publicPrice": 1.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "d611c14b-a319-4c7c-89e2-d688160b018b",
+      "code": "432",
+      "name": "ACONDICINADOR CHOCOLIFE CHOCOLATE 500ML",
+      "slug": "acondicinador-chocolife-chocolate-500ml-432",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACONDICIONADOR",
+      "brand": "CHOCOLIFE",
+      "publicPrice": 11.3,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "7c2da1a3-a1ef-48fa-a047-cf4bc65e103b",
+      "code": "1314",
+      "name": "ACONDICINADOR LISSIA CRECE PELO 425ML",
+      "slug": "acondicinador-lissia-crece-pelo-425ml-1314",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACONDICIONADOR",
+      "brand": "LISSIA",
+      "publicPrice": 5.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "86e247aa-9d40-4fa7-9d17-94ca742afb23",
+      "code": "8440",
+      "name": "ACONDICIOANDOR FRUCTIS GARNIER HAIR FOOD CACAO 300ML",
+      "slug": "acondicioandor-fructis-garnier-hair-food-cacao-300ml-8440",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACONDICIONADOR",
+      "brand": "GARNIER",
+      "publicPrice": 6.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "c20fe1f2-3551-4b71-bafa-444c46f44be7",
+      "code": "8443",
+      "name": "ACONDICIOANDOR FRUCTIS GARNIER HAIR FOOD COCO 300ML",
+      "slug": "acondicioandor-fructis-garnier-hair-food-coco-300ml-8443",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACONDICIONADOR",
+      "brand": "GARNIER",
+      "publicPrice": 6.6,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "f860550b-dcd2-4271-ad5b-40931f5dc623",
+      "code": "7967",
+      "name": "ACONDICIONADOR  AFRO LOVE CREMA  290ML",
+      "slug": "acondicionador-afro-love-crema-290ml-7967",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACONDICIONADOR",
+      "brand": "AFRO LOVE",
+      "publicPrice": 10.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "890bbb14-d59d-419a-88bb-271e722c230a",
+      "code": "6131",
+      "name": "ACONDICIONADOR A/HIALURONICO 31306 SALON LINE 300ML",
+      "slug": "acondicionador-a-hialuronico-31306-salon-line-300ml-6131",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACONDICIONADOR",
+      "brand": "SALON LINE",
+      "publicPrice": 10.85,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "fa8bb804-4756-4195-9323-e4c5266474b8",
+      "code": "3786",
+      "name": "ACONDICIONADOR BG TIGI EGO BOOST LEAVE IN 237ML",
+      "slug": "acondicionador-bg-tigi-ego-boost-leave-in-237ml-3786",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACONDICIONADOR",
+      "brand": "BH TIGI",
+      "publicPrice": 23.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "55cd7f5a-2a2c-4111-b28e-507d4f8f1823",
+      "code": "3925",
+      "name": "ACONDICIONADOR BH TIGI RESURRECT 400ML",
+      "slug": "acondicionador-bh-tigi-resurrect-400ml-3925",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "SHAMPOO",
+      "brand": "BH TIGI",
+      "publicPrice": 19.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "82f0ae58-915a-430d-b3c8-1d35232ed42e",
+      "code": "3926",
+      "name": "ACONDICIONADOR BH TIGI SERIAL BLONDE 400ML",
+      "slug": "acondicionador-bh-tigi-serial-blonde-400ml-3926",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACONDICIONADOR",
+      "brand": "BH TIGI",
+      "publicPrice": 19.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    }
+  ],
+  "firstPageTotal": 2904,
+  "fetchedAt": "2026-08-17T04:33:33.472Z"
+}

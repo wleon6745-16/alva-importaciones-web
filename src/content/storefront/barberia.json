@@ -1,0 +1,529 @@
+{
+  "categorySlug": "barberia",
+  "categoryLabel": "Barbería",
+  "description": null,
+  "featured": false,
+  "productCount": 262,
+  "brands": [
+    {
+      "name": "STAR HAIR",
+      "count": 41
+    },
+    {
+      "name": "WAHL",
+      "count": 22
+    },
+    {
+      "name": "ECI",
+      "count": 12
+    },
+    {
+      "name": "KEIME",
+      "count": 11
+    },
+    {
+      "name": "ZZAM",
+      "count": 8
+    },
+    {
+      "name": "CLOVER",
+      "count": 7
+    },
+    {
+      "name": "OSSION",
+      "count": 6
+    },
+    {
+      "name": "BANDIDO",
+      "count": 4
+    },
+    {
+      "name": "BARBERSHOP",
+      "count": 3
+    },
+    {
+      "name": "DOMPEL",
+      "count": 3
+    },
+    {
+      "name": "ROLDA",
+      "count": 3
+    },
+    {
+      "name": "VGR",
+      "count": 3
+    },
+    {
+      "name": "AMY BEAUTY",
+      "count": 2
+    },
+    {
+      "name": "GUMMY",
+      "count": 2
+    },
+    {
+      "name": "JOSE FERNANDO",
+      "count": 2
+    },
+    {
+      "name": "MARIA JOSE",
+      "count": 2
+    },
+    {
+      "name": "SILETI",
+      "count": 2
+    },
+    {
+      "name": "URBAN",
+      "count": 2
+    },
+    {
+      "name": "ABELLA",
+      "count": 1
+    },
+    {
+      "name": "ASTRA",
+      "count": 1
+    },
+    {
+      "name": "BABARIA",
+      "count": 1
+    },
+    {
+      "name": "BMT",
+      "count": 1
+    },
+    {
+      "name": "CHOCOLIFE",
+      "count": 1
+    },
+    {
+      "name": "DRAGON",
+      "count": 1
+    },
+    {
+      "name": "E&A",
+      "count": 1
+    },
+    {
+      "name": "ENKOR",
+      "count": 1
+    },
+    {
+      "name": "GLAM BEAUTY",
+      "count": 1
+    },
+    {
+      "name": "HENBOR",
+      "count": 1
+    },
+    {
+      "name": "MARYLLIN",
+      "count": 1
+    },
+    {
+      "name": "MAXYBELT",
+      "count": 1
+    },
+    {
+      "name": "RODHER",
+      "count": 1
+    },
+    {
+      "name": "TONI&GUY",
+      "count": 1
+    },
+    {
+      "name": "VANDUX",
+      "count": 1
+    }
+  ],
+  "firstPage": [
+    {
+      "publicProductId": "87bffa77-c843-419a-9597-42d4f71c0bc6",
+      "code": "9104",
+      "name": "ACEITE DE MAQUINA WAHL WH-01 C-AMP-1",
+      "slug": "aceite-de-maquina-wahl-wh-01-c-amp-1-9104",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "WAHL",
+      "publicPrice": 4.8,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "ff03f5b4-b4e3-48fb-82cf-19d39b7b43d6",
+      "code": "4868",
+      "name": "ACEITE PARA CUCHILLAS ANDIS CLIPPER 4OZ",
+      "slug": "aceite-para-cuchillas-andis-clipper-4oz-4868",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 3.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "d0f56cec-2c03-47b4-80f5-75845e9b8cf1",
+      "code": "11898",
+      "name": "ACEITE ROLDA PROFESSIONAL DE BARBA HIDRATANTE 30 ML 224233",
+      "slug": "aceite-rolda-professional-de-barba-hidratante-30-ml-224233-11898",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "BARBERIA",
+      "brand": "ROLDA",
+      "publicPrice": 5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "8bd03075-7b52-4eb3-8c85-1c84a74b37ae",
+      "code": "3393",
+      "name": "ACEITE WAHL CLIPPER OIL 4OZ",
+      "slug": "aceite-wahl-clipper-oil-4oz-3393",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "BARBERIA",
+      "brand": "WAHL",
+      "publicPrice": 3.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "46fdfaee-e55c-46fc-b602-73790ba07bd8",
+      "code": "4830",
+      "name": "AFEITADORA BARBASOL 4 GUIAS T-BLADE TRIMMER CBT1-6002",
+      "slug": "afeitadora-barbasol-4-guias-t-blade-trimmer-cbt1-6002-4830",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 30,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "5661e1b7-ce04-462f-b3ba-9f3ae8e353d2",
+      "code": "4828",
+      "name": "AFEITADORA BARBASOL PARA NARIZ Y OREJAS",
+      "slug": "afeitadora-barbasol-para-nariz-y-orejas-4828",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 10.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "0f669f05-9284-4d4b-9e72-65d5b6924547",
+      "code": "4829",
+      "name": "AFEITADORA BARBASOL RECARGABLE T-BLADE TRIMMER CBT1-6001",
+      "slug": "afeitadora-barbasol-recargable-t-blade-trimmer-cbt1-6001-4829",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "436ec4e8-c9ef-43e0-ba38-cb43e267ae3a",
+      "code": "10842",
+      "name": "ALZAS CLIPPER GUIDES DE MAQUINA PARA CORTAR CABELLO 8 UNIDADES C-AWH",
+      "slug": "alzas-clipper-guides-de-maquina-para-cortar-cabello-8-unidades-c-awh-10842",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "BARBERIA",
+      "brand": null,
+      "publicPrice": 4.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "03e57d4a-8eea-4524-9481-c2278b6796c5",
+      "code": "7188",
+      "name": "ALZAS HIGH QUALITY X3",
+      "slug": "alzas-high-quality-x3-7188",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "ALZAS",
+      "brand": null,
+      "publicPrice": 3,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "d14cf374-a729-4893-b051-feb6b2323ccf",
+      "code": "1404",
+      "name": "ALZAS PARA MAQUINA  X3 CLIPPER GUIDES C-APX3",
+      "slug": "alzas-para-maquina-x3-clipper-guides-c-apx3-1404",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "ALZAS",
+      "brand": null,
+      "publicPrice": 2.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "2d8b13fe-ea8c-4eb7-a6e4-bd43efa1424b",
+      "code": "6475",
+      "name": "ATOMIZADOR PARA BARBERO DE CALABERA  IB-009",
+      "slug": "atomizador-para-barbero-de-calabera-ib-009-6475",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 2.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "839e74d7-e7e3-43fc-9980-f4331df2b222",
+      "code": "10993",
+      "name": "ATOMIZADOR PARA BARBERO MA-202",
+      "slug": "atomizador-para-barbero-ma-202-10993",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "BARBERIA",
+      "brand": null,
+      "publicPrice": 1.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "f9cc13ab-6be8-4ca6-87a5-3a76ea1a7756",
+      "code": "10994",
+      "name": "ATOMIZADOR PARA BARBERO MA-203",
+      "slug": "atomizador-para-barbero-ma-203-10994",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "BARBERIA",
+      "brand": null,
+      "publicPrice": 1.3,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "3e3bd18f-3297-41b7-bd53-3710930e9184",
+      "code": "6776",
+      "name": "ATOMIZADOR PARA FIBRA C-AT100",
+      "slug": "atomizador-para-fibra-c-at100-6776",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 9,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "3c729cef-472e-4312-84ac-af56a70eaecc",
+      "code": "8461",
+      "name": "ATOMIZADOR S/N VARIOS DISEÑOS MA-93",
+      "slug": "atomizador-s-n-varios-disenos-ma-93-8461",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 3.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "c28e1297-dd80-46fc-a548-78ff74083a4a",
+      "code": "8490",
+      "name": "ATOMIZADOR STAR HAIR DEGRADADO XF49",
+      "slug": "atomizador-star-hair-degradado-xf49-8490",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "STAR HAIR",
+      "publicPrice": 2.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "6945e1c9-fd23-4605-8ebc-8e0a8fe5359b",
+      "code": "11890",
+      "name": "BANDIDO COLONIA AFTER SHAVE COLOGNE BERLIN 350ML",
+      "slug": "bandido-colonia-after-shave-cologne-berlin-350ml-11890",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "COLONIA",
+      "brand": "BANDIDO",
+      "publicPrice": 7.3,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "8841f87d-bc15-40cb-9e93-493aa590ae9d",
+      "code": "10318",
+      "name": "BANDIDO COLONIA AFTER SHAVE COLOGNE SICILIA 350ML",
+      "slug": "bandido-colonia-after-shave-cologne-sicilia-350ml-10318",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "COLONIA",
+      "brand": "BANDIDO",
+      "publicPrice": 8.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "16294005-53a4-464f-b92e-d66742b4b589",
+      "code": "10315",
+      "name": "BANDIDO LACA HAIR SPRAY SILVER EXTRA VOLUM EXTREMELY 400ML",
+      "slug": "bandido-laca-hair-spray-silver-extra-volum-extremely-400ml-10315",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "LACA",
+      "brand": "BANDIDO",
+      "publicPrice": 7.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "e884b90c-d40a-46c9-b019-0e4e520ed6d5",
+      "code": "10316",
+      "name": "BANDIDO POLVO TEXTURIZADOR HAIR STYLING POWDER EXTRA VOLUME 20GR",
+      "slug": "bandido-polvo-texturizador-hair-styling-powder-extra-volume-20gr-10316",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "POLVO TEXTURIZADOR",
+      "brand": "BANDIDO",
+      "publicPrice": 7.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "5f69992e-6363-4757-b27c-81aff5db2857",
+      "code": "10800",
+      "name": "BROCHA BARBERO STAR HAIR CLASSIC YM593",
+      "slug": "brocha-barbero-star-hair-classic-ym593-10800",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "BROCHA PARA CABELLO",
+      "brand": "STAR HAIR",
+      "publicPrice": 6.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "129997bc-e217-4c06-995f-16b0d2218e73",
+      "code": "10801",
+      "name": "BROCHA BARBERO STAR HAIR YM594",
+      "slug": "brocha-barbero-star-hair-ym594-10801",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "BROCHA PARA CABELLO",
+      "brand": "STAR HAIR",
+      "publicPrice": 5.3,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "c31814ee-ac47-42da-bebf-424b918a00a8",
+      "code": "12063",
+      "name": "BROCHA CON DISEÑO DE BARBERIA CB-1018",
+      "slug": "brocha-con-diseno-de-barberia-cb-1018-12063",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "BROCHA PARA CABELLO",
+      "brand": "CLOVER",
+      "publicPrice": 4,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "dc06745c-415b-4bb0-8235-c57fe24a682e",
+      "code": "6745",
+      "name": "BROCHA DE BARBERO MADERA LN1529",
+      "slug": "brocha-de-barbero-madera-ln1529-6745",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 2,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    }
+  ],
+  "firstPageTotal": 262,
+  "fetchedAt": "2026-08-17T04:33:33.472Z"
+}

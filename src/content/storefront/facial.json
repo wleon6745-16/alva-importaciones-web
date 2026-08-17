@@ -1,0 +1,605 @@
+{
+  "categorySlug": "facial",
+  "categoryLabel": "Cuidado de la piel",
+  "description": null,
+  "featured": false,
+  "productCount": 303,
+  "brands": [
+    {
+      "name": "BYPHASSE",
+      "count": 23
+    },
+    {
+      "name": "REVOX",
+      "count": 22
+    },
+    {
+      "name": "REVUELE",
+      "count": 21
+    },
+    {
+      "name": "GLAM BEAUTY",
+      "count": 16
+    },
+    {
+      "name": "RAQUEL",
+      "count": 16
+    },
+    {
+      "name": "THE FRUIT LAB",
+      "count": 11
+    },
+    {
+      "name": "MARIA JOSE",
+      "count": 10
+    },
+    {
+      "name": "NIVEA",
+      "count": 10
+    },
+    {
+      "name": "G9",
+      "count": 9
+    },
+    {
+      "name": "COSR X",
+      "count": 8
+    },
+    {
+      "name": "EUCERIN",
+      "count": 7
+    },
+    {
+      "name": "BEAUTY OF JOSEON",
+      "count": 6
+    },
+    {
+      "name": "OG",
+      "count": 6
+    },
+    {
+      "name": "BIOAQUA",
+      "count": 5
+    },
+    {
+      "name": "CALA",
+      "count": 5
+    },
+    {
+      "name": "FACE CREAM",
+      "count": 5
+    },
+    {
+      "name": "CLANS",
+      "count": 4
+    },
+    {
+      "name": "J-LASH",
+      "count": 4
+    },
+    {
+      "name": "KARITE",
+      "count": 4
+    },
+    {
+      "name": "AMY BEAUTY",
+      "count": 3
+    },
+    {
+      "name": "BABARIA",
+      "count": 3
+    },
+    {
+      "name": "DEEP FRESH",
+      "count": 3
+    },
+    {
+      "name": "GARNIER",
+      "count": 3
+    },
+    {
+      "name": "NAOBAY",
+      "count": 3
+    },
+    {
+      "name": "PETITE MAISON",
+      "count": 3
+    },
+    {
+      "name": "USHAS",
+      "count": 3
+    },
+    {
+      "name": "BEAUTY CREATIONS",
+      "count": 2
+    },
+    {
+      "name": "BELOTTI",
+      "count": 2
+    },
+    {
+      "name": "BYOTEA",
+      "count": 2
+    },
+    {
+      "name": "ITALIA",
+      "count": 2
+    },
+    {
+      "name": "MAXE",
+      "count": 2
+    },
+    {
+      "name": "ST. IVES",
+      "count": 2
+    },
+    {
+      "name": "VOGUE",
+      "count": 2
+    },
+    {
+      "name": "AMAZING SHINE",
+      "count": 1
+    },
+    {
+      "name": "AMORUS",
+      "count": 1
+    },
+    {
+      "name": "CARLITO",
+      "count": 1
+    },
+    {
+      "name": "CERAVE",
+      "count": 1
+    },
+    {
+      "name": "CREMA DERM",
+      "count": 1
+    },
+    {
+      "name": "DOLL",
+      "count": 1
+    },
+    {
+      "name": "L'DIOR",
+      "count": 1
+    },
+    {
+      "name": "LA COLORS",
+      "count": 1
+    },
+    {
+      "name": "LOVE JOJO",
+      "count": 1
+    },
+    {
+      "name": "MARY MAY",
+      "count": 1
+    },
+    {
+      "name": "MIA SECRET",
+      "count": 1
+    },
+    {
+      "name": "MILAI COSMETICS",
+      "count": 1
+    },
+    {
+      "name": "MILLION PAULINE",
+      "count": 1
+    },
+    {
+      "name": "MIXSOON",
+      "count": 1
+    },
+    {
+      "name": "PILATEN",
+      "count": 1
+    },
+    {
+      "name": "PRECIOSA",
+      "count": 1
+    },
+    {
+      "name": "RUBY FACE",
+      "count": 1
+    },
+    {
+      "name": "TOCOBO",
+      "count": 1
+    },
+    {
+      "name": "ZZAM",
+      "count": 1
+    }
+  ],
+  "firstPage": [
+    {
+      "publicProductId": "618d7989-040c-484b-ae4b-8daa6e3184da",
+      "code": "2956",
+      "name": "ACEITE BOTANICO RAQUEL 4 OLEOS 50ML",
+      "slug": "aceite-botanico-raquel-4-oleos-50ml-2956",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "SERUM",
+      "brand": "RAQUEL",
+      "publicPrice": 9.3,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "d5a622be-6c6d-477c-9554-3ce74ec1db37",
+      "code": "4801",
+      "name": "AGUA DE ROSAS HYDRATING TONER 400ML",
+      "slug": "agua-de-rosas-hydrating-toner-400ml-4801",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AGUA DE ROSAS",
+      "brand": null,
+      "publicPrice": 2,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "bba93595-069b-4111-9502-72837b34d2ed",
+      "code": "1956",
+      "name": "AGUA DE ROSAS MARIA JOSE 250ML",
+      "slug": "agua-de-rosas-maria-jose-250ml-1956",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AGUA DE ROSAS",
+      "brand": "MARIA JOSE",
+      "publicPrice": 3,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "e22be09e-2a11-48c2-80b9-43d668c20dcf",
+      "code": "1955",
+      "name": "AGUA DE ROSAS MARIA JOSE 500ML",
+      "slug": "agua-de-rosas-maria-jose-500ml-1955",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AGUA DE ROSAS",
+      "brand": "MARIA JOSE",
+      "publicPrice": 4,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "8512d62a-eba8-4391-88a0-b3870d8b8633",
+      "code": "1791",
+      "name": "AGUA MICELAR AMY BEAUTY COMBINATION & OIL SKIN 125ML",
+      "slug": "agua-micelar-amy-beauty-combination-oil-skin-125ml-1791",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "AMY BEAUTY",
+      "publicPrice": 3.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "880f08a2-0101-4621-8f70-65a65a2bef63",
+      "code": "1792",
+      "name": "AGUA MICELAR AMY BEAUTY NORMAL TO DRY SKIN 125ML",
+      "slug": "agua-micelar-amy-beauty-normal-to-dry-skin-125ml-1792",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "AMY BEAUTY",
+      "publicPrice": 3.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "ccf90967-20f6-4c9e-82d9-d3264e493ca5",
+      "code": "1672",
+      "name": "AGUA MICELAR BYPHASSE CARBON ACTIVO 500ML + SOLUCION MICELAR 100ML",
+      "slug": "agua-micelar-byphasse-carbon-activo-500ml-solucion-micelar-100ml-1672",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "BYPHASSE",
+      "publicPrice": 8.85,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "52fecfe8-de85-4750-a0cb-55fe87fc8bec",
+      "code": "2148",
+      "name": "AGUA MICELAR DEEP FRESH ALOE VERA 400ML",
+      "slug": "agua-micelar-deep-fresh-aloe-vera-400ml-2148",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "DEEP FRESH",
+      "publicPrice": 5.9,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "853ec34c-318a-470c-b4cd-170cedce4412",
+      "code": "2147",
+      "name": "AGUA MICELAR DEEP FRESH BIPHASE ALOE VERA 200ML",
+      "slug": "agua-micelar-deep-fresh-biphase-aloe-vera-200ml-2147",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "DEEP FRESH",
+      "publicPrice": 5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "65eed906-4f41-4365-81ae-65a08f12a472",
+      "code": "10377",
+      "name": "AGUA MICELAR GARNIER ACLARANTE ANTIACNE 400ML",
+      "slug": "agua-micelar-garnier-aclarante-antiacne-400ml-10377",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "GARNIER",
+      "publicPrice": 10,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "1345a958-0b30-479a-b21d-aa209938e63e",
+      "code": "1958",
+      "name": "AGUA MICELAR MARIA JOSE PIEL NORMAL 250ML",
+      "slug": "agua-micelar-maria-jose-piel-normal-250ml-1958",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "MARIA JOSE",
+      "publicPrice": 5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "44d6898b-d27c-4f65-96f2-3f79090cac1d",
+      "code": "1957",
+      "name": "AGUA MICELAR MARIA JOSE PIEL SECA  250ML",
+      "slug": "agua-micelar-maria-jose-piel-seca-250ml-1957",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "MARIA JOSE",
+      "publicPrice": 5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "638ce08e-abc1-4a7c-96cf-0551fa02ff7b",
+      "code": "817",
+      "name": "AGUA MICELAR NAOBAY 200ML",
+      "slug": "agua-micelar-naobay-200ml-817",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "NAOBAY",
+      "publicPrice": 11.3,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "c2797363-cff6-46d8-aa9a-01ecde343cef",
+      "code": "2960",
+      "name": "AGUA MICELAR RAQUEL DESMAQUILLANTE 220ML",
+      "slug": "agua-micelar-raquel-desmaquillante-220ml-2960",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "RAQUEL",
+      "publicPrice": 7.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "1f0dfdf8-2b8b-4e2c-adee-bcfa2234fd9c",
+      "code": "4531",
+      "name": "AGUA MICELAR REVUELE ACTIVA 400ML",
+      "slug": "agua-micelar-revuele-activa-400ml-4531",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "REVUELE",
+      "publicPrice": 7.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "00cdec53-0103-46fc-87f3-60b25737e32f",
+      "code": "4532",
+      "name": "AGUA MICELAR REVUELE CALMANTE 400ML",
+      "slug": "agua-micelar-revuele-calmante-400ml-4532",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "REVUELE",
+      "publicPrice": 7.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "f735f856-03d1-4081-a752-a437091cf86d",
+      "code": "8061",
+      "name": "AGUA TERMAL MARIA JOSE PARA PIELES SENSIBLES 250ML",
+      "slug": "agua-termal-maria-jose-para-pieles-sensibles-250ml-8061",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "MARIA JOSE",
+      "publicPrice": 5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "34c52bfc-b00d-466b-8ca3-0d09e7535433",
+      "code": "5754",
+      "name": "AMPOLLAS FACIALES LACABINE EFECTO BOTULINICO 2ML",
+      "slug": "ampollas-faciales-lacabine-efecto-botulinico-2ml-5754",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AMPOLLA",
+      "brand": null,
+      "publicPrice": 2.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "8519b371-90e2-4cd5-ac47-91fd606ec4a8",
+      "code": "5757",
+      "name": "AMPOLLAS FACIALES LACABINE EYE CONTOUR 2ML",
+      "slug": "ampollas-faciales-lacabine-eye-contour-2ml-5757",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AMPOLLA",
+      "brand": null,
+      "publicPrice": 3,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "45cf0a47-0ef8-4b99-9f27-2cb38f4ce2d0",
+      "code": "5756",
+      "name": "AMPOLLAS FACIALES LACABINE PURE RETINOL 2ML",
+      "slug": "ampollas-faciales-lacabine-pure-retinol-2ml-5756",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AMPOLLA",
+      "brand": null,
+      "publicPrice": 3,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "bab8f196-e20a-4bb7-8e75-7d9e1169acb5",
+      "code": "4414",
+      "name": "ANILLOS PARA TINTES DE CEJAS IM-044",
+      "slug": "anillos-para-tintes-de-cejas-im-044-4414",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "ANILLO GOMA",
+      "brand": null,
+      "publicPrice": 1.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "85f97938-a136-4eee-84fb-51295c029edb",
+      "code": "5206",
+      "name": "APLICADOR DE CERA DANNA X12",
+      "slug": "aplicador-de-cera-danna-x12-5206",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 1.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "9c158f7b-49b4-41ab-a41c-0b5a9a5bdcb7",
+      "code": "4305",
+      "name": "APLIQUE GLAM BEAUTY P/ROSTRO MS478 TORNASOL",
+      "slug": "aplique-glam-beauty-p-rostro-ms478-tornasol-4305",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 2,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "63038431-9e66-40ce-ac56-76465a1adb54",
+      "code": "4847",
+      "name": "APLIQUE PARA EL ROSTRO FACE GEM FACE STIKER",
+      "slug": "aplique-para-el-rostro-face-gem-face-stiker-4847",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "STIKERS",
+      "brand": null,
+      "publicPrice": 1.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    }
+  ],
+  "firstPageTotal": 303,
+  "fetchedAt": "2026-08-17T04:33:33.472Z"
+}

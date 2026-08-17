@@ -1,0 +1,837 @@
+{
+  "categorySlug": "maquillaje",
+  "categoryLabel": "Maquillaje",
+  "description": null,
+  "featured": false,
+  "productCount": 2600,
+  "brands": [
+    {
+      "name": "BEAUTY CREATIONS",
+      "count": 251
+    },
+    {
+      "name": "VOGUE",
+      "count": 139
+    },
+    {
+      "name": "ITALIA",
+      "count": 136
+    },
+    {
+      "name": "LA COLORS",
+      "count": 123
+    },
+    {
+      "name": "L.A. GIRL",
+      "count": 119
+    },
+    {
+      "name": "OG",
+      "count": 104
+    },
+    {
+      "name": "ESSENCE",
+      "count": 102
+    },
+    {
+      "name": "GLAM BEAUTY",
+      "count": 91
+    },
+    {
+      "name": "NAILEN",
+      "count": 81
+    },
+    {
+      "name": "MAKE UP PRO",
+      "count": 73
+    },
+    {
+      "name": "FLORMAR",
+      "count": 66
+    },
+    {
+      "name": "RAQUEL",
+      "count": 66
+    },
+    {
+      "name": "MILANI",
+      "count": 63
+    },
+    {
+      "name": "L'DIOR",
+      "count": 59
+    },
+    {
+      "name": "AMORUS",
+      "count": 58
+    },
+    {
+      "name": "BARDOT",
+      "count": 54
+    },
+    {
+      "name": "URBAN",
+      "count": 54
+    },
+    {
+      "name": "SATINE",
+      "count": 52
+    },
+    {
+      "name": "GLAM",
+      "count": 38
+    },
+    {
+      "name": "J-LASH",
+      "count": 37
+    },
+    {
+      "name": "SFR",
+      "count": 36
+    },
+    {
+      "name": "KLEANCOLOR",
+      "count": 32
+    },
+    {
+      "name": "PROLUX",
+      "count": 32
+    },
+    {
+      "name": "AMY BEAUTY",
+      "count": 24
+    },
+    {
+      "name": "APPLE",
+      "count": 24
+    },
+    {
+      "name": "CALA",
+      "count": 23
+    },
+    {
+      "name": "USHAS",
+      "count": 23
+    },
+    {
+      "name": "SHE MAKEUP",
+      "count": 20
+    },
+    {
+      "name": "GENERATION",
+      "count": 18
+    },
+    {
+      "name": "SEVEN COLOR",
+      "count": 15
+    },
+    {
+      "name": "BYPHASSE",
+      "count": 12
+    },
+    {
+      "name": "GLAM NAILS",
+      "count": 12
+    },
+    {
+      "name": "RUBY FACE",
+      "count": 12
+    },
+    {
+      "name": "ZZAM",
+      "count": 12
+    },
+    {
+      "name": "PX LOOK",
+      "count": 11
+    },
+    {
+      "name": "THE FRUIT COMPANY",
+      "count": 11
+    },
+    {
+      "name": "RUDE",
+      "count": 9
+    },
+    {
+      "name": "HUDA BEAUTY",
+      "count": 8
+    },
+    {
+      "name": "TOP FACE",
+      "count": 8
+    },
+    {
+      "name": "BEBELLA",
+      "count": 7
+    },
+    {
+      "name": "MIA SECRET",
+      "count": 7
+    },
+    {
+      "name": "TOPFACE",
+      "count": 7
+    },
+    {
+      "name": "BEAUTY CARE",
+      "count": 5
+    },
+    {
+      "name": "CHANLAYA",
+      "count": 5
+    },
+    {
+      "name": "KARITE",
+      "count": 5
+    },
+    {
+      "name": "KJ",
+      "count": 5
+    },
+    {
+      "name": "MARTINA",
+      "count": 5
+    },
+    {
+      "name": "NABI",
+      "count": 5
+    },
+    {
+      "name": "THUYA",
+      "count": 5
+    },
+    {
+      "name": "BELLACOTTON",
+      "count": 4
+    },
+    {
+      "name": "DEEP FRESH",
+      "count": 4
+    },
+    {
+      "name": "HENNA",
+      "count": 4
+    },
+    {
+      "name": "SEYOR",
+      "count": 4
+    },
+    {
+      "name": "ADORO",
+      "count": 3
+    },
+    {
+      "name": "ARDELL",
+      "count": 3
+    },
+    {
+      "name": "CLANS",
+      "count": 3
+    },
+    {
+      "name": "DOCOLOR",
+      "count": 3
+    },
+    {
+      "name": "FEBBLE",
+      "count": 3
+    },
+    {
+      "name": "KJ BEAUTY",
+      "count": 3
+    },
+    {
+      "name": "L&D",
+      "count": 3
+    },
+    {
+      "name": "MARIA JOSE",
+      "count": 3
+    },
+    {
+      "name": "MILLION PAULINE",
+      "count": 3
+    },
+    {
+      "name": "REVUELE",
+      "count": 3
+    },
+    {
+      "name": "RODHER",
+      "count": 3
+    },
+    {
+      "name": "THE FRUIT LAB",
+      "count": 3
+    },
+    {
+      "name": "ANDIS",
+      "count": 2
+    },
+    {
+      "name": "BIOTANIK",
+      "count": 2
+    },
+    {
+      "name": "CELAVI",
+      "count": 2
+    },
+    {
+      "name": "CHARMING",
+      "count": 2
+    },
+    {
+      "name": "DEAR DERM",
+      "count": 2
+    },
+    {
+      "name": "DIAMOND BEAUTY",
+      "count": 2
+    },
+    {
+      "name": "FARMAVITA",
+      "count": 2
+    },
+    {
+      "name": "GARNIER",
+      "count": 2
+    },
+    {
+      "name": "GOT2B",
+      "count": 2
+    },
+    {
+      "name": "KISS BEAUTY",
+      "count": 2
+    },
+    {
+      "name": "LINDA",
+      "count": 2
+    },
+    {
+      "name": "MASTER NAILS",
+      "count": 2
+    },
+    {
+      "name": "MAXYBELT",
+      "count": 2
+    },
+    {
+      "name": "PETITE MAISON",
+      "count": 2
+    },
+    {
+      "name": "PROFUSION",
+      "count": 2
+    },
+    {
+      "name": "UNNO",
+      "count": 2
+    },
+    {
+      "name": "VANDUX",
+      "count": 2
+    },
+    {
+      "name": "YQE",
+      "count": 2
+    },
+    {
+      "name": "ABELLA",
+      "count": 1
+    },
+    {
+      "name": "AICHUN BEAUTY",
+      "count": 1
+    },
+    {
+      "name": "AZEIDA",
+      "count": 1
+    },
+    {
+      "name": "BEAUTY OF JOSEON",
+      "count": 1
+    },
+    {
+      "name": "BELL",
+      "count": 1
+    },
+    {
+      "name": "CAI SILAN",
+      "count": 1
+    },
+    {
+      "name": "E&A",
+      "count": 1
+    },
+    {
+      "name": "ENKOR",
+      "count": 1
+    },
+    {
+      "name": "EUCERIN",
+      "count": 1
+    },
+    {
+      "name": "EXACTITUD",
+      "count": 1
+    },
+    {
+      "name": "GRANBELL",
+      "count": 1
+    },
+    {
+      "name": "KATIVA",
+      "count": 1
+    },
+    {
+      "name": "LISSIA",
+      "count": 1
+    },
+    {
+      "name": "M&CO",
+      "count": 1
+    },
+    {
+      "name": "MAXE",
+      "count": 1
+    },
+    {
+      "name": "MILLINS",
+      "count": 1
+    },
+    {
+      "name": "MOLLIE",
+      "count": 1
+    },
+    {
+      "name": "NOVEX",
+      "count": 1
+    },
+    {
+      "name": "OPI",
+      "count": 1
+    },
+    {
+      "name": "PRECIOSA",
+      "count": 1
+    },
+    {
+      "name": "RPK",
+      "count": 1
+    },
+    {
+      "name": "SALON LINE",
+      "count": 1
+    },
+    {
+      "name": "STALEKS",
+      "count": 1
+    },
+    {
+      "name": "STAR HAIR",
+      "count": 1
+    },
+    {
+      "name": "TOCOBO",
+      "count": 1
+    },
+    {
+      "name": "TRUE HEART",
+      "count": 1
+    },
+    {
+      "name": "VIVA COLOR",
+      "count": 1
+    }
+  ],
+  "firstPage": [
+    {
+      "publicProductId": "7cfb1e9d-72f7-4bd2-a8a2-0e40ded2dd4e",
+      "code": "9519",
+      "name": "ACTIVADOR GENERATION DILUIDOR GM-MAGICSEAL 15ML",
+      "slug": "activador-generation-diluidor-gm-magicseal-15ml-9519",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "DISOLVENTE",
+      "brand": "GENERATION",
+      "publicPrice": 8.75,
+      "currency": "USD",
+      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/alva/dipaso/generation/9519-gm-magicseal.jpg",
+      "shortDescription": "Transforma y optimiza tus productos de maquillaje con el Activador & Diluidor Magic Seal de GENERATION. Esta fórmula versátil permite diluir bases, correctores y delineadores para una aplicación más suave y modulable, o revivir productos secos sin alterar su pigmentación o duración."
+    },
+    {
+      "publicProductId": "43a5465f-11b2-495d-96fd-cf204b63e647",
+      "code": "10618",
+      "name": "ACTIVADOR USHAS SHADOW  SEAL WATERPROOF 12ml  FS473",
+      "slug": "activador-ushas-shadow-seal-waterproof-12ml-fs473-10618",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "USHAS",
+      "publicPrice": 2.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "3fcf3248-fb5c-4515-85aa-f3356110c552",
+      "code": "10384",
+      "name": "AEROGRAFO GLAM NAILS PROFESIONAL RECARGABLE DS152",
+      "slug": "aerografo-glam-nails-profesional-recargable-ds152-10384",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM NAILS",
+      "publicPrice": 25,
+      "currency": "USD",
+      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/alva/dipaso/glam-nails/10384-ds152.jpg",
+      "shortDescription": "El Aerógrafo Profesional Recargable de Glam Nails es la herramienta perfecta para lograr acabados precisos y creativos en uñas, maquillaje y diseño artístico. Su sistema inalámbrico recargable brinda mayor comodidad y libertad de movimiento, permitiendo trabajar sin cables y con total control. Ofrece una pulverización uniforme y fina, ideal para técnicas de nail art, degradados, efectos y detalles profesionales. Su diseño compacto y ergonómico facilita su uso tanto para principiantes como para expertos. Fabricado con materiales de alta calidad, garantiza durabilidad y un rendimiento eficiente, convirtiéndose en un aliado indispensable para salones de belleza y uso personal."
+    },
+    {
+      "publicProductId": "bf8ce4fe-1930-4943-9c9b-2bbc1e9c1a0e",
+      "code": "1293",
+      "name": "AGUA DE ROSA THE FRUIT LAB 250ML",
+      "slug": "agua-de-rosa-the-fruit-lab-250ml-1293",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "AGUA DE ROSAS",
+      "brand": "THE FRUIT LAB",
+      "publicPrice": 6.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "bd34e8d0-a820-492e-a4f0-6c45e87605b1",
+      "code": "5804",
+      "name": "AGUA DE ROSA THE FRUIT LAB 300ML AG-ROSAS-30",
+      "slug": "agua-de-rosa-the-fruit-lab-300ml-ag-rosas-30-5804",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "AGUA DE ROSAS",
+      "brand": "THE FRUIT LAB",
+      "publicPrice": 5.7,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "010c0f7c-38cc-4b7f-81e3-cbffd3a5e77c",
+      "code": "9652",
+      "name": "AGUA DE ROSAS CLANS 250ML",
+      "slug": "agua-de-rosas-clans-250ml-9652",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "AGUA DE ROSAS",
+      "brand": "CLANS",
+      "publicPrice": 2.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "adffafb8-be0b-4513-8370-2a2b3795719b",
+      "code": "4065",
+      "name": "AGUA DE ROSAS L.DIOR TONICO FACIAL ALL SKIN 240ML",
+      "slug": "agua-de-rosas-l-dior-tonico-facial-all-skin-240ml-4065",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "AGUA DE ROSAS",
+      "brand": "L'DIOR",
+      "publicPrice": 3.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "70891a46-2008-449b-8216-9e825f82c1ba",
+      "code": "3427",
+      "name": "AGUA DE ROSAS MARIA JOSE 100ML",
+      "slug": "agua-de-rosas-maria-jose-100ml-3427",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "AGUA DE ROSAS",
+      "brand": "MARIA JOSE",
+      "publicPrice": 2,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "420c854c-78e5-4d4b-b96b-b0c006c4c662",
+      "code": "7703",
+      "name": "AGUA MICELAR BEAUTY CREATIONS 150ML SK-TDM",
+      "slug": "agua-micelar-beauty-creations-150ml-sk-tdm-7703",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "BEAUTY CREATIONS",
+      "publicPrice": 9.4,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "aec199c9-a44c-4798-8ab9-f624c6373e70",
+      "code": "8000",
+      "name": "AGUA MICELAR CLANS 400ML",
+      "slug": "agua-micelar-clans-400ml-8000",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "CLANS",
+      "publicPrice": 2.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "621cb2fc-83a7-44de-aa3a-930daf8da767",
+      "code": "539",
+      "name": "AGUA MICELAR DEEP FRESH ALOE BI-PHASE 400ML",
+      "slug": "agua-micelar-deep-fresh-aloe-bi-phase-400ml-539",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "DEEP FRESH",
+      "publicPrice": 7.1,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "793467c1-85a8-4c37-8a67-0f7f204d6280",
+      "code": "8553",
+      "name": "AGUA MICELAR GARNIER ROSE 400ML",
+      "slug": "agua-micelar-garnier-rose-400ml-8553",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "GARNIER",
+      "publicPrice": 8.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "caca360a-5517-4425-b657-458032db3f33",
+      "code": "8554",
+      "name": "AGUA MICELAR GARNIER TODO EN 1 CLASICA 400ML",
+      "slug": "agua-micelar-garnier-todo-en-1-clasica-400ml-8554",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "GARNIER",
+      "publicPrice": 10,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "852d9a34-1b30-4d2b-8fba-63d7bb53504c",
+      "code": "7528",
+      "name": "AGUA MICELAR L.DIOR DE COCO 230ML",
+      "slug": "agua-micelar-l-dior-de-coco-230ml-7528",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "L'DIOR",
+      "publicPrice": 6,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "78488e39-5f0f-4124-b893-a595d596c330",
+      "code": "2931",
+      "name": "AGUA MICELAR PETITE MAISON PINK POMELO 200ML",
+      "slug": "agua-micelar-petite-maison-pink-pomelo-200ml-2931",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "PETITE MAISON",
+      "publicPrice": 6.6,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "407cdb9d-305b-441d-84a9-532cb5213868",
+      "code": "6764",
+      "name": "AGUA MICELAR REVUELVE WATER HIALURONICO 5 EN 1 100299",
+      "slug": "agua-micelar-revuelve-water-hialuronico-5-en-1-100299-6764",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "REVUELE",
+      "publicPrice": 6.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "299a0d52-9842-4683-81d0-4297e0ef63d2",
+      "code": "8040",
+      "name": "AGUA MICELAR REVUELVE WATER SOOTHING 400ML 100390",
+      "slug": "agua-micelar-revuelve-water-soothing-400ml-100390-8040",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "REVUELE",
+      "publicPrice": 7.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "148a1371-74cc-47e4-8a83-a6a3cbf98c5d",
+      "code": "1988",
+      "name": "AJUSTADOR DE BASES  KLEANCOLOR LF501 MEET YOUR MATCH 18ML",
+      "slug": "ajustador-de-bases-kleancolor-lf501-meet-your-match-18ml-1988",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "SOMBRA",
+      "brand": "KLEANCOLOR",
+      "publicPrice": 4,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "0589883a-835a-47d3-87d6-1c77223f08e7",
+      "code": "1989",
+      "name": "AJUSTADOR DE SOMBA KLEANCOLOR LF501-03 BLUE 18ML",
+      "slug": "ajustador-de-somba-kleancolor-lf501-03-blue-18ml-1989",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "SOMBRA",
+      "brand": "KLEANCOLOR",
+      "publicPrice": 3,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "6d5952c0-86a0-4269-a87f-509da53eda1a",
+      "code": "1990",
+      "name": "AJUSTADOR DE SOMBA KLEANCOLOR LF501-04 BROWN 18ML",
+      "slug": "ajustador-de-somba-kleancolor-lf501-04-brown-18ml-1990",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "SOMBRA",
+      "brand": "KLEANCOLOR",
+      "publicPrice": 3,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "1670b05a-d3f2-487d-90c6-53caece32cfb",
+      "code": "1402",
+      "name": "ALICATE DE PIE SENIOR CHARP U-AP08",
+      "slug": "alicate-de-pie-senior-charp-u-ap08-1402",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "ALICATE",
+      "brand": null,
+      "publicPrice": 3.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "dbf67ae6-d3c1-4fb6-bfbb-b32aafc7e9ca",
+      "code": "1662",
+      "name": "ALICATE GRANBELL PARA MANOS COBALTO GB-202",
+      "slug": "alicate-granbell-para-manos-cobalto-gb-202-1662",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "ALICATE",
+      "brand": "GRANBELL",
+      "publicPrice": 10.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "f52667aa-5dda-4a85-992a-dcaa94e2b3e1",
+      "code": "11855",
+      "name": "APLICADOR DE MADERA CON ALGODON ROSADITO MARLA2512-05",
+      "slug": "aplicador-de-madera-con-algodon-rosadito-marla2512-05-11855",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 1,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "705b9313-a745-4a1c-8c15-982a596b24e0",
+      "code": "10680",
+      "name": "APLICADOR DE MADERA CON ALGODON X100 EN FUNDA MA-360",
+      "slug": "aplicador-de-madera-con-algodon-x100-en-funda-ma-360-10680",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 1.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    }
+  ],
+  "firstPageTotal": 2600,
+  "fetchedAt": "2026-08-17T04:33:33.472Z"
+}

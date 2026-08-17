@@ -4,12 +4,25 @@ import SectionReveal from "../../components/SectionReveal.astro";
 import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
 import CategoryClosingCTA from "../../components/CategoryClosingCTA.astro";
 import ProductCardRich from "../../components/ProductCardRich.astro";
+import CatalogExplorer from "../../components/CatalogExplorer.tsx";
 import { breadcrumbSchema } from "../../lib/structured-data";
 import { siteConfig } from "../../lib/site-config";
 import { getProductsByCategory } from "../../lib/products";
+import { getEntry } from "astro:content";
+import { storefrontApiUrl, storefrontChannelId } from "../../lib/storefront-config";
 import type { Product } from "../../types/product";
 
+const CATEGORY_SLUG = "capilares";
 const products = await getProductsByCategory("capilares");
+
+const storefrontEntry = await getEntry("storefrontCatalog", CATEGORY_SLUG);
+const curatedCodes = new Set(products.map((p) => p.code).filter((c): c is string => Boolean(c)));
+const fullCatalogItems = (storefrontEntry?.data.firstPage ?? []).filter(
+  (item) => !item.code || !curatedCodes.has(item.code)
+);
+const fullCatalogHasMore = Boolean(
+  storefrontEntry && storefrontEntry.data.firstPageTotal > storefrontEntry.data.firstPage.length
+);
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "../../assets/products/capilares/*.{jpg,jpeg,png,webp}",
@@ -85,6 +98,32 @@ const breadcrumbs = breadcrumbSchema([
         </div>
       </SectionReveal>
     ))
+  }
+
+  {
+    storefrontEntry && (
+      <SectionReveal as="section" class="px-6 py-16">
+        <div class="mx-auto max-w-6xl">
+          <h2 class="font-display text-3xl text-primary-900">Todo el catálogo Capilar</h2>
+          <p class="mt-2 max-w-2xl text-ink-muted">
+            Además de nuestra selección destacada, este es el catálogo completo real —{" "}
+            {storefrontEntry.data.productCount.toLocaleString("es-EC")} productos con precio público.
+          </p>
+          <div class="mt-8">
+            <CatalogExplorer
+              client:visible
+              apiBaseUrl={storefrontApiUrl}
+              channelId={storefrontChannelId}
+              categorySlug={CATEGORY_SLUG}
+              initialItems={fullCatalogItems}
+              initialBrands={storefrontEntry.data.brands}
+              initialTotal={storefrontEntry.data.firstPageTotal}
+              initialHasMore={fullCatalogHasMore}
+            />
+          </div>
+        </div>
+      </SectionReveal>
+    )
   }
 
   <SectionReveal as="section" class="bg-blush-50 px-6 py-14">

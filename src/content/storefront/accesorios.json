@@ -1,0 +1,525 @@
+{
+  "categorySlug": "accesorios",
+  "categoryLabel": "Accesorios",
+  "description": null,
+  "featured": false,
+  "productCount": 408,
+  "brands": [
+    {
+      "name": "GLAM BEAUTY",
+      "count": 52
+    },
+    {
+      "name": "STAR HAIR",
+      "count": 20
+    },
+    {
+      "name": "VANITY",
+      "count": 15
+    },
+    {
+      "name": "MAKE UP PRO",
+      "count": 8
+    },
+    {
+      "name": "J-LASH",
+      "count": 7
+    },
+    {
+      "name": "GLAM NAILS",
+      "count": 6
+    },
+    {
+      "name": "ZZAM",
+      "count": 6
+    },
+    {
+      "name": "ADDICT",
+      "count": 3
+    },
+    {
+      "name": "AMY BEAUTY",
+      "count": 3
+    },
+    {
+      "name": "ABELLA",
+      "count": 2
+    },
+    {
+      "name": "LA COLORS",
+      "count": 2
+    },
+    {
+      "name": "MASTER NAILS",
+      "count": 2
+    },
+    {
+      "name": "SATINE",
+      "count": 2
+    },
+    {
+      "name": "ANDIS",
+      "count": 1
+    },
+    {
+      "name": "APPLE",
+      "count": 1
+    },
+    {
+      "name": "BABARIA",
+      "count": 1
+    },
+    {
+      "name": "BELLACOTTON",
+      "count": 1
+    },
+    {
+      "name": "CALA",
+      "count": 1
+    },
+    {
+      "name": "COQUETA",
+      "count": 1
+    },
+    {
+      "name": "CREMA DERM",
+      "count": 1
+    },
+    {
+      "name": "DOMPEL",
+      "count": 1
+    },
+    {
+      "name": "E&A",
+      "count": 1
+    },
+    {
+      "name": "HENBOR",
+      "count": 1
+    },
+    {
+      "name": "HOT TOOLS",
+      "count": 1
+    },
+    {
+      "name": "HUDA BEAUTY",
+      "count": 1
+    },
+    {
+      "name": "L'DIOR",
+      "count": 1
+    },
+    {
+      "name": "MARLA",
+      "count": 1
+    },
+    {
+      "name": "MARTINA",
+      "count": 1
+    },
+    {
+      "name": "MAXE",
+      "count": 1
+    },
+    {
+      "name": "MIA SECRET",
+      "count": 1
+    },
+    {
+      "name": "SILETI",
+      "count": 1
+    },
+    {
+      "name": "URBAN",
+      "count": 1
+    }
+  ],
+  "firstPage": [
+    {
+      "publicProductId": "48195da2-7901-418d-8dad-fd0cb42ed55d",
+      "code": "6746",
+      "name": "ACCESORIO DE CABELLO STAR HAIR VNC826",
+      "slug": "accesorio-de-cabello-star-hair-vnc826-6746",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "LA COLORS",
+      "publicPrice": 0.75,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "8a04a13e-5c53-4007-8c8e-e74fd30dd602",
+      "code": "4849",
+      "name": "ACCESORIOS PARA PEINADOS GRANDE VN596",
+      "slug": "accesorios-para-peinados-grande-vn596-4849",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 1.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "52aa4e10-093d-45da-8690-8a6e5d9a8a0e",
+      "code": "4662",
+      "name": "ACCESORIOS PARA PEINADOS PEQUEÑOS VN601",
+      "slug": "accesorios-para-peinados-pequenos-vn601-4662",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 1,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "98d2ee24-cf7d-49db-8d4c-34218770d8dc",
+      "code": "5287",
+      "name": "ACRILCIO PORTA BROCA BJ01-47",
+      "slug": "acrilcio-porta-broca-bj01-47-5287",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACRILICO",
+      "brand": null,
+      "publicPrice": 5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "fb65318a-c3dc-4413-a394-9eb43e76d3ab",
+      "code": "5281",
+      "name": "ACRILICO 2 PIEZAS COSMETIC STORAGE BOX BJ02-9",
+      "slug": "acrilico-2-piezas-cosmetic-storage-box-bj02-9-5281",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 10,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "175f98d7-f73e-4cb3-8c63-65746ca022e3",
+      "code": "5282",
+      "name": "ACRILICO COSMETIC ORGANIZED BJ02-7",
+      "slug": "acrilico-cosmetic-organized-bj02-7-5282",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACRILICO",
+      "brand": null,
+      "publicPrice": 10,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "ed7f84b3-c13a-4666-8bc5-56a539c55c05",
+      "code": "5289",
+      "name": "ACRILICO JOYERO X3 BJ02-13",
+      "slug": "acrilico-joyero-x3-bj02-13-5289",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACRILICO",
+      "brand": null,
+      "publicPrice": 5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "fa25ea01-1382-43aa-9e78-d2ab69d18d18",
+      "code": "5288",
+      "name": "ACRILICO JOYERO X3 CX-20 BJ02-14",
+      "slug": "acrilico-joyero-x3-cx-20-bj02-14-5288",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACRILICO",
+      "brand": null,
+      "publicPrice": 6,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "d0ae7085-7638-4b81-94dc-c04e9832d96e",
+      "code": "5286",
+      "name": "ACRILICO JOYERO X3 CX-30 BJ02-15",
+      "slug": "acrilico-joyero-x3-cx-30-bj02-15-5286",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACRILICO",
+      "brand": null,
+      "publicPrice": 6,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "abb725bc-e989-4549-a966-244a8396633c",
+      "code": "5283",
+      "name": "ACRILICO ORGANIZADOR CON ESPEJO BJ02-12",
+      "slug": "acrilico-organizador-con-espejo-bj02-12-5283",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACRILICO",
+      "brand": null,
+      "publicPrice": 11,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "1a7c7d04-f0c0-4b16-a0bd-5bb3a7480113",
+      "code": "7754",
+      "name": "ACRILICO ORGANIZADOR MULTIUSO CLEAR WT54",
+      "slug": "acrilico-organizador-multiuso-clear-wt54-7754",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "635c5a31-9b59-4ddd-838b-041e0cb388aa",
+      "code": "7755",
+      "name": "ACRILICO ORGANIZADOR MULTIUSO MARMOL WT53",
+      "slug": "acrilico-organizador-multiuso-marmol-wt53-7755",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS DE UÑAS",
+      "brand": null,
+      "publicPrice": 31.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "f8252956-5e42-4bbd-8eb2-97a05ecf9362",
+      "code": "5290",
+      "name": "ACRILICO PORTA BROCHA BJ02-1",
+      "slug": "acrilico-porta-brocha-bj02-1-5290",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACRILICO",
+      "brand": null,
+      "publicPrice": 6,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "f109d27e-0289-4d22-858c-7edee13464cf",
+      "code": "6645",
+      "name": "ACRLICO PARA FOTO DE UÑAS U-DMET-CN",
+      "slug": "acrlico-para-foto-de-unas-u-dmet-cn-6645",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS DE UÑAS",
+      "brand": null,
+      "publicPrice": 3,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "f44dbd2a-4da6-4d94-853a-f9df0f2171e5",
+      "code": "2253",
+      "name": "ADHESIVO PARA PESTAÑA RPP11 WT58",
+      "slug": "adhesivo-para-pestana-rpp11-wt58-2253",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 4,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "e328570b-1861-45c9-826f-34e614af40e7",
+      "code": "9568",
+      "name": "AEROGRAFO PROFESIONAL RECARGABLE DS152",
+      "slug": "aerografo-profesional-recargable-ds152-9568",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 24,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "2ea5e5ca-a967-4dfb-8099-88ade25e1316",
+      "code": "11283",
+      "name": "AEROGRAFO ROHSUK PORTABLE AIRBRUSH KIT M-W01",
+      "slug": "aerografo-rohsuk-portable-airbrush-kit-m-w01-11283",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS DE UÑAS",
+      "brand": null,
+      "publicPrice": 24,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "f6fedb47-9d00-42e5-8021-1b251e1bca80",
+      "code": "1793",
+      "name": "ALMOHADA CUADRADA VARIOS DISEÑOS",
+      "slug": "almohada-cuadrada-varios-disenos-1793",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ALMOHADA",
+      "brand": null,
+      "publicPrice": 8,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "28441303-7b57-49cc-ac7f-daeea472ef13",
+      "code": "2644",
+      "name": "ALMOHADA PARA DESCANSAR MANO H40802",
+      "slug": "almohada-para-descansar-mano-h40802-2644",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ALMOHADA",
+      "brand": null,
+      "publicPrice": 11.9,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "e8ad1f8a-fde1-45b5-8c9d-d0a95f25b704",
+      "code": "7496",
+      "name": "ANILLOS VARIOS COLORES P010-9",
+      "slug": "anillos-varios-colores-p010-9-7496",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "0c1a083c-e23e-4d92-aedb-23dc145d79cf",
+      "code": "3450",
+      "name": "ANTIFAZ GLAM BEAUTY VARIOS COLORES KW1206",
+      "slug": "antifaz-glam-beauty-varios-colores-kw1206-3450",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 3.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "83b7b53b-3a4b-4ee4-bc41-284634a52a03",
+      "code": "1795",
+      "name": "ANTIFAZ MC VARIOS COLORES",
+      "slug": "antifaz-mc-varios-colores-1795",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 3.5,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "06829eb3-c658-472f-9b3d-a969d4a0e3db",
+      "code": "7247",
+      "name": "APLICADOR DE ROSTRO GLAM BEAUTY VNC324",
+      "slug": "aplicador-de-rostro-glam-beauty-vnc324-7247",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 1.25,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "cd9ffe0f-6509-41ea-a5a8-2f7d815d7e0f",
+      "code": "2930",
+      "name": "APLICADOR MIA SECRET PARA CEJAS X100 EP-3040",
+      "slug": "aplicador-mia-secret-para-cejas-x100-ep-3040-2930",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "MIA SECRET",
+      "publicPrice": 3.15,
+      "currency": "USD",
+      "imageUrl": null,
+      "shortDescription": null
+    }
+  ],
+  "firstPageTotal": 408,
+  "fetchedAt": "2026-08-17T04:33:33.472Z"
+}
