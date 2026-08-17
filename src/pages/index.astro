@@ -12,9 +12,14 @@ import { siteConfig } from "../lib/site-config";
 import { categories as categoryMeta } from "../lib/categories";
 
 import heroImage from "../assets/products/muebles/camilla-3-niveles.jpg";
-import nailsImage from "../assets/products/unas/monomero-master-nails-16oz.jpg";
+// nails-2.jpg y makeup-3.jpg: fotos de estudio limpias (fondo blanco), no las
+// fotos de producto individuales tomadas en tienda -- esas tienen estantes y
+// reflejos de fondo que no funcionan en un tratamiento editorial a pantalla
+// completa (ver feedback de evaluación de diseño). nails-2.jpg ya se usaba
+// así en nosotros.astro; se repite aquí por consistencia.
+import nailsImage from "../assets/products/unas/nails-2.jpg";
 import hairImage from "../assets/products/capilares/keratina-ambroisie-250ml-rene-chardon.jpg";
-import makeupImage from "../assets/products/maquillaje/paleta-sombras-satine.jpg";
+import makeupImage from "../assets/products/maquillaje/makeup-3.jpg";
 import mueblesImage from "../assets/products/muebles/silla-barberia-st2200.jpg";
 import sillonDestacado from "../assets/products/muebles/sillon-peluqueria-1.jpg";
 import camillaDestacada from "../assets/products/muebles/camilla-3-niveles.jpg";
@@ -54,7 +59,7 @@ const mueblesDestacados = [
     </div>
 
     <div class="relative mx-auto grid max-w-6xl items-center gap-16 px-6 py-20 sm:py-28 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:py-32">
-      <SectionReveal>
+      <div>
         <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blush-100">
           {siteConfig.tagline}
         </p>
@@ -88,9 +93,9 @@ const mueblesDestacados = [
             Ver catálogo completo
           </a>
         </div>
-      </SectionReveal>
+      </div>
 
-      <SectionReveal delay={140} class="relative mx-auto aspect-[5/6] w-full max-w-md lg:max-w-none">
+      <div class="relative mx-auto aspect-[5/6] w-full max-w-md lg:max-w-none">
         <div class="editorial-overlay group absolute inset-x-0 top-0 aspect-[4/5] w-[76%] overflow-hidden rounded-[1.75rem] shadow-2xl">
           <Image
             src={heroImage}
@@ -128,7 +133,7 @@ const mueblesDestacados = [
             loading="eager"
           />
         </div>
-      </SectionReveal>
+      </div>
     </div>
   </section>
 
