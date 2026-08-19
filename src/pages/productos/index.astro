@@ -4,40 +4,18 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import SectionReveal from "../../components/SectionReveal.astro";
 import CategoryCard from "../../components/CategoryCard.astro";
 import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
-// nails-2.jpg / makeup-3.jpg: fotos de estudio limpias (fondo blanco), no las
-// fotos individuales tomadas en tienda (estantes/reflejos de fondo). Mismos
-// assets que usa la home para estas categorías.
-import nailsImage from "../../assets/products/unas/nails-2.jpg";
-import hairImage from "../../assets/products/capilares/keratina-ambroisie-250ml-rene-chardon.jpg";
-import makeupImage from "../../assets/products/maquillaje/makeup-3.jpg";
-import mueblesImage from "../../assets/products/muebles/silla-barberia-st2200.jpg";
+import { categories as categoryMeta } from "../../lib/categories";
+import { categoryImages } from "../../lib/category-images";
 
-const categories = [
-  {
-    title: "Muebles para salón",
-    description: "Camillas, sillones de peluquería, butacas y mesas de trabajo.",
-    image: mueblesImage,
-    href: "/productos/muebles",
-  },
-  {
-    title: "Uñas / Nailart",
-    description: "Acrílicos, geles, esmaltes y todo lo necesario para nail art profesional.",
-    image: nailsImage,
-    href: "/productos/unas",
-  },
-  {
-    title: "Capilares",
-    description: "Tratamientos y productos capilares de marcas reconocidas.",
-    image: hairImage,
-    href: "/productos/capilares",
-  },
-  {
-    title: "Maquillaje",
-    description: "Maquillaje de marcas como Milani y La Girl USA.",
-    image: makeupImage,
-    href: "/productos/maquillaje",
-  },
-];
+// Mismas categorias, mismo texto y misma fotografia que la home: ambas leen
+// lib/categories.ts + lib/category-images.ts. Antes esta pagina repetia el
+// array con sus propias fotos y se quedaba desactualizada.
+const categories = categoryMeta.map((category) => ({
+  title: category.label,
+  description: category.description,
+  image: categoryImages[category.slug],
+  href: category.href,
+}));
 
 // Categorías reales adicionales (sin catálogo curado/foto editorial todavía
 // -- ver src/pages/productos/[category].astro). Se listan aparte, sin foto

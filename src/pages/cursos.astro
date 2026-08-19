@@ -1,9 +1,11 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionReveal from "../components/SectionReveal.astro";
 import WhatsAppCTA from "../components/WhatsAppCTA.astro";
 import { courseSchema, breadcrumbSchema } from "../lib/structured-data";
+import cursoImage from "../assets/products/hero/cat-curso.jpeg";
 
 const breadcrumbs = breadcrumbSchema([
   { name: "Inicio", path: "/" },
@@ -21,14 +23,29 @@ const { title, description, intro, highlights, ctaLabel, ctaMessage } = curso.da
   path="/cursos"
   structuredData={[courseSchema(title, description), breadcrumbs]}
 >
-  <section class="hero-glow px-6 py-16 text-center">
-    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Formación</p>
-    <h1 class="mt-4 font-display text-4xl text-primary-900">
-      {title}
-    </h1>
-    <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-muted">
-      {intro}
-    </p>
+  <section class="hero-glow px-6 py-16">
+    <div class="mx-auto grid max-w-5xl items-center gap-10 lg:grid-cols-2">
+      <div class="text-center lg:text-left">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Formación</p>
+        <h1 class="mt-4 font-display text-4xl text-primary-900">
+          {title}
+        </h1>
+        <p class="mt-6 text-lg text-ink-muted">
+          {intro}
+        </p>
+      </div>
+      <div class="overflow-hidden rounded-3xl shadow-xl">
+        <Image
+          src={cursoImage}
+          alt={`Clase práctica del ${title} — Alva Importaciones`}
+          width={800}
+          height={500}
+          class="aspect-[16/10] h-full w-full object-cover"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
   </section>
 
   <SectionReveal as="section" class="px-6 pb-14">

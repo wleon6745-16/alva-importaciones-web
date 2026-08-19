@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import type { ImageMetadata } from "astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionReveal from "../components/SectionReveal.astro";
 import CategoryCard from "../components/CategoryCard.astro";
@@ -11,34 +10,12 @@ import TrustSection from "../components/TrustSection.astro";
 import FeatureStrip, { type FeatureItem } from "../components/FeatureStrip.astro";
 import { siteConfig } from "../lib/site-config";
 import { categories as categoryMeta } from "../lib/categories";
+import { categoryImages } from "../lib/category-images";
 
-// Fotografía de portada por categoría (cat-*.jpeg): piezas de ambiente
-// producidas para la marca, no fotos sueltas de producto en estante. El hero
-// reutiliza la de muebles para que la portada abra con la misma imagen que
-// encabeza la reja.
 import heroImage from "../assets/products/muebles/cat-muebles.jpeg";
-import mueblesImage from "../assets/products/muebles/cat-muebles.jpeg";
-import nailsImage from "../assets/products/unas/cat-unas.jpeg";
-import makeupImage from "../assets/products/maquillaje/cat-maquillaje.jpeg";
-import hairImage from "../assets/products/capilares/cat-capilares.jpeg";
-import facialImage from "../assets/products/facial/cat-facial.jpeg";
-import accesoriosImage from "../assets/products/accesorios/cat-accesorios.jpeg";
-import cursoImage from "../assets/products/hero/cat-curso.jpeg";
 import sillonDestacado from "../assets/products/muebles/sillon-peluqueria-1.jpg";
 import camillaDestacada from "../assets/products/muebles/camilla-3-niveles.jpg";
 import mesaDestacada from "../assets/products/muebles/mesa-silla-concha-manicura.jpg";
-
-// Fotografía por categoría para el mosaico -- lib/categories.ts trae el
-// texto/orden/tamaño (misma fuente que el header), esto solo mapea
-// slug -> asset local. Un mapa de datos, no un if/else por categoria.
-const categoryImages: Record<(typeof categoryMeta)[number]["slug"], ImageMetadata> = {
-  muebles: mueblesImage,
-  unas: nailsImage,
-  capilares: hairImage,
-  maquillaje: makeupImage,
-  facial: facialImage,
-  accesorios: accesoriosImage,
-};
 
 // Argumentos de servicio, sobre la reja de categorias. Son afirmaciones que
 // el negocio ya sostiene hoy (envio nacional, atencion por WhatsApp, locales
@@ -256,21 +233,7 @@ const mueblesDestacados = [
   <SectionReveal as="section" class="section-y px-6">
     <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
       <div class="order-2 lg:order-1">
-        <!-- La foto del curso va aqui, no en la reja de categorias: formacion
-             no es una categoria de producto y no tiene pagina de catalogo. -->
-        <a href="/cursos" class="group block overflow-hidden rounded-3xl shadow-lg">
-          <div class="aspect-[16/10] overflow-hidden">
-            <Image
-              src={cursoImage}
-              alt="Clase del curso profesional de uñas acrílicas — Alva Importaciones"
-              width={800}
-              height={500}
-              class="media-zoom h-full w-full object-cover"
-              loading="lazy"
-            />
-          </div>
-        </a>
-        <div class="glass-card mt-4 rounded-3xl p-8">
+        <div class="glass-card rounded-3xl p-8">
           <p class="font-display text-2xl text-primary-800">Curso Profesional de Uñas Acrílicas</p>
           <p class="mt-4 text-ink-muted">
             6 meses de formación profesional. $60 al mes (o 2 pagos de $30), con matrícula
