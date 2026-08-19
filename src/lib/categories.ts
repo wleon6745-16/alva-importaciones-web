@@ -3,16 +3,14 @@
 // bifurcar por if/else de categoria (ver docs/ALVA_2.0_PROPOSAL.md seccion G:
 // "no hagas if category === 'unas' ... para construir la UI").
 //
-// Solo las 4 categorias con catalogo curado real hoy. SACC tiene 10
-// categorias reales (ver ALVA_2.0_PROPOSAL.md seccion C) -- Facial/Skincare y
-// Accesorios existen ahi pero sin ningun producto curado en este repo
-// todavia, asi que no aparecen aca: agregar una entrada con foto/copy
-// inventados seria fabricar contenido que no existe. En cuanto haya productos
-// reales curados para esas categorias, agregarlas aca las hace aparecer
-// automaticamente en el header y en el mosaico -- ningun otro archivo
-// necesita cambiar.
+// Facial y Accesorios se incorporaron cuando dejaron de estar vacias: hoy el
+// sitio consume el catalogo en vivo del Storefront y esas dos categorias
+// tienen producto real publicado (Accesorios 408, Facial 303), ademas de
+// pagina propia generada en /productos/<slug>. La reserva original de este
+// comentario -- no listar una categoria sin producto detras -- sigue vigente
+// para las que aun no lo tienen (barberia, corporal, lifting).
 export interface CategoryMeta {
-  slug: "muebles" | "unas" | "capilares" | "maquillaje";
+  slug: "muebles" | "unas" | "capilares" | "maquillaje" | "facial" | "accesorios";
   /** Nombre completo, para títulos y el mosaico. */
   label: string;
   /** Nombre corto, para el menú de navegación. */
@@ -54,6 +52,22 @@ export const categories: CategoryMeta[] = [
     shortLabel: "Capilares",
     description: "Tratamientos, shampoos y equipo para el cuidado del cabello.",
     href: "/productos/capilares",
+    size: "medium",
+  },
+  {
+    slug: "facial",
+    label: "Facial",
+    shortLabel: "Facial",
+    description: "Limpieza, hidratación y protección para el cuidado de la piel.",
+    href: "/productos/facial",
+    size: "medium",
+  },
+  {
+    slug: "accesorios",
+    label: "Accesorios",
+    shortLabel: "Accesorios",
+    description: "Herramientas, organizadores y complementos para el día a día del salón.",
+    href: "/productos/accesorios",
     size: "medium",
   },
 ];

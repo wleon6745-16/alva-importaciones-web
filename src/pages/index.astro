@@ -12,16 +12,18 @@ import FeatureStrip, { type FeatureItem } from "../components/FeatureStrip.astro
 import { siteConfig } from "../lib/site-config";
 import { categories as categoryMeta } from "../lib/categories";
 
-import heroImage from "../assets/products/muebles/camilla-3-niveles.jpg";
-// nails-2.jpg y makeup-3.jpg: fotos de estudio limpias (fondo blanco), no las
-// fotos de producto individuales tomadas en tienda -- esas tienen estantes y
-// reflejos de fondo que no funcionan en un tratamiento editorial a pantalla
-// completa (ver feedback de evaluación de diseño). nails-2.jpg ya se usaba
-// así en nosotros.astro; se repite aquí por consistencia.
-import nailsImage from "../assets/products/unas/nails-2.jpg";
-import hairImage from "../assets/products/capilares/keratina-ambroisie-250ml-rene-chardon.jpg";
-import makeupImage from "../assets/products/maquillaje/makeup-3.jpg";
-import mueblesImage from "../assets/products/muebles/silla-barberia-st2200.jpg";
+// Fotografía de portada por categoría (cat-*.jpeg): piezas de ambiente
+// producidas para la marca, no fotos sueltas de producto en estante. El hero
+// reutiliza la de muebles para que la portada abra con la misma imagen que
+// encabeza la reja.
+import heroImage from "../assets/products/muebles/cat-muebles.jpeg";
+import mueblesImage from "../assets/products/muebles/cat-muebles.jpeg";
+import nailsImage from "../assets/products/unas/cat-unas.jpeg";
+import makeupImage from "../assets/products/maquillaje/cat-maquillaje.jpeg";
+import hairImage from "../assets/products/capilares/cat-capilares.jpeg";
+import facialImage from "../assets/products/facial/cat-facial.jpeg";
+import accesoriosImage from "../assets/products/accesorios/cat-accesorios.jpeg";
+import cursoImage from "../assets/products/hero/cat-curso.jpeg";
 import sillonDestacado from "../assets/products/muebles/sillon-peluqueria-1.jpg";
 import camillaDestacada from "../assets/products/muebles/camilla-3-niveles.jpg";
 import mesaDestacada from "../assets/products/muebles/mesa-silla-concha-manicura.jpg";
@@ -34,6 +36,8 @@ const categoryImages: Record<(typeof categoryMeta)[number]["slug"], ImageMetadat
   unas: nailsImage,
   capilares: hairImage,
   maquillaje: makeupImage,
+  facial: facialImage,
+  accesorios: accesoriosImage,
 };
 
 // Argumentos de servicio, sobre la reja de categorias. Son afirmaciones que
@@ -147,7 +151,7 @@ const mueblesDestacados = [
       <!-- Las cuatro categorias con el mismo peso visual. Antes una iba como
            banner ancho y las otras tres debajo, lo que sugeria una jerarquia
            comercial que no existe: el negocio vende las cuatro por igual. -->
-      <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {
           categoryMeta.map((category) => (
             <CategoryCard
@@ -155,7 +159,7 @@ const mueblesDestacados = [
               description={category.description}
               image={categoryImages[category.slug]}
               href={category.href}
-              aspectClass="aspect-[4/5]"
+              aspectClass="aspect-[4/3]"
             />
           ))
         }
@@ -252,7 +256,21 @@ const mueblesDestacados = [
   <SectionReveal as="section" class="section-y px-6">
     <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
       <div class="order-2 lg:order-1">
-        <div class="glass-card rounded-3xl p-8">
+        <!-- La foto del curso va aqui, no en la reja de categorias: formacion
+             no es una categoria de producto y no tiene pagina de catalogo. -->
+        <a href="/cursos" class="group block overflow-hidden rounded-3xl shadow-lg">
+          <div class="aspect-[16/10] overflow-hidden">
+            <Image
+              src={cursoImage}
+              alt="Clase del curso profesional de uñas acrílicas — Alva Importaciones"
+              width={800}
+              height={500}
+              class="media-zoom h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </a>
+        <div class="glass-card mt-4 rounded-3xl p-8">
           <p class="font-display text-2xl text-primary-800">Curso Profesional de Uñas Acrílicas</p>
           <p class="mt-4 text-ink-muted">
             6 meses de formación profesional. $60 al mes (o 2 pagos de $30), con matrícula
