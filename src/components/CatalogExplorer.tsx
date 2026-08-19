@@ -165,7 +165,22 @@ export default function CatalogExplorer({
               {item.imageUrl ? (
                 <img src={item.imageUrl} alt={item.name} loading="lazy" className="h-full w-full object-contain" />
               ) : (
-                <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-blush-50 text-primary-700/60">
+                <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-blush-50 text-primary-700/50">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="36"
+                    height="36"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <polyline points="21 15 16 10 5 21" />
+                  </svg>
                   <span className="text-xs font-medium">Foto próximamente</span>
                 </div>
               )}
