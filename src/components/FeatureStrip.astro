@@ -1,0 +1,131 @@
+---
+// Tira de argumentos de confianza. Existen dos en la home y son la MISMA
+// pieza con distinto peso visual, asi que va un solo componente con variante
+// en vez de dos bloques casi identicos:
+//   - "light": bajo el titulo de categorias (envios, calidad, WhatsApp, pago)
+//   - "dark":  cierre de la seccion sobre fondo oscuro
+// Los iconos son SVG inline (el proyecto no arrastra libreria de iconos) y se
+// eligen por nombre desde un mapa: agregar un item nuevo no obliga a tocar
+// el marcado, igual que el resto de componentes guiados por datos del repo.
+export interface FeatureItem {
+  icon: "truck" | "badge" | "whatsapp" | "lock" | "price" | "stock" | "support" | "shield";
+  title: string;
+  /** Linea secundaria opcional -- la variante "dark" del diseno no la usa. */
+  detail?: string;
+}
+
+interface Props {
+  items: FeatureItem[];
+  variant?: "light" | "dark";
+  class?: string;
+}
+
+const { items, variant = "light", class: className } = Astro.props;
+const isDark = variant === "dark";
+---
+
+<ul
+  class:list={[
+    "grid gap-x-8 gap-y-6",
+    isDark
+      ? "grid-cols-2 lg:grid-cols-4"
+      : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
+    className,
+  ]}
+>
+  {
+    items.map((item) => (
+      <li class="flex items-start gap-3">
+        <span
+          class:list={[
+            "mt-0.5 shrink-0",
+            isDark ? "text-blush-100" : "text-primary-700",
+          ]}
+          aria-hidden="true"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            {item.icon === "truck" && (
+              <>
+                <path d="M14 17V6a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h1" />
+                <path d="M14 9h4l3 3v5a1 1 0 0 1-1 1h-1" />
+                <circle cx="6.5" cy="18" r="2" />
+                <circle cx="17.5" cy="18" r="2" />
+              </>
+            )}
+            {item.icon === "badge" && (
+              <>
+                <circle cx="12" cy="12" r="9" />
+                <path d="m8.5 12.5 2.5 2.5 4.5-5" />
+              </>
+            )}
+            {item.icon === "whatsapp" && (
+              <>
+                <path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 20.5l1.6-5.5A8.5 8.5 0 1 1 21 11.5Z" />
+              </>
+            )}
+            {item.icon === "lock" && (
+              <>
+                <rect x="4" y="10" width="16" height="11" rx="2" />
+                <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+              </>
+            )}
+            {item.icon === "price" && (
+              <>
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v10M9.5 9.5h4a1.75 1.75 0 0 1 0 3.5h-3a1.75 1.75 0 0 0 0 3.5h4" />
+              </>
+            )}
+            {item.icon === "stock" && (
+              <>
+                <path d="M21 8 12 3 3 8l9 5 9-5Z" />
+                <path d="M3 12l9 5 9-5M3 16l9 5 9-5" />
+              </>
+            )}
+            {item.icon === "support" && (
+              <>
+                <circle cx="12" cy="8" r="3.5" />
+                <path d="M4.5 20a7.5 7.5 0 0 1 15 0" />
+              </>
+            )}
+            {item.icon === "shield" && (
+              <>
+                <path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3Z" />
+                <path d="m9 12 2 2 4-4" />
+              </>
+            )}
+          </svg>
+        </span>
+        <span class="min-w-0">
+          <span
+            class:list={[
+              "block text-sm font-semibold leading-snug",
+              isDark ? "text-white" : "text-ink",
+            ]}
+          >
+            {item.title}
+          </span>
+          {item.detail && (
+            <span
+              class:list={[
+                "mt-0.5 block text-xs",
+                isDark ? "text-white/60" : "text-ink-muted",
+              ]}
+            >
+              {item.detail}
+            </span>
+          )}
+        </span>
+      </li>
+    ))
+  }
+</ul>

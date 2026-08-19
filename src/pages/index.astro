@@ -8,6 +8,7 @@ import WhatsAppCTA from "../components/WhatsAppCTA.astro";
 import ChatDemo from "../components/ChatDemo.tsx";
 import PromoShowcase from "../components/PromoShowcase.astro";
 import TrustSection from "../components/TrustSection.astro";
+import FeatureStrip, { type FeatureItem } from "../components/FeatureStrip.astro";
 import { siteConfig } from "../lib/site-config";
 import { categories as categoryMeta } from "../lib/categories";
 
@@ -35,12 +36,24 @@ const categoryImages: Record<(typeof categoryMeta)[number]["slug"], ImageMetadat
   maquillaje: makeupImage,
 };
 
-// Mosaico: la categoria "large" (por tamaño de catálogo, no por nombre) va
-// como banner ancho arriba; el resto en fila pareja abajo -- se filtra por
-// el campo size de cada categoria, asi que una categoria nueva marcada
-// "medium" simplemente se suma a la fila sin tocar este archivo.
-const categoryBanner = categoryMeta.filter((c) => c.size === "large");
-const categoryGrid = categoryMeta.filter((c) => c.size !== "large");
+// Argumentos de servicio, sobre la reja de categorias. Son afirmaciones que
+// el negocio ya sostiene hoy (envio nacional, atencion por WhatsApp, locales
+// fisicos); no se agrega ninguna promesa nueva que no se pueda cumplir.
+const serviceHighlights: FeatureItem[] = [
+  { icon: "truck", title: "Envíos a todo Ecuador", detail: "Rápido y seguro" },
+  { icon: "badge", title: "Productos profesionales", detail: "Calidad garantizada" },
+  { icon: "whatsapp", title: "Atención por WhatsApp", detail: "Respuesta inmediata" },
+  { icon: "lock", title: "Pago seguro y confiable", detail: "Tu compra protegida" },
+];
+
+// Cierre oscuro de la seccion de categorias -- refuerza el porque comprar
+// aqui justo antes de que la pagina pase a producto destacado.
+const businessStrengths: FeatureItem[] = [
+  { icon: "price", title: "Precios competitivos" },
+  { icon: "stock", title: "Stock actualizado" },
+  { icon: "support", title: "Asesoría personalizada" },
+  { icon: "shield", title: "Confianza y experiencia" },
+];
 
 const mueblesDestacados = [
   { name: "Sillón de peluquería ST-2202", price: "$345", image: sillonDestacado, slug: "sillon-de-peluqueria-st-2202" },
@@ -95,43 +108,25 @@ const mueblesDestacados = [
         </div>
       </div>
 
-      <div class="relative mx-auto aspect-[5/6] w-full max-w-md lg:max-w-none">
-        <div class="editorial-overlay group absolute inset-x-0 top-0 aspect-[4/5] w-[76%] overflow-hidden rounded-[1.75rem] shadow-2xl">
+      <!-- Una sola pieza fotografica, no el collage de 3 tarjetas flotantes
+           anterior: en movil aquel se apilaba en un bloque alto y ruidoso, y
+           en escritorio competia con el titular. Una imagen amplia sostiene
+           el mismo peso visual y deja respirar el mensaje. -->
+      <div class="relative mx-auto w-full max-w-md lg:max-w-none">
+        <div
+          class="group relative aspect-[4/3] overflow-hidden rounded-[1.75rem] shadow-2xl sm:aspect-[5/4] lg:aspect-[4/5]"
+        >
           <Image
             src={heroImage}
-            alt="Camilla profesional Alva Importaciones"
-            class="media-zoom h-full w-full bg-white object-cover"
-            width={640}
-            height={800}
+            alt="Camilla profesional para salón de belleza — Alva Importaciones"
+            class="media-zoom h-full w-full bg-primary-900 object-cover"
+            width={760}
+            height={950}
             densities={[1, 1.5, 2]}
             loading="eager"
             fetchpriority="high"
           />
           <div class="editorial-overlay pointer-events-none absolute inset-0"></div>
-        </div>
-
-        <div class="group absolute bottom-0 right-0 aspect-square w-[48%] overflow-hidden rounded-2xl border-4 border-cream shadow-xl">
-          <Image
-            src={nailsImage}
-            alt="Insumos profesionales para uñas Alva Importaciones"
-            class="media-zoom h-full w-full bg-white object-cover"
-            width={420}
-            height={420}
-            densities={[1, 1.5, 2]}
-            loading="eager"
-          />
-        </div>
-
-        <div class="group absolute -left-2 bottom-10 hidden aspect-square w-[36%] overflow-hidden rounded-2xl border-4 border-cream shadow-lg sm:block lg:-left-6">
-          <Image
-            src={makeupImage}
-            alt="Maquillaje profesional Alva Importaciones"
-            class="media-zoom h-full w-full bg-white object-cover"
-            width={320}
-            height={320}
-            densities={[1, 1.5, 2]}
-            loading="eager"
-          />
         </div>
       </div>
     </div>
@@ -147,33 +142,30 @@ const mueblesDestacados = [
         Muebles, uñas, maquillaje y capilares — un solo proveedor, con precio y stock exactos
         siempre por WhatsApp.
       </p>
-      <div class="mt-12 flex flex-col gap-4">
+      <FeatureStrip items={serviceHighlights} class="mt-10 border-y border-ink/10 py-8" />
+
+      <!-- Las cuatro categorias con el mismo peso visual. Antes una iba como
+           banner ancho y las otras tres debajo, lo que sugeria una jerarquia
+           comercial que no existe: el negocio vende las cuatro por igual. -->
+      <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {
-          categoryBanner.map((category) => (
+          categoryMeta.map((category) => (
             <CategoryCard
               title={category.label}
               description={category.description}
               image={categoryImages[category.slug]}
               href={category.href}
-              aspectClass="aspect-[4/3] sm:aspect-[21/9]"
+              aspectClass="aspect-[4/5]"
             />
           ))
         }
-        <div class="grid gap-4 sm:grid-cols-3">
-          {
-            categoryGrid.map((category) => (
-              <CategoryCard
-                title={category.label}
-                description={category.description}
-                image={categoryImages[category.slug]}
-                href={category.href}
-              />
-            ))
-          }
-        </div>
       </div>
     </div>
   </SectionReveal>
+
+  <section class="bg-primary-900 px-6 py-10">
+    <FeatureStrip items={businessStrengths} variant="dark" class="mx-auto max-w-6xl" />
+  </section>
 
   <SectionReveal as="section" class="section-y bg-blush-50 px-6">
     <div class="mx-auto max-w-6xl">
