@@ -20,7 +20,7 @@
   ],
   "firstPage": [
     {
-      "publicProductId": "706abe8f-8eff-4d43-94d8-68d3fd7f25e1",
+      "publicProductId": "a5c7727e-5264-432c-ac3a-89df7969cf58",
       "code": "10399",
       "name": "BUTACA FRANCIA VARIOS COLORES",
       "slug": "butaca-francia-varios-colores-10399",
@@ -36,7 +36,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "1fe49b99-cda0-4c13-9a62-92cfcdab2a92",
+      "publicProductId": "a3d48dce-9caf-447e-b988-815233b5781e",
       "code": "10401",
       "name": "BUTACA GIRONA",
       "slug": "butaca-girona-10401",
@@ -52,7 +52,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "2d4950b7-951d-4ec6-a77e-ca85c21e8aaa",
+      "publicProductId": "70aa7eea-c8c1-4548-b8d9-8f1e18a32187",
       "code": "10403",
       "name": "BUTACA LOUVA PATAS NEGRAS",
       "slug": "butaca-louva-patas-negras-10403",
@@ -68,7 +68,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "a47eb81d-2989-46d1-a645-d45ed6a690b3",
+      "publicProductId": "cc788efc-385d-47fd-9b14-3d4393ac253f",
       "code": "10402",
       "name": "BUTACA MARCELLA PATAS DORADAS",
       "slug": "butaca-marcella-patas-doradas-10402",
@@ -84,7 +84,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "69889c90-529e-476b-bfe8-92dedd703b8b",
+      "publicProductId": "9861facb-2779-4fc4-ac9d-d7f77047b31a",
       "code": "10404",
       "name": "BUTACA MONET",
       "slug": "butaca-monet-10404",
@@ -100,7 +100,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "e2169675-b7ee-44e9-8264-78a343d1dac1",
+      "publicProductId": "490a7373-1f76-4e57-b170-8072430b449f",
       "code": "10793",
       "name": "BUTACA REFORZADA",
       "slug": "butaca-reforzada-10793",
@@ -116,7 +116,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "777d1c78-0bac-4cfb-9331-a261e5f7eb9a",
+      "publicProductId": "22c1f272-9c6d-4eb6-82ba-c308bcde857a",
       "code": "10400",
       "name": "BUTACA STYLE",
       "slug": "butaca-style-10400",
@@ -132,7 +132,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "ed95b016-e62d-45dd-af57-b0fce4f6a0f1",
+      "publicProductId": "781bf1ce-d569-4c8c-b08f-24c56e85442e",
       "code": "10353",
       "name": "LAMPARA LUCES LED MA-310",
       "slug": "lampara-luces-led-ma-310-10353",
@@ -148,7 +148,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "c1b58744-8c9e-4906-b01a-5e9e959e7960",
+      "publicProductId": "933a139f-19fa-422f-ad4d-88d3dfcd5609",
       "code": "10626",
       "name": "MESA CONCHA MANICURA MAS SILLA MAS PUF Y REPOSA MANOS",
       "slug": "mesa-concha-manicura-mas-silla-mas-puf-y-reposa-manos-10626",
@@ -160,11 +160,11 @@
       "brand": null,
       "publicPrice": 310,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/furniture-catalog/10626.jpeg",
+      "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10626.jpeg",
       "shortDescription": null
     },
     {
-      "publicProductId": "17254761-75bd-469a-bc78-99682fad4e50",
+      "publicProductId": "43e0978b-20c9-4bbb-ba81-2cdd401a4632",
       "code": "10392",
       "name": "MESA DE MANICURA COMPLETA MAS PUF MAS SILLA CONCHA MAS SILLA DE ESPERA MAS REPOSA MANOS",
       "slug": "mesa-de-manicura-completa-mas-puf-mas-silla-concha-mas-silla-de-espera-mas-repos-10392",
@@ -176,11 +176,11 @@
       "brand": null,
       "publicPrice": 350,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/furniture-catalog/10392.jpeg",
+      "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10392.jpeg",
       "shortDescription": null
     },
     {
-      "publicProductId": "919716d5-18dd-43ba-b0d0-c36df533e688",
+      "publicProductId": "8cfd4536-e918-4d13-8e85-fa749628b872",
       "code": "10430",
       "name": "MESA DE MANICURE MAS PUF Y REPOSA MANOS",
       "slug": "mesa-de-manicure-mas-puf-y-reposa-manos-10430",
@@ -196,7 +196,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "b964ef37-2fe5-4437-ab0a-2545fda8d6f0",
+      "publicProductId": "56d0de70-40aa-4059-b058-2ee097e456cb",
       "code": "10792",
       "name": "MUEBLE CAPITONEADO PEDICURA BASE MAS SILLA CONCHA MAS ASIENTO CON ESPALDAR Y SIN ESPALDAR PEQUEÑO Y REPOSA PIE",
       "slug": "mueble-capitoneado-pedicura-base-mas-silla-concha-mas-asiento-con-espaldar-y-sin-10792",
@@ -208,11 +208,11 @@
       "brand": null,
       "publicPrice": 195,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/furniture-catalog/10792.png",
+      "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10792.png",
       "shortDescription": null
     },
     {
-      "publicProductId": "d235b765-8f2d-4bee-827f-450db7270505",
+      "publicProductId": "adc07698-3c55-4b29-a5f0-7047352a8104",
       "code": "10394",
       "name": "MUEBLE CONCHA PEDICURA BASE MAS SILLA REINA MAS ASIENTO PEQUEÑO Y REPOSA PIE",
       "slug": "mueble-concha-pedicura-base-mas-silla-reina-mas-asiento-pequeno-y-reposa-pie-10394",
@@ -224,11 +224,11 @@
       "brand": null,
       "publicPrice": 230,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/furniture-catalog/10394.png",
+      "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10394.png",
       "shortDescription": null
     },
     {
-      "publicProductId": "85022304-4a7c-436c-af97-4e882123d093",
+      "publicProductId": "a777242c-eb7a-4bc6-b2b8-ddd6a3a0a0ed",
       "code": "10575",
       "name": "MUEBLE CONCHA PEDICURA BASE MELAMINA MAS SILLA CONCHA MAS ASIENTO PEQUEÑO Y REPOSA PIE Y LAVAMANOS",
       "slug": "mueble-concha-pedicura-base-melamina-mas-silla-concha-mas-asiento-pequeno-y-repo-10575",
@@ -240,11 +240,11 @@
       "brand": null,
       "publicPrice": 330,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/furniture-catalog/10575.png",
+      "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10575.png",
       "shortDescription": null
     },
     {
-      "publicProductId": "3215f800-6c8f-4453-8005-1e7836620cb6",
+      "publicProductId": "e811b3be-91b9-4dbb-962f-5fcec874e1cb",
       "code": "10790",
       "name": "MUEBLE DIANA REINA PEDICURA BASE MAS SILLA REINA MAS ASIENTO PEQUEÑO Y REPOSA PIE",
       "slug": "mueble-diana-reina-pedicura-base-mas-silla-reina-mas-asiento-pequeno-y-reposa-pi-10790",
@@ -260,7 +260,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "8be364ea-c2c6-40ae-a03d-2d902dba1b86",
+      "publicProductId": "47d636d8-0ffe-40b3-8a0e-6802cf5c9936",
       "code": "10791",
       "name": "MUEBLE NASLY PEDICURA BASE MAS SILLA CONCHA MAS ASIENTO PEQUEÑO Y REPOSA PIE",
       "slug": "mueble-nasly-pedicura-base-mas-silla-concha-mas-asiento-pequeno-y-reposa-pie-10791",
@@ -272,11 +272,11 @@
       "brand": null,
       "publicPrice": 200,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/furniture-catalog/10791.png",
+      "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10791.png",
       "shortDescription": null
     },
     {
-      "publicProductId": "2d06c221-4bfa-443a-a367-be6ccbb1a81a",
+      "publicProductId": "89faaffd-1aa3-4a04-b400-dfb4799978ba",
       "code": "10393",
       "name": "MUEBLE REINA PEDICURA BASE MAS SILLA REINA MAS ASIENTO PEQUEÑO Y REPOSA PIE",
       "slug": "mueble-reina-pedicura-base-mas-silla-reina-mas-asiento-pequeno-y-reposa-pie-10393",
@@ -288,11 +288,11 @@
       "brand": null,
       "publicPrice": 250,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/furniture-catalog/10393.jpeg",
+      "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10393.jpeg",
       "shortDescription": null
     },
     {
-      "publicProductId": "f27fe9b9-e939-4f0d-83d0-ab8819e25d82",
+      "publicProductId": "00a7ded8-f629-4ae4-8e3d-09edd9244571",
       "code": "10362",
       "name": "SILETI  SILLA PELUQUERIA EXAGONAL NEGRO 2000-1 ST-2000-1",
       "slug": "sileti-silla-peluqueria-exagonal-negro-2000-1-st-2000-1-10362",
@@ -308,7 +308,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "23cb785c-8af4-4b1d-93f7-7306539a4e0d",
+      "publicProductId": "a4e802c4-459c-4c27-a763-0b2c14823179",
       "code": "11321",
       "name": "SILETI CARRITO ORGANIZADOR NEGRO 3 CAJONES Y BASE ST-8035",
       "slug": "sileti-carrito-organizador-negro-3-cajones-y-base-st-8035-11321",
@@ -324,7 +324,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "301db0fc-1b55-41b1-8b47-cb792f98d907",
+      "publicProductId": "744c6c08-6f78-4cf6-9517-c6ca86222490",
       "code": "11003",
       "name": "SILETI SILLA PELUQUERIA NEGRO 2214 ST-2214",
       "slug": "sileti-silla-peluqueria-negro-2214-st-2214-11003",
@@ -340,7 +340,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "fd4aef48-38ab-4367-b88f-5de3f5a32bee",
+      "publicProductId": "a2016faa-8c15-47ca-9df6-c1844c9cab5c",
       "code": "10363",
       "name": "SILLA  SILETI PARA MAQUILLAJE  ST-9302",
       "slug": "silla-sileti-para-maquillaje-st-9302-10363",
@@ -356,7 +356,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "f7743206-64d2-43da-8dc0-ed74bf1642f8",
+      "publicProductId": "3802d7ea-3b38-4f48-8aa3-2875b0f3be9f",
       "code": "10405",
       "name": "SILLA BASHA PATAS NEGRAS",
       "slug": "silla-basha-patas-negras-10405",
@@ -372,7 +372,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "e353316f-d785-43cd-a014-2512efe18bf7",
+      "publicProductId": "46005857-ea16-43cc-8e5b-93f7dec48a3d",
       "code": "10628",
       "name": "SILLA CONCHA CON RESPALDAR GIRATORIA ROSADA MORADA NEGRA MZE240",
       "slug": "silla-concha-con-respaldar-giratoria-rosada-morada-negra-mze240-10628",
@@ -388,7 +388,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "3774684b-80b5-4774-adac-98927675fc0d",
+      "publicProductId": "8f35e090-c540-414a-b718-ac9c29e4baaf",
       "code": "10795",
       "name": "SILLA CONCHA CON RUEDA",
       "slug": "silla-concha-con-rueda-10795",
@@ -400,10 +400,10 @@
       "brand": null,
       "publicPrice": 195,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/furniture-catalog/10795.jpeg",
+      "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10795.jpeg",
       "shortDescription": null
     }
   ],
   "firstPageTotal": 47,
-  "fetchedAt": "2026-08-17T04:33:33.472Z"
+  "fetchedAt": "2026-08-19T14:26:25.583Z"
 }

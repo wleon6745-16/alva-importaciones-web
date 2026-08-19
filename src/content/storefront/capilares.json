@@ -3,7 +3,7 @@
   "categoryLabel": "Capilar",
   "description": null,
   "featured": false,
-  "productCount": 2904,
+  "productCount": 2907,
   "brands": [
     {
       "name": "ECHOS LINE",
@@ -59,7 +59,7 @@
     },
     {
       "name": "KUUL",
-      "count": 45
+      "count": 46
     },
     {
       "name": "COLORET",
@@ -342,6 +342,10 @@
       "count": 4
     },
     {
+      "name": "CLOVER",
+      "count": 4
+    },
+    {
       "name": "FRUCTIS",
       "count": 4
     },
@@ -359,10 +363,6 @@
     },
     {
       "name": "ANGELINO",
-      "count": 3
-    },
-    {
-      "name": "CLOVER",
       "count": 3
     },
     {
@@ -554,6 +554,10 @@
       "count": 1
     },
     {
+      "name": "LINDA",
+      "count": 1
+    },
+    {
       "name": "LISAP",
       "count": 1
     },
@@ -636,7 +640,7 @@
   ],
   "firstPage": [
     {
-      "publicProductId": "6f223ef7-2c26-495f-84e8-ba59a4489328",
+      "publicProductId": "bfdd4f85-a0dc-4b08-9c2c-4a65308e21a0",
       "code": "1718",
       "name": "250ML",
       "slug": "250ml-1718",
@@ -652,7 +656,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "56a00e5b-7580-4548-b108-b4239f4ecb85",
+      "publicProductId": "e37141c2-273b-4a77-8006-935edf3297ea",
       "code": "1431",
       "name": "ABLANDADOR DE CANAS",
       "slug": "ablandador-de-canas-1431",
@@ -668,7 +672,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "ca8800db-0668-4794-9713-a80b064b83aa",
+      "publicProductId": "7b2f4046-e3a3-41da-b371-a801ad203ba5",
       "code": "1341",
       "name": "ABLANDADOR DE CANAS ISSUE 15ML",
       "slug": "ablandador-de-canas-issue-15ml-1341",
@@ -684,7 +688,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "c576e4c1-d5d8-4263-bafe-4686f6986487",
+      "publicProductId": "f473903c-e8b6-407b-93b8-c5619058236e",
       "code": "5125",
       "name": "ABLANDADOR DE CANAS PRAKTIAMPOLLA DUO 17ML",
       "slug": "ablandador-de-canas-praktiampolla-duo-17ml-5125",
@@ -700,7 +704,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "ee03c451-248e-4977-b9e9-4f9056210588",
+      "publicProductId": "a6897a7b-bae5-4e8d-bd06-68b50a4d7261",
       "code": "6747",
       "name": "ACCESORIO DE CABELLO STAR HAIR PARA TRENZAS VNC828",
       "slug": "accesorio-de-cabello-star-hair-para-trenzas-vnc828-6747",
@@ -716,7 +720,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "b1cf5fc0-e256-4a15-ab81-e339e0e1383b",
+      "publicProductId": "c74824f0-c439-4028-9269-9bd916e4f83e",
       "code": "6748",
       "name": "ACCESORIO DE CABELLO STAR HAIR PARA TRENZAS VNC829",
       "slug": "accesorio-de-cabello-star-hair-para-trenzas-vnc829-6748",
@@ -732,7 +736,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "95cdd3cb-f8ae-4ddc-8ee0-4c254e25f537",
+      "publicProductId": "eead8fc1-a58f-4833-bb57-858fa1079960",
       "code": "2465",
       "name": "ACEIITE DE ARGAN ECHOS LNE 30ML",
       "slug": "aceiite-de-argan-echos-lne-30ml-2465",
@@ -748,7 +752,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "9d899abb-1697-477e-b636-8401a2aaf903",
+      "publicProductId": "063bd5b3-ba9d-493a-a6ef-8d5f43ab5b99",
       "code": "437",
       "name": "ACEITE CHOCOLIFE RANH MACADAMIA Y CAMELIA 30ML",
       "slug": "aceite-chocolife-ranh-macadamia-y-camelia-30ml-437",
@@ -764,7 +768,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "210368b6-08e5-42fa-9e90-1cfaf1a9bdbc",
+      "publicProductId": "6ffee922-15fe-4090-b5d1-a3bbd4e222af",
       "code": "7643",
       "name": "ACEITE DE ARGAN CLANS DE MOROCCO 60ML",
       "slug": "aceite-de-argan-clans-de-morocco-60ml-7643",
@@ -780,7 +784,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "d7465473-bdd3-448b-99bd-3fe6578335cb",
+      "publicProductId": "f0fa725b-c208-4a5a-af4e-49c034359050",
       "code": "347",
       "name": "ACEITE DE ARGAN MARIA JOSE 60ML",
       "slug": "aceite-de-argan-maria-jose-60ml-347",
@@ -796,7 +800,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "66fdd7ae-cc71-405e-a32b-ccb9d6de3ee2",
+      "publicProductId": "16e924ee-1964-41ae-8c72-3261a57687bf",
       "code": "2091",
       "name": "ACEITE DE ARGAN MAXYBELT OLEO MILAGROSO 55ML",
       "slug": "aceite-de-argan-maxybelt-oleo-milagroso-55ml-2091",
@@ -812,7 +816,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "8a46f704-031d-489a-b398-9398c1631601",
+      "publicProductId": "b647e90c-575d-41fc-86f7-4fd93883f4dc",
       "code": "2797",
       "name": "ACEITE DE ARGAN THYMS OLEO CAPILLAR 60ML",
       "slug": "aceite-de-argan-thyms-oleo-capillar-60ml-2797",
@@ -828,7 +832,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "dc67e534-c0f7-4578-b115-ba1c90dc1ab2",
+      "publicProductId": "0103090b-35b9-4585-9da4-24209d9d66d2",
       "code": "5297",
       "name": "ACEITE DE COCO SONIA VEGA 15ML",
       "slug": "aceite-de-coco-sonia-vega-15ml-5297",
@@ -844,7 +848,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "c3e34807-968b-49bc-bda4-4e7b05048886",
+      "publicProductId": "6e5f2982-d830-4b60-9872-8c36c6f4d0b1",
       "code": "4890",
       "name": "ACEITE DE COCO SONIA VEGA 60ML",
       "slug": "aceite-de-coco-sonia-vega-60ml-4890",
@@ -860,7 +864,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "aa60bcab-7ac6-4e78-9b90-d552dabbf2df",
+      "publicProductId": "dd51bbff-6971-425a-a340-26fcf3944c05",
       "code": "5730",
       "name": "ACEITE DE CUTICULA PRECIOSA",
       "slug": "aceite-de-cuticula-preciosa-5730",
@@ -876,7 +880,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "d611c14b-a319-4c7c-89e2-d688160b018b",
+      "publicProductId": "5f0117d6-30ad-4be5-b962-a0e00f50a695",
       "code": "432",
       "name": "ACONDICINADOR CHOCOLIFE CHOCOLATE 500ML",
       "slug": "acondicinador-chocolife-chocolate-500ml-432",
@@ -892,7 +896,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "7c2da1a3-a1ef-48fa-a047-cf4bc65e103b",
+      "publicProductId": "659dff32-63a5-4460-8cbe-3758d1d2ab4c",
       "code": "1314",
       "name": "ACONDICINADOR LISSIA CRECE PELO 425ML",
       "slug": "acondicinador-lissia-crece-pelo-425ml-1314",
@@ -908,7 +912,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "86e247aa-9d40-4fa7-9d17-94ca742afb23",
+      "publicProductId": "53e55085-244b-4170-8f3f-3561ad042c98",
       "code": "8440",
       "name": "ACONDICIOANDOR FRUCTIS GARNIER HAIR FOOD CACAO 300ML",
       "slug": "acondicioandor-fructis-garnier-hair-food-cacao-300ml-8440",
@@ -924,7 +928,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "c20fe1f2-3551-4b71-bafa-444c46f44be7",
+      "publicProductId": "94087dfe-7db7-4986-aa87-68ba6e003bd7",
       "code": "8443",
       "name": "ACONDICIOANDOR FRUCTIS GARNIER HAIR FOOD COCO 300ML",
       "slug": "acondicioandor-fructis-garnier-hair-food-coco-300ml-8443",
@@ -940,7 +944,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "f860550b-dcd2-4271-ad5b-40931f5dc623",
+      "publicProductId": "eb212be8-601c-4a02-bd5e-76e0d81cc168",
       "code": "7967",
       "name": "ACONDICIONADOR  AFRO LOVE CREMA  290ML",
       "slug": "acondicionador-afro-love-crema-290ml-7967",
@@ -956,7 +960,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "890bbb14-d59d-419a-88bb-271e722c230a",
+      "publicProductId": "3e84e710-5036-43e5-86f0-ad9fd974e31d",
       "code": "6131",
       "name": "ACONDICIONADOR A/HIALURONICO 31306 SALON LINE 300ML",
       "slug": "acondicionador-a-hialuronico-31306-salon-line-300ml-6131",
@@ -972,7 +976,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "fa8bb804-4756-4195-9323-e4c5266474b8",
+      "publicProductId": "c250b5a8-5e3b-4e19-a161-28b57b54f0fd",
       "code": "3786",
       "name": "ACONDICIONADOR BG TIGI EGO BOOST LEAVE IN 237ML",
       "slug": "acondicionador-bg-tigi-ego-boost-leave-in-237ml-3786",
@@ -988,7 +992,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "55cd7f5a-2a2c-4111-b28e-507d4f8f1823",
+      "publicProductId": "7749c32a-64ba-4113-85ef-dda58bc5d15b",
       "code": "3925",
       "name": "ACONDICIONADOR BH TIGI RESURRECT 400ML",
       "slug": "acondicionador-bh-tigi-resurrect-400ml-3925",
@@ -1004,7 +1008,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "82f0ae58-915a-430d-b3c8-1d35232ed42e",
+      "publicProductId": "cbf9802d-54b4-4cfa-b1ee-9298385484f4",
       "code": "3926",
       "name": "ACONDICIONADOR BH TIGI SERIAL BLONDE 400ML",
       "slug": "acondicionador-bh-tigi-serial-blonde-400ml-3926",
@@ -1020,6 +1024,6 @@
       "shortDescription": null
     }
   ],
-  "firstPageTotal": 2904,
-  "fetchedAt": "2026-08-17T04:33:33.472Z"
+  "firstPageTotal": 2907,
+  "fetchedAt": "2026-08-19T14:26:25.583Z"
 }

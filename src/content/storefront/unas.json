@@ -3,27 +3,27 @@
   "categoryLabel": "Uñas",
   "description": null,
   "featured": false,
-  "productCount": 4814,
+  "productCount": 4857,
   "brands": [
     {
       "name": "GLAM NAILS",
-      "count": 898
+      "count": 903
     },
     {
       "name": "MASTER NAILS",
-      "count": 580
+      "count": 581
     },
     {
       "name": "MIA SECRET",
       "count": 418
     },
     {
-      "name": "RODHER",
-      "count": 198
+      "name": "COQUETA",
+      "count": 201
     },
     {
-      "name": "COQUETA",
-      "count": 184
+      "name": "RODHER",
+      "count": 198
     },
     {
       "name": "E&A",
@@ -31,7 +31,7 @@
     },
     {
       "name": "L&D",
-      "count": 128
+      "count": 130
     },
     {
       "name": "MOLLIE",
@@ -47,19 +47,19 @@
     },
     {
       "name": "STALEKS",
-      "count": 74
+      "count": 75
     },
     {
       "name": "MASGLO",
       "count": 70
     },
     {
-      "name": "BARDOT",
-      "count": 63
+      "name": "CLOVER",
+      "count": 66
     },
     {
-      "name": "CLOVER",
-      "count": 59
+      "name": "BARDOT",
+      "count": 63
     },
     {
       "name": "MAXYBELT",
@@ -98,6 +98,10 @@
       "count": 18
     },
     {
+      "name": "LINDA",
+      "count": 18
+    },
+    {
       "name": "PRECIOSA",
       "count": 18
     },
@@ -119,10 +123,6 @@
     },
     {
       "name": "CALA",
-      "count": 9
-    },
-    {
-      "name": "LINDA",
       "count": 9
     },
     {
@@ -178,7 +178,7 @@
       "count": 5
     },
     {
-      "name": "ABELLA",
+      "name": "COLORET",
       "count": 4
     },
     {
@@ -194,7 +194,7 @@
       "count": 4
     },
     {
-      "name": "COLORET",
+      "name": "ABELLA",
       "count": 3
     },
     {
@@ -374,6 +374,10 @@
       "count": 1
     },
     {
+      "name": "LISAP",
+      "count": 1
+    },
+    {
       "name": "LUMINA",
       "count": 1
     },
@@ -416,7 +420,7 @@
   ],
   "firstPage": [
     {
-      "publicProductId": "fc96bb4c-7ff6-4db1-a6a6-503a5d33db96",
+      "publicProductId": "ee1b9524-f8ef-40ab-9646-7f492088a210",
       "code": "2651",
       "name": "ABLANDADOR DE CALLOS RODHER 30ML",
       "slug": "ablandador-de-callos-rodher-30ml-2651",
@@ -428,11 +432,11 @@
       "brand": "RODHER",
       "publicPrice": 1.5,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/alva/rodher-official/2651-450300000.jpg",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/rodher-official/2651-450300000.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "350e4d49-b9e9-46fe-8380-34df42e78274",
+      "publicProductId": "ff5409b3-c202-4340-b2b1-b3d113f941b1",
       "code": "2653",
       "name": "ABLANDADOR DE CUTICULA RODHER 30ML",
       "slug": "ablandador-de-cuticula-rodher-30ml-2653",
@@ -444,11 +448,11 @@
       "brand": "RODHER",
       "publicPrice": 1.75,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/alva/rodher-official/2653-23030000.jpg",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/rodher-official/2653-23030000.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "2d38e3f8-5ee5-4fa8-8791-8c90ed8abd4e",
+      "publicProductId": "05123fdb-6730-4b14-8817-8a861063432f",
       "code": "10390",
       "name": "ACCESORIO DE UÑAS CEREZA FINGERTIP COLOR X12",
       "slug": "accesorio-de-unas-cereza-fingertip-color-x12-10390",
@@ -464,7 +468,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "37b9a025-c6e3-4ba2-a1cc-df7374ae1100",
+      "publicProductId": "0aca3842-b584-454c-bf4b-4f7ac3d306db",
       "code": "11097",
       "name": "ACEITE BRESCIA REPARADOR UÑAS & CUTIC.16ml 873598",
       "slug": "aceite-brescia-reparador-unas-cutic-16ml-873598-11097",
@@ -480,7 +484,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "95357aaa-9ab6-429d-bcf0-33c57d8d1d61",
+      "publicProductId": "fd37ba90-8ba2-448b-a5ab-80e6376f2dfd",
       "code": "6230",
       "name": "ACEITE DE BANANA IDEAL 100ML",
       "slug": "aceite-de-banana-ideal-100ml-6230",
@@ -496,7 +500,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "2c46fd97-3dcf-48f3-b2ac-b2b317d3a065",
+      "publicProductId": "68e9adf3-c79f-40b4-ae8c-07d52ad5f2eb",
       "code": "10605",
       "name": "ACEITE DE CUTICULA AMY BEAUTY 11ML",
       "slug": "aceite-de-cuticula-amy-beauty-11ml-10605",
@@ -512,7 +516,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "73dbe306-3619-4db1-8464-fde4c042916e",
+      "publicProductId": "9a8a447d-038f-40f0-91c8-875f96d68991",
       "code": "3732",
       "name": "ACEITE DE CUTICULA COQUETA 15ML ACUL",
       "slug": "aceite-de-cuticula-coqueta-15ml-acul-3732",
@@ -528,7 +532,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "4e67df7d-aaba-40af-a986-2fbb24ccc3be",
+      "publicProductId": "a4cf8efc-29da-4e1a-aa06-b3a8c06c78c4",
       "code": "9947",
       "name": "ACEITE DE CUTICULA DUAL LAPIZ CUTICLE OIL 3ML",
       "slug": "aceite-de-cuticula-dual-lapiz-cuticle-oil-3ml-9947",
@@ -544,7 +548,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "4881e92f-3162-4d7b-a1c5-54a0474357c7",
+      "publicProductId": "f726de79-a81c-4b59-a857-401534775493",
       "code": "7166",
       "name": "ACEITE DE CUTICULA INFINITY CP2287A 15ML",
       "slug": "aceite-de-cuticula-infinity-cp2287a-15ml-7166",
@@ -560,7 +564,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "122ad6e4-399f-4778-9e2c-9a4b4ced2cdc",
+      "publicProductId": "97505053-707f-4e72-8d64-22da0e9eb65e",
       "code": "7548",
       "name": "ACEITE DE CUTICULA L&D CNO6-34",
       "slug": "aceite-de-cuticula-l-d-cno6-34-7548",
@@ -576,7 +580,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "bba6132a-2c80-40cc-b42d-0282fb9704a2",
+      "publicProductId": "d5414675-35c3-41e3-9066-595c81da8be7",
       "code": "9684",
       "name": "ACEITE DE CUTICULA L&D CUTICLE OIL 30ML",
       "slug": "aceite-de-cuticula-l-d-cuticle-oil-30ml-9684",
@@ -592,7 +596,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "350a0c15-b185-438f-9aec-5acdc628334e",
+      "publicProductId": "43fea21f-3337-4637-938e-a2da961205c7",
       "code": "9336",
       "name": "ACEITE DE CUTICULA LAVANDA THE FRUIT LAB VITAMINA 30ML AC.LAVANDA",
       "slug": "aceite-de-cuticula-lavanda-the-fruit-lab-vitamina-30ml-ac-lavanda-9336",
@@ -608,7 +612,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "96feb081-fce0-4018-9d3d-61f0fc4270cd",
+      "publicProductId": "eb286518-3d45-4b5a-a1e6-02cfd886c505",
       "code": "3429",
       "name": "ACEITE DE CUTICULA MARIA JOSE 30ML",
       "slug": "aceite-de-cuticula-maria-jose-30ml-3429",
@@ -624,7 +628,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "92ee58f1-4154-4ede-bd5f-96e6e6c3d890",
+      "publicProductId": "ef5220f1-51cc-47ab-b261-f3400a03dae6",
       "code": "3630",
       "name": "ACEITE DE CUTICULA MAXYBELT 60ML",
       "slug": "aceite-de-cuticula-maxybelt-60ml-3630",
@@ -640,7 +644,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "dac4e1b4-fe2c-4395-80ee-ebb49fde922e",
+      "publicProductId": "9c75a40d-e395-46b3-8017-b8d339eafe15",
       "code": "1546",
       "name": "ACEITE DE CUTICULA MIA SECRET 7.4ML",
       "slug": "aceite-de-cuticula-mia-secret-7-4ml-1546",
@@ -656,7 +660,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "ffb58f57-12e1-4313-a329-5c71668e75b3",
+      "publicProductId": "bec044bb-c6c0-46e9-8644-add1d535592e",
       "code": "2584",
       "name": "ACEITE DE CUTICULA MIA SECRET CL-01 JASMINE 1/4 OZ",
       "slug": "aceite-de-cuticula-mia-secret-cl-01-jasmine-1-4-oz-2584",
@@ -672,7 +676,7 @@
       "shortDescription": null
     },
     {
-      "publicProductId": "df05439b-4157-4f98-9221-a61da1f89fd4",
+      "publicProductId": "7cc56b61-c990-449d-be31-5a95f1a6f46e",
       "code": "1728",
       "name": "ACEITE DE CUTICULA MIA SECRET CL-02 LILAC 1/4 OZ",
       "slug": "aceite-de-cuticula-mia-secret-cl-02-lilac-1-4-oz-1728",
@@ -684,11 +688,11 @@
       "brand": "MIA SECRET",
       "publicPrice": 5.25,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/alva/mia-secret/1728-cl-02.jpg",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/1728-cl-02.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "77e0c84f-b7f0-4374-99b5-04952c7d55be",
+      "publicProductId": "14540cdd-8840-4ea2-9d90-79fe31dbb78c",
       "code": "1729",
       "name": "ACEITE DE CUTICULA MIA SECRET CL-03 1/4 OZ",
       "slug": "aceite-de-cuticula-mia-secret-cl-03-1-4-oz-1729",
@@ -700,11 +704,11 @@
       "brand": "MIA SECRET",
       "publicPrice": 5.25,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/alva/mia-secret/1729-cl-03.jpg",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/1729-cl-03.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "43ae5f6e-2a5f-4503-b203-01437e4651e4",
+      "publicProductId": "d7cf9c0f-2063-417e-a8e7-b8391ce22345",
       "code": "1727",
       "name": "ACEITE DE CUTICULA MIA SECRET CL-05 LAVENDER 1/4 OZ",
       "slug": "aceite-de-cuticula-mia-secret-cl-05-lavender-1-4-oz-1727",
@@ -716,11 +720,11 @@
       "brand": "MIA SECRET",
       "publicPrice": 5.25,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/alva/mia-secret/1727-cl-05.jpg",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/1727-cl-05.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "f02d648c-51cc-43c5-aa80-6d7eb5603c9e",
+      "publicProductId": "a1121677-6b7a-41d0-80ac-a051f0c0ec9e",
       "code": "2586",
       "name": "ACEITE DE CUTICULA MIA SECRET CL-06 HONEY SUCKLE 1/4 OZ",
       "slug": "aceite-de-cuticula-mia-secret-cl-06-honey-suckle-1-4-oz-2586",
@@ -732,11 +736,11 @@
       "brand": "MIA SECRET",
       "publicPrice": 5.25,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/alva/mia-secret/2586-cl-06.png",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/2586-cl-06.png",
       "shortDescription": "CUTICLE OIL HONEY Este aceite para cutícula en fragancia HONEYSUCKLE (madreselva) está especialmente formulado para hidratar y acondicionar la cutícula. Ayuda a proteger la cutícula de las rajaduras ocasionadas por la resequedad."
     },
     {
-      "publicProductId": "a0f65f82-e5b6-41b6-9740-18d3a8c7323c",
+      "publicProductId": "3dd73141-cf6c-4b28-9ef4-0d704b86794c",
       "code": "2999",
       "name": "ACEITE DE CUTICULA MIA SECRET CL-10 LAVENDER 30ML",
       "slug": "aceite-de-cuticula-mia-secret-cl-10-lavender-30ml-2999",
@@ -748,11 +752,11 @@
       "brand": "MIA SECRET",
       "publicPrice": 10.3,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/alva/mia-secret/2999-cl-10.jpg",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/2999-cl-10.jpg",
       "shortDescription": "CUTICLE OIL LAVENDER Este aceite para cutícula en fragancia LAVENDER (lavanda) está especialmente formulado para hidratar y acondicionar la cutícula. Ayuda a proteger la cutícula de las rajaduras ocasionadas por la resequedad."
     },
     {
-      "publicProductId": "f31206a4-7d6f-4098-a9a7-6945cf78a952",
+      "publicProductId": "4a5723f2-40f7-4064-99fb-580e80704a24",
       "code": "1639",
       "name": "ACEITE DE CUTICULA MIA SECRET CL-11 JASMINE 30ML",
       "slug": "aceite-de-cuticula-mia-secret-cl-11-jasmine-30ml-1639",
@@ -764,11 +768,11 @@
       "brand": "MIA SECRET",
       "publicPrice": 10.35,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/alva/mia-secret/1639-cl-11.jpg",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/1639-cl-11.jpg",
       "shortDescription": "CUTICLE OIL JASMINE Este aceite para cutícula en fragancia JASMINE (jazmín) está especialmente formulado para hidratar y acondicionar la cutícula. Ayuda a proteger la cutícula de las rajaduras ocasionadas por la resequedad."
     },
     {
-      "publicProductId": "1f4322ca-dba9-4582-b9dc-0069e9d48eb6",
+      "publicProductId": "44b7b7ba-296f-4e4f-8e57-07354c1390ad",
       "code": "4663",
       "name": "ACEITE DE CUTICULA MIA SECRET CL-12 LILAC 30ML",
       "slug": "aceite-de-cuticula-mia-secret-cl-12-lilac-30ml-4663",
@@ -780,11 +784,11 @@
       "brand": "MIA SECRET",
       "publicPrice": 10.35,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/alva/mia-secret/4663-cl-12.jpg",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/4663-cl-12.jpg",
       "shortDescription": "CUTICLE OIL LILAC Este aceite para cutícula en fragancia LILAC (lila) está especialmente formulado para hidratar y acondicionar la cutícula. Ayuda a proteger la cutícula de las rajaduras ocasionadas por la resequedad."
     },
     {
-      "publicProductId": "6b4da658-7cda-4dac-a165-9e5f89c98817",
+      "publicProductId": "6921db1a-76a1-4194-b4f6-d27c120c288d",
       "code": "4664",
       "name": "ACEITE DE CUTICULA MIA SECRET CL-14 SPRING 30ML",
       "slug": "aceite-de-cuticula-mia-secret-cl-14-spring-30ml-4664",
@@ -796,10 +800,10 @@
       "brand": "MIA SECRET",
       "publicPrice": 10.35,
       "currency": "USD",
-      "imageUrl": "https://both-erased-grandson.ngrok-free.dev/product-images/alva/mia-secret/4664-cl-14.jpg",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/4664-cl-14.jpg",
       "shortDescription": null
     }
   ],
-  "firstPageTotal": 4814,
-  "fetchedAt": "2026-08-17T04:33:33.472Z"
+  "firstPageTotal": 4857,
+  "fetchedAt": "2026-08-19T14:26:25.583Z"
 }
