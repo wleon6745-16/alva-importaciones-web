@@ -1,0 +1,193 @@
+---
+import WhatsAppCTA from "./WhatsAppCTA.astro";
+import TrustSection from "./TrustSection.astro";
+import ChatDemo from "./ChatDemo.tsx";
+import type { OmviqaHomeResponse, OmviqaHomeSection } from "../lib/omviqa-home";
+
+interface Props {
+  home: OmviqaHomeResponse;
+}
+
+const { home } = Astro.props;
+const categoriesBySlug = new Map(home.categories.map((category) => [category.slug, category]));
+const productsById = new Map(home.products.map((product) => [product.publicProductId, product]));
+
+function assetUrl(section: OmviqaHomeSection): string | null {
+  const id = typeof section.imageAssetId === "string" ? section.imageAssetId : null;
+  return id ? home.assets[id]?.publicUrl ?? null : null;
+}
+
+function ctaHref(cta: unknown): string {
+  return typeof cta === "object" && cta !== null && typeof (cta as { href?: unknown }).href === "string"
+    ? (cta as { href: string }).href
+    : "#";
+}
+
+function ctaLabel(cta: unknown): string | null {
+  return typeof cta === "object" && cta !== null && typeof (cta as { label?: unknown }).label === "string"
+    ? (cta as { label: string }).label
+    : null;
+}
+
+function title(section: OmviqaHomeSection): string {
+  return typeof section.title === "string" ? section.title : "";
+}
+
+function body(section: OmviqaHomeSection): string {
+  return typeof section.body === "string" ? section.body : "";
+}
+
+function eyebrow(section: OmviqaHomeSection): string | null {
+  return typeof section.eyebrow === "string" ? section.eyebrow : null;
+}
+
+const sections = [...home.payload.sections].filter((section) => section.enabled).sort((a, b) => a.sortOrder - b.sortOrder);
+---
+
+{
+  sections.map((section) => {
+    if (section.type === "hero") {
+      const image = assetUrl(section);
+      const categorySlugs = Array.isArray(section.categorySlugs) ? section.categorySlugs.filter((slug): slug is string => typeof slug === "string") : [];
+      return (
+        <section class="relative overflow-hidden bg-primary-900">
+          <div class="pointer-events-none absolute inset-0 opacity-50" style="background-image: radial-gradient(circle at 15% 15%, rgba(227,28,77,0.4), transparent 55%), radial-gradient(circle at 85% 85%, rgba(227,28,77,0.25), transparent 50%);" aria-hidden="true"></div>
+          <div class="relative mx-auto grid max-w-6xl items-center gap-16 px-6 py-20 sm:py-28 lg:grid-cols-[1.05fr_1fr] lg:gap-10 lg:py-32">
+            <div>
+              {eyebrow(section) && <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blush-100">{eyebrow(section)}</p>}
+              <h1 class="text-display-xl mt-5 text-white">{title(section)}</h1>
+              <p class="mt-6 max-w-lg text-lg text-white/80">{body(section)}</p>
+              <ul class="mt-6 flex flex-wrap gap-2" aria-label="Categorias disponibles">
+                {categorySlugs.map((slug) => {
+                  const category = categoriesBySlug.get(slug);
+                  return category ? (
+                    <li>
+                      <a href={`/productos/${category.slug}`} class="inline-flex items-center rounded-full border border-white/25 px-4 py-1.5 text-sm text-white/90 transition-colors hover:border-white/60 hover:bg-white/10">
+                        {category.label}
+                      </a>
+                    </li>
+                  ) : null;
+                })}
+              </ul>
+              <div class="mt-8 flex flex-wrap gap-4">
+                {ctaLabel(section.primaryCta) && <a href={ctaHref(section.primaryCta)} class="inline-flex items-center gap-2 rounded-full bg-blush-500 px-6 py-3 font-semibold text-white transition-transform hover:scale-105">{ctaLabel(section.primaryCta)}</a>}
+                {ctaLabel(section.secondaryCta) && <a href={ctaHref(section.secondaryCta)} class="inline-flex items-center gap-2 rounded-full border-2 border-white px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-white hover:text-primary-900">{ctaLabel(section.secondaryCta)}</a>}
+              </div>
+            </div>
+            <div class="relative mx-auto w-full max-w-md lg:max-w-none">
+              <div class="group relative aspect-[4/3] overflow-hidden rounded-[1.75rem] shadow-2xl sm:aspect-[5/4] lg:aspect-[4/5]">
+                {image ? <img src={image} alt={typeof section.imageAlt === "string" ? section.imageAlt : title(section)} class="media-zoom h-full w-full bg-primary-900 object-cover" loading="eager" /> : <div class="h-full w-full bg-primary-800"></div>}
+                <div class="editorial-overlay pointer-events-none absolute inset-0"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    if (section.type === "categories") {
+      const categorySlugs = Array.isArray(section.categorySlugs) ? section.categorySlugs.filter((slug): slug is string => typeof slug === "string") : [];
+      return (
+        <section class="section-y px-6">
+          <div class="mx-auto max-w-6xl">
+            {eyebrow(section) && <p class="text-center text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">{eyebrow(section)}</p>}
+            <h2 class="text-display-lg mt-2 text-center text-primary-900">{title(section)}</h2>
+            <p class="mx-auto mt-3 max-w-2xl text-center text-ink-muted">{body(section)}</p>
+            <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {categorySlugs.map((slug) => {
+                const category = categoriesBySlug.get(slug);
+                return category ? (
+                  <a href={`/productos/${category.slug}`} class="group relative flex aspect-[4/3] overflow-hidden rounded-3xl bg-primary-900 shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                    {category.imageUrl && <img src={category.imageUrl} alt={category.label} class="media-zoom absolute inset-0 h-full w-full object-cover" loading="lazy" />}
+                    <div class="editorial-overlay pointer-events-none absolute inset-0"></div>
+                    <div class="relative mt-auto flex flex-col gap-1 p-6 text-white">
+                      <h3 class="text-display-sm">{category.label}</h3>
+                      <p class="text-sm text-white/85">{category.description}</p>
+                      <span class="mt-3 inline-flex w-fit items-center gap-1 text-sm font-semibold tracking-wide text-white">Ver mas →</span>
+                    </div>
+                  </a>
+                ) : null;
+              })}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    if (section.type === "featuredProducts") {
+      const productIds = Array.isArray(section.productIds) ? section.productIds.filter((id): id is string => typeof id === "string") : [];
+      return (
+        <section class="section-y bg-blush-50 px-6">
+          <div class="mx-auto max-w-6xl">
+            {eyebrow(section) && <p class="text-center text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">{eyebrow(section)}</p>}
+            <h2 class="mt-2 text-center font-display text-3xl text-primary-900">{title(section)}</h2>
+            <p class="mx-auto mt-3 max-w-2xl text-center text-ink-muted">{body(section)}</p>
+            <div class="mt-12 grid gap-6 sm:grid-cols-3">
+              {productIds.map((id) => {
+                const product = productsById.get(id);
+                return product ? (
+                  <div class="glass-card group overflow-hidden rounded-2xl shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <a href={`/productos/${product.category?.slug ?? "catalogo"}/${product.slug}/`} class="block">
+                      <div class="aspect-square overflow-hidden bg-white">
+                        {product.imageUrl && <img src={product.imageUrl} alt={product.name} class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" loading="lazy" />}
+                      </div>
+                    </a>
+                    <div class="flex flex-col gap-2 p-5">
+                      <a href={`/productos/${product.category?.slug ?? "catalogo"}/${product.slug}/`} class="font-display text-lg text-primary-800 hover:text-primary-600">{product.name}</a>
+                      <p class="text-lg font-semibold text-ink">{product.publicPrice == null ? "Consultar precio" : `$${product.publicPrice.toFixed(2)}`}</p>
+                      <WhatsAppCTA label="Consultar" class="mt-1 w-fit !px-4 !py-2 text-sm" message={`Hola, quisiera consultar sobre: ${product.name}`} source="home" pageType="home" ctaLocation="product_highlight" productId={product.publicProductId} productName={product.name} category={product.category?.slug ?? undefined} />
+                    </div>
+                  </div>
+                ) : null;
+              })}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    if (section.type === "assistantDemo") {
+      return (
+        <section id="asistente-ia" class="section-y bg-blush-50 px-6">
+          <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
+            <div>
+              {eyebrow(section) && <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">{eyebrow(section)}</p>}
+              <h2 class="mt-4 font-display text-3xl text-primary-900">{title(section)}</h2>
+              <p class="mt-6 text-ink-muted">{body(section)}</p>
+              {ctaLabel(section.cta) && <a href={ctaHref(section.cta)} class="mt-8 inline-flex items-center gap-2 rounded-full bg-primary-800 px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-primary-700">{ctaLabel(section.cta)}</a>}
+            </div>
+            <ChatDemo client:visible />
+          </div>
+        </section>
+      );
+    }
+
+    if (section.type === "trust") return <section class="section-y bg-blush-50 px-6"><TrustSection /></section>;
+
+    if (section.type === "cta") {
+      return (
+        <section class="bg-primary-900 px-6 py-20">
+          <div class="mx-auto max-w-3xl rounded-3xl bg-primary-800 px-8 py-16 text-center text-white">
+            <h2 class="font-display text-3xl">{title(section)}</h2>
+            <p class="mt-4 text-blush-100/90">{body(section)}</p>
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+              {ctaLabel(section.primaryCta) && <a href={ctaHref(section.primaryCta)} class="inline-flex items-center gap-2 rounded-full border-2 border-white px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-white hover:text-primary-800">{ctaLabel(section.primaryCta)}</a>}
+              {ctaLabel(section.secondaryCta) && <a href={ctaHref(section.secondaryCta)} class="inline-flex items-center gap-2 rounded-full border-2 border-white px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-white hover:text-primary-800">{ctaLabel(section.secondaryCta)}</a>}
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    return (
+      <section class="section-y px-6">
+        <div class="mx-auto max-w-6xl">
+          {eyebrow(section) && <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">{eyebrow(section)}</p>}
+          <h2 class="mt-2 font-display text-3xl text-primary-900">{title(section)}</h2>
+          <p class="mt-4 text-ink-muted">{body(section)}</p>
+          {ctaLabel(section.cta) && <a href={ctaHref(section.cta)} class="mt-6 inline-block font-semibold text-primary-700 hover:underline">{ctaLabel(section.cta)} →</a>}
+        </div>
+      </section>
+    );
+  })
+}

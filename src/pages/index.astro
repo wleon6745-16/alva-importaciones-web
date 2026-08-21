@@ -8,9 +8,11 @@ import ChatDemo from "../components/ChatDemo.tsx";
 import PromoShowcase from "../components/PromoShowcase.astro";
 import TrustSection from "../components/TrustSection.astro";
 import FeatureStrip, { type FeatureItem } from "../components/FeatureStrip.astro";
+import OmviqaHome from "../components/OmviqaHome.astro";
 import { siteConfig } from "../lib/site-config";
 import { categories as categoryMeta } from "../lib/categories";
 import { categoryImages } from "../lib/category-images";
+import { getOmviqaHome } from "../lib/omviqa-home";
 
 import heroImage from "../assets/products/muebles/cat-muebles.jpeg";
 import sillonDestacado from "../assets/products/muebles/sillon-peluqueria-1.jpg";
@@ -41,9 +43,13 @@ const mueblesDestacados = [
   { name: "Camilla multiuso 3 niveles", price: "$208", image: camillaDestacada, slug: "camilla-multiuso-3-niveles" },
   { name: "Set mesa + silla concha", price: "$350", image: mesaDestacada, slug: "set-mesa-silla-concha-para-manicura" },
 ];
+
+const omviqaHome = await getOmviqaHome();
 ---
 
 <BaseLayout title={siteConfig.name} description={siteConfig.description} path="/">
+  {omviqaHome ? <OmviqaHome home={omviqaHome} /> : (
+  <>
   <section class="relative overflow-hidden bg-primary-900">
     <div
       class="pointer-events-none absolute inset-0 opacity-50"
@@ -279,4 +285,6 @@ const mueblesDestacados = [
       </div>
     </div>
   </SectionReveal>
+  </>
+  )}
 </BaseLayout>
