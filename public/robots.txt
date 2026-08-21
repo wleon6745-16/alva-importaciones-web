@@ -1,48 +1,59 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /decap-admin/
 
 # Buscadores tradicionales
 User-agent: Googlebot
 Allow: /
 Disallow: /admin/
+Disallow: /decap-admin/
 
 User-agent: Bingbot
 Allow: /
 Disallow: /admin/
+Disallow: /decap-admin/
 
 # Bots de búsqueda/asistentes con IA
 User-agent: OAI-SearchBot
 Allow: /
 Disallow: /admin/
+Disallow: /decap-admin/
 
 User-agent: ChatGPT-User
 Allow: /
 Disallow: /admin/
+Disallow: /decap-admin/
 
 User-agent: GPTBot
 Allow: /
 Disallow: /admin/
+Disallow: /decap-admin/
 
 User-agent: PerplexityBot
 Allow: /
 Disallow: /admin/
+Disallow: /decap-admin/
 
 User-agent: Perplexity-User
 Allow: /
 Disallow: /admin/
+Disallow: /decap-admin/
 
 User-agent: ClaudeBot
 Allow: /
 Disallow: /admin/
+Disallow: /decap-admin/
 
 User-agent: anthropic-ai
 Allow: /
 Disallow: /admin/
+Disallow: /decap-admin/
 
 User-agent: Google-Extended
 Allow: /
 Disallow: /admin/
+Disallow: /decap-admin/
 
 # Panel de administración de contenido (Decap CMS) — no indexable, ya lleva noindex, pero se
 # bloquea también aquí por si algún bot no respeta la meta tag. Ver docs/CONTENT_WORKFLOW.md §6.
