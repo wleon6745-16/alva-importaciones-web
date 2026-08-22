@@ -5,23 +5,28 @@ import WhatsAppCTA from "../components/WhatsAppCTA.astro";
 import LocationsMap from "../components/LocationsMap.astro";
 import { localBusinessSchemas, breadcrumbSchema } from "../lib/structured-data";
 import { siteConfig } from "../lib/site-config";
+import { getOmviqaEditorial, type OmviqaPage } from "../lib/omviqa-editorial";
 
 const breadcrumbs = breadcrumbSchema([
   { name: "Inicio", path: "/" },
   { name: "Contacto", path: "/contacto" },
 ]);
+const pageCollection = await getOmviqaEditorial<OmviqaPage>("page");
+const pageItem = pageCollection?.items.find((item) => item.contentKey === "contacto" || item.payload.slug === "contacto") ?? null;
+const page = pageItem?.payload ?? null;
 ---
 
 <BaseLayout
-  title="Contacto"
-  description="Horario, ubicación y WhatsApp de Alva Importaciones en Portoviejo, Manabí."
+  title={page?.seo?.title || page?.title || "Contacto"}
+  description={page?.seo?.description || "Horario, ubicación y WhatsApp de Alva Importaciones en Portoviejo, Manabí."}
   path="/contacto"
   structuredData={[...localBusinessSchemas(), breadcrumbs]}
 >
   <section class="hero-glow px-6 py-20 text-center">
-    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Contacto</p>
-    <h1 class="mt-4 font-display text-4xl text-primary-900">Visítanos o escríbenos</h1>
-    <WhatsAppCTA label="Chatea por WhatsApp" pulse class="mt-8" source="contact" pageType="contact" ctaLocation="hero" />
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">{page?.eyebrow || "Contacto"}</p>
+    <h1 class="mt-4 font-display text-4xl text-primary-900">{page?.title || "Visítanos o escríbenos"}</h1>
+    {page?.body && <p class="mx-auto mt-4 max-w-2xl text-lg text-ink-muted">{page.body}</p>}
+    <WhatsAppCTA label={page?.ctaLabel || "Chatea por WhatsApp"} pulse class="mt-8" source="contact" pageType="contact" ctaLocation="hero" />
   </section>
 
   <SectionReveal as="section" class="px-6 pb-16">

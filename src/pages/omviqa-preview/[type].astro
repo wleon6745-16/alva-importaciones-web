@@ -3,7 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import OmviqaDraftPreview from "../../components/OmviqaDraftPreview";
 
 export function getStaticPaths() {
-  return ["home", "promotion", "course", "location"].map((type) => ({ params: { type } }));
+  return ["home", "promotion", "course", "location", "page"].map((type) => ({ params: { type } }));
 }
 ---
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 type DraftEnvelope = {
-  contentType: "home_section" | "promotion" | "course" | "location";
+  contentType: "home_section" | "promotion" | "course" | "location" | "page";
   contentKey: string;
   payload?: Record<string, any>;
   assets?: Record<string, { publicUrl: string }>;
@@ -144,6 +144,21 @@ function SingleDraft({ draft }: { draft: DraftEnvelope }) {
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Formación</p>
             <h1 className="mt-4 font-display text-4xl text-primary-900">{payload.title}</h1>
             <p className="mt-6 text-lg text-ink-muted">{payload.intro}</p>
+          </div>
+          {image && <img src={image} alt={payload.imageAlt || payload.title} className="aspect-[16/10] rounded-3xl object-cover shadow-xl" />}
+        </div>
+      </section>
+    );
+  }
+  if (draft.contentType === "page") {
+    return (
+      <section className="hero-glow px-6 py-16">
+        <div className="mx-auto grid max-w-5xl items-center gap-10 lg:grid-cols-2">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">{payload.eyebrow || payload.slug}</p>
+            <h1 className="mt-4 font-display text-4xl text-primary-900">{payload.title}</h1>
+            <p className="mt-6 whitespace-pre-line text-lg text-ink-muted">{payload.body}</p>
+            {payload.ctaLabel && <span className="mt-8 inline-flex rounded-full bg-primary-800 px-6 py-3 font-semibold text-white">{payload.ctaLabel}</span>}
           </div>
           {image && <img src={image} alt={payload.imageAlt || payload.title} className="aspect-[16/10] rounded-3xl object-cover shadow-xl" />}
         </div>

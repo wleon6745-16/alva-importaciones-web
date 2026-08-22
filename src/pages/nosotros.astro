@@ -4,35 +4,43 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionReveal from "../components/SectionReveal.astro";
 import WhatsAppCTA from "../components/WhatsAppCTA.astro";
 import { siteConfig } from "../lib/site-config";
+import { editorialAssetUrl, getOmviqaEditorial, type OmviqaPage } from "../lib/omviqa-editorial";
 import nailsImage from "../assets/products/unas/nails-2.jpg";
+
+const pageCollection = await getOmviqaEditorial<OmviqaPage>("page");
+const pageItem = pageCollection?.items.find((item) => item.contentKey === "nosotros" || item.payload.slug === "nosotros") ?? null;
+const page = pageItem?.payload ?? null;
+const pageImage = page ? editorialAssetUrl(page, pageCollection?.assets ?? {}) : null;
 ---
 
 <BaseLayout
-  title="Nosotros"
-  description="Conoce la historia de Alva Importaciones, importadora de belleza en Portoviejo, Manabí."
+  title={page?.seo?.title || page?.title || "Nosotros"}
+  description={page?.seo?.description || "Conoce la historia de Alva Importaciones, importadora de belleza en Portoviejo, Manabí."}
   path="/nosotros"
 >
   <section class="hero-glow px-6 py-20">
     <div class="mx-auto max-w-3xl text-center">
-      <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Nosotros</p>
-      <h1 class="mt-4 font-display text-4xl text-primary-900">{siteConfig.tagline}</h1>
+      <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">{page?.eyebrow || "Nosotros"}</p>
+      <h1 class="mt-4 font-display text-4xl text-primary-900">{page?.title || siteConfig.tagline}</h1>
       <p class="mt-6 text-lg text-ink-muted">
-        Somos {siteConfig.name}, una importadora y distribuidora de productos de belleza en
-        Portoviejo. Trabajamos con marcas reconocidas de uñas, capilares y maquillaje, y
-        formamos a nuevas nail artists a través de nuestro curso profesional.
+        {page?.body || `Somos ${siteConfig.name}, una importadora y distribuidora de productos de belleza en Portoviejo. Trabajamos con marcas reconocidas de uñas, capilares y maquillaje, y formamos a nuevas nail artists a través de nuestro curso profesional.`}
       </p>
     </div>
   </section>
 
   <SectionReveal as="section" class="px-6 py-20">
     <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
-      <Image
-        src={nailsImage}
-        alt="Producto de uñas Alva Importaciones"
-        class="w-full rounded-3xl object-cover shadow-xl"
-        width={640}
-        height={480}
-      />
+      {pageImage ? (
+        <img src={pageImage} alt={page?.imageAlt || page?.title || "ALVA"} class="w-full rounded-3xl object-cover shadow-xl" loading="lazy" />
+      ) : (
+        <Image
+          src={nailsImage}
+          alt="Producto de uñas Alva Importaciones"
+          class="w-full rounded-3xl object-cover shadow-xl"
+          width={640}
+          height={480}
+        />
+      )}
       <div>
         <h2 class="font-display text-3xl text-primary-900">Cercanía, marca y calidad</h2>
         <p class="mt-6 text-ink-muted">
@@ -44,7 +52,13 @@ import nailsImage from "../assets/products/unas/nails-2.jpg";
           Para que comprar sea más fácil, sumamos un asistente por WhatsApp que responde con
           precios y disponibilidad real al instante — sin perder el trato cercano de siempre.
         </p>
-        <WhatsAppCTA label="Escríbenos" class="mt-8" source="about" pageType="about" />
+        {page?.ctaHref?.startsWith("/") ? (
+          <a href={page.ctaHref} class="mt-8 inline-flex rounded-full bg-primary-800 px-6 py-3 font-semibold text-white hover:bg-primary-700">
+            {page.ctaLabel || "Escríbenos"}
+          </a>
+        ) : (
+          <WhatsAppCTA label={page?.ctaLabel || "Escríbenos"} class="mt-8" source="about" pageType="about" />
+        )}
       </div>
     </div>
   </SectionReveal>

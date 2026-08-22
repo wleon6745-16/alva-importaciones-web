@@ -1,6 +1,6 @@
 import { storefrontApiUrl, storefrontChannelId } from "./storefront-config";
 
-export type OmviqaEditorialType = "promotion" | "course" | "location";
+export type OmviqaEditorialType = "promotion" | "course" | "location" | "page";
 
 export interface OmviqaAssetRef {
   id: string;
@@ -50,7 +50,21 @@ export interface OmviqaLocation {
   seo?: { title?: string; description?: string; noindex?: boolean };
 }
 
-export type OmviqaEditorialPayload = OmviqaPromotion | OmviqaCourse | OmviqaLocation;
+export interface OmviqaPage {
+  slug: string;
+  eyebrow?: string;
+  title: string;
+  body: string;
+  imageAssetId?: string | null;
+  imageAlt?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  enabled?: boolean;
+  sortOrder?: number;
+  seo?: { title?: string; description?: string; noindex?: boolean };
+}
+
+export type OmviqaEditorialPayload = OmviqaPromotion | OmviqaCourse | OmviqaLocation | OmviqaPage;
 
 export interface OmviqaEditorialItem<TPayload extends OmviqaEditorialPayload> {
   contentKey: string;
