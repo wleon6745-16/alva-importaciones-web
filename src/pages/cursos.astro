@@ -4,8 +4,6 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionReveal from "../components/SectionReveal.astro";
 import WhatsAppCTA from "../components/WhatsAppCTA.astro";
-import OmviqaCoursePage from "../components/OmviqaCoursePage.astro";
-import { getOmviqaEditorial, type OmviqaCourse } from "../lib/omviqa-editorial";
 import { courseSchema, breadcrumbSchema } from "../lib/structured-data";
 import cursoImage from "../assets/products/hero/cat-curso.jpeg";
 
@@ -17,7 +15,6 @@ const breadcrumbs = breadcrumbSchema([
 // Un solo curso activo hoy — se toma el primero de la colección editable desde /admin.
 const [curso] = await getCollection("cursos");
 const { title, description, intro, highlights, ctaLabel, ctaMessage } = curso.data;
-const omviqaCourses = await getOmviqaEditorial<OmviqaCourse>("course");
 ---
 
 <BaseLayout
@@ -26,10 +23,6 @@ const omviqaCourses = await getOmviqaEditorial<OmviqaCourse>("course");
   path="/cursos"
   structuredData={[courseSchema(title, description), breadcrumbs]}
 >
-  {omviqaCourses ? (
-    <OmviqaCoursePage collection={omviqaCourses} />
-  ) : (
-    <>
   <section class="hero-glow px-6 py-16">
     <div class="mx-auto grid max-w-5xl items-center gap-10 lg:grid-cols-2">
       <div class="text-center lg:text-left">
@@ -94,6 +87,4 @@ const omviqaCourses = await getOmviqaEditorial<OmviqaCourse>("course");
       Ver también: cursos de uñas en Portoviejo →
     </a>
   </SectionReveal>
-    </>
-  )}
 </BaseLayout>

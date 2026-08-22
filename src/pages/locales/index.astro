@@ -2,16 +2,13 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import SectionReveal from "../../components/SectionReveal.astro";
 import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
-import OmviqaLocationsPage from "../../components/OmviqaLocationsPage.astro";
 import { siteConfig } from "../../lib/site-config";
-import { getOmviqaEditorial, type OmviqaLocation } from "../../lib/omviqa-editorial";
 import { breadcrumbSchema, localBusinessSchemas } from "../../lib/structured-data";
 
 const breadcrumbs = breadcrumbSchema([
   { name: "Inicio", path: "/" },
   { name: "Locales", path: "/locales" },
 ]);
-const omviqaLocations = await getOmviqaEditorial<OmviqaLocation>("location");
 ---
 
 <BaseLayout
@@ -20,10 +17,6 @@ const omviqaLocations = await getOmviqaEditorial<OmviqaLocation>("location");
   path="/locales"
   structuredData={[...localBusinessSchemas(), breadcrumbs]}
 >
-  {omviqaLocations ? (
-    <OmviqaLocationsPage collection={omviqaLocations} />
-  ) : (
-    <>
   <section class="hero-glow px-6 py-16 text-center">
     <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Locales</p>
     <h1 class="mt-4 font-display text-4xl text-primary-900 sm:text-5xl">
@@ -96,6 +89,4 @@ const omviqaLocations = await getOmviqaEditorial<OmviqaLocation>("location");
       Ver catálogo de muebles
     </a>
   </SectionReveal>
-    </>
-  )}
 </BaseLayout>
