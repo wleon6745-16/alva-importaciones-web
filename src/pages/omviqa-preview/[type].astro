@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import OmviqaDraftPreview from "../../components/OmviqaDraftPreview";
+
+export function getStaticPaths() {
+  return ["home", "promotion", "course", "location"].map((type) => ({ params: { type } }));
+}
+---
+
+<BaseLayout
+  title="Vista previa editorial — ALVA"
+  description="Vista previa privada de contenido editorial de Omviqa."
+  path="/omviqa-preview"
+  noindex
+>
+  <OmviqaDraftPreview client:only="react" />
+</BaseLayout>

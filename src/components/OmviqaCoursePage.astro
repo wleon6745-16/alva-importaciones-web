@@ -1,0 +1,54 @@
+---
+import WhatsAppCTA from "./WhatsAppCTA.astro";
+import { editorialAssetUrl, type OmviqaCourse, type OmviqaEditorialCollection } from "../lib/omviqa-editorial";
+
+interface Props {
+  collection: OmviqaEditorialCollection<OmviqaCourse>;
+}
+
+const { collection } = Astro.props;
+const course = collection.items.find((item) => item.payload.enabled !== false)?.payload;
+const image = course ? editorialAssetUrl(course, collection.assets) : null;
+---
+
+{
+  course && (
+    <>
+      <section class="hero-glow px-6 py-16">
+        <div class="mx-auto grid max-w-5xl items-center gap-10 lg:grid-cols-2">
+          <div class="text-center lg:text-left">
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Formación</p>
+            <h1 class="mt-4 font-display text-4xl text-primary-900">{course.title}</h1>
+            <p class="mt-6 text-lg text-ink-muted">{course.intro}</p>
+          </div>
+          <div class="overflow-hidden rounded-3xl shadow-xl">
+            {image ? (
+              <img src={image} alt={`Imagen del curso ${course.title}`} class="aspect-[16/10] h-full w-full object-cover" loading="eager" />
+            ) : (
+              <div class="aspect-[16/10] bg-blush-100"></div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section class="px-6 pb-14">
+        <div class="mx-auto max-w-4xl overflow-hidden rounded-2xl border border-blush-100 bg-blush-100 shadow-sm">
+          <div class="grid grid-cols-1 gap-px sm:grid-cols-2">
+            {course.highlights.map((h) => (
+              <div class="bg-white p-6">
+                <p class="text-sm font-semibold uppercase tracking-wide text-primary-700">{h.label}</p>
+                <p class="mt-2 font-display text-xl text-ink">{h.value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-blush-50 px-6 py-14 text-center">
+        <h2 class="font-display text-2xl text-primary-900">¿Lista para reservar tu cupo?</h2>
+        <p class="mx-auto mt-3 max-w-xl text-ink-muted">{course.description}</p>
+        <WhatsAppCTA label={course.ctaLabel || "Reservar mi cupo"} class="mt-6" message={course.ctaMessage || `Hola, quiero informacion sobre ${course.title}`} source="course" pageType="course" ctaLocation="bottom" />
+      </section>
+    </>
+  )
+}

@@ -1,0 +1,53 @@
+---
+import WhatsAppCTA from "./WhatsAppCTA.astro";
+import { editorialAssetUrl, type OmviqaEditorialCollection, type OmviqaLocation } from "../lib/omviqa-editorial";
+
+interface Props {
+  collection: OmviqaEditorialCollection<OmviqaLocation>;
+}
+
+const { collection } = Astro.props;
+const locations = [...collection.items]
+  .filter((item) => item.payload.enabled !== false)
+  .sort((a, b) => (a.payload.sortOrder ?? 10000) - (b.payload.sortOrder ?? 10000));
+---
+
+<section class="hero-glow px-6 py-16 text-center">
+  <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Locales</p>
+  <h1 class="mt-4 font-display text-4xl text-primary-900 sm:text-5xl">Visítanos en Portoviejo</h1>
+  <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-muted">
+    Elige el local más cercano para ver productos en persona y recibir atención de ALVA.
+  </p>
+</section>
+
+<section class="px-6 pb-16">
+  <div class="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
+    {
+      locations.map((item) => {
+        const location = item.payload;
+        const image = editorialAssetUrl(location, collection.assets);
+        return (
+          <div class="glass-card flex flex-col gap-3 overflow-hidden rounded-2xl">
+            {image && <img src={image} alt={location.imageAlt || location.name} class="aspect-[16/9] w-full object-cover" loading="lazy" />}
+            <div class="flex flex-col gap-3 p-6">
+              <h2 class="font-display text-2xl text-primary-900">{location.title || location.name}</h2>
+              {location.description && <p class="text-sm text-ink-muted">{location.description}</p>}
+              <p class="text-sm text-ink-muted">{location.address}</p>
+              <ul class="text-sm text-ink-muted">
+                {(location.hours ?? []).map((h) => <li>{h.days}: {h.time}</li>)}
+              </ul>
+              {location.mapsUrl && (
+                <a href={location.mapsUrl} target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-primary-700 hover:underline">
+                  Ver en Google Maps →
+                </a>
+              )}
+              <div class="mt-2 flex flex-wrap gap-3">
+                {location.whatsappNumber && <WhatsAppCTA label={`WhatsApp ${location.name}`} number={location.whatsappNumber} class="!px-4 !py-2 text-sm" branch={location.slug} source="location" pageType="location" />}
+              </div>
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+</section>

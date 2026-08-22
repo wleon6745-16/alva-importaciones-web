@@ -9,6 +9,10 @@
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { siteConfig } from "../lib/site-config";
+import OmviqaPromotions from "./OmviqaPromotions.astro";
+import { getOmviqaEditorial, type OmviqaPromotion } from "../lib/omviqa-editorial";
+
+const omviqaPromotions = await getOmviqaEditorial<OmviqaPromotion>("promotion");
 
 const promoEntries = (await getCollection("promos")).sort((a, b) => a.data.order - b.data.order);
 
@@ -29,7 +33,7 @@ const promos = promoEntries.map((entry) => ({
 }));
 ---
 
-<div class="mx-auto max-w-6xl">
+{omviqaPromotions ? <OmviqaPromotions collection={omviqaPromotions} /> : <div class="mx-auto max-w-6xl">
   <p class="text-center text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Así son nuestras promociones</p>
   <h2 class="mt-2 text-center font-display text-3xl text-primary-900 sm:text-4xl">Combos y campañas reales</h2>
   <p class="mx-auto mt-3 max-w-2xl text-center text-ink-muted">
@@ -88,4 +92,4 @@ const promos = promoEntries.map((entry) => ({
       Seguir en Instagram →
     </a>
   </div>
-</div>
+</div>}
