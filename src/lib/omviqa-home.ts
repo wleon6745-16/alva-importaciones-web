@@ -1,4 +1,5 @@
-import { storefrontApiUrl, storefrontChannelId } from "./storefront-config";
+import { storefrontBaseUrl } from "./storefront-config";
+import type { NewProductItem } from "./new-products";
 
 export interface OmviqaHomeSection {
   id: string;
@@ -38,14 +39,17 @@ export interface OmviqaHomeResponse {
   categories: OmviqaHomeCategory[];
   products: OmviqaHomeProduct[];
   assets: Record<string, { id: string; publicUrl: string; width: number | null; height: number | null }>;
+  /** Por id de seccion `newProducts`. Opcional: un Omviqa anterior no lo envia. */
+  newProducts?: Record<string, NewProductItem[]>;
   publishedAt: string | null;
   publishedVersion: number | null;
 }
 
 export async function getOmviqaHome(): Promise<OmviqaHomeResponse | null> {
-  if (!storefrontApiUrl || !storefrontChannelId) return null;
+  const base = storefrontBaseUrl();
+  if (!base) return null;
   try {
-    const res = await fetch(`${storefrontApiUrl.replace(/\/$/, "")}/${storefrontChannelId}/home`);
+    const res = await fetch(`${base}/home`);
     if (!res.ok) return null;
     const data = (await res.json()) as { home: OmviqaHomeResponse | null };
     return data.home;

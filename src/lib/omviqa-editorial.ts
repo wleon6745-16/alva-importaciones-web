@@ -1,4 +1,4 @@
-import { storefrontApiUrl, storefrontChannelId } from "./storefront-config";
+import { storefrontBaseUrl } from "./storefront-config";
 
 export type OmviqaEditorialType = "promotion" | "course" | "location" | "page";
 
@@ -89,9 +89,10 @@ export function editorialAssetUrl(
 export async function getOmviqaEditorial<TPayload extends OmviqaEditorialPayload>(
   contentType: OmviqaEditorialType
 ): Promise<OmviqaEditorialCollection<TPayload> | null> {
-  if (!storefrontApiUrl || !storefrontChannelId) return null;
+  const base = storefrontBaseUrl();
+  if (!base) return null;
   try {
-    const res = await fetch(`${storefrontApiUrl.replace(/\/$/, "")}/${storefrontChannelId}/editorial/${contentType}`);
+    const res = await fetch(`${base}/editorial/${contentType}`);
     if (!res.ok) return null;
     const data = (await res.json()) as { collection: OmviqaEditorialCollection<TPayload> | null };
     return data.collection && data.collection.items.length > 0 ? data.collection : null;

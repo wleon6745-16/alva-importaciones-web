@@ -2,7 +2,9 @@
 import WhatsAppCTA from "./WhatsAppCTA.astro";
 import TrustSection from "./TrustSection.astro";
 import ChatDemo from "./ChatDemo.tsx";
+import NewProducts from "./NewProducts.tsx";
 import type { OmviqaHomeResponse, OmviqaHomeSection } from "../lib/omviqa-home";
+import { storefrontBaseUrl } from "../lib/storefront-config";
 
 interface Props {
   home: OmviqaHomeResponse;
@@ -111,6 +113,20 @@ const sections = [...home.payload.sections].filter((section) => section.enabled)
             </div>
           </div>
         </section>
+      );
+    }
+
+    if (section.type === "newProducts") {
+      const limit = typeof section.limit === "number" ? section.limit : 8;
+      return (
+        <NewProducts
+          client:load
+          apiBaseUrl={storefrontBaseUrl() ?? ""}
+          initialItems={home.newProducts?.[section.id] ?? []}
+          limit={limit}
+          eyebrow={eyebrow(section) || undefined}
+          title={title(section) || undefined}
+        />
       );
     }
 

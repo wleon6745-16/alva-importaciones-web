@@ -13,6 +13,9 @@ import { siteConfig } from "../lib/site-config";
 import { categories as categoryMeta } from "../lib/categories";
 import { categoryImages } from "../lib/category-images";
 import { getOmviqaHome } from "../lib/omviqa-home";
+import NewProducts from "../components/NewProducts.tsx";
+import { getNewProducts, NEW_PRODUCTS_LIMIT } from "../lib/new-products";
+import { storefrontBaseUrl } from "../lib/storefront-config";
 
 import heroImage from "../assets/products/muebles/cat-muebles.jpeg";
 import sillonDestacado from "../assets/products/muebles/sillon-peluqueria-1.jpg";
@@ -45,6 +48,8 @@ const mueblesDestacados = [
 ];
 
 const omviqaHome = await getOmviqaHome();
+// Solo hace falta para el Home estatico: el de Omviqa trae las suyas.
+const newProducts = omviqaHome ? [] : await getNewProducts(NEW_PRODUCTS_LIMIT);
 ---
 
 <BaseLayout title={siteConfig.name} description={siteConfig.description} path="/">
@@ -118,6 +123,13 @@ const omviqaHome = await getOmviqaHome();
       </div>
     </div>
   </section>
+
+  <NewProducts
+    client:load
+    apiBaseUrl={storefrontBaseUrl() ?? ""}
+    initialItems={newProducts}
+    limit={NEW_PRODUCTS_LIMIT}
+  />
 
   <SectionReveal as="section" class="section-y px-6">
     <div class="mx-auto max-w-6xl">
