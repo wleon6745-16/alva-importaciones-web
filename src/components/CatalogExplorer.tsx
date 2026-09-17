@@ -63,6 +63,7 @@ export default function CatalogExplorer({
   const [hasMore, setHasMore] = useState(initialHasMore);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [brands, setBrands] = useState<PublicBrandSummary[]>(initialBrands);
   const requestId = useRef(0);
   const isFirstRender = useRef(true);
 
@@ -92,9 +93,42 @@ export default function CatalogExplorer({
     }
   }
 
+  // EL HTML ES UNA FOTO DEL DIA DEL BUILD. El catalogo cambia cada vez que
+  // Omviqa sincroniza el ERP o lee el canal de Telegram (fotos nuevas, y con
+  // la politica de "solo productos con foto", productos que entran y salen).
+  // Por eso, al cargar, se pide la pagina 1 y las marcas en vivo y se
+  // reemplaza la foto del build -- en silencio: si falla, se sigue viendo lo
+  // que ya habia, sin mensaje de error ni parpadeo de carga.
+  useEffect(() => {
+    if (!apiBaseUrl || !channelId) return;
+    const controller = new AbortController();
+    const thisRequest = ++requestId.current;
+    const params = new URLSearchParams({ category: categorySlug, page: "1", limit: String(pageSize) });
+    Promise.all([
+      fetch(`${base}/products?${params.toString()}`, { signal: controller.signal }).then((r) => (r.ok ? r.json() : null)),
+      fetch(`${base}/brands?category=${encodeURIComponent(categorySlug)}`, { signal: controller.signal }).then((r) => (r.ok ? r.json() : null)),
+    ])
+      .then(([productos, marcas]: [
+        { items: StorefrontProduct[]; total: number; hasMore: boolean } | null,
+        { brands: PublicBrandSummary[] } | null,
+      ]) => {
+        if (thisRequest !== requestId.current) return; // el visitante ya filtro
+        if (productos && Array.isArray(productos.items)) {
+          setItems(productos.items);
+          setTotal(productos.total);
+          setHasMore(productos.hasMore);
+          setPage(1);
+        }
+        if (marcas && Array.isArray(marcas.brands)) setBrands(marcas.brands);
+      })
+      .catch(() => undefined);
+    return () => controller.abort();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // Al cambiar marca/búsqueda, se reinicia desde la página 1 -- nunca se
-  // acumulan resultados de filtros distintos en la misma lista. Se salta el
-  // primer render: esos datos ya llegaron por props (HTML estático).
+  // acumulan resultados de filtros distintos en la misma lista. El primer
+  // render no dispara esto: de eso se encarga el refresco de arriba.
   useEffect(() => {
     if (isFirstRender.current) {
       isFirstRender.current = false;
@@ -125,7 +159,7 @@ export default function CatalogExplorer({
               aria-label="Filtrar por marca"
             >
               <option value="">Todas las marcas</option>
-              {initialBrands.map((b) => (
+              {brands.map((b) => (
                 <option key={b.name} value={b.name}>
                   {b.name} ({b.count})
                 </option>
