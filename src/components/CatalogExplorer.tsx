@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { whatsappLink } from "../lib/site-config";
+import { useShowPrices } from "../lib/use-price-visibility";
 
 // Filtro de marca, búsqueda y "cargar más" para el catálogo completo real
 // (miles de productos por categoría) -- llama a la Storefront API de
@@ -10,7 +11,7 @@ import { whatsappLink } from "../lib/site-config";
 // filtro, búsqueda).
 interface PublicBrandSummary {
   name: string;
-  count: number;
+  count?: number;
 }
 
 interface StorefrontProduct {
@@ -49,6 +50,7 @@ export default function CatalogExplorer({
   pageSize = 24,
 }: Props) {
   const base = useMemo(() => `${apiBaseUrl.replace(/\/+$/, "")}/api/storefront/${channelId}`, [apiBaseUrl, channelId]);
+  const showPrices = useShowPrices(apiBaseUrl && channelId ? base : "");
 
   const [brand, setBrand] = useState("");
   const [query, setQuery] = useState("");
@@ -59,7 +61,6 @@ export default function CatalogExplorer({
   // montaje inicial con isFirstRender).
   const [items, setItems] = useState<StorefrontProduct[]>(initialItems);
   const [page, setPage] = useState(1);
-  const [total, setTotal] = useState(initialTotal);
   const [hasMore, setHasMore] = useState(initialHasMore);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -78,11 +79,10 @@ export default function CatalogExplorer({
 
       const res = await fetch(`${base}/products?${params.toString()}`);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = (await res.json()) as { items: StorefrontProduct[]; total: number; hasMore: boolean };
+      const data = (await res.json()) as { items: StorefrontProduct[]; hasMore: boolean };
 
       if (thisRequest !== requestId.current) return; // respuesta obsoleta (el usuario ya cambio el filtro)
       setItems((prev) => (replace ? data.items : [...prev, ...data.items]));
-      setTotal(data.total);
       setHasMore(data.hasMore);
       setPage(targetPage);
     } catch {
@@ -109,13 +109,12 @@ export default function CatalogExplorer({
       fetch(`${base}/brands?category=${encodeURIComponent(categorySlug)}`, { signal: controller.signal }).then((r) => (r.ok ? r.json() : null)),
     ])
       .then(([productos, marcas]: [
-        { items: StorefrontProduct[]; total: number; hasMore: boolean } | null,
+        { items: StorefrontProduct[]; hasMore: boolean } | null,
         { brands: PublicBrandSummary[] } | null,
       ]) => {
         if (thisRequest !== requestId.current) return; // el visitante ya filtro
         if (productos && Array.isArray(productos.items)) {
           setItems(productos.items);
-          setTotal(productos.total);
           setHasMore(productos.hasMore);
           setPage(1);
         }
@@ -161,7 +160,7 @@ export default function CatalogExplorer({
               <option value="">Todas las marcas</option>
               {brands.map((b) => (
                 <option key={b.name} value={b.name}>
-                  {b.name} ({b.count})
+                  {b.name}
                 </option>
               ))}
             </select>
@@ -174,7 +173,7 @@ export default function CatalogExplorer({
               aria-label="Buscar producto"
             />
           </div>
-          <p className="text-sm text-ink-muted">{total.toLocaleString("es-EC")} productos</p>
+
         </div>
       )}
 
@@ -224,7 +223,7 @@ export default function CatalogExplorer({
                 <p className="text-xs font-semibold uppercase tracking-[0.15em] text-primary-700">{item.brand}</p>
               )}
               <h3 className="font-display text-lg leading-snug text-primary-900">{item.name}</h3>
-              <p className="mt-1 text-xl font-semibold text-ink">{priceLabel(item.publicPrice)}</p>
+              <p className="mt-1 text-xl font-semibold text-ink" data-precio>{priceLabel(showPrices ? item.publicPrice : null)}</p>
               <a
                 href={whatsappLink(
                   `Hola, quisiera consultar sobre: ${item.name}${item.code ? ` (Cód: ${item.code})` : ""}`

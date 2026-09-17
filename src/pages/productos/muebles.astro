@@ -8,8 +8,13 @@ import { breadcrumbSchema, faqSchema } from "../../lib/structured-data";
 import { siteConfig } from "../../lib/site-config";
 import { getProductsByCategory } from "../../lib/products";
 import type { Product } from "../../types/product";
+import CategoryHighlights from "../../components/CategoryHighlights.tsx";
+import { storefrontBaseUrl } from "../../lib/storefront-config";
+import { getEntry } from "astro:content";
+import { PRECIO_OCULTO, showPrices } from "../../lib/price-visibility";
 
 const products = await getProductsByCategory("muebles");
+const storefrontEntry = await getEntry("storefrontCatalog", "muebles");
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "../../assets/products/muebles/*.{jpg,jpeg,png,webp}",
@@ -23,6 +28,7 @@ function imageFor(filename: string): ImageMetadata {
 }
 
 function priceLabel(product: Product): string {
+  if (!showPrices) return PRECIO_OCULTO;
   if (product.price === undefined) return "Consultar precio";
   const isWhole = Number.isInteger(product.price);
   return `$${product.price.toFixed(isWhole ? 0 : 2)}`;
@@ -104,6 +110,14 @@ const faqLd = faqSchema(faqs);
     </p>
     <WhatsAppCTA label="Consultar por WhatsApp" pulse class="mt-8" message="Hola, quisiera consultar sobre muebles para mi salón" source="category" pageType="category" category="muebles" ctaLocation="hero" />
   </section>
+
+  <CategoryHighlights
+    client:load
+    apiBaseUrl={storefrontBaseUrl() ?? ""}
+    categorySlug="muebles"
+    categoryLabel="Muebles"
+    initialItems={storefrontEntry?.data.highlights ?? []}
+  />
 
   <nav aria-label="Categorías de muebles" class="px-6 pb-4">
     <ul class="mx-auto flex max-w-6xl flex-wrap justify-center gap-3">

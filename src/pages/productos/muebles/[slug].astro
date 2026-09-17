@@ -10,6 +10,7 @@ import { breadcrumbSchema, productSchema } from "../../../lib/structured-data";
 import { siteConfig } from "../../../lib/site-config";
 import { getProductsByCategory } from "../../../lib/products";
 import type { Product } from "../../../types/product";
+import { PRECIO_OCULTO, showPrices } from "../../../lib/price-visibility";
 
 // `getStaticPaths` runs in module scope at build time, separate from the rest of this
 // frontmatter (which runs per-render) — it can't close over a `const` declared out here,
@@ -43,6 +44,7 @@ function imageFor(filename: string): ImageMetadata {
 }
 
 function priceLabel(p: Product): string {
+  if (!showPrices) return PRECIO_OCULTO;
   if (p.price === undefined) return "Consultar precio";
   const isWhole = Number.isInteger(p.price);
   return `$${p.price.toFixed(isWhole ? 0 : 2)}`;

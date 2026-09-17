@@ -1,5 +1,6 @@
 import { siteConfig } from "./site-config";
 import type { Product } from "../types/product";
+import { showPrices } from "./price-visibility";
 
 export function organizationSchema() {
   return {
@@ -108,7 +109,7 @@ export function productSchema(product: Product, pageUrl: string, imageUrl: strin
 
   // Solo se declara `offers` cuando hay un precio real conocido — nunca se inventa
   // disponibilidad ni condición del artículo (ver DATA_CONFLICTS.md / MASTER_PLAN.md).
-  if (product.price !== undefined) {
+  if (product.price !== undefined && showPrices) {
     schema.offers = {
       "@type": "Offer",
       url: pageUrl,

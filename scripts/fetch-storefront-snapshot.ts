@@ -37,19 +37,16 @@ interface PublicCategorySummary {
   description: string | null;
   imageUrl: string | null;
   featured: boolean;
-  productCount: number;
 }
 
 interface PublicBrandSummary {
   name: string;
-  count: number;
 }
 
 interface ListProductsResult {
   items: unknown[];
   page: number;
   limit: number;
-  total: number;
   hasMore: boolean;
 }
 
@@ -94,11 +91,14 @@ async function main() {
 
   for (const category of categories) {
     try {
-      const [brandsData, productsData] = await Promise.all([
+      const [brandsData, productsData, highlightsData] = await Promise.all([
         fetchJson<{ brands: PublicBrandSummary[] }>(`${base}/brands?category=${encodeURIComponent(category.slug)}`),
         fetchJson<ListProductsResult>(
           `${base}/products?category=${encodeURIComponent(category.slug)}&limit=${FIRST_PAGE_LIMIT}&page=1`
         ),
+        fetchJson<ListProductsResult>(
+          `${base}/products?category=${encodeURIComponent(category.slug)}&source=channel&limit=8&page=1`
+        ).catch(() => ({ items: [], page: 1, limit: 8, hasMore: false })),
       ]);
 
       const snapshot = {
@@ -106,10 +106,10 @@ async function main() {
         categoryLabel: category.label,
         description: category.description,
         featured: category.featured,
-        productCount: category.productCount,
-        brands: brandsData.brands,
+        brands: brandsData.brands.map((b) => ({ name: b.name })),
         firstPage: productsData.items,
-        firstPageTotal: productsData.total,
+        firstPageHasMore: productsData.hasMore,
+        highlights: highlightsData.items,
         fetchedAt,
       };
 

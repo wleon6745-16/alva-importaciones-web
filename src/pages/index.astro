@@ -14,6 +14,7 @@ import { categories as categoryMeta } from "../lib/categories";
 import { categoryImages } from "../lib/category-images";
 import { getOmviqaHome } from "../lib/omviqa-home";
 import NewProducts from "../components/NewProducts.tsx";
+import { PRECIO_OCULTO, showPrices } from "../lib/price-visibility";
 import { getNewProducts, NEW_PRODUCTS_LIMIT } from "../lib/new-products";
 import { storefrontBaseUrl } from "../lib/storefront-config";
 
@@ -196,7 +197,7 @@ const newProducts = omviqaHome ? [] : await getNewProducts(NEW_PRODUCTS_LIMIT);
                 <a href={`/productos/muebles/${m.slug}/`} class="font-display text-lg text-primary-800 hover:text-primary-600">
                   {m.name}
                 </a>
-                <p class="text-lg font-semibold text-ink">{m.price}</p>
+                <p class="text-lg font-semibold text-ink" data-precio>{showPrices ? m.price : PRECIO_OCULTO}</p>
                 <WhatsAppCTA
                   label="Consultar"
                   class="mt-1 w-fit !px-4 !py-2 text-sm"

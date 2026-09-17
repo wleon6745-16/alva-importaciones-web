@@ -17,7 +17,9 @@ import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
 import CategoryClosingCTA from "../../components/CategoryClosingCTA.astro";
 import CatalogExplorer from "../../components/CatalogExplorer.tsx";
 import { breadcrumbSchema } from "../../lib/structured-data";
-import { storefrontApiUrl, storefrontChannelId } from "../../lib/storefront-config";
+import { storefrontApiUrl, storefrontBaseUrl, storefrontChannelId } from "../../lib/storefront-config";
+import CategoryHighlights from "../../components/CategoryHighlights.tsx";
+import { hasMoreProducts } from "../../lib/storefront-snapshot";
 
 export async function getStaticPaths() {
   const curatedSlugs = new Set(["muebles", "unas", "capilares", "maquillaje"]);
@@ -28,8 +30,8 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { categoryLabel, categorySlug, description, productCount, brands, firstPage, firstPageTotal } = entry.data;
-const hasMore = firstPageTotal > firstPage.length;
+const { categoryLabel, categorySlug, description, brands, firstPage, highlights } = entry.data;
+const hasMore = hasMoreProducts(entry.data);
 
 const breadcrumbs = breadcrumbSchema([
   { name: "Inicio", path: "/" },
@@ -40,7 +42,7 @@ const breadcrumbs = breadcrumbSchema([
 
 <BaseLayout
   title={categoryLabel}
-  description={description ?? `${categoryLabel} — catálogo real de Alva Importaciones, Portoviejo. Precio público, consulta disponibilidad por WhatsApp.`}
+  description={description ?? `${categoryLabel} — productos profesionales en Alva Importaciones, Portoviejo. Consúltanos por WhatsApp.`}
   path={`/productos/${categorySlug}`}
   structuredData={[breadcrumbs]}
 >
@@ -48,8 +50,7 @@ const breadcrumbs = breadcrumbSchema([
     <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Categoría</p>
     <h1 class="mt-4 font-display text-4xl text-primary-900">{categoryLabel}</h1>
     <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-muted">
-      Catálogo real — {productCount.toLocaleString("es-EC")} productos con precio público. Disponibilidad exacta por
-      WhatsApp.
+      Productos profesionales para tu salón. Escríbenos por WhatsApp y te asesoramos.
     </p>
     <WhatsAppCTA
       label="Consultar por WhatsApp"
@@ -63,6 +64,14 @@ const breadcrumbs = breadcrumbSchema([
     />
   </section>
 
+  <CategoryHighlights
+    client:load
+    apiBaseUrl={storefrontBaseUrl() ?? ""}
+    categorySlug={categorySlug}
+    categoryLabel={categoryLabel}
+    initialItems={highlights ?? []}
+  />
+
   <SectionReveal as="section" class="px-6 py-16">
     <div class="mx-auto max-w-6xl">
       <CatalogExplorer
@@ -72,7 +81,7 @@ const breadcrumbs = breadcrumbSchema([
         categorySlug={categorySlug}
         initialItems={firstPage}
         initialBrands={brands}
-        initialTotal={firstPageTotal}
+        initialTotal={0}
         initialHasMore={hasMore}
       />
     </div>

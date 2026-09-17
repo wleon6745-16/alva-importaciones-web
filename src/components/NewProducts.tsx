@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { whatsappLink } from "../lib/site-config";
+import { useShowPrices } from "../lib/use-price-visibility";
 import type { NewProductItem } from "../lib/new-products";
 
 // "Productos nuevos" del Home.
@@ -27,6 +28,7 @@ function precio(item: NewProductItem): string | null {
 
 export default function NewProducts({ apiBaseUrl, initialItems, limit, eyebrow = "Recién llegados", title = "Productos nuevos" }: Props) {
   const [items, setItems] = useState<NewProductItem[]>(initialItems);
+  const showPrices = useShowPrices(apiBaseUrl);
 
   useEffect(() => {
     if (!apiBaseUrl) return;
@@ -54,7 +56,7 @@ export default function NewProducts({ apiBaseUrl, initialItems, limit, eyebrow =
           {items.map((item) => {
             const categoria = item.product?.category ?? null;
             const destino = categoria ? `/productos/${categoria.slug}` : null;
-            const valor = precio(item);
+            const valor = showPrices ? precio(item) : null;
             return (
               <li key={item.id} className="glass-card group flex flex-col overflow-hidden rounded-2xl shadow-md">
                 <div className="relative aspect-[4/5] overflow-hidden bg-white">
@@ -76,7 +78,7 @@ export default function NewProducts({ apiBaseUrl, initialItems, limit, eyebrow =
                   ) : (
                     <p className="font-display text-base leading-snug text-primary-800">{item.title}</p>
                   )}
-                  {valor && <p className="text-lg font-semibold text-ink">{valor}</p>}
+                  {valor && <p className="text-lg font-semibold text-ink" data-precio>{valor}</p>}
                   <a
                     href={whatsappLink(`Hola, quisiera consultar sobre: ${item.title}`)}
                     target="_blank"

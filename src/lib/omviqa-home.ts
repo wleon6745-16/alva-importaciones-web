@@ -27,7 +27,8 @@ export interface OmviqaHomeCategory {
   description: string | null;
   imageUrl: string | null;
   featured: boolean;
-  productCount: number;
+  /** Ya no lo envia la API publica (no se filtran cifras del catalogo). */
+  productCount?: number;
 }
 
 export interface OmviqaHomeResponse {

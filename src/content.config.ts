@@ -96,10 +96,16 @@ const storefrontCatalog = defineCollection({
     categoryLabel: z.string(),
     description: z.string().nullable(),
     featured: z.boolean(),
-    productCount: z.number(),
-    brands: z.array(z.object({ name: z.string(), count: z.number() })),
+    // Las cifras (cuantos productos, cuantos por marca) ya no se guardan: la
+    // API publica no las entrega. Quedan opcionales solo para leer
+    // instantaneas antiguas.
+    productCount: z.number().optional(),
+    brands: z.array(z.object({ name: z.string(), count: z.number().optional() })),
     firstPage: z.array(storefrontProduct),
-    firstPageTotal: z.number(),
+    firstPageTotal: z.number().optional(),
+    firstPageHasMore: z.boolean().optional(),
+    /** Productos con foto del canal de Telegram, para los destacados. */
+    highlights: z.array(storefrontProduct).optional(),
     fetchedAt: z.string(),
   }),
 });

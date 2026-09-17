@@ -9,8 +9,11 @@ import { breadcrumbSchema } from "../../lib/structured-data";
 import { siteConfig } from "../../lib/site-config";
 import { getProductsByCategory } from "../../lib/products";
 import { getEntry } from "astro:content";
-import { storefrontApiUrl, storefrontChannelId } from "../../lib/storefront-config";
+import { storefrontApiUrl, storefrontBaseUrl, storefrontChannelId } from "../../lib/storefront-config";
+import CategoryHighlights from "../../components/CategoryHighlights.tsx";
+import { hasMoreProducts } from "../../lib/storefront-snapshot";
 import type { Product } from "../../types/product";
+import { PRECIO_OCULTO, showPrices } from "../../lib/price-visibility";
 
 const CATEGORY_SLUG = "capilares";
 const products = await getProductsByCategory("capilares");
@@ -21,7 +24,7 @@ const fullCatalogItems = (storefrontEntry?.data.firstPage ?? []).filter(
   (item) => !item.code || !curatedCodes.has(item.code)
 );
 const fullCatalogHasMore = Boolean(
-  storefrontEntry && storefrontEntry.data.firstPageTotal > storefrontEntry.data.firstPage.length
+  storefrontEntry && hasMoreProducts(storefrontEntry.data)
 );
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
@@ -35,6 +38,7 @@ function imageFor(filename: string): ImageMetadata {
 }
 
 function priceLabel(product: Product): string {
+  if (!showPrices) return PRECIO_OCULTO;
   if (product.price === undefined) return "Consultar precio";
   const isWhole = Number.isInteger(product.price);
   return `$${product.price.toFixed(isWhole ? 0 : 2)}`;
@@ -74,6 +78,14 @@ const breadcrumbs = breadcrumbSchema([
     <WhatsAppCTA label="Consultar por WhatsApp" pulse class="mt-8" message="Hola, quisiera consultar sobre productos capilares" source="category" pageType="category" category="capilares" ctaLocation="hero" />
   </section>
 
+  <CategoryHighlights
+    client:load
+    apiBaseUrl={storefrontBaseUrl() ?? ""}
+    categorySlug="capilares"
+    categoryLabel="Capilares"
+    initialItems={storefrontEntry?.data.highlights ?? []}
+  />
+
   {
     sections.map((section) => (
       <SectionReveal as="section" id={section.subcategory} class="scroll-mt-24 px-6 py-16">
@@ -106,8 +118,7 @@ const breadcrumbs = breadcrumbSchema([
         <div class="mx-auto max-w-6xl">
           <h2 class="font-display text-3xl text-primary-900">Todo el catálogo Capilar</h2>
           <p class="mt-2 max-w-2xl text-ink-muted">
-            Además de nuestra selección destacada, este es el catálogo completo real —{" "}
-            {storefrontEntry.data.productCount.toLocaleString("es-EC")} productos con precio público.
+            Además de nuestra selección destacada, aquí puedes explorar el resto de la categoría.
           </p>
           <div class="mt-8">
             <CatalogExplorer
@@ -117,7 +128,7 @@ const breadcrumbs = breadcrumbSchema([
               categorySlug={CATEGORY_SLUG}
               initialItems={fullCatalogItems}
               initialBrands={storefrontEntry.data.brands}
-              initialTotal={storefrontEntry.data.firstPageTotal}
+              initialTotal={0}
               initialHasMore={fullCatalogHasMore}
             />
           </div>

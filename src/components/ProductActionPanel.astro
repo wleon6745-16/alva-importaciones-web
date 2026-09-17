@@ -21,7 +21,7 @@ const { eyebrow, name, priceLabel, brand, code, features, whatsappMessage, produ
 <div class="flex flex-col gap-4">
   <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-700">{eyebrow}</p>
   <h1 class="text-display-md text-primary-900">{name}</h1>
-  <p class="text-2xl font-semibold text-ink">{priceLabel}</p>
+  <p class="text-2xl font-semibold text-ink" data-precio>{priceLabel}</p>
   {brand && <p class="text-sm text-ink-muted">Marca: {brand}</p>}
   {code && <p class="text-sm text-ink-muted">Código: {code}</p>}
   {
