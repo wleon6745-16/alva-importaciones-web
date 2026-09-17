@@ -54,7 +54,14 @@ const newProducts = omviqaHome ? [] : await getNewProducts(NEW_PRODUCTS_LIMIT);
 ---
 
 <BaseLayout title={siteConfig.name} description={siteConfig.description} path="/">
-  {omviqaHome ? <OmviqaHome home={omviqaHome} /> : (
+  {omviqaHome ? (
+  <>
+    <OmviqaHome home={omviqaHome} />
+    <SectionReveal as="section" class="section-y px-6">
+      <PromoShowcase />
+    </SectionReveal>
+  </>
+  ) : (
   <>
   <section class="relative overflow-hidden bg-primary-900">
     <div

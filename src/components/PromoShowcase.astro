@@ -1,91 +1,49 @@
 ---
-// Muestra de campañas comerciales reales, curadas a mano desde el canal de Telegram del
-// negocio (ver docs/CONTENT_WORKFLOW.md para el criterio de selección y cómo actualizar esta
-// sección sin tocar código).
+// Bloque de promociones del Home.
 //
-// Importante: estas son promociones YA PUBLICADAS en el pasado, no ofertas vigentes hoy — por
-// eso el encabezado dice "así son nuestras promociones" y no "promociones de esta semana". El
-// CTA principal de la sección manda a los canales donde sí se anuncian las promociones activas.
-import { Image } from "astro:assets";
+// La fuente es Omviqa: ALVA crea, edita, ordena y apaga sus promociones desde
+// el panel (/admin → Sitio web → Promociones). Las fichas de src/content/promos
+// quedan solo como respaldo, para un build sin conexion a Omviqa o antes de
+// que haya promociones publicadas alli.
+import { getImage } from "astro:assets";
 import { getCollection } from "astro:content";
+import PromotionsShowcase, { vigentes, type PromotionCard } from "./PromotionsShowcase.tsx";
 import { siteConfig } from "../lib/site-config";
+import { storefrontBaseUrl } from "../lib/storefront-config";
+import { getOmviqaEditorial, type OmviqaPromotion } from "../lib/omviqa-editorial";
 
-const promoEntries = (await getCollection("promos")).sort((a, b) => a.data.order - b.data.order);
+const WHATSAPP_CHANNEL = "https://whatsapp.com/channel/0029Vb6jnkrCRs1qmefXm93r";
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "../assets/products/{muebles,unas,capilares,maquillaje}/*.{jpg,jpeg,png,webp}",
   { eager: true },
 );
 
-function imageFor(category: string, filename: string): ImageMetadata {
-  const entry = images[`../assets/products/${category}/${filename}`];
-  if (!entry) throw new Error(`Imagen no encontrada para promo: ${category}/${filename}`);
-  return entry.default;
+async function respaldo(): Promise<PromotionCard[]> {
+  const entries = (await getCollection("promos")).sort((a, b) => a.data.order - b.data.order);
+  return Promise.all(
+    entries.map(async (entry) => {
+      const asset = images[`../assets/products/${entry.data.imageCategory}/${entry.data.image}`];
+      const image = asset ? await getImage({ src: asset.default, width: 400, height: 400 }) : null;
+      return {
+        key: entry.id,
+        title: entry.data.label,
+        body: entry.data.body,
+        imageUrl: image?.src ?? null,
+        imageAlt: entry.data.imageAlt,
+      };
+    }),
+  );
 }
 
-const promos = promoEntries.map((entry) => ({
-  ...entry.data,
-  imageAsset: imageFor(entry.data.imageCategory, entry.data.image),
-}));
+const publicadas = await getOmviqaEditorial<OmviqaPromotion>("promotion");
+const initialItems = publicadas ? vigentes({ collection: publicadas }) : await respaldo();
 ---
 
-<div class="mx-auto max-w-6xl">
-  <p class="text-center text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Así son nuestras promociones</p>
-  <h2 class="mt-2 text-center font-display text-3xl text-primary-900 sm:text-4xl">Combos y campañas reales</h2>
-  <p class="mx-auto mt-3 max-w-2xl text-center text-ink-muted">
-    Una muestra de campañas que hemos compartido con nuestra comunidad. Las promociones cambian
-    seguido — síguenos para no perderte las que están activas ahora mismo.
-  </p>
-
-  <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-    {
-      promos.map((promo) => (
-        <div
-          class="glass-card group flex flex-col overflow-hidden rounded-2xl shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
-          data-track-view-event="view_promotion"
-          data-track-view-promotion-label={promo.label}
-        >
-          <div class="aspect-square overflow-hidden bg-white">
-            <Image
-              src={promo.imageAsset}
-              alt={promo.imageAlt}
-              width={400}
-              height={400}
-              loading="lazy"
-              class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
-            />
-          </div>
-          <div class="flex flex-1 flex-col gap-1 p-4">
-            <p class="font-display text-base text-primary-900">{promo.label}</p>
-            <p class="text-sm text-ink-muted">{promo.body}</p>
-          </div>
-        </div>
-      ))
-    }
-  </div>
-
-  <div class="mt-10 flex flex-wrap justify-center gap-4">
-    <a
-      href="https://whatsapp.com/channel/0029Vb6jnkrCRs1qmefXm93r"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex items-center gap-2 rounded-full bg-primary-800 px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-primary-700"
-      data-track-event="click_social"
-      data-track-platform="whatsapp_channel"
-      data-track-source="promotions"
-    >
-      Seguir canal de WhatsApp →
-    </a>
-    <a
-      href={siteConfig.instagram}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex items-center gap-2 rounded-full border-2 border-primary-800 px-6 py-3 font-semibold text-primary-800 transition-transform hover:scale-105 hover:bg-primary-800 hover:text-white"
-      data-track-event="click_social"
-      data-track-platform="instagram"
-      data-track-source="promotions"
-    >
-      Seguir en Instagram →
-    </a>
-  </div>
-</div>
+<PromotionsShowcase
+  client:load
+  apiBaseUrl={storefrontBaseUrl() ?? ""}
+  initialItems={initialItems}
+  whatsappChannelUrl={WHATSAPP_CHANNEL}
+  instagramUrl={siteConfig.instagram}
+/>
