@@ -3,19 +3,12 @@
   "categoryLabel": "Muebles",
   "description": null,
   "featured": true,
-  "productCount": 47,
   "brands": [
     {
-      "name": "SILETI",
-      "count": 7
+      "name": "DELUXE"
     },
     {
-      "name": "DELUXE",
-      "count": 3
-    },
-    {
-      "name": "SISTEMA",
-      "count": 1
+      "name": "SILETI"
     }
   ],
   "firstPage": [
@@ -32,23 +25,7 @@
       "brand": null,
       "publicPrice": 95,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "a3d48dce-9caf-447e-b988-815233b5781e",
-      "code": "10401",
-      "name": "BUTACA GIRONA",
-      "slug": "butaca-girona-10401",
-      "category": {
-        "slug": "muebles",
-        "label": "Muebles"
-      },
-      "subcategory": "BUTACA",
-      "brand": null,
-      "publicPrice": 220,
-      "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-e5c4c7ab57afcc32.jpg",
       "shortDescription": null
     },
     {
@@ -64,23 +41,7 @@
       "brand": null,
       "publicPrice": 78,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "cc788efc-385d-47fd-9b14-3d4393ac253f",
-      "code": "10402",
-      "name": "BUTACA MARCELLA PATAS DORADAS",
-      "slug": "butaca-marcella-patas-doradas-10402",
-      "category": {
-        "slug": "muebles",
-        "label": "Muebles"
-      },
-      "subcategory": "BUTACA",
-      "brand": null,
-      "publicPrice": 90,
-      "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-de40da0a7ae2b41c.jpg",
       "shortDescription": null
     },
     {
@@ -96,7 +57,7 @@
       "brand": null,
       "publicPrice": 220,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-8680867d7d82c8da.jpg",
       "shortDescription": null
     },
     {
@@ -112,7 +73,7 @@
       "brand": null,
       "publicPrice": 175,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-acb3a472cf197c97.jpg",
       "shortDescription": null
     },
     {
@@ -128,23 +89,7 @@
       "brand": null,
       "publicPrice": 80,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "781bf1ce-d569-4c8c-b08f-24c56e85442e",
-      "code": "10353",
-      "name": "LAMPARA LUCES LED MA-310",
-      "slug": "lampara-luces-led-ma-310-10353",
-      "category": {
-        "slug": "muebles",
-        "label": "Muebles"
-      },
-      "subcategory": "SILLAS LASHISTA",
-      "brand": null,
-      "publicPrice": 120,
-      "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-6be0d21953f83267.jpg",
       "shortDescription": null
     },
     {
@@ -177,22 +122,6 @@
       "publicPrice": 350,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10392.jpeg",
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "8cfd4536-e918-4d13-8e85-fa749628b872",
-      "code": "10430",
-      "name": "MESA DE MANICURE MAS PUF Y REPOSA MANOS",
-      "slug": "mesa-de-manicure-mas-puf-y-reposa-manos-10430",
-      "category": {
-        "slug": "muebles",
-        "label": "Muebles"
-      },
-      "subcategory": "MESA",
-      "brand": null,
-      "publicPrice": 170,
-      "currency": "USD",
-      "imageUrl": null,
       "shortDescription": null
     },
     {
@@ -256,7 +185,7 @@
       "brand": null,
       "publicPrice": 230,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-6c26e0b79c505019.jpg",
       "shortDescription": null
     },
     {
@@ -304,39 +233,7 @@
       "brand": "SILETI",
       "publicPrice": 240,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "a4e802c4-459c-4c27-a763-0b2c14823179",
-      "code": "11321",
-      "name": "SILETI CARRITO ORGANIZADOR NEGRO 3 CAJONES Y BASE ST-8035",
-      "slug": "sileti-carrito-organizador-negro-3-cajones-y-base-st-8035-11321",
-      "category": {
-        "slug": "muebles",
-        "label": "Muebles"
-      },
-      "subcategory": "BUTACA",
-      "brand": "SISTEMA",
-      "publicPrice": 52,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "744c6c08-6f78-4cf6-9517-c6ca86222490",
-      "code": "11003",
-      "name": "SILETI SILLA PELUQUERIA NEGRO 2214 ST-2214",
-      "slug": "sileti-silla-peluqueria-negro-2214-st-2214-11003",
-      "category": {
-        "slug": "muebles",
-        "label": "Muebles"
-      },
-      "subcategory": "SILLA",
-      "brand": "SILETI",
-      "publicPrice": 215,
-      "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-9a9897885705502a.jpg",
       "shortDescription": null
     },
     {
@@ -352,23 +249,7 @@
       "brand": "SILETI",
       "publicPrice": 115,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "3802d7ea-3b38-4f48-8aa3-2875b0f3be9f",
-      "code": "10405",
-      "name": "SILLA BASHA PATAS NEGRAS",
-      "slug": "silla-basha-patas-negras-10405",
-      "category": {
-        "slug": "muebles",
-        "label": "Muebles"
-      },
-      "subcategory": "SILLA",
-      "brand": null,
-      "publicPrice": 80,
-      "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-f42035265f6eeb7e.jpg",
       "shortDescription": null
     },
     {
@@ -384,7 +265,7 @@
       "brand": null,
       "publicPrice": 85,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-663ee5a3c5aa4a25.jpg",
       "shortDescription": null
     },
     {
@@ -402,8 +283,250 @@
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10795.jpeg",
       "shortDescription": null
+    },
+    {
+      "publicProductId": "ab79bd29-b8c9-477e-ac69-3cfd57d9a794",
+      "code": "10429",
+      "name": "SILLA CONCHA VARIOS COLORES",
+      "slug": "silla-concha-varios-colores-10429",
+      "category": {
+        "slug": "muebles",
+        "label": "Muebles"
+      },
+      "subcategory": "SILLA",
+      "brand": null,
+      "publicPrice": 135,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10429.jpeg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "2b4977b7-05f8-4f3e-a7e2-a494d57a8772",
+      "code": "10411",
+      "name": "SILLA ESTELA",
+      "slug": "silla-estela-10411",
+      "category": {
+        "slug": "muebles",
+        "label": "Muebles"
+      },
+      "subcategory": "SILLA",
+      "brand": null,
+      "publicPrice": 45,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-1aa8a677293ad61d.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "873ee86a-1403-4f5c-85d5-6bcda809f4d4",
+      "code": "10794",
+      "name": "SILLA GIRASOL CON RUEDA",
+      "slug": "silla-girasol-con-rueda-10794",
+      "category": {
+        "slug": "muebles",
+        "label": "Muebles"
+      },
+      "subcategory": "SILLA GIRATORIA",
+      "brand": null,
+      "publicPrice": 185,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-e9b0a7d87d709b15.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "78ad6017-b846-4f8f-891f-fcf0e7d9c58c",
+      "code": "10171",
+      "name": "SILLA GIRATORIA DELUXE CON RESPALDAR AMOBLADO MZE141",
+      "slug": "silla-giratoria-deluxe-con-respaldar-amoblado-mze141-10171",
+      "category": {
+        "slug": "muebles",
+        "label": "Muebles"
+      },
+      "subcategory": "SILLA",
+      "brand": "DELUXE",
+      "publicPrice": 49.9,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-2bb0f7311aff34dc.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "06447540-f6cf-4045-a8fd-e93fc2c8ea73",
+      "code": "10911",
+      "name": "SILLA GIRATORIA DELUXE CON RESPALDAR PARA MAQUILLAJE MZE238",
+      "slug": "silla-giratoria-deluxe-con-respaldar-para-maquillaje-mze238-10911",
+      "category": {
+        "slug": "muebles",
+        "label": "Muebles"
+      },
+      "subcategory": "SILLA",
+      "brand": null,
+      "publicPrice": 77,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-2ac1bbe1aa0eeba5.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "e0a41c09-4f40-4dfc-adcb-d6fce3002ee5",
+      "code": "10173",
+      "name": "SILLA GIRATORIA DELUXE CUERO CON RESPALDAR MZE139",
+      "slug": "silla-giratoria-deluxe-cuero-con-respaldar-mze139-10173",
+      "category": {
+        "slug": "muebles",
+        "label": "Muebles"
+      },
+      "subcategory": "SILLA",
+      "brand": "DELUXE",
+      "publicPrice": 42,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10173.jpeg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "77989f26-80c6-4985-8118-bdb5c9b51a39",
+      "code": "10172",
+      "name": "SILLA GIRATORIA DELUXE SIN RESPALDAR CUERO LASHISTAS MZE140",
+      "slug": "silla-giratoria-deluxe-sin-respaldar-cuero-lashistas-mze140-10172",
+      "category": {
+        "slug": "muebles",
+        "label": "Muebles"
+      },
+      "subcategory": "SILLA",
+      "brand": "DELUXE",
+      "publicPrice": 35,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10172.jpeg",
+      "shortDescription": null
     }
   ],
-  "firstPageTotal": 47,
-  "fetchedAt": "2026-08-19T14:26:25.583Z"
+  "firstPageHasMore": true,
+  "highlights": [
+    {
+      "publicProductId": "00a7ded8-f629-4ae4-8e3d-09edd9244571",
+      "code": "10362",
+      "name": "SILETI  SILLA PELUQUERIA EXAGONAL NEGRO 2000-1 ST-2000-1",
+      "slug": "sileti-silla-peluqueria-exagonal-negro-2000-1-st-2000-1-10362",
+      "category": {
+        "slug": "muebles",
+        "label": "Muebles"
+      },
+      "subcategory": "SILLA GIRATORIA",
+      "brand": "SILETI",
+      "publicPrice": 240,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-9a9897885705502a.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "78ad6017-b846-4f8f-891f-fcf0e7d9c58c",
+      "code": "10171",
+      "name": "SILLA GIRATORIA DELUXE CON RESPALDAR AMOBLADO MZE141",
+      "slug": "silla-giratoria-deluxe-con-respaldar-amoblado-mze141-10171",
+      "category": {
+        "slug": "muebles",
+        "label": "Muebles"
+      },
+      "subcategory": "SILLA",
+      "brand": "DELUXE",
+      "publicPrice": 49.9,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-2bb0f7311aff34dc.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "37c88f85-ac26-43de-9abb-98acf6929370",
+      "code": "11391",
+      "name": "SILLON HIDRAULICO DE BARBERO DORADO 360 MZE299",
+      "slug": "sillon-hidraulico-de-barbero-dorado-360-mze299-11391",
+      "category": {
+        "slug": "muebles",
+        "label": "Muebles"
+      },
+      "subcategory": "SILLA GIRATORIA",
+      "brand": null,
+      "publicPrice": 348,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-3acb998c6bb8fe42.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "47370442-5ae9-4e5d-bf17-71ba914c7ee0",
+      "code": "11390",
+      "name": "SILLON HIDRAULICO DE PELUQUERIA DORADO RAYAS 360 MZE287",
+      "slug": "sillon-hidraulico-de-peluqueria-dorado-rayas-360-mze287-11390",
+      "category": {
+        "slug": "muebles",
+        "label": "Muebles"
+      },
+      "subcategory": "SILLA GIRATORIA",
+      "brand": null,
+      "publicPrice": 185,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-f605ef5e843adce6.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "06447540-f6cf-4045-a8fd-e93fc2c8ea73",
+      "code": "10911",
+      "name": "SILLA GIRATORIA DELUXE CON RESPALDAR PARA MAQUILLAJE MZE238",
+      "slug": "silla-giratoria-deluxe-con-respaldar-para-maquillaje-mze238-10911",
+      "category": {
+        "slug": "muebles",
+        "label": "Muebles"
+      },
+      "subcategory": "SILLA",
+      "brand": null,
+      "publicPrice": 77,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-2ac1bbe1aa0eeba5.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "c49c56fa-b75a-4036-bc25-4d7f2b954aed",
+      "code": "10398",
+      "name": "TABURETE TOP PARA LASHISTA PATAS DORADA",
+      "slug": "taburete-top-para-lashista-patas-dorada-10398",
+      "category": {
+        "slug": "muebles",
+        "label": "Muebles"
+      },
+      "subcategory": "SILLA GIRATORIA",
+      "brand": null,
+      "publicPrice": 84.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-64548677a3d44e05.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "490a7373-1f76-4e57-b170-8072430b449f",
+      "code": "10793",
+      "name": "BUTACA REFORZADA",
+      "slug": "butaca-reforzada-10793",
+      "category": {
+        "slug": "muebles",
+        "label": "Muebles"
+      },
+      "subcategory": "BUTACA",
+      "brand": null,
+      "publicPrice": 175,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-acb3a472cf197c97.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "873ee86a-1403-4f5c-85d5-6bcda809f4d4",
+      "code": "10794",
+      "name": "SILLA GIRASOL CON RUEDA",
+      "slug": "silla-girasol-con-rueda-10794",
+      "category": {
+        "slug": "muebles",
+        "label": "Muebles"
+      },
+      "subcategory": "SILLA GIRATORIA",
+      "brand": null,
+      "publicPrice": 185,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-e9b0a7d87d709b15.jpg",
+      "shortDescription": null
+    }
+  ],
+  "fetchedAt": "2026-09-17T19:06:20.237Z"
 }

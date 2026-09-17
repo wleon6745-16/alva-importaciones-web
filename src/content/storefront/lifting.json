@@ -3,302 +3,54 @@
   "categoryLabel": "Lifting",
   "description": null,
   "featured": false,
-  "productCount": 465,
   "brands": [
     {
-      "name": "GLAM BEAUTY",
-      "count": 88
+      "name": "AMY BEAUTY"
     },
     {
-      "name": "NAGARAKU",
-      "count": 24
+      "name": "ESSENCE"
     },
     {
-      "name": "THUYA",
-      "count": 13
+      "name": "GLAM"
     },
     {
-      "name": "GOLLEE",
-      "count": 11
+      "name": "GLAM BEAUTY"
     },
     {
-      "name": "STARS COLORS",
-      "count": 11
+      "name": "GLAM NAILS"
     },
     {
-      "name": "SATINE",
-      "count": 9
+      "name": "GOLLEE"
     },
     {
-      "name": "ESSENCE",
-      "count": 8
+      "name": "GOTAS DE SEDA"
     },
     {
-      "name": "MIA SECRET",
-      "count": 8
+      "name": "J-LASH"
     },
     {
-      "name": "GLAM",
-      "count": 7
+      "name": "LA COLORS"
     },
     {
-      "name": "GLAM NAILS",
-      "count": 6
+      "name": "MAXE"
     },
     {
-      "name": "IB",
-      "count": 6
+      "name": "MIA SECRET"
     },
     {
-      "name": "ICONSIGN",
-      "count": 5
+      "name": "SALON IN"
     },
     {
-      "name": "BELOTTI",
-      "count": 4
+      "name": "SILETI"
     },
     {
-      "name": "PRECIOSA",
-      "count": 4
+      "name": "THUYA"
     },
     {
-      "name": "AMY BEAUTY",
-      "count": 3
-    },
-    {
-      "name": "DUO",
-      "count": 3
-    },
-    {
-      "name": "HENNA",
-      "count": 3
-    },
-    {
-      "name": "J-LASH",
-      "count": 3
-    },
-    {
-      "name": "OHLYVIA",
-      "count": 3
-    },
-    {
-      "name": "ADDICT",
-      "count": 2
-    },
-    {
-      "name": "BARDOT",
-      "count": 2
-    },
-    {
-      "name": "ITALIA",
-      "count": 2
-    },
-    {
-      "name": "LINDA",
-      "count": 2
-    },
-    {
-      "name": "NAILEN",
-      "count": 2
-    },
-    {
-      "name": "REVERS",
-      "count": 2
-    },
-    {
-      "name": "RUBY FACE",
-      "count": 2
-    },
-    {
-      "name": "SEYOR",
-      "count": 2
-    },
-    {
-      "name": "VOGUE",
-      "count": 2
-    },
-    {
-      "name": "ZZAM",
-      "count": 2
-    },
-    {
-      "name": "ABELLA",
-      "count": 1
-    },
-    {
-      "name": "APPLE",
-      "count": 1
-    },
-    {
-      "name": "ARDELL",
-      "count": 1
-    },
-    {
-      "name": "BEAUTY CREATIONS",
-      "count": 1
-    },
-    {
-      "name": "CLOVER",
-      "count": 1
-    },
-    {
-      "name": "COQUETA",
-      "count": 1
-    },
-    {
-      "name": "E&A",
-      "count": 1
-    },
-    {
-      "name": "FAST&LONG",
-      "count": 1
-    },
-    {
-      "name": "FLORMAR",
-      "count": 1
-    },
-    {
-      "name": "FOUGERA",
-      "count": 1
-    },
-    {
-      "name": "GENERATION",
-      "count": 1
-    },
-    {
-      "name": "GOTAS DE SEDA",
-      "count": 1
-    },
-    {
-      "name": "LA COLORS",
-      "count": 1
-    },
-    {
-      "name": "LADY BLACK",
-      "count": 1
-    },
-    {
-      "name": "MAKE UP PRO",
-      "count": 1
-    },
-    {
-      "name": "MAXE",
-      "count": 1
-    },
-    {
-      "name": "MILANI",
-      "count": 1
-    },
-    {
-      "name": "NATIVA",
-      "count": 1
-    },
-    {
-      "name": "PROLUX",
-      "count": 1
-    },
-    {
-      "name": "SALON IN",
-      "count": 1
-    },
-    {
-      "name": "SALON PRO",
-      "count": 1
-    },
-    {
-      "name": "SILETI",
-      "count": 1
-    },
-    {
-      "name": "SKY ROSE",
-      "count": 1
-    },
-    {
-      "name": "VICKY NAIL",
-      "count": 1
+      "name": "ZZAM"
     }
   ],
   "firstPage": [
-    {
-      "publicProductId": "78375fe0-6ce7-4c0e-8123-6b2f814020a2",
-      "code": "7631",
-      "name": "ACONDICIONADOR DE PESTAÑA NOCHE Y DIA BY APPLE OH MY LASH",
-      "slug": "acondicionador-de-pestana-noche-y-dia-by-apple-oh-my-lash-7631",
-      "category": {
-        "slug": "lifting",
-        "label": "Lifting"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": "APPLE",
-      "publicPrice": 10.35,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "8796ae9b-31bb-4c89-84ca-71535dad5c34",
-      "code": "10534",
-      "name": "ADHESIVO GLAM BEAUTY PARA GOMA DE PESTAÑAS X 300 ZPV 2630",
-      "slug": "adhesivo-glam-beauty-para-goma-de-pestanas-x-300-zpv-2630-10534",
-      "category": {
-        "slug": "lifting",
-        "label": "Lifting"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": "GLAM BEAUTY",
-      "publicPrice": 2,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "185518af-6354-4a0c-982b-fd2a2de8bf0d",
-      "code": "3886",
-      "name": "AEROGRAFO AIRBRUSH SYSTEM  ROHS",
-      "slug": "aerografo-airbrush-system-rohs-3886",
-      "category": {
-        "slug": "lifting",
-        "label": "Lifting"
-      },
-      "subcategory": "MAQUINA DE CORTAR CABELLO",
-      "brand": null,
-      "publicPrice": 35,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "3e4ec904-b0e0-4b73-9ab1-592498655418",
-      "code": "2099",
-      "name": "AGUJA CON PUNZON PARA MICROBLANDING 3P CARTRIDGE",
-      "slug": "aguja-con-punzon-para-microblanding-3p-cartridge-2099",
-      "category": {
-        "slug": "lifting",
-        "label": "Lifting"
-      },
-      "subcategory": "AGUJA",
-      "brand": null,
-      "publicPrice": 1.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "c7b3ab7d-9d9a-498b-bf98-9de9cedfb5d8",
-      "code": "1054",
-      "name": "AGUJA PARA MICROBLANDING VARIOS DISEÑOS",
-      "slug": "aguja-para-microblanding-varios-disenos-1054",
-      "category": {
-        "slug": "lifting",
-        "label": "Lifting"
-      },
-      "subcategory": "AGUJA",
-      "brand": null,
-      "publicPrice": 1,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
     {
       "publicProductId": "d4421cdb-6f50-47e8-a5b6-c32383ab8368",
       "code": "6622",
@@ -312,151 +64,7 @@
       "brand": null,
       "publicPrice": 13,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "43f122d3-c24e-486a-af96-f18f2cf6d8dd",
-      "code": "10162",
-      "name": "ANILLO GLAM BEAUTY PARA PEGAMENTO DE PESTAÑA CRISTAL ZPV25057",
-      "slug": "anillo-glam-beauty-para-pegamento-de-pestana-cristal-zpv25057-10162",
-      "category": {
-        "slug": "lifting",
-        "label": "Lifting"
-      },
-      "subcategory": "PESTAÑAS",
-      "brand": "GLAM BEAUTY",
-      "publicPrice": 2.3,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "a6ece31e-f4e0-414e-bf90-f6ada19ecf6c",
-      "code": "2361",
-      "name": "ANILLO MIA SECRET PARA LIFTING GR-15",
-      "slug": "anillo-mia-secret-para-lifting-gr-15-2361",
-      "category": {
-        "slug": "lifting",
-        "label": "Lifting"
-      },
-      "subcategory": "ANILLO GOMA",
-      "brand": "MIA SECRET",
-      "publicPrice": 1.9,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "5eb305dd-63e7-4f83-b361-e4fd5374c9d5",
-      "code": "8661",
-      "name": "ANILLO PARA GOMA DE LIFTING EN FRASCO DJ02-17",
-      "slug": "anillo-para-goma-de-lifting-en-frasco-dj02-17-8661",
-      "category": {
-        "slug": "lifting",
-        "label": "Lifting"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 2.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "653b1372-9ca1-4a86-a267-0331e327faf7",
-      "code": "2554",
-      "name": "ANILLO PARA GOMA X100 ZPV 2604",
-      "slug": "anillo-para-goma-x100-zpv-2604-2554",
-      "category": {
-        "slug": "lifting",
-        "label": "Lifting"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 1.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "9f5d00ac-ff0c-4bb6-8ddf-c0680deea9f0",
-      "code": "9981",
-      "name": "ANILLO PARA LIFTING PLASTICO FLOR R-ANILLO-C",
-      "slug": "anillo-para-lifting-plastico-flor-r-anillo-c-9981",
-      "category": {
-        "slug": "lifting",
-        "label": "Lifting"
-      },
-      "subcategory": "ANILLO GOMA",
-      "brand": null,
-      "publicPrice": 2.25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "89a01134-1ade-44af-896d-07aa1645575c",
-      "code": "7574",
-      "name": "ANILLO PLASTICO PARA GOMA LIFTING SIN DIVISION R-ANILLO-3",
-      "slug": "anillo-plastico-para-goma-lifting-sin-division-r-anillo-3-7574",
-      "category": {
-        "slug": "lifting",
-        "label": "Lifting"
-      },
-      "subcategory": "ANILLO GOMA",
-      "brand": null,
-      "publicPrice": 3.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "b01c2113-3409-4132-be8a-748041d71376",
-      "code": "1369",
-      "name": "ANILLO PORTA PEGA CON TAPA",
-      "slug": "anillo-porta-pega-con-tapa-1369",
-      "category": {
-        "slug": "lifting",
-        "label": "Lifting"
-      },
-      "subcategory": "ANILLO GOMA",
-      "brand": null,
-      "publicPrice": 0.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "00c7a73a-863b-4537-a4c5-eeb11b62de10",
-      "code": "8243",
-      "name": "ANILLOS GLAM BEAUTY X100 SE1317",
-      "slug": "anillos-glam-beauty-x100-se1317-8243",
-      "category": {
-        "slug": "lifting",
-        "label": "Lifting"
-      },
-      "subcategory": "ANILLO GOMA",
-      "brand": "GLAM BEAUTY",
-      "publicPrice": 3.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "75f51579-cbb0-42dd-a73f-12d63511a274",
-      "code": "8272",
-      "name": "APLICADOR DE MADERA DOBLE CON ALGODON X100 EN FUNDA U-PALNAR-05",
-      "slug": "aplicador-de-madera-doble-con-algodon-x100-en-funda-u-palnar-05-8272",
-      "category": {
-        "slug": "lifting",
-        "label": "Lifting"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 1,
-      "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-dfe549806a61bd34.jpg",
       "shortDescription": null
     },
     {
@@ -472,39 +80,7 @@
       "brand": "GLAM BEAUTY",
       "publicPrice": 0.75,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "eb3b64e1-4f0c-4b3d-8c5d-db46ba0e3825",
-      "code": "6417",
-      "name": "ATOMIZADOR PARA LIFTING DE PESTAÑAS LN2223",
-      "slug": "atomizador-para-lifting-de-pestanas-ln2223-6417",
-      "category": {
-        "slug": "lifting",
-        "label": "Lifting"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 1.25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "11dc2b74-306b-4c4a-9d34-35361abe2349",
-      "code": "1982",
-      "name": "BALSAMO DE LABIOS CHAP LIP 4.2GR",
-      "slug": "balsamo-de-labios-chap-lip-4-2gr-1982",
-      "category": {
-        "slug": "lifting",
-        "label": "Lifting"
-      },
-      "subcategory": "LABIAL",
-      "brand": null,
-      "publicPrice": 1.25,
-      "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-6c96c3fd6f0ba544.jpg",
       "shortDescription": null
     },
     {
@@ -518,9 +94,9 @@
       },
       "subcategory": "ACCESORIOS DE UÑAS",
       "brand": "GOTAS DE SEDA",
-      "publicPrice": 17.5,
+      "publicPrice": 16.25,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-7982ffabccbfa10e.jpg",
       "shortDescription": null
     },
     {
@@ -536,74 +112,460 @@
       "brand": "THUYA",
       "publicPrice": 12.5,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-a79a757f2e4f0e64.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "8ef3880e-270d-4d91-b267-f26f8238482c",
-      "code": "4465",
-      "name": "BASE MILANI 2 EN 1 #02 NATURAL 30ML",
-      "slug": "base-milani-2-en-1-02-natural-30ml-4465",
+      "publicProductId": "480dfd0d-09f5-47bb-a8df-e9ecfc92ddcd",
+      "code": "1050",
+      "name": "BOMBA DE AIRE PARA LIFTING",
+      "slug": "bomba-de-aire-para-lifting-1050",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "PESTAÑAS",
+      "brand": null,
+      "publicPrice": 3,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-602076033efee803.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "13e27a89-4772-41e1-8090-cb79458321ed",
+      "code": "11631",
+      "name": "BONNDER DEBONDER SKY ZONE PINK GEL TYPE 15GR",
+      "slug": "bonnder-debonder-sky-zone-pink-gel-type-15gr-11631",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "BONDER",
+      "brand": null,
+      "publicPrice": 6.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-61520240d7304aec.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "3c8cf1eb-e80b-4c87-ba11-29ce8faad212",
+      "code": "4951",
+      "name": "BROCHA SINTETICA PARA LIFTING MANGO DE COLORES",
+      "slug": "brocha-sintetica-para-lifting-mango-de-colores-4951",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 1.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-50d9a0a0692f1d4f.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "98f59e1a-d0e7-4c62-ae69-c8a738a4c1c1",
+      "code": "8102",
+      "name": "CABEZA DE PRACTICA PARA LIFTING R-CPP01 DH08-2",
+      "slug": "cabeza-de-practica-para-lifting-r-cpp01-dh08-2-8102",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 6,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-ef08e8a8c8314482.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "b353122e-d4fe-4133-b727-b76ff854fee0",
+      "code": "10913",
+      "name": "CAMILLA GLAM BEAUTY SPA NEGRA MULTIUSO REGULABLE NEGRA SE3890",
+      "slug": "camilla-glam-beauty-spa-negra-multiuso-regulable-negra-se3890-10913",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 170,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10913.jpeg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "1ba89aed-fd9a-4cec-ad5a-7d81ee5f7df3",
+      "code": "11235",
+      "name": "CAMILLA HIDRAULICA MAS SILLA PREMIUM MZE285",
+      "slug": "camilla-hidraulica-mas-silla-premium-mze285-11235",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 340,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-15a615b671fa546b.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "86f203ad-b206-4b54-883e-db8168f23732",
+      "code": "8833",
+      "name": "CAMILLA HIDRAULICA SPA NEGRO SE3832",
+      "slug": "camilla-hidraulica-spa-negro-se3832-8833",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 157,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-776076b910ffb271.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "a4c5560f-19bd-42f3-8375-6f6280947f31",
+      "code": "10655",
+      "name": "CREMA BASE REGENERADORA THUYA VEGAN PESTAÑA 15ml",
+      "slug": "crema-base-regeneradora-thuya-vegan-pestana-15ml-10655",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "THUYA",
+      "publicPrice": 12,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-269e6e5fb0dd47a1.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "e4d20e79-2e1c-4615-9aab-55c7d70f67e3",
+      "code": "5243",
+      "name": "DELINEADOR LA COLORS LIQ. NAVY CLE803 5ML",
+      "slug": "delineador-la-colors-liq-navy-cle803-5ml-5243",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "DELINEADOR LIQUIDO",
+      "brand": "LA COLORS",
+      "publicPrice": 4.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/la-colors/5243-cle803.jpg",
+      "shortDescription": "¡Crea un look definido y elegante con un color azul intenso! 👁️✨ ¿Buscas un delineador que deslize fácilmente y ofrezca precisión profesional? 😕 El Delineador Líquido Navy de LA Colors es ideal 💜. Su fórmula de secado rápido proporciona un trazo uniforme y duradero , perfecto para delineados finos o dramáticos 🌸. Modo de uso: Aplica sobre el párpado limpio y seco.. Usa la punta fina del delineador para crear la línea deseada.. Deja secar unos segundos para un acabado duradero y sin manchas.. Para mayor intensidad, aplica una segunda capa si lo deseas.. Características clave: Color azul intenso: Navy profundo para un look sofisticado.. Secado rápido: evita manchas y corridas.. Alta duración: se mantiene intacto durante horas.. Fácil aplicación: trazo uniforme y preciso.. 📦 Otros Detalles: Tamaño: 3g · Origen: Estados Unidos 🇺🇸 · Certificaciones: Cruelty Free 🐰 · Vegan 🌱 · Sin parabenos · Sin fragancia."
+    },
+    {
+      "publicProductId": "94d6c5af-2c03-4dfd-89bb-9082620c5ec5",
+      "code": "3000",
+      "name": "ESPEJO PEQUEÑO MIA SECRET PARA LIFTING ET-809",
+      "slug": "espejo-pequeno-mia-secret-para-lifting-et-809-3000",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "MIA SECRET",
+      "publicPrice": 5.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/3000-et-809.jpg",
+      "shortDescription": "EYESLASH EXTENSION INSPECTION MIRROR Este espejo de inspección se utiliza en la aplicación de extensiones de pestañas para que el técnico pueda ver la base de las pestañas desde ángulos difíciles. Permite revisar la simetría y asegurar que la base de la extensión esté bien adherida."
+    },
+    {
+      "publicProductId": "870697b8-34c1-4df2-8636-c84828c4aba2",
+      "code": "10300",
+      "name": "ESSENCE BASE NATURAL MATTE MOUESE #02 16GR",
+      "slug": "essence-base-natural-matte-mouese-02-16gr-10300",
       "category": {
         "slug": "lifting",
         "label": "Lifting"
       },
       "subcategory": "BASE LIQUIDA",
-      "brand": "MILANI",
-      "publicPrice": 22.1,
+      "brand": "ESSENCE",
+      "publicPrice": 4.5,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/essence-official/10300-4059729394347.png",
+      "shortDescription": "Apuesta por un look natural: la BASE NATURAL MATTE MOUSSE 02 de essence impresiona con su textura clean beauty y sus ingredientes veganos, así como con el resultado de un cutis mate natural. Ofrece una cobertura media y neutraliza las impurezas. Puedes difuminar fácilmente nuestra base especial mousse en la piel. El resultado proporciona un sutil efecto foco y un acabado tipo polvos. Nuestra base mousse, cómoda y ligera, permite que tu piel respire. La BASE NATURAL MATTE MOUSSE 02 está dermatológicamente testada y es adecuada para pieles normales y grasas."
     },
     {
-      "publicProductId": "b87702a5-ec7d-4a8c-b8a2-ccea8d484700",
-      "code": "11341",
-      "name": "BELOTTI HENNA PARA CEJAS CAFE CLARO 3G",
-      "slug": "belotti-henna-para-cejas-cafe-claro-3g-11341",
+      "publicProductId": "164f563e-4131-4adf-b383-26431562cde5",
+      "code": "10289",
+      "name": "ESSENCE LAPIZ DE OJOS #9 LONGLASTING 0.28 GR",
+      "slug": "essence-lapiz-de-ojos-9-longlasting-0-28-gr-10289",
       "category": {
         "slug": "lifting",
         "label": "Lifting"
       },
       "subcategory": "LAPIZ DE CEJA",
-      "brand": "BELOTTI",
-      "publicPrice": 4.75,
+      "brand": "ESSENCE",
+      "publicPrice": 2.75,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/essence-official/10289-4250338414734.png",
+      "shortDescription": "Gran pigmentación y duración: con su innovador mecanismo retráctil, el perfilador de ojos LONG LASTING garantiza una aplicación particularmente precisa y fácil con resultados duraderos. Además de tonos como el negro, el marrón y el gris oscuro, ahora también está disponible en los tonos que marcan tendencia como el azul, el verde o colores con shimmer."
     },
     {
-      "publicProductId": "3f33b8ea-8530-4310-8b25-8a69b564f1ea",
-      "code": "11342",
-      "name": "BELOTTI HENNA PARA CEJAS CAFE MEDIO 3G",
-      "slug": "belotti-henna-para-cejas-cafe-medio-3g-11342",
+      "publicProductId": "03766097-c169-4773-95e5-6024151e5860",
+      "code": "10483",
+      "name": "ESSENCE TINTA DE LABIOS HIDRATANTE SUPERMAN JELLY LIP STAIN 02 4GR",
+      "slug": "essence-tinta-de-labios-hidratante-superman-jelly-lip-stain-02-4gr-10483",
       "category": {
         "slug": "lifting",
         "label": "Lifting"
       },
-      "subcategory": "LAPIZ DE CEJA",
-      "brand": "BELOTTI",
+      "subcategory": "LABIAL",
+      "brand": "ESSENCE",
       "publicPrice": 4.75,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/essence-official/10483-4059729533296.png",
+      "shortDescription": "Consigue la perfección labial durante todo el día con Superman jelly lip stain 01 Wham! en un atrevido tono cereza y 02 Pow! en un tono naranja-rosa de Essence. Estos tintes suaves y ligeros le dan a sus labios un tono natural y radiante que permanece durante horas, incluso después de comer o beber. La textura de gelatina se desliza suavemente, dejando un acabado cómodo y no pegajoso con un intenso poder de fijación, perfecto para una salida nocturna. Enfócate en una aplicación sencilla y evita delinear de más, ya que los tintes están diseñados para permanecer en su lugar con la resistencia de un superhéroe."
     },
     {
-      "publicProductId": "7fd10366-c6c1-4bdb-89ef-bbd333bb3fb8",
-      "code": "11191",
-      "name": "BELOTTI HENNA PARA CEJAS CAFE OSCURO 3G",
-      "slug": "belotti-henna-para-cejas-cafe-oscuro-3g-11191",
+      "publicProductId": "0943d05e-0272-4d5e-9e34-c3d9f93f5f78",
+      "code": "11749",
+      "name": "G-PRIMER GLAM BAEUTY BEAUTY KOREA PRIMER PREPARADOR 15ml",
+      "slug": "g-primer-glam-baeuty-beauty-korea-primer-preparador-15ml-11749",
       "category": {
         "slug": "lifting",
         "label": "Lifting"
       },
-      "subcategory": "LAPIZ DE CEJA",
-      "brand": "BELOTTI",
-      "publicPrice": 4.75,
+      "subcategory": "PRIMER",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 15.7,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-6f9be978fb2f54b5.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "79d206d0-67fa-4ef3-b9eb-983e737cf41e",
+      "code": "9086",
+      "name": "GOLLEE A PRIMER GLUE P-01G 15ML",
+      "slug": "gollee-a-primer-glue-p-01g-15ml-9086",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "PRIMER",
+      "brand": "GOLLEE",
+      "publicPrice": 15.8,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/gollee/9086-p-01g.png",
+      "shortDescription": "Primer para extensiones de pestañas que prepara la superficie natural, mejorando la adherencia y duración del adhesivo."
+    },
+    {
+      "publicProductId": "5bafefed-13f8-464a-99a8-8f44a8c242ca",
+      "code": "9406",
+      "name": "GOLLEE ACELERADOR SUPER BOOSTER BT-02 6ML",
+      "slug": "gollee-acelerador-super-booster-bt-02-6ml-9406",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GOLLEE",
+      "publicPrice": 12.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/gollee/9406-bt-02.jpg",
+      "shortDescription": "Acelerador de secado para extensión de pestañas que reduce el tiempo de secado del adhesivo, garantizando una aplicación más rápida y duradera."
+    },
+    {
+      "publicProductId": "9d95fdd2-446b-41cc-b056-3a574151ff41",
+      "code": "9405",
+      "name": "GOLLEE GOMA THINT&FAST A-02 5ML",
+      "slug": "gollee-goma-thint-fast-a-02-5ml-9405",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "GOMA DE PESTAÑA",
+      "brand": "GOLLEE",
+      "publicPrice": 20.8,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/gollee/9405-a-02.jpg",
+      "shortDescription": "Adhesivo de textura ligera y secado rápido, ideal para un acabado más natural y duradero en las extensiones de pestañas."
+    },
+    {
+      "publicProductId": "8c0803e0-602d-4260-b092-f2aa44718cd6",
+      "code": "10380",
+      "name": "GOLLEE REMOVER CREAM GLUE R-03 15g",
+      "slug": "gollee-remover-cream-glue-r-03-15g-10380",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "REMOVEDOR",
+      "brand": "GOLLEE",
+      "publicPrice": 21.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/gollee/10380-r-03.jpg",
+      "shortDescription": "Crema especializada para remover de manera segura el adhesivo de las extensiones de pestañas sin dañar las fibras naturales."
+    },
+    {
+      "publicProductId": "d708a76a-c171-45e4-ab2d-2382cf79e836",
+      "code": "9198",
+      "name": "GOMA DE PESTAÑA SALON PRO EXCLUSIVES 1ONZA",
+      "slug": "goma-de-pestana-salon-pro-exclusives-1onza-9198",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "GOMA DE PESTAÑA",
+      "brand": "SALON IN",
+      "publicPrice": 3.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-977eb9afa115a496.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "8434c4bb-f856-4a16-bf18-db8601dd1d68",
+      "code": "11236",
+      "name": "HENNA PILUSS PARA LABIOS ROJO ROJO VINO ROSA",
+      "slug": "henna-piluss-para-labios-rojo-rojo-vino-rosa-11236",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 6.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-bea24a2f46466b78.jpg",
       "shortDescription": null
     }
   ],
-  "firstPageTotal": 465,
-  "fetchedAt": "2026-08-19T14:26:25.583Z"
+  "firstPageHasMore": true,
+  "highlights": [
+    {
+      "publicProductId": "7a3b798e-04ff-4002-9f90-d36b3e0f824d",
+      "code": "11778",
+      "name": "BALSAMO GOLLEE PARA PEGAMENTO PESTAÑA 20g LLGB-01",
+      "slug": "balsamo-gollee-para-pegamento-pestana-20g-llgb-01-11778",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "ACCESORIOS DE UÑAS",
+      "brand": "GOTAS DE SEDA",
+      "publicPrice": 16.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-7982ffabccbfa10e.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "827d5011-54fe-4473-a871-253cddface6b",
+      "code": "11864",
+      "name": "LIFTING DE PESTAÑAS AMY BEAUTY ZARCOS-015 24961",
+      "slug": "lifting-de-pestanas-amy-beauty-zarcos-015-24961-11864",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "KIT",
+      "brand": "AMY BEAUTY",
+      "publicPrice": 10.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-c9508705e6da091c.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "0943d05e-0272-4d5e-9e34-c3d9f93f5f78",
+      "code": "11749",
+      "name": "G-PRIMER GLAM BAEUTY BEAUTY KOREA PRIMER PREPARADOR 15ml",
+      "slug": "g-primer-glam-baeuty-beauty-korea-primer-preparador-15ml-11749",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "PRIMER",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 15.7,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-6f9be978fb2f54b5.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "8776b35a-db63-42c1-b4df-31e98a661417",
+      "code": "11738",
+      "name": "PESTAÑAS EXTENSIONES GLAM BEAUTY 4D 0.07D TALLA MIX GB-4D",
+      "slug": "pestanas-extensiones-glam-beauty-4d-0-07d-talla-mix-gb-4d-11738",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "PESTAÑAS",
+      "brand": "GLAM",
+      "publicPrice": 5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-f3e9f2a6d15b8db1.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "5f7a76c5-bd1d-46a4-bc59-6199a6ebed66",
+      "code": "11754",
+      "name": "PESTAÑAS EXTENSIONES GLAM BEAUTY W4D 0.07D TALLA MIX GB-W4D",
+      "slug": "pestanas-extensiones-glam-beauty-w4d-0-07d-talla-mix-gb-w4d-11754",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "PESTAÑAS P/P",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 5.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-ace653e0ce3a6761.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "1b7cd226-8c51-433f-9b19-d77198587073",
+      "code": "11752",
+      "name": "PESTAÑAS EXTENSIONES GLAM BEAUTY YY07 0.07D TALLA MIX GB-YY07",
+      "slug": "pestanas-extensiones-glam-beauty-yy07-0-07d-talla-mix-gb-yy07-11752",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "PESTAÑAS P/P",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 4.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-17050a20d8d5a45c.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "d64b5299-0719-4689-9ec5-b5ca39ef231b",
+      "code": "11753",
+      "name": "PESTAÑAS EXTENSIONES GLAM BEAUTY 3D 0.07D TALLA MIX GB-3D",
+      "slug": "pestanas-extensiones-glam-beauty-3d-0-07d-talla-mix-gb-3d-11753",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "PINCELES",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 4.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-5ea24cbda645b780.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "981b5580-be90-45af-b914-24dbd5d3fc68",
+      "code": "11596",
+      "name": "APLICADOR DE PESTAÑAS GLAM BEAUTY X100 PCS MICRO CEPILLOS BAMBOO ZP251130-418",
+      "slug": "aplicador-de-pestanas-glam-beauty-x100-pcs-micro-cepillos-bamboo-zp251130-418-11596",
+      "category": {
+        "slug": "lifting",
+        "label": "Lifting"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 0.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-6c96c3fd6f0ba544.jpg",
+      "shortDescription": null
+    }
+  ],
+  "fetchedAt": "2026-09-17T19:06:20.237Z"
 }

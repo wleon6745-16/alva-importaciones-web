@@ -3,451 +3,93 @@
   "categoryLabel": "Maquillaje",
   "description": null,
   "featured": false,
-  "productCount": 2601,
   "brands": [
     {
-      "name": "BEAUTY CREATIONS",
-      "count": 251
+      "name": "AMORUS"
     },
     {
-      "name": "VOGUE",
-      "count": 139
+      "name": "AMY BEAUTY"
     },
     {
-      "name": "ITALIA",
-      "count": 136
+      "name": "AZEIDA"
     },
     {
-      "name": "LA COLORS",
-      "count": 123
+      "name": "BEAUTY CARE"
     },
     {
-      "name": "L.A. GIRL",
-      "count": 119
+      "name": "BEAUTY CREATIONS"
     },
     {
-      "name": "OG",
-      "count": 104
+      "name": "BEAUTY OF JOSEON"
     },
     {
-      "name": "ESSENCE",
-      "count": 102
+      "name": "CALA"
     },
     {
-      "name": "GLAM BEAUTY",
-      "count": 91
+      "name": "DEEP FRESH"
     },
     {
-      "name": "NAILEN",
-      "count": 81
+      "name": "ESSENCE"
     },
     {
-      "name": "MAKE UP PRO",
-      "count": 73
+      "name": "FLORMAR"
     },
     {
-      "name": "FLORMAR",
-      "count": 66
+      "name": "GENERATION"
     },
     {
-      "name": "RAQUEL",
-      "count": 66
+      "name": "GLAM"
     },
     {
-      "name": "MILANI",
-      "count": 63
+      "name": "GLAM BEAUTY"
     },
     {
-      "name": "L'DIOR",
-      "count": 59
+      "name": "GLAM NAILS"
     },
     {
-      "name": "AMORUS",
-      "count": 58
+      "name": "HENNA"
     },
     {
-      "name": "BARDOT",
-      "count": 54
+      "name": "ITALIA"
     },
     {
-      "name": "URBAN",
-      "count": 54
+      "name": "J-LASH"
     },
     {
-      "name": "SATINE",
-      "count": 52
+      "name": "L.A. GIRL"
     },
     {
-      "name": "GLAM",
-      "count": 38
+      "name": "LA COLORS"
     },
     {
-      "name": "J-LASH",
-      "count": 37
+      "name": "MAKE UP PRO"
     },
     {
-      "name": "SFR",
-      "count": 36
+      "name": "MIA SECRET"
     },
     {
-      "name": "KLEANCOLOR",
-      "count": 32
+      "name": "MILANI"
     },
     {
-      "name": "PROLUX",
-      "count": 32
+      "name": "OG"
     },
     {
-      "name": "AMY BEAUTY",
-      "count": 24
+      "name": "RODHER"
     },
     {
-      "name": "APPLE",
-      "count": 24
+      "name": "SATINE"
     },
     {
-      "name": "CALA",
-      "count": 23
+      "name": "SFR"
     },
     {
-      "name": "USHAS",
-      "count": 23
+      "name": "URBAN"
     },
     {
-      "name": "SHE MAKEUP",
-      "count": 20
+      "name": "VANDUX"
     },
     {
-      "name": "GENERATION",
-      "count": 18
-    },
-    {
-      "name": "SEVEN COLOR",
-      "count": 15
-    },
-    {
-      "name": "BYPHASSE",
-      "count": 12
-    },
-    {
-      "name": "GLAM NAILS",
-      "count": 12
-    },
-    {
-      "name": "RUBY FACE",
-      "count": 12
-    },
-    {
-      "name": "ZZAM",
-      "count": 12
-    },
-    {
-      "name": "PX LOOK",
-      "count": 11
-    },
-    {
-      "name": "THE FRUIT COMPANY",
-      "count": 11
-    },
-    {
-      "name": "RUDE",
-      "count": 9
-    },
-    {
-      "name": "HUDA BEAUTY",
-      "count": 8
-    },
-    {
-      "name": "TOP FACE",
-      "count": 8
-    },
-    {
-      "name": "BEBELLA",
-      "count": 7
-    },
-    {
-      "name": "MIA SECRET",
-      "count": 7
-    },
-    {
-      "name": "TOPFACE",
-      "count": 7
-    },
-    {
-      "name": "BEAUTY CARE",
-      "count": 5
-    },
-    {
-      "name": "CHANLAYA",
-      "count": 5
-    },
-    {
-      "name": "KARITE",
-      "count": 5
-    },
-    {
-      "name": "KJ",
-      "count": 5
-    },
-    {
-      "name": "MARTINA",
-      "count": 5
-    },
-    {
-      "name": "NABI",
-      "count": 5
-    },
-    {
-      "name": "THUYA",
-      "count": 5
-    },
-    {
-      "name": "BELLACOTTON",
-      "count": 4
-    },
-    {
-      "name": "DEEP FRESH",
-      "count": 4
-    },
-    {
-      "name": "HENNA",
-      "count": 4
-    },
-    {
-      "name": "SEYOR",
-      "count": 4
-    },
-    {
-      "name": "ADORO",
-      "count": 3
-    },
-    {
-      "name": "ARDELL",
-      "count": 3
-    },
-    {
-      "name": "CLANS",
-      "count": 3
-    },
-    {
-      "name": "DOCOLOR",
-      "count": 3
-    },
-    {
-      "name": "FEBBLE",
-      "count": 3
-    },
-    {
-      "name": "KJ BEAUTY",
-      "count": 3
-    },
-    {
-      "name": "L&D",
-      "count": 3
-    },
-    {
-      "name": "MARIA JOSE",
-      "count": 3
-    },
-    {
-      "name": "MILLION PAULINE",
-      "count": 3
-    },
-    {
-      "name": "REVUELE",
-      "count": 3
-    },
-    {
-      "name": "RODHER",
-      "count": 3
-    },
-    {
-      "name": "THE FRUIT LAB",
-      "count": 3
-    },
-    {
-      "name": "ANDIS",
-      "count": 2
-    },
-    {
-      "name": "BIOTANIK",
-      "count": 2
-    },
-    {
-      "name": "CELAVI",
-      "count": 2
-    },
-    {
-      "name": "CHARMING",
-      "count": 2
-    },
-    {
-      "name": "DEAR DERM",
-      "count": 2
-    },
-    {
-      "name": "DIAMOND BEAUTY",
-      "count": 2
-    },
-    {
-      "name": "FARMAVITA",
-      "count": 2
-    },
-    {
-      "name": "GARNIER",
-      "count": 2
-    },
-    {
-      "name": "GOT2B",
-      "count": 2
-    },
-    {
-      "name": "KISS BEAUTY",
-      "count": 2
-    },
-    {
-      "name": "LINDA",
-      "count": 2
-    },
-    {
-      "name": "MASTER NAILS",
-      "count": 2
-    },
-    {
-      "name": "MAXYBELT",
-      "count": 2
-    },
-    {
-      "name": "PETITE MAISON",
-      "count": 2
-    },
-    {
-      "name": "PROFUSION",
-      "count": 2
-    },
-    {
-      "name": "UNNO",
-      "count": 2
-    },
-    {
-      "name": "VANDUX",
-      "count": 2
-    },
-    {
-      "name": "YQE",
-      "count": 2
-    },
-    {
-      "name": "ABELLA",
-      "count": 1
-    },
-    {
-      "name": "AICHUN BEAUTY",
-      "count": 1
-    },
-    {
-      "name": "AZEIDA",
-      "count": 1
-    },
-    {
-      "name": "BEAUTY OF JOSEON",
-      "count": 1
-    },
-    {
-      "name": "BELL",
-      "count": 1
-    },
-    {
-      "name": "CAI SILAN",
-      "count": 1
-    },
-    {
-      "name": "E&A",
-      "count": 1
-    },
-    {
-      "name": "ENKOR",
-      "count": 1
-    },
-    {
-      "name": "EUCERIN",
-      "count": 1
-    },
-    {
-      "name": "EXACTITUD",
-      "count": 1
-    },
-    {
-      "name": "GRANBELL",
-      "count": 1
-    },
-    {
-      "name": "KATIVA",
-      "count": 1
-    },
-    {
-      "name": "LISSIA",
-      "count": 1
-    },
-    {
-      "name": "M&CO",
-      "count": 1
-    },
-    {
-      "name": "MAXE",
-      "count": 1
-    },
-    {
-      "name": "MILLINS",
-      "count": 1
-    },
-    {
-      "name": "MOLLIE",
-      "count": 1
-    },
-    {
-      "name": "NOVEX",
-      "count": 1
-    },
-    {
-      "name": "OPI",
-      "count": 1
-    },
-    {
-      "name": "PRECIOSA",
-      "count": 1
-    },
-    {
-      "name": "RPK",
-      "count": 1
-    },
-    {
-      "name": "SALON LINE",
-      "count": 1
-    },
-    {
-      "name": "STALEKS",
-      "count": 1
-    },
-    {
-      "name": "STAR HAIR",
-      "count": 1
-    },
-    {
-      "name": "TOCOBO",
-      "count": 1
-    },
-    {
-      "name": "TRUE HEART",
-      "count": 1
-    },
-    {
-      "name": "VIVA COLOR",
-      "count": 1
-    },
-    {
-      "name": "YANNI",
-      "count": 1
+      "name": "ZZAM"
     }
   ],
   "firstPage": [
@@ -468,22 +110,6 @@
       "shortDescription": "Transforma y optimiza tus productos de maquillaje con el Activador & Diluidor Magic Seal de GENERATION. Esta fórmula versátil permite diluir bases, correctores y delineadores para una aplicación más suave y modulable, o revivir productos secos sin alterar su pigmentación o duración."
     },
     {
-      "publicProductId": "ac1b128a-a415-4f2b-866e-25280198d952",
-      "code": "10618",
-      "name": "ACTIVADOR USHAS SHADOW  SEAL WATERPROOF 12ml  FS473",
-      "slug": "activador-ushas-shadow-seal-waterproof-12ml-fs473-10618",
-      "category": {
-        "slug": "maquillaje",
-        "label": "Maquillaje"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": "USHAS",
-      "publicPrice": 2.25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
       "publicProductId": "a5c033ed-2e98-46ae-9606-b336b874aa64",
       "code": "10384",
       "name": "AEROGRAFO GLAM NAILS PROFESIONAL RECARGABLE DS152",
@@ -500,342 +126,488 @@
       "shortDescription": "El Aerógrafo Profesional Recargable de Glam Nails es la herramienta perfecta para lograr acabados precisos y creativos en uñas, maquillaje y diseño artístico. Su sistema inalámbrico recargable brinda mayor comodidad y libertad de movimiento, permitiendo trabajar sin cables y con total control. Ofrece una pulverización uniforme y fina, ideal para técnicas de nail art, degradados, efectos y detalles profesionales. Su diseño compacto y ergonómico facilita su uso tanto para principiantes como para expertos. Fabricado con materiales de alta calidad, garantiza durabilidad y un rendimiento eficiente, convirtiéndose en un aliado indispensable para salones de belleza y uso personal."
     },
     {
-      "publicProductId": "0b9abbfe-bce0-46f3-ab1b-86330a35f9e4",
-      "code": "1293",
-      "name": "AGUA DE ROSA THE FRUIT LAB 250ML",
-      "slug": "agua-de-rosa-the-fruit-lab-250ml-1293",
+      "publicProductId": "ed3d9aa5-707b-4fd8-aaef-28ef100ac1f1",
+      "code": "10897",
+      "name": "ARO DE LUZ  GLAM BEAUTY 12\" 3 LUCES + TRIP. LA003 MAS TRIPODE LA003",
+      "slug": "aro-de-luz-glam-beauty-12-3-luces-trip-la003-mas-tripode-la003-10897",
       "category": {
         "slug": "maquillaje",
         "label": "Maquillaje"
       },
-      "subcategory": "AGUA DE ROSAS",
-      "brand": "THE FRUIT LAB",
-      "publicPrice": 6.25,
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 15,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/10897-la003.jpg",
+      "shortDescription": "Aro de Luz 12\" 3 Luces + Trípode , kit de iluminación ideal para maquillaje, fotografía, videos y transmisiones en vivo . Cuenta con 3 tonos de luz (cálida, fría y neutra) y niveles de brillo ajustables , permitiendo una iluminación uniforme y profesional. Incluye trípode ajustable en altura y soporte para celular , además de rotación 360° para lograr el ángulo perfecto. Funciona mediante conexión USB , siendo práctico y fácil de usar en cualquier lugar"
     },
     {
-      "publicProductId": "d3e90bf0-ae33-4491-a88c-643d22b62d24",
-      "code": "5804",
-      "name": "AGUA DE ROSA THE FRUIT LAB 300ML AG-ROSAS-30",
-      "slug": "agua-de-rosa-the-fruit-lab-300ml-ag-rosas-30-5804",
+      "publicProductId": "4cb50234-ead5-4dac-a3c7-b080c7c27b53",
+      "code": "8398",
+      "name": "BALSAMO BEAUTY CREATIONS BALM CUTE RASBERRY BCBNC-LB02",
+      "slug": "balsamo-beauty-creations-balm-cute-rasberry-bcbnc-lb02-8398",
       "category": {
         "slug": "maquillaje",
         "label": "Maquillaje"
       },
-      "subcategory": "AGUA DE ROSAS",
-      "brand": "THE FRUIT LAB",
-      "publicPrice": 5.7,
+      "subcategory": "BALSAMO",
+      "brand": "BEAUTY CREATIONS",
+      "publicPrice": 8,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/beauty-creations/8398-bcbnc-lb02.png",
+      "shortDescription": "Hidrata y suaviza, previniendo la sequedad y agrietamiento. Su fórmula suele contener ingredientes emolientes como cera de abejas, manteca de karité o aceites naturales, proporcionando una barrera protectora y una sensación de comodidad durante todo el día."
     },
     {
-      "publicProductId": "48b7f413-9c77-4bb6-9b02-a0a03a41fd83",
-      "code": "9652",
-      "name": "AGUA DE ROSAS CLANS 250ML",
-      "slug": "agua-de-rosas-clans-250ml-9652",
+      "publicProductId": "8d7d0813-a9da-4e68-a1f3-49c10f7f9818",
+      "code": "8397",
+      "name": "BALSAMO BEAUTY CREATIONS BALM CUTE ROSE BCBNC-LB03",
+      "slug": "balsamo-beauty-creations-balm-cute-rose-bcbnc-lb03-8397",
       "category": {
         "slug": "maquillaje",
         "label": "Maquillaje"
       },
-      "subcategory": "AGUA DE ROSAS",
-      "brand": "CLANS",
-      "publicPrice": 2.5,
+      "subcategory": "BALSAMO",
+      "brand": "BEAUTY CREATIONS",
+      "publicPrice": 8,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/beauty-creations/8397-bcbnc-lb03.png",
+      "shortDescription": "Hidrata y suaviza, previniendo la sequedad y agrietamiento. Su fórmula suele contener ingredientes emolientes como cera de abejas, manteca de karité o aceites naturales, proporcionando una barrera protectora y una sensación de comodidad durante todo el día."
     },
     {
-      "publicProductId": "42d35a4f-0eca-48ee-98f2-38c2fc68c895",
-      "code": "4065",
-      "name": "AGUA DE ROSAS L.DIOR TONICO FACIAL ALL SKIN 240ML",
-      "slug": "agua-de-rosas-l-dior-tonico-facial-all-skin-240ml-4065",
+      "publicProductId": "7bde5211-f88a-4e57-82ed-96bb9f2b0e05",
+      "code": "10867",
+      "name": "BANANA LOOSE POWDER S.F.R COLOR BLISTER X 12 PCS",
+      "slug": "banana-loose-powder-s-f-r-color-blister-x-12-pcs-10867",
       "category": {
         "slug": "maquillaje",
         "label": "Maquillaje"
       },
-      "subcategory": "AGUA DE ROSAS",
-      "brand": "L'DIOR",
-      "publicPrice": 3.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "b6535d4e-5426-4ea3-9c0a-c08a79ec7909",
-      "code": "3427",
-      "name": "AGUA DE ROSAS MARIA JOSE 100ML",
-      "slug": "agua-de-rosas-maria-jose-100ml-3427",
-      "category": {
-        "slug": "maquillaje",
-        "label": "Maquillaje"
-      },
-      "subcategory": "AGUA DE ROSAS",
-      "brand": "MARIA JOSE",
+      "subcategory": "POLVO BANANA",
+      "brand": "SFR",
       "publicPrice": 2,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-8d7c2e30779b10b5.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "d3963399-2ffd-4a08-a626-25b26c6df772",
-      "code": "7703",
-      "name": "AGUA MICELAR BEAUTY CREATIONS 150ML SK-TDM",
-      "slug": "agua-micelar-beauty-creations-150ml-sk-tdm-7703",
+      "publicProductId": "0411297d-6311-48e5-9a2f-6419456e87a2",
+      "code": "2610",
+      "name": "BANDAS DEPILATORIAS GLAM BEAUTY TS044",
+      "slug": "bandas-depilatorias-glam-beauty-ts044-2610",
       "category": {
         "slug": "maquillaje",
         "label": "Maquillaje"
       },
-      "subcategory": "AGUA MICELAR",
+      "subcategory": "CREMA DE DEPILAR",
+      "brand": "GLAM NAILS",
+      "publicPrice": 1.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/glam-nails/2610-ts044.jpg",
+      "shortDescription": "La Banda Depilatoria Glam Beauty de 100 piezas es un producto diseñado para la depilación en casa de manera rápida y efectiva. Estas bandas están fabricadas con materiales de alta calidad que aseguran una adhesión óptima al vello, permitiendo una eliminación eficiente y menos dolorosa."
+    },
+    {
+      "publicProductId": "170528e8-f207-4c18-baa9-3df92dfce1cf",
+      "code": "3615",
+      "name": "BASE LIQUIDA #1 URBAN 35ML MT398-1",
+      "slug": "base-liquida-1-urban-35ml-mt398-1-3615",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "BASE LIQUIDA",
+      "brand": "URBAN",
+      "publicPrice": 5.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/urban/3615-mt398-1.jpg",
+      "shortDescription": "La base líquida Urban es un tipo de maquillaje para el rostro que ofrece una cobertura suave y natural. Por lo general, está diseñada para aplicarse con facilidad y fusionarse con la piel, proporcionando un acabado fresco y uniforme. Muchas bases líquidas Urban también incluyen ingredientes hidratantes para ayudar a mantener la piel hidratada durante todo el día."
+    },
+    {
+      "publicProductId": "42d5eca8-7185-45b3-8111-5e2eef465c7c",
+      "code": "2603",
+      "name": "BASE LIQUIDA BEAUTY CREATIONS FS 3.0 30ML",
+      "slug": "base-liquida-beauty-creations-fs-3-0-30ml-2603",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "BASE LIQUIDA",
       "brand": "BEAUTY CREATIONS",
-      "publicPrice": 9.4,
+      "publicPrice": 14,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/2603-fs3-0.png",
+      "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
     },
     {
-      "publicProductId": "e4bfffe4-3130-4898-8fa7-486cd5239f55",
-      "code": "8000",
-      "name": "AGUA MICELAR CLANS 400ML",
-      "slug": "agua-micelar-clans-400ml-8000",
+      "publicProductId": "b684d786-051e-48ad-bd07-7c3bf429905f",
+      "code": "1149",
+      "name": "BASE LIQUIDA BEAUTY CREATIONS FS 3.5 30ML",
+      "slug": "base-liquida-beauty-creations-fs-3-5-30ml-1149",
       "category": {
         "slug": "maquillaje",
         "label": "Maquillaje"
       },
-      "subcategory": "AGUA MICELAR",
-      "brand": "CLANS",
-      "publicPrice": 2.5,
+      "subcategory": "BASE LIQUIDA",
+      "brand": "BEAUTY CREATIONS",
+      "publicPrice": 14,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/1149-fs3-5.png",
+      "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
     },
     {
-      "publicProductId": "d04a59d8-674f-4809-ae84-24f309b276cb",
-      "code": "539",
-      "name": "AGUA MICELAR DEEP FRESH ALOE BI-PHASE 400ML",
-      "slug": "agua-micelar-deep-fresh-aloe-bi-phase-400ml-539",
+      "publicProductId": "de1c7422-b2dc-41d8-9584-2e90cbe79152",
+      "code": "3494",
+      "name": "BASE LIQUIDA BEAUTY CREATIONS FS 4.0 30ML",
+      "slug": "base-liquida-beauty-creations-fs-4-0-30ml-3494",
       "category": {
         "slug": "maquillaje",
         "label": "Maquillaje"
       },
-      "subcategory": "AGUA MICELAR",
-      "brand": "DEEP FRESH",
-      "publicPrice": 7.1,
+      "subcategory": "BASE LIQUIDA",
+      "brand": "BEAUTY CREATIONS",
+      "publicPrice": 14,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/3494-fs4-0.png",
+      "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
     },
     {
-      "publicProductId": "43152e04-f41b-45c8-aa3a-9d0f86faa1a3",
-      "code": "8553",
-      "name": "AGUA MICELAR GARNIER ROSE 400ML",
-      "slug": "agua-micelar-garnier-rose-400ml-8553",
+      "publicProductId": "6c697b84-5cec-4408-8e8b-3d7ec5ba4007",
+      "code": "3264",
+      "name": "BASE LIQUIDA BEAUTY CREATIONS FS 5.0 30ML",
+      "slug": "base-liquida-beauty-creations-fs-5-0-30ml-3264",
       "category": {
         "slug": "maquillaje",
         "label": "Maquillaje"
       },
-      "subcategory": "AGUA MICELAR",
-      "brand": "GARNIER",
-      "publicPrice": 8.5,
+      "subcategory": "BASE LIQUIDA",
+      "brand": "BEAUTY CREATIONS",
+      "publicPrice": 14,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/3264-fs5-0.png",
+      "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
     },
     {
-      "publicProductId": "d3ab579a-67ea-4b85-b63b-9bf7d25e7eb7",
-      "code": "8554",
-      "name": "AGUA MICELAR GARNIER TODO EN 1 CLASICA 400ML",
-      "slug": "agua-micelar-garnier-todo-en-1-clasica-400ml-8554",
+      "publicProductId": "12236f72-d83d-4caa-bf4c-c6e3d16518e4",
+      "code": "1153",
+      "name": "BASE LIQUIDA BEAUTY CREATIONS FS 6.0 30ML",
+      "slug": "base-liquida-beauty-creations-fs-6-0-30ml-1153",
       "category": {
         "slug": "maquillaje",
         "label": "Maquillaje"
       },
-      "subcategory": "AGUA MICELAR",
-      "brand": "GARNIER",
-      "publicPrice": 10,
+      "subcategory": "BASE LIQUIDA",
+      "brand": "BEAUTY CREATIONS",
+      "publicPrice": 14.1,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/1153-fs6-0.png",
+      "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
     },
     {
-      "publicProductId": "6d93f5aa-266d-4485-87f3-682fd8d406d6",
-      "code": "7528",
-      "name": "AGUA MICELAR L.DIOR DE COCO 230ML",
-      "slug": "agua-micelar-l-dior-de-coco-230ml-7528",
+      "publicProductId": "5f034df0-0711-46ab-b286-334ea9f352bb",
+      "code": "3967",
+      "name": "BASE LIQUIDA BEAUTY CREATIONS FS 6.5 30ML",
+      "slug": "base-liquida-beauty-creations-fs-6-5-30ml-3967",
       "category": {
         "slug": "maquillaje",
         "label": "Maquillaje"
       },
-      "subcategory": "AGUA MICELAR",
-      "brand": "L'DIOR",
-      "publicPrice": 6,
+      "subcategory": "BASE LIQUIDA",
+      "brand": "BEAUTY CREATIONS",
+      "publicPrice": 14,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/3967-fs6-5.png",
+      "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
     },
     {
-      "publicProductId": "03c5472b-74db-467a-83f8-b0c96c0ba9ce",
-      "code": "2931",
-      "name": "AGUA MICELAR PETITE MAISON PINK POMELO 200ML",
-      "slug": "agua-micelar-petite-maison-pink-pomelo-200ml-2931",
+      "publicProductId": "32f5250e-6ab2-4d64-9d08-924beb2d2327",
+      "code": "1152",
+      "name": "BASE LIQUIDA BEAUTY CREATIONS FS 7.5 30ML",
+      "slug": "base-liquida-beauty-creations-fs-7-5-30ml-1152",
       "category": {
         "slug": "maquillaje",
         "label": "Maquillaje"
       },
-      "subcategory": "AGUA MICELAR",
-      "brand": "PETITE MAISON",
-      "publicPrice": 6.6,
+      "subcategory": "BASE LIQUIDA",
+      "brand": "BEAUTY CREATIONS",
+      "publicPrice": 14,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/1152-fs7-5.png",
+      "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
     },
     {
-      "publicProductId": "21dd22a8-9a96-47b8-aa4a-a41db6e72f34",
-      "code": "6764",
-      "name": "AGUA MICELAR REVUELVE WATER HIALURONICO 5 EN 1 100299",
-      "slug": "agua-micelar-revuelve-water-hialuronico-5-en-1-100299-6764",
+      "publicProductId": "12adb398-e938-4d0c-8cb6-48e072710b8c",
+      "code": "4518",
+      "name": "BASE LIQUIDA BEAUTY CREATIONS FS 8.0 30ML",
+      "slug": "base-liquida-beauty-creations-fs-8-0-30ml-4518",
       "category": {
         "slug": "maquillaje",
         "label": "Maquillaje"
       },
-      "subcategory": "AGUA MICELAR",
-      "brand": "REVUELE",
-      "publicPrice": 6.75,
+      "subcategory": "BASE LIQUIDA",
+      "brand": "BEAUTY CREATIONS",
+      "publicPrice": 14,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/4518-fs8-0.png",
+      "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
     },
     {
-      "publicProductId": "9a52aaf0-46da-4bf6-b91d-5af06b44e9a6",
-      "code": "8040",
-      "name": "AGUA MICELAR REVUELVE WATER SOOTHING 400ML 100390",
-      "slug": "agua-micelar-revuelve-water-soothing-400ml-100390-8040",
+      "publicProductId": "6cab1f7e-26bb-4983-b667-a3cc16e0442e",
+      "code": "4995",
+      "name": "BASE LIQUIDA BEAUTY CREATIONS FS 9.0 30ML",
+      "slug": "base-liquida-beauty-creations-fs-9-0-30ml-4995",
       "category": {
         "slug": "maquillaje",
         "label": "Maquillaje"
       },
-      "subcategory": "AGUA MICELAR",
-      "brand": "REVUELE",
-      "publicPrice": 7.5,
+      "subcategory": "BASE LIQUIDA",
+      "brand": "BEAUTY CREATIONS",
+      "publicPrice": 14,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/4995-fs9-0.png",
+      "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
     },
     {
-      "publicProductId": "6b4e98d3-6fa6-4927-a395-366775e1239f",
-      "code": "1988",
-      "name": "AJUSTADOR DE BASES  KLEANCOLOR LF501 MEET YOUR MATCH 18ML",
-      "slug": "ajustador-de-bases-kleancolor-lf501-meet-your-match-18ml-1988",
+      "publicProductId": "62e6e2df-59a0-4c09-af47-846e70645315",
+      "code": "11884",
+      "name": "BASE LIQUIDA BEAUTY CREATIONS FS2.0 30ML",
+      "slug": "base-liquida-beauty-creations-fs2-0-30ml-11884",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "BASE LIQUIDA",
+      "brand": "BEAUTY CREATIONS",
+      "publicPrice": 14,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/11884-fs2-0.png",
+      "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
+    },
+    {
+      "publicProductId": "41163447-aae8-49bf-89c7-a2797d682e42",
+      "code": "3493",
+      "name": "BASE LIQUIDA L.A. GIRL GLM-642 FAIR",
+      "slug": "base-liquida-l-a-girl-glm-642-fair-3493",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "BARBERIA",
+      "brand": "L.A. GIRL",
+      "publicPrice": 11.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/l-a-girl/3493-glm642.webp",
+      "shortDescription": "Consigue una cobertura perfecta con la Base Líquida Pro Coverage Foundation Fair de LA GIRL. Su fórmula líquida de alta cobertura proporciona un acabado mate duradero, ideal para pieles claras. ¡Logra un rostro impecable con esta base de larga duración!"
+    },
+    {
+      "publicProductId": "2c098bc0-5e8c-40e2-9204-0fc924cb1ac4",
+      "code": "1174",
+      "name": "BASE LIQUIDA L.A. GIRL GLM-646 BEIGE",
+      "slug": "base-liquida-l-a-girl-glm-646-beige-1174",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "BASE LIQUIDA",
+      "brand": "L.A. GIRL",
+      "publicPrice": 11.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/l-a-girl/1174-glm646.jpg",
+      "shortDescription": "Base líquida de cobertura total que ofrece una apariencia impecable y resistente, con un acabado suave y natural."
+    },
+    {
+      "publicProductId": "c6ef2525-7095-41e3-b2c7-45545a6890c9",
+      "code": "2386",
+      "name": "BASE LIQUIDA L.A. GIRL PRO MATTE GLM-673 BEIGE 30ML",
+      "slug": "base-liquida-l-a-girl-pro-matte-glm-673-beige-30ml-2386",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "BASE LIQUIDA",
+      "brand": "L.A. GIRL",
+      "publicPrice": 14,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/l-a-girl/2386-glm673.jpg",
+      "shortDescription": "Ideal para tonos de piel medianos a claros, esta base líquida Pro Matte proporciona un acabado mate de larga duración. Su fórmula ligera cubre imperfecciones y controla el brillo, dejando la piel fresca y mate durante todo el día."
+    },
+    {
+      "publicProductId": "6c08460b-96a7-472b-b978-15f5dab84e96",
+      "code": "2389",
+      "name": "BASE LIQUIDA L.A. GIRL PRO MATTE GLM-675 MEDIUM BEIGE 30ML",
+      "slug": "base-liquida-l-a-girl-pro-matte-glm-675-medium-beige-30ml-2389",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "BASE LIQUIDA",
+      "brand": "L.A. GIRL",
+      "publicPrice": 14,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/l-a-girl/2389-glm675.jpg",
+      "shortDescription": "Diseñada para tonos de piel media, esta base líquida proporciona una cobertura mate de alta calidad. Controla la grasa y ofrece una textura ligera que se adapta perfectamente a la piel, brindando un acabado natural y duradero."
+    },
+    {
+      "publicProductId": "3e2531f2-3987-4d82-bdec-f2463edb8939",
+      "code": "535",
+      "name": "BASE LIQUIDA L.A. GIRL PRO MATTE GLM-677 SOFT HONEY",
+      "slug": "base-liquida-l-a-girl-pro-matte-glm-677-soft-honey-535",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "BASE LIQUIDA",
+      "brand": "L.A. GIRL",
+      "publicPrice": 14,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/l-a-girl/535-glm677.jpg",
+      "shortDescription": "La base líquida Pro Matte Bisque de LA Girl es parte de la línea Pro Matte de la marca, diseñada para proporcionar una cobertura mate de larga duración. \"Bisque\" es un tono que generalmente se describe como un tono cálido beige."
+    },
+    {
+      "publicProductId": "81d6ed21-5d6c-4ab9-b3ac-adf0339f31e5",
+      "code": "2388",
+      "name": "BASE LIQUIDA L.A. GIRL PRO MATTE GLM-678 SAND 30ML",
+      "slug": "base-liquida-l-a-girl-pro-matte-glm-678-sand-30ml-2388",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "BASE LIQUIDA",
+      "brand": "L.A. GIRL",
+      "publicPrice": 14,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/l-a-girl/2388-glm678.jpg",
+      "shortDescription": "Base líquida mate en tono arena, que deja un acabado suave y mate, ideal para pieles mixtas o grasas."
+    }
+  ],
+  "firstPageHasMore": true,
+  "highlights": [
+    {
+      "publicProductId": "c53cbf47-68fc-49c2-acdc-f361d080327d",
+      "code": "12005",
+      "name": "PALETA SOMBRA USHAS 32 COLORS EYESHADOW ZAR-UF095-2",
+      "slug": "paleta-sombra-ushas-32-colors-eyeshadow-zar-uf095-2-12005",
       "category": {
         "slug": "maquillaje",
         "label": "Maquillaje"
       },
       "subcategory": "SOMBRA",
-      "brand": "KLEANCOLOR",
-      "publicPrice": 4,
+      "brand": "VANDUX",
+      "publicPrice": 4.9,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-426cb49d6e831fdd.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "51fa213f-3d05-4165-ad4d-71fe3b68db14",
-      "code": "1989",
-      "name": "AJUSTADOR DE SOMBA KLEANCOLOR LF501-03 BLUE 18ML",
-      "slug": "ajustador-de-somba-kleancolor-lf501-03-blue-18ml-1989",
+      "publicProductId": "5f78df23-c4fd-4e0d-8957-d3e8abc5e2a5",
+      "code": "12006",
+      "name": "PALETA DE SOMBRA USHAS ROSE QUARTZ ZAR-UES012-2",
+      "slug": "paleta-de-sombra-ushas-rose-quartz-zar-ues012-2-12006",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "SPRAY",
+      "brand": "VANDUX",
+      "publicPrice": 4.8,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-cfbcad3d3175cb34.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "513382b4-6bed-4e2c-8379-5a47f902346c",
+      "code": "11750",
+      "name": "G-BOND GLAM BBEAUTY KOREA BONDER SUPER LASH 10ml",
+      "slug": "g-bond-glam-bbeauty-korea-bonder-super-lash-10ml-11750",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM NAILS",
+      "publicPrice": 14.6,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-dcd0ca1baaef43c2.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "e060e9bb-1357-4895-b87b-506dc7900bae",
+      "code": "11744",
+      "name": "PESTAÑA DE LIBRO GLAM BEAUTY MIX VOL.20.30.40P YM1081",
+      "slug": "pestana-de-libro-glam-beauty-mix-vol-20-30-40p-ym1081-11744",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "PESTAÑAS P/P",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 5.9,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-afc36bf43a274695.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "835e4c98-42dc-4414-a859-f9f86a5e1bf8",
+      "code": "9720",
+      "name": "PALETA DE SOMBRA AMY BEAUTY WHO LOVERS ZAR-COS-504",
+      "slug": "paleta-de-sombra-amy-beauty-who-lovers-zar-cos-504-9720",
       "category": {
         "slug": "maquillaje",
         "label": "Maquillaje"
       },
       "subcategory": "SOMBRA",
-      "brand": "KLEANCOLOR",
-      "publicPrice": 3,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "2bb32ddc-f5e4-43d8-9546-4accd4c4b9de",
-      "code": "1990",
-      "name": "AJUSTADOR DE SOMBA KLEANCOLOR LF501-04 BROWN 18ML",
-      "slug": "ajustador-de-somba-kleancolor-lf501-04-brown-18ml-1990",
-      "category": {
-        "slug": "maquillaje",
-        "label": "Maquillaje"
-      },
-      "subcategory": "SOMBRA",
-      "brand": "KLEANCOLOR",
-      "publicPrice": 3,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "c987da7a-d3fe-4f43-80d3-90d58a5f9f24",
-      "code": "1402",
-      "name": "ALICATE DE PIE SENIOR CHARP U-AP08",
-      "slug": "alicate-de-pie-senior-charp-u-ap08-1402",
-      "category": {
-        "slug": "maquillaje",
-        "label": "Maquillaje"
-      },
-      "subcategory": "ALICATE",
-      "brand": null,
-      "publicPrice": 3.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "a1cd7237-51eb-48a2-82ac-d199664716ef",
-      "code": "1662",
-      "name": "ALICATE GRANBELL PARA MANOS COBALTO GB-202",
-      "slug": "alicate-granbell-para-manos-cobalto-gb-202-1662",
-      "category": {
-        "slug": "maquillaje",
-        "label": "Maquillaje"
-      },
-      "subcategory": "ALICATE",
-      "brand": "GRANBELL",
+      "brand": "AMY BEAUTY",
       "publicPrice": 10.5,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-da22844034548abf.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "165aad41-5b6c-443a-ab4c-e985facdb6d4",
-      "code": "11855",
-      "name": "APLICADOR DE MADERA CON ALGODON ROSADITO MARLA2512-05",
-      "slug": "aplicador-de-madera-con-algodon-rosadito-marla2512-05-11855",
+      "publicProductId": "559b5df5-29a2-411b-88ca-9b11c6369799",
+      "code": "11459",
+      "name": "PALETA DE SOMBRA AMYBEAUTY MAKED SMOKE 48 COLORES ZAR-COS-508",
+      "slug": "paleta-de-sombra-amybeauty-maked-smoke-48-colores-zar-cos-508-11459",
       "category": {
         "slug": "maquillaje",
         "label": "Maquillaje"
       },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 1,
+      "subcategory": "SOMBRA",
+      "brand": "AMY BEAUTY",
+      "publicPrice": 10.9,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-28098fee96191346.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "ad351ddd-5c2b-49fb-8045-1348a0d003d3",
-      "code": "10680",
-      "name": "APLICADOR DE MADERA CON ALGODON X100 EN FUNDA MA-360",
-      "slug": "aplicador-de-madera-con-algodon-x100-en-funda-ma-360-10680",
+      "publicProductId": "821c8687-6594-476c-9b85-363c976df52e",
+      "code": "11357",
+      "name": "ESSENCE CORRECTOR CAMUFLAJE +MATT 180 8ML",
+      "slug": "essence-corrector-camuflaje-matt-180-8ml-11357",
       "category": {
         "slug": "maquillaje",
         "label": "Maquillaje"
       },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 1.25,
+      "subcategory": "CORRECTOR",
+      "brand": "ESSENCE",
+      "publicPrice": 4.4,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-cee01063ce6287bf.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "5ccf2cc1-90ed-44a2-8261-d8561fb4813c",
+      "code": "11358",
+      "name": "ESSENCE PALETA DE CORRECTORES CORRECT & CONCEAL4.4GR",
+      "slug": "essence-paleta-de-correctores-correct-conceal4-4gr-11358",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "CORRECTOR",
+      "brand": "ESSENCE",
+      "publicPrice": 4.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-12c5dcab8381d16f.jpg",
       "shortDescription": null
     }
   ],
-  "firstPageTotal": 2601,
-  "fetchedAt": "2026-08-19T14:26:25.583Z"
+  "fetchedAt": "2026-09-17T19:06:20.237Z"
 }

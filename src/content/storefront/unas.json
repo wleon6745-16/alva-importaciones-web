@@ -3,419 +3,138 @@
   "categoryLabel": "Uñas",
   "description": null,
   "featured": false,
-  "productCount": 4857,
   "brands": [
     {
-      "name": "GLAM NAILS",
-      "count": 903
+      "name": "ABELLA"
     },
     {
-      "name": "MASTER NAILS",
-      "count": 581
+      "name": "ADDICT"
     },
     {
-      "name": "MIA SECRET",
-      "count": 418
+      "name": "ALVA"
     },
     {
-      "name": "COQUETA",
-      "count": 201
+      "name": "AMORUS"
     },
     {
-      "name": "RODHER",
-      "count": 198
+      "name": "AMY BEAUTY"
     },
     {
-      "name": "E&A",
-      "count": 142
+      "name": "BEAUTY SKY"
     },
     {
-      "name": "L&D",
-      "count": 130
+      "name": "CALA"
     },
     {
-      "name": "MOLLIE",
-      "count": 115
+      "name": "CLOVER"
     },
     {
-      "name": "ADDICT",
-      "count": 101
+      "name": "COLORET"
     },
     {
-      "name": "L'DIOR",
-      "count": 90
+      "name": "COQUETA"
     },
     {
-      "name": "STALEKS",
-      "count": 75
+      "name": "DOMPEL"
     },
     {
-      "name": "MASGLO",
-      "count": 70
+      "name": "DUO"
     },
     {
-      "name": "CLOVER",
-      "count": 66
+      "name": "E&A"
     },
     {
-      "name": "BARDOT",
-      "count": 63
+      "name": "FEIXIANG"
     },
     {
-      "name": "MAXYBELT",
-      "count": 55
+      "name": "GLAM"
     },
     {
-      "name": "VOGUE",
-      "count": 40
+      "name": "GLAM BEAUTY"
     },
     {
-      "name": "UNNO",
-      "count": 38
+      "name": "GLAM NAILS"
     },
     {
-      "name": "MARIA JOSE",
-      "count": 37
+      "name": "GOLLEE"
     },
     {
-      "name": "SUN",
-      "count": 33
+      "name": "GRANBELL"
     },
     {
-      "name": "ZZAM",
-      "count": 28
+      "name": "JDM"
     },
     {
-      "name": "GLAM BEAUTY",
-      "count": 25
+      "name": "KUUL"
     },
     {
-      "name": "MISS SUMMER",
-      "count": 24
+      "name": "L'DIOR"
     },
     {
-      "name": "AMY BEAUTY",
-      "count": 18
+      "name": "L&D"
     },
     {
-      "name": "LINDA",
-      "count": 18
+      "name": "LA COLORS"
     },
     {
-      "name": "PRECIOSA",
-      "count": 18
+      "name": "LINDA"
     },
     {
-      "name": "GOLLEE",
-      "count": 17
+      "name": "LISSIA"
     },
     {
-      "name": "MAXE",
-      "count": 17
+      "name": "LRIS"
     },
     {
-      "name": "MUNDIAL",
-      "count": 15
+      "name": "MAGK"
     },
     {
-      "name": "ALVA",
-      "count": 9
+      "name": "MARIA JOSE"
     },
     {
-      "name": "CALA",
-      "count": 9
+      "name": "MARLA"
     },
     {
-      "name": "SAPHIR",
-      "count": 9
+      "name": "MASGLO"
     },
     {
-      "name": "GRANBELL",
-      "count": 8
+      "name": "MASTER NAILS"
     },
     {
-      "name": "M&CO",
-      "count": 8
+      "name": "MAXE"
     },
     {
-      "name": "BEAUTY SKY",
-      "count": 7
+      "name": "MAXYBELT"
     },
     {
-      "name": "GLAM",
-      "count": 7
+      "name": "MIA SECRET"
     },
     {
-      "name": "VICKY NAIL",
-      "count": 7
+      "name": "MISS SUMMER"
     },
     {
-      "name": "JDM",
-      "count": 6
+      "name": "MOLLIE"
     },
     {
-      "name": "MAGK",
-      "count": 6
+      "name": "MUNDIAL"
     },
     {
-      "name": "OPI",
-      "count": 6
+      "name": "RODHER"
     },
     {
-      "name": "ADORO",
-      "count": 5
+      "name": "STALEKS"
     },
     {
-      "name": "LMAR",
-      "count": 5
+      "name": "SUN"
     },
     {
-      "name": "MARLA",
-      "count": 5
+      "name": "UNNO"
     },
     {
-      "name": "THE FRUIT LAB",
-      "count": 5
+      "name": "VICKY NAIL"
     },
     {
-      "name": "COLORET",
-      "count": 4
-    },
-    {
-      "name": "FARMACOTTON",
-      "count": 4
-    },
-    {
-      "name": "LA COLORS",
-      "count": 4
-    },
-    {
-      "name": "SUPER NAIL",
-      "count": 4
-    },
-    {
-      "name": "ABELLA",
-      "count": 3
-    },
-    {
-      "name": "DORVO",
-      "count": 3
-    },
-    {
-      "name": "FARMANOVA",
-      "count": 3
-    },
-    {
-      "name": "GARNIER",
-      "count": 3
-    },
-    {
-      "name": "LRIS",
-      "count": 3
-    },
-    {
-      "name": "USHAS",
-      "count": 3
-    },
-    {
-      "name": "YARONG",
-      "count": 3
-    },
-    {
-      "name": "AMORUS",
-      "count": 2
-    },
-    {
-      "name": "APTAMIL",
-      "count": 2
-    },
-    {
-      "name": "BRESCIA",
-      "count": 2
-    },
-    {
-      "name": "ECHOS LINE",
-      "count": 2
-    },
-    {
-      "name": "ESSENCE",
-      "count": 2
-    },
-    {
-      "name": "FLORMAR",
-      "count": 2
-    },
-    {
-      "name": "FUSION",
-      "count": 2
-    },
-    {
-      "name": "J-LASH",
-      "count": 2
-    },
-    {
-      "name": "JOJO",
-      "count": 2
-    },
-    {
-      "name": "LISSIA",
-      "count": 2
-    },
-    {
-      "name": "M.A.R.",
-      "count": 2
-    },
-    {
-      "name": "MEICYS",
-      "count": 2
-    },
-    {
-      "name": "MILANI",
-      "count": 2
-    },
-    {
-      "name": "NAIL ART",
-      "count": 2
-    },
-    {
-      "name": "XKJ",
-      "count": 2
-    },
-    {
-      "name": "AMAZING SHINE",
-      "count": 1
-    },
-    {
-      "name": "ANDIS",
-      "count": 1
-    },
-    {
-      "name": "APPLE",
-      "count": 1
-    },
-    {
-      "name": "BEAUTY CARE",
-      "count": 1
-    },
-    {
-      "name": "BIOTANIK",
-      "count": 1
-    },
-    {
-      "name": "BMT",
-      "count": 1
-    },
-    {
-      "name": "CARLITOS",
-      "count": 1
-    },
-    {
-      "name": "COQUETTE",
-      "count": 1
-    },
-    {
-      "name": "DOMPEL",
-      "count": 1
-    },
-    {
-      "name": "DUO",
-      "count": 1
-    },
-    {
-      "name": "ECOMAX",
-      "count": 1
-    },
-    {
-      "name": "ELVIVE",
-      "count": 1
-    },
-    {
-      "name": "EZFLOW",
-      "count": 1
-    },
-    {
-      "name": "FEIXIANG",
-      "count": 1
-    },
-    {
-      "name": "GAIRRIY",
-      "count": 1
-    },
-    {
-      "name": "GUMMY",
-      "count": 1
-    },
-    {
-      "name": "HUDA BEAUTY",
-      "count": 1
-    },
-    {
-      "name": "ISSUE",
-      "count": 1
-    },
-    {
-      "name": "JIA YI FANG",
-      "count": 1
-    },
-    {
-      "name": "KAIZER",
-      "count": 1
-    },
-    {
-      "name": "KUUL",
-      "count": 1
-    },
-    {
-      "name": "L.A. GIRL",
-      "count": 1
-    },
-    {
-      "name": "LIANGLI",
-      "count": 1
-    },
-    {
-      "name": "LISAP",
-      "count": 1
-    },
-    {
-      "name": "LUMINA",
-      "count": 1
-    },
-    {
-      "name": "MAKE UP PRO",
-      "count": 1
-    },
-    {
-      "name": "MANDI",
-      "count": 1
-    },
-    {
-      "name": "NAILEN",
-      "count": 1
-    },
-    {
-      "name": "NEW QUALITY",
-      "count": 1
-    },
-    {
-      "name": "OPZIA",
-      "count": 1
-    },
-    {
-      "name": "ROLDA",
-      "count": 1
-    },
-    {
-      "name": "STAR HAIR",
-      "count": 1
-    },
-    {
-      "name": "URBAN",
-      "count": 1
-    },
-    {
-      "name": "VIZIO",
-      "count": 1
+      "name": "ZZAM"
     }
   ],
   "firstPage": [
@@ -464,215 +183,7 @@
       "brand": null,
       "publicPrice": 2.25,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "0aca3842-b584-454c-bf4b-4f7ac3d306db",
-      "code": "11097",
-      "name": "ACEITE BRESCIA REPARADOR UÑAS & CUTIC.16ml 873598",
-      "slug": "aceite-brescia-reparador-unas-cutic-16ml-873598-11097",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "ACCESORIOS DE UÑAS",
-      "brand": "BRESCIA",
-      "publicPrice": 3.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "fd37ba90-8ba2-448b-a5ab-80e6376f2dfd",
-      "code": "6230",
-      "name": "ACEITE DE BANANA IDEAL 100ML",
-      "slug": "aceite-de-banana-ideal-100ml-6230",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "ACEITE DE CUTICULA",
-      "brand": null,
-      "publicPrice": 1,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "68e9adf3-c79f-40b4-ae8c-07d52ad5f2eb",
-      "code": "10605",
-      "name": "ACEITE DE CUTICULA AMY BEAUTY 11ML",
-      "slug": "aceite-de-cuticula-amy-beauty-11ml-10605",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "ACEITE DE CUTICULA",
-      "brand": "AMY BEAUTY",
-      "publicPrice": 2,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "9a8a447d-038f-40f0-91c8-875f96d68991",
-      "code": "3732",
-      "name": "ACEITE DE CUTICULA COQUETA 15ML ACUL",
-      "slug": "aceite-de-cuticula-coqueta-15ml-acul-3732",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "ACEITE DE CUTICULA",
-      "brand": "COQUETA",
-      "publicPrice": 2.25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "a4cf8efc-29da-4e1a-aa06-b3a8c06c78c4",
-      "code": "9947",
-      "name": "ACEITE DE CUTICULA DUAL LAPIZ CUTICLE OIL 3ML",
-      "slug": "aceite-de-cuticula-dual-lapiz-cuticle-oil-3ml-9947",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "ACEITE DE CUTICULA",
-      "brand": null,
-      "publicPrice": 1.25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "f726de79-a81c-4b59-a857-401534775493",
-      "code": "7166",
-      "name": "ACEITE DE CUTICULA INFINITY CP2287A 15ML",
-      "slug": "aceite-de-cuticula-infinity-cp2287a-15ml-7166",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "ACEITE DE CUTICULA",
-      "brand": null,
-      "publicPrice": 2.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "97505053-707f-4e72-8d64-22da0e9eb65e",
-      "code": "7548",
-      "name": "ACEITE DE CUTICULA L&D CNO6-34",
-      "slug": "aceite-de-cuticula-l-d-cno6-34-7548",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "ACEITE DE CUTICULA",
-      "brand": "L&D",
-      "publicPrice": 2,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "d5414675-35c3-41e3-9066-595c81da8be7",
-      "code": "9684",
-      "name": "ACEITE DE CUTICULA L&D CUTICLE OIL 30ML",
-      "slug": "aceite-de-cuticula-l-d-cuticle-oil-30ml-9684",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "ACEITE DE CUTICULA",
-      "brand": "L&D",
-      "publicPrice": 3.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "43fea21f-3337-4637-938e-a2da961205c7",
-      "code": "9336",
-      "name": "ACEITE DE CUTICULA LAVANDA THE FRUIT LAB VITAMINA 30ML AC.LAVANDA",
-      "slug": "aceite-de-cuticula-lavanda-the-fruit-lab-vitamina-30ml-ac-lavanda-9336",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "ACEITE DE CUTICULA",
-      "brand": "THE FRUIT LAB",
-      "publicPrice": 2,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "eb286518-3d45-4b5a-a1e6-02cfd886c505",
-      "code": "3429",
-      "name": "ACEITE DE CUTICULA MARIA JOSE 30ML",
-      "slug": "aceite-de-cuticula-maria-jose-30ml-3429",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "ACEITE DE CUTICULA",
-      "brand": "MARIA JOSE",
-      "publicPrice": 1.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "ef5220f1-51cc-47ab-b261-f3400a03dae6",
-      "code": "3630",
-      "name": "ACEITE DE CUTICULA MAXYBELT 60ML",
-      "slug": "aceite-de-cuticula-maxybelt-60ml-3630",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "ACEITE DE CUTICULA",
-      "brand": "MAXYBELT",
-      "publicPrice": 2,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "9c75a40d-e395-46b3-8017-b8d339eafe15",
-      "code": "1546",
-      "name": "ACEITE DE CUTICULA MIA SECRET 7.4ML",
-      "slug": "aceite-de-cuticula-mia-secret-7-4ml-1546",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "ACEITE DE CUTICULA",
-      "brand": "MIA SECRET",
-      "publicPrice": 4.9,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "bec044bb-c6c0-46e9-8644-add1d535592e",
-      "code": "2584",
-      "name": "ACEITE DE CUTICULA MIA SECRET CL-01 JASMINE 1/4 OZ",
-      "slug": "aceite-de-cuticula-mia-secret-cl-01-jasmine-1-4-oz-2584",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "ACEITE DE CUTICULA",
-      "brand": "MIA SECRET",
-      "publicPrice": 5.25,
-      "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-0d108a17c380b966.jpg",
       "shortDescription": null
     },
     {
@@ -802,8 +313,346 @@
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/4664-cl-14.jpg",
       "shortDescription": null
+    },
+    {
+      "publicProductId": "69474358-03bb-4234-bc0d-2b20766d88d9",
+      "code": "4017",
+      "name": "ACEITE DE CUTICULA MIA SECRET CL-15 HONEY SUCKLE 1/4 OZ",
+      "slug": "aceite-de-cuticula-mia-secret-cl-15-honey-suckle-1-4-oz-4017",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ACEITE DE CUTICULA",
+      "brand": "MIA SECRET",
+      "publicPrice": 10.3,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/4017-cl-15.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "4b4c771d-fd17-4637-a9bc-9a9b0444d80c",
+      "code": "782",
+      "name": "ACEITE DE CUTICULA MOLLIE 30ML",
+      "slug": "aceite-de-cuticula-mollie-30ml-782",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ACEITE DE CUTICULA",
+      "brand": "MOLLIE",
+      "publicPrice": 1.35,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mollie/782-6521.jpg",
+      "shortDescription": "Hidrata y nutre las cutículas, dejando las uñas suaves y saludables. Su aplicación diaria fortalece y protege, aportando un acabado cuidado y radiante.."
+    },
+    {
+      "publicProductId": "9a3de72e-9727-415f-baeb-a899fda325a0",
+      "code": "2725",
+      "name": "AIRBRUSH TOP COAT MIA SECRET AB-310 15ML",
+      "slug": "airbrush-top-coat-mia-secret-ab-310-15ml-2725",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "TOP COAT",
+      "brand": "MIA SECRET",
+      "publicPrice": 8.35,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/2725-ab-310.jpg",
+      "shortDescription": "AIRBRUSH TOP COAT Es un Top Coat ultrabrillante de larga duración y secado rápido que ofrece durabilidad y resistencia. Su fórmula no se torna amarilla y previene la decoloración de esmaltes, sin requerir lámpara UV o LED."
+    },
+    {
+      "publicProductId": "e56f95e4-d4dc-49f2-a1c3-fde408005aae",
+      "code": "3979",
+      "name": "ALICATE DE MANO 50931 CALA ROSE GOLD",
+      "slug": "alicate-de-mano-50931-cala-rose-gold-3979",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ALICATE",
+      "brand": "CALA",
+      "publicPrice": 9.4,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/cala/3979-50931.jpg",
+      "shortDescription": "El Alicate Mano Rose Gold de CALA es una herramienta esencial para el cuidado profesional de uñas. Su diseño elegante y funcionalidad lo convierten en la opción perfecta para manicuras y pedicuras precisas.. Acabado rose gold que aporta estilo y durabilidad.. Corte preciso para un cuidado efectivo de uñas y cutículas.. Ergonomía que facilita su uso cómodo y seguro.. Material resistente que garantiza larga vida útil.. Recomendado para uso profesional y personal, este alicate es ideal para mantener tus uñas en óptimas condiciones con un toque de elegancia.."
+    },
+    {
+      "publicProductId": "41c55edc-12fd-4996-9d65-8067626c8171",
+      "code": "7258",
+      "name": "ALICATE DE MANO GLAM NAILS SILVER VNC520",
+      "slug": "alicate-de-mano-glam-nails-silver-vnc520-7258",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ALICATE",
+      "brand": "GLAM NAILS",
+      "publicPrice": 2.3,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/glam-nails/7258-vnc520.jpg",
+      "shortDescription": "Su diseño ergonómico y su acabado plateado le dan un aspecto profesional y elegante, mientras que su construcción robusta garantiza durabilidad y resistencia. Ideal para cortar y dar forma a las uñas con facilidad, este alicate permite lograr resultados precisos y limpios, tanto en manicuras caseras como profesionales. Su manejo suave y preciso lo convierte en una herramienta indispensable para mantener las uñas impecables y bien cuidadas."
+    },
+    {
+      "publicProductId": "6cadba4f-3a4c-4c47-8194-1e0e61506800",
+      "code": "10280",
+      "name": "ALICATE DE MANO STALEKS  PRO NS-30-3",
+      "slug": "alicate-de-mano-staleks-pro-ns-30-3-10280",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ALICATE",
+      "brand": "STALEKS",
+      "publicPrice": 18.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/staleks/10280-ns-30-3.jpg",
+      "shortDescription": "Alicate ideal para manicuras detalladas."
+    },
+    {
+      "publicProductId": "87519e1d-2134-4f34-a743-296f29e94636",
+      "code": "2128",
+      "name": "ALICATE DE MANO STALEKS NS-30-5 HALF JAW",
+      "slug": "alicate-de-mano-staleks-ns-30-5-half-jaw-2128",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ALICATE",
+      "brand": "STALEKS",
+      "publicPrice": 19,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/staleks/2128-ns-30-5.jpg",
+      "shortDescription": "Alicate ideal para manicuras detalladas."
+    },
+    {
+      "publicProductId": "245ced56-c6bc-4b6e-bb66-4972d4fb18f4",
+      "code": "3004",
+      "name": "ALICATE DE MANO STALEKS NS-30-7 FULL JAW",
+      "slug": "alicate-de-mano-staleks-ns-30-7-full-jaw-3004",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ALICATE",
+      "brand": "STALEKS",
+      "publicPrice": 18.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/staleks/3004-ns-30-7.jpg",
+      "shortDescription": "Descubre la precisión y la calidad en el cuidado de uñas con el Alicate Profesional para Manicure y Pedicure Staleks. Diseñado para ofrecer un rendimiento superior tanto en manicuras como pedicuras, este alicate es la herramienta esencial para lograr resultados impecables y duraderos."
+    },
+    {
+      "publicProductId": "c8f80929-1d17-4d89-a998-3de0d095fac3",
+      "code": "9401",
+      "name": "ALICATE DE MANO STALEKS NS-31-3 QUATER JAW",
+      "slug": "alicate-de-mano-staleks-ns-31-3-quater-jaw-9401",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ALICATE",
+      "brand": "MASTER NAILS",
+      "publicPrice": 18.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/9401-ns313.jpg",
+      "shortDescription": "Alicate ideal para manicuras detalladas."
+    },
+    {
+      "publicProductId": "25f7292b-36c3-4576-b482-47d1a86d062f",
+      "code": "4934",
+      "name": "ALICATE DE MANO STALEKS NS-31-5 HALF JAW",
+      "slug": "alicate-de-mano-staleks-ns-31-5-half-jaw-4934",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ALICATE",
+      "brand": "STALEKS",
+      "publicPrice": 22.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/staleks/4934-ns-31-5.jpg",
+      "shortDescription": "El alicate para manos Staleks es una herramienta de alta calidad diseñada para el cuidado de las uñas y cutículas. Fabricado por Staleks, una marca reconocida en el mundo de la manicura y pedicura profesional, este alicate está construido con materiales duraderos y precisión en su diseño."
+    },
+    {
+      "publicProductId": "016078e8-0b25-486b-b907-c6755d22c0af",
+      "code": "2129",
+      "name": "ALICATE DE MANO STALEKS NS-31-7 FULL JAW",
+      "slug": "alicate-de-mano-staleks-ns-31-7-full-jaw-2129",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ALICATE",
+      "brand": "STALEKS",
+      "publicPrice": 20,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/staleks/2129-ns-31-7.jpg",
+      "shortDescription": "Alicate ideal para manicuras detalladas."
+    },
+    {
+      "publicProductId": "3d9b38b6-9703-451e-8066-1501e243481a",
+      "code": "3815",
+      "name": "ALICATE DE MANO STALEKS SMART 70 NS-70-14",
+      "slug": "alicate-de-mano-staleks-smart-70-ns-70-14-3815",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ALICATE",
+      "brand": "STALEKS",
+      "publicPrice": 22.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/staleks/3815-ns-70-14.jpg",
+      "shortDescription": "Eleva tu rutina de cuidado de pies con el Alicate Profesional para Pedicure Smart 70, diseñado para ofrecer precisión, comodidad y durabilidad en cada uso. Ideal para profesionales y entusiastas del cuidado personal, este alicate es la herramienta definitiva para lograr una pedicure impecable y eficaz."
+    },
+    {
+      "publicProductId": "d1101641-70ea-497c-9855-12d6b51f9321",
+      "code": "3816",
+      "name": "ALICATE DE MANO STALEKS SMART 71 NS-71-14",
+      "slug": "alicate-de-mano-staleks-smart-71-ns-71-14-3816",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ALICATE",
+      "brand": "STALEKS",
+      "publicPrice": 19,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/staleks/3816-ns-71-14.png",
+      "shortDescription": "El Alicate Profesional para Cutículas Smart 71/14 de STALEKS es una herramienta esencial para el cuidado y embellecimiento de las uñas. Diseñado para ofrecer precisión y durabilidad, es ideal para uso profesional y personal.. Material de alta calidad: fabricado en acero inoxidable para garantizar resistencia y larga vida útil.. Corte preciso: permite eliminar cutículas con facilidad y sin dañar la piel.. Diseño ergonómico: cómodo para un manejo seguro y eficiente durante el manicure.. Versatilidad: adecuado para uso en salones de belleza y cuidado personal.. Recomendado para profesionales y amantes del cuidado de uñas que buscan resultados limpios y detallados. Mantén tus herramientas limpias y afiladas para un desempeño óptimo.."
     }
   ],
-  "firstPageTotal": 4857,
-  "fetchedAt": "2026-08-19T14:26:25.583Z"
+  "firstPageHasMore": true,
+  "highlights": [
+    {
+      "publicProductId": "28c1109a-462d-4d7f-bb7c-c6b6804fc852",
+      "code": "8770",
+      "name": "BASE RUBBER GLAM NAILS #01 15ML EGR-01",
+      "slug": "base-rubber-glam-nails-01-15ml-egr-01-8770",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ESMALTE SEMIPERMANENTE",
+      "brand": "GLAM NAILS",
+      "publicPrice": 2,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-5966914dd00e979a.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "cd6fea33-a92d-44ed-bdfe-5d6a7d8293c9",
+      "code": "10750",
+      "name": "LAMPARA GLAM NAILS LED SOFT GEL CON SOPORTE GN-LMP116",
+      "slug": "lampara-glam-nails-led-soft-gel-con-soporte-gn-lmp116-10750",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "LAMPARA DE UÑAS",
+      "brand": "GLAM NAILS",
+      "publicPrice": 5.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-42f411566f723262.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "dd466877-e0be-41ed-b279-37e9c071d00d",
+      "code": "10749",
+      "name": "LAMPARA LED HAND LIGHT SOFT GEL GN-LMP110",
+      "slug": "lampara-led-hand-light-soft-gel-gn-lmp110-10749",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "LAMPARA DE UÑAS",
+      "brand": "GLAM NAILS",
+      "publicPrice": 2.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-866bee10db0e1d45.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "bbe6e757-0b0d-4e69-921e-200c6be3aefa",
+      "code": "10803",
+      "name": "LAMPARA GLAM NAILS LED SOFT GEL METAL GN-LMP111",
+      "slug": "lampara-glam-nails-led-soft-gel-metal-gn-lmp111-10803",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "LAMPARA DE UÑAS",
+      "brand": "GLAM NAILS",
+      "publicPrice": 3.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-b1af0088cb13ee91.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "02ff4e78-1460-426a-b35e-af67f12462cb",
+      "code": "11710",
+      "name": "BANDEJA PARA HERRAMIENTAS B03 OVALADA GOLD ZP26-B03",
+      "slug": "bandeja-para-herramientas-b03-ovalada-gold-zp26-b03-11710",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ACCESORIOS DE UÑAS",
+      "brand": "GLAM NAILS",
+      "publicPrice": 3.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-4d6869566fb7e915.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "16e17cba-49d6-4b35-b131-a943ccde17e0",
+      "code": "11811",
+      "name": "DECORACION DE UÑAS X16 VARIOS MODELOS  JDM404 JDM405 JDM401 JDM404JDM407",
+      "slug": "decoracion-de-unas-x16-varios-modelos-jdm404-jdm405-jdm401-jdm404jdm407-11811",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ACEITE DE CUTICULA",
+      "brand": "JDM",
+      "publicPrice": 3,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-40caebb50c482c56.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "6ad376ef-e4c9-4de0-9836-29f2c3e02a5d",
+      "code": "11813",
+      "name": "DECORACION DE UÑAS JDM VARIOS MODELOS RZ207 JDM021 JDM213 JDM020 JDM024",
+      "slug": "decoracion-de-unas-jdm-varios-modelos-rz207-jdm021-jdm213-jdm020-jdm024-11813",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ACCESORIOS DE UÑAS",
+      "brand": "JDM",
+      "publicPrice": 1.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-5868ed7229f5f16d.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "73eb9582-2195-4b1d-a2c3-b67b118ec6cd",
+      "code": "11814",
+      "name": "DECORACION DE UÑAS JDM VARIOS MODELOS X12 JDM109 JDM125 JDM113",
+      "slug": "decoracion-de-unas-jdm-varios-modelos-x12-jdm109-jdm125-jdm113-11814",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ACCESORIOS DE UÑAS",
+      "brand": "JDM",
+      "publicPrice": 1.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-144c1ae814e32bc6.jpg",
+      "shortDescription": null
+    }
+  ],
+  "fetchedAt": "2026-09-17T19:06:20.237Z"
 }

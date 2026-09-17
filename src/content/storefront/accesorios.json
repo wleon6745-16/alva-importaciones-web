@@ -3,382 +3,33 @@
   "categoryLabel": "Accesorios",
   "description": null,
   "featured": false,
-  "productCount": 408,
   "brands": [
     {
-      "name": "GLAM BEAUTY",
-      "count": 52
+      "name": "E&A"
     },
     {
-      "name": "STAR HAIR",
-      "count": 20
+      "name": "GLAM BEAUTY"
     },
     {
-      "name": "VANITY",
-      "count": 15
+      "name": "GLAM NAILS"
     },
     {
-      "name": "MAKE UP PRO",
-      "count": 8
+      "name": "J-LASH"
     },
     {
-      "name": "J-LASH",
-      "count": 7
+      "name": "MASTER NAILS"
     },
     {
-      "name": "GLAM NAILS",
-      "count": 6
+      "name": "MAXE"
     },
     {
-      "name": "ZZAM",
-      "count": 6
+      "name": "STAR HAIR"
     },
     {
-      "name": "ADDICT",
-      "count": 3
-    },
-    {
-      "name": "AMY BEAUTY",
-      "count": 3
-    },
-    {
-      "name": "ABELLA",
-      "count": 2
-    },
-    {
-      "name": "LA COLORS",
-      "count": 2
-    },
-    {
-      "name": "MASTER NAILS",
-      "count": 2
-    },
-    {
-      "name": "SATINE",
-      "count": 2
-    },
-    {
-      "name": "ANDIS",
-      "count": 1
-    },
-    {
-      "name": "APPLE",
-      "count": 1
-    },
-    {
-      "name": "BABARIA",
-      "count": 1
-    },
-    {
-      "name": "BELLACOTTON",
-      "count": 1
-    },
-    {
-      "name": "CALA",
-      "count": 1
-    },
-    {
-      "name": "COQUETA",
-      "count": 1
-    },
-    {
-      "name": "CREMA DERM",
-      "count": 1
-    },
-    {
-      "name": "DOMPEL",
-      "count": 1
-    },
-    {
-      "name": "E&A",
-      "count": 1
-    },
-    {
-      "name": "HENBOR",
-      "count": 1
-    },
-    {
-      "name": "HOT TOOLS",
-      "count": 1
-    },
-    {
-      "name": "HUDA BEAUTY",
-      "count": 1
-    },
-    {
-      "name": "L'DIOR",
-      "count": 1
-    },
-    {
-      "name": "LINDA",
-      "count": 1
-    },
-    {
-      "name": "MARLA",
-      "count": 1
-    },
-    {
-      "name": "MARTINA",
-      "count": 1
-    },
-    {
-      "name": "MAXE",
-      "count": 1
-    },
-    {
-      "name": "MIA SECRET",
-      "count": 1
-    },
-    {
-      "name": "SILETI",
-      "count": 1
-    },
-    {
-      "name": "URBAN",
-      "count": 1
+      "name": "ZZAM"
     }
   ],
   "firstPage": [
-    {
-      "publicProductId": "9a0a7589-ce4e-415a-a898-024e0ca2179c",
-      "code": "6746",
-      "name": "ACCESORIO DE CABELLO STAR HAIR VNC826",
-      "slug": "accesorio-de-cabello-star-hair-vnc826-6746",
-      "category": {
-        "slug": "accesorios",
-        "label": "Accesorios"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": "LA COLORS",
-      "publicPrice": 0.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "7685e53c-35dc-4138-903a-b0d6a832d5da",
-      "code": "4849",
-      "name": "ACCESORIOS PARA PEINADOS GRANDE VN596",
-      "slug": "accesorios-para-peinados-grande-vn596-4849",
-      "category": {
-        "slug": "accesorios",
-        "label": "Accesorios"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 1.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "cc0efde1-48f5-44d9-bfbe-37162cd7cd73",
-      "code": "4662",
-      "name": "ACCESORIOS PARA PEINADOS PEQUEÑOS VN601",
-      "slug": "accesorios-para-peinados-pequenos-vn601-4662",
-      "category": {
-        "slug": "accesorios",
-        "label": "Accesorios"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 1,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "b8660766-9117-4917-815f-ae6fbd86821a",
-      "code": "5287",
-      "name": "ACRILCIO PORTA BROCA BJ01-47",
-      "slug": "acrilcio-porta-broca-bj01-47-5287",
-      "category": {
-        "slug": "accesorios",
-        "label": "Accesorios"
-      },
-      "subcategory": "ACRILICO",
-      "brand": null,
-      "publicPrice": 5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "5b1b269b-3845-4dfe-acf8-82ec5ddc469c",
-      "code": "5281",
-      "name": "ACRILICO 2 PIEZAS COSMETIC STORAGE BOX BJ02-9",
-      "slug": "acrilico-2-piezas-cosmetic-storage-box-bj02-9-5281",
-      "category": {
-        "slug": "accesorios",
-        "label": "Accesorios"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 10,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "d05a0da9-9ccb-4366-b72b-d646f4f97420",
-      "code": "5282",
-      "name": "ACRILICO COSMETIC ORGANIZED BJ02-7",
-      "slug": "acrilico-cosmetic-organized-bj02-7-5282",
-      "category": {
-        "slug": "accesorios",
-        "label": "Accesorios"
-      },
-      "subcategory": "ACRILICO",
-      "brand": null,
-      "publicPrice": 10,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "c7592461-4227-4ef1-8981-8fedf64d99e8",
-      "code": "5289",
-      "name": "ACRILICO JOYERO X3 BJ02-13",
-      "slug": "acrilico-joyero-x3-bj02-13-5289",
-      "category": {
-        "slug": "accesorios",
-        "label": "Accesorios"
-      },
-      "subcategory": "ACRILICO",
-      "brand": null,
-      "publicPrice": 5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "11020f3a-0456-40f1-b92e-5ec1208befeb",
-      "code": "5288",
-      "name": "ACRILICO JOYERO X3 CX-20 BJ02-14",
-      "slug": "acrilico-joyero-x3-cx-20-bj02-14-5288",
-      "category": {
-        "slug": "accesorios",
-        "label": "Accesorios"
-      },
-      "subcategory": "ACRILICO",
-      "brand": null,
-      "publicPrice": 6,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "ebf383c9-b5f3-48c4-ab00-4a678ada9aad",
-      "code": "5286",
-      "name": "ACRILICO JOYERO X3 CX-30 BJ02-15",
-      "slug": "acrilico-joyero-x3-cx-30-bj02-15-5286",
-      "category": {
-        "slug": "accesorios",
-        "label": "Accesorios"
-      },
-      "subcategory": "ACRILICO",
-      "brand": null,
-      "publicPrice": 6,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "f65a2691-7f59-4155-9732-bc9570b1f6bc",
-      "code": "5283",
-      "name": "ACRILICO ORGANIZADOR CON ESPEJO BJ02-12",
-      "slug": "acrilico-organizador-con-espejo-bj02-12-5283",
-      "category": {
-        "slug": "accesorios",
-        "label": "Accesorios"
-      },
-      "subcategory": "ACRILICO",
-      "brand": null,
-      "publicPrice": 11,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "28254ef4-1c29-4e38-a3a0-6ad63d887167",
-      "code": "7754",
-      "name": "ACRILICO ORGANIZADOR MULTIUSO CLEAR WT54",
-      "slug": "acrilico-organizador-multiuso-clear-wt54-7754",
-      "category": {
-        "slug": "accesorios",
-        "label": "Accesorios"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "baecc32f-feef-4617-95a8-2a578704bc59",
-      "code": "7755",
-      "name": "ACRILICO ORGANIZADOR MULTIUSO MARMOL WT53",
-      "slug": "acrilico-organizador-multiuso-marmol-wt53-7755",
-      "category": {
-        "slug": "accesorios",
-        "label": "Accesorios"
-      },
-      "subcategory": "ACCESORIOS DE UÑAS",
-      "brand": null,
-      "publicPrice": 31.25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "726bf216-1eb8-42cc-b1c6-07bfe872914a",
-      "code": "5290",
-      "name": "ACRILICO PORTA BROCHA BJ02-1",
-      "slug": "acrilico-porta-brocha-bj02-1-5290",
-      "category": {
-        "slug": "accesorios",
-        "label": "Accesorios"
-      },
-      "subcategory": "ACRILICO",
-      "brand": null,
-      "publicPrice": 6,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "0ea954a9-b479-4f44-bccd-a0100279c9fb",
-      "code": "6645",
-      "name": "ACRLICO PARA FOTO DE UÑAS U-DMET-CN",
-      "slug": "acrlico-para-foto-de-unas-u-dmet-cn-6645",
-      "category": {
-        "slug": "accesorios",
-        "label": "Accesorios"
-      },
-      "subcategory": "ACCESORIOS DE UÑAS",
-      "brand": null,
-      "publicPrice": 3,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "079835fb-b1a3-418b-84a8-21e612f63dd6",
-      "code": "2253",
-      "name": "ADHESIVO PARA PESTAÑA RPP11 WT58",
-      "slug": "adhesivo-para-pestana-rpp11-wt58-2253",
-      "category": {
-        "slug": "accesorios",
-        "label": "Accesorios"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 4,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
     {
       "publicProductId": "acc18bb6-218d-49b4-94a4-cfee9be1e8d5",
       "code": "9568",
@@ -392,8 +43,8 @@
       "brand": null,
       "publicPrice": 24,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/9568-ds152.jpg",
+      "shortDescription": "El Aerógrafo Profesional Recargable de Glam Nails es la herramienta perfecta para lograr acabados precisos y creativos en uñas, maquillaje y diseño artístico. Su sistema inalámbrico recargable brinda mayor comodidad y libertad de movimiento, permitiendo trabajar sin cables y con total control. Ofrece una pulverización uniforme y fina, ideal para técnicas de nail art, degradados, efectos y detalles profesionales. Su diseño compacto y ergonómico facilita su uso tanto para principiantes como para expertos. Fabricado con materiales de alta calidad, garantiza durabilidad y un rendimiento eficiente, convirtiéndose en un aliado indispensable para salones de belleza y uso personal."
     },
     {
       "publicProductId": "ef7dd6c4-d366-4a30-8f64-1eae52cec033",
@@ -408,122 +59,492 @@
       "brand": null,
       "publicPrice": 24,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-ce2e8e7371b3f2f3.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "8b054bc4-6314-4764-b52e-93121ec293ea",
-      "code": "1793",
-      "name": "ALMOHADA CUADRADA VARIOS DISEÑOS",
-      "slug": "almohada-cuadrada-varios-disenos-1793",
-      "category": {
-        "slug": "accesorios",
-        "label": "Accesorios"
-      },
-      "subcategory": "ALMOHADA",
-      "brand": null,
-      "publicPrice": 8,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "8cf1b60e-1e38-4548-abe7-5f7626e67aee",
-      "code": "2644",
-      "name": "ALMOHADA PARA DESCANSAR MANO H40802",
-      "slug": "almohada-para-descansar-mano-h40802-2644",
-      "category": {
-        "slug": "accesorios",
-        "label": "Accesorios"
-      },
-      "subcategory": "ALMOHADA",
-      "brand": null,
-      "publicPrice": 11.9,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "51a88f51-38c3-47c0-bf71-468262cd66d4",
-      "code": "7496",
-      "name": "ANILLOS VARIOS COLORES P010-9",
-      "slug": "anillos-varios-colores-p010-9-7496",
+      "publicProductId": "3f5b44a7-20c3-487b-8fd8-54389db50c12",
+      "code": "11056",
+      "name": "ARO LUZ 18\" GLAM BEAUTY CON CONTROL REMOTO 3PORTA CELULAR .+TRIP.ODE  LA005",
+      "slug": "aro-luz-18-glam-beauty-con-control-remoto-3porta-celular-trip-ode-la005-11056",
       "category": {
         "slug": "accesorios",
         "label": "Accesorios"
       },
       "subcategory": "ACCESORIOS C",
-      "brand": null,
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 27,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/11056-la005.jpg",
+      "shortDescription": "El Aro de Luz 18” LA005 es la herramienta ideal para lograr una iluminación profesional en fotos, videos, maquillaje, transmisiones en vivo y creación de contenido. Gracias a su diseño moderno y funcional, proporciona una luz uniforme que elimina sombras y resalta los detalles del rostro. Incluye control remoto para ajustar fácilmente la intensidad y temperatura de color, permitiendo elegir entre luz cálida, neutra o fría según la necesidad. Además, cuenta con 3 soportes para celular, perfectos para grabar desde distintos ángulos al mismo tiempo. Su trípode ajustable brinda estabilidad y altura regulable, adaptándose a cualquier espacio. Es fácil de instalar y transportar, convirtiéndolo en un accesorio indispensable tanto para uso profesional como personal."
+    },
+    {
+      "publicProductId": "731ff5aa-acd1-4877-8319-24e9771097bf",
+      "code": "4081",
+      "name": "BANDA DEPILATORIA GLAM BEAUTY LN942",
+      "slug": "banda-depilatoria-glam-beauty-ln942-4081",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM BEAUTY",
       "publicPrice": 5,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/glam-beauty/4081-ln942.jpg",
+      "shortDescription": "Las bandas depilatorias son productos utilizados para la depilación temporal de vello no deseado en diversas partes del cuerpo. Consisten en tiras de papel o tela cubiertas con una capa de cera, que se adhieren al vello cuando se presionan sobre la piel y luego se retiran rápidamente, arrancando el vello desde la raíz."
     },
     {
-      "publicProductId": "ece8763d-0fe2-4f5f-81ab-edcb4c6ec43c",
-      "code": "3450",
-      "name": "ANTIFAZ GLAM BEAUTY VARIOS COLORES KW1206",
-      "slug": "antifaz-glam-beauty-varios-colores-kw1206-3450",
+      "publicProductId": "b4e47aa2-a1ea-4e04-83d4-8c4e2d7047e1",
+      "code": "11834",
+      "name": "BOLSO GLAM BEAUTY ORGANIZADOR BLACK VNC637",
+      "slug": "bolso-glam-beauty-organizador-black-vnc637-11834",
       "category": {
         "slug": "accesorios",
         "label": "Accesorios"
       },
       "subcategory": "ACCESORIOS C",
       "brand": "GLAM BEAUTY",
-      "publicPrice": 3.5,
+      "publicPrice": 33,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-127675268070b2e0.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "2e19fcef-3baf-4b32-a378-97d67e3891be",
-      "code": "1795",
-      "name": "ANTIFAZ MC VARIOS COLORES",
-      "slug": "antifaz-mc-varios-colores-1795",
+      "publicProductId": "de05f095-6b46-4691-a007-8503bf088043",
+      "code": "11746",
+      "name": "BOLSO ORGANIZADOR GLAM BEAUTY BLACK CNU1016",
+      "slug": "bolso-organizador-glam-beauty-black-cnu1016-11746",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM NAILS",
+      "publicPrice": 17,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-ffb7f562ebfab6f0.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "08a6c755-9855-40f2-9064-263079aa32f5",
+      "code": "11354",
+      "name": "BOLSO PARA BARBERIA MA-330",
+      "slug": "bolso-para-barberia-ma-330-11354",
       "category": {
         "slug": "accesorios",
         "label": "Accesorios"
       },
       "subcategory": "ACCESORIOS C",
       "brand": null,
-      "publicPrice": 3.5,
+      "publicPrice": 18,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-a647702c9ff5caaa.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "deeb0642-0487-4899-9796-4b4db161722a",
-      "code": "7247",
-      "name": "APLICADOR DE ROSTRO GLAM BEAUTY VNC324",
-      "slug": "aplicador-de-rostro-glam-beauty-vnc324-7247",
+      "publicProductId": "37c233e3-4f99-44ad-9b85-48db1dc54621",
+      "code": "1665",
+      "name": "CALENTADOR DE CERA MAXE 100W MX-557",
+      "slug": "calentador-de-cera-maxe-100w-mx-557-1665",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "CERA DEPILAR",
+      "brand": "MAXE",
+      "publicPrice": 9.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dmujeres/maxe/1665-mx-557.jpg",
+      "shortDescription": "Este calentador Maxe calienta todo tipo de cera. Su tapa de plástico resistente, semitransparente permite ver la cera sin ensuciar. Funde tu cera depilatoria a la temperatura ideal. Contenedor con regulador de temperatura manual. Uso elétrico Fácil de usar y limpiar. • CUBIERTA SEMITRANSPARENTE QUE PERMITE VER LA CERA SIN ENSUCIAR. • TAPA DE PLÁSTICO RESISTENTES. • FUNDE TU CERA DEPILATORIA A LA TEMPERATURA IDEAL. • CONTENEDOR CON REGULADOR DE TEMPERATURA MANUAL • CALENTAMIENTO 36º PARA UNA FUSIÓN DE CERA. • INCLUYE MAQUINA CALENTADOR DE CERA, TAPA Y OLLA"
+    },
+    {
+      "publicProductId": "002e1035-3b63-493c-8bf5-9d46d0cffe59",
+      "code": "9667",
+      "name": "CARRO AUXILIAR GLAM BEAUTY MULTIUSO METAL DS772",
+      "slug": "carro-auxiliar-glam-beauty-multiuso-metal-ds772-9667",
       "category": {
         "slug": "accesorios",
         "label": "Accesorios"
       },
       "subcategory": "ACCESORIOS C",
       "brand": "GLAM BEAUTY",
-      "publicPrice": 1.25,
+      "publicPrice": 16.25,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/9667.png",
       "shortDescription": null
     },
     {
-      "publicProductId": "b5230602-e69a-4415-8332-bd572afb01f3",
-      "code": "2930",
-      "name": "APLICADOR MIA SECRET PARA CEJAS X100 EP-3040",
-      "slug": "aplicador-mia-secret-para-cejas-x100-ep-3040-2930",
+      "publicProductId": "ba2de764-202b-489c-83f8-383a537509db",
+      "code": "8601",
+      "name": "CARRO AUXILIAR GLAM BEAUTY MULTIUSO METAL DS774",
+      "slug": "carro-auxiliar-glam-beauty-multiuso-metal-ds774-8601",
       "category": {
         "slug": "accesorios",
         "label": "Accesorios"
       },
       "subcategory": "ACCESORIOS C",
-      "brand": "MIA SECRET",
-      "publicPrice": 3.15,
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 21.9,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/glam-beauty/8601-ds774.jpg",
+      "shortDescription": "El Organizador Metálico GLAM BEAUTY es la solución ideal para mantener tus productos de belleza ordenados y accesibles. Su diseño metálico aporta resistencia y estilo a cualquier espacio.. Material duradero: fabricado en metal para mayor resistencia.. Diseño compacto: ocupa poco espacio, ideal para tocadores y escritorios.. Organización eficiente: permite clasificar cosméticos y accesorios fácilmente.. Estilo elegante: acabado moderno que complementa tu decoración.. Perfecto para quienes buscan mantener su rutina de belleza organizada y práctica. Ideal para uso diario en el hogar o en espacios profesionales.."
+    },
+    {
+      "publicProductId": "45c3b07d-de2c-4a8f-868e-eb01cc8506f6",
+      "code": "9657",
+      "name": "CEPIILLO DE BAMBOO STAR HAIRD ZPV 2770",
+      "slug": "cepiillo-de-bamboo-star-haird-zpv-2770-9657",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "CEPILLO DE PEINAR",
+      "brand": "STAR HAIR",
+      "publicPrice": 3,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-0decabbca6361fff.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "62aa7408-3f2b-4fa2-abf6-af20066b2100",
+      "code": "10283",
+      "name": "CUBIERTA PARA PEZONES J LASHX 10pc DESECHABLE JB-NC1",
+      "slug": "cubierta-para-pezones-j-lashx-10pc-desechable-jb-nc1-10283",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "J-LASH",
+      "publicPrice": 1.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/j-lash/10283-jb-nc1.jpg",
+      "shortDescription": "Comodidad, seguridad y libertad en cada movimiento. Los Cubrepesones Adhesivos de J LASH son el complemento perfecto para usar con prendas escotadas, sin tirantes o con transparencias. Su diseño ultrafino y adhesivo suave se adapta naturalmente a la piel, brindando cobertura invisible y una sensación ligera como una segunda piel. Qué soluciona: Evita transparencias, roces o marcas incómodas bajo la ropa. Proporciona una cobertura discreta y segura sin necesidad de brasier. Modo de uso: Asegúrate de que la piel esté limpia, seca y sin crema o aceites.. Retira el protector del adhesivo y coloca el cubrepesón centrado.. Presiona suavemente para asegurar una fijación uniforme.. Para retirarlos, despega con cuidado desde el borde y limpia con agua tibia si son reutilizables.. Detalles del producto: Color: Natural nude. Material: Silicona médica hipoalergénica. Adhesivo: Autoadhesivo reutilizable. Diámetro: 6.5 cm (aprox.). Acabado: Mate, invisible bajo la ropa. Uso: Ideal para eventos, outfits sin brasier o prendas ajustadas. Características adicionales: Suaves con la piel | No irritan | Cruelty Free Aptos para todo tipo de piel | Sin látex ni fragancias"
+    },
+    {
+      "publicProductId": "8d1bd43d-dab7-47fc-a5b4-e5853825cd50",
+      "code": "9555",
+      "name": "DECORACION UÑAS LAZOS/PERLAS ORGANIZADOR DS674",
+      "slug": "decoracion-unas-lazos-perlas-organizador-ds674-9555",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS DE UÑAS",
+      "brand": null,
+      "publicPrice": 1.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/9555-ds674.jpg",
+      "shortDescription": "Realza la belleza de tus uñas con la decoración tornasol en forma de lazo adornada con perlas, diseñada para un acabado sofisticado y único. Diseño exclusivo: Lazo tornasol que refleja múltiples colores según la luz. Detalles elegantes: Perlas que aportan un toque delicado y femenino. Fácil aplicación: Ideal para complementar tu nail art con estilo profesional. Versatilidad: Perfecta para eventos especiales o para un look diario con personalidad. Incorpora esta decoración a tus uñas para destacar tu estilo y creatividad, logrando un acabado impecable y llamativo."
+    },
+    {
+      "publicProductId": "9830eae7-d655-47e5-9860-3416b680760e",
+      "code": "11397",
+      "name": "DIFUSOR SAMYE SECADORA REPUESTO SY-008 C-DS-04",
+      "slug": "difusor-samye-secadora-repuesto-sy-008-c-ds-04-11397",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 6.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-24f8c195744d31c7.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "aaf25431-7bb9-4754-9a68-a71d17542c02",
+      "code": "11900",
+      "name": "ESPEJO CIRCULAR DE COLOR ORO ROSA CON UN DIAMETRO DE 16CM IM-119",
+      "slug": "espejo-circular-de-color-oro-rosa-con-un-diametro-de-16cm-im-119-11900",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "ZZAM",
+      "publicPrice": 6,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-3a33722d8efc7861.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "99f92294-e68b-4e68-85ee-4b8e9f67cfa6",
+      "code": "5939",
+      "name": "ESPEJO DE MADERA GIRATORIA OVALADO TC-13",
+      "slug": "espejo-de-madera-giratoria-ovalado-tc-13-5939",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 3.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/5939-tc13.jpg",
+      "shortDescription": "El Espejo Circular de GLAM BEAUTY es un accesorio esencial para quienes buscan precisión y comodidad en su rutina de belleza. Diseño compacto y elegante que se adapta a cualquier espacio. Ideal para aplicar maquillaje con detalle y claridad. Fácil de transportar para uso en casa o fuera de ella. Perfecto para complementar tu set de belleza y facilitar tu cuidado diario."
+    },
+    {
+      "publicProductId": "429cd2e6-cf85-4ac5-98a9-592e0ec35044",
+      "code": "11761",
+      "name": "ESPEJO OVALADO PEDESTAL ORO ROSA IM-116",
+      "slug": "espejo-ovalado-pedestal-oro-rosa-im-116-11761",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "E&A",
+      "publicPrice": 7.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-0ea355d4c5e49e92.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "0c7bb1b1-d2b1-42a1-85c8-9910911f7a4f",
+      "code": "5895",
+      "name": "ESTUCHE MULTIUSO C405",
+      "slug": "estuche-multiuso-c405-5895",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 12.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-fca5578a842a605c.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "772c42e4-3ab2-49ec-b471-df9492bc6b25",
+      "code": "7351",
+      "name": "ESTUCHE PARA ACCESORIOS MULTIUSO VY-84",
+      "slug": "estuche-para-accesorios-multiuso-vy-84-7351",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 9,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-46c9866595a5ad4d.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "876ddce4-c8d1-44eb-b2d9-911893684bb9",
+      "code": "7708",
+      "name": "GORRO DESECHABLE GLAM BEAUTY JL1581",
+      "slug": "gorro-desechable-glam-beauty-jl1581-7708",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 4.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/glam-beauty/7708-jl1581.png",
+      "shortDescription": "Pack de 100 gorros desechables ideales para uso en salones de belleza, spas, centros estéticos y tratamientos capilares. Fabricados con material ligero y cómodo, ayudan a mantener la higiene durante procedimientos de cuidado personal, protegiendo el cabello y evitando la contaminación cruzada. Su diseño elástico permite un ajuste seguro para diferentes tamaños."
+    },
+    {
+      "publicProductId": "0b28184b-0c2f-4462-a0a6-b6e24c103d6a",
+      "code": "3616",
+      "name": "LAMPARA DE ESCRITORIO GLAM NAILS E27 / E27-1",
+      "slug": "lampara-de-escritorio-glam-nails-e27-e27-1-3616",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "LAMPARA DE MESA",
+      "brand": "GLAM NAILS",
+      "publicPrice": 14,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/glam-nails/3616-e27-1.jpg",
+      "shortDescription": "Perfecta para realizar manicuras con comodidad y eficiencia."
+    },
+    {
+      "publicProductId": "d97317ad-5f18-4711-8de9-68479ecba19c",
+      "code": "11748",
+      "name": "LIMPIADOR ELECTRICO DE BROCHAS GLAM BEAUTY CNU992",
+      "slug": "limpiador-electrico-de-brochas-glam-beauty-cnu992-11748",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 4.8,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-15a37f6efaa23f1b.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "032c805a-8151-4173-a697-5e585875fc8e",
+      "code": "11102",
+      "name": "MALETA GLAM BEAUTY SILVER MATERIAL RESISTENTE XY-96",
+      "slug": "maleta-glam-beauty-silver-material-resistente-xy-96-11102",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 29.9,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-a1aa8655a7f6d490.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "a671d540-b05a-4183-b253-73171fe42628",
+      "code": "10338",
+      "name": "MALETA ORGANIZADORA GLAM BEAUTY DOBLE CIERRE YM811",
+      "slug": "maleta-organizadora-glam-beauty-doble-cierre-ym811-10338",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS DE UÑAS",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-8846532f5b0d5e0f.jpg",
       "shortDescription": null
     }
   ],
-  "firstPageTotal": 408,
-  "fetchedAt": "2026-08-19T14:26:25.583Z"
+  "firstPageHasMore": true,
+  "highlights": [
+    {
+      "publicProductId": "aaf25431-7bb9-4754-9a68-a71d17542c02",
+      "code": "11900",
+      "name": "ESPEJO CIRCULAR DE COLOR ORO ROSA CON UN DIAMETRO DE 16CM IM-119",
+      "slug": "espejo-circular-de-color-oro-rosa-con-un-diametro-de-16cm-im-119-11900",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "ZZAM",
+      "publicPrice": 6,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-3a33722d8efc7861.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "de05f095-6b46-4691-a007-8503bf088043",
+      "code": "11746",
+      "name": "BOLSO ORGANIZADOR GLAM BEAUTY BLACK CNU1016",
+      "slug": "bolso-organizador-glam-beauty-black-cnu1016-11746",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM NAILS",
+      "publicPrice": 17,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-ffb7f562ebfab6f0.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "d97317ad-5f18-4711-8de9-68479ecba19c",
+      "code": "11748",
+      "name": "LIMPIADOR ELECTRICO DE BROCHAS GLAM BEAUTY CNU992",
+      "slug": "limpiador-electrico-de-brochas-glam-beauty-cnu992-11748",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 4.8,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-15a37f6efaa23f1b.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "f3e77932-aeb9-4aeb-8b4a-069c89b95e4a",
+      "code": "8599",
+      "name": "MALETIN ORGANIZADOR ROSADO GLAM BEAUTY VNC634",
+      "slug": "maletin-organizador-rosado-glam-beauty-vnc634-8599",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "COSMETIQUERA",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 20,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-997a672b2c5e135f.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "03e16816-1c42-422c-b1c4-0edcca37d011",
+      "code": "8405",
+      "name": "MALETIN ORGANIZADOR ROSADO GLAM BEAUTY VNC635",
+      "slug": "maletin-organizador-rosado-glam-beauty-vnc635-8405",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "COSMETIQUERA",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 28.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-ffe02a7b23b61a8c.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "b4e47aa2-a1ea-4e04-83d4-8c4e2d7047e1",
+      "code": "11834",
+      "name": "BOLSO GLAM BEAUTY ORGANIZADOR BLACK VNC637",
+      "slug": "bolso-glam-beauty-organizador-black-vnc637-11834",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 33,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-127675268070b2e0.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "429cd2e6-cf85-4ac5-98a9-592e0ec35044",
+      "code": "11761",
+      "name": "ESPEJO OVALADO PEDESTAL ORO ROSA IM-116",
+      "slug": "espejo-ovalado-pedestal-oro-rosa-im-116-11761",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "E&A",
+      "publicPrice": 7.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-0ea355d4c5e49e92.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "a671d540-b05a-4183-b253-73171fe42628",
+      "code": "10338",
+      "name": "MALETA ORGANIZADORA GLAM BEAUTY DOBLE CIERRE YM811",
+      "slug": "maleta-organizadora-glam-beauty-doble-cierre-ym811-10338",
+      "category": {
+        "slug": "accesorios",
+        "label": "Accesorios"
+      },
+      "subcategory": "ACCESORIOS DE UÑAS",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-8846532f5b0d5e0f.jpg",
+      "shortDescription": null
+    }
+  ],
+  "fetchedAt": "2026-09-17T19:06:20.237Z"
 }

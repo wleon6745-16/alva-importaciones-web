@@ -3,139 +3,39 @@
   "categoryLabel": "Barbería",
   "description": null,
   "featured": false,
-  "productCount": 262,
   "brands": [
     {
-      "name": "STAR HAIR",
-      "count": 41
+      "name": "BANDIDO"
     },
     {
-      "name": "WAHL",
-      "count": 22
+      "name": "DOMPEL"
     },
     {
-      "name": "ECI",
-      "count": 12
+      "name": "GUMMY"
     },
     {
-      "name": "KEIME",
-      "count": 11
+      "name": "KEIME"
     },
     {
-      "name": "ZZAM",
-      "count": 8
+      "name": "MARIA JOSE"
     },
     {
-      "name": "CLOVER",
-      "count": 7
+      "name": "OSSION"
     },
     {
-      "name": "OSSION",
-      "count": 6
+      "name": "ROLDA"
     },
     {
-      "name": "BANDIDO",
-      "count": 4
+      "name": "SILETI"
     },
     {
-      "name": "BARBERSHOP",
-      "count": 3
+      "name": "STAR HAIR"
     },
     {
-      "name": "DOMPEL",
-      "count": 3
+      "name": "WAHL"
     },
     {
-      "name": "ROLDA",
-      "count": 3
-    },
-    {
-      "name": "VGR",
-      "count": 3
-    },
-    {
-      "name": "AMY BEAUTY",
-      "count": 2
-    },
-    {
-      "name": "GUMMY",
-      "count": 2
-    },
-    {
-      "name": "JOSE FERNANDO",
-      "count": 2
-    },
-    {
-      "name": "MARIA JOSE",
-      "count": 2
-    },
-    {
-      "name": "SILETI",
-      "count": 2
-    },
-    {
-      "name": "URBAN",
-      "count": 2
-    },
-    {
-      "name": "ABELLA",
-      "count": 1
-    },
-    {
-      "name": "ASTRA",
-      "count": 1
-    },
-    {
-      "name": "BABARIA",
-      "count": 1
-    },
-    {
-      "name": "BMT",
-      "count": 1
-    },
-    {
-      "name": "CHOCOLIFE",
-      "count": 1
-    },
-    {
-      "name": "DRAGON",
-      "count": 1
-    },
-    {
-      "name": "E&A",
-      "count": 1
-    },
-    {
-      "name": "ENKOR",
-      "count": 1
-    },
-    {
-      "name": "GLAM BEAUTY",
-      "count": 1
-    },
-    {
-      "name": "HENBOR",
-      "count": 1
-    },
-    {
-      "name": "MARYLLIN",
-      "count": 1
-    },
-    {
-      "name": "MAXYBELT",
-      "count": 1
-    },
-    {
-      "name": "RODHER",
-      "count": 1
-    },
-    {
-      "name": "TONI&GUY",
-      "count": 1
-    },
-    {
-      "name": "VANDUX",
-      "count": 1
+      "name": "ZZAM"
     }
   ],
   "firstPage": [
@@ -152,23 +52,7 @@
       "brand": "WAHL",
       "publicPrice": 4.8,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "2ce74332-f9fa-4fd5-a189-4534924d1c71",
-      "code": "4868",
-      "name": "ACEITE PARA CUCHILLAS ANDIS CLIPPER 4OZ",
-      "slug": "aceite-para-cuchillas-andis-clipper-4oz-4868",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 3.25,
-      "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-5d81ec53a0795910.jpg",
       "shortDescription": null
     },
     {
@@ -184,263 +68,7 @@
       "brand": "ROLDA",
       "publicPrice": 5,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "d7ab48d4-ea89-4e00-be0b-83637b4694f6",
-      "code": "3393",
-      "name": "ACEITE WAHL CLIPPER OIL 4OZ",
-      "slug": "aceite-wahl-clipper-oil-4oz-3393",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "BARBERIA",
-      "brand": "WAHL",
-      "publicPrice": 3.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "a109fd2e-3657-4659-9090-df92c0afaa0a",
-      "code": "4830",
-      "name": "AFEITADORA BARBASOL 4 GUIAS T-BLADE TRIMMER CBT1-6002",
-      "slug": "afeitadora-barbasol-4-guias-t-blade-trimmer-cbt1-6002-4830",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 30,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "9c96af51-0f70-4ab7-9983-cf59ad184841",
-      "code": "4828",
-      "name": "AFEITADORA BARBASOL PARA NARIZ Y OREJAS",
-      "slug": "afeitadora-barbasol-para-nariz-y-orejas-4828",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 10.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "c6d0762c-b614-480c-897b-92fa6937e231",
-      "code": "4829",
-      "name": "AFEITADORA BARBASOL RECARGABLE T-BLADE TRIMMER CBT1-6001",
-      "slug": "afeitadora-barbasol-recargable-t-blade-trimmer-cbt1-6001-4829",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "0c63a27e-6075-49b1-8735-bcc4524e906f",
-      "code": "10842",
-      "name": "ALZAS CLIPPER GUIDES DE MAQUINA PARA CORTAR CABELLO 8 UNIDADES C-AWH",
-      "slug": "alzas-clipper-guides-de-maquina-para-cortar-cabello-8-unidades-c-awh-10842",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "BARBERIA",
-      "brand": null,
-      "publicPrice": 4.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "e38322d3-fbdc-47ad-b97a-b3c1f7db216f",
-      "code": "7188",
-      "name": "ALZAS HIGH QUALITY X3",
-      "slug": "alzas-high-quality-x3-7188",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "ALZAS",
-      "brand": null,
-      "publicPrice": 3,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "b34ee737-3d20-485b-ad98-c3957eb7c5d7",
-      "code": "1404",
-      "name": "ALZAS PARA MAQUINA  X3 CLIPPER GUIDES C-APX3",
-      "slug": "alzas-para-maquina-x3-clipper-guides-c-apx3-1404",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "ALZAS",
-      "brand": null,
-      "publicPrice": 2.25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "10296365-0e9c-455b-be30-21017ed3dccd",
-      "code": "6475",
-      "name": "ATOMIZADOR PARA BARBERO DE CALABERA  IB-009",
-      "slug": "atomizador-para-barbero-de-calabera-ib-009-6475",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 2.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "7bd73fff-6ceb-48fc-83ab-d935cfc13d52",
-      "code": "10993",
-      "name": "ATOMIZADOR PARA BARBERO MA-202",
-      "slug": "atomizador-para-barbero-ma-202-10993",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "BARBERIA",
-      "brand": null,
-      "publicPrice": 1.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "236e2c4f-1468-4be0-a629-16e62606eb07",
-      "code": "10994",
-      "name": "ATOMIZADOR PARA BARBERO MA-203",
-      "slug": "atomizador-para-barbero-ma-203-10994",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "BARBERIA",
-      "brand": null,
-      "publicPrice": 1.3,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "fcd716ac-15fd-4bc0-96c3-b4d150dd53c4",
-      "code": "6776",
-      "name": "ATOMIZADOR PARA FIBRA C-AT100",
-      "slug": "atomizador-para-fibra-c-at100-6776",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 9,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "88ca8922-3949-40ee-be80-1dd41934fdb7",
-      "code": "8461",
-      "name": "ATOMIZADOR S/N VARIOS DISEÑOS MA-93",
-      "slug": "atomizador-s-n-varios-disenos-ma-93-8461",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 3.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "e8207925-18aa-433b-aba5-72aa3c7af1e1",
-      "code": "8490",
-      "name": "ATOMIZADOR STAR HAIR DEGRADADO XF49",
-      "slug": "atomizador-star-hair-degradado-xf49-8490",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": "STAR HAIR",
-      "publicPrice": 2.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "8a6a33af-225a-4b70-ad47-df0b4cb11519",
-      "code": "11890",
-      "name": "BANDIDO COLONIA AFTER SHAVE COLOGNE BERLIN 350ML",
-      "slug": "bandido-colonia-after-shave-cologne-berlin-350ml-11890",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "COLONIA",
-      "brand": "BANDIDO",
-      "publicPrice": 7.3,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "e36788a9-dd05-4da4-8d1d-4013b36b26f4",
-      "code": "10318",
-      "name": "BANDIDO COLONIA AFTER SHAVE COLOGNE SICILIA 350ML",
-      "slug": "bandido-colonia-after-shave-cologne-sicilia-350ml-10318",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "COLONIA",
-      "brand": "BANDIDO",
-      "publicPrice": 8.25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "b91cc8a7-c5de-4002-952d-fc35a9ebe833",
-      "code": "10315",
-      "name": "BANDIDO LACA HAIR SPRAY SILVER EXTRA VOLUM EXTREMELY 400ML",
-      "slug": "bandido-laca-hair-spray-silver-extra-volum-extremely-400ml-10315",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "LACA",
-      "brand": "BANDIDO",
-      "publicPrice": 7.25,
-      "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-8974b7a2987cc4e3.jpg",
       "shortDescription": null
     },
     {
@@ -456,74 +84,476 @@
       "brand": "BANDIDO",
       "publicPrice": 7.25,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-e253bdd88f007270.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "608cf85f-6397-4f53-a6b0-3a6c72267402",
-      "code": "10800",
-      "name": "BROCHA BARBERO STAR HAIR CLASSIC YM593",
-      "slug": "brocha-barbero-star-hair-classic-ym593-10800",
+      "publicProductId": "257ca8b0-15eb-498a-bc53-970394367303",
+      "code": "9846",
+      "name": "BROCHA DE SACUDIR CABELLO ONGRA MA-116",
+      "slug": "brocha-de-sacudir-cabello-ongra-ma-116-9846",
       "category": {
         "slug": "barberia",
         "label": "Barbería"
       },
       "subcategory": "BROCHA PARA CABELLO",
+      "brand": null,
+      "publicPrice": 5.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d9d25c15f0fa14e7.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "4466f7c1-a990-4954-a109-5b6a76bd6de9",
+      "code": "10497",
+      "name": "BROCHA STAR HAIR TALQUERA DE BARBERIA YM591",
+      "slug": "brocha-star-hair-talquera-de-barberia-ym591-10497",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "ALZAS",
       "brand": "STAR HAIR",
-      "publicPrice": 6.25,
+      "publicPrice": 1.25,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/10497-ym591.jpg",
+      "shortDescription": "La Brocha Barber Pequeña STAR TOOLS YM591 es ideal para profesionales y entusiastas del cuidado de la barba que buscan precisión y comodidad en cada uso. Tamaño compacto: facilita el manejo y el detalle en el afeitado y arreglo de la barba. Diseño profesional: pensado para un uso eficiente en barberías y en el hogar. Materiales de calidad: garantizan durabilidad y un tacto suave para la piel. Perfecta para aplicar productos de afeitado y dar un acabado limpio y cuidado. Recomendamos su uso para mantener la barba con un aspecto impecable y profesional."
     },
     {
-      "publicProductId": "4a985be8-15de-4866-9b75-0fd97264b161",
-      "code": "10801",
-      "name": "BROCHA BARBERO STAR HAIR YM594",
-      "slug": "brocha-barbero-star-hair-ym594-10801",
+      "publicProductId": "1806e1bc-bb37-4a7b-b748-11d1fd749230",
+      "code": "5724",
+      "name": "BROCHA TALQUERA STAR HAIR NEGRA MF038",
+      "slug": "brocha-talquera-star-hair-negra-mf038-5724",
       "category": {
         "slug": "barberia",
         "label": "Barbería"
       },
-      "subcategory": "BROCHA PARA CABELLO",
+      "subcategory": "TALQUERA",
       "brand": "STAR HAIR",
-      "publicPrice": 5.3,
+      "publicPrice": 2.75,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/5724-mf038.jpg",
+      "shortDescription": "La Brocha para Talco STAR TOOLS es un accesorio esencial para profesionales de la barbería y el cuidado personal. Diseñada para aplicar talco de manera uniforme y cómoda, facilita la preparación y el acabado en cada servicio. Aplicación precisa: permite distribuir el talco de forma homogénea. Diseño ergonómico: facilita el manejo durante su uso. Materiales resistentes: garantizan durabilidad y buen desempeño. Ideal para barberías: complemento perfecto para sacudir el cuello y mantener la limpieza. Recomendada para profesionales y entusiastas que buscan calidad y eficiencia en sus herramientas de cuidado personal."
     },
     {
-      "publicProductId": "2e9aa38e-5639-4063-b40e-26673dd19ffc",
-      "code": "12063",
-      "name": "BROCHA CON DISEÑO DE BARBERIA CB-1018",
-      "slug": "brocha-con-diseno-de-barberia-cb-1018-12063",
-      "category": {
-        "slug": "barberia",
-        "label": "Barbería"
-      },
-      "subcategory": "BROCHA PARA CABELLO",
-      "brand": "CLOVER",
-      "publicPrice": 4,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "9ee2e250-6f52-449d-96b8-09dcd6642a72",
-      "code": "6745",
-      "name": "BROCHA DE BARBERO MADERA LN1529",
-      "slug": "brocha-de-barbero-madera-ln1529-6745",
+      "publicProductId": "a6c1c837-0a79-4c17-92af-02c016eb2e5e",
+      "code": "10629",
+      "name": "CAJA DE HERRAMIENTAS SCISSOR HOLDER DE BARBERIA MZE169",
+      "slug": "caja-de-herramientas-scissor-holder-de-barberia-mze169-10629",
       "category": {
         "slug": "barberia",
         "label": "Barbería"
       },
       "subcategory": "ACCESORIOS C",
       "brand": null,
+      "publicPrice": 9.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-aa8e400455975eae.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "1d623515-5179-4a25-af79-025d5445824e",
+      "code": "10632",
+      "name": "CAPA DE  BARBERO CUELLO ELASTICO MZE107",
+      "slug": "capa-de-barbero-cuello-elastico-mze107-10632",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "CAPA DE BARBERO",
+      "brand": null,
+      "publicPrice": 3.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-b49da5b76aaf8772.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "84ffbbe0-9452-4f89-841e-6c7cbb4eeae8",
+      "code": "10466",
+      "name": "CAPA DE BARBERO SHOP BLANCA ESTAMPADA ZPV25108",
+      "slug": "capa-de-barbero-shop-blanca-estampada-zpv25108-10466",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "CAPA DE BARBERO",
+      "brand": null,
+      "publicPrice": 3.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-fd9ef73c93360cdc.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "73b6ddc8-c66b-40ac-9dbe-2f2d665e1a52",
+      "code": "7603",
+      "name": "CAPA NEGRA PARA PELUQUERO GHY001",
+      "slug": "capa-negra-para-peluquero-ghy001-7603",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "CAPA DE BARBERO",
+      "brand": null,
+      "publicPrice": 3,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-a30f1872c5dc47ec.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "388e42b7-68e6-45fb-b576-08ea4593d2f8",
+      "code": "11188",
+      "name": "DOMPEL LAVACABEZA NEGRO DOS ENTRADAS 1110-AP-MCDP",
+      "slug": "dompel-lavacabeza-negro-dos-entradas-1110-ap-mcdp-11188",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "LAVACABEZA",
+      "brand": "DOMPEL",
+      "publicPrice": 280,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/11188.jpeg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "7eb125a1-abe7-4a3f-8263-666072fa0f7d",
+      "code": "11189",
+      "name": "DOMPEL LAVACABEZA PORTATIL CON BOMBA 1899/4ADP",
+      "slug": "dompel-lavacabeza-portatil-con-bomba-1899-4adp-11189",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "LAVACABEZA",
+      "brand": "DOMPEL",
+      "publicPrice": 180,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/11189.jpeg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "2824be62-ad7a-491d-96d2-7c8891714956",
+      "code": "8205",
+      "name": "GEL GUMMY SHAVE SAVOUR 100ML G-SHAVE-SAV",
+      "slug": "gel-gummy-shave-savour-100ml-g-shave-sav-8205",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "GEL DE AFEITAR",
+      "brand": "GUMMY",
+      "publicPrice": 7.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-ce7236abced6e06f.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "4cef1cef-bfcf-4b32-8ea9-10edff0e8631",
+      "code": "2883",
+      "name": "GEL MORFOSE OSSION RED GUM MEGA STRONGS 300ML",
+      "slug": "gel-morfose-ossion-red-gum-mega-strongs-300ml-2883",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "BARBERIA",
+      "brand": "OSSION",
+      "publicPrice": 6.2,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-951cc727b9889490.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "0f6028c1-ed14-4232-be39-bbdfca655060",
+      "code": "9541",
+      "name": "KITKIT MAQUINA CORTAR CABELLO MAQUINA MAS PATILLERA KEMEI KM-2797",
+      "slug": "kitkit-maquina-cortar-cabello-maquina-mas-patillera-kemei-km-2797-9541",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "MAQUINA DE CORTAR CABELLO",
+      "brand": "KEIME",
+      "publicPrice": 100,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-319abb6a67420e79.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "b3bea507-b804-4942-a61a-f9c4b42ae0f3",
+      "code": "12052",
+      "name": "MALETA COSMETIQUERA GRANDE MZE066",
+      "slug": "maleta-cosmetiquera-grande-mze066-12052",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 68,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-1c2d0151fc5732e3.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "5291b60f-59b9-4579-942e-a59636f94903",
+      "code": "8864",
+      "name": "MAQUINA KEMEI KM-2230",
+      "slug": "maquina-kemei-km-2230-8864",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "MAQUINA DE CORTAR CABELLO",
+      "brand": "KEIME",
+      "publicPrice": 75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d0116be8edc6a583.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "71b5755c-794b-4f82-823c-16f5dd7d152d",
+      "code": "11809",
+      "name": "MAQUINA KEMEI PATILLERA PROFESIONAL KM-P2293",
+      "slug": "maquina-kemei-patillera-profesional-km-p2293-11809",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "MAQUINA DE CORTAR CABELLO",
+      "brand": "KEIME",
+      "publicPrice": 25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-312081e0ff31d551.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "d1fdb9df-513c-46cb-8831-5f0281428a15",
+      "code": "11808",
+      "name": "MAQUINA KEMEI PATILLERA PROFESIONAL KM-PG2099",
+      "slug": "maquina-kemei-patillera-profesional-km-pg2099-11808",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "MAQUINA DE CORTAR CABELLO",
+      "brand": "KEIME",
+      "publicPrice": 27,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-42890ab90cb9604e.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "98802637-545e-46c6-b868-3af0484c0045",
+      "code": "5464",
+      "name": "MAQUINA WAHL MAGIC CLIP INALAMBRICO 08148-308",
+      "slug": "maquina-wahl-magic-clip-inalambrico-08148-308-5464",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "WAHL",
+      "publicPrice": 140.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-93df1678322cbe3b.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "3b65459b-0097-4d17-88a5-73278b8eaea8",
+      "code": "8724",
+      "name": "NAVAJA STAR HAIR ECONOMICA SKV842",
+      "slug": "navaja-star-hair-economica-skv842-8724",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "NAVAJA",
+      "brand": "STAR HAIR",
+      "publicPrice": 2.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/8724-skv842.jpg",
+      "shortDescription": "La Navaja 842 de Star Tool es una herramienta esencial para trabajos de barbería y estilismo, ideal para realizar cortes precisos, desvanecidos y detalles definidos. Su diseño ergonómico permite un manejo cómodo y seguro, facilitando el control durante cada uso. Fabricada con materiales resistentes, ofrece durabilidad y un rendimiento confiable en el uso diario. Es compatible con cuchillas desechables, lo que garantiza higiene y practicidad en cada servicio. Perfecta para barberos profesionales y uso personal, es una opción versátil para lograr acabados limpios y profesionales."
+    },
+    {
+      "publicProductId": "bb0e2d6a-a955-40c9-ad7a-ee5a8391d622",
+      "code": "3563",
+      "name": "NAVAJA STAR HAIR XF65",
+      "slug": "navaja-star-hair-xf65-3563",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "NAVAJA",
+      "brand": "STAR HAIR",
+      "publicPrice": 1.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/3563-xf65.jpg",
+      "shortDescription": "Destaca por su diseño robusto y funcional- ofreciendo un rendimiento excepcional en diversas aplicaciones. Fabricada con acero inoxidable de alta calidad- garantiza cortes limpios y duraderos. Su hoja afilada es perfecta para trabajos de precisión en diferentes materiales."
+    },
+    {
+      "publicProductId": "ef56b656-f628-4490-b847-b556bceeb3a6",
+      "code": "7963",
+      "name": "PEINILLA CARBON ZZAM ANTIESTATICA DE CORTE DOBLE ZZ160BB",
+      "slug": "peinilla-carbon-zzam-antiestatica-de-corte-doble-zz160bb-7963",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "PEINILLA",
+      "brand": "ZZAM",
       "publicPrice": 2,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dmujeres/zzam/7963-zz160bb.jpg",
+      "shortDescription": "Este peine de color negro es una herramienta esencial para cualquier persona que se preocupe por su cabello. Hecho con materiales de alta calidad, este peine resistente es duradero y está diseñado para resistir el uso diario. Con sus dientes suavemente redondeados, este peine negro desenreda el cabello sin causar daño ni frizz. Puede usarse en cabello húmedo o seco y es adecuado para todos los tipos y longitudes de cabello."
+    },
+    {
+      "publicProductId": "1044ca96-4ed4-4adf-8cc8-99e752bbc2d9",
+      "code": "7965",
+      "name": "PEINILLA CARBON ZZAM ANTIESTATICA DOBLE MEDIDA NEGRO ZZ160CB",
+      "slug": "peinilla-carbon-zzam-antiestatica-doble-medida-negro-zz160cb-7965",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "PEINILLA",
+      "brand": "ZZAM",
+      "publicPrice": 1.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dmujeres/zzam/7965-zz160cb.jpg",
+      "shortDescription": "Este peine de color negro es una herramienta esencial para cualquier persona que se preocupe por su cabello. Hecho con materiales de alta calidad, este peine resistente es duradero y está diseñado para resistir el uso diario. Con sus dientes suavemente redondeados, este peine negro desenreda el cabello sin causar daño ni frizz. Puede usarse en cabello húmedo o seco y es adecuado para todos los tipos y longitudes de cabello."
+    }
+  ],
+  "firstPageHasMore": true,
+  "highlights": [
+    {
+      "publicProductId": "b3bea507-b804-4942-a61a-f9c4b42ae0f3",
+      "code": "12052",
+      "name": "MALETA COSMETIQUERA GRANDE MZE066",
+      "slug": "maleta-cosmetiquera-grande-mze066-12052",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 68,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-1c2d0151fc5732e3.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "2824be62-ad7a-491d-96d2-7c8891714956",
+      "code": "8205",
+      "name": "GEL GUMMY SHAVE SAVOUR 100ML G-SHAVE-SAV",
+      "slug": "gel-gummy-shave-savour-100ml-g-shave-sav-8205",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "GEL DE AFEITAR",
+      "brand": "GUMMY",
+      "publicPrice": 7.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-ce7236abced6e06f.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "fb5d994c-c233-4110-93f7-d855867f0bb3",
+      "code": "10316",
+      "name": "BANDIDO POLVO TEXTURIZADOR HAIR STYLING POWDER EXTRA VOLUME 20GR",
+      "slug": "bandido-polvo-texturizador-hair-styling-powder-extra-volume-20gr-10316",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "POLVO TEXTURIZADOR",
+      "brand": "BANDIDO",
+      "publicPrice": 7.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-e253bdd88f007270.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "3643a1db-c940-414c-8d46-413d8df3f146",
+      "code": "4827",
+      "name": "TALCO TEXTURIZADOR MORFOSE OSSION 3 EN 1 HAIR STYLING 20GR",
+      "slug": "talco-texturizador-morfose-ossion-3-en-1-hair-styling-20gr-4827",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "TALCO",
+      "brand": "OSSION",
+      "publicPrice": 8.15,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-e65631a87fd94936.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "4cef1cef-bfcf-4b32-8ea9-10edff0e8631",
+      "code": "2883",
+      "name": "GEL MORFOSE OSSION RED GUM MEGA STRONGS 300ML",
+      "slug": "gel-morfose-ossion-red-gum-mega-strongs-300ml-2883",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "BARBERIA",
+      "brand": "OSSION",
+      "publicPrice": 6.2,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-951cc727b9889490.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "feae12cb-60d2-459e-ace2-3cacab989530",
+      "code": "11898",
+      "name": "ACEITE ROLDA PROFESSIONAL DE BARBA HIDRATANTE 30 ML 224233",
+      "slug": "aceite-rolda-professional-de-barba-hidratante-30-ml-224233-11898",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "BARBERIA",
+      "brand": "ROLDA",
+      "publicPrice": 5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-8974b7a2987cc4e3.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "71b5755c-794b-4f82-823c-16f5dd7d152d",
+      "code": "11809",
+      "name": "MAQUINA KEMEI PATILLERA PROFESIONAL KM-P2293",
+      "slug": "maquina-kemei-patillera-profesional-km-p2293-11809",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "MAQUINA DE CORTAR CABELLO",
+      "brand": "KEIME",
+      "publicPrice": 25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-312081e0ff31d551.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "d1fdb9df-513c-46cb-8831-5f0281428a15",
+      "code": "11808",
+      "name": "MAQUINA KEMEI PATILLERA PROFESIONAL KM-PG2099",
+      "slug": "maquina-kemei-patillera-profesional-km-pg2099-11808",
+      "category": {
+        "slug": "barberia",
+        "label": "Barbería"
+      },
+      "subcategory": "MAQUINA DE CORTAR CABELLO",
+      "brand": "KEIME",
+      "publicPrice": 27,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-42890ab90cb9604e.jpg",
       "shortDescription": null
     }
   ],
-  "firstPageTotal": 262,
-  "fetchedAt": "2026-08-19T14:26:25.583Z"
+  "fetchedAt": "2026-09-17T19:06:20.237Z"
 }

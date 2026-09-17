@@ -3,518 +3,30 @@
   "categoryLabel": "Corporal",
   "description": null,
   "featured": false,
-  "productCount": 245,
   "brands": [
     {
-      "name": "NIVEA",
-      "count": 22
+      "name": "BIOTANIK"
     },
     {
-      "name": "THE FRUIT COMPANY",
-      "count": 21
+      "name": "GLAM BEAUTY"
     },
     {
-      "name": "GLAM BEAUTY",
-      "count": 18
+      "name": "GLAM NAILS"
     },
     {
-      "name": "MOLLIE",
-      "count": 14
+      "name": "MOLLIE"
     },
     {
-      "name": "LMAR",
-      "count": 11
+      "name": "NIVEA"
     },
     {
-      "name": "NADS",
-      "count": 10
+      "name": "THE FRUIT COMPANY"
     },
     {
-      "name": "L'DIOR",
-      "count": 9
-    },
-    {
-      "name": "BABARIA",
-      "count": 8
-    },
-    {
-      "name": "MARIA JOSE",
-      "count": 6
-    },
-    {
-      "name": "BYPHASSE",
-      "count": 5
-    },
-    {
-      "name": "CLANS",
-      "count": 5
-    },
-    {
-      "name": "DOLL",
-      "count": 5
-    },
-    {
-      "name": "COQUETA",
-      "count": 4
-    },
-    {
-      "name": "MAXYBELT",
-      "count": 4
-    },
-    {
-      "name": "MIA SECRET",
-      "count": 4
-    },
-    {
-      "name": "THE FRUIT LAB",
-      "count": 4
-    },
-    {
-      "name": "AICHUN BEAUTY",
-      "count": 3
-    },
-    {
-      "name": "ANGELINO",
-      "count": 3
-    },
-    {
-      "name": "BYOTEA",
-      "count": 3
-    },
-    {
-      "name": "EMBELLECER",
-      "count": 3
-    },
-    {
-      "name": "GARNIER",
-      "count": 3
-    },
-    {
-      "name": "SUTTON",
-      "count": 3
-    },
-    {
-      "name": "BIOTANIK",
-      "count": 2
-    },
-    {
-      "name": "GLAM NAILS",
-      "count": 2
-    },
-    {
-      "name": "HAPPY BABY",
-      "count": 2
-    },
-    {
-      "name": "OG",
-      "count": 2
-    },
-    {
-      "name": "OSSION",
-      "count": 2
-    },
-    {
-      "name": "REVUELE",
-      "count": 2
-    },
-    {
-      "name": "ZZAM",
-      "count": 2
-    },
-    {
-      "name": "ADDICT",
-      "count": 1
-    },
-    {
-      "name": "BEAUTY CREATIONS",
-      "count": 1
-    },
-    {
-      "name": "CERAVE",
-      "count": 1
-    },
-    {
-      "name": "DEAR DERM",
-      "count": 1
-    },
-    {
-      "name": "DEEP FRESH",
-      "count": 1
-    },
-    {
-      "name": "FACE CREAM",
-      "count": 1
-    },
-    {
-      "name": "HUDA BEAUTY",
-      "count": 1
-    },
-    {
-      "name": "MAXE",
-      "count": 1
-    },
-    {
-      "name": "PETITE",
-      "count": 1
-    },
-    {
-      "name": "ST. IVES",
-      "count": 1
-    },
-    {
-      "name": "STAR HAIR",
-      "count": 1
-    },
-    {
-      "name": "THUYA",
-      "count": 1
-    },
-    {
-      "name": "TOCOBO",
-      "count": 1
-    },
-    {
-      "name": "VIOLETTA",
-      "count": 1
+      "name": "ZZAM"
     }
   ],
   "firstPage": [
-    {
-      "publicProductId": "812a811a-49d2-4692-8776-1fd1c2800881",
-      "code": "4634",
-      "name": "ACEITE ANGELINO ALOE VERA & ALGODON 100ML",
-      "slug": "aceite-angelino-aloe-vera-algodon-100ml-4634",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "ACEITE DE CUTICULA",
-      "brand": "ANGELINO",
-      "publicPrice": 1.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "b365c4c1-2452-4fef-9847-b414fab77b12",
-      "code": "10638",
-      "name": "ACEITE CLANS PARA BEBE 125ML",
-      "slug": "aceite-clans-para-bebe-125ml-10638",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "COLONIA",
-      "brand": "CLANS",
-      "publicPrice": 1.25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "95c5d950-4cb4-4ded-af3a-6f672c5bdaec",
-      "code": "3590",
-      "name": "ACEITE DE ALMENDRA EMBELLECER 125ML",
-      "slug": "aceite-de-almendra-embellecer-125ml-3590",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": "EMBELLECER",
-      "publicPrice": 3.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "7dd7d44e-8e5f-44e0-a36f-34fe883aba30",
-      "code": "3589",
-      "name": "ACEITE DE COCO EMBELLECER 125ML",
-      "slug": "aceite-de-coco-embellecer-125ml-3589",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": "EMBELLECER",
-      "publicPrice": 3.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "5c8e0b14-03f4-49be-bb3c-371960c6a0eb",
-      "code": "3588",
-      "name": "ACEITE DE NARANJA EMBELLECER 125ML",
-      "slug": "aceite-de-naranja-embellecer-125ml-3588",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": "EMBELLECER",
-      "publicPrice": 3.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "c0e011fa-7890-4219-9d40-22047bb25cbc",
-      "code": "3587",
-      "name": "ACEITE DE UVA EMBELLECER 125ML",
-      "slug": "aceite-de-uva-embellecer-125ml-3587",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 3.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "c6ea9c42-b924-4a4a-b753-4fe26f6292b8",
-      "code": "431",
-      "name": "AGUA MICELAR NIVEA EFECTO MATE 400ML",
-      "slug": "agua-micelar-nivea-efecto-mate-400ml-431",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "AGUA MICELAR",
-      "brand": "NIVEA",
-      "publicPrice": 10.4,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "e7cc5c7d-e33f-4c19-80d4-458362e7c50c",
-      "code": "5634",
-      "name": "AGUA TERMAL AVENE AEROSOL 300ML",
-      "slug": "agua-termal-avene-aerosol-300ml-5634",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "AGUA MICELAR",
-      "brand": null,
-      "publicPrice": 21.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "0857f0b3-554b-46b0-8ab9-6e89cd30ed02",
-      "code": "7647",
-      "name": "ALCOHOL CLANS 120ML",
-      "slug": "alcohol-clans-120ml-7647",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "ALCOHOL",
-      "brand": "CLANS",
-      "publicPrice": 1.25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "6c60a702-da86-4e78-a88a-2505e2ccb1d4",
-      "code": "11162",
-      "name": "AURUM BODY GLOW OG 01 WARN BRONCE 25ML SF9243-01",
-      "slug": "aurum-body-glow-og-01-warn-bronce-25ml-sf9243-01-11162",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "CREMA DE CUERPO",
-      "brand": "OG",
-      "publicPrice": 6,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "f37905c4-38de-4fbb-8d03-95db5d27aef2",
-      "code": "11163",
-      "name": "AURUM BODY GLOW OG 02 GOLDEN BRONCE 25ML SF9243-02",
-      "slug": "aurum-body-glow-og-02-golden-bronce-25ml-sf9243-02-11163",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "CREMA DE CUERPO",
-      "brand": "OG",
-      "publicPrice": 6.25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "23ad713b-1534-4419-b166-71f1e594db27",
-      "code": "6903",
-      "name": "BANDA DEPILACION KONSUNG WA202B",
-      "slug": "banda-depilacion-konsung-wa202b-6903",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 1.25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "baa809a9-baac-4c7d-b530-c0ecaafb0ba9",
-      "code": "6539",
-      "name": "BANDA DEPILACION ZZAM PAQUETE 100U ZZ240",
-      "slug": "banda-depilacion-zzam-paquete-100u-zz240-6539",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": "ZZAM",
-      "publicPrice": 1.9,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "b0f11c75-84ff-42d5-bee7-9d312230c758",
-      "code": "5141",
-      "name": "BANDA DEPILADORA R-PD001-2",
-      "slug": "banda-depiladora-r-pd001-2-5141",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "ABLANDADOR DE CANAS",
-      "brand": null,
-      "publicPrice": 2.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "5c399fc5-bdf0-4e4d-bb2f-eb0510c60f6c",
-      "code": "5023",
-      "name": "BLOQUEADOR SOLAR MARIA JOSE SACHET 15ML",
-      "slug": "bloqueador-solar-maria-jose-sachet-15ml-5023",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "PRIMER",
-      "brand": "MARIA JOSE",
-      "publicPrice": 1.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "65fde302-e9cb-4e68-bd4f-06051030f081",
-      "code": "5429",
-      "name": "BRASIER CON CORDON FREEBRA",
-      "slug": "brasier-con-cordon-freebra-5429",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 3.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "3f59f7e6-b8a6-4f8a-a277-efac688d953f",
-      "code": "8597",
-      "name": "BROCHA GLAM BEAUTY PARA MASCARILLA VNC948",
-      "slug": "brocha-glam-beauty-para-mascarilla-vnc948-8597",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": "GLAM BEAUTY",
-      "publicPrice": 1.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "d78145e9-6359-4b51-99c4-d74495563eeb",
-      "code": "9036",
-      "name": "CALENTADO DE PARAFINA KONSUNG 500CC WN408-1B",
-      "slug": "calentado-de-parafina-konsung-500cc-wn408-1b-9036",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "OLLA DE CERA",
-      "brand": null,
-      "publicPrice": 15.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "18a765cb-52da-4abd-925a-24bcdf47ca85",
-      "code": "2946",
-      "name": "CALENTADOR DE CERA GLAM BEAUTY 40W VA192",
-      "slug": "calentador-de-cera-glam-beauty-40w-va192-2946",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": "GLAM BEAUTY",
-      "publicPrice": 6.25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "f606f195-889c-42db-a8ac-7dbf67345a02",
-      "code": "5363",
-      "name": "CALENTADOR DE CERA ROLL ON DEPILATORY HEATER DQ06-2",
-      "slug": "calentador-de-cera-roll-on-depilatory-heater-dq06-2-5363",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": null,
-      "publicPrice": 6,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "93de443d-2735-442f-b320-58cf9a6e6fbe",
-      "code": "6112",
-      "name": "CALENTADOR DE CERA ROLL-ON MAXE MX-555",
-      "slug": "calentador-de-cera-roll-on-maxe-mx-555-6112",
-      "category": {
-        "slug": "corporal",
-        "label": "Corporal"
-      },
-      "subcategory": "OLLA DE CERA",
-      "brand": "MAXE",
-      "publicPrice": 8.25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
     {
       "publicProductId": "0d530397-0d04-416b-b99f-45aef47b8e04",
       "code": "8181",
@@ -528,7 +40,7 @@
       "brand": null,
       "publicPrice": 110,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-4da0cf4a5ecb4a57.jpg",
       "shortDescription": null
     },
     {
@@ -544,26 +56,476 @@
       "brand": null,
       "publicPrice": 98,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-9da3cedcd012bce2.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "78315192-095c-442c-99d2-bfd6217f7b71",
-      "code": "4555",
-      "name": "CEPILLO FACIAL UÑAS REDONDO MANG R-CRPL",
-      "slug": "cepillo-facial-unas-redondo-mang-r-crpl-4555",
+      "publicProductId": "f49c15b8-3e3f-4e3e-b12f-59983ae20cec",
+      "code": "10533",
+      "name": "CERA DEPILATORIA GLAM BEAUTY ALOE DE VERA 100GR LN-1143-1",
+      "slug": "cera-depilatoria-glam-beauty-aloe-de-vera-100gr-ln-1143-1-10533",
       "category": {
         "slug": "corporal",
         "label": "Corporal"
       },
-      "subcategory": "CEPILLO DE UÑAS",
-      "brand": null,
-      "publicPrice": 1,
+      "subcategory": "CREMA DE DEPILAR",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 1.8,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/glam-beauty/10533-ln-1143-1.jpg",
+      "shortDescription": "La cera depilatoria con aloe vera de Glam Beauty es una opción popular para la depilación en casa. El aloe vera es conocido por sus propiedades calmantes y suavizantes para la piel, lo que puede ayudar a reducir la irritación y el enrojecimiento después de la depilación."
+    },
+    {
+      "publicProductId": "0e64b879-f3a4-4fe1-8732-dc21ebc6b3a8",
+      "code": "2312",
+      "name": "CERA DEPILATORIA GLAM BEAUTY ALOE VERA 100GR LN-1143-1",
+      "slug": "cera-depilatoria-glam-beauty-aloe-vera-100gr-ln-1143-1-2312",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "CERA DEPILAR",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 1.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/2312-ln11431.jpg",
+      "shortDescription": "La cera depilatoria con aloe vera de Glam Beauty es una opción popular para la depilación en casa. El aloe vera es conocido por sus propiedades calmantes y suavizantes para la piel, lo que puede ayudar a reducir la irritación y el enrojecimiento después de la depilación."
+    },
+    {
+      "publicProductId": "953fe035-efda-4a97-bba5-ed92599d8ea5",
+      "code": "2313",
+      "name": "CERA DEPILATORIA GLAM BEAUTY CHOCOLATE 100GR LN-841-2",
+      "slug": "cera-depilatoria-glam-beauty-chocolate-100gr-ln-841-2-2313",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "CERA DEPILAR",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 1.8,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/2313-ln8412.jpg",
+      "shortDescription": "La Cera para Depilar Chocolate Glam Beauty es un producto cosmético diseñado para eliminar el vello no deseado de manera eficaz y delicada. Su nombre sugiere una experiencia sensorial agradable, ya que está formulada con aroma a chocolate, lo que puede hacer que el proceso de depilación sea más placentero."
+    },
+    {
+      "publicProductId": "47b077c6-80d3-47ed-b870-923f18a95d19",
+      "code": "5737",
+      "name": "CERA DEPILATORIA GLAM BEAUTY CHOCOLATE 100GR LN841-2",
+      "slug": "cera-depilatoria-glam-beauty-chocolate-100gr-ln841-2-5737",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "CERA DEPILAR",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 1.8,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/5737-ln8412.jpg",
+      "shortDescription": "La Cera para Depilar Chocolate Glam Beauty es un producto cosmético diseñado para eliminar el vello no deseado de manera eficaz y delicada. Su nombre sugiere una experiencia sensorial agradable, ya que está formulada con aroma a chocolate, lo que puede hacer que el proceso de depilación sea más placentero."
+    },
+    {
+      "publicProductId": "d5db1950-1035-46de-ae4b-6db12bf88edc",
+      "code": "3439",
+      "name": "CERA DEPILATORIA GLAM BEAUTY LAVANDA 100GR LN-1143-2",
+      "slug": "cera-depilatoria-glam-beauty-lavanda-100gr-ln-1143-2-3439",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "CERA DEPILAR",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 1.8,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/glam-beauty/3439-ln-1143-2.jpg",
+      "shortDescription": "La Cera Para Depilar Lavanda de Glam Beauty es un producto diseñado para facilitar el proceso de depilación. Viene en una presentación de 100 g y está enriquecida con lavanda, lo que le proporciona un aroma agradable y relajante."
+    },
+    {
+      "publicProductId": "05d858be-d5aa-4920-96c7-fec9288606c4",
+      "code": "3141",
+      "name": "CREMA EXFOLIANTE MOLLIE MANOS Y CUERPO 1000GR",
+      "slug": "crema-exfoliante-mollie-manos-y-cuerpo-1000gr-3141",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "EXFOLIANTE",
+      "brand": "MOLLIE",
+      "publicPrice": 11.1,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mollie/3141-6561.jpg",
+      "shortDescription": "Contiene gránulos de piedra pómez que limpian y eliminan las células muertas de manos y cuerpo.."
+    },
+    {
+      "publicProductId": "1fae517d-5a50-4d7e-872c-918fd50f451c",
+      "code": "802",
+      "name": "CREMA EXFOLIANTE MOLLIE MANOS Y CUERPO 120GR",
+      "slug": "crema-exfoliante-mollie-manos-y-cuerpo-120gr-802",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "EXFOLIANTE",
+      "brand": "MOLLIE",
+      "publicPrice": 2.35,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-4fe21e7643331a3b.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "78399dfe-ebbc-42b0-bf37-d11a2e973c65",
+      "code": "801",
+      "name": "CREMA EXFOLIANTE MOLLIE MANOS Y CUERPO 260GR",
+      "slug": "crema-exfoliante-mollie-manos-y-cuerpo-260gr-801",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "EXFOLIANTE",
+      "brand": "MOLLIE",
+      "publicPrice": 3.3,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-0050b15254d66b09.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "92bb6488-cd8a-4d3c-ab2a-f6775b7fed26",
+      "code": "804",
+      "name": "CREMA EXFOLIANTE MOLLIE PIES 1000GR",
+      "slug": "crema-exfoliante-mollie-pies-1000gr-804",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "EXFOLIANTE",
+      "brand": "MOLLIE",
+      "publicPrice": 13.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mollie/804-6572.jpg",
+      "shortDescription": "Contiene gránulos de piedra pomez que logran una perfecta exfoliación de los pies removiendo las células muertas, el mentol brinda relajación y frescura que alivia el cansancio.."
+    },
+    {
+      "publicProductId": "00e5a628-1f74-4ca4-a2df-a5b5a33f4b84",
+      "code": "422",
+      "name": "CREMA FACIAL NIVEA 5 EN 1 ACLARADO NATURAL 100ML",
+      "slug": "crema-facial-nivea-5-en-1-aclarado-natural-100ml-422",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "CREMA FACIAL",
+      "brand": "NIVEA",
+      "publicPrice": 9.2,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-37314efb1bb18516.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "56128dc8-bf6f-42a7-821b-e61478fa1d9d",
+      "code": "420",
+      "name": "CREMA FACIAL NIVEA TAPA AZUL 30ML",
+      "slug": "crema-facial-nivea-tapa-azul-30ml-420",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "CREMA FACIAL",
+      "brand": "NIVEA",
+      "publicPrice": 2.3,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d71ff75452b5e0cc.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "3de7a708-5afc-4607-9d05-de825460fb4d",
+      "code": "4973",
+      "name": "EXFOLIANTE DE PIES BIOTANIK CHOCOMINT 500ML",
+      "slug": "exfoliante-de-pies-biotanik-chocomint-500ml-4973",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "EXFOLIANTE",
+      "brand": "BIOTANIK",
+      "publicPrice": 5.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-19e782ecebc244b1.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "9c36d3d1-99ec-494a-a5fa-96a8c5c87f37",
+      "code": "9958",
+      "name": "MASAJEADOR BEAUTY EQUIPMENT ELECTRICO TRES LUCES DS154",
+      "slug": "masajeador-beauty-equipment-electrico-tres-luces-ds154-9958",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 59.9,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/9958-ds154.jpg",
+      "shortDescription": "El Masajeador Ocular Eléctrico con Tres Luces Led es un dispositivo diseñado para brindar un cuidado especial al contorno de ojos. Su tecnología combina masaje eléctrico con luces LED para una experiencia facial completa. Masaje eléctrico que ayuda a relajar la zona ocular. Tres luces LED que contribuyen al cuidado facial y mejoran la apariencia del contorno de ojos. Diseño ergonómico para un uso cómodo y seguro. Ideal para complementar tu rutina diaria de skincare y belleza facial. Utiliza este masajeador para potenciar el bienestar y la frescura de tu mirada, integrándolo fácilmente en tu cuidado diario."
+    },
+    {
+      "publicProductId": "d3acfd23-3450-4aa1-852c-8ecd1f73a0ef",
+      "code": "7043",
+      "name": "OLLA DE CERA GLAM NAILS 408-1APP",
+      "slug": "olla-de-cera-glam-nails-408-1app-7043",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "OLLA DE CERA",
+      "brand": "GLAM NAILS",
+      "publicPrice": 12,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/7043-4081app.jpg",
+      "shortDescription": "Calentador profesional ideal para cera depilatoria, con calentamiento rápido y temperatura regulable. Mantiene la cera a la consistencia perfecta para una aplicación uniforme y segura. Diseño práctico y resistente, ideal para uso en casa o profesional."
+    },
+    {
+      "publicProductId": "334d1e94-f4f6-4970-8a47-1adbc5d2748c",
+      "code": "3730",
+      "name": "ROLLO ZZAM PAPEL DEPILACION 50M ZZ241",
+      "slug": "rollo-zzam-papel-depilacion-50m-zz241-3730",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": "ZZAM",
+      "publicPrice": 4.9,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dmujeres/zzam/3730-zz241.jpg",
+      "shortDescription": "Rollo de 50 metros de papel para depilación con cera. Cortes a la medida deseada. Higiénico y desechable. Conoce más sobre 5 Hábitos que descuidamos de nuestra piel"
+    },
+    {
+      "publicProductId": "c2ccb779-3de0-48a9-9197-bcf5d08334b5",
+      "code": "11098",
+      "name": "TFC EXFOLIANTE CORPORAL 2 EN 1 EXFOLIA Y ENJABONA PIÑA 400ML",
+      "slug": "tfc-exfoliante-corporal-2-en-1-exfolia-y-enjabona-pina-400ml-11098",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "EXFOLIANTE",
+      "brand": "THE FRUIT COMPANY",
+      "publicPrice": 9,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-b07408a362149d5b.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "f33dd653-ee51-4a32-9baa-598fa2038d6b",
+      "code": "9147",
+      "name": "TFC EXFOLIANTE CORPORAL 2 EN 1 EXFOLIA Y ENJABONA SANDIA 400ML",
+      "slug": "tfc-exfoliante-corporal-2-en-1-exfolia-y-enjabona-sandia-400ml-9147",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "EXFOLIANTE",
+      "brand": "THE FRUIT COMPANY",
+      "publicPrice": 9,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d116e158294210ee.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "4a5282e0-c78e-4ff1-a5cf-4d341f2d695b",
+      "code": "9017",
+      "name": "TFC GEL DE DUCHA MORA 600ML",
+      "slug": "tfc-gel-de-ducha-mora-600ml-9017",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "JABON LIQUIDO",
+      "brand": "THE FRUIT COMPANY",
+      "publicPrice": 6.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d5db0009dbdb7485.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "05b86b1b-13eb-40a1-9ee4-1afdd29a5cc2",
+      "code": "11099",
+      "name": "TFC GEL DE DUCHA SANDIA 600ML",
+      "slug": "tfc-gel-de-ducha-sandia-600ml-11099",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "GEL DE CUERPO",
+      "brand": "THE FRUIT COMPANY",
+      "publicPrice": 6.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-46c9508b555a57e9.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "a15780f8-637e-4fb6-8ad5-54b9f2db650a",
+      "code": "9145",
+      "name": "TFC MANTECA CORPORAL CHICLE FRESA 300ML",
+      "slug": "tfc-manteca-corporal-chicle-fresa-300ml-9145",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "CREMA DE CUERPO",
+      "brand": "THE FRUIT COMPANY",
+      "publicPrice": 9.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-dadcc4c793a1a6cd.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "e7d2feb7-1b7f-4389-86c3-fd5229a2ce01",
+      "code": "9019",
+      "name": "TFC MANTECA CORPORAL NUBE DE COLORES 300ML",
+      "slug": "tfc-manteca-corporal-nube-de-colores-300ml-9019",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "CREMA DE CUERPO",
+      "brand": "THE FRUIT COMPANY",
+      "publicPrice": 9.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-03674394c114bf7f.jpg",
       "shortDescription": null
     }
   ],
-  "firstPageTotal": 245,
-  "fetchedAt": "2026-08-19T14:26:25.583Z"
+  "firstPageHasMore": false,
+  "highlights": [
+    {
+      "publicProductId": "ce6c3b74-5cb7-4a04-a19e-a9fba22a7e94",
+      "code": "11503",
+      "name": "CAMILLAS PLEGABLES IMPORTADA MZE142",
+      "slug": "camillas-plegables-importada-mze142-11503",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 98,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-9da3cedcd012bce2.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "c2ccb779-3de0-48a9-9197-bcf5d08334b5",
+      "code": "11098",
+      "name": "TFC EXFOLIANTE CORPORAL 2 EN 1 EXFOLIA Y ENJABONA PIÑA 400ML",
+      "slug": "tfc-exfoliante-corporal-2-en-1-exfolia-y-enjabona-pina-400ml-11098",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "EXFOLIANTE",
+      "brand": "THE FRUIT COMPANY",
+      "publicPrice": 9,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-b07408a362149d5b.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "05b86b1b-13eb-40a1-9ee4-1afdd29a5cc2",
+      "code": "11099",
+      "name": "TFC GEL DE DUCHA SANDIA 600ML",
+      "slug": "tfc-gel-de-ducha-sandia-600ml-11099",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "GEL DE CUERPO",
+      "brand": "THE FRUIT COMPANY",
+      "publicPrice": 6.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-46c9508b555a57e9.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "4a5282e0-c78e-4ff1-a5cf-4d341f2d695b",
+      "code": "9017",
+      "name": "TFC GEL DE DUCHA MORA 600ML",
+      "slug": "tfc-gel-de-ducha-mora-600ml-9017",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "JABON LIQUIDO",
+      "brand": "THE FRUIT COMPANY",
+      "publicPrice": 6.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d5db0009dbdb7485.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "e7d2feb7-1b7f-4389-86c3-fd5229a2ce01",
+      "code": "9019",
+      "name": "TFC MANTECA CORPORAL NUBE DE COLORES 300ML",
+      "slug": "tfc-manteca-corporal-nube-de-colores-300ml-9019",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "CREMA DE CUERPO",
+      "brand": "THE FRUIT COMPANY",
+      "publicPrice": 9.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-03674394c114bf7f.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "a15780f8-637e-4fb6-8ad5-54b9f2db650a",
+      "code": "9145",
+      "name": "TFC MANTECA CORPORAL CHICLE FRESA 300ML",
+      "slug": "tfc-manteca-corporal-chicle-fresa-300ml-9145",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "CREMA DE CUERPO",
+      "brand": "THE FRUIT COMPANY",
+      "publicPrice": 9.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-dadcc4c793a1a6cd.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "f33dd653-ee51-4a32-9baa-598fa2038d6b",
+      "code": "9147",
+      "name": "TFC EXFOLIANTE CORPORAL 2 EN 1 EXFOLIA Y ENJABONA SANDIA 400ML",
+      "slug": "tfc-exfoliante-corporal-2-en-1-exfolia-y-enjabona-sandia-400ml-9147",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "EXFOLIANTE",
+      "brand": "THE FRUIT COMPANY",
+      "publicPrice": 9,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d116e158294210ee.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "1fae517d-5a50-4d7e-872c-918fd50f451c",
+      "code": "802",
+      "name": "CREMA EXFOLIANTE MOLLIE MANOS Y CUERPO 120GR",
+      "slug": "crema-exfoliante-mollie-manos-y-cuerpo-120gr-802",
+      "category": {
+        "slug": "corporal",
+        "label": "Corporal"
+      },
+      "subcategory": "EXFOLIANTE",
+      "brand": "MOLLIE",
+      "publicPrice": 2.35,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-4fe21e7643331a3b.jpg",
+      "shortDescription": null
+    }
+  ],
+  "fetchedAt": "2026-09-17T19:06:20.237Z"
 }

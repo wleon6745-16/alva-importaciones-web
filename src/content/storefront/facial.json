@@ -3,603 +3,554 @@
   "categoryLabel": "Cuidado de la piel",
   "description": null,
   "featured": false,
-  "productCount": 303,
   "brands": [
     {
-      "name": "BYPHASSE",
-      "count": 23
+      "name": "BEAUTY CREATIONS"
     },
     {
-      "name": "REVOX",
-      "count": 22
+      "name": "BIOAQUA"
     },
     {
-      "name": "REVUELE",
-      "count": 21
+      "name": "BYPHASSE"
     },
     {
-      "name": "GLAM BEAUTY",
-      "count": 16
+      "name": "CLANS"
     },
     {
-      "name": "RAQUEL",
-      "count": 16
+      "name": "G9"
     },
     {
-      "name": "THE FRUIT LAB",
-      "count": 11
+      "name": "GLAM BEAUTY"
     },
     {
-      "name": "MARIA JOSE",
-      "count": 10
+      "name": "MIA SECRET"
     },
     {
-      "name": "NIVEA",
-      "count": 10
+      "name": "NIVEA"
     },
     {
-      "name": "G9",
-      "count": 9
+      "name": "THE FRUIT LAB"
     },
     {
-      "name": "COSR X",
-      "count": 8
-    },
-    {
-      "name": "EUCERIN",
-      "count": 7
-    },
-    {
-      "name": "BEAUTY OF JOSEON",
-      "count": 6
-    },
-    {
-      "name": "OG",
-      "count": 6
-    },
-    {
-      "name": "BIOAQUA",
-      "count": 5
-    },
-    {
-      "name": "CALA",
-      "count": 5
-    },
-    {
-      "name": "FACE CREAM",
-      "count": 5
-    },
-    {
-      "name": "CLANS",
-      "count": 4
-    },
-    {
-      "name": "J-LASH",
-      "count": 4
-    },
-    {
-      "name": "KARITE",
-      "count": 4
-    },
-    {
-      "name": "AMY BEAUTY",
-      "count": 3
-    },
-    {
-      "name": "BABARIA",
-      "count": 3
-    },
-    {
-      "name": "DEEP FRESH",
-      "count": 3
-    },
-    {
-      "name": "GARNIER",
-      "count": 3
-    },
-    {
-      "name": "NAOBAY",
-      "count": 3
-    },
-    {
-      "name": "PETITE MAISON",
-      "count": 3
-    },
-    {
-      "name": "USHAS",
-      "count": 3
-    },
-    {
-      "name": "BEAUTY CREATIONS",
-      "count": 2
-    },
-    {
-      "name": "BELOTTI",
-      "count": 2
-    },
-    {
-      "name": "BYOTEA",
-      "count": 2
-    },
-    {
-      "name": "ITALIA",
-      "count": 2
-    },
-    {
-      "name": "MAXE",
-      "count": 2
-    },
-    {
-      "name": "ST. IVES",
-      "count": 2
-    },
-    {
-      "name": "VOGUE",
-      "count": 2
-    },
-    {
-      "name": "AMAZING SHINE",
-      "count": 1
-    },
-    {
-      "name": "AMORUS",
-      "count": 1
-    },
-    {
-      "name": "CARLITO",
-      "count": 1
-    },
-    {
-      "name": "CERAVE",
-      "count": 1
-    },
-    {
-      "name": "CREMA DERM",
-      "count": 1
-    },
-    {
-      "name": "DOLL",
-      "count": 1
-    },
-    {
-      "name": "L'DIOR",
-      "count": 1
-    },
-    {
-      "name": "LA COLORS",
-      "count": 1
-    },
-    {
-      "name": "LOVE JOJO",
-      "count": 1
-    },
-    {
-      "name": "MARY MAY",
-      "count": 1
-    },
-    {
-      "name": "MIA SECRET",
-      "count": 1
-    },
-    {
-      "name": "MILAI COSMETICS",
-      "count": 1
-    },
-    {
-      "name": "MILLION PAULINE",
-      "count": 1
-    },
-    {
-      "name": "MIXSOON",
-      "count": 1
-    },
-    {
-      "name": "PILATEN",
-      "count": 1
-    },
-    {
-      "name": "PRECIOSA",
-      "count": 1
-    },
-    {
-      "name": "RUBY FACE",
-      "count": 1
-    },
-    {
-      "name": "TOCOBO",
-      "count": 1
-    },
-    {
-      "name": "ZZAM",
-      "count": 1
+      "name": "ZZAM"
     }
   ],
   "firstPage": [
     {
-      "publicProductId": "1850dbce-39ed-47a1-a21c-bce211a6f1d7",
-      "code": "2956",
-      "name": "ACEITE BOTANICO RAQUEL 4 OLEOS 50ML",
-      "slug": "aceite-botanico-raquel-4-oleos-50ml-2956",
+      "publicProductId": "dc44bea9-566e-40b5-a217-e2208bc2c534",
+      "code": "7982",
+      "name": "BRUSH CLEANER BEAUTY CREATIONS 150ML BCS",
+      "slug": "brush-cleaner-beauty-creations-150ml-bcs-7982",
       "category": {
         "slug": "facial",
         "label": "Cuidado de la piel"
       },
-      "subcategory": "SERUM",
-      "brand": "RAQUEL",
-      "publicPrice": 9.3,
+      "subcategory": "ACCESORIOS C",
+      "brand": "BEAUTY CREATIONS",
+      "publicPrice": 6.75,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/beauty-creations/7982-bcs.jpg",
+      "shortDescription": "Limpiador de brochas en spray que elimina residuos de maquillaje, aceites y bacterias en segundos. Su fórmula de secado rápido permite limpiar las cerdas sin dañarlas, prolongando la vida útil de tus herramientas."
     },
     {
-      "publicProductId": "1d07f843-4c09-446c-ab6f-f7c7bcfb439a",
-      "code": "4801",
-      "name": "AGUA DE ROSAS HYDRATING TONER 400ML",
-      "slug": "agua-de-rosas-hydrating-toner-400ml-4801",
+      "publicProductId": "6ca154ed-5c3c-444d-986d-490b9727b755",
+      "code": "11662",
+      "name": "CREMA BYPHASSE ANTI-MANCHAS NIACINAMIDE & AVOCADO OIL 50ML",
+      "slug": "crema-byphasse-anti-manchas-niacinamide-avocado-oil-50ml-11662",
       "category": {
         "slug": "facial",
         "label": "Cuidado de la piel"
       },
-      "subcategory": "AGUA DE ROSAS",
-      "brand": null,
-      "publicPrice": 2,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "dbde2bbd-27ee-4434-ab36-82227a752770",
-      "code": "1956",
-      "name": "AGUA DE ROSAS MARIA JOSE 250ML",
-      "slug": "agua-de-rosas-maria-jose-250ml-1956",
-      "category": {
-        "slug": "facial",
-        "label": "Cuidado de la piel"
-      },
-      "subcategory": "AGUA DE ROSAS",
-      "brand": "MARIA JOSE",
-      "publicPrice": 3,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "43b520bf-43ae-437d-a311-dd696b8377e2",
-      "code": "1955",
-      "name": "AGUA DE ROSAS MARIA JOSE 500ML",
-      "slug": "agua-de-rosas-maria-jose-500ml-1955",
-      "category": {
-        "slug": "facial",
-        "label": "Cuidado de la piel"
-      },
-      "subcategory": "AGUA DE ROSAS",
-      "brand": "MARIA JOSE",
-      "publicPrice": 4,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "e27cf049-c6e3-44b6-bab4-5840654a4045",
-      "code": "1791",
-      "name": "AGUA MICELAR AMY BEAUTY COMBINATION & OIL SKIN 125ML",
-      "slug": "agua-micelar-amy-beauty-combination-oil-skin-125ml-1791",
-      "category": {
-        "slug": "facial",
-        "label": "Cuidado de la piel"
-      },
-      "subcategory": "AGUA MICELAR",
-      "brand": "AMY BEAUTY",
-      "publicPrice": 3.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "28776909-29e6-4375-9c92-a6aef83abf82",
-      "code": "1792",
-      "name": "AGUA MICELAR AMY BEAUTY NORMAL TO DRY SKIN 125ML",
-      "slug": "agua-micelar-amy-beauty-normal-to-dry-skin-125ml-1792",
-      "category": {
-        "slug": "facial",
-        "label": "Cuidado de la piel"
-      },
-      "subcategory": "AGUA MICELAR",
-      "brand": "AMY BEAUTY",
-      "publicPrice": 3.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "1d59f8a6-2d6f-433f-bb99-cc81cfa39730",
-      "code": "1672",
-      "name": "AGUA MICELAR BYPHASSE CARBON ACTIVO 500ML + SOLUCION MICELAR 100ML",
-      "slug": "agua-micelar-byphasse-carbon-activo-500ml-solucion-micelar-100ml-1672",
-      "category": {
-        "slug": "facial",
-        "label": "Cuidado de la piel"
-      },
-      "subcategory": "AGUA MICELAR",
+      "subcategory": "CREMA FACIAL",
       "brand": "BYPHASSE",
-      "publicPrice": 8.85,
+      "publicPrice": 9.75,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-a03a77ab273642fa.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "f86fdd1a-6c32-49e7-8aa6-5bbcd33d213b",
-      "code": "2148",
-      "name": "AGUA MICELAR DEEP FRESH ALOE VERA 400ML",
-      "slug": "agua-micelar-deep-fresh-aloe-vera-400ml-2148",
+      "publicProductId": "8bb84296-1b4c-4c67-bf5f-9800aa30e36d",
+      "code": "11663",
+      "name": "CREMA BYPHASSE ANTIARRUGAS RETINOL & HYALURONIC 50ML",
+      "slug": "crema-byphasse-antiarrugas-retinol-hyaluronic-50ml-11663",
       "category": {
         "slug": "facial",
         "label": "Cuidado de la piel"
       },
-      "subcategory": "AGUA MICELAR",
-      "brand": "DEEP FRESH",
+      "subcategory": "CREMA FACIAL",
+      "brand": "BYPHASSE",
+      "publicPrice": 9.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-25ea617ecdce26dc.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "62596c22-aec3-4f77-8910-55b7e91ed46f",
+      "code": "2086",
+      "name": "CREMA BYPHASSE GEL CONTORNO DE OJO LIFT INSTANT Q10 20ML",
+      "slug": "crema-byphasse-gel-contorno-de-ojo-lift-instant-q10-20ml-2086",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "CREMA FACIAL",
+      "brand": "BYPHASSE",
+      "publicPrice": 9.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-acf490cd0fdb2b07.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "01f81ffa-7fa4-4a0a-9925-c07373d32952",
+      "code": "11664",
+      "name": "CREMA BYPHASSE ILUMINADORA VITAMINA C & VITAMINA E 50ML",
+      "slug": "crema-byphasse-iluminadora-vitamina-c-vitamina-e-50ml-11664",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "CREMA FACIAL",
+      "brand": "BYPHASSE",
+      "publicPrice": 9.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-609bfa20ab7b5df0.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "ab6e78a0-f087-4248-9749-040bf813ed20",
+      "code": "12004",
+      "name": "CREMA DE OJOS COLLAGENO BIOAQUA ZAR-NO.BQY86000",
+      "slug": "crema-de-ojos-collageno-bioaqua-zar-no-bqy86000-12004",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "DESMAQUILLANTE",
+      "brand": "BIOAQUA",
+      "publicPrice": 1.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-ceb1d35948468eee.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "6439c9ea-727d-4b07-b335-7823f5fc2dc2",
+      "code": "8001",
+      "name": "CREMA FACIAL CLANS ANTIARRUGAS 50ML",
+      "slug": "crema-facial-clans-antiarrugas-50ml-8001",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "CREMA FACIAL",
+      "brand": "CLANS",
+      "publicPrice": 3.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-59d8e670c38bfdd9.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "3b75ef64-5205-4e85-bb46-d8a4bad8ace0",
+      "code": "2234",
+      "name": "CREMA FACIAL NIVEA 5 EN 1 ANTI ARRUGAS 50ML",
+      "slug": "crema-facial-nivea-5-en-1-anti-arrugas-50ml-2234",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "CREMA FACIAL",
+      "brand": "NIVEA",
+      "publicPrice": 6.35,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-5385b2c31a6bbba7.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "a805f1f3-567f-4fc1-a98f-2b60a80221e2",
+      "code": "424",
+      "name": "CREMA FACIAL NIVEA 5 EN 1 NUTRITIVA 100ML",
+      "slug": "crema-facial-nivea-5-en-1-nutritiva-100ml-424",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "CREMA FACIAL",
+      "brand": "NIVEA",
       "publicPrice": 5.9,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-eccfa25ea9db4e73.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "7507216d-3951-4ba9-8daf-c941c50aba79",
-      "code": "2147",
-      "name": "AGUA MICELAR DEEP FRESH BIPHASE ALOE VERA 200ML",
-      "slug": "agua-micelar-deep-fresh-biphase-aloe-vera-200ml-2147",
+      "publicProductId": "75fda8ff-5034-42ba-874b-3ab9cd362219",
+      "code": "6301",
+      "name": "CREMA NIVEA GEL HYALURONICO HIDRATANTE 100ML",
+      "slug": "crema-nivea-gel-hyaluronico-hidratante-100ml-6301",
       "category": {
         "slug": "facial",
         "label": "Cuidado de la piel"
       },
-      "subcategory": "AGUA MICELAR",
-      "brand": "DEEP FRESH",
-      "publicPrice": 5,
+      "subcategory": "CREMA FACIAL",
+      "brand": "NIVEA",
+      "publicPrice": 10.5,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-f2b15e2595cba2b8.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "9b38fd7c-7a4c-4b8f-b943-fd04dc070458",
-      "code": "10377",
-      "name": "AGUA MICELAR GARNIER ACLARANTE ANTIACNE 400ML",
-      "slug": "agua-micelar-garnier-aclarante-antiacne-400ml-10377",
+      "publicProductId": "56b9d039-a9f8-4dd8-acd9-04ea09fa120b",
+      "code": "7053",
+      "name": "DISCO DESMAQUILLANTEGLAM BEAUTY X200 VNC945",
+      "slug": "disco-desmaquillanteglam-beauty-x200-vnc945-7053",
       "category": {
         "slug": "facial",
         "label": "Cuidado de la piel"
       },
-      "subcategory": "AGUA MICELAR",
-      "brand": "GARNIER",
-      "publicPrice": 10,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "f66cfa74-4139-41a7-972d-bd0902e70c47",
-      "code": "1958",
-      "name": "AGUA MICELAR MARIA JOSE PIEL NORMAL 250ML",
-      "slug": "agua-micelar-maria-jose-piel-normal-250ml-1958",
-      "category": {
-        "slug": "facial",
-        "label": "Cuidado de la piel"
-      },
-      "subcategory": "AGUA MICELAR",
-      "brand": "MARIA JOSE",
-      "publicPrice": 5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "ee0977e5-b7a2-4266-b077-28943906b686",
-      "code": "1957",
-      "name": "AGUA MICELAR MARIA JOSE PIEL SECA  250ML",
-      "slug": "agua-micelar-maria-jose-piel-seca-250ml-1957",
-      "category": {
-        "slug": "facial",
-        "label": "Cuidado de la piel"
-      },
-      "subcategory": "AGUA MICELAR",
-      "brand": "MARIA JOSE",
-      "publicPrice": 5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "8f705ff3-3788-41f9-b8e8-7ba96df7e348",
-      "code": "817",
-      "name": "AGUA MICELAR NAOBAY 200ML",
-      "slug": "agua-micelar-naobay-200ml-817",
-      "category": {
-        "slug": "facial",
-        "label": "Cuidado de la piel"
-      },
-      "subcategory": "AGUA MICELAR",
-      "brand": "NAOBAY",
-      "publicPrice": 11.3,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "330a8897-a9f0-4fd0-81fa-4a141e0a3049",
-      "code": "2960",
-      "name": "AGUA MICELAR RAQUEL DESMAQUILLANTE 220ML",
-      "slug": "agua-micelar-raquel-desmaquillante-220ml-2960",
-      "category": {
-        "slug": "facial",
-        "label": "Cuidado de la piel"
-      },
-      "subcategory": "AGUA MICELAR",
-      "brand": "RAQUEL",
-      "publicPrice": 7.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "1fff2493-bf48-47fe-b0ad-6c05d53432fd",
-      "code": "4531",
-      "name": "AGUA MICELAR REVUELE ACTIVA 400ML",
-      "slug": "agua-micelar-revuele-activa-400ml-4531",
-      "category": {
-        "slug": "facial",
-        "label": "Cuidado de la piel"
-      },
-      "subcategory": "AGUA MICELAR",
-      "brand": "REVUELE",
-      "publicPrice": 7.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "0104f0fb-a94d-4b5a-aecb-f0d34afbfaf8",
-      "code": "4532",
-      "name": "AGUA MICELAR REVUELE CALMANTE 400ML",
-      "slug": "agua-micelar-revuele-calmante-400ml-4532",
-      "category": {
-        "slug": "facial",
-        "label": "Cuidado de la piel"
-      },
-      "subcategory": "AGUA MICELAR",
-      "brand": "REVUELE",
-      "publicPrice": 7.25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "618de86e-171a-4eb3-8d3b-884a9cd02037",
-      "code": "8061",
-      "name": "AGUA TERMAL MARIA JOSE PARA PIELES SENSIBLES 250ML",
-      "slug": "agua-termal-maria-jose-para-pieles-sensibles-250ml-8061",
-      "category": {
-        "slug": "facial",
-        "label": "Cuidado de la piel"
-      },
-      "subcategory": "AGUA MICELAR",
-      "brand": "MARIA JOSE",
-      "publicPrice": 5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "0361a23f-f6a5-41e6-bc94-276b517d02f6",
-      "code": "5754",
-      "name": "AMPOLLAS FACIALES LACABINE EFECTO BOTULINICO 2ML",
-      "slug": "ampollas-faciales-lacabine-efecto-botulinico-2ml-5754",
-      "category": {
-        "slug": "facial",
-        "label": "Cuidado de la piel"
-      },
-      "subcategory": "AMPOLLA",
-      "brand": null,
+      "subcategory": "DESMAQUILLANTE",
+      "brand": "GLAM BEAUTY",
       "publicPrice": 2.75,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/glam-beauty/7053-vnc945.jpg",
+      "shortDescription": "Los discos desmaquillantes GLAM BEAUTY son ideales para una limpieza facial diaria, ofreciendo suavidad y eficacia en cada uso.. Presentación de 200 unidades para mayor duración.. Material suave y delicado con la piel.. Perfectos para remover maquillaje y limpiar impurezas.. Fáciles de usar y desechables.. Recomendados para todo tipo de piel, estos discos facilitan tu rutina de belleza diaria, manteniendo tu piel limpia y fresca.."
     },
     {
-      "publicProductId": "a31ad0fc-94e2-4699-beda-e7f71adbed80",
-      "code": "5757",
-      "name": "AMPOLLAS FACIALES LACABINE EYE CONTOUR 2ML",
-      "slug": "ampollas-faciales-lacabine-eye-contour-2ml-5757",
+      "publicProductId": "6b94ad86-fe96-41b2-94ca-1177c2c07cee",
+      "code": "8725",
+      "name": "G9 CREMA DEPILADORA PIEL SENSIBLE SENTELLA SILKY CLEAR 100GR",
+      "slug": "g9-crema-depiladora-piel-sensible-sentella-silky-clear-100gr-8725",
       "category": {
         "slug": "facial",
         "label": "Cuidado de la piel"
       },
-      "subcategory": "AMPOLLA",
-      "brand": null,
-      "publicPrice": 3,
+      "subcategory": "CERA DEPILATORIA",
+      "brand": "G9",
+      "publicPrice": 16.8,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-5584c930d2a08095.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "dc90da97-8b7e-46c3-b2b9-683dff37ad52",
-      "code": "5756",
-      "name": "AMPOLLAS FACIALES LACABINE PURE RETINOL 2ML",
-      "slug": "ampollas-faciales-lacabine-pure-retinol-2ml-5756",
+      "publicProductId": "4f4ca376-4460-4556-91fc-35da87c5cca7",
+      "code": "9340",
+      "name": "KIT DE LIMPIEZA FACIAL ZZ253",
+      "slug": "kit-de-limpieza-facial-zz253-9340",
       "category": {
         "slug": "facial",
         "label": "Cuidado de la piel"
       },
-      "subcategory": "AMPOLLA",
-      "brand": null,
-      "publicPrice": 3,
+      "subcategory": "KIT",
+      "brand": "ZZAM",
+      "publicPrice": 1.75,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dmujeres/zzam/9340-zz253.jpg",
+      "shortDescription": "El Set de Cuencos Plásticos para Mascarillas ZZAM te permite disfrutar de una experiencia de spa en casa de forma práctica y eficiente. Incluye 3 cuencos resistentes y fáciles de limpiar, ideales para mezclar y aplicar tus mascarillas faciales favoritas. Con su diseño ergonómico, son fáciles de sostener y manipular, y te ayudan a mantener tus productos de belleza organizados e higiénicos. Ya sea que seas un amante del cuidado de la piel, un profesional de spa o simplemente buscas un regalo práctico, el Set de Cuencos Plásticos para Mascarillas ZZAM es la mejor opción para ti."
     },
     {
-      "publicProductId": "59700334-aa2a-4ab4-9616-2f9eafab4e10",
-      "code": "4414",
-      "name": "ANILLOS PARA TINTES DE CEJAS IM-044",
-      "slug": "anillos-para-tintes-de-cejas-im-044-4414",
+      "publicProductId": "e6981466-5768-465c-99a7-45acc7fd9de8",
+      "code": "8408",
+      "name": "KIT DE MASCARILLA GLAM BEAUTY VARIOS COLORES VNC940",
+      "slug": "kit-de-mascarilla-glam-beauty-varios-colores-vnc940-8408",
       "category": {
         "slug": "facial",
         "label": "Cuidado de la piel"
       },
-      "subcategory": "ANILLO GOMA",
-      "brand": null,
-      "publicPrice": 1.25,
+      "subcategory": "KIT",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 2.75,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/glam-beauty/8408-vnc940.jpg",
+      "shortDescription": "Set de mascarillas faciales de alta calidad que brindan hidratación, nutrición y luminosidad, adaptándose a diferentes necesidades de la piel."
     },
     {
-      "publicProductId": "f22784b5-fa13-42ae-b59d-36c99d8bd374",
-      "code": "5206",
-      "name": "APLICADOR DE CERA DANNA X12",
-      "slug": "aplicador-de-cera-danna-x12-5206",
+      "publicProductId": "eb80faf8-1d9a-4095-bf77-faaa56077a42",
+      "code": "11928",
+      "name": "MASAJEADOR DE ROSTRO VARIAS INTENSIDAD HOUSEHOLD INDUCTIO DEVICE FE02-28",
+      "slug": "masajeador-de-rostro-varias-intensidad-household-inductio-device-fe02-28-11928",
       "category": {
         "slug": "facial",
         "label": "Cuidado de la piel"
       },
       "subcategory": "ACCESORIOS C",
       "brand": null,
-      "publicPrice": 1.5,
+      "publicPrice": 12.5,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-37a7c4d217f7a0ea.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "00de9efb-af92-4db9-b39e-c718b27d0b65",
-      "code": "4305",
-      "name": "APLIQUE GLAM BEAUTY P/ROSTRO MS478 TORNASOL",
-      "slug": "aplique-glam-beauty-p-rostro-ms478-tornasol-4305",
+      "publicProductId": "97b86b35-c625-4d4a-b268-c7e2ae714b7d",
+      "code": "12003",
+      "name": "MASCARILLAS FACIALES BIOAQUA ZAR-NO.BQY80738",
+      "slug": "mascarillas-faciales-bioaqua-zar-no-bqy80738-12003",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "MASCARILLA",
+      "brand": "BIOAQUA",
+      "publicPrice": 0.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d0fdf632f4b2ac8e.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "a70bc90b-79c0-4cf6-b236-3b40d3fb8828",
+      "code": "11219",
+      "name": "PARCHES GLAM BEAUTY PARA GRANOS PCHAC01",
+      "slug": "parches-glam-beauty-para-granos-pchac01-11219",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "AGUA DE ROSAS",
+      "brand": "GLAM BEAUTY",
+      "publicPrice": 1,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-5db7fe4bb656a796.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "e30276e3-c3f9-422e-aedd-558d7fb949de",
+      "code": "3538",
+      "name": "PESTAÑA EN BANDA MIA SECRET EL-747M",
+      "slug": "pestana-en-banda-mia-secret-el-747m-3538",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "PESTAÑAS",
+      "brand": "MIA SECRET",
+      "publicPrice": 2.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/3538-el-747m.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "4a248b8c-1a46-42aa-85a5-f2682ddab5ac",
+      "code": "12119",
+      "name": "Piedra guasha Glam Beauty jade",
+      "slug": "piedra-guasha-glam-beauty-jade-12119",
       "category": {
         "slug": "facial",
         "label": "Cuidado de la piel"
       },
       "subcategory": "ACCESORIOS C",
       "brand": "GLAM BEAUTY",
-      "publicPrice": 2,
+      "publicPrice": 1.6,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/product-4a248b8c-0f433dc8d2a0e60f.png",
+      "shortDescription": "Accesorio facial de jade para rutinas de belleza y cuidado personal."
     },
     {
-      "publicProductId": "ea484c4e-2e3b-45ab-83aa-b9d683696d61",
-      "code": "4847",
-      "name": "APLIQUE PARA EL ROSTRO FACE GEM FACE STIKER",
-      "slug": "aplique-para-el-rostro-face-gem-face-stiker-4847",
+      "publicProductId": "51302c61-2f39-41bd-a4d6-9aa7db2a60c0",
+      "code": "9715",
+      "name": "PROTECTOR SOLAR BYPHASSE ANTIEDAD SPF50 3 EN 1 50ML",
+      "slug": "protector-solar-byphasse-antiedad-spf50-3-en-1-50ml-9715",
       "category": {
         "slug": "facial",
         "label": "Cuidado de la piel"
       },
-      "subcategory": "STIKERS",
-      "brand": null,
-      "publicPrice": 1.5,
+      "subcategory": "PROTECTOR SOLAR",
+      "brand": "BYPHASSE",
+      "publicPrice": 14,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-e30db26fde888f84.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "47556065-0a19-4dfa-b6b3-681d6ff4d7d1",
+      "code": "7651",
+      "name": "SERUM VITAMINA CLANS 30ML",
+      "slug": "serum-vitamina-clans-30ml-7651",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "SERUM",
+      "brand": "CLANS",
+      "publicPrice": 3,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-1489df6fab774402.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "bf84c9e8-957f-43ec-8764-8eaaf59d3201",
+      "code": "11991",
+      "name": "THE FRUIT LAB SERUM 2% ÁCIDO SALICÍLICO SERUM-AS",
+      "slug": "the-fruit-lab-serum-2-acido-salicilico-serum-as-11991",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "SERUM",
+      "brand": "THE FRUIT LAB",
+      "publicPrice": 25.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-1ee4851fd75ac512.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "01bdb81e-3716-42c2-991d-da8ace9cf903",
+      "code": "11990",
+      "name": "THE FRUIT LAB SERUM 20% VITAMINA C SERUM-VC",
+      "slug": "the-fruit-lab-serum-20-vitamina-c-serum-vc-11990",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "SERUM",
+      "brand": "THE FRUIT LAB",
+      "publicPrice": 25.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-f3f03bb6caa6a4f4.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "91bb2bd6-0dd5-4653-aec7-cdb5d02f5461",
+      "code": "11988",
+      "name": "THE FRUIT LAB SERUM ACIDO HIALURONICO 5% +B5 30ml",
+      "slug": "the-fruit-lab-serum-acido-hialuronico-5-b5-30ml-11988",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "SERUM",
+      "brand": "THE FRUIT LAB",
+      "publicPrice": 17.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-3efb09e73ee70c99.jpg",
       "shortDescription": null
     }
   ],
-  "firstPageTotal": 303,
-  "fetchedAt": "2026-08-19T14:26:25.583Z"
+  "firstPageHasMore": true,
+  "highlights": [
+    {
+      "publicProductId": "ab6e78a0-f087-4248-9749-040bf813ed20",
+      "code": "12004",
+      "name": "CREMA DE OJOS COLLAGENO BIOAQUA ZAR-NO.BQY86000",
+      "slug": "crema-de-ojos-collageno-bioaqua-zar-no-bqy86000-12004",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "DESMAQUILLANTE",
+      "brand": "BIOAQUA",
+      "publicPrice": 1.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-ceb1d35948468eee.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "97b86b35-c625-4d4a-b268-c7e2ae714b7d",
+      "code": "12003",
+      "name": "MASCARILLAS FACIALES BIOAQUA ZAR-NO.BQY80738",
+      "slug": "mascarillas-faciales-bioaqua-zar-no-bqy80738-12003",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "MASCARILLA",
+      "brand": "BIOAQUA",
+      "publicPrice": 0.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d0fdf632f4b2ac8e.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "91bb2bd6-0dd5-4653-aec7-cdb5d02f5461",
+      "code": "11988",
+      "name": "THE FRUIT LAB SERUM ACIDO HIALURONICO 5% +B5 30ml",
+      "slug": "the-fruit-lab-serum-acido-hialuronico-5-b5-30ml-11988",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "SERUM",
+      "brand": "THE FRUIT LAB",
+      "publicPrice": 17.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-3efb09e73ee70c99.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "bf84c9e8-957f-43ec-8764-8eaaf59d3201",
+      "code": "11991",
+      "name": "THE FRUIT LAB SERUM 2% ÁCIDO SALICÍLICO SERUM-AS",
+      "slug": "the-fruit-lab-serum-2-acido-salicilico-serum-as-11991",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "SERUM",
+      "brand": "THE FRUIT LAB",
+      "publicPrice": 25.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-1ee4851fd75ac512.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "01bdb81e-3716-42c2-991d-da8ace9cf903",
+      "code": "11990",
+      "name": "THE FRUIT LAB SERUM 20% VITAMINA C SERUM-VC",
+      "slug": "the-fruit-lab-serum-20-vitamina-c-serum-vc-11990",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "SERUM",
+      "brand": "THE FRUIT LAB",
+      "publicPrice": 25.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-f3f03bb6caa6a4f4.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "a99c0dcb-b55e-4e00-a8ee-5fc2efd05f57",
+      "code": "11989",
+      "name": "THE FRUIT LAB SERUM NIACINAMIDA 5% +B5 30ml",
+      "slug": "the-fruit-lab-serum-niacinamida-5-b5-30ml-11989",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "SERUM",
+      "brand": "THE FRUIT LAB",
+      "publicPrice": 17.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-9e14703d65d0ee94.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "62596c22-aec3-4f77-8910-55b7e91ed46f",
+      "code": "2086",
+      "name": "CREMA BYPHASSE GEL CONTORNO DE OJO LIFT INSTANT Q10 20ML",
+      "slug": "crema-byphasse-gel-contorno-de-ojo-lift-instant-q10-20ml-2086",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "CREMA FACIAL",
+      "brand": "BYPHASSE",
+      "publicPrice": 9.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-acf490cd0fdb2b07.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "eb80faf8-1d9a-4095-bf77-faaa56077a42",
+      "code": "11928",
+      "name": "MASAJEADOR DE ROSTRO VARIAS INTENSIDAD HOUSEHOLD INDUCTIO DEVICE FE02-28",
+      "slug": "masajeador-de-rostro-varias-intensidad-household-inductio-device-fe02-28-11928",
+      "category": {
+        "slug": "facial",
+        "label": "Cuidado de la piel"
+      },
+      "subcategory": "ACCESORIOS C",
+      "brand": null,
+      "publicPrice": 12.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-37a7c4d217f7a0ea.jpg",
+      "shortDescription": null
+    }
+  ],
+  "fetchedAt": "2026-09-17T19:06:20.237Z"
 }

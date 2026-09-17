@@ -3,706 +3,141 @@
   "categoryLabel": "Capilar",
   "description": null,
   "featured": false,
-  "productCount": 2907,
   "brands": [
     {
-      "name": "ECHOS LINE",
-      "count": 161
+      "name": "AZEIDA"
     },
     {
-      "name": "MAXYBELT",
-      "count": 157
+      "name": "BANDIDO"
     },
     {
-      "name": "LA COLORS",
-      "count": 139
+      "name": "BELOTTI"
     },
     {
-      "name": "LISSIA",
-      "count": 132
+      "name": "BIOTANIK"
     },
     {
-      "name": "STAR HAIR",
-      "count": 126
+      "name": "BMT"
     },
     {
-      "name": "FARMAVITA",
-      "count": 97
+      "name": "BYPHASSE"
     },
     {
-      "name": "BIOTANIK",
-      "count": 87
+      "name": "CALA"
     },
     {
-      "name": "SALON LINE",
-      "count": 78
+      "name": "CHOCOLIFE"
     },
     {
-      "name": "KATIVA",
-      "count": 68
+      "name": "CLANS"
     },
     {
-      "name": "CHOCOLIFE",
-      "count": 67
+      "name": "E&A"
     },
     {
-      "name": "THYMS",
-      "count": 63
+      "name": "ECHOS LINE"
     },
     {
-      "name": "PROKPIL",
-      "count": 52
+      "name": "ELVIVE"
     },
     {
-      "name": "PLACENTA LIFE",
-      "count": 47
+      "name": "GARNIER"
     },
     {
-      "name": "KUUL",
-      "count": 46
+      "name": "GLAM BEAUTY"
     },
     {
-      "name": "COLORET",
-      "count": 44
+      "name": "GLAM NAILS"
     },
     {
-      "name": "LANTEN",
-      "count": 44
+      "name": "KATIVA"
     },
     {
-      "name": "BMT",
-      "count": 43
+      "name": "KERAPRIME"
     },
     {
-      "name": "MEICYS",
-      "count": 42
+      "name": "LA COLORS"
     },
     {
-      "name": "MOLLIE",
-      "count": 42
+      "name": "LISSIA"
     },
     {
-      "name": "VL",
-      "count": 40
+      "name": "LIZZE"
     },
     {
-      "name": "LMAR",
-      "count": 38
+      "name": "MASTER NAILS"
     },
     {
-      "name": "ELVIVE",
-      "count": 35
+      "name": "MAXE"
     },
     {
-      "name": "MARIA JOSE",
-      "count": 35
+      "name": "MAXYBELT"
     },
     {
-      "name": "VIZIO",
-      "count": 34
+      "name": "MIA SECRET"
     },
     {
-      "name": "KBELLE",
-      "count": 33
+      "name": "MOLLIE"
     },
     {
-      "name": "ZZAM",
-      "count": 30
+      "name": "NAISSANT"
     },
     {
-      "name": "SALON IN",
-      "count": 29
+      "name": "OSSION"
     },
     {
-      "name": "COQUETTE",
-      "count": 27
+      "name": "PLACENTA LIFE"
     },
     {
-      "name": "RENE CHARDON",
-      "count": 23
+      "name": "POCION"
     },
     {
-      "name": "SISTEMA",
-      "count": 23
+      "name": "PROKPIL"
     },
     {
-      "name": "POCION",
-      "count": 22
+      "name": "REALISS"
     },
     {
-      "name": "SANO",
-      "count": 21
+      "name": "RENE CHARDON"
     },
     {
-      "name": "NAISSANT",
-      "count": 20
+      "name": "RODHER"
     },
     {
-      "name": "SONIA VEGA",
-      "count": 20
+      "name": "SALON IN"
     },
     {
-      "name": "MARYAM",
-      "count": 19
+      "name": "SALON LINE"
     },
     {
-      "name": "ROLDA",
-      "count": 19
+      "name": "SKALA"
     },
     {
-      "name": "FIRENZE",
-      "count": 18
+      "name": "SONIA VEGA"
     },
     {
-      "name": "GARNIER",
-      "count": 17
+      "name": "STAR HAIR"
     },
     {
-      "name": "SENTIENCE",
-      "count": 16
+      "name": "TAIFF"
     },
     {
-      "name": "MAKEY PLUSS",
-      "count": 15
+      "name": "TERMIX"
     },
     {
-      "name": "GOTAS DE SEDA",
-      "count": 14
+      "name": "TIMCO"
     },
     {
-      "name": "BH TIGI",
-      "count": 13
+      "name": "TOUCH"
     },
     {
-      "name": "BIOESTETIC",
-      "count": 13
+      "name": "WAHL"
     },
     {
-      "name": "OSSION",
-      "count": 12
-    },
-    {
-      "name": "YAMÁ",
-      "count": 12
-    },
-    {
-      "name": "COLOR TONE",
-      "count": 11
-    },
-    {
-      "name": "HAIR REPUBLIC",
-      "count": 10
-    },
-    {
-      "name": "LUDAMA",
-      "count": 10
-    },
-    {
-      "name": "TERMIX",
-      "count": 10
-    },
-    {
-      "name": "TIMCO",
-      "count": 10
-    },
-    {
-      "name": "VANDUX",
-      "count": 10
-    },
-    {
-      "name": "AZEIDA",
-      "count": 9
-    },
-    {
-      "name": "LIZZE",
-      "count": 9
-    },
-    {
-      "name": "MATIZZE",
-      "count": 9
-    },
-    {
-      "name": "PUCHERITO",
-      "count": 9
-    },
-    {
-      "name": "REALISS",
-      "count": 9
-    },
-    {
-      "name": "AFRO LOVE",
-      "count": 8
-    },
-    {
-      "name": "BELOTTI",
-      "count": 8
-    },
-    {
-      "name": "HAR",
-      "count": 8
-    },
-    {
-      "name": "ISSUE",
-      "count": 8
-    },
-    {
-      "name": "LP",
-      "count": 8
-    },
-    {
-      "name": "MARYLLIN",
-      "count": 8
-    },
-    {
-      "name": "MAXE",
-      "count": 8
-    },
-    {
-      "name": "NATIVA",
-      "count": 8
-    },
-    {
-      "name": "VIVA COLOR",
-      "count": 8
-    },
-    {
-      "name": "BRILHO",
-      "count": 7
-    },
-    {
-      "name": "FAMASU",
-      "count": 7
-    },
-    {
-      "name": "GLAM BEAUTY",
-      "count": 7
-    },
-    {
-      "name": "HAPPY BABY",
-      "count": 7
-    },
-    {
-      "name": "KINOE",
-      "count": 7
-    },
-    {
-      "name": "RUCHA",
-      "count": 7
-    },
-    {
-      "name": "CALA",
-      "count": 6
-    },
-    {
-      "name": "DOMPEL",
-      "count": 6
-    },
-    {
-      "name": "SKALA",
-      "count": 6
-    },
-    {
-      "name": "VINILADY",
-      "count": 6
-    },
-    {
-      "name": "AMORE",
-      "count": 5
-    },
-    {
-      "name": "BYPHASSE",
-      "count": 5
-    },
-    {
-      "name": "DROMATIC",
-      "count": 5
-    },
-    {
-      "name": "GUMMY",
-      "count": 5
-    },
-    {
-      "name": "KERAPRIME",
-      "count": 5
-    },
-    {
-      "name": "LAVOUCHE",
-      "count": 5
-    },
-    {
-      "name": "AMY BEAUTY",
-      "count": 4
-    },
-    {
-      "name": "BANDIDO",
-      "count": 4
-    },
-    {
-      "name": "CLANS",
-      "count": 4
-    },
-    {
-      "name": "CLOVER",
-      "count": 4
-    },
-    {
-      "name": "FRUCTIS",
-      "count": 4
-    },
-    {
-      "name": "RENCEL",
-      "count": 4
-    },
-    {
-      "name": "TAIFF",
-      "count": 4
-    },
-    {
-      "name": "TOUCH",
-      "count": 4
-    },
-    {
-      "name": "ANGELINO",
-      "count": 3
-    },
-    {
-      "name": "FRESH&CO",
-      "count": 3
-    },
-    {
-      "name": "GLAM",
-      "count": 3
-    },
-    {
-      "name": "GLAM NAILS",
-      "count": 3
-    },
-    {
-      "name": "HENBOR",
-      "count": 3
-    },
-    {
-      "name": "HERBAL BEAUTY",
-      "count": 3
-    },
-    {
-      "name": "J-LASH",
-      "count": 3
-    },
-    {
-      "name": "KERATON",
-      "count": 3
-    },
-    {
-      "name": "L'DIOR",
-      "count": 3
-    },
-    {
-      "name": "MIA SECRET",
-      "count": 3
-    },
-    {
-      "name": "PILUSS",
-      "count": 3
-    },
-    {
-      "name": "PLASMA",
-      "count": 3
-    },
-    {
-      "name": "ROCIO DE ORO",
-      "count": 3
-    },
-    {
-      "name": "SKAFE",
-      "count": 3
-    },
-    {
-      "name": "WAER",
-      "count": 3
-    },
-    {
-      "name": "ABELLA",
-      "count": 2
-    },
-    {
-      "name": "BABARIA",
-      "count": 2
-    },
-    {
-      "name": "BIGEN",
-      "count": 2
-    },
-    {
-      "name": "DISAAR",
-      "count": 2
-    },
-    {
-      "name": "HIDROXON",
-      "count": 2
-    },
-    {
-      "name": "HOT TOOLS",
-      "count": 2
-    },
-    {
-      "name": "LEALE",
-      "count": 2
-    },
-    {
-      "name": "NOVEX",
-      "count": 2
-    },
-    {
-      "name": "PROLUX",
-      "count": 2
-    },
-    {
-      "name": "REFLEX",
-      "count": 2
-    },
-    {
-      "name": "REVUELE",
-      "count": 2
-    },
-    {
-      "name": "STARS COLORS",
-      "count": 2
-    },
-    {
-      "name": "TONI&GUY",
-      "count": 2
-    },
-    {
-      "name": "WAHL",
-      "count": 2
-    },
-    {
-      "name": "BARBASOL",
-      "count": 1
-    },
-    {
-      "name": "BUNEE",
-      "count": 1
-    },
-    {
-      "name": "DEMERT",
-      "count": 1
-    },
-    {
-      "name": "DUO",
-      "count": 1
-    },
-    {
-      "name": "E&A",
-      "count": 1
-    },
-    {
-      "name": "ECI",
-      "count": 1
-    },
-    {
-      "name": "ENKOR",
-      "count": 1
-    },
-    {
-      "name": "FLORMAR",
-      "count": 1
-    },
-    {
-      "name": "G9",
-      "count": 1
-    },
-    {
-      "name": "ITALIA",
-      "count": 1
-    },
-    {
-      "name": "ITELY",
-      "count": 1
-    },
-    {
-      "name": "JAGUAR",
-      "count": 1
-    },
-    {
-      "name": "JAYSUING",
-      "count": 1
-    },
-    {
-      "name": "JOSE FERNANDO",
-      "count": 1
-    },
-    {
-      "name": "KARITE",
-      "count": 1
-    },
-    {
-      "name": "KISS LOVELY",
-      "count": 1
-    },
-    {
-      "name": "KLEANCOLOR",
-      "count": 1
-    },
-    {
-      "name": "KONZIL",
-      "count": 1
-    },
-    {
-      "name": "L&D",
-      "count": 1
-    },
-    {
-      "name": "LINDA",
-      "count": 1
-    },
-    {
-      "name": "LISAP",
-      "count": 1
-    },
-    {
-      "name": "MARY MAY",
-      "count": 1
-    },
-    {
-      "name": "MASTER NAILS",
-      "count": 1
-    },
-    {
-      "name": "MISS SUMMER",
-      "count": 1
-    },
-    {
-      "name": "NABI",
-      "count": 1
-    },
-    {
-      "name": "NEW FASHION",
-      "count": 1
-    },
-    {
-      "name": "NOTRE",
-      "count": 1
-    },
-    {
-      "name": "PETITE MAISON",
-      "count": 1
-    },
-    {
-      "name": "PX LOOK",
-      "count": 1
-    },
-    {
-      "name": "RAQUEL",
-      "count": 1
-    },
-    {
-      "name": "REVOX",
-      "count": 1
-    },
-    {
-      "name": "RODHER",
-      "count": 1
-    },
-    {
-      "name": "SILETI",
-      "count": 1
-    },
-    {
-      "name": "TECNO ELECTRA",
-      "count": 1
-    },
-    {
-      "name": "THUYA",
-      "count": 1
-    },
-    {
-      "name": "URBAN",
-      "count": 1
-    },
-    {
-      "name": "VANITY",
-      "count": 1
-    },
-    {
-      "name": "VGR",
-      "count": 1
-    },
-    {
-      "name": "WAX",
-      "count": 1
-    },
-    {
-      "name": "YOUTHAIR",
-      "count": 1
+      "name": "ZZAM"
     }
   ],
   "firstPage": [
-    {
-      "publicProductId": "bfdd4f85-a0dc-4b08-9c2c-4a65308e21a0",
-      "code": "1718",
-      "name": "250ML",
-      "slug": "250ml-1718",
-      "category": {
-        "slug": "capilares",
-        "label": "Capilar"
-      },
-      "subcategory": "SHAMPOO",
-      "brand": "LMAR",
-      "publicPrice": 8.4,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "e37141c2-273b-4a77-8006-935edf3297ea",
-      "code": "1431",
-      "name": "ABLANDADOR DE CANAS",
-      "slug": "ablandador-de-canas-1431",
-      "category": {
-        "slug": "capilares",
-        "label": "Capilar"
-      },
-      "subcategory": "SHAMPOO",
-      "brand": "LA COLORS",
-      "publicPrice": 0.6,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "7b2f4046-e3a3-41da-b371-a801ad203ba5",
-      "code": "1341",
-      "name": "ABLANDADOR DE CANAS ISSUE 15ML",
-      "slug": "ablandador-de-canas-issue-15ml-1341",
-      "category": {
-        "slug": "capilares",
-        "label": "Capilar"
-      },
-      "subcategory": "ABLANDADOR DE CANAS",
-      "brand": "ISSUE",
-      "publicPrice": 1,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "f473903c-e8b6-407b-93b8-c5619058236e",
-      "code": "5125",
-      "name": "ABLANDADOR DE CANAS PRAKTIAMPOLLA DUO 17ML",
-      "slug": "ablandador-de-canas-praktiampolla-duo-17ml-5125",
-      "category": {
-        "slug": "capilares",
-        "label": "Capilar"
-      },
-      "subcategory": "ABLANDADOR DE CANAS",
-      "brand": null,
-      "publicPrice": 0.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
     {
       "publicProductId": "a6897a7b-bae5-4e8d-bd06-68b50a4d7261",
       "code": "6747",
@@ -716,56 +151,8 @@
       "brand": "STAR HAIR",
       "publicPrice": 0.75,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "c74824f0-c439-4028-9269-9bd916e4f83e",
-      "code": "6748",
-      "name": "ACCESORIO DE CABELLO STAR HAIR PARA TRENZAS VNC829",
-      "slug": "accesorio-de-cabello-star-hair-para-trenzas-vnc829-6748",
-      "category": {
-        "slug": "capilares",
-        "label": "Capilar"
-      },
-      "subcategory": "ACCESORIOS C",
-      "brand": "STAR HAIR",
-      "publicPrice": 0.75,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "eead8fc1-a58f-4833-bb57-858fa1079960",
-      "code": "2465",
-      "name": "ACEIITE DE ARGAN ECHOS LNE 30ML",
-      "slug": "aceiite-de-argan-echos-lne-30ml-2465",
-      "category": {
-        "slug": "capilares",
-        "label": "Capilar"
-      },
-      "subcategory": "PRIMER",
-      "brand": "ECHOS LINE",
-      "publicPrice": 14,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "063bd5b3-ba9d-493a-a6ef-8d5f43ab5b99",
-      "code": "437",
-      "name": "ACEITE CHOCOLIFE RANH MACADAMIA Y CAMELIA 30ML",
-      "slug": "aceite-chocolife-ranh-macadamia-y-camelia-30ml-437",
-      "category": {
-        "slug": "capilares",
-        "label": "Capilar"
-      },
-      "subcategory": "SERUM",
-      "brand": "CHOCOLIFE",
-      "publicPrice": 9.8,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/product-a6897a7b-cd21c68fb5131bf0.jpg",
+      "shortDescription": "Características PrincipalesDiseño: Piezas variadas como perlas, aros metálicos, dijes o figuras de estrellas adaptadas para entrelazar en mechones.Uso: Ideal para personalizar trenzas africanas, box braids o peinados casuales de moda.Material: Generalmente elaborado en aleaciones ligeras o plástico resistente que no maltrata el cabello."
     },
     {
       "publicProductId": "6ffee922-15fe-4090-b5d1-a3bbd4e222af",
@@ -780,142 +167,46 @@
       "brand": "CLANS",
       "publicPrice": 2.9,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-e4dd7a5f0775078e.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "f0fa725b-c208-4a5a-af4e-49c034359050",
-      "code": "347",
-      "name": "ACEITE DE ARGAN MARIA JOSE 60ML",
-      "slug": "aceite-de-argan-maria-jose-60ml-347",
-      "category": {
-        "slug": "capilares",
-        "label": "Capilar"
-      },
-      "subcategory": "SILICONA",
-      "brand": "MARIA JOSE",
-      "publicPrice": 6.25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "16e924ee-1964-41ae-8c72-3261a57687bf",
-      "code": "2091",
-      "name": "ACEITE DE ARGAN MAXYBELT OLEO MILAGROSO 55ML",
-      "slug": "aceite-de-argan-maxybelt-oleo-milagroso-55ml-2091",
-      "category": {
-        "slug": "capilares",
-        "label": "Capilar"
-      },
-      "subcategory": "SILICONA",
-      "brand": "MAXYBELT",
-      "publicPrice": 9.25,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "b647e90c-575d-41fc-86f7-4fd93883f4dc",
-      "code": "2797",
-      "name": "ACEITE DE ARGAN THYMS OLEO CAPILLAR 60ML",
-      "slug": "aceite-de-argan-thyms-oleo-capillar-60ml-2797",
-      "category": {
-        "slug": "capilares",
-        "label": "Capilar"
-      },
-      "subcategory": "SERUM",
-      "brand": "THYMS",
-      "publicPrice": 4.3,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "0103090b-35b9-4585-9da4-24209d9d66d2",
-      "code": "5297",
-      "name": "ACEITE DE COCO SONIA VEGA 15ML",
-      "slug": "aceite-de-coco-sonia-vega-15ml-5297",
-      "category": {
-        "slug": "capilares",
-        "label": "Capilar"
-      },
-      "subcategory": "ACEITE DE CUTICULA",
-      "brand": "SONIA VEGA",
-      "publicPrice": 1.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "6e5f2982-d830-4b60-9872-8c36c6f4d0b1",
-      "code": "4890",
-      "name": "ACEITE DE COCO SONIA VEGA 60ML",
-      "slug": "aceite-de-coco-sonia-vega-60ml-4890",
-      "category": {
-        "slug": "capilares",
-        "label": "Capilar"
-      },
-      "subcategory": "ACEITE DE CUTICULA",
-      "brand": "SONIA VEGA",
-      "publicPrice": 7.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "dd51bbff-6971-425a-a340-26fcf3944c05",
-      "code": "5730",
-      "name": "ACEITE DE CUTICULA PRECIOSA",
-      "slug": "aceite-de-cuticula-preciosa-5730",
-      "category": {
-        "slug": "capilares",
-        "label": "Capilar"
-      },
-      "subcategory": "SHAMPOO",
-      "brand": "LA COLORS",
-      "publicPrice": 1.5,
-      "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "5f0117d6-30ad-4be5-b962-a0e00f50a695",
-      "code": "432",
-      "name": "ACONDICINADOR CHOCOLIFE CHOCOLATE 500ML",
-      "slug": "acondicinador-chocolife-chocolate-500ml-432",
+      "publicProductId": "87124781-3afa-424e-9893-21d1a077a428",
+      "code": "4989",
+      "name": "ACONDICIONADOR BIOTANIK KERACARE 500ML",
+      "slug": "acondicionador-biotanik-keracare-500ml-4989",
       "category": {
         "slug": "capilares",
         "label": "Capilar"
       },
       "subcategory": "ACONDICIONADOR",
-      "brand": "CHOCOLIFE",
-      "publicPrice": 11.3,
+      "brand": "BIOTANIK",
+      "publicPrice": 7,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/biotanik/4989-pt067.jpg",
+      "shortDescription": "El acondicionador Keracare 500ml de BIOTANIK es ideal para cuidar y mantener el cabello hidratado y suave. Su fórmula está diseñada para facilitar el desenredo y mejorar la textura del cabello.. Hidratación profunda: ayuda a mantener el cabello nutrido y saludable.. Suavidad y manejabilidad: facilita el peinado y reduce el frizz.. Fórmula equilibrada: adecuada para todo tipo de cabello.. Presentación práctica: envase de 500ml para un uso prolongado.. Para mejores resultados, aplicar después del shampoo sobre el cabello húmedo, dejar actuar unos minutos y enjuagar con abundante agua. Ideal para uso diario y para mantener el cabello en óptimas condiciones.."
     },
     {
-      "publicProductId": "659dff32-63a5-4460-8cbe-3758d1d2ab4c",
-      "code": "1314",
-      "name": "ACONDICINADOR LISSIA CRECE PELO 425ML",
-      "slug": "acondicinador-lissia-crece-pelo-425ml-1314",
+      "publicProductId": "4f144c08-5d14-4e73-9c75-cb7b50251f82",
+      "code": "10944",
+      "name": "ACONDICIONADOR ECHOS LINE DISCIPLINE 300ML",
+      "slug": "acondicionador-echos-line-discipline-300ml-10944",
       "category": {
         "slug": "capilares",
         "label": "Capilar"
       },
       "subcategory": "ACONDICIONADOR",
-      "brand": "LISSIA",
-      "publicPrice": 5.75,
+      "brand": "ECHOS LINE",
+      "publicPrice": 18.25,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/echos-line/10944-1024575.jpg",
+      "shortDescription": "Acondicionador que desenreda y nutre el cabello, dejándolo suave y manejable."
     },
     {
-      "publicProductId": "53e55085-244b-4170-8f3f-3561ad042c98",
-      "code": "8440",
-      "name": "ACONDICIOANDOR FRUCTIS GARNIER HAIR FOOD CACAO 300ML",
-      "slug": "acondicioandor-fructis-garnier-hair-food-cacao-300ml-8440",
+      "publicProductId": "99908193-1058-4179-9b67-b80a7f20d06a",
+      "code": "8551",
+      "name": "ACONDICIONADOR FRUCTIS GARNIER HAIR FOOD AGUACATE  300ML",
+      "slug": "acondicionador-fructis-garnier-hair-food-aguacate-300ml-8551",
       "category": {
         "slug": "capilares",
         "label": "Capilar"
@@ -924,106 +215,444 @@
       "brand": "GARNIER",
       "publicPrice": 6.75,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/garnier/8551-24771.png",
+      "shortDescription": "Deleita tu cabello con la rica nutrición del Acondicionador Fructis Hair Food Aguacate. Su fórmula vegana, elaborada con un 98% de ingredientes de origen natural, está diseñada para nutrir profundamente tu melena, dejándola suave, manejable y llena de vitalidad. Comprometidos con el cuidado de tu cabello y el planeta, este acondicionador no contiene siliconas, parabenos ni colorantes artificiales. Además, nuestras fórmulas son biodegradables y somos una marca Cruelty Free. Modo de Uso para una nutrición profunda: Después del shampoo: Aplica el acondicionador sobre el cabello húmedo después de haber utilizado tu shampoo habitual.. Aplica generosamente: Distribuye una cantidad generosa de acondicionador de medios a puntas, enfocándote en las áreas que necesiten más nutrición.. Masajea suavemente: Masajea suavemente el acondicionador en tu cabello para asegurar una distribución uniforme y ayudar a que los ingredientes nutritivos penetren en la fibra capilar.. Deja actuar: Deja actuar el acondicionador durante unos instantes para permitir que nutra profundamente tu cabello.. Enjuaga perfectamente: Aclara abundantemente con agua hasta remover por completo el acondicionador, dejando tu cabello suave y nutrido.."
     },
     {
-      "publicProductId": "94087dfe-7db7-4986-aa87-68ba6e003bd7",
-      "code": "8443",
-      "name": "ACONDICIOANDOR FRUCTIS GARNIER HAIR FOOD COCO 300ML",
-      "slug": "acondicioandor-fructis-garnier-hair-food-coco-300ml-8443",
+      "publicProductId": "afd846fa-6962-4a5c-964c-451840b18760",
+      "code": "6944",
+      "name": "ACONDICIONADOR LISSIA ACIDO HIALURONICO 425ML",
+      "slug": "acondicionador-lissia-acido-hialuronico-425ml-6944",
       "category": {
         "slug": "capilares",
         "label": "Capilar"
       },
       "subcategory": "ACONDICIONADOR",
-      "brand": "GARNIER",
-      "publicPrice": 6.6,
+      "brand": "LISSIA",
+      "publicPrice": 5.8,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/lissia/6944-08010115.jpg",
+      "shortDescription": "Formulado para ofrecer una hidratación intensiva y de larga duración, dejando el cabello visiblemente más suave, brillante y saludable. Su fórmula avanzada, enriquecida con ácido hialurónico —reconocido por su capacidad para retener hasta 1.000 veces su peso en agua—, restaura la humedad natural del cabello y mejora su elasticidad. Ideal para cabellos secos, dañados o con procesos químicos, este acondicionador ayuda a reparar, fortalecer y revitalizar la fibra capilar, desde la raíz hasta las puntas."
     },
     {
-      "publicProductId": "eb212be8-601c-4a02-bd5e-76e0d81cc168",
-      "code": "7967",
-      "name": "ACONDICIONADOR  AFRO LOVE CREMA  290ML",
-      "slug": "acondicionador-afro-love-crema-290ml-7967",
+      "publicProductId": "1755932f-5584-4e29-b49a-7e74506c5f76",
+      "code": "624",
+      "name": "ACONDICIONADOR LISSIA CEBOLLA & BIOTINA 425ML",
+      "slug": "acondicionador-lissia-cebolla-biotina-425ml-624",
       "category": {
         "slug": "capilares",
         "label": "Capilar"
       },
       "subcategory": "ACONDICIONADOR",
-      "brand": "AFRO LOVE",
-      "publicPrice": 10.75,
+      "brand": "LISSIA",
+      "publicPrice": 4.4,
       "currency": "USD",
-      "imageUrl": null,
-      "shortDescription": null
+      "imageUrl": "https://api.omviqa.com/product-images/alva/lissia/624-6804.png",
+      "shortDescription": "La mejor alternativa para fortalecer, proteger, hidratar, suavizar y devolver el brillo natural a su cabello gracias a su alto contenido en omega 3, vitamina A, B, F, y aminoácidos esenciales. Para un cabello aún más increíble experimenta toda la línea de Cebolla y Biotina.. MODO DE USO: Colócalo en la mano, aplícalo sobre el cabello, refuerza en las puntas, masajea suavemente y luego enjuaga con abundante agua.."
     },
     {
-      "publicProductId": "3e84e710-5036-43e5-86f0-ad9fd974e31d",
-      "code": "6131",
-      "name": "ACONDICIONADOR A/HIALURONICO 31306 SALON LINE 300ML",
-      "slug": "acondicionador-a-hialuronico-31306-salon-line-300ml-6131",
+      "publicProductId": "dff2fe78-b925-4633-929e-b6faff8355f8",
+      "code": "788",
+      "name": "ACONDICIONADOR MOLLIE GUSANO DE SEDA 500ML",
+      "slug": "acondicionador-mollie-gusano-de-seda-500ml-788",
       "category": {
         "slug": "capilares",
         "label": "Capilar"
       },
       "subcategory": "ACONDICIONADOR",
+      "brand": "MOLLIE",
+      "publicPrice": 4.4,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mollie/788-7538.jpg",
+      "shortDescription": "Desenreda y suaviza el cabello, aportando un acabado sedoso y libre de frizz.."
+    },
+    {
+      "publicProductId": "2690732d-56ab-4659-887f-28fad08ffe4c",
+      "code": "789",
+      "name": "ACONDICIONADOR MOLLIE KERATINA 500ML",
+      "slug": "acondicionador-mollie-keratina-500ml-789",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACONDICIONADOR",
+      "brand": "MOLLIE",
+      "publicPrice": 4.4,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mollie/789-6529.jpg",
+      "shortDescription": "Desenreda y repara, aportando fuerza y suavidad al cabello dañado.."
+    },
+    {
+      "publicProductId": "d31aa576-a262-49f3-a56a-c975f5053a64",
+      "code": "790",
+      "name": "ACONDICIONADOR MOLLIE POSTCOLOR 500ML",
+      "slug": "acondicionador-mollie-postcolor-500ml-790",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACONDICIONADOR",
+      "brand": "MOLLIE",
+      "publicPrice": 4.4,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mollie/790-6545.jpg",
+      "shortDescription": "Desenreda y protege el cabello tinturado, manteniendo su color vibrante y brillante.."
+    },
+    {
+      "publicProductId": "e68093e3-12fa-4e4c-98f5-deca426b0825",
+      "code": "11803",
+      "name": "ACONDICIONADOR MOLLIE RIZOS & ONDAS 500ML",
+      "slug": "acondicionador-mollie-rizos-ondas-500ml-11803",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACONDICIONADOR",
+      "brand": "MOLLIE",
+      "publicPrice": 4.4,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mollie/11803-8458.jpg",
+      "shortDescription": "Desenreda y suaviza el cabello sin apelmazarlo. Su fórmula ayuda a mantener la hidratación, mejora la elasticidad de los rizos y facilita el peinado, dejando el cabello más manejable y definido.."
+    },
+    {
+      "publicProductId": "b16affd7-e64a-48c5-89d8-57df94151a0b",
+      "code": "787",
+      "name": "ACONDICIONADOR MOLLIE SEMILLAS DE ALGODON 500ML",
+      "slug": "acondicionador-mollie-semillas-de-algodon-500ml-787",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACONDICIONADOR",
+      "brand": "MOLLIE",
+      "publicPrice": 4.4,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/mollie/787-6553.jpg",
+      "shortDescription": "Desenreda y suaviza el cabello, aportando hidratación intensa y revitalización de la fibra capilar.."
+    },
+    {
+      "publicProductId": "c1f83a43-7346-4034-bd80-3f206f70748b",
+      "code": "2766",
+      "name": "ACONDICIONADOR SALON IN COLOR GUARD 300ML",
+      "slug": "acondicionador-salon-in-color-guard-300ml-2766",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACONDICIONADOR",
+      "brand": "SALON IN",
+      "publicPrice": 7.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/salon-in/2766-034547.jpg",
+      "shortDescription": "El acondicionador Color Guard en presentación de 300 ml es parte de la línea de productos diseñados para proteger y mantener el color del cabello teñido. Este acondicionador está formulado para proporcionar nutrición adicional al cabello, al mismo tiempo que ayuda a sellar la cutícula y a mantener el color atrapado dentro del cabello, evitando así que se desvanezca prematuramente."
+    },
+    {
+      "publicProductId": "f0b6bda7-6f46-4e5c-9b0e-0a0ebd670b2d",
+      "code": "2762",
+      "name": "ACONDICIONADOR SALON IN HYDRA REPAIR 300ML",
+      "slug": "acondicionador-salon-in-hydra-repair-300ml-2762",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACONDICIONADOR",
+      "brand": "SALON IN",
+      "publicPrice": 7.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/salon-in/2762-034042.png",
+      "shortDescription": "Devuelve la suavidad y vitalidad perdida a tu cabello seco y dañado con el Acondicionador Hydra Repair. Su fórmula intensamente hidratante nutre profundamente cada hebra, reparando y fortaleciendo la fibra capilar para que luzcas un cabello visiblemente sedoso y saludable. Características especiales y beneficios: Acondiciona y desenreda eficazmente: Facilita el peinado, eliminando nudos y dejando el cabello suave al tacto.. Hidratación profunda: Nutre intensamente el cabello seco, restaurando su equilibrio hídrico natural.. Cabello manejable y con brillo: Aporta suavidad y luminosidad, facilitando el peinado y mejorando la apariencia general del cabello.. Repara y fortalece: Ayuda a reconstruir la fibra capilar dañada, aumentando su resistencia y previniendo la rotura.. Uso y aplicación: Después de lavar el cabello con shampoo, aplica el Acondicionador Hydra Repair sobre el cabello húmedo, de medios a puntas.. Realiza un suave masaje para asegurar que el producto se distribuya uniformemente.. Enjuaga abundantemente con agua.."
+    },
+    {
+      "publicProductId": "7e2553a6-4d9b-431a-9249-bdca7fca238d",
+      "code": "5796",
+      "name": "ACTIVADOR DE CACHOS SALON LINE ARGININA 1000 ML",
+      "slug": "activador-de-cachos-salon-line-arginina-1000-ml-5796",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACTIVADOR",
+      "brand": "SALON IN",
+      "publicPrice": 21.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-4dec31bbbdf6364f.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "7219904c-8383-4fec-af2f-33f93751d550",
+      "code": "457",
+      "name": "ACTIVADOR DE CACHOS SALON LINE OLIVA 1KG",
+      "slug": "activador-de-cachos-salon-line-oliva-1kg-457",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACTIVADOR",
       "brand": "SALON LINE",
-      "publicPrice": 10.85,
+      "publicPrice": 19,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-16036cfae2b9d463.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "c250b5a8-5e3b-4e19-a161-28b57b54f0fd",
-      "code": "3786",
-      "name": "ACONDICIONADOR BG TIGI EGO BOOST LEAVE IN 237ML",
-      "slug": "acondicionador-bg-tigi-ego-boost-leave-in-237ml-3786",
+      "publicProductId": "57d46345-a0cb-431c-ae63-c6eb00e8c9a2",
+      "code": "10332",
+      "name": "ACTIVADOR SALON LINE KIDS CHICLETE 300ml",
+      "slug": "activador-salon-line-kids-chiclete-300ml-10332",
       "category": {
         "slug": "capilares",
         "label": "Capilar"
       },
-      "subcategory": "ACONDICIONADOR",
-      "brand": "BH TIGI",
-      "publicPrice": 23.25,
+      "subcategory": "ACTIVADOR",
+      "brand": "SALON LINE",
+      "publicPrice": 8.5,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/salon-line/10332-32670.jpg",
+      "shortDescription": "Nutre, define y aporta brillo con una fragancia divertida a chicle que hace que el cuidado del cabello de los niños sea casi un juego. Esta crema ligera facilita el peinado, controla el frizz y deja los rizos suaves, con movimiento y listos para la aventura. Problema que resuelve Rizos o ondas infantiles que están secos, enredados o carecen de forma. La fórmula de este producto hidrata, suaviza y facilita el desenredado para que los pequeños luzcan un cabello manejable y con estilo. Modo de uso Aplica sobre el cabello limpio y húmedo.. Distribuye mechón por mechón, de medios a puntas; evita aplicar en exceso en la raíz.. Peina con los dedos o con peine de dientes anchos según el tipo de rizo.. No enjuagues; deja secar al aire o con difusor a temperatura suave.. Ingredientes clave Aceite de Coco : Nutre profundamente y aporta suavidad al tacto.. Aceite de Macadamia : Mejora el brillo natural y la flexibilidad del cabello infantil.. Manteca de Karité : Refuerza la hidratación y protege contra la resequedad.. Fragancia a chicle : Convierte el ritual del cabello en un momento divertido sin perder eficacia.. Características adicionales Tamaño: 300 ml. Edad recomendada: niños. Tipo de cabello recomendado: rizos y ondas infantiles que necesitan definición y suavidad. Textura: cremosa, ligera, sin residuo pesado. Libre de sulfatos y parabenos (fórmula amigable para cuero cabelludo infantil). Ingredientes (INCI) Aqua, Glycerin, Cetearyl Alcohol, Behentrimonium Chloride, Cocos Nucifera Oil, Prunus Amygdalus Dulcis Oil, Butyrospermum Parkii Butter, Parfum, Phenoxyethanol, Disodium EDTA, Potassium Hydroxide, Maltodextrin, PEG-80 Sorbitan Laurate."
+    },
+    {
+      "publicProductId": "c4045aac-a657-4775-939c-22f99ee75b29",
+      "code": "10331",
+      "name": "ACTIVADOR SALON LINE KIDS GELATINA MELANCIA 550g",
+      "slug": "activador-salon-line-kids-gelatina-melancia-550g-10331",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ACTIVADOR",
+      "brand": "SALON LINE",
+      "publicPrice": 14.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-7c929c251acdc8b8.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "7749c32a-64ba-4113-85ef-dda58bc5d15b",
-      "code": "3925",
-      "name": "ACONDICIONADOR BH TIGI RESURRECT 400ML",
-      "slug": "acondicionador-bh-tigi-resurrect-400ml-3925",
+      "publicProductId": "4b3b11d7-3f93-4ace-b2a5-6f47df40c83f",
+      "code": "9714",
+      "name": "AGUA TERMAL BYPHASSE PIEL SENSIBLE Y SECA 300ML",
+      "slug": "agua-termal-byphasse-piel-sensible-y-seca-300ml-9714",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "BYPHASSE",
+      "publicPrice": 11,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-2cac0da1e9537fe3.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "e3f14f5a-fdec-4a0b-9b4d-8f3f6acda612",
+      "code": "4747",
+      "name": "ALISADOR BELOTTI RELAXER SUPER 450GR",
+      "slug": "alisador-belotti-relaxer-super-450gr-4747",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "ALISADOR",
+      "brand": "BELOTTI",
+      "publicPrice": 10.9,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-8252439b45f5c092.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "6126feca-047a-41a1-a2d6-754a92179a98",
+      "code": "3119",
+      "name": "AMPOLLA LISSIA BIOSIL TONICO CAPILAR 10ML",
+      "slug": "ampolla-lissia-biosil-tonico-capilar-10ml-3119",
       "category": {
         "slug": "capilares",
         "label": "Capilar"
       },
       "subcategory": "SHAMPOO",
-      "brand": "BH TIGI",
-      "publicPrice": 19.5,
+      "brand": "LA COLORS",
+      "publicPrice": 1.75,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-33146bee2adfa0e6.jpg",
       "shortDescription": null
     },
     {
-      "publicProductId": "cbf9802d-54b4-4cfa-b1ee-9298385484f4",
-      "code": "3926",
-      "name": "ACONDICIONADOR BH TIGI SERIAL BLONDE 400ML",
-      "slug": "acondicionador-bh-tigi-serial-blonde-400ml-3926",
+      "publicProductId": "7471b2d7-ca0f-4711-9979-11c26431cbe5",
+      "code": "3292",
+      "name": "AMPOLLA MAXYBELT ACEITE DE ARGAN 10ML",
+      "slug": "ampolla-maxybelt-aceite-de-argan-10ml-3292",
       "category": {
         "slug": "capilares",
         "label": "Capilar"
       },
-      "subcategory": "ACONDICIONADOR",
-      "brand": "BH TIGI",
-      "publicPrice": 19.75,
+      "subcategory": "AMPOLLA",
+      "brand": "MAXYBELT",
+      "publicPrice": 2.5,
       "currency": "USD",
-      "imageUrl": null,
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/maxybelt/3292-08034222.jpg",
+      "shortDescription": "La Ampolla Aceite de Argán 10ml de MAXYBELT es un tratamiento concentrado diseñado para nutrir y revitalizar el cabello.. Nutrición profunda: aporta hidratación intensa para cabellos secos y dañados.. Reparación: ayuda a restaurar la fibra capilar y reduce el frizz.. Brillo natural: mejora la apariencia del cabello dejándolo suave y brillante.. Fácil aplicación: formato en ampolla para un uso práctico y dosificado.. Se recomienda aplicar sobre el cabello limpio y húmedo, distribuyendo el producto de medios a puntas para obtener mejores resultados en la salud y apariencia del cabello.."
+    },
+    {
+      "publicProductId": "d1adf613-1ad7-4a2a-80b6-9248f58e6231",
+      "code": "3121",
+      "name": "AMPOLLA MAXYBELT BOTOX FASE 2 10ML",
+      "slug": "ampolla-maxybelt-botox-fase-2-10ml-3121",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "AMPOLLA",
+      "brand": "MAXYBELT",
+      "publicPrice": 2.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/maxybelt/3121-08034227.jpg",
+      "shortDescription": "La \"Ampolla Botox Fase 2 Maxybelt de 10ml\" es un producto cosmético que se presenta en una ampolla de 10 mililitros. Se refiere a una solución destinada a aplicarse en la piel, especialmente en áreas donde se busca reducir la apariencia de arrugas y líneas de expresión."
+    },
+    {
+      "publicProductId": "befc5d56-61f9-4422-9e94-d4eb05b05dce",
+      "code": "2919",
+      "name": "AMPOLLA MAXYBELT CELULAS MADRES 10ML",
+      "slug": "ampolla-maxybelt-celulas-madres-10ml-2919",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "AMPOLLA",
+      "brand": "MAXYBELT",
+      "publicPrice": 2.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/maxybelt/2919-08034224.jpg",
+      "shortDescription": "La \"Ampolla de células madre Maxybelt\" es un producto cosmético que contiene células madre vegetales, generalmente extraídas de plantas como la manzana, el argán o la rosa mosqueta. Estas células madre se utilizan en cosmética por su capacidad para regenerar y revitalizar la piel."
+    }
+  ],
+  "firstPageHasMore": true,
+  "highlights": [
+    {
+      "publicProductId": "4b3b11d7-3f93-4ace-b2a5-6f47df40c83f",
+      "code": "9714",
+      "name": "AGUA TERMAL BYPHASSE PIEL SENSIBLE Y SECA 300ML",
+      "slug": "agua-termal-byphasse-piel-sensible-y-seca-300ml-9714",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "AGUA MICELAR",
+      "brand": "BYPHASSE",
+      "publicPrice": 11,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-2cac0da1e9537fe3.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "2dd9c574-cc86-4824-bf3c-a1834f808e68",
+      "code": "10317",
+      "name": "BANDIDO GEL SHAVING GEL RED 1000ML",
+      "slug": "bandido-gel-shaving-gel-red-1000ml-10317",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "GEL DE PEINAR",
+      "brand": "BANDIDO",
+      "publicPrice": 7.5,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-43e3f960fff9ef44.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "b3223fb3-6020-4a95-9b9f-1ef33741d9b3",
+      "code": "6125",
+      "name": "CERA MOLDEADORA THE BARBERIA VOLUMEN Y MATIFICANTE 70G",
+      "slug": "cera-moldeadora-the-barberia-volumen-y-matificante-70g-6125",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "CERA DE PEINAR",
+      "brand": null,
+      "publicPrice": 5.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-480790a281861d0d.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "fb53d057-dd8b-4036-aabd-046ca9ab9445",
+      "code": "465",
+      "name": "GEL DESPUES DE AFEITAR OSSION CREAM & COLAGNE / RED STORM 400ML",
+      "slug": "gel-despues-de-afeitar-ossion-cream-colagne-red-storm-400ml-465",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "GEL DE AFEITAR",
+      "brand": "OSSION",
+      "publicPrice": 9.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-32c4c8ba08b8e101.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "2d199e32-a52d-48a1-b10c-de93a2fc06b1",
+      "code": "463",
+      "name": "CERA DE PEINAR OSSION CABELLO&BARBA MAXIMUM CONTROL 175ML",
+      "slug": "cera-de-peinar-ossion-cabello-barba-maximum-control-175ml-463",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "CERA DE PEINAR",
+      "brand": "OSSION",
+      "publicPrice": 7.1,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-43209d4a32f1b859.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "558e930f-410d-4fc5-938d-1a95d89aa373",
+      "code": "11801",
+      "name": "SHAMPOO MOLLIE RIZOS & ONDAS 500ML",
+      "slug": "shampoo-mollie-rizos-ondas-500ml-11801",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "SHAMPOO",
+      "brand": "MOLLIE",
+      "publicPrice": 6.1,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-12149ec701b40fc2.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "3df10750-7de6-4eb0-924a-baceedbf0efd",
+      "code": "6279",
+      "name": "MAQUINA DE CORTAR CABELLO WAHL HOME QUICK CUT 09314-2408",
+      "slug": "maquina-de-cortar-cabello-wahl-home-quick-cut-09314-2408-6279",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "MAQUINA DE CORTAR CABELLO",
+      "brand": "WAHL",
+      "publicPrice": 29.25,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-9ee2e4a2739e9a54.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "3564319e-4ab4-4714-a003-71766e3f6fcd",
+      "code": "9744",
+      "name": "REALISS PLANCHA EXPERT 1 1/4\" 480° F TITANIUM RS480",
+      "slug": "realiss-plancha-expert-1-1-4-480-f-titanium-rs480-9744",
+      "category": {
+        "slug": "capilares",
+        "label": "Capilar"
+      },
+      "subcategory": "PLANCHA",
+      "brand": "REALISS",
+      "publicPrice": 73.75,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-f3807edafabfc696.jpg",
       "shortDescription": null
     }
   ],
-  "firstPageTotal": 2907,
-  "fetchedAt": "2026-08-19T14:26:25.583Z"
+  "fetchedAt": "2026-09-17T19:06:20.237Z"
 }
