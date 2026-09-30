@@ -1,5 +1,6 @@
 import { siteConfig } from "./site-config";
 import type { Product } from "../types/product";
+import type { StorefrontProductDetail } from "./storefront-product";
 import { showPrices } from "./price-visibility";
 
 export function organizationSchema() {
@@ -115,6 +116,43 @@ export function productSchema(product: Product, pageUrl: string, imageUrl: strin
       url: pageUrl,
       priceCurrency: product.currency ?? "USD",
       price: product.price,
+      seller: {
+        "@type": "Organization",
+        name: siteConfig.name,
+      },
+    };
+  }
+
+  return schema;
+}
+
+/** Igual que productSchema, pero para un producto real del catálogo en vivo (Storefront API) --
+ * ver src/lib/storefront-product.ts. No hay `features` aquí, solo la descripción corta que
+ * ya trae la API cuando existe. */
+export function storefrontProductSchema(product: StorefrontProductDetail, pageUrl: string) {
+  const schema: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    url: pageUrl,
+    brand: {
+      "@type": "Brand",
+      name: product.brand || siteConfig.name,
+    },
+  };
+
+  if (product.imageUrl) schema.image = [product.imageUrl];
+  if (product.shortDescription) schema.description = product.shortDescription;
+  if (product.code) schema.sku = product.code;
+  if (product.category?.label) schema.category = product.category.label;
+
+  // Igual que productSchema: `offers` solo si hay precio real conocido, nunca inventado.
+  if (product.publicPrice != null && showPrices) {
+    schema.offers = {
+      "@type": "Offer",
+      url: pageUrl,
+      priceCurrency: product.currency || "USD",
+      price: product.publicPrice,
       seller: {
         "@type": "Organization",
         name: siteConfig.name,

@@ -2,6 +2,8 @@
 dist/
 # generated types
 .astro/
+# cache local de wrangler/@astrojs/cloudflare (no es config, se regenera en cada build)
+.wrangler/
 
 # dependencies
 node_modules/

@@ -7,8 +7,8 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "node scripts/indexnow-prepare-keyfile.mjs && node scripts/fetch-storefront-snapshot.ts",
-    "storefront:sync": "node scripts/fetch-storefront-snapshot.ts",
+    "prebuild": "node scripts/indexnow-prepare-keyfile.mjs && node scripts/fetch-storefront-snapshot.ts && node scripts/fetch-storefront-sitemap-urls.ts",
+    "storefront:sync": "node scripts/fetch-storefront-snapshot.ts && node scripts/fetch-storefront-sitemap-urls.ts",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
@@ -24,6 +24,7 @@
     "admin": "decap-server"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^14.0.0",
     "@astrojs/react": "^6.0.2",
     "@astrojs/sitemap": "^3.7.3",
     "@fontsource/inter": "^5.3.0",

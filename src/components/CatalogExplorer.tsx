@@ -18,6 +18,7 @@ interface StorefrontProduct {
   publicProductId: string;
   code: string | null;
   name: string;
+  slug: string;
   brand: string | null;
   publicPrice: number | null;
   imageUrl: string | null;
@@ -114,7 +115,10 @@ export default function CatalogExplorer({
       ]) => {
         if (thisRequest !== requestId.current) return; // el visitante ya filtro
         if (productos && Array.isArray(productos.items)) {
-          setItems(productos.items);
+          // No encoger la grilla ya renderizada: si la pagina en vivo trae menos items que
+          // la foto del build, todo lo de abajo (categorias, footer) sube justo cuando el
+          // visitante ya tiene el clic en camino hacia una tarjeta que desaparece.
+          setItems((prev) => (productos.items.length >= prev.length ? productos.items : prev));
           setHasMore(productos.hasMore);
           setPage(1);
         }
@@ -192,51 +196,56 @@ export default function CatalogExplorer({
       )}
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((item) => (
-          <div key={item.publicProductId} className="group glass-card flex flex-col overflow-hidden rounded-2xl shadow-md">
-            <div className="flex aspect-square items-center justify-center overflow-hidden bg-white">
-              {item.imageUrl ? (
-                <img src={item.imageUrl} alt={item.name} loading="lazy" className="h-full w-full object-contain" />
-              ) : (
-                <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-blush-50 text-primary-700/50">
-                  <svg
-                    viewBox="0 0 24 24"
-                    width="36"
-                    height="36"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <rect x="3" y="3" width="18" height="18" rx="2" />
-                    <circle cx="8.5" cy="8.5" r="1.5" />
-                    <polyline points="21 15 16 10 5 21" />
-                  </svg>
-                  <span className="text-xs font-medium">Foto próximamente</span>
-                </div>
-              )}
-            </div>
-            <div className="flex flex-1 flex-col gap-1.5 p-5">
-              {item.brand && (
-                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-primary-700">{item.brand}</p>
-              )}
-              <h3 className="font-display text-lg leading-snug text-primary-900">{item.name}</h3>
-              <p className="mt-1 text-xl font-semibold text-ink" data-precio>{priceLabel(showPrices ? item.publicPrice : null)}</p>
-              <a
-                href={whatsappLink(
-                  `Hola, quisiera consultar sobre: ${item.name}${item.code ? ` (Cód: ${item.code})` : ""}`
+        {items.map((item) => {
+          const detailHref = `/productos/${categorySlug}/p/${item.publicProductId}/${item.slug}`;
+          return (
+            <div key={item.publicProductId} className="group glass-card flex flex-col overflow-hidden rounded-2xl shadow-md">
+              <a href={detailHref} className="flex aspect-square items-center justify-center overflow-hidden bg-white">
+                {item.imageUrl ? (
+                  <img src={item.imageUrl} alt={item.name} loading="lazy" className="h-full w-full object-contain" />
+                ) : (
+                  <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-blush-50 text-primary-700/50">
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="36"
+                      height="36"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                      <circle cx="8.5" cy="8.5" r="1.5" />
+                      <polyline points="21 15 16 10 5 21" />
+                    </svg>
+                    <span className="text-xs font-medium">Foto próximamente</span>
+                  </div>
                 )}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 inline-flex w-fit items-center gap-2 rounded-full bg-primary-800 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-primary-900/20 transition-transform duration-200 hover:scale-105 hover:bg-primary-700"
-              >
-                Consultar
               </a>
+              <div className="flex flex-1 flex-col gap-1.5 p-5">
+                {item.brand && (
+                  <p className="text-xs font-semibold uppercase tracking-[0.15em] text-primary-700">{item.brand}</p>
+                )}
+                <a href={detailHref} className="font-display text-lg leading-snug text-primary-900 hover:text-primary-700">
+                  {item.name}
+                </a>
+                <p className="mt-1 text-xl font-semibold text-ink" data-precio>{priceLabel(showPrices ? item.publicPrice : null)}</p>
+                <a
+                  href={whatsappLink(
+                    `Hola, quisiera consultar sobre: ${item.name}${item.code ? ` (Cód: ${item.code})` : ""}`
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex w-fit items-center gap-2 rounded-full bg-primary-800 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-primary-900/20 transition-transform duration-200 hover:scale-105 hover:bg-primary-700"
+                >
+                  Consultar
+                </a>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {loading && <p className="mt-8 text-center text-sm text-ink-muted">Cargando...</p>}

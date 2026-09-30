@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import SectionReveal from "../../components/SectionReveal.astro";
+import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
 import { breadcrumbSchema } from "../../lib/structured-data";
 import { getOmviqaEditorial, type OmviqaPage } from "../../lib/omviqa-editorial";
 
@@ -9,6 +10,17 @@ const breadcrumbs = breadcrumbSchema([
   { name: "Inicio", path: "/" },
   { name: "Guías", path: "/guias" },
 ]);
+
+// Tag por tema, calculado del slug (no hay campo de categoria en el
+// esquema de guias/*.md) -- solo para agrupar visualmente, no cambia el
+// contenido de cada guia.
+const TAGS: Record<string, { label: string; icon: "scissors" | "layout" | "spark" | "drop" | "bed" }> = {
+  "como-elegir-silla-barberia": { label: "Barbería", icon: "scissors" },
+  "como-equipar-salon-belleza": { label: "Equipamiento", icon: "layout" },
+  "cuidados-muebles-salon-belleza": { label: "Mantenimiento", icon: "spark" },
+  "materiales-para-empezar-negocio-unas": { label: "Uñas", icon: "drop" },
+  "que-camilla-estetica-comprar": { label: "Camillas", icon: "bed" },
+};
 
 const guiasEntries = await getCollection("guias");
 const pageCollection = await getOmviqaEditorial<OmviqaPage>("page");
@@ -18,6 +30,7 @@ const guides = guiasEntries.map((g) => ({
   title: g.data.title,
   href: `/guias/${g.data.slug}`,
   description: g.data.listSummary,
+  ...(TAGS[g.data.slug] ?? { label: "Guía", icon: "layout" as const }),
 }));
 ---
 
@@ -29,7 +42,7 @@ const guides = guiasEntries.map((g) => ({
 >
   <section class="hero-glow px-6 py-16 text-center">
     <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">{page?.eyebrow || "Guías"}</p>
-    <h1 class="mt-4 font-display text-4xl text-primary-900 sm:text-5xl">
+    <h1 class="text-display-lg mt-4 text-primary-900">
       {page?.title || "Guías para tu salón de belleza"}
     </h1>
     <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-muted">
@@ -37,16 +50,70 @@ const guides = guiasEntries.map((g) => ({
     </p>
   </section>
 
-  <SectionReveal as="section" class="px-6 pb-16">
-    <div class="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
-      {
-        guides.map((g) => (
-          <a href={g.href} class="glass-card block rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-200">
-            <h2 class="font-display text-lg text-primary-900">{g.title}</h2>
-            <p class="mt-2 text-sm text-ink-muted">{g.description}</p>
-          </a>
-        ))
-      }
+  <SectionReveal as="section" class="section-y px-6">
+    <div class="mx-auto max-w-5xl">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          guides.map((g) => (
+            <a
+              href={g.href}
+              class="glass-card group flex flex-col gap-4 rounded-2xl p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            >
+              <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-800/10 text-primary-800">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  {g.icon === "scissors" && (
+                    <>
+                      <circle cx="6" cy="6" r="2.5" />
+                      <circle cx="6" cy="18" r="2.5" />
+                      <path d="M8.5 8 20 19M8.5 16 20 5" />
+                    </>
+                  )}
+                  {g.icon === "layout" && (
+                    <>
+                      <rect x="3" y="4" width="18" height="16" rx="2" />
+                      <path d="M3 9h18M9 9v11" />
+                    </>
+                  )}
+                  {g.icon === "spark" && (
+                    <>
+                      <path d="M12 3v4M12 17v4M3 12h4M17 12h4" />
+                      <path d="m6.5 6.5 2 2M15.5 15.5l2 2M6.5 17.5l2-2M15.5 8.5l2-2" />
+                    </>
+                  )}
+                  {g.icon === "drop" && (
+                    <>
+                      <path d="M12 3c3.5 4.2 6 7.6 6 10.5a6 6 0 1 1-12 0C6 10.6 8.5 7.2 12 3Z" />
+                    </>
+                  )}
+                  {g.icon === "bed" && (
+                    <>
+                      <path d="M3 18v-7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1" />
+                      <path d="M3 19v-3h18v3M13 11h6a2 2 0 0 1 2 2v3" />
+                      <circle cx="7" cy="10.5" r="1.2" />
+                    </>
+                  )}
+                </svg>
+              </span>
+              <div class="flex-1">
+                <p class="text-xs font-semibold uppercase tracking-wide text-primary-700">{g.label}</p>
+                <h2 class="mt-1 font-display text-lg leading-snug text-primary-900">{g.title}</h2>
+                <p class="mt-2 text-sm text-ink-muted">{g.description}</p>
+              </div>
+              <span class="inline-flex items-center gap-1 text-sm font-semibold text-primary-700 transition-all group-hover:gap-2">
+                Leer guía →
+              </span>
+            </a>
+          ))
+        }
+      </div>
     </div>
+  </SectionReveal>
+
+  <SectionReveal as="section" class="section-y bg-blush-50 px-6 text-center">
+    <h2 class="font-display text-2xl text-primary-900">¿No encuentras lo que buscas?</h2>
+    <p class="mx-auto mt-3 max-w-xl text-ink-muted">
+      Escríbenos por WhatsApp y te asesoramos directamente sobre tu salón, barbería o negocio de uñas.
+    </p>
+    <WhatsAppCTA label="Consultar por WhatsApp" pulse class="mt-6" source="guides" pageType="guide" ctaLocation="bottom" />
   </SectionReveal>
 </BaseLayout>

@@ -8,6 +8,7 @@
    Keep this block free of business content; it only safelists CSS utilities. */
 @source inline("flex grid max-w-6xl bg-primary-900 rounded-3xl block hidden relative absolute inline-flex");
 @source inline("!border-white !px-4 !py-2 !text-white -translate-x-1/2 aspect-[16/10] aspect-[16/9] aspect-[3/4] aspect-[4/3] aspect-[4/5] aspect-square backdrop-blur backdrop-blur-sm bg-blush-100 bg-blush-50 bg-blush-500 bg-cream bg-cream/90 bg-green-500 bg-primary-800 bg-primary-900/50 bg-red-50 bg-white border border-2 border-b border-blush-100 border-ink/10 border-primary-200 border-primary-800 border-primary-800/20 border-primary-900/10 border-t border-white border-white/10 border-white/25 border-y container contents duration-200 duration-300 duration-500 duration-[var(--duration-base)] duration: ease-[var(--ease-premium)] ease-out fixed flex-1 flex-col flex-wrap font-display font-medium font-normal font-semibold gap-1 gap-1.5 gap-10 gap-12 gap-16 gap-2 gap-3 gap-4 gap-6 gap-8 gap-px gap-x-8 gap-y-6 grid-cols-1 grid-cols-2 group group-aria-expanded:rotate-180 group-hover:opacity-100 group-hover:scale-105 group-hover:translate-x-1 h-10 h-2.5 h-40 h-9 h-full hover:-translate-y-1 hover:bg-blush-100 hover:bg-blush-50 hover:bg-primary-700 hover:bg-primary-800 hover:bg-white hover:bg-white/10 hover:border-primary-800 hover:border-white/60 hover:scale-105 hover:shadow-2xl hover:shadow-xl hover:text-primary-600 hover:text-primary-700 hover:text-primary-800 hover:text-primary-900 hover:text-white inline inline-block inset-0 inset-y-0 is-open items-center items-start justify-between justify-center leading-none leading-snug left-1/2 lg:aspect-[4/5] lg:gap-10 lg:grid-cols-2 lg:grid-cols-3 lg:grid-cols-4 lg:grid-cols-[1.05fr_1fr] lg:max-w-none lg:order-1 lg:order-2 lg:py-32 lg:text-left line-clamp-1 line-clamp-2 max-w-2xl max-w-3xl max-w-4xl max-w-5xl max-w-[85%] max-w-lg max-w-md max-w-none max-w-sm max-w-xl mb-6 mb-8 md:flex md:grid-cols-2 md:grid-cols-4 md:items-start min-h-[220px] min-h-[60vh] min-h-screen min-w-0 mt-0.5 mt-1 mt-10 mt-12 mt-2 mt-3 mt-4 mt-5 mt-6 mt-8 mt-auto mt-px mx-auto object-contain object-cover opacity-0 opacity-50 opacity-70 opacity: order-1 order-2 overflow-hidden overflow-y-auto p-2 p-4 p-5 p-6 p-8 pb-10 pb-14 pb-16 pb-20 pb-3 pb-4 pb-8 pointer-events-none pointer-events: pt-3 pt-5 pt-8 px-3 px-4 px-5 px-6 px-8 py-1.5 py-10 py-14 py-16 py-2 py-2.5 py-20 py-3 py-4 py-6 py-8 right-0 rounded-2xl rounded-[1.75rem] rounded-[2rem] rounded-full rounded-lg rounded-md rounded-xl scroll-mt-24 self-end self-start shadow-2xl shadow-lg shadow-md shadow-primary-900/20 shadow-sm shadow-xl shrink-0 sm:aspect-[5/4] sm:flex-row sm:grid-cols-2 sm:grid-cols-3 sm:items-center sm:justify-between sm:p-10 sm:py-28 sm:text-4xl sm:text-5xl space-y-1 space-y-2 space-y-6 sr-only sticky text-2xl text-3xl text-4xl text-5xl text-6xl text-[0.65rem] text-base text-blush-100 text-blush-100/60 text-blush-100/70 text-blush-100/80 text-blush-100/90 text-blush-50 text-center text-display-lg text-display-md text-display-sm text-display-xl text-ink text-ink-muted text-left text-lg text-primary-700 text-primary-700/50 text-primary-800 text-primary-900 text-red-700 text-sm text-white text-white/60 text-white/80 text-white/85 text-white/90 text-xl text-xs top-0 top-full tracking-[0.15em] tracking-[0.2em] tracking-[0.3em] tracking-wide transition-[opacity,transform,visibility] transition-[transform,box-shadow] transition-colors transition-delay: transition-opacity transition-transform transition: translate-x-full translate-y-1 underline uppercase w-10 w-2.5 w-72 w-9 w-[85vw] w-fit w-full whitespace-pre-line z-10 z-50 z-[60]");
+@source inline("-mt-6 bg-primary-800/10 bg-white/70 bottom-4 gap-x-4 gap-y-4 group-hover:gap-2 h-11 hover:shadow-lg left-3 lg:justify-start py-1 right-4 top-3 transition-all w-11 [#mobile-menu-panel.is-open_&]:translate-x-0");
 
 
 @import "@fontsource/playfair-display/500.css";
@@ -101,10 +102,27 @@
   }
 
   .hero-glow {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     background:
-      radial-gradient(circle at 15% 20%, color-mix(in srgb, var(--color-primary-700) 22%, transparent), transparent 55%),
-      radial-gradient(circle at 85% 15%, color-mix(in srgb, var(--color-primary-600) 16%, transparent), transparent 50%),
-      radial-gradient(circle at 50% 100%, color-mix(in srgb, var(--color-blush-100) 80%, transparent), transparent 60%);
+      radial-gradient(circle at 15% 20%, color-mix(in srgb, var(--color-primary-700) 30%, transparent), transparent 55%),
+      radial-gradient(circle at 85% 10%, color-mix(in srgb, var(--color-primary-600) 24%, transparent), transparent 50%),
+      radial-gradient(circle at 50% 115%, color-mix(in srgb, var(--color-primary-800) 14%, transparent), transparent 60%),
+      linear-gradient(180deg, color-mix(in srgb, var(--color-blush-100) 85%, transparent) 0%, var(--color-cream) 100%);
+  }
+
+  /* Textura sutil de puntos, desvanecida hacia los bordes -- da profundidad
+     al fondo plano sin competir con el texto encima. */
+  .hero-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: radial-gradient(color-mix(in srgb, var(--color-primary-900) 7%, transparent) 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    mask-image: radial-gradient(circle at 50% 25%, black, transparent 70%);
+    -webkit-mask-image: radial-gradient(circle at 50% 25%, black, transparent 70%);
   }
 
   /* Estilo del cuerpo Markdown de las guías (src/content/guias/*.md, editable desde /admin) —

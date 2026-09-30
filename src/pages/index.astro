@@ -9,19 +9,19 @@ import PromoShowcase from "../components/PromoShowcase.astro";
 import TrustSection from "../components/TrustSection.astro";
 import FeatureStrip, { type FeatureItem } from "../components/FeatureStrip.astro";
 import OmviqaHome from "../components/OmviqaHome.astro";
+import CategoryHighlights from "../components/CategoryHighlights.tsx";
 import { siteConfig } from "../lib/site-config";
 import { categories as categoryMeta } from "../lib/categories";
 import { categoryImages } from "../lib/category-images";
 import { getOmviqaHome } from "../lib/omviqa-home";
 import NewProducts from "../components/NewProducts.tsx";
-import { PRECIO_OCULTO, showPrices } from "../lib/price-visibility";
 import { getNewProducts, NEW_PRODUCTS_LIMIT } from "../lib/new-products";
 import { storefrontBaseUrl } from "../lib/storefront-config";
+import { getOmviqaEditorial, editorialAssetUrl, type OmviqaCourse } from "../lib/omviqa-editorial";
+import { getCollection, getEntry } from "astro:content";
 
 import heroImage from "../assets/products/muebles/cat-muebles.jpeg";
-import sillonDestacado from "../assets/products/muebles/sillon-peluqueria-1.jpg";
-import camillaDestacada from "../assets/products/muebles/camilla-3-niveles.jpg";
-import mesaDestacada from "../assets/products/muebles/mesa-silla-concha-manicura.jpg";
+import cursoImage from "../assets/products/hero/cat-curso.jpeg";
 
 // Argumentos de servicio, sobre la reja de categorias. Son afirmaciones que
 // el negocio ya sostiene hoy (envio nacional, atencion por WhatsApp, locales
@@ -42,15 +42,22 @@ const businessStrengths: FeatureItem[] = [
   { icon: "shield", title: "Confianza y experiencia" },
 ];
 
-const mueblesDestacados = [
-  { name: "Sillón de peluquería ST-2202", price: "$345", image: sillonDestacado, slug: "sillon-de-peluqueria-st-2202" },
-  { name: "Camilla multiuso 3 niveles", price: "$208", image: camillaDestacada, slug: "camilla-multiuso-3-niveles" },
-  { name: "Set mesa + silla concha", price: "$350", image: mesaDestacada, slug: "set-mesa-silla-concha-para-manicura" },
-];
-
 const omviqaHome = await getOmviqaHome();
 // Solo hace falta para el Home estatico: el de Omviqa trae las suyas.
 const newProducts = omviqaHome ? [] : await getNewProducts(NEW_PRODUCTS_LIMIT);
+// Destacados de muebles del Home estatico: misma instantanea real (Storefront
+// API, via prebuild) que usa /productos/muebles -- nunca precios escritos a
+// mano aqui (ver AGENTS.md: precio/stock/identidad de producto son de SACC
+// via Omviqa).
+const storefrontEntry = omviqaHome ? null : await getEntry("storefrontCatalog", "muebles");
+
+// Teaser del curso: misma fuente que /cursos (Omviqa editorial, con la
+// coleccion local como respaldo) para que nunca diga un precio o duracion
+// distinta a la pagina real del curso.
+const omviqaCourses = omviqaHome ? null : await getOmviqaEditorial<OmviqaCourse>("course");
+const [cursoRespaldo] = omviqaHome ? [] : await getCollection("cursos");
+const curso = omviqaCourses?.items.find((item) => item.payload.enabled !== false)?.payload ?? cursoRespaldo?.data ?? null;
+const cursoImageUrl = curso && omviqaCourses ? editorialAssetUrl(curso, omviqaCourses.assets) : null;
 ---
 
 <BaseLayout title={siteConfig.name} description={siteConfig.description} path="/">
@@ -174,61 +181,21 @@ const newProducts = omviqaHome ? [] : await getNewProducts(NEW_PRODUCTS_LIMIT);
     <FeatureStrip items={businessStrengths} variant="dark" class="mx-auto max-w-6xl" />
   </section>
 
-  <SectionReveal as="section" class="section-y bg-blush-50 px-6">
-    <div class="mx-auto max-w-6xl">
-      <p class="text-center text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">
-        Muebles destacados
-      </p>
-      <h2 class="mt-2 text-center font-display text-3xl text-primary-900">
-        Equipa tu salón
-      </h2>
-      <p class="mx-auto mt-3 max-w-2xl text-center text-ink-muted">
-        Camillas, sillones y estaciones de trabajo listos para tu negocio.
-      </p>
-      <div class="mt-12 grid gap-6 sm:grid-cols-3">
-        {
-          mueblesDestacados.map((m) => (
-            <div class="glass-card group overflow-hidden rounded-2xl shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
-              <a href={`/productos/muebles/${m.slug}/`} class="block">
-                <div class="aspect-square overflow-hidden bg-white">
-                  <Image
-                    src={m.image}
-                    alt={m.name}
-                    width={500}
-                    height={500}
-                    class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-              </a>
-              <div class="flex flex-col gap-2 p-5">
-                <a href={`/productos/muebles/${m.slug}/`} class="font-display text-lg text-primary-800 hover:text-primary-600">
-                  {m.name}
-                </a>
-                <p class="text-lg font-semibold text-ink" data-precio>{showPrices ? m.price : PRECIO_OCULTO}</p>
-                <WhatsAppCTA
-                  label="Consultar"
-                  class="mt-1 w-fit !px-4 !py-2 text-sm"
-                  message={`Hola, quisiera consultar sobre: ${m.name}`}
-                  source="home"
-                  pageType="home"
-                  ctaLocation="product_highlight"
-                  productId={m.slug}
-                  productName={m.name}
-                  category="muebles"
-                />
-              </div>
-            </div>
-          ))
-        }
-      </div>
-      <div class="mt-10 text-center">
-        <a
-          href="/productos/muebles"
-          class="inline-flex items-center gap-2 rounded-full bg-primary-800 px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-primary-700"
-        >
-          Ver todos los muebles →
-        </a>
-      </div>
+  <SectionReveal as="div" class="bg-blush-50">
+    <CategoryHighlights
+      client:load
+      apiBaseUrl={storefrontBaseUrl() ?? ""}
+      categorySlug="muebles"
+      categoryLabel="Muebles"
+      initialItems={storefrontEntry?.data.highlights ?? []}
+    />
+    <div class="-mt-6 px-6 pb-14 text-center">
+      <a
+        href="/productos/muebles"
+        class="inline-flex items-center gap-2 rounded-full bg-primary-800 px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-primary-700"
+      >
+        Ver todos los muebles →
+      </a>
     </div>
   </SectionReveal>
 
@@ -256,32 +223,60 @@ const newProducts = omviqaHome ? [] : await getNewProducts(NEW_PRODUCTS_LIMIT);
     </div>
   </SectionReveal>
 
-  <SectionReveal as="section" class="section-y px-6">
-    <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
-      <div class="order-2 lg:order-1">
-        <div class="glass-card rounded-3xl p-8">
-          <p class="font-display text-2xl text-primary-800">Curso Profesional de Uñas Acrílicas</p>
-          <p class="mt-4 text-ink-muted">
-            6 meses de formación profesional. $60 al mes (o 2 pagos de $30), con matrícula
-            de $10 para separar tu cupo.
+  {curso && (
+    <SectionReveal as="section" class="section-y px-6">
+      <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
+        <div class="order-2 lg:order-1">
+          <div class="glass-card overflow-hidden rounded-3xl">
+            <div class="relative aspect-[16/10] overflow-hidden bg-blush-100">
+              <img
+                src={cursoImageUrl ?? cursoImage.src}
+                alt={`Clase práctica del ${curso.title}`}
+                loading="lazy"
+                class="h-full w-full object-cover"
+              />
+              <span class="absolute left-4 top-4 rounded-full bg-primary-800 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-white shadow-lg">
+                Formación profesional
+              </span>
+            </div>
+            <div class="p-8">
+              <p class="font-display text-2xl text-primary-800">{curso.title}</p>
+              <dl class="mt-5 grid grid-cols-2 gap-x-4 gap-y-4">
+                {curso.highlights.slice(0, 4).map((h) => (
+                  <div>
+                    <dt class="text-xs font-semibold uppercase tracking-wide text-primary-700">{h.label}</dt>
+                    <dd class="mt-0.5 font-display text-base text-ink">{h.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Formación</p>
+          <h2 class="mt-4 font-display text-3xl text-primary-900">¿Quieres vivir de las uñas?</h2>
+          <p class="mt-6 text-ink-muted">
+            Además de vender los insumos, formamos a la próxima generación de nail artists en
+            Portoviejo con nuestro curso profesional.
           </p>
-          <a
-            href="/cursos"
-            class="mt-6 inline-block font-semibold text-primary-700 hover:underline"
-          >
-            Conoce el curso →
-          </a>
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <WhatsAppCTA
+              label={curso.ctaLabel || "Reservar mi cupo"}
+              pulse
+              message={curso.ctaMessage || `Hola, quisiera información para inscribirme al ${curso.title}`}
+              source="home"
+              pageType="home"
+              ctaLocation="course_teaser"
+              extraTrackEvents={["click_course_contact"]}
+            />
+            <a href="/cursos" class="inline-flex items-center gap-1 font-semibold text-primary-700 hover:underline">
+              Ver programa completo →
+            </a>
+          </div>
         </div>
       </div>
-      <div class="order-1 lg:order-2">
-        <h2 class="font-display text-3xl text-primary-900">¿Quieres vivir de las uñas?</h2>
-        <p class="mt-6 text-ink-muted">
-          Además de vender los insumos, formamos a la próxima generación de nail artists en
-          Portoviejo con nuestro curso profesional.
-        </p>
-      </div>
-    </div>
-  </SectionReveal>
+    </SectionReveal>
+  )}
 
   <SectionReveal as="section" class="section-y bg-blush-50 px-6">
     <TrustSection />

@@ -1,0 +1,245 @@
+---
+// Detalle de un producto REAL del catálogo en vivo (Storefront API de Omviqa) --
+// distinto de src/pages/productos/[category]/[slug].astro (los 74 productos
+// curados a mano, con foto/ficha editorial propia, que SÍ se generan en build).
+//
+// Con miles de SKUs reales, generar una página estática por producto no es
+// viable (y quedaría vieja hasta el próximo build) -- por eso esta es la
+// única ruta del sitio con "prerender = false": Omviqa responde el precio y
+// la descripción en cada visita real, igual que ya hacen CatalogExplorer/
+// CategoryHighlights/NewProducts pero del lado del servidor.
+//
+// URL: /productos/{category}/p/{id}/{slug-decorativo}. El [...slug] es solo
+// para lectura humana/SEO -- la búsqueda real es siempre por `id`
+// (publicProductId, el único identificador que la Storefront API acepta
+// para pedir un producto suelto; ni el slug ni el código sirven para eso).
+export const prerender = false;
+
+import BaseLayout from "../../../../../layouts/BaseLayout.astro";
+import SectionReveal from "../../../../../components/SectionReveal.astro";
+import WhatsAppCTA from "../../../../../components/WhatsAppCTA.astro";
+import { getStorefrontProduct } from "../../../../../lib/storefront-product";
+import { breadcrumbSchema, faqSchema, storefrontProductSchema } from "../../../../../lib/structured-data";
+import { siteConfig } from "../../../../../lib/site-config";
+import { PRECIO_OCULTO, showPrices } from "../../../../../lib/price-visibility";
+import { categories } from "../../../../../lib/categories";
+import { storefrontBaseUrl } from "../../../../../lib/storefront-config";
+
+const { id, category } = Astro.params;
+
+const product = id ? await getStorefrontProduct(id) : null;
+
+// No se puede usar Astro.rewrite("/404") desde una ruta on-demand hacia una
+// pagina prerenderizada (404.astro se compila a HTML estatico en el build,
+// asi que el worker no puede "pedirsela" en runtime -- Astro lo rechaza).
+// Se marca el status 404 y se renderiza un fallback propio mas abajo.
+if (!product) Astro.response.status = 404;
+
+const categoryMeta = categories.find((c) => c.slug === (product?.category?.slug ?? category));
+const categoryLabel = product?.category?.label ?? categoryMeta?.label ?? category;
+const categorySlug = product?.category?.slug ?? category;
+
+function formatPrice(value: number): string {
+  return `$${Number.isInteger(value) ? value : value.toFixed(2)}`;
+}
+
+function priceLabel(): string {
+  if (!product) return PRECIO_OCULTO;
+  if (!showPrices) return PRECIO_OCULTO;
+  if (product.publicPrice == null) return "Consultar precio";
+  return formatPrice(product.publicPrice);
+}
+
+const pageUrl = new URL(Astro.url.pathname, siteConfig.url).toString();
+const whatsappMessage = product
+  ? `Hola, quisiera consultar sobre: ${product.name}${product.code ? ` (Cód: ${product.code})` : ""} - ${pageUrl}`
+  : "";
+
+const faqs = product
+  ? [
+      {
+        question: `¿Cuál es el precio de ${product.name}?`,
+        answer:
+          showPrices && product.publicPrice != null
+            ? `El precio publicado es ${formatPrice(product.publicPrice)} ${product.currency || "USD"}. Escríbenos por WhatsApp para confirmar el precio actualizado y la disponibilidad.`
+            : `Consulta el precio actualizado por WhatsApp — te respondemos con el precio y la disponibilidad real al instante.`,
+      },
+      {
+        question: `¿Alva Importaciones tiene stock de ${product.name} en Portoviejo?`,
+        answer: `La disponibilidad cambia según el inventario real. Escríbenos por WhatsApp con el nombre${product.code ? ` o el código ${product.code}` : ""} y te confirmamos el stock al instante.`,
+      },
+      {
+        question: `¿Cómo comprar ${product.name}?`,
+        answer: `Escríbenos por WhatsApp o visita uno de nuestros locales en Portoviejo (Matriz o Sucursal). Te asesoramos y confirmamos precio, stock y forma de entrega.`,
+      },
+    ]
+  : [];
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Inicio", path: "/" },
+  { name: "Productos", path: "/productos" },
+  { name: categoryLabel, path: `/productos/${categorySlug}` },
+  ...(product ? [{ name: product.name, path: Astro.url.pathname }] : []),
+]);
+
+// Un puñado más de la misma categoría, para no dejar la página como un callejón sin salida
+// -- mismo origen de datos (Storefront API), pedido aparte porque /products no filtra por id.
+let relacionados: Array<{ publicProductId: string; name: string; slug: string; imageUrl: string | null; publicPrice: number | null }> = [];
+const base = storefrontBaseUrl();
+if (base && product) {
+  try {
+    const res = await fetch(`${base}/products?category=${encodeURIComponent(categorySlug ?? "")}&limit=8`);
+    if (res.ok) {
+      const data = (await res.json()) as { items?: typeof relacionados };
+      relacionados = (data.items ?? []).filter((p) => p.publicProductId !== product.publicProductId).slice(0, 4);
+    }
+  } catch {
+    // Sin relacionados si falla -- la página principal ya tiene lo que importa.
+  }
+}
+
+const structuredData = product
+  ? [storefrontProductSchema(product, pageUrl), breadcrumbs, faqSchema(faqs)]
+  : [breadcrumbs];
+---
+
+<BaseLayout
+  title={product ? `${product.name}${product.brand ? ` — ${product.brand}` : ""}` : "Producto no encontrado"}
+  description={
+    product
+      ? product.shortDescription || `${product.name}, disponible en Alva Importaciones, Portoviejo. Consulta precio y disponibilidad por WhatsApp.`
+      : "Este producto ya no está disponible. Consulta el catálogo completo de Alva Importaciones."
+  }
+  path={Astro.url.pathname}
+  structuredData={structuredData}
+>
+  {!product && (
+    <section class="px-6 py-24 text-center">
+      <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Producto no encontrado</p>
+      <h1 class="text-display-md mt-4 text-primary-900">Este producto ya no está disponible</h1>
+      <p class="mx-auto mt-4 max-w-xl text-ink-muted">Puede que se haya agotado o que el enlace esté desactualizado. Revisa el catálogo o escríbenos por WhatsApp.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/productos" class="inline-flex items-center gap-2 rounded-full bg-primary-800 px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-primary-700">
+          Ver catálogo completo
+        </a>
+        <WhatsAppCTA label="Consultar por WhatsApp" source="product" pageType="product_not_found" ctaLocation="fallback" />
+      </div>
+    </section>
+  )}
+
+  {product && (
+  <>
+  <nav aria-label="Breadcrumb" class="px-6 pt-8 text-sm text-ink-muted">
+    <ol class="mx-auto flex max-w-5xl flex-wrap items-center gap-2">
+      <li><a href="/" class="hover:text-primary-700">Inicio</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/productos" class="hover:text-primary-700">Productos</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href={`/productos/${categorySlug}`} class="hover:text-primary-700">{categoryLabel}</a></li>
+      <li aria-hidden="true">/</li>
+      <li aria-current="page" class="text-ink">{product.name}</li>
+    </ol>
+  </nav>
+
+  <section class="px-6 py-10">
+    <div class="mx-auto grid max-w-5xl gap-10 lg:grid-cols-2">
+      <div class="overflow-hidden rounded-[2rem] border border-blush-100 bg-white p-8 shadow-lg sm:p-10">
+        <div class="aspect-square overflow-hidden">
+          {product.imageUrl ? (
+            <img
+              src={product.imageUrl}
+              alt={product.name}
+              loading="eager"
+              class="h-full w-full object-contain"
+            />
+          ) : (
+            <div class="flex h-full w-full flex-col items-center justify-center gap-2 bg-blush-50 text-primary-700/50">
+              <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" />
+              </svg>
+              <span class="text-sm font-medium">Foto próximamente</span>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-700">{categoryLabel}</p>
+        <h1 class="text-display-md text-primary-900">{product.name}</h1>
+        <p class="text-2xl font-semibold text-ink" data-precio>{priceLabel()}</p>
+        {product.brand && <p class="text-sm text-ink-muted">Marca: {product.brand}</p>}
+        {product.code && <p class="text-sm text-ink-muted">Código: {product.code}</p>}
+        {product.shortDescription && <p class="text-ink-muted">{product.shortDescription}</p>}
+        <div class="mt-2 flex flex-wrap items-center gap-4">
+          <WhatsAppCTA
+            label="Consultar por WhatsApp"
+            pulse
+            message={whatsappMessage}
+            productId={product.publicProductId}
+            productName={product.name}
+            category={categorySlug}
+            source="product"
+            pageType="product"
+            ctaLocation="detail"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SectionReveal as="section" class="px-6 py-14">
+    <div class="mx-auto max-w-3xl">
+      <h2 class="font-display text-2xl text-primary-900">Preguntas frecuentes</h2>
+      <dl class="mt-8 space-y-6">
+        {faqs.map((faq) => (
+          <div>
+            <dt class="font-display text-lg text-primary-800">{faq.question}</dt>
+            <dd class="mt-2 text-ink-muted">{faq.answer}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </SectionReveal>
+
+  {relacionados.length > 0 && (
+    <SectionReveal as="section" class="bg-blush-50 px-6 py-14">
+      <div class="mx-auto max-w-5xl">
+        <h2 class="font-display text-2xl text-primary-900">Más de {categoryLabel}</h2>
+        <ul class="mt-8 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+          {relacionados.map((item) => (
+            <li class="glass-card flex flex-col overflow-hidden rounded-2xl shadow-md">
+              <a href={`/productos/${categorySlug}/p/${item.publicProductId}/${item.slug}`} class="block">
+                <div class="aspect-square overflow-hidden bg-white">
+                  {item.imageUrl ? (
+                    <img src={item.imageUrl} alt={item.name} loading="lazy" class="h-full w-full object-contain" />
+                  ) : (
+                    <div class="h-full w-full bg-blush-50" />
+                  )}
+                </div>
+                <p class="p-4 font-display text-sm leading-snug text-primary-900">{item.name}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </SectionReveal>
+  )}
+
+  <SectionReveal as="section" class="px-6 py-14 text-center">
+    <h2 class="font-display text-2xl text-primary-900">¿Tienes dudas sobre este producto?</h2>
+    <p class="mx-auto mt-3 max-w-xl text-ink-muted">Escríbenos por WhatsApp — te respondemos con precio y disponibilidad reales.</p>
+    <WhatsAppCTA
+      label="Consultar por WhatsApp"
+      class="mt-6"
+      message={whatsappMessage}
+      productId={product.publicProductId}
+      productName={product.name}
+      category={categorySlug}
+      source="product"
+      pageType="product"
+      ctaLocation="bottom"
+    />
+  </SectionReveal>
+  </>
+  )}
+</BaseLayout>

@@ -3,10 +3,23 @@
   // Debe coincidir con el nombre del Worker ya creado en el dashboard de Cloudflare.
   "name": "alva-importaciones-web",
   "compatibility_date": "2026-08-15",
-  // Sitio 100% estático (astro.config.mjs -> output: "static"), sin SSR ni bindings:
-  // solo se sirven los archivos de dist/, no hace falta "main" ni adapter de Astro.
+  "compatibility_flags": ["nodejs_compat"],
+  // El sitio sigue siendo casi todo estatico (astro.config.mjs -> output: "static" +
+  // adapter de Cloudflare): la enorme mayoria de paginas se sigue generando en build y
+  // se sirve como asset puro. Las rutas puntuales que declaran "export const prerender
+  // = false" (hoy: el detalle de producto del catalogo en vivo, que necesita
+  // precio/stock frescos de Omviqa en cada visita) corren en el Worker.
+  //
+  // IMPORTANTE -- este archivo YA NO es el que se despliega tal cual. El adapter
+  // (@astrojs/cloudflare) genera su propio wrangler.json dentro de dist/server/ en
+  // cada build, con "main"/"assets" ya resueltos contra la estructura real de dist/
+  // (dist/server/entry.mjs + dist/client/). Poner "main" aqui apuntando a un archivo
+  // que todavia no existe rompe un build limpio (@cloudflare/vite-plugin lo valida
+  // ANTES de que exista). El comando de deploy real debe apuntar a ese archivo
+  // generado, ej.: `wrangler deploy --config dist/server/wrangler.json` -- cambiar
+  // el comando de build/deploy en Cloudflare es una decision explicita, no algo que
+  // este repo cambie por su cuenta (ver AGENTS.md).
   "assets": {
-    "directory": "./dist",
     // Sin esto, una URL inexistente devuelve 404 con cuerpo vacío (detectado en la auditoría de
     // producción del 2026-08-16) — con esto sirve dist/404.html (con enlaces a inicio/productos/
     // contacto) manteniendo el status 404 real.
