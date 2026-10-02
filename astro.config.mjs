@@ -38,7 +38,13 @@ export default defineConfig({
   // frescos de Omviqa en cada visita y no se pueden congelar en el build. Ver
   // wrangler.jsonc: el Worker pasa de "solo assets" a tener un "main" que ejecuta
   // estas rutas puntuales.
-  adapter: cloudflare({ imageService: 'passthrough' }),
+  // "compile": optimiza imagenes en build time para las paginas estaticas (con Sharp,
+  // igual que antes del adapter) y cae a "passthrough" solo para la unica pagina
+  // on-demand -- que de todos modos no usa <Image>/getImage(), solo <img> plano para
+  // las fotos remotas de Omviqa. "passthrough" puro (lo que habia antes) desactivaba
+  // la optimizacion tambien en las paginas estaticas -- PageSpeed lo marco como "Improve
+  // image delivery" (~544 KiB): el hero se servia a 1536x1024 en vez de 760x950.
+  adapter: cloudflare({ imageService: 'compile' }),
   // El adapter activa sesiones con un KV binding de Cloudflare por defecto si no se
   // configura nada -- exigiria crear un KV namespace real en Cloudflare para una
   // funcion que este sitio no usa (no hay ningun Astro.session.* en el codigo).
