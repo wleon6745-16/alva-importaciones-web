@@ -249,12 +249,23 @@ const cursoImageUrl = curso && omviqaCourses ? editorialAssetUrl(curso, omviqaCo
         <div class="order-2 lg:order-1">
           <div class="glass-card overflow-hidden rounded-3xl">
             <div class="relative aspect-[16/10] overflow-hidden bg-blush-100">
-              <img
-                src={cursoImageUrl ?? cursoImage.src}
-                alt={`Clase práctica del ${curso.title}`}
-                loading="lazy"
-                class="h-full w-full object-cover"
-              />
+              {cursoImageUrl ? (
+                <img
+                  src={cursoImageUrl}
+                  alt={`Clase práctica del ${curso.title}`}
+                  loading="lazy"
+                  class="h-full w-full object-cover"
+                />
+              ) : (
+                <Image
+                  src={cursoImage}
+                  alt={`Clase práctica del ${curso.title}`}
+                  width={800}
+                  height={500}
+                  loading="lazy"
+                  class="h-full w-full object-cover"
+                />
+              )}
               <span class="absolute left-4 top-4 rounded-full bg-primary-800 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-white shadow-lg">
                 Formación profesional
               </span>

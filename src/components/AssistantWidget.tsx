@@ -18,6 +18,8 @@ interface UiMessage {
   text: string;
   images?: string[];
   error?: boolean;
+  // El visitante pidio una asesora: se ofrece continuar por WhatsApp.
+  handoff?: boolean;
 }
 
 interface Stored {
@@ -245,6 +247,13 @@ function renderRich(text: string): ReactNode[] {
   });
 }
 
+// Misma idea que usa Omviqa para detectar "quiero una asesora". Omviqa avisa al equipo, pero un
+// visitante web no tiene telefono: la forma real de continuar con una persona es WhatsApp.
+function asksForAdvisor(text: string): boolean {
+  const t = text.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  return /\b(asesora|asesor|humano|humana|persona|alguien|vendedora|vendedor|hablar con (una|un))\b/.test(t);
+}
+
 function onlyHttps(urls: unknown): string[] {
   if (!Array.isArray(urls)) return [];
   return urls.filter((u): u is string => typeof u === "string" && /^https:\/\//.test(u)).slice(0, 4);
@@ -411,7 +420,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
         const respuesta = typeof data.respuesta === "string" && data.respuesta.trim() ? data.respuesta : null;
         if (!respuesta) throw Object.assign(new Error("empty"), { status: 500 });
 
-        const botMsg: UiMessage = { id: uuid(), role: "assistant", text: respuesta, images: onlyHttps(data.imagenes) };
+        const botMsg: UiMessage = { id: uuid(), role: "assistant", text: respuesta, images: onlyHttps(data.imagenes), handoff: asksForAdvisor(text) };
         const historial = Array.isArray(data.historial) ? (data.historial as Array<{ role?: string }>) : store.current.historial;
         setMessages((prev) => {
           const next = [...prev, botMsg];
@@ -531,6 +540,18 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
               <div className={`aa-msg ${m.role === "user" ? "aa-msg-user" : "aa-msg-bot"}${m.error ? " aa-msg-error" : ""}`}>
                 {m.role === "assistant" ? renderRich(m.text) : m.text}
               </div>
+              {m.handoff && (
+                <a
+                  className="aa-handoff"
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-track-event="click_whatsapp"
+                  data-track-source="assistant_handoff"
+                >
+                  Continuar con una asesora por WhatsApp →
+                </a>
+              )}
               {m.images && m.images.length > 0 && (
                 <div className="aa-images">
                   {m.images.map((src) => (
