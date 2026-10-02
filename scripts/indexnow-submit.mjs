@@ -16,7 +16,9 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
-const SITEMAP_PATH = path.join(ROOT, "dist", "sitemap-0.xml");
+// "dist/sitemap-0.xml" antes del adapter de Cloudflare (salida 100% estatica).
+// Ahora los assets estaticos van a dist/client/ (ver astro.config.mjs).
+const SITEMAP_PATH = path.join(ROOT, "dist", "client", "sitemap-0.xml");
 const ENDPOINT = "https://api.indexnow.org/indexnow";
 const HOST = "alvaimportaciones.com";
 
