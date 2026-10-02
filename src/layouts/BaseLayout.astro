@@ -7,8 +7,13 @@ import { organizationSchema } from "../lib/structured-data";
 import Analytics from "../components/Analytics.astro";
 import { storefrontBaseUrl } from "../lib/storefront-config";
 import { PRECIO_OCULTO } from "../lib/price-visibility";
+import AssistantWidget from "../components/AssistantWidget.tsx";
+import { assistantEndpoint } from "../lib/assistant-config";
+import { whatsappLink } from "../lib/site-config";
 
 const precioApi = storefrontBaseUrl();
+const asistente = assistantEndpoint();
+const asistenteWhatsapp = whatsappLink("Hola, vengo del asistente de la web y quisiera hablar con una asesora");
 
 interface Props extends SeoProps {
   structuredData?: object[];
@@ -59,6 +64,12 @@ const schemas = [organizationSchema(), ...structuredData];
       <slot />
     </main>
     <Footer />
+    {/*
+      Asistente de Alva (Web Channel de Omviqa). client:idle: no compite con el
+      primer render ni con el LCP; el boton flotante aparece cuando el navegador
+      queda libre.
+    */}
+    {asistente && <AssistantWidget client:idle endpoint={asistente} whatsappUrl={asistenteWhatsapp} />}
     {/*
       Precios ocultos al instante: si ALVA los apaga en Omviqa, cualquier precio
       escrito en estas paginas (marcado con data-precio) se reemplaza sin

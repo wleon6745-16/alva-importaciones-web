@@ -64,7 +64,7 @@ const cursoImageUrl = curso && omviqaCourses ? editorialAssetUrl(curso, omviqaCo
   {omviqaHome ? (
   <>
     <OmviqaHome home={omviqaHome} />
-    <SectionReveal as="section" class="section-y px-6">
+    <SectionReveal as="section" id="promociones" class="section-y px-6">
       <PromoShowcase />
     </SectionReveal>
   </>
@@ -146,7 +146,7 @@ const cursoImageUrl = curso && omviqaCourses ? editorialAssetUrl(curso, omviqaCo
     limit={NEW_PRODUCTS_LIMIT}
   />
 
-  <SectionReveal as="section" class="section-y px-6">
+  <SectionReveal as="section" id="categorias" class="section-y px-6">
     <div class="mx-auto max-w-6xl">
       <p class="text-center text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">
         Compra por categoría
@@ -199,7 +199,7 @@ const cursoImageUrl = curso && omviqaCourses ? editorialAssetUrl(curso, omviqaCo
     </div>
   </SectionReveal>
 
-  <SectionReveal as="section" class="section-y px-6">
+  <SectionReveal as="section" id="promociones" class="section-y px-6">
     <PromoShowcase />
   </SectionReveal>
 
@@ -207,24 +207,44 @@ const cursoImageUrl = curso && omviqaCourses ? editorialAssetUrl(curso, omviqaCo
     <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
       <div>
         <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">
-          Asistente por WhatsApp
+          Asistente con IA
         </p>
         <h2 class="mt-4 font-display text-3xl text-primary-900">
           Respuestas al instante, con precio y stock reales
         </h2>
         <p class="mt-6 text-ink-muted">
-          Creamos un asistente de inteligencia artificial que responde tus consultas de
-          WhatsApp en segundos: precios actualizados, disponibilidad real y sugerencias si
-          un producto se agotó. Cuando hace falta, una asesora toma la conversación.
+          Nuestro asistente de inteligencia artificial responde tus consultas en segundos,
+          aquí en la web y por WhatsApp: precios actualizados, disponibilidad real y
+          sugerencias si un producto se agotó. Cuando hace falta, una asesora toma la
+          conversación.
         </p>
-        <WhatsAppCTA label="Pruébalo por WhatsApp" class="mt-8" source="home" pageType="home" ctaLocation="chat_demo" />
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <button
+            type="button"
+            data-open-assistant
+            class="inline-flex items-center gap-2 rounded-full bg-primary-800 px-6 py-3 font-semibold text-white shadow-lg transition-transform duration-200 hover:scale-105 hover:bg-primary-700"
+            style="cursor: pointer;"
+          >
+            Pregúntale al asistente
+          </button>
+          <WhatsAppCTA label="Prefiero WhatsApp" variant="outline" source="home" pageType="home" ctaLocation="chat_demo" />
+        </div>
+        <script is:inline>
+          document.querySelectorAll("[data-open-assistant]").forEach(function (btn) {
+            btn.addEventListener("click", function () {
+              // Si el widget aun no hidrato (client:idle), deja la bandera: se abre al montar.
+              window.__alvaOpenAssistant = true;
+              window.dispatchEvent(new Event("alva:open-assistant"));
+            });
+          });
+        </script>
       </div>
       <ChatDemo client:visible />
     </div>
   </SectionReveal>
 
   {curso && (
-    <SectionReveal as="section" class="section-y px-6">
+    <SectionReveal as="section" id="curso" class="section-y px-6">
       <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
         <div class="order-2 lg:order-1">
           <div class="glass-card overflow-hidden rounded-3xl">
