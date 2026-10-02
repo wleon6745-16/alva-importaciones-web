@@ -20,6 +20,8 @@ interface UiMessage {
   error?: boolean;
   // El visitante pidio una asesora: se ofrece continuar por WhatsApp.
   handoff?: boolean;
+  // Aviso discreto bajo la respuesta (p. ej. "te quedan pocas consultas hoy").
+  note?: string;
 }
 
 interface Stored {
@@ -34,7 +36,25 @@ const STORAGE_KEY = "alva.assistant.v1";
 const TTL_MS = 24 * 60 * 60 * 1000;
 // Omviqa rechaza (400) un historial de mas de 40 mensajes.
 const MAX_HISTORY = 36;
-const MAX_INPUT = 800;
+const MAX_INPUT = 500;
+// Freno ante abuso casual (la proteccion real vive en el servidor): pausa minima entre
+// mensajes y tope de mensajes por navegador cada 24 h, que "Nueva conversacion" no reinicia.
+const MIN_GAP_MS = 2500;
+const DAILY_QUOTA = 40;
+const QUOTA_KEY = "alva.assistant.quota";
+
+function takeQuota(): boolean {
+  try {
+    const raw = localStorage.getItem(QUOTA_KEY);
+    let q = raw ? (JSON.parse(raw) as { since: number; count: number }) : null;
+    if (!q || Date.now() - q.since > TTL_MS) q = { since: Date.now(), count: 0 };
+    if (q.count >= DAILY_QUOTA) return false;
+    localStorage.setItem(QUOTA_KEY, JSON.stringify({ ...q, count: q.count + 1 }));
+  } catch {
+    // Sin almacenamiento no se puede contar: se deja pasar (el servidor sigue limitando).
+  }
+  return true;
+}
 const REQUEST_TIMEOUT_MS = 60_000;
 
 const WELCOME_TEXT =
@@ -254,6 +274,13 @@ function asksForAdvisor(text: string): boolean {
   return /\b(asesora|asesor|humano|humana|persona|alguien|vendedora|vendedor|hablar con (una|un))\b/.test(t);
 }
 
+function quotaNote(restantes: unknown): string | undefined {
+  if (typeof restantes !== "number" || !Number.isFinite(restantes) || restantes > 10) return undefined;
+  return restantes <= 0
+    ? "Esta fue tu última consulta de hoy con el asistente."
+    : `Te quedan ${restantes} ${restantes === 1 ? "consulta" : "consultas"} hoy con el asistente.`;
+}
+
 function onlyHttps(urls: unknown): string[] {
   if (!Array.isArray(urls)) return [];
   return urls.filter((u): u is string => typeof u === "string" && /^https:\/\//.test(u)).slice(0, 4);
@@ -280,6 +307,8 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
   const launcherRef = useRef<HTMLButtonElement>(null);
   const contextSentFor = useRef<string | null>(null);
   const sendingRef = useRef(false);
+  const lastSendAt = useRef(0);
+  const lastText = useRef("");
 
   useEffect(() => {
     store.current = loadStored();
@@ -374,6 +403,24 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
       if (!text || sendingRef.current) return;
       if (!store.current) store.current = loadStored();
 
+      // Reintentar un turno fallido (lastFailed) no cuenta como mensaje repetido.
+      const retry = lastFailed === text;
+      if (!retry && (Date.now() - lastSendAt.current < MIN_GAP_MS || text === lastText.current)) return;
+      if (!retry && !takeQuota()) {
+        setMessages((prev) => [
+          ...prev,
+          {
+            id: uuid(),
+            role: "assistant",
+            text: "Llegaste al límite de consultas por hoy con el asistente. Para seguir, una asesora puede atenderte por WhatsApp.",
+            handoff: true,
+          },
+        ]);
+        return;
+      }
+      lastSendAt.current = Date.now();
+      lastText.current = text;
+
       sendingRef.current = true;
       setSending(true);
       setLastFailed(null);
@@ -415,12 +462,20 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
           await new Promise((r) => setTimeout(r, 1500));
           res = await post();
         }
-        if (!res.ok) throw Object.assign(new Error("http"), { status: res.status });
-        const data = (await res.json()) as { respuesta?: unknown; imagenes?: unknown; historial?: unknown };
+        if (!res.ok) {
+          const err = (await res.json().catch(() => null)) as { code?: string } | null;
+          throw Object.assign(new Error("http"), { status: res.status, code: err?.code });
+        }
+        const data = (await res.json()) as {
+          respuesta?: unknown;
+          imagenes?: unknown;
+          historial?: unknown;
+          aviso?: { restantes?: unknown };
+        };
         const respuesta = typeof data.respuesta === "string" && data.respuesta.trim() ? data.respuesta : null;
         if (!respuesta) throw Object.assign(new Error("empty"), { status: 500 });
 
-        const botMsg: UiMessage = { id: uuid(), role: "assistant", text: respuesta, images: onlyHttps(data.imagenes), handoff: asksForAdvisor(text) };
+        const botMsg: UiMessage = { id: uuid(), role: "assistant", text: respuesta, images: onlyHttps(data.imagenes), handoff: asksForAdvisor(text), note: quotaNote(data.aviso?.restantes) };
         const historial = Array.isArray(data.historial) ? (data.historial as Array<{ role?: string }>) : store.current.historial;
         setMessages((prev) => {
           const next = [...prev, botMsg];
@@ -429,6 +484,21 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
         });
       } catch (err) {
         const status = (err as { status?: number }).status ?? 0;
+        // Tope diario del servidor: no es un fallo transitorio, asi que no se ofrece Reintentar;
+        // se pasa a una asesora por WhatsApp.
+        if ((err as { code?: string }).code === "WEB_DAILY_LIMIT") {
+          trackEvent("assistant_daily_limit", {});
+          setMessages((prev) => [
+            ...prev,
+            {
+              id: uuid(),
+              role: "assistant",
+              text: "Hoy se alcanzó el límite de consultas del asistente. Una asesora te atiende por WhatsApp.",
+              handoff: true,
+            },
+          ]);
+          return;
+        }
         trackEvent("assistant_error", { status });
         setLastFailed(text);
         setMessages((prev) => [
@@ -444,7 +514,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
         inputRef.current?.focus({ preventScroll: true });
       }
     },
-    [endpoint, persist]
+    [endpoint, persist, lastFailed]
   );
 
   function onSubmit(e: FormEvent) {
@@ -540,6 +610,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
               <div className={`aa-msg ${m.role === "user" ? "aa-msg-user" : "aa-msg-bot"}${m.error ? " aa-msg-error" : ""}`}>
                 {m.role === "assistant" ? renderRich(m.text) : m.text}
               </div>
+              {m.note && <p className="aa-note">{m.note}</p>}
               {m.handoff && (
                 <a
                   className="aa-handoff"
