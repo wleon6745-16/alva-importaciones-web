@@ -23,6 +23,13 @@
     // Sin esto, una URL inexistente devuelve 404 con cuerpo vacío (detectado en la auditoría de
     // producción del 2026-08-16) — con esto sirve dist/404.html (con enlaces a inicio/productos/
     // contacto) manteniendo el status 404 real.
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    // Sin esto, Cloudflare intenta resolver estas rutas como si fueran un archivo estático (con
+    // su logica de html_handling para navegaciones) ANTES de llegar al Worker -- como ningun
+    // archivo real coincide, sirve el 404 directo sin ejecutar Astro. Confirmado en produccion
+    // el 2026-10-02: un fetch() de la misma pagina SI llegaba al Worker (200), pero la navegacion
+    // normal del navegador daba 404 -- exactamente el sintoma que documenta Cloudflare para este
+    // caso (ver developers.cloudflare.com/workers/static-assets/routing/worker-script/).
+    "run_worker_first": ["/productos/*/p/*"]
   }
 }
