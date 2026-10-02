@@ -18,3 +18,18 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+
+# Iconos de marca/favicons: no llevan hash en el nombre (a diferencia de /_astro/*, que ya
+# cachea "immutable" solo, ver astro.config.mjs) y casi nunca cambian -- PageSpeed lo marcó
+# como "Use efficient cache lifetimes". 7 días en vez de 1 año: si algún día se actualiza el
+# logo, no queda una versión vieja cacheada durante demasiado tiempo.
+/brand/*
+  Cache-Control: public, max-age=604800
+/favicon-32.png
+  Cache-Control: public, max-age=604800
+/favicon.ico
+  Cache-Control: public, max-age=604800
+/apple-touch-icon.png
+  Cache-Control: public, max-age=604800
+/og-image.jpg
+  Cache-Control: public, max-age=604800
