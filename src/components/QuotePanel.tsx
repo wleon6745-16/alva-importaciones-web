@@ -58,7 +58,9 @@ export default function QuotePanel({ assistantEnabled }: { assistantEnabled: boo
     const detail = {
       message: buildAssistantMessage(items),
       display: quoteDisplayText(items),
-      proformaMessage: "Quiero la proforma de mi lista",
+      // "ver carrito" lo resuelve el motor sin pedir datos: muestra la lista y el total. La cedula se pide
+      // solo despues, cuando el cliente decide pasar a la proforma.
+      proformaMessage: "Ver mi carrito con el total",
       items: items.map((i) => ({ productId: i.id, quantity: i.qty, name: i.name })),
     };
     const w = window as unknown as { __alvaPendingQuote?: typeof detail };

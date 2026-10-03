@@ -126,7 +126,7 @@ function line(item: QuoteItem, withName: boolean): string {
  * mensaje, se envia solo el codigo.
  */
 export function buildAssistantMessage(items: QuoteItem[]): string {
-  const head = `Quiero cotizar esta lista de ${items.length} ${items.length === 1 ? "producto" : "productos"} y que me generes la proforma:\n`;
+  const head = `Quiero cotizar esta lista de ${items.length} ${items.length === 1 ? "producto" : "productos"} y muéstrame el total:\n`;
   for (const withName of [true, false]) {
     const body = items.map((i) => line(i, withName)).join("\n");
     if (head.length + body.length <= ASSISTANT_MESSAGE_BUDGET) return head + body;

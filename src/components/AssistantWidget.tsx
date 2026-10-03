@@ -30,7 +30,7 @@ interface QuoteRequest {
   message: string;
   /** Lo que se ve en el chat en lugar del mensaje completo. */
   display: string;
-  /** Peticion corta que arranca la proforma una vez cargado el carrito. */
+  /** Peticion corta que muestra el carrito con el total una vez cargado (sin pedir datos). */
   proformaMessage: string;
   items: Array<{ productId: string; quantity: number; name: string }>;
 }
