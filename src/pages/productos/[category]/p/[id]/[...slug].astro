@@ -18,6 +18,7 @@ export const prerender = false;
 import BaseLayout from "../../../../../layouts/BaseLayout.astro";
 import SectionReveal from "../../../../../components/SectionReveal.astro";
 import WhatsAppCTA from "../../../../../components/WhatsAppCTA.astro";
+import QuoteButton from "../../../../../components/QuoteButton.tsx";
 import { getStorefrontProduct } from "../../../../../lib/storefront-product";
 import { breadcrumbSchema, faqSchema, storefrontProductSchema } from "../../../../../lib/structured-data";
 import { siteConfig } from "../../../../../lib/site-config";
@@ -182,6 +183,7 @@ const structuredData = product
             pageType="product"
             ctaLocation="detail"
           />
+          <QuoteButton client:idle variant="detail" id={product.publicProductId} code={product.code} name={product.name} source="detail" />
         </div>
       </div>
     </div>

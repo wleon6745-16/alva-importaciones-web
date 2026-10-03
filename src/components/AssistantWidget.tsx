@@ -24,6 +24,18 @@ interface UiMessage {
   note?: string;
 }
 
+interface QuoteRequest {
+  message: string;
+  display: string;
+}
+
+interface SendOpts {
+  /** Texto corto que se muestra en el chat en lugar del mensaje completo. */
+  display?: string;
+  /** Mensaje de lista de cotizacion: va completo y no se descarta por repetido. */
+  quote?: boolean;
+}
+
 interface Stored {
   visitorId: string;
   historial: Array<{ role?: string }>;
@@ -37,6 +49,8 @@ const TTL_MS = 24 * 60 * 60 * 1000;
 // Omviqa rechaza (400) un historial de mas de 40 mensajes.
 const MAX_HISTORY = 36;
 const MAX_INPUT = 500;
+// Omviqa acepta 1000 caracteres por mensaje; la lista de cotizacion se arma con margen.
+const MAX_QUOTE_MESSAGE = 950;
 // Freno ante abuso casual (la proteccion real vive en el servidor): pausa minima entre
 // mensajes y tope de mensajes por navegador cada 24 h, que "Nueva conversacion" no reinicia.
 const MIN_GAP_MS = 2500;
@@ -307,6 +321,8 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
   const launcherRef = useRef<HTMLButtonElement>(null);
   const contextSentFor = useRef<string | null>(null);
   const sendingRef = useRef(false);
+  const sendRef = useRef<((raw: string, opts?: SendOpts) => Promise<void>) | null>(null);
+  const lastOpts = useRef<SendOpts>({});
   const lastSendAt = useRef(0);
   const lastText = useRef("");
 
@@ -356,12 +372,23 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
   // si el widget aun no hidrato, el CTA deja la bandera y se abre al montar.
   useEffect(() => {
     const w = window as unknown as { __alvaOpenAssistant?: boolean };
-    const handler = () => {
+    const w2 = window as unknown as { __alvaPendingQuote?: QuoteRequest };
+    // La lista de cotizacion pide abrir el asistente y enviarle los productos.
+    const sendQuote = (q: QuoteRequest) => {
+      w2.__alvaPendingQuote = undefined;
+      openPanel("quote");
+      void sendRef.current?.(q.message, { display: q.display, quote: true });
+    };
+    const handler = (e: Event) => {
       w.__alvaOpenAssistant = false;
-      openPanel("cta");
+      const q = (e as CustomEvent<QuoteRequest | undefined>).detail;
+      if (q?.message) sendQuote(q);
+      else openPanel("cta");
     };
     window.addEventListener("alva:open-assistant", handler);
-    if (w.__alvaOpenAssistant) {
+    if (w2.__alvaPendingQuote) {
+      sendQuote(w2.__alvaPendingQuote);
+    } else if (w.__alvaOpenAssistant) {
       w.__alvaOpenAssistant = false;
       openPanel("cta");
     }
@@ -398,14 +425,14 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
   }, []);
 
   const send = useCallback(
-    async (raw: string) => {
-      const text = raw.trim().slice(0, MAX_INPUT);
+    async (raw: string, opts: SendOpts = {}) => {
+      const text = raw.trim().slice(0, opts.quote ? MAX_QUOTE_MESSAGE : MAX_INPUT);
       if (!text || sendingRef.current) return;
       if (!store.current) store.current = loadStored();
 
       // Reintentar un turno fallido (lastFailed) no cuenta como mensaje repetido.
       const retry = lastFailed === text;
-      if (!retry && (Date.now() - lastSendAt.current < MIN_GAP_MS || text === lastText.current)) return;
+      if (!retry && (Date.now() - lastSendAt.current < MIN_GAP_MS || (!opts.quote && text === lastText.current))) return;
       if (!retry && !takeQuota()) {
         setMessages((prev) => [
           ...prev,
@@ -426,7 +453,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
       setLastFailed(null);
       setInput("");
 
-      const userMsg: UiMessage = { id: uuid(), role: "user", text };
+      const userMsg: UiMessage = { id: uuid(), role: "user", text: opts.display ?? text };
       setMessages((prev) => {
         const next = [...prev, userMsg];
         persist({ messages: next });
@@ -436,7 +463,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
 
       // Contexto de la ficha: solo en el primer mensaje enviado desde esa pagina.
       let mensaje = text;
-      const producto = detectProductName();
+      const producto = opts.quote ? null : detectProductName();
       if (producto && contextSentFor.current !== location.pathname) {
         mensaje = `${text}\n\n(Contexto: estoy viendo en la web la ficha del producto "${producto}")`;
         contextSentFor.current = location.pathname;
@@ -501,6 +528,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
         }
         trackEvent("assistant_error", { status });
         setLastFailed(text);
+        lastOpts.current = opts;
         setMessages((prev) => [
           ...prev,
           { id: uuid(), role: "assistant", text: controller.signal.aborted ? friendlyError(500) : friendlyError(status), error: true },
@@ -516,6 +544,8 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
     },
     [endpoint, persist, lastFailed]
   );
+
+  sendRef.current = send;
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
@@ -662,7 +692,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
           )}
 
           {lastFailed && !sending && (
-            <button type="button" className="aa-retry" onClick={() => void send(lastFailed)}>
+            <button type="button" className="aa-retry" onClick={() => void send(lastFailed, lastOpts.current)}>
               Reintentar
             </button>
           )}

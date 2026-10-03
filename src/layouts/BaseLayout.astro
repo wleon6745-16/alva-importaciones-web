@@ -8,6 +8,7 @@ import Analytics from "../components/Analytics.astro";
 import { storefrontBaseUrl } from "../lib/storefront-config";
 import { PRECIO_OCULTO } from "../lib/price-visibility";
 import AssistantWidget from "../components/AssistantWidget.tsx";
+import QuotePanel from "../components/QuotePanel.tsx";
 import { assistantEndpoint } from "../lib/assistant-config";
 import { whatsappLink } from "../lib/site-config";
 
@@ -70,6 +71,8 @@ const schemas = [organizationSchema(), ...structuredData];
       queda libre.
     */}
     {asistente && <AssistantWidget client:idle endpoint={asistente} whatsappUrl={asistenteWhatsapp} />}
+    {/* Lista de cotizacion: contador flotante y panel (nombre + cantidad, sin precios). */}
+    <QuotePanel client:idle assistantEnabled={Boolean(asistente)} />
     {/*
       Precios ocultos al instante: si ALVA los apaga en Omviqa, cualquier precio
       escrito en estas paginas (marcado con data-precio) se reemplaza sin

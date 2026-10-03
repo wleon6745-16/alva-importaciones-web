@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import QuoteButton from "./QuoteButton";
 import { whatsappLink } from "../lib/site-config";
 import { useShowPrices } from "../lib/use-price-visibility";
 
@@ -97,6 +98,7 @@ export default function CategoryHighlights({ apiBaseUrl, categorySlug, categoryL
                   >
                     Consultar
                   </a>
+                  <QuoteButton id={item.publicProductId} code={item.code ?? null} name={item.name} source="highlights" />
                 </div>
               </li>
             );

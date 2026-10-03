@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import QuoteButton from "./QuoteButton";
 import { whatsappLink } from "../lib/site-config";
 import { useShowPrices } from "../lib/use-price-visibility";
 
@@ -242,6 +243,7 @@ export default function CatalogExplorer({
                 >
                   Consultar
                 </a>
+                <QuoteButton id={item.publicProductId} code={item.code} name={item.name} source="catalog" />
               </div>
             </div>
           );

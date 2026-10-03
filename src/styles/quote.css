@@ -1,0 +1,146 @@
+/* Lista de cotizacion (QuoteButton / QuotePanel). CSS propio en vez de utilidades de
+   Tailwind: este proyecto compila Tailwind con una lista blanca manual (ver global.css)
+   y las clases nuevas desaparecerian sin avisar. */
+
+.ql-add {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: fit-content;
+  border: 2px solid var(--color-primary-800, #ce113b);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--color-primary-800, #ce113b);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.ql-add:hover:not(:disabled) { background: var(--color-primary-800, #ce113b); color: #fff; }
+.ql-add:focus-visible { outline: 2px solid #141414; outline-offset: 2px; }
+.ql-add:disabled { opacity: 0.55; cursor: not-allowed; }
+.ql-add-card { padding: 0.4rem 0.85rem; font-size: 0.85rem; }
+.ql-add-detail { padding: 0.7rem 1.4rem; font-size: 1rem; }
+.ql-add-in { background: #fdf0f3; }
+
+.ql-pill {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 45;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 0.75rem 0.7rem 1rem;
+  border: 0;
+  border-radius: 999px;
+  background: #121212;
+  color: #fff;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(18, 18, 18, 0.28);
+  animation: ql-in 0.25s ease-out;
+}
+.ql-pill:hover { background: #2a2a2a; }
+.ql-pill:focus-visible { outline: 2px solid var(--color-primary-800, #ce113b); outline-offset: 2px; }
+.ql-count {
+  display: grid;
+  place-items: center;
+  min-width: 1.6rem;
+  height: 1.6rem;
+  padding: 0 0.35rem;
+  border-radius: 999px;
+  background: var(--color-primary-800, #ce113b);
+  font-size: 0.8rem;
+}
+@keyframes ql-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+
+.ql-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(18, 18, 18, 0.45);
+}
+.ql-panel {
+  display: flex;
+  flex-direction: column;
+  width: min(26rem, 100%);
+  height: 100dvh;
+  background: #fff;
+  color: #141414;
+  font-family: var(--font-sans, "Inter", ui-sans-serif, system-ui, sans-serif);
+  box-shadow: -20px 0 50px rgba(18, 18, 18, 0.25);
+  animation: ql-slide 0.22s ease-out;
+}
+.ql-panel:focus { outline: none; }
+@keyframes ql-slide {
+  from { transform: translateX(24px); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+.ql-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; padding: 1.1rem 1.25rem; border-bottom: 1px solid #f1efef; }
+.ql-title { margin: 0; font-family: var(--font-display, Georgia, serif); font-size: 1.35rem; font-weight: 600; }
+.ql-sub { margin: 0.15rem 0 0; font-size: 0.8rem; color: #63636b; }
+.ql-x, .ql-del {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 0;
+  border-radius: 999px;
+  background: #f4f2f2;
+  color: #141414;
+  cursor: pointer;
+}
+.ql-x:hover, .ql-del:hover { background: #e7e5e5; }
+.ql-del { background: none; color: #63636b; }
+.ql-del:hover { color: var(--color-primary-800, #ce113b); background: #fdf0f3; }
+
+.ql-list { flex: 1; margin: 0; padding: 0.5rem 1.25rem; list-style: none; overflow-y: auto; overscroll-behavior: contain; }
+.ql-row { display: flex; align-items: center; gap: 0.6rem; padding: 0.8rem 0; border-bottom: 1px solid #f1efef; }
+.ql-row-text { flex: 1; min-width: 0; }
+.ql-name { margin: 0; font-size: 0.9rem; font-weight: 500; line-height: 1.3; overflow-wrap: anywhere; }
+.ql-code { margin: 0.15rem 0 0; font-size: 0.75rem; color: #63636b; }
+.ql-qty { display: inline-flex; align-items: center; flex: none; border: 1px solid #e0dede; border-radius: 999px; overflow: hidden; }
+.ql-qty button { width: 1.9rem; height: 2rem; border: 0; background: #fff; font: inherit; font-size: 1.1rem; cursor: pointer; }
+.ql-qty button:hover:not(:disabled) { background: #f4f2f2; }
+.ql-qty button:disabled { color: #c4c4c9; cursor: not-allowed; }
+.ql-qty input { width: 2.6rem; height: 2rem; border: 0; text-align: center; font: inherit; font-size: 1rem; -moz-appearance: textfield; }
+.ql-qty input::-webkit-outer-spin-button, .ql-qty input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+.ql-foot { display: flex; flex-direction: column; gap: 0.55rem; padding: 1rem 1.25rem 1.25rem; border-top: 1px solid #f1efef; background: #faf9f9; }
+.ql-hint { margin: 0 0 0.2rem; font-size: 0.78rem; color: #63636b; line-height: 1.4; }
+.ql-primary, .ql-secondary {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.ql-primary { border: 0; background: var(--color-primary-800, #ce113b); color: #fff; }
+.ql-primary:hover { background: var(--color-primary-700, #e31c4d); }
+.ql-secondary { border: 2px solid #25d366; background: #fff; color: #0b3d1e; }
+.ql-secondary:hover { background: #effcf4; }
+.ql-clear { border: 0; background: none; padding: 0.2rem; font: inherit; font-size: 0.8rem; color: #63636b; text-decoration: underline; cursor: pointer; }
+.ql-primary:focus-visible, .ql-secondary:focus-visible, .ql-clear:focus-visible, .ql-x:focus-visible, .ql-del:focus-visible, .ql-qty button:focus-visible, .ql-qty input:focus-visible { outline: 2px solid #141414; outline-offset: 2px; }
+
+@media (max-width: 640px) {
+  .ql-pill { left: 0.85rem; bottom: 0.85rem; padding: 0.7rem 0.7rem 0.7rem 0.85rem; }
+  .ql-pill-label { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ql-pill, .ql-panel, .ql-add { animation: none; transition: none; }
+}
