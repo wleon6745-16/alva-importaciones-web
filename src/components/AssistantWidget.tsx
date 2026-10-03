@@ -25,8 +25,18 @@ interface UiMessage {
 }
 
 interface QuoteRequest {
+  /** Texto completo con la lista: respaldo si no se puede cargar el carrito. */
   message: string;
+  /** Lo que se ve en el chat en lugar del mensaje completo. */
   display: string;
+  /** Peticion corta que arranca la proforma una vez cargado el carrito. */
+  proformaMessage: string;
+  items: Array<{ productId: string; quantity: number; name: string }>;
+}
+
+interface SeedResult {
+  agregados: number;
+  omitidos: Array<{ productId: string; nombre: string | null }>;
 }
 
 interface SendOpts {
@@ -322,6 +332,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
   const contextSentFor = useRef<string | null>(null);
   const sendingRef = useRef(false);
   const sendRef = useRef<((raw: string, opts?: SendOpts) => Promise<void>) | null>(null);
+  const quoteRef = useRef<((q: QuoteRequest) => Promise<void>) | null>(null);
   const lastOpts = useRef<SendOpts>({});
   const lastSendAt = useRef(0);
   const lastText = useRef("");
@@ -377,7 +388,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
     const sendQuote = (q: QuoteRequest) => {
       w2.__alvaPendingQuote = undefined;
       openPanel("quote");
-      void sendRef.current?.(q.message, { display: q.display, quote: true });
+      void quoteRef.current?.(q);
     };
     const handler = (e: Event) => {
       w.__alvaOpenAssistant = false;
@@ -546,6 +557,47 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
   );
 
   sendRef.current = send;
+
+  // Lista de cotizacion: primero se carga en el carrito de Omviqa (emparejando por producto, sin
+  // adivinar por texto) y luego se pide la proforma. Si Omviqa aun no tiene ese endpoint o falla,
+  // se manda la lista como texto, que es lo que el asistente entendia antes.
+  quoteRef.current = async (q: QuoteRequest) => {
+    if (sendingRef.current) return;
+    if (!store.current) store.current = loadStored();
+    sendingRef.current = true;
+    setSending(true);
+    let seeded: SeedResult | null = null;
+    try {
+      const res = await fetch(endpoint.replace(/\/chat$/, "/quote"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          visitorId: store.current.visitorId,
+          items: q.items.map(({ productId, quantity }) => ({ productId, quantity })),
+        }),
+        signal: AbortSignal.timeout(30_000),
+      });
+      if (res.ok) seeded = (await res.json()) as SeedResult;
+    } catch {
+      // Se usa el respaldo en texto.
+    }
+    sendingRef.current = false;
+    setSending(false);
+
+    if (seeded && seeded.agregados > 0) {
+      const names = new Map(q.items.map((i) => [i.productId, i.name]));
+      const faltan = (seeded.omitidos ?? []).map((o) => o.nombre ?? names.get(o.productId) ?? "un producto");
+      await send(q.proformaMessage, { display: q.display, quote: true });
+      if (faltan.length > 0) {
+        setMessages((prev) => [
+          ...prev,
+          { id: uuid(), role: "assistant", text: `No pude cargar: ${faltan.join(", ")}. El resto de tu lista sí quedó en la cotización.` },
+        ]);
+      }
+    } else {
+      await send(q.message, { display: q.display, quote: true });
+    }
+  };
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();

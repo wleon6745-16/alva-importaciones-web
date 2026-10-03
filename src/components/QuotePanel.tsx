@@ -55,7 +55,12 @@ export default function QuotePanel({ assistantEnabled }: { assistantEnabled: boo
 
   function askAssistant() {
     trackEvent("quote_send", { channel: "assistant", items: items.length });
-    const detail = { message: buildAssistantMessage(items), display: quoteDisplayText(items) };
+    const detail = {
+      message: buildAssistantMessage(items),
+      display: quoteDisplayText(items),
+      proformaMessage: "Quiero la proforma de mi lista",
+      items: items.map((i) => ({ productId: i.id, quantity: i.qty, name: i.name })),
+    };
     const w = window as unknown as { __alvaPendingQuote?: typeof detail };
     w.__alvaPendingQuote = detail; // por si el asistente aun no hidrato
     window.dispatchEvent(new CustomEvent("alva:open-assistant", { detail }));
