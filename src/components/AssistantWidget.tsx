@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState, type FormEvent, type KeyboardEvent, type ReactNode } from "react";
 import { trackEvent } from "../lib/analytics";
+import { readQuote, useQuote } from "../lib/quote-list";
 import "../styles/assistant.css";
 
 // Asistente de Alva en la web: habla con el Web Channel de Omviqa (el mismo motor
@@ -305,6 +306,40 @@ function quotaNote(restantes: unknown): string | undefined {
     : `Te quedan ${restantes} ${restantes === 1 ? "consulta" : "consultas"} hoy con el asistente.`;
 }
 
+// Mensaje de WhatsApp para pasar con una asesora: lleva el contexto que el visitante ya dio al
+// asistente (pagina o producto que veia, su lista de cotizacion y su ultima consulta), para que
+// la asesora no tenga que preguntarlo todo de nuevo.
+const ADVISOR_TEXT_BUDGET = 1400;
+
+function advisorUrl(base: string, messages: UiMessage[]): string {
+  try {
+    const wa = base.split("?")[0];
+    const lines = ["Hola, vengo del asistente de la web y quisiera hablar con una asesora."];
+    const page = location.origin + location.pathname;
+    const producto = detectProductName();
+    lines.push(producto ? `Estaba viendo: ${producto} (${page})` : `Estaba en: ${page}`);
+
+    const last = [...messages].reverse().find((m) => m.role === "user" && !m.text.startsWith("Quiero cotizar mi lista"));
+    if (last) lines.push(`Mi consulta: "${last.text.slice(0, 200)}"`);
+
+    const items = readQuote();
+    if (items.length > 0) {
+      lines.push(`Mi lista de cotización (${items.length} ${items.length === 1 ? "producto" : "productos"}):`);
+      let shown = 0;
+      for (const it of items) {
+        const line = `- ${it.qty} x ${it.name}${it.code ? ` (Cód: ${it.code})` : ""}`;
+        if ([...lines, line].join("\n").length > ADVISOR_TEXT_BUDGET) break;
+        lines.push(line);
+        shown += 1;
+      }
+      if (shown < items.length) lines.push(`(y ${items.length - shown} más)`);
+    }
+    return `${wa}?text=${encodeURIComponent(lines.join("\n"))}`;
+  } catch {
+    return base;
+  }
+}
+
 function onlyHttps(urls: unknown): string[] {
   if (!Array.isArray(urls)) return [];
   return urls.filter((u): u is string => typeof u === "string" && /^https:\/\//.test(u)).slice(0, 4);
@@ -324,6 +359,9 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
   const [lastFailed, setLastFailed] = useState<string | null>(null);
   const [ctx, setCtx] = useState<PageContext>(DEFAULT_CTX);
   const [teaser, setTeaser] = useState(false);
+  const quoteItems = useQuote();
+  // El enlace parte generico (igual en servidor y cliente) y se enriquece ya hidratado.
+  const [advisorHref, setAdvisorHref] = useState(whatsappUrl);
 
   const store = useRef<Stored | null>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
@@ -367,6 +405,10 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
       // Ver rememberReopen.
     }
   }
+
+  useEffect(() => {
+    setAdvisorHref(advisorUrl(whatsappUrl, messages));
+  }, [whatsappUrl, messages, quoteItems, open]);
 
   const openPanel = useCallback((source: string) => {
     setOpen(true);
@@ -696,7 +738,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
               {m.handoff && (
                 <a
                   className="aa-handoff"
-                  href={whatsappUrl}
+                  href={advisorHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   data-track-event="click_whatsapp"
@@ -784,7 +826,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
         <div className="aa-foot">
           <span>Respuestas con IA: confirma precio y stock por WhatsApp.</span>
           <span>
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" data-track-event="click_whatsapp" data-track-source="assistant">
+            <a href={advisorHref} target="_blank" rel="noopener noreferrer" data-track-event="click_whatsapp" data-track-source="assistant">
               Hablar con una asesora
             </a>
             {hasUserMessage && (
