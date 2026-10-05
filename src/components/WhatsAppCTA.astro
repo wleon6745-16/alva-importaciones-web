@@ -32,6 +32,7 @@ const variants = {
   href={whatsappLink(message, number)}
   target="_blank"
   rel="noopener noreferrer"
+  data-advisor-notify
   class={`${base} ${variants[variant]} ${pulse ? "cta-pulse" : ""} ${className}`}
 >
   <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
@@ -41,3 +42,26 @@ const variants = {
   </svg>
   {label}
 </a>
+
+<script>
+  // Avisa a Telegram para que una asesora vea la solicitud aunque el cliente
+  // no llegue a enviar el mensaje en WhatsApp. Si no hay backend configurado, no hace nada.
+  const apiUrl = import.meta.env.PUBLIC_ADVISOR_API_URL;
+
+  if (apiUrl) {
+    document.addEventListener("click", (event) => {
+      const link = (event.target as Element).closest("a[data-advisor-notify]");
+      if (!link) return;
+      try {
+        fetch(`${apiUrl.replace(/\/$/, "")}/api/advisor/notify`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ page: location.pathname }),
+          keepalive: true, // sigue enviándose aunque se abra WhatsApp
+        }).catch(() => {});
+      } catch {
+        // el aviso nunca debe impedir que se abra WhatsApp
+      }
+    });
+  }
+</script>
