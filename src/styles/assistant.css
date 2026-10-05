@@ -126,6 +126,8 @@
 }
 .aa-msg a { color: inherit; text-decoration: underline; text-underline-offset: 2px; font-weight: 600; }
 .aa-msg-bot { align-self: flex-start; background: #fff; border: 1px solid var(--aa-line); border-bottom-left-radius: 0.35rem; }
+/* Quien escribe: una persona del negocio, no el asistente. */
+.aa-de-asesora { display: block; margin-bottom: 0.15rem; font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--aa-brand, #9d174d); }
 .aa-msg-user { align-self: flex-end; background: var(--aa-primary); color: #fff; border-bottom-right-radius: 0.35rem; }
 .aa-msg-error { border-color: #f5c2c9; background: #fff5f6; color: #8a1230; }
 

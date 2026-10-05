@@ -16,6 +16,8 @@ interface Props {
 interface UiMessage {
   id: string;
   role: "user" | "assistant";
+  /** Lo escribio una persona del negocio, no el asistente. Se dice, no se disimula. */
+  deAsesora?: boolean;
   text: string;
   images?: string[];
   error?: boolean;
@@ -59,6 +61,11 @@ const STORAGE_KEY = "alva.assistant.v1";
 const TTL_MS = 24 * 60 * 60 * 1000;
 // Omviqa rechaza (400) un historial de mas de 40 mensajes.
 const MAX_HISTORY = 36;
+
+/** Un unico aviso de "te atiende una asesora", aunque escriba varias veces. */
+const AVISO_ASESORA_ID = "aviso-asesora";
+/** Cada cuanto se pregunta por lo que escribio la asesora, con el chat abierto. */
+const SONDEO_MS = 7000;
 const MAX_INPUT = 500;
 // Omviqa acepta 1000 caracteres por mensaje; la lista de cotizacion se arma con margen.
 const MAX_QUOTE_MESSAGE = 950;
@@ -363,6 +370,12 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
   // El enlace parte generico (igual en servidor y cliente) y se enriquece ya hidratado.
   const [advisorHref, setAdvisorHref] = useState(whatsappUrl);
 
+  // Una persona del negocio lleva la conversacion: el asistente esta callado y
+  // lo que llegue lo escribe ella.
+  const [atendidaPorPersona, setAtendidaPorPersona] = useState(false);
+  /** Fecha del ultimo mensaje ya mostrado: por ahi sigue la bandeja. */
+  const cursorRef = useRef<string | null>(null);
+
   const store = useRef<Stored | null>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -476,6 +489,55 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
     store.current = { ...store.current, ...patch };
     saveStored(store.current);
   }, []);
+  // LO QUE ESCRIBE LA ASESORA LLEGA PREGUNTANDO, NO SE EMPUJA.
+  //
+  // La ventana del visitante sigue abierta, asi que cada pocos segundos pide a
+  // Omviqa lo nuevo de SU conversacion. Solo mientras el chat este abierto: con
+  // la pagina cerrada no hay a quien mostrarselo y seria trafico regalado.
+  useEffect(() => {
+    if (!open) return;
+    let vivo = true;
+
+    const sondear = async () => {
+      const visitorId = store.current.visitorId;
+      if (!visitorId) return;
+      const url = new URL(endpoint.replace(/\/chat$/, "/mensajes"));
+      url.searchParams.set("visitorId", visitorId);
+      if (cursorRef.current) url.searchParams.set("desde", cursorRef.current);
+      try {
+        const res = await fetch(url.toString());
+        if (!res.ok || !vivo) return;
+        const data = (await res.json()) as {
+          atendidoPorPersona?: boolean;
+          mensajes?: Array<{ id: string; de: "asesora" | "asistente"; texto: string; fecha: string }>;
+        };
+        if (!vivo) return;
+        setAtendidaPorPersona(Boolean(data.atendidoPorPersona));
+        const nuevos = Array.isArray(data.mensajes) ? data.mensajes : [];
+        if (nuevos.length === 0) return;
+        cursorRef.current = nuevos[nuevos.length - 1].fecha;
+        setMessages((prev) => {
+          const conocidos = new Set(prev.map((m) => m.id));
+          const entrantes: UiMessage[] = nuevos
+            .filter((m) => !conocidos.has(m.id))
+            .map((m) => ({ id: m.id, role: "assistant", text: m.texto, deAsesora: m.de === "asesora" }));
+          if (entrantes.length === 0) return prev;
+          const next = [...prev, ...entrantes];
+          persist({ messages: next.slice(-60) });
+          return next;
+        });
+      } catch {
+        // Un sondeo perdido no es nada: en siete segundos se vuelve a intentar.
+      }
+    };
+
+    void sondear();
+    const temporizador = setInterval(() => void sondear(), SONDEO_MS);
+    return () => {
+      vivo = false;
+      clearInterval(temporizador);
+    };
+  }, [open, endpoint, persist]);
 
   const send = useCallback(
     async (raw: string, opts: SendOpts = {}) => {
@@ -550,8 +612,24 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
           respuesta?: unknown;
           imagenes?: unknown;
           historial?: unknown;
+          atendidoPorPersona?: boolean;
           aviso?: { restantes?: unknown };
         };
+        // Una asesora tomo la conversacion: el asistente no responde a proposito.
+        // Su respuesta llega por la bandeja (ver sondearMensajes), no aqui.
+        if (data.atendidoPorPersona) {
+          setAtendidaPorPersona(true);
+          if (!cursorRef.current) cursorRef.current = new Date(Date.now() - 60_000).toISOString();
+          setMessages((prev) => {
+            const yaAvisado = prev.some((m) => m.id === AVISO_ASESORA_ID);
+            if (yaAvisado) return prev;
+            const next: UiMessage[] = [...prev, { id: AVISO_ASESORA_ID, role: "assistant", text: "Te está atendiendo una asesora. Te responde por aquí mismo en un momento." }];
+            persist({ messages: next.slice(-60) });
+            return next;
+          });
+          return;
+        }
+
         const respuesta = typeof data.respuesta === "string" && data.respuesta.trim() ? data.respuesta : null;
         if (!respuesta) throw Object.assign(new Error("empty"), { status: 500 });
 
@@ -732,6 +810,9 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
           {visible.map((m) => (
             <div key={m.id} style={{ display: "contents" }}>
               <div className={`aa-msg ${m.role === "user" ? "aa-msg-user" : "aa-msg-bot"}${m.error ? " aa-msg-error" : ""}`}>
+                {/* Quien habla se dice, no se deja adivinar: una persona y un
+                    asistente no responden de lo mismo. */}
+                {m.deAsesora && <strong className="aa-de-asesora">Asesora</strong>}
                 {m.role === "assistant" ? renderRich(m.text) : m.text}
               </div>
               {m.note && <p className="aa-note">{m.note}</p>}
