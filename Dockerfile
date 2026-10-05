@@ -3,6 +3,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
+ARG PUBLIC_ADVISOR_API_URL
+ENV PUBLIC_ADVISOR_API_URL=$PUBLIC_ADVISOR_API_URL
 RUN npm run build
 
 FROM nginx:1.27-alpine
