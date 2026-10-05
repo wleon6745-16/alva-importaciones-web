@@ -104,7 +104,7 @@
       },
       "subcategory": "DISOLVENTE",
       "brand": "GENERATION",
-      "publicPrice": 8.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/generation/9519-gm-magicseal.jpg",
       "shortDescription": "Transforma y optimiza tus productos de maquillaje con el Activador & Diluidor Magic Seal de GENERATION. Esta fórmula versátil permite diluir bases, correctores y delineadores para una aplicación más suave y modulable, o revivir productos secos sin alterar su pigmentación o duración."
@@ -120,7 +120,7 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": "GLAM NAILS",
-      "publicPrice": 25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/glam-nails/10384-ds152.jpg",
       "shortDescription": "El Aerógrafo Profesional Recargable de Glam Nails es la herramienta perfecta para lograr acabados precisos y creativos en uñas, maquillaje y diseño artístico. Su sistema inalámbrico recargable brinda mayor comodidad y libertad de movimiento, permitiendo trabajar sin cables y con total control. Ofrece una pulverización uniforme y fina, ideal para técnicas de nail art, degradados, efectos y detalles profesionales. Su diseño compacto y ergonómico facilita su uso tanto para principiantes como para expertos. Fabricado con materiales de alta calidad, garantiza durabilidad y un rendimiento eficiente, convirtiéndose en un aliado indispensable para salones de belleza y uso personal."
@@ -136,7 +136,7 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": "GLAM BEAUTY",
-      "publicPrice": 15,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/10897-la003.jpg",
       "shortDescription": "Aro de Luz 12\" 3 Luces + Trípode , kit de iluminación ideal para maquillaje, fotografía, videos y transmisiones en vivo . Cuenta con 3 tonos de luz (cálida, fría y neutra) y niveles de brillo ajustables , permitiendo una iluminación uniforme y profesional. Incluye trípode ajustable en altura y soporte para celular , además de rotación 360° para lograr el ángulo perfecto. Funciona mediante conexión USB , siendo práctico y fácil de usar en cualquier lugar"
@@ -152,7 +152,7 @@
       },
       "subcategory": "BALSAMO",
       "brand": "BEAUTY CREATIONS",
-      "publicPrice": 8,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/beauty-creations/8398-bcbnc-lb02.png",
       "shortDescription": "Hidrata y suaviza, previniendo la sequedad y agrietamiento. Su fórmula suele contener ingredientes emolientes como cera de abejas, manteca de karité o aceites naturales, proporcionando una barrera protectora y una sensación de comodidad durante todo el día."
@@ -168,7 +168,7 @@
       },
       "subcategory": "BALSAMO",
       "brand": "BEAUTY CREATIONS",
-      "publicPrice": 8,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/beauty-creations/8397-bcbnc-lb03.png",
       "shortDescription": "Hidrata y suaviza, previniendo la sequedad y agrietamiento. Su fórmula suele contener ingredientes emolientes como cera de abejas, manteca de karité o aceites naturales, proporcionando una barrera protectora y una sensación de comodidad durante todo el día."
@@ -184,7 +184,7 @@
       },
       "subcategory": "POLVO BANANA",
       "brand": "SFR",
-      "publicPrice": 2,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-8d7c2e30779b10b5.jpg",
       "shortDescription": null
@@ -200,7 +200,7 @@
       },
       "subcategory": "CREMA DE DEPILAR",
       "brand": "GLAM NAILS",
-      "publicPrice": 1.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/glam-nails/2610-ts044.jpg",
       "shortDescription": "La Banda Depilatoria Glam Beauty de 100 piezas es un producto diseñado para la depilación en casa de manera rápida y efectiva. Estas bandas están fabricadas con materiales de alta calidad que aseguran una adhesión óptima al vello, permitiendo una eliminación eficiente y menos dolorosa."
@@ -216,10 +216,26 @@
       },
       "subcategory": "BASE LIQUIDA",
       "brand": "URBAN",
-      "publicPrice": 5.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/urban/3615-mt398-1.jpg",
       "shortDescription": "La base líquida Urban es un tipo de maquillaje para el rostro que ofrece una cobertura suave y natural. Por lo general, está diseñada para aplicarse con facilidad y fusionarse con la piel, proporcionando un acabado fresco y uniforme. Muchas bases líquidas Urban también incluyen ingredientes hidratantes para ayudar a mantener la piel hidratada durante todo el día."
+    },
+    {
+      "publicProductId": "62e6e2df-59a0-4c09-af47-846e70645315",
+      "code": "11884",
+      "name": "BASE LIQUIDA BEAUTY CREATIONS FS 2.0 30ML",
+      "slug": "base-liquida-beauty-creations-fs-2-0-30ml-11884",
+      "category": {
+        "slug": "maquillaje",
+        "label": "Maquillaje"
+      },
+      "subcategory": "BASE LIQUIDA",
+      "brand": "BEAUTY CREATIONS",
+      "publicPrice": null,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/11884-fs2-0.png",
+      "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
     },
     {
       "publicProductId": "42d5eca8-7185-45b3-8111-5e2eef465c7c",
@@ -232,7 +248,7 @@
       },
       "subcategory": "BASE LIQUIDA",
       "brand": "BEAUTY CREATIONS",
-      "publicPrice": 14,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/2603-fs3-0.png",
       "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
@@ -248,7 +264,7 @@
       },
       "subcategory": "BASE LIQUIDA",
       "brand": "BEAUTY CREATIONS",
-      "publicPrice": 14,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/1149-fs3-5.png",
       "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
@@ -264,7 +280,7 @@
       },
       "subcategory": "BASE LIQUIDA",
       "brand": "BEAUTY CREATIONS",
-      "publicPrice": 14,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/3494-fs4-0.png",
       "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
@@ -280,7 +296,7 @@
       },
       "subcategory": "BASE LIQUIDA",
       "brand": "BEAUTY CREATIONS",
-      "publicPrice": 14,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/3264-fs5-0.png",
       "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
@@ -296,7 +312,7 @@
       },
       "subcategory": "BASE LIQUIDA",
       "brand": "BEAUTY CREATIONS",
-      "publicPrice": 14.1,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/1153-fs6-0.png",
       "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
@@ -312,7 +328,7 @@
       },
       "subcategory": "BASE LIQUIDA",
       "brand": "BEAUTY CREATIONS",
-      "publicPrice": 14,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/3967-fs6-5.png",
       "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
@@ -328,7 +344,7 @@
       },
       "subcategory": "BASE LIQUIDA",
       "brand": "BEAUTY CREATIONS",
-      "publicPrice": 14,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/1152-fs7-5.png",
       "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
@@ -344,7 +360,7 @@
       },
       "subcategory": "BASE LIQUIDA",
       "brand": "BEAUTY CREATIONS",
-      "publicPrice": 14,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/4518-fs8-0.png",
       "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
@@ -360,25 +376,9 @@
       },
       "subcategory": "BASE LIQUIDA",
       "brand": "BEAUTY CREATIONS",
-      "publicPrice": 14,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/4995-fs9-0.png",
-      "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
-    },
-    {
-      "publicProductId": "62e6e2df-59a0-4c09-af47-846e70645315",
-      "code": "11884",
-      "name": "BASE LIQUIDA BEAUTY CREATIONS FS2.0 30ML",
-      "slug": "base-liquida-beauty-creations-fs2-0-30ml-11884",
-      "category": {
-        "slug": "maquillaje",
-        "label": "Maquillaje"
-      },
-      "subcategory": "BASE LIQUIDA",
-      "brand": "BEAUTY CREATIONS",
-      "publicPrice": 14,
-      "currency": "USD",
-      "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/beauty-creations/11884-fs2-0.png",
       "shortDescription": "Logra una cobertura impecable y natural con nuestra base de maquillaje. Formulada con pigmentos suaves que difuminan imperfecciones, ofrece una cobertura cómoda de media a completa y un acabado natural adaptable a pieles grasas a secas. Acabado satinado: Un brillo natural y saludable.. Libre de aceite: Ideal para pieles grasas y mixtas.. Hidratante: Mantiene la piel confortable e hidratada.. Larga duración: Permanece impecable durante horas.. Fórmula ligera: Se siente cómoda y natural en la piel.. Vitamina E: Un antioxidante que beneficia la piel.."
     },
     {
@@ -392,7 +392,7 @@
       },
       "subcategory": "BARBERIA",
       "brand": "L.A. GIRL",
-      "publicPrice": 11.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/l-a-girl/3493-glm642.webp",
       "shortDescription": "Consigue una cobertura perfecta con la Base Líquida Pro Coverage Foundation Fair de LA GIRL. Su fórmula líquida de alta cobertura proporciona un acabado mate duradero, ideal para pieles claras. ¡Logra un rostro impecable con esta base de larga duración!"
@@ -408,7 +408,7 @@
       },
       "subcategory": "BASE LIQUIDA",
       "brand": "L.A. GIRL",
-      "publicPrice": 11.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/l-a-girl/1174-glm646.jpg",
       "shortDescription": "Base líquida de cobertura total que ofrece una apariencia impecable y resistente, con un acabado suave y natural."
@@ -424,7 +424,7 @@
       },
       "subcategory": "BASE LIQUIDA",
       "brand": "L.A. GIRL",
-      "publicPrice": 14,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/l-a-girl/2386-glm673.jpg",
       "shortDescription": "Ideal para tonos de piel medianos a claros, esta base líquida Pro Matte proporciona un acabado mate de larga duración. Su fórmula ligera cubre imperfecciones y controla el brillo, dejando la piel fresca y mate durante todo el día."
@@ -440,7 +440,7 @@
       },
       "subcategory": "BASE LIQUIDA",
       "brand": "L.A. GIRL",
-      "publicPrice": 14,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/l-a-girl/2389-glm675.jpg",
       "shortDescription": "Diseñada para tonos de piel media, esta base líquida proporciona una cobertura mate de alta calidad. Controla la grasa y ofrece una textura ligera que se adapta perfectamente a la piel, brindando un acabado natural y duradero."
@@ -456,7 +456,7 @@
       },
       "subcategory": "BASE LIQUIDA",
       "brand": "L.A. GIRL",
-      "publicPrice": 14,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/l-a-girl/535-glm677.jpg",
       "shortDescription": "La base líquida Pro Matte Bisque de LA Girl es parte de la línea Pro Matte de la marca, diseñada para proporcionar una cobertura mate de larga duración. \"Bisque\" es un tono que generalmente se describe como un tono cálido beige."
@@ -472,7 +472,7 @@
       },
       "subcategory": "BASE LIQUIDA",
       "brand": "L.A. GIRL",
-      "publicPrice": 14,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/l-a-girl/2388-glm678.jpg",
       "shortDescription": "Base líquida mate en tono arena, que deja un acabado suave y mate, ideal para pieles mixtas o grasas."
@@ -491,7 +491,7 @@
       },
       "subcategory": "SOMBRA",
       "brand": "VANDUX",
-      "publicPrice": 4.9,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-426cb49d6e831fdd.jpg",
       "shortDescription": null
@@ -507,7 +507,7 @@
       },
       "subcategory": "SPRAY",
       "brand": "VANDUX",
-      "publicPrice": 4.8,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-cfbcad3d3175cb34.jpg",
       "shortDescription": null
@@ -523,7 +523,7 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": "GLAM NAILS",
-      "publicPrice": 14.6,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-dcd0ca1baaef43c2.jpg",
       "shortDescription": null
@@ -539,7 +539,7 @@
       },
       "subcategory": "PESTAÑAS P/P",
       "brand": "GLAM BEAUTY",
-      "publicPrice": 5.9,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-afc36bf43a274695.jpg",
       "shortDescription": null
@@ -555,7 +555,7 @@
       },
       "subcategory": "SOMBRA",
       "brand": "AMY BEAUTY",
-      "publicPrice": 10.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-da22844034548abf.jpg",
       "shortDescription": null
@@ -571,7 +571,7 @@
       },
       "subcategory": "SOMBRA",
       "brand": "AMY BEAUTY",
-      "publicPrice": 10.9,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-28098fee96191346.jpg",
       "shortDescription": null
@@ -587,7 +587,7 @@
       },
       "subcategory": "CORRECTOR",
       "brand": "ESSENCE",
-      "publicPrice": 4.4,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-cee01063ce6287bf.jpg",
       "shortDescription": null
@@ -603,11 +603,11 @@
       },
       "subcategory": "CORRECTOR",
       "brand": "ESSENCE",
-      "publicPrice": 4.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-12c5dcab8381d16f.jpg",
       "shortDescription": null
     }
   ],
-  "fetchedAt": "2026-09-17T19:06:20.237Z"
+  "fetchedAt": "2026-10-05T16:12:33.268Z"
 }

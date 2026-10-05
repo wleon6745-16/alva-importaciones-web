@@ -149,7 +149,7 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": "STAR HAIR",
-      "publicPrice": 0.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/product-a6897a7b-cd21c68fb5131bf0.jpg",
       "shortDescription": "Características PrincipalesDiseño: Piezas variadas como perlas, aros metálicos, dijes o figuras de estrellas adaptadas para entrelazar en mechones.Uso: Ideal para personalizar trenzas africanas, box braids o peinados casuales de moda.Material: Generalmente elaborado en aleaciones ligeras o plástico resistente que no maltrata el cabello."
@@ -165,7 +165,7 @@
       },
       "subcategory": "SERUM",
       "brand": "CLANS",
-      "publicPrice": 2.9,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-e4dd7a5f0775078e.jpg",
       "shortDescription": null
@@ -181,7 +181,7 @@
       },
       "subcategory": "ACONDICIONADOR",
       "brand": "BIOTANIK",
-      "publicPrice": 7,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/biotanik/4989-pt067.jpg",
       "shortDescription": "El acondicionador Keracare 500ml de BIOTANIK es ideal para cuidar y mantener el cabello hidratado y suave. Su fórmula está diseñada para facilitar el desenredo y mejorar la textura del cabello.. Hidratación profunda: ayuda a mantener el cabello nutrido y saludable.. Suavidad y manejabilidad: facilita el peinado y reduce el frizz.. Fórmula equilibrada: adecuada para todo tipo de cabello.. Presentación práctica: envase de 500ml para un uso prolongado.. Para mejores resultados, aplicar después del shampoo sobre el cabello húmedo, dejar actuar unos minutos y enjuagar con abundante agua. Ideal para uso diario y para mantener el cabello en óptimas condiciones.."
@@ -197,7 +197,7 @@
       },
       "subcategory": "ACONDICIONADOR",
       "brand": "ECHOS LINE",
-      "publicPrice": 18.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/echos-line/10944-1024575.jpg",
       "shortDescription": "Acondicionador que desenreda y nutre el cabello, dejándolo suave y manejable."
@@ -213,7 +213,7 @@
       },
       "subcategory": "ACONDICIONADOR",
       "brand": "GARNIER",
-      "publicPrice": 6.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/garnier/8551-24771.png",
       "shortDescription": "Deleita tu cabello con la rica nutrición del Acondicionador Fructis Hair Food Aguacate. Su fórmula vegana, elaborada con un 98% de ingredientes de origen natural, está diseñada para nutrir profundamente tu melena, dejándola suave, manejable y llena de vitalidad. Comprometidos con el cuidado de tu cabello y el planeta, este acondicionador no contiene siliconas, parabenos ni colorantes artificiales. Además, nuestras fórmulas son biodegradables y somos una marca Cruelty Free. Modo de Uso para una nutrición profunda: Después del shampoo: Aplica el acondicionador sobre el cabello húmedo después de haber utilizado tu shampoo habitual.. Aplica generosamente: Distribuye una cantidad generosa de acondicionador de medios a puntas, enfocándote en las áreas que necesiten más nutrición.. Masajea suavemente: Masajea suavemente el acondicionador en tu cabello para asegurar una distribución uniforme y ayudar a que los ingredientes nutritivos penetren en la fibra capilar.. Deja actuar: Deja actuar el acondicionador durante unos instantes para permitir que nutra profundamente tu cabello.. Enjuaga perfectamente: Aclara abundantemente con agua hasta remover por completo el acondicionador, dejando tu cabello suave y nutrido.."
@@ -229,7 +229,7 @@
       },
       "subcategory": "ACONDICIONADOR",
       "brand": "LISSIA",
-      "publicPrice": 5.8,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/lissia/6944-08010115.jpg",
       "shortDescription": "Formulado para ofrecer una hidratación intensiva y de larga duración, dejando el cabello visiblemente más suave, brillante y saludable. Su fórmula avanzada, enriquecida con ácido hialurónico —reconocido por su capacidad para retener hasta 1.000 veces su peso en agua—, restaura la humedad natural del cabello y mejora su elasticidad. Ideal para cabellos secos, dañados o con procesos químicos, este acondicionador ayuda a reparar, fortalecer y revitalizar la fibra capilar, desde la raíz hasta las puntas."
@@ -245,7 +245,7 @@
       },
       "subcategory": "ACONDICIONADOR",
       "brand": "LISSIA",
-      "publicPrice": 4.4,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/lissia/624-6804.png",
       "shortDescription": "La mejor alternativa para fortalecer, proteger, hidratar, suavizar y devolver el brillo natural a su cabello gracias a su alto contenido en omega 3, vitamina A, B, F, y aminoácidos esenciales. Para un cabello aún más increíble experimenta toda la línea de Cebolla y Biotina.. MODO DE USO: Colócalo en la mano, aplícalo sobre el cabello, refuerza en las puntas, masajea suavemente y luego enjuaga con abundante agua.."
@@ -261,7 +261,7 @@
       },
       "subcategory": "ACONDICIONADOR",
       "brand": "MOLLIE",
-      "publicPrice": 4.4,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mollie/788-7538.jpg",
       "shortDescription": "Desenreda y suaviza el cabello, aportando un acabado sedoso y libre de frizz.."
@@ -277,7 +277,7 @@
       },
       "subcategory": "ACONDICIONADOR",
       "brand": "MOLLIE",
-      "publicPrice": 4.4,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mollie/789-6529.jpg",
       "shortDescription": "Desenreda y repara, aportando fuerza y suavidad al cabello dañado.."
@@ -293,7 +293,7 @@
       },
       "subcategory": "ACONDICIONADOR",
       "brand": "MOLLIE",
-      "publicPrice": 4.4,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mollie/790-6545.jpg",
       "shortDescription": "Desenreda y protege el cabello tinturado, manteniendo su color vibrante y brillante.."
@@ -309,7 +309,7 @@
       },
       "subcategory": "ACONDICIONADOR",
       "brand": "MOLLIE",
-      "publicPrice": 4.4,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mollie/11803-8458.jpg",
       "shortDescription": "Desenreda y suaviza el cabello sin apelmazarlo. Su fórmula ayuda a mantener la hidratación, mejora la elasticidad de los rizos y facilita el peinado, dejando el cabello más manejable y definido.."
@@ -325,7 +325,7 @@
       },
       "subcategory": "ACONDICIONADOR",
       "brand": "MOLLIE",
-      "publicPrice": 4.4,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mollie/787-6553.jpg",
       "shortDescription": "Desenreda y suaviza el cabello, aportando hidratación intensa y revitalización de la fibra capilar.."
@@ -341,7 +341,7 @@
       },
       "subcategory": "ACONDICIONADOR",
       "brand": "SALON IN",
-      "publicPrice": 7.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/salon-in/2766-034547.jpg",
       "shortDescription": "El acondicionador Color Guard en presentación de 300 ml es parte de la línea de productos diseñados para proteger y mantener el color del cabello teñido. Este acondicionador está formulado para proporcionar nutrición adicional al cabello, al mismo tiempo que ayuda a sellar la cutícula y a mantener el color atrapado dentro del cabello, evitando así que se desvanezca prematuramente."
@@ -357,7 +357,7 @@
       },
       "subcategory": "ACONDICIONADOR",
       "brand": "SALON IN",
-      "publicPrice": 7.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/salon-in/2762-034042.png",
       "shortDescription": "Devuelve la suavidad y vitalidad perdida a tu cabello seco y dañado con el Acondicionador Hydra Repair. Su fórmula intensamente hidratante nutre profundamente cada hebra, reparando y fortaleciendo la fibra capilar para que luzcas un cabello visiblemente sedoso y saludable. Características especiales y beneficios: Acondiciona y desenreda eficazmente: Facilita el peinado, eliminando nudos y dejando el cabello suave al tacto.. Hidratación profunda: Nutre intensamente el cabello seco, restaurando su equilibrio hídrico natural.. Cabello manejable y con brillo: Aporta suavidad y luminosidad, facilitando el peinado y mejorando la apariencia general del cabello.. Repara y fortalece: Ayuda a reconstruir la fibra capilar dañada, aumentando su resistencia y previniendo la rotura.. Uso y aplicación: Después de lavar el cabello con shampoo, aplica el Acondicionador Hydra Repair sobre el cabello húmedo, de medios a puntas.. Realiza un suave masaje para asegurar que el producto se distribuya uniformemente.. Enjuaga abundantemente con agua.."
@@ -373,7 +373,7 @@
       },
       "subcategory": "ACTIVADOR",
       "brand": "SALON IN",
-      "publicPrice": 21.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-4dec31bbbdf6364f.jpg",
       "shortDescription": null
@@ -389,7 +389,7 @@
       },
       "subcategory": "ACTIVADOR",
       "brand": "SALON LINE",
-      "publicPrice": 19,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-16036cfae2b9d463.jpg",
       "shortDescription": null
@@ -405,7 +405,7 @@
       },
       "subcategory": "ACTIVADOR",
       "brand": "SALON LINE",
-      "publicPrice": 8.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/salon-line/10332-32670.jpg",
       "shortDescription": "Nutre, define y aporta brillo con una fragancia divertida a chicle que hace que el cuidado del cabello de los niños sea casi un juego. Esta crema ligera facilita el peinado, controla el frizz y deja los rizos suaves, con movimiento y listos para la aventura. Problema que resuelve Rizos o ondas infantiles que están secos, enredados o carecen de forma. La fórmula de este producto hidrata, suaviza y facilita el desenredado para que los pequeños luzcan un cabello manejable y con estilo. Modo de uso Aplica sobre el cabello limpio y húmedo.. Distribuye mechón por mechón, de medios a puntas; evita aplicar en exceso en la raíz.. Peina con los dedos o con peine de dientes anchos según el tipo de rizo.. No enjuagues; deja secar al aire o con difusor a temperatura suave.. Ingredientes clave Aceite de Coco : Nutre profundamente y aporta suavidad al tacto.. Aceite de Macadamia : Mejora el brillo natural y la flexibilidad del cabello infantil.. Manteca de Karité : Refuerza la hidratación y protege contra la resequedad.. Fragancia a chicle : Convierte el ritual del cabello en un momento divertido sin perder eficacia.. Características adicionales Tamaño: 300 ml. Edad recomendada: niños. Tipo de cabello recomendado: rizos y ondas infantiles que necesitan definición y suavidad. Textura: cremosa, ligera, sin residuo pesado. Libre de sulfatos y parabenos (fórmula amigable para cuero cabelludo infantil). Ingredientes (INCI) Aqua, Glycerin, Cetearyl Alcohol, Behentrimonium Chloride, Cocos Nucifera Oil, Prunus Amygdalus Dulcis Oil, Butyrospermum Parkii Butter, Parfum, Phenoxyethanol, Disodium EDTA, Potassium Hydroxide, Maltodextrin, PEG-80 Sorbitan Laurate."
@@ -421,7 +421,7 @@
       },
       "subcategory": "ACTIVADOR",
       "brand": "SALON LINE",
-      "publicPrice": 14.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-7c929c251acdc8b8.jpg",
       "shortDescription": null
@@ -437,7 +437,7 @@
       },
       "subcategory": "AGUA MICELAR",
       "brand": "BYPHASSE",
-      "publicPrice": 11,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-2cac0da1e9537fe3.jpg",
       "shortDescription": null
@@ -453,7 +453,7 @@
       },
       "subcategory": "ALISADOR",
       "brand": "BELOTTI",
-      "publicPrice": 10.9,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-8252439b45f5c092.jpg",
       "shortDescription": null
@@ -469,7 +469,7 @@
       },
       "subcategory": "SHAMPOO",
       "brand": "LA COLORS",
-      "publicPrice": 1.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-33146bee2adfa0e6.jpg",
       "shortDescription": null
@@ -485,7 +485,7 @@
       },
       "subcategory": "AMPOLLA",
       "brand": "MAXYBELT",
-      "publicPrice": 2.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/maxybelt/3292-08034222.jpg",
       "shortDescription": "La Ampolla Aceite de Argán 10ml de MAXYBELT es un tratamiento concentrado diseñado para nutrir y revitalizar el cabello.. Nutrición profunda: aporta hidratación intensa para cabellos secos y dañados.. Reparación: ayuda a restaurar la fibra capilar y reduce el frizz.. Brillo natural: mejora la apariencia del cabello dejándolo suave y brillante.. Fácil aplicación: formato en ampolla para un uso práctico y dosificado.. Se recomienda aplicar sobre el cabello limpio y húmedo, distribuyendo el producto de medios a puntas para obtener mejores resultados en la salud y apariencia del cabello.."
@@ -501,7 +501,7 @@
       },
       "subcategory": "AMPOLLA",
       "brand": "MAXYBELT",
-      "publicPrice": 2.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/maxybelt/3121-08034227.jpg",
       "shortDescription": "La \"Ampolla Botox Fase 2 Maxybelt de 10ml\" es un producto cosmético que se presenta en una ampolla de 10 mililitros. Se refiere a una solución destinada a aplicarse en la piel, especialmente en áreas donde se busca reducir la apariencia de arrugas y líneas de expresión."
@@ -517,7 +517,7 @@
       },
       "subcategory": "AMPOLLA",
       "brand": "MAXYBELT",
-      "publicPrice": 2.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/maxybelt/2919-08034224.jpg",
       "shortDescription": "La \"Ampolla de células madre Maxybelt\" es un producto cosmético que contiene células madre vegetales, generalmente extraídas de plantas como la manzana, el argán o la rosa mosqueta. Estas células madre se utilizan en cosmética por su capacidad para regenerar y revitalizar la piel."
@@ -536,7 +536,7 @@
       },
       "subcategory": "AGUA MICELAR",
       "brand": "BYPHASSE",
-      "publicPrice": 11,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-2cac0da1e9537fe3.jpg",
       "shortDescription": null
@@ -552,7 +552,7 @@
       },
       "subcategory": "GEL DE PEINAR",
       "brand": "BANDIDO",
-      "publicPrice": 7.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-43e3f960fff9ef44.jpg",
       "shortDescription": null
@@ -568,7 +568,7 @@
       },
       "subcategory": "CERA DE PEINAR",
       "brand": null,
-      "publicPrice": 5.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-480790a281861d0d.jpg",
       "shortDescription": null
@@ -584,7 +584,7 @@
       },
       "subcategory": "GEL DE AFEITAR",
       "brand": "OSSION",
-      "publicPrice": 9.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-32c4c8ba08b8e101.jpg",
       "shortDescription": null
@@ -600,7 +600,7 @@
       },
       "subcategory": "CERA DE PEINAR",
       "brand": "OSSION",
-      "publicPrice": 7.1,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-43209d4a32f1b859.jpg",
       "shortDescription": null
@@ -616,7 +616,7 @@
       },
       "subcategory": "SHAMPOO",
       "brand": "MOLLIE",
-      "publicPrice": 6.1,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-12149ec701b40fc2.jpg",
       "shortDescription": null
@@ -632,7 +632,7 @@
       },
       "subcategory": "MAQUINA DE CORTAR CABELLO",
       "brand": "WAHL",
-      "publicPrice": 29.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-9ee2e4a2739e9a54.jpg",
       "shortDescription": null
@@ -648,11 +648,11 @@
       },
       "subcategory": "PLANCHA",
       "brand": "REALISS",
-      "publicPrice": 73.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-f3807edafabfc696.jpg",
       "shortDescription": null
     }
   ],
-  "fetchedAt": "2026-09-17T19:06:20.237Z"
+  "fetchedAt": "2026-10-05T16:12:33.268Z"
 }

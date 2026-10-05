@@ -149,7 +149,7 @@
       },
       "subcategory": "REMOVEDOR DE CALLO",
       "brand": "RODHER",
-      "publicPrice": 1.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/rodher-official/2651-450300000.jpg",
       "shortDescription": null
@@ -165,7 +165,7 @@
       },
       "subcategory": "REMOVEDOR DE CUTICULA",
       "brand": "RODHER",
-      "publicPrice": 1.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/rodher-official/2653-23030000.jpg",
       "shortDescription": null
@@ -181,7 +181,7 @@
       },
       "subcategory": "ACCESORIOS DE UÑAS",
       "brand": null,
-      "publicPrice": 2.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-0d108a17c380b966.jpg",
       "shortDescription": null
@@ -197,7 +197,7 @@
       },
       "subcategory": "ACEITE DE CUTICULA",
       "brand": "MIA SECRET",
-      "publicPrice": 5.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/1728-cl-02.jpg",
       "shortDescription": null
@@ -213,7 +213,7 @@
       },
       "subcategory": "ACEITE DE CUTICULA",
       "brand": "MIA SECRET",
-      "publicPrice": 5.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/1729-cl-03.jpg",
       "shortDescription": null
@@ -229,7 +229,7 @@
       },
       "subcategory": "ACEITE DE CUTICULA",
       "brand": "MIA SECRET",
-      "publicPrice": 5.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/1727-cl-05.jpg",
       "shortDescription": null
@@ -245,7 +245,7 @@
       },
       "subcategory": "ACEITE DE CUTICULA",
       "brand": "MIA SECRET",
-      "publicPrice": 5.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/2586-cl-06.png",
       "shortDescription": "CUTICLE OIL HONEY Este aceite para cutícula en fragancia HONEYSUCKLE (madreselva) está especialmente formulado para hidratar y acondicionar la cutícula. Ayuda a proteger la cutícula de las rajaduras ocasionadas por la resequedad."
@@ -261,7 +261,7 @@
       },
       "subcategory": "ACEITE DE CUTICULA",
       "brand": "MIA SECRET",
-      "publicPrice": 10.3,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/2999-cl-10.jpg",
       "shortDescription": "CUTICLE OIL LAVENDER Este aceite para cutícula en fragancia LAVENDER (lavanda) está especialmente formulado para hidratar y acondicionar la cutícula. Ayuda a proteger la cutícula de las rajaduras ocasionadas por la resequedad."
@@ -277,7 +277,7 @@
       },
       "subcategory": "ACEITE DE CUTICULA",
       "brand": "MIA SECRET",
-      "publicPrice": 10.35,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/1639-cl-11.jpg",
       "shortDescription": "CUTICLE OIL JASMINE Este aceite para cutícula en fragancia JASMINE (jazmín) está especialmente formulado para hidratar y acondicionar la cutícula. Ayuda a proteger la cutícula de las rajaduras ocasionadas por la resequedad."
@@ -293,7 +293,7 @@
       },
       "subcategory": "ACEITE DE CUTICULA",
       "brand": "MIA SECRET",
-      "publicPrice": 10.35,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/4663-cl-12.jpg",
       "shortDescription": "CUTICLE OIL LILAC Este aceite para cutícula en fragancia LILAC (lila) está especialmente formulado para hidratar y acondicionar la cutícula. Ayuda a proteger la cutícula de las rajaduras ocasionadas por la resequedad."
@@ -309,7 +309,7 @@
       },
       "subcategory": "ACEITE DE CUTICULA",
       "brand": "MIA SECRET",
-      "publicPrice": 10.35,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/4664-cl-14.jpg",
       "shortDescription": null
@@ -325,7 +325,7 @@
       },
       "subcategory": "ACEITE DE CUTICULA",
       "brand": "MIA SECRET",
-      "publicPrice": 10.3,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/4017-cl-15.jpg",
       "shortDescription": null
@@ -341,7 +341,7 @@
       },
       "subcategory": "ACEITE DE CUTICULA",
       "brand": "MOLLIE",
-      "publicPrice": 1.35,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mollie/782-6521.jpg",
       "shortDescription": "Hidrata y nutre las cutículas, dejando las uñas suaves y saludables. Su aplicación diaria fortalece y protege, aportando un acabado cuidado y radiante.."
@@ -357,7 +357,7 @@
       },
       "subcategory": "TOP COAT",
       "brand": "MIA SECRET",
-      "publicPrice": 8.35,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/2725-ab-310.jpg",
       "shortDescription": "AIRBRUSH TOP COAT Es un Top Coat ultrabrillante de larga duración y secado rápido que ofrece durabilidad y resistencia. Su fórmula no se torna amarilla y previene la decoloración de esmaltes, sin requerir lámpara UV o LED."
@@ -373,7 +373,7 @@
       },
       "subcategory": "ALICATE",
       "brand": "CALA",
-      "publicPrice": 9.4,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-name/cala/3979-50931.jpg",
       "shortDescription": "El Alicate Mano Rose Gold de CALA es una herramienta esencial para el cuidado profesional de uñas. Su diseño elegante y funcionalidad lo convierten en la opción perfecta para manicuras y pedicuras precisas.. Acabado rose gold que aporta estilo y durabilidad.. Corte preciso para un cuidado efectivo de uñas y cutículas.. Ergonomía que facilita su uso cómodo y seguro.. Material resistente que garantiza larga vida útil.. Recomendado para uso profesional y personal, este alicate es ideal para mantener tus uñas en óptimas condiciones con un toque de elegancia.."
@@ -389,7 +389,7 @@
       },
       "subcategory": "ALICATE",
       "brand": "GLAM NAILS",
-      "publicPrice": 2.3,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/glam-nails/7258-vnc520.jpg",
       "shortDescription": "Su diseño ergonómico y su acabado plateado le dan un aspecto profesional y elegante, mientras que su construcción robusta garantiza durabilidad y resistencia. Ideal para cortar y dar forma a las uñas con facilidad, este alicate permite lograr resultados precisos y limpios, tanto en manicuras caseras como profesionales. Su manejo suave y preciso lo convierte en una herramienta indispensable para mantener las uñas impecables y bien cuidadas."
@@ -405,7 +405,7 @@
       },
       "subcategory": "ALICATE",
       "brand": "STALEKS",
-      "publicPrice": 18.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/staleks/10280-ns-30-3.jpg",
       "shortDescription": "Alicate ideal para manicuras detalladas."
@@ -421,7 +421,7 @@
       },
       "subcategory": "ALICATE",
       "brand": "STALEKS",
-      "publicPrice": 19,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/staleks/2128-ns-30-5.jpg",
       "shortDescription": "Alicate ideal para manicuras detalladas."
@@ -437,7 +437,7 @@
       },
       "subcategory": "ALICATE",
       "brand": "STALEKS",
-      "publicPrice": 18.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/staleks/3004-ns-30-7.jpg",
       "shortDescription": "Descubre la precisión y la calidad en el cuidado de uñas con el Alicate Profesional para Manicure y Pedicure Staleks. Diseñado para ofrecer un rendimiento superior tanto en manicuras como pedicuras, este alicate es la herramienta esencial para lograr resultados impecables y duraderos."
@@ -453,7 +453,7 @@
       },
       "subcategory": "ALICATE",
       "brand": "MASTER NAILS",
-      "publicPrice": 18.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/9401-ns313.jpg",
       "shortDescription": "Alicate ideal para manicuras detalladas."
@@ -469,7 +469,7 @@
       },
       "subcategory": "ALICATE",
       "brand": "STALEKS",
-      "publicPrice": 22.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/staleks/4934-ns-31-5.jpg",
       "shortDescription": "El alicate para manos Staleks es una herramienta de alta calidad diseñada para el cuidado de las uñas y cutículas. Fabricado por Staleks, una marca reconocida en el mundo de la manicura y pedicura profesional, este alicate está construido con materiales duraderos y precisión en su diseño."
@@ -485,7 +485,7 @@
       },
       "subcategory": "ALICATE",
       "brand": "STALEKS",
-      "publicPrice": 20,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/staleks/2129-ns-31-7.jpg",
       "shortDescription": "Alicate ideal para manicuras detalladas."
@@ -501,7 +501,7 @@
       },
       "subcategory": "ALICATE",
       "brand": "STALEKS",
-      "publicPrice": 22.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/staleks/3815-ns-70-14.jpg",
       "shortDescription": "Eleva tu rutina de cuidado de pies con el Alicate Profesional para Pedicure Smart 70, diseñado para ofrecer precisión, comodidad y durabilidad en cada uso. Ideal para profesionales y entusiastas del cuidado personal, este alicate es la herramienta definitiva para lograr una pedicure impecable y eficaz."
@@ -517,7 +517,7 @@
       },
       "subcategory": "ALICATE",
       "brand": "STALEKS",
-      "publicPrice": 19,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/staleks/3816-ns-71-14.png",
       "shortDescription": "El Alicate Profesional para Cutículas Smart 71/14 de STALEKS es una herramienta esencial para el cuidado y embellecimiento de las uñas. Diseñado para ofrecer precisión y durabilidad, es ideal para uso profesional y personal.. Material de alta calidad: fabricado en acero inoxidable para garantizar resistencia y larga vida útil.. Corte preciso: permite eliminar cutículas con facilidad y sin dañar la piel.. Diseño ergonómico: cómodo para un manejo seguro y eficiente durante el manicure.. Versatilidad: adecuado para uso en salones de belleza y cuidado personal.. Recomendado para profesionales y amantes del cuidado de uñas que buscan resultados limpios y detallados. Mantén tus herramientas limpias y afiladas para un desempeño óptimo.."
@@ -525,6 +525,102 @@
   ],
   "firstPageHasMore": true,
   "highlights": [
+    {
+      "publicProductId": "e15d7dfb-f88f-461c-bb63-e0a88386ed6b",
+      "code": "8879",
+      "name": "GEL DE CONSTRUCCION L&D 50ML",
+      "slug": "gel-de-construccion-l-d-50ml-8879",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "GEL POLISH",
+      "brand": "L&D",
+      "publicPrice": null,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-2c7ae38b539457a8.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "e4a90f5f-9e05-4ef5-878e-54e5a1ee3eea",
+      "code": "11435",
+      "name": "CLOVER BALSAMO PARA UÑAS PINK HEART 30GR",
+      "slug": "clover-balsamo-para-unas-pink-heart-30gr-11435",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ACCESORIOS DE UÑAS",
+      "brand": "CLOVER",
+      "publicPrice": null,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-194b64681d552796.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "857eb151-07e8-47bd-977c-01a3ca2dbb02",
+      "code": "11874",
+      "name": "MOLDEADOR DE POLYGEL AMY BEAUTY SLIP SOLUTION POWDER GEL ZAR20251208-9 32395",
+      "slug": "moldeador-de-polygel-amy-beauty-slip-solution-powder-gel-zar20251208-9-32395-11874",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ACCESORIOS DE UÑAS",
+      "brand": "AMY BEAUTY",
+      "publicPrice": null,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-bdf972f55deaaa3e.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "d594f463-0bd6-4667-96a9-5907cd892e0a",
+      "code": "11906",
+      "name": "TOP GLASS E&A SHIELD FREE TPO HEMA EATCF-TOG 9ML",
+      "slug": "top-glass-e-a-shield-free-tpo-hema-eatcf-tog-9ml-11906",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "ESMALTE",
+      "brand": "E&A",
+      "publicPrice": null,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-2cb40c0edad8c21f.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "617f8c0d-7a3d-4c7d-836e-03c2d2ed598e",
+      "code": "11907",
+      "name": "BASE COAT E&A GRIND FREE FREE TPO HEMA 9ML EABCF-GF",
+      "slug": "base-coat-e-a-grind-free-free-tpo-hema-9ml-eabcf-gf-11907",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "BASE COAT",
+      "brand": "E&A",
+      "publicPrice": null,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-402d9c37b1fd2cc0.jpg",
+      "shortDescription": null
+    },
+    {
+      "publicProductId": "e05fa95a-8133-4b7b-b6f8-3d642f823595",
+      "code": "7763",
+      "name": "MN MONOMERO VIOLET GRAPE MASTER NAILS 1OZ USA-LAVG1",
+      "slug": "mn-monomero-violet-grape-master-nails-1oz-usa-lavg1-7763",
+      "category": {
+        "slug": "unas",
+        "label": "Uñas"
+      },
+      "subcategory": "MONOMERO",
+      "brand": "MASTER NAILS",
+      "publicPrice": null,
+      "currency": "USD",
+      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-f99e24f8d332ebbe.jpg",
+      "shortDescription": null
+    },
     {
       "publicProductId": "28c1109a-462d-4d7f-bb7c-c6b6804fc852",
       "code": "8770",
@@ -536,7 +632,7 @@
       },
       "subcategory": "ESMALTE SEMIPERMANENTE",
       "brand": "GLAM NAILS",
-      "publicPrice": 2,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-5966914dd00e979a.jpg",
       "shortDescription": null
@@ -552,107 +648,11 @@
       },
       "subcategory": "LAMPARA DE UÑAS",
       "brand": "GLAM NAILS",
-      "publicPrice": 5.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-42f411566f723262.jpg",
       "shortDescription": null
-    },
-    {
-      "publicProductId": "dd466877-e0be-41ed-b279-37e9c071d00d",
-      "code": "10749",
-      "name": "LAMPARA LED HAND LIGHT SOFT GEL GN-LMP110",
-      "slug": "lampara-led-hand-light-soft-gel-gn-lmp110-10749",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "LAMPARA DE UÑAS",
-      "brand": "GLAM NAILS",
-      "publicPrice": 2.5,
-      "currency": "USD",
-      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-866bee10db0e1d45.jpg",
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "bbe6e757-0b0d-4e69-921e-200c6be3aefa",
-      "code": "10803",
-      "name": "LAMPARA GLAM NAILS LED SOFT GEL METAL GN-LMP111",
-      "slug": "lampara-glam-nails-led-soft-gel-metal-gn-lmp111-10803",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "LAMPARA DE UÑAS",
-      "brand": "GLAM NAILS",
-      "publicPrice": 3.75,
-      "currency": "USD",
-      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-b1af0088cb13ee91.jpg",
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "02ff4e78-1460-426a-b35e-af67f12462cb",
-      "code": "11710",
-      "name": "BANDEJA PARA HERRAMIENTAS B03 OVALADA GOLD ZP26-B03",
-      "slug": "bandeja-para-herramientas-b03-ovalada-gold-zp26-b03-11710",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "ACCESORIOS DE UÑAS",
-      "brand": "GLAM NAILS",
-      "publicPrice": 3.5,
-      "currency": "USD",
-      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-4d6869566fb7e915.jpg",
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "16e17cba-49d6-4b35-b131-a943ccde17e0",
-      "code": "11811",
-      "name": "DECORACION DE UÑAS X16 VARIOS MODELOS  JDM404 JDM405 JDM401 JDM404JDM407",
-      "slug": "decoracion-de-unas-x16-varios-modelos-jdm404-jdm405-jdm401-jdm404jdm407-11811",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "ACEITE DE CUTICULA",
-      "brand": "JDM",
-      "publicPrice": 3,
-      "currency": "USD",
-      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-40caebb50c482c56.jpg",
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "6ad376ef-e4c9-4de0-9836-29f2c3e02a5d",
-      "code": "11813",
-      "name": "DECORACION DE UÑAS JDM VARIOS MODELOS RZ207 JDM021 JDM213 JDM020 JDM024",
-      "slug": "decoracion-de-unas-jdm-varios-modelos-rz207-jdm021-jdm213-jdm020-jdm024-11813",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "ACCESORIOS DE UÑAS",
-      "brand": "JDM",
-      "publicPrice": 1.5,
-      "currency": "USD",
-      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-5868ed7229f5f16d.jpg",
-      "shortDescription": null
-    },
-    {
-      "publicProductId": "73eb9582-2195-4b1d-a2c3-b67b118ec6cd",
-      "code": "11814",
-      "name": "DECORACION DE UÑAS JDM VARIOS MODELOS X12 JDM109 JDM125 JDM113",
-      "slug": "decoracion-de-unas-jdm-varios-modelos-x12-jdm109-jdm125-jdm113-11814",
-      "category": {
-        "slug": "unas",
-        "label": "Uñas"
-      },
-      "subcategory": "ACCESORIOS DE UÑAS",
-      "brand": "JDM",
-      "publicPrice": 1.75,
-      "currency": "USD",
-      "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-144c1ae814e32bc6.jpg",
-      "shortDescription": null
     }
   ],
-  "fetchedAt": "2026-09-17T19:06:20.237Z"
+  "fetchedAt": "2026-10-05T16:12:33.268Z"
 }

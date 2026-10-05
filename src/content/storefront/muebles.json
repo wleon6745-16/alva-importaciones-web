@@ -23,7 +23,7 @@
       },
       "subcategory": "BUTACA",
       "brand": null,
-      "publicPrice": 95,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-e5c4c7ab57afcc32.jpg",
       "shortDescription": null
@@ -39,7 +39,7 @@
       },
       "subcategory": "SILLA",
       "brand": null,
-      "publicPrice": 78,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-de40da0a7ae2b41c.jpg",
       "shortDescription": null
@@ -55,7 +55,7 @@
       },
       "subcategory": "BUTACA",
       "brand": null,
-      "publicPrice": 220,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-8680867d7d82c8da.jpg",
       "shortDescription": null
@@ -71,7 +71,7 @@
       },
       "subcategory": "BUTACA",
       "brand": null,
-      "publicPrice": 175,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-acb3a472cf197c97.jpg",
       "shortDescription": null
@@ -87,7 +87,7 @@
       },
       "subcategory": "BUTACA",
       "brand": null,
-      "publicPrice": 80,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-6be0d21953f83267.jpg",
       "shortDescription": null
@@ -103,7 +103,7 @@
       },
       "subcategory": "SILLA",
       "brand": null,
-      "publicPrice": 310,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10626.jpeg",
       "shortDescription": null
@@ -119,7 +119,7 @@
       },
       "subcategory": "SILLA",
       "brand": null,
-      "publicPrice": 350,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10392.jpeg",
       "shortDescription": null
@@ -135,7 +135,7 @@
       },
       "subcategory": "SILLA",
       "brand": null,
-      "publicPrice": 195,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10792.png",
       "shortDescription": null
@@ -151,7 +151,7 @@
       },
       "subcategory": "SILLA",
       "brand": null,
-      "publicPrice": 230,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10394.png",
       "shortDescription": null
@@ -167,7 +167,7 @@
       },
       "subcategory": "MESA",
       "brand": null,
-      "publicPrice": 330,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10575.png",
       "shortDescription": null
@@ -183,7 +183,7 @@
       },
       "subcategory": "SILLA",
       "brand": null,
-      "publicPrice": 230,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-6c26e0b79c505019.jpg",
       "shortDescription": null
@@ -199,7 +199,7 @@
       },
       "subcategory": "SILLA",
       "brand": null,
-      "publicPrice": 200,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10791.png",
       "shortDescription": null
@@ -215,7 +215,7 @@
       },
       "subcategory": "SILLA",
       "brand": null,
-      "publicPrice": 250,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10393.jpeg",
       "shortDescription": null
@@ -231,7 +231,7 @@
       },
       "subcategory": "SILLA GIRATORIA",
       "brand": "SILETI",
-      "publicPrice": 240,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-9a9897885705502a.jpg",
       "shortDescription": null
@@ -247,7 +247,7 @@
       },
       "subcategory": "SILLA",
       "brand": "SILETI",
-      "publicPrice": 115,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-f42035265f6eeb7e.jpg",
       "shortDescription": null
@@ -263,7 +263,7 @@
       },
       "subcategory": "SILLA",
       "brand": null,
-      "publicPrice": 85,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-663ee5a3c5aa4a25.jpg",
       "shortDescription": null
@@ -279,7 +279,7 @@
       },
       "subcategory": "SILLA",
       "brand": null,
-      "publicPrice": 195,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10795.jpeg",
       "shortDescription": null
@@ -295,7 +295,7 @@
       },
       "subcategory": "SILLA",
       "brand": null,
-      "publicPrice": 135,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10429.jpeg",
       "shortDescription": null
@@ -311,7 +311,7 @@
       },
       "subcategory": "SILLA",
       "brand": null,
-      "publicPrice": 45,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-1aa8a677293ad61d.jpg",
       "shortDescription": null
@@ -327,7 +327,7 @@
       },
       "subcategory": "SILLA GIRATORIA",
       "brand": null,
-      "publicPrice": 185,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-e9b0a7d87d709b15.jpg",
       "shortDescription": null
@@ -343,7 +343,7 @@
       },
       "subcategory": "SILLA",
       "brand": "DELUXE",
-      "publicPrice": 49.9,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-2bb0f7311aff34dc.jpg",
       "shortDescription": null
@@ -359,7 +359,7 @@
       },
       "subcategory": "SILLA",
       "brand": null,
-      "publicPrice": 77,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-2ac1bbe1aa0eeba5.jpg",
       "shortDescription": null
@@ -375,7 +375,7 @@
       },
       "subcategory": "SILLA",
       "brand": "DELUXE",
-      "publicPrice": 42,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10173.jpeg",
       "shortDescription": null
@@ -391,7 +391,7 @@
       },
       "subcategory": "SILLA",
       "brand": "DELUXE",
-      "publicPrice": 35,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/10172.jpeg",
       "shortDescription": null
@@ -410,7 +410,7 @@
       },
       "subcategory": "SILLA GIRATORIA",
       "brand": "SILETI",
-      "publicPrice": 240,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-9a9897885705502a.jpg",
       "shortDescription": null
@@ -426,7 +426,7 @@
       },
       "subcategory": "SILLA",
       "brand": "DELUXE",
-      "publicPrice": 49.9,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-2bb0f7311aff34dc.jpg",
       "shortDescription": null
@@ -442,7 +442,7 @@
       },
       "subcategory": "SILLA GIRATORIA",
       "brand": null,
-      "publicPrice": 348,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-3acb998c6bb8fe42.jpg",
       "shortDescription": null
@@ -458,7 +458,7 @@
       },
       "subcategory": "SILLA GIRATORIA",
       "brand": null,
-      "publicPrice": 185,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-f605ef5e843adce6.jpg",
       "shortDescription": null
@@ -474,7 +474,7 @@
       },
       "subcategory": "SILLA",
       "brand": null,
-      "publicPrice": 77,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-2ac1bbe1aa0eeba5.jpg",
       "shortDescription": null
@@ -490,7 +490,7 @@
       },
       "subcategory": "SILLA GIRATORIA",
       "brand": null,
-      "publicPrice": 84.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-64548677a3d44e05.jpg",
       "shortDescription": null
@@ -506,7 +506,7 @@
       },
       "subcategory": "BUTACA",
       "brand": null,
-      "publicPrice": 175,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-acb3a472cf197c97.jpg",
       "shortDescription": null
@@ -522,11 +522,11 @@
       },
       "subcategory": "SILLA GIRATORIA",
       "brand": null,
-      "publicPrice": 185,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-e9b0a7d87d709b15.jpg",
       "shortDescription": null
     }
   ],
-  "fetchedAt": "2026-09-17T19:06:20.237Z"
+  "fetchedAt": "2026-10-05T16:12:33.268Z"
 }

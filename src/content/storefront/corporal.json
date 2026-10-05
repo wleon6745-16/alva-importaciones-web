@@ -38,7 +38,7 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": null,
-      "publicPrice": 110,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-4da0cf4a5ecb4a57.jpg",
       "shortDescription": null
@@ -54,7 +54,7 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": null,
-      "publicPrice": 98,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-9da3cedcd012bce2.jpg",
       "shortDescription": null
@@ -70,7 +70,7 @@
       },
       "subcategory": "CREMA DE DEPILAR",
       "brand": "GLAM BEAUTY",
-      "publicPrice": 1.8,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/glam-beauty/10533-ln-1143-1.jpg",
       "shortDescription": "La cera depilatoria con aloe vera de Glam Beauty es una opción popular para la depilación en casa. El aloe vera es conocido por sus propiedades calmantes y suavizantes para la piel, lo que puede ayudar a reducir la irritación y el enrojecimiento después de la depilación."
@@ -86,7 +86,7 @@
       },
       "subcategory": "CERA DEPILAR",
       "brand": "GLAM BEAUTY",
-      "publicPrice": 1.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/2312-ln11431.jpg",
       "shortDescription": "La cera depilatoria con aloe vera de Glam Beauty es una opción popular para la depilación en casa. El aloe vera es conocido por sus propiedades calmantes y suavizantes para la piel, lo que puede ayudar a reducir la irritación y el enrojecimiento después de la depilación."
@@ -102,7 +102,7 @@
       },
       "subcategory": "CERA DEPILAR",
       "brand": "GLAM BEAUTY",
-      "publicPrice": 1.8,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/2313-ln8412.jpg",
       "shortDescription": "La Cera para Depilar Chocolate Glam Beauty es un producto cosmético diseñado para eliminar el vello no deseado de manera eficaz y delicada. Su nombre sugiere una experiencia sensorial agradable, ya que está formulada con aroma a chocolate, lo que puede hacer que el proceso de depilación sea más placentero."
@@ -118,7 +118,7 @@
       },
       "subcategory": "CERA DEPILAR",
       "brand": "GLAM BEAUTY",
-      "publicPrice": 1.8,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/5737-ln8412.jpg",
       "shortDescription": "La Cera para Depilar Chocolate Glam Beauty es un producto cosmético diseñado para eliminar el vello no deseado de manera eficaz y delicada. Su nombre sugiere una experiencia sensorial agradable, ya que está formulada con aroma a chocolate, lo que puede hacer que el proceso de depilación sea más placentero."
@@ -134,7 +134,7 @@
       },
       "subcategory": "CERA DEPILAR",
       "brand": "GLAM BEAUTY",
-      "publicPrice": 1.8,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/glam-beauty/3439-ln-1143-2.jpg",
       "shortDescription": "La Cera Para Depilar Lavanda de Glam Beauty es un producto diseñado para facilitar el proceso de depilación. Viene en una presentación de 100 g y está enriquecida con lavanda, lo que le proporciona un aroma agradable y relajante."
@@ -150,7 +150,7 @@
       },
       "subcategory": "EXFOLIANTE",
       "brand": "MOLLIE",
-      "publicPrice": 11.1,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mollie/3141-6561.jpg",
       "shortDescription": "Contiene gránulos de piedra pómez que limpian y eliminan las células muertas de manos y cuerpo.."
@@ -166,7 +166,7 @@
       },
       "subcategory": "EXFOLIANTE",
       "brand": "MOLLIE",
-      "publicPrice": 2.35,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-4fe21e7643331a3b.jpg",
       "shortDescription": null
@@ -182,7 +182,7 @@
       },
       "subcategory": "EXFOLIANTE",
       "brand": "MOLLIE",
-      "publicPrice": 3.3,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-0050b15254d66b09.jpg",
       "shortDescription": null
@@ -198,7 +198,7 @@
       },
       "subcategory": "EXFOLIANTE",
       "brand": "MOLLIE",
-      "publicPrice": 13.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mollie/804-6572.jpg",
       "shortDescription": "Contiene gránulos de piedra pomez que logran una perfecta exfoliación de los pies removiendo las células muertas, el mentol brinda relajación y frescura que alivia el cansancio.."
@@ -214,7 +214,7 @@
       },
       "subcategory": "CREMA FACIAL",
       "brand": "NIVEA",
-      "publicPrice": 9.2,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-37314efb1bb18516.jpg",
       "shortDescription": null
@@ -230,7 +230,7 @@
       },
       "subcategory": "CREMA FACIAL",
       "brand": "NIVEA",
-      "publicPrice": 2.3,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d71ff75452b5e0cc.jpg",
       "shortDescription": null
@@ -246,7 +246,7 @@
       },
       "subcategory": "EXFOLIANTE",
       "brand": "BIOTANIK",
-      "publicPrice": 5.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-19e782ecebc244b1.jpg",
       "shortDescription": null
@@ -262,7 +262,7 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": null,
-      "publicPrice": 59.9,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/9958-ds154.jpg",
       "shortDescription": "El Masajeador Ocular Eléctrico con Tres Luces Led es un dispositivo diseñado para brindar un cuidado especial al contorno de ojos. Su tecnología combina masaje eléctrico con luces LED para una experiencia facial completa. Masaje eléctrico que ayuda a relajar la zona ocular. Tres luces LED que contribuyen al cuidado facial y mejoran la apariencia del contorno de ojos. Diseño ergonómico para un uso cómodo y seguro. Ideal para complementar tu rutina diaria de skincare y belleza facial. Utiliza este masajeador para potenciar el bienestar y la frescura de tu mirada, integrándolo fácilmente en tu cuidado diario."
@@ -278,7 +278,7 @@
       },
       "subcategory": "OLLA DE CERA",
       "brand": "GLAM NAILS",
-      "publicPrice": 12,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/7043-4081app.jpg",
       "shortDescription": "Calentador profesional ideal para cera depilatoria, con calentamiento rápido y temperatura regulable. Mantiene la cera a la consistencia perfecta para una aplicación uniforme y segura. Diseño práctico y resistente, ideal para uso en casa o profesional."
@@ -294,7 +294,7 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": "ZZAM",
-      "publicPrice": 4.9,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dmujeres/zzam/3730-zz241.jpg",
       "shortDescription": "Rollo de 50 metros de papel para depilación con cera. Cortes a la medida deseada. Higiénico y desechable. Conoce más sobre 5 Hábitos que descuidamos de nuestra piel"
@@ -310,7 +310,7 @@
       },
       "subcategory": "EXFOLIANTE",
       "brand": "THE FRUIT COMPANY",
-      "publicPrice": 9,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-b07408a362149d5b.jpg",
       "shortDescription": null
@@ -326,7 +326,7 @@
       },
       "subcategory": "EXFOLIANTE",
       "brand": "THE FRUIT COMPANY",
-      "publicPrice": 9,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d116e158294210ee.jpg",
       "shortDescription": null
@@ -342,7 +342,7 @@
       },
       "subcategory": "JABON LIQUIDO",
       "brand": "THE FRUIT COMPANY",
-      "publicPrice": 6.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d5db0009dbdb7485.jpg",
       "shortDescription": null
@@ -358,7 +358,7 @@
       },
       "subcategory": "GEL DE CUERPO",
       "brand": "THE FRUIT COMPANY",
-      "publicPrice": 6.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-46c9508b555a57e9.jpg",
       "shortDescription": null
@@ -374,7 +374,7 @@
       },
       "subcategory": "CREMA DE CUERPO",
       "brand": "THE FRUIT COMPANY",
-      "publicPrice": 9.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-dadcc4c793a1a6cd.jpg",
       "shortDescription": null
@@ -390,7 +390,7 @@
       },
       "subcategory": "CREMA DE CUERPO",
       "brand": "THE FRUIT COMPANY",
-      "publicPrice": 9.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-03674394c114bf7f.jpg",
       "shortDescription": null
@@ -409,7 +409,7 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": null,
-      "publicPrice": 98,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-9da3cedcd012bce2.jpg",
       "shortDescription": null
@@ -425,7 +425,7 @@
       },
       "subcategory": "EXFOLIANTE",
       "brand": "THE FRUIT COMPANY",
-      "publicPrice": 9,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-b07408a362149d5b.jpg",
       "shortDescription": null
@@ -441,7 +441,7 @@
       },
       "subcategory": "GEL DE CUERPO",
       "brand": "THE FRUIT COMPANY",
-      "publicPrice": 6.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-46c9508b555a57e9.jpg",
       "shortDescription": null
@@ -457,7 +457,7 @@
       },
       "subcategory": "JABON LIQUIDO",
       "brand": "THE FRUIT COMPANY",
-      "publicPrice": 6.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d5db0009dbdb7485.jpg",
       "shortDescription": null
@@ -473,7 +473,7 @@
       },
       "subcategory": "CREMA DE CUERPO",
       "brand": "THE FRUIT COMPANY",
-      "publicPrice": 9.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-03674394c114bf7f.jpg",
       "shortDescription": null
@@ -489,7 +489,7 @@
       },
       "subcategory": "CREMA DE CUERPO",
       "brand": "THE FRUIT COMPANY",
-      "publicPrice": 9.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-dadcc4c793a1a6cd.jpg",
       "shortDescription": null
@@ -505,7 +505,7 @@
       },
       "subcategory": "EXFOLIANTE",
       "brand": "THE FRUIT COMPANY",
-      "publicPrice": 9,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d116e158294210ee.jpg",
       "shortDescription": null
@@ -521,11 +521,11 @@
       },
       "subcategory": "EXFOLIANTE",
       "brand": "MOLLIE",
-      "publicPrice": 2.35,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-4fe21e7643331a3b.jpg",
       "shortDescription": null
     }
   ],
-  "fetchedAt": "2026-09-17T19:06:20.237Z"
+  "fetchedAt": "2026-10-05T16:12:33.268Z"
 }

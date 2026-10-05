@@ -47,7 +47,7 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": "BEAUTY CREATIONS",
-      "publicPrice": 6.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/beauty-creations/7982-bcs.jpg",
       "shortDescription": "Limpiador de brochas en spray que elimina residuos de maquillaje, aceites y bacterias en segundos. Su fórmula de secado rápido permite limpiar las cerdas sin dañarlas, prolongando la vida útil de tus herramientas."
@@ -63,7 +63,7 @@
       },
       "subcategory": "CREMA FACIAL",
       "brand": "BYPHASSE",
-      "publicPrice": 9.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-a03a77ab273642fa.jpg",
       "shortDescription": null
@@ -79,7 +79,7 @@
       },
       "subcategory": "CREMA FACIAL",
       "brand": "BYPHASSE",
-      "publicPrice": 9.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-25ea617ecdce26dc.jpg",
       "shortDescription": null
@@ -95,7 +95,7 @@
       },
       "subcategory": "CREMA FACIAL",
       "brand": "BYPHASSE",
-      "publicPrice": 9.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-acf490cd0fdb2b07.jpg",
       "shortDescription": null
@@ -111,7 +111,7 @@
       },
       "subcategory": "CREMA FACIAL",
       "brand": "BYPHASSE",
-      "publicPrice": 9.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-609bfa20ab7b5df0.jpg",
       "shortDescription": null
@@ -127,7 +127,7 @@
       },
       "subcategory": "DESMAQUILLANTE",
       "brand": "BIOAQUA",
-      "publicPrice": 1.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-ceb1d35948468eee.jpg",
       "shortDescription": null
@@ -143,7 +143,7 @@
       },
       "subcategory": "CREMA FACIAL",
       "brand": "CLANS",
-      "publicPrice": 3.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-59d8e670c38bfdd9.jpg",
       "shortDescription": null
@@ -159,7 +159,7 @@
       },
       "subcategory": "CREMA FACIAL",
       "brand": "NIVEA",
-      "publicPrice": 6.35,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-5385b2c31a6bbba7.jpg",
       "shortDescription": null
@@ -175,7 +175,7 @@
       },
       "subcategory": "CREMA FACIAL",
       "brand": "NIVEA",
-      "publicPrice": 5.9,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-eccfa25ea9db4e73.jpg",
       "shortDescription": null
@@ -191,7 +191,7 @@
       },
       "subcategory": "CREMA FACIAL",
       "brand": "NIVEA",
-      "publicPrice": 10.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-f2b15e2595cba2b8.jpg",
       "shortDescription": null
@@ -207,7 +207,7 @@
       },
       "subcategory": "DESMAQUILLANTE",
       "brand": "GLAM BEAUTY",
-      "publicPrice": 2.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/glam-beauty/7053-vnc945.jpg",
       "shortDescription": "Los discos desmaquillantes GLAM BEAUTY son ideales para una limpieza facial diaria, ofreciendo suavidad y eficacia en cada uso.. Presentación de 200 unidades para mayor duración.. Material suave y delicado con la piel.. Perfectos para remover maquillaje y limpiar impurezas.. Fáciles de usar y desechables.. Recomendados para todo tipo de piel, estos discos facilitan tu rutina de belleza diaria, manteniendo tu piel limpia y fresca.."
@@ -223,7 +223,7 @@
       },
       "subcategory": "CERA DEPILATORIA",
       "brand": "G9",
-      "publicPrice": 16.8,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-5584c930d2a08095.jpg",
       "shortDescription": null
@@ -239,7 +239,7 @@
       },
       "subcategory": "KIT",
       "brand": "ZZAM",
-      "publicPrice": 1.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dmujeres/zzam/9340-zz253.jpg",
       "shortDescription": "El Set de Cuencos Plásticos para Mascarillas ZZAM te permite disfrutar de una experiencia de spa en casa de forma práctica y eficiente. Incluye 3 cuencos resistentes y fáciles de limpiar, ideales para mezclar y aplicar tus mascarillas faciales favoritas. Con su diseño ergonómico, son fáciles de sostener y manipular, y te ayudan a mantener tus productos de belleza organizados e higiénicos. Ya sea que seas un amante del cuidado de la piel, un profesional de spa o simplemente buscas un regalo práctico, el Set de Cuencos Plásticos para Mascarillas ZZAM es la mejor opción para ti."
@@ -255,7 +255,7 @@
       },
       "subcategory": "KIT",
       "brand": "GLAM BEAUTY",
-      "publicPrice": 2.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso/glam-beauty/8408-vnc940.jpg",
       "shortDescription": "Set de mascarillas faciales de alta calidad que brindan hidratación, nutrición y luminosidad, adaptándose a diferentes necesidades de la piel."
@@ -271,7 +271,7 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": null,
-      "publicPrice": 12.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-37a7c4d217f7a0ea.jpg",
       "shortDescription": null
@@ -287,7 +287,7 @@
       },
       "subcategory": "MASCARILLA",
       "brand": "BIOAQUA",
-      "publicPrice": 0.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d0fdf632f4b2ac8e.jpg",
       "shortDescription": null
@@ -303,7 +303,7 @@
       },
       "subcategory": "AGUA DE ROSAS",
       "brand": "GLAM BEAUTY",
-      "publicPrice": 1,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-5db7fe4bb656a796.jpg",
       "shortDescription": null
@@ -319,7 +319,7 @@
       },
       "subcategory": "PESTAÑAS",
       "brand": "MIA SECRET",
-      "publicPrice": 2.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/mia-secret/3538-el-747m.jpg",
       "shortDescription": null
@@ -335,7 +335,7 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": "GLAM BEAUTY",
-      "publicPrice": 1.6,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/product-4a248b8c-0f433dc8d2a0e60f.png",
       "shortDescription": "Accesorio facial de jade para rutinas de belleza y cuidado personal."
@@ -351,7 +351,7 @@
       },
       "subcategory": "PROTECTOR SOLAR",
       "brand": "BYPHASSE",
-      "publicPrice": 14,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-e30db26fde888f84.jpg",
       "shortDescription": null
@@ -367,7 +367,7 @@
       },
       "subcategory": "SERUM",
       "brand": "CLANS",
-      "publicPrice": 3,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-1489df6fab774402.jpg",
       "shortDescription": null
@@ -383,7 +383,7 @@
       },
       "subcategory": "SERUM",
       "brand": "THE FRUIT LAB",
-      "publicPrice": 25.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-1ee4851fd75ac512.jpg",
       "shortDescription": null
@@ -399,7 +399,7 @@
       },
       "subcategory": "SERUM",
       "brand": "THE FRUIT LAB",
-      "publicPrice": 25.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-f3f03bb6caa6a4f4.jpg",
       "shortDescription": null
@@ -415,7 +415,7 @@
       },
       "subcategory": "SERUM",
       "brand": "THE FRUIT LAB",
-      "publicPrice": 17.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-3efb09e73ee70c99.jpg",
       "shortDescription": null
@@ -434,7 +434,7 @@
       },
       "subcategory": "DESMAQUILLANTE",
       "brand": "BIOAQUA",
-      "publicPrice": 1.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-ceb1d35948468eee.jpg",
       "shortDescription": null
@@ -450,7 +450,7 @@
       },
       "subcategory": "MASCARILLA",
       "brand": "BIOAQUA",
-      "publicPrice": 0.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d0fdf632f4b2ac8e.jpg",
       "shortDescription": null
@@ -466,7 +466,7 @@
       },
       "subcategory": "SERUM",
       "brand": "THE FRUIT LAB",
-      "publicPrice": 17.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-3efb09e73ee70c99.jpg",
       "shortDescription": null
@@ -482,7 +482,7 @@
       },
       "subcategory": "SERUM",
       "brand": "THE FRUIT LAB",
-      "publicPrice": 25.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-1ee4851fd75ac512.jpg",
       "shortDescription": null
@@ -498,7 +498,7 @@
       },
       "subcategory": "SERUM",
       "brand": "THE FRUIT LAB",
-      "publicPrice": 25.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-f3f03bb6caa6a4f4.jpg",
       "shortDescription": null
@@ -514,7 +514,7 @@
       },
       "subcategory": "SERUM",
       "brand": "THE FRUIT LAB",
-      "publicPrice": 17.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-9e14703d65d0ee94.jpg",
       "shortDescription": null
@@ -530,7 +530,7 @@
       },
       "subcategory": "CREMA FACIAL",
       "brand": "BYPHASSE",
-      "publicPrice": 9.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-acf490cd0fdb2b07.jpg",
       "shortDescription": null
@@ -546,11 +546,11 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": null,
-      "publicPrice": 12.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-37a7c4d217f7a0ea.jpg",
       "shortDescription": null
     }
   ],
-  "fetchedAt": "2026-09-17T19:06:20.237Z"
+  "fetchedAt": "2026-10-05T16:12:33.268Z"
 }

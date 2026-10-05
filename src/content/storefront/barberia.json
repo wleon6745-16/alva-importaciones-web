@@ -50,7 +50,7 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": "WAHL",
-      "publicPrice": 4.8,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-5d81ec53a0795910.jpg",
       "shortDescription": null
@@ -66,7 +66,7 @@
       },
       "subcategory": "BARBERIA",
       "brand": "ROLDA",
-      "publicPrice": 5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-8974b7a2987cc4e3.jpg",
       "shortDescription": null
@@ -82,7 +82,7 @@
       },
       "subcategory": "POLVO TEXTURIZADOR",
       "brand": "BANDIDO",
-      "publicPrice": 7.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-e253bdd88f007270.jpg",
       "shortDescription": null
@@ -98,7 +98,7 @@
       },
       "subcategory": "BROCHA PARA CABELLO",
       "brand": null,
-      "publicPrice": 5.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d9d25c15f0fa14e7.jpg",
       "shortDescription": null
@@ -114,7 +114,7 @@
       },
       "subcategory": "ALZAS",
       "brand": "STAR HAIR",
-      "publicPrice": 1.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/10497-ym591.jpg",
       "shortDescription": "La Brocha Barber Pequeña STAR TOOLS YM591 es ideal para profesionales y entusiastas del cuidado de la barba que buscan precisión y comodidad en cada uso. Tamaño compacto: facilita el manejo y el detalle en el afeitado y arreglo de la barba. Diseño profesional: pensado para un uso eficiente en barberías y en el hogar. Materiales de calidad: garantizan durabilidad y un tacto suave para la piel. Perfecta para aplicar productos de afeitado y dar un acabado limpio y cuidado. Recomendamos su uso para mantener la barba con un aspecto impecable y profesional."
@@ -130,7 +130,7 @@
       },
       "subcategory": "TALQUERA",
       "brand": "STAR HAIR",
-      "publicPrice": 2.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/5724-mf038.jpg",
       "shortDescription": "La Brocha para Talco STAR TOOLS es un accesorio esencial para profesionales de la barbería y el cuidado personal. Diseñada para aplicar talco de manera uniforme y cómoda, facilita la preparación y el acabado en cada servicio. Aplicación precisa: permite distribuir el talco de forma homogénea. Diseño ergonómico: facilita el manejo durante su uso. Materiales resistentes: garantizan durabilidad y buen desempeño. Ideal para barberías: complemento perfecto para sacudir el cuello y mantener la limpieza. Recomendada para profesionales y entusiastas que buscan calidad y eficiencia en sus herramientas de cuidado personal."
@@ -146,7 +146,7 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": null,
-      "publicPrice": 9.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-aa8e400455975eae.jpg",
       "shortDescription": null
@@ -162,7 +162,7 @@
       },
       "subcategory": "CAPA DE BARBERO",
       "brand": null,
-      "publicPrice": 3.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-b49da5b76aaf8772.jpg",
       "shortDescription": null
@@ -178,7 +178,7 @@
       },
       "subcategory": "CAPA DE BARBERO",
       "brand": null,
-      "publicPrice": 3.5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-fd9ef73c93360cdc.jpg",
       "shortDescription": null
@@ -194,7 +194,7 @@
       },
       "subcategory": "CAPA DE BARBERO",
       "brand": null,
-      "publicPrice": 3,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-a30f1872c5dc47ec.jpg",
       "shortDescription": null
@@ -210,7 +210,7 @@
       },
       "subcategory": "LAVACABEZA",
       "brand": "DOMPEL",
-      "publicPrice": 280,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/11188.jpeg",
       "shortDescription": null
@@ -226,7 +226,7 @@
       },
       "subcategory": "LAVACABEZA",
       "brand": "DOMPEL",
-      "publicPrice": 180,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/furniture-catalog/11189.jpeg",
       "shortDescription": null
@@ -242,7 +242,7 @@
       },
       "subcategory": "GEL DE AFEITAR",
       "brand": "GUMMY",
-      "publicPrice": 7.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-ce7236abced6e06f.jpg",
       "shortDescription": null
@@ -258,7 +258,7 @@
       },
       "subcategory": "BARBERIA",
       "brand": "OSSION",
-      "publicPrice": 6.2,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-951cc727b9889490.jpg",
       "shortDescription": null
@@ -274,7 +274,7 @@
       },
       "subcategory": "MAQUINA DE CORTAR CABELLO",
       "brand": "KEIME",
-      "publicPrice": 100,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-319abb6a67420e79.jpg",
       "shortDescription": null
@@ -290,7 +290,7 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": null,
-      "publicPrice": 68,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-1c2d0151fc5732e3.jpg",
       "shortDescription": null
@@ -306,7 +306,7 @@
       },
       "subcategory": "MAQUINA DE CORTAR CABELLO",
       "brand": "KEIME",
-      "publicPrice": 75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-d0116be8edc6a583.jpg",
       "shortDescription": null
@@ -322,7 +322,7 @@
       },
       "subcategory": "MAQUINA DE CORTAR CABELLO",
       "brand": "KEIME",
-      "publicPrice": 25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-312081e0ff31d551.jpg",
       "shortDescription": null
@@ -338,7 +338,7 @@
       },
       "subcategory": "MAQUINA DE CORTAR CABELLO",
       "brand": "KEIME",
-      "publicPrice": 27,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-42890ab90cb9604e.jpg",
       "shortDescription": null
@@ -354,7 +354,7 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": "WAHL",
-      "publicPrice": 140.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-93df1678322cbe3b.jpg",
       "shortDescription": null
@@ -370,7 +370,7 @@
       },
       "subcategory": "NAVAJA",
       "brand": "STAR HAIR",
-      "publicPrice": 2.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/8724-skv842.jpg",
       "shortDescription": "La Navaja 842 de Star Tool es una herramienta esencial para trabajos de barbería y estilismo, ideal para realizar cortes precisos, desvanecidos y detalles definidos. Su diseño ergonómico permite un manejo cómodo y seguro, facilitando el control durante cada uso. Fabricada con materiales resistentes, ofrece durabilidad y un rendimiento confiable en el uso diario. Es compatible con cuchillas desechables, lo que garantiza higiene y practicidad en cada servicio. Perfecta para barberos profesionales y uso personal, es una opción versátil para lograr acabados limpios y profesionales."
@@ -386,7 +386,7 @@
       },
       "subcategory": "NAVAJA",
       "brand": "STAR HAIR",
-      "publicPrice": 1.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dipaso-full/3563-xf65.jpg",
       "shortDescription": "Destaca por su diseño robusto y funcional- ofreciendo un rendimiento excepcional en diversas aplicaciones. Fabricada con acero inoxidable de alta calidad- garantiza cortes limpios y duraderos. Su hoja afilada es perfecta para trabajos de precisión en diferentes materiales."
@@ -402,7 +402,7 @@
       },
       "subcategory": "PEINILLA",
       "brand": "ZZAM",
-      "publicPrice": 2,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dmujeres/zzam/7963-zz160bb.jpg",
       "shortDescription": "Este peine de color negro es una herramienta esencial para cualquier persona que se preocupe por su cabello. Hecho con materiales de alta calidad, este peine resistente es duradero y está diseñado para resistir el uso diario. Con sus dientes suavemente redondeados, este peine negro desenreda el cabello sin causar daño ni frizz. Puede usarse en cabello húmedo o seco y es adecuado para todos los tipos y longitudes de cabello."
@@ -418,7 +418,7 @@
       },
       "subcategory": "PEINILLA",
       "brand": "ZZAM",
-      "publicPrice": 1.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/product-images/alva/dmujeres/zzam/7965-zz160cb.jpg",
       "shortDescription": "Este peine de color negro es una herramienta esencial para cualquier persona que se preocupe por su cabello. Hecho con materiales de alta calidad, este peine resistente es duradero y está diseñado para resistir el uso diario. Con sus dientes suavemente redondeados, este peine negro desenreda el cabello sin causar daño ni frizz. Puede usarse en cabello húmedo o seco y es adecuado para todos los tipos y longitudes de cabello."
@@ -437,7 +437,7 @@
       },
       "subcategory": "ACCESORIOS C",
       "brand": null,
-      "publicPrice": 68,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-1c2d0151fc5732e3.jpg",
       "shortDescription": null
@@ -453,7 +453,7 @@
       },
       "subcategory": "GEL DE AFEITAR",
       "brand": "GUMMY",
-      "publicPrice": 7.75,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-ce7236abced6e06f.jpg",
       "shortDescription": null
@@ -469,7 +469,7 @@
       },
       "subcategory": "POLVO TEXTURIZADOR",
       "brand": "BANDIDO",
-      "publicPrice": 7.25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-e253bdd88f007270.jpg",
       "shortDescription": null
@@ -485,7 +485,7 @@
       },
       "subcategory": "TALCO",
       "brand": "OSSION",
-      "publicPrice": 8.15,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-e65631a87fd94936.jpg",
       "shortDescription": null
@@ -501,7 +501,7 @@
       },
       "subcategory": "BARBERIA",
       "brand": "OSSION",
-      "publicPrice": 6.2,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-951cc727b9889490.jpg",
       "shortDescription": null
@@ -517,7 +517,7 @@
       },
       "subcategory": "BARBERIA",
       "brand": "ROLDA",
-      "publicPrice": 5,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-8974b7a2987cc4e3.jpg",
       "shortDescription": null
@@ -533,7 +533,7 @@
       },
       "subcategory": "MAQUINA DE CORTAR CABELLO",
       "brand": "KEIME",
-      "publicPrice": 25,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-312081e0ff31d551.jpg",
       "shortDescription": null
@@ -549,11 +549,11 @@
       },
       "subcategory": "MAQUINA DE CORTAR CABELLO",
       "brand": "KEIME",
-      "publicPrice": 27,
+      "publicPrice": null,
       "currency": "USD",
       "imageUrl": "https://api.omviqa.com/tenant-assets/15ef872a-dda7-4271-a36e-120aaf3e48b1/telegram-42890ab90cb9604e.jpg",
       "shortDescription": null
     }
   ],
-  "fetchedAt": "2026-09-17T19:06:20.237Z"
+  "fetchedAt": "2026-10-05T16:12:33.268Z"
 }
