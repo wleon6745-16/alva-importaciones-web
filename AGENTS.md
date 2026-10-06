@@ -38,6 +38,26 @@ Se gestiona con `astro dev stop`, `astro dev status`, `astro dev logs`.
 explícitamente. Las rutas de preview de Omviqa viven bajo `/omviqa-preview/*`
 y no reemplazan `/decap-admin` ni `alvaimportaciones.com/admin` sin aprobación.
 
+## Dónde se trabaja — ramas
+
+**La rama publicada es `feature/alva-telegram-catalog`.** De ahí sale el sitio
+que está en producción en Cloudflare Workers.
+
+**`master` está meses atrás.** Publicar o ramificar desde ahí retrocede el
+sitio entero: se pierden el catálogo desde Telegram, los destacados por
+categoría, las promociones editables desde Omviqa y el widget actual del
+asistente. Un PR fusionado a `master` no cambia nada en vivo.
+
+Antes de tocar nada:
+
+```bash
+git fetch origin && git checkout feature/alva-telegram-catalog && git pull --ff-only
+```
+
+Publicar es `npm run build` con `PUBLIC_STOREFRONT_API_URL=https://api.omviqa.com`
+y `npx wrangler deploy`. El `prebuild` regenera `src/content/storefront/*.json`
+contra la API: esos ficheros cambian en cada build y son regenerables.
+
 ## Reglas
 
 - **SACC es la fuente de verdad operativa de ALVA y no se modifica.** Precio,
