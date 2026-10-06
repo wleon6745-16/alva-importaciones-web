@@ -53,6 +53,11 @@ interface Stored {
   visitorId: string;
   historial: Array<{ role?: string }>;
   messages: UiMessage[];
+  /**
+   * Desde cuando se piden mensajes nuevos de la asesora. Se guarda para que
+   * cerrar y volver a abrir el chat no empiece a mirar desde cero.
+   */
+  cursor?: string;
   updatedAt: number;
 }
 
@@ -501,6 +506,21 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
     const sondear = async () => {
       const visitorId = store.current.visitorId;
       if (!visitorId) return;
+      // EL RELOJ SE PONE EN MARCHA AQUI, Y ESTE ERA EL FALLO.
+      //
+      // Antes solo se ponia al descubrir que una asesora YA tenia la
+      // conversacion, cosa que unicamente pasa si el cliente escribe DESPUES
+      // de que la tomen. En el camino normal --el cliente pide una asesora,
+      // el asistente se despide, la asesora responde-- el cliente no vuelve a
+      // escribir, asi que el reloj no se ponia nunca; y sin `desde` el
+      // servidor no devuelve nada, a proposito. El sondeo preguntaba cada
+      // siete segundos y siempre por nada.
+      //
+      // Un minuto hacia atras, para no perder lo que la asesora escriba justo
+      // mientras carga la pagina.
+      if (!cursorRef.current) {
+        cursorRef.current = store.current.cursor ?? new Date(Date.now() - 60_000).toISOString();
+      }
       const url = new URL(endpoint.replace(/\/chat$/, "/mensajes"));
       url.searchParams.set("visitorId", visitorId);
       if (cursorRef.current) url.searchParams.set("desde", cursorRef.current);
@@ -516,6 +536,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
         const nuevos = Array.isArray(data.mensajes) ? data.mensajes : [];
         if (nuevos.length === 0) return;
         cursorRef.current = nuevos[nuevos.length - 1].fecha;
+        persist({ cursor: cursorRef.current });
         setMessages((prev) => {
           const conocidos = new Set(prev.map((m) => m.id));
           const entrantes: UiMessage[] = nuevos
