@@ -633,6 +633,12 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
         const respuesta = typeof data.respuesta === "string" && data.respuesta.trim() ? data.respuesta : null;
         if (!respuesta) throw Object.assign(new Error("empty"), { status: 500 });
 
+        // Vuelve a contestar el asistente: puede ser porque la asesora
+        // devolvio la conversacion o porque llevaba demasiado sin escribir.
+        // En los dos casos deja de ser cierto que atiende una persona, y el
+        // propio texto de la respuesta se lo explica al cliente.
+        setAtendidaPorPersona(false);
+
         const botMsg: UiMessage = { id: uuid(), role: "assistant", text: respuesta, images: onlyHttps(data.imagenes), handoff: asksForAdvisor(text), note: quotaNote(data.aviso?.restantes) };
         const historial = Array.isArray(data.historial) ? (data.historial as Array<{ role?: string }>) : store.current.historial;
         setMessages((prev) => {
@@ -880,6 +886,16 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
             </div>
           )}
         </div>
+
+        {atendidaPorPersona && (
+          // CONTEXTO MIENTRAS DURE, no un aviso suelto. El mensaje de "te
+          // atiende una asesora" salia una vez y se quedaba arriba: si el
+          // cliente escribia tres mensajes mas, los veia irse al vacio sin
+          // saber si seguian llegando a alguien.
+          <p className="aa-estado-asesora" role="status">
+            Te atiende una asesora. Lo que escribas le llega directamente.
+          </p>
+        )}
 
         <form className="aa-form" onSubmit={onSubmit}>
           <label className="aa-sr" htmlFor="aa-input">
