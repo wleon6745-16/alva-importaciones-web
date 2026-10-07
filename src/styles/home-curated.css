@@ -1,0 +1,60 @@
+/* Inicio: pestanas de categoria para las fotos curadas (HomeCuratedByCategory). CSS propio en
+   vez de utilidades de Tailwind: el proyecto compila con una lista blanca manual (ver global.css)
+   y las clases nuevas desaparecerian sin avisar. */
+
+.hc-root { padding-top: 3.5rem; }
+
+.hc-bar { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
+.hc-eyebrow {
+  margin: 0 0 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-primary-700, #e31c4d);
+}
+.hc-tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.35rem;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+.hc-tab {
+  flex: none;
+  border: 1px solid #e7e5e5;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--color-ink, #141414);
+  padding: 0.5rem 1.1rem;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+.hc-tab:hover { border-color: var(--color-primary-800, #ce113b); color: var(--color-primary-800, #ce113b); }
+.hc-tab-on { border-color: var(--color-primary-800, #ce113b); background: var(--color-primary-800, #ce113b); color: #fff; }
+.hc-tab-on:hover { color: #fff; }
+.hc-tab:focus-visible, .hc-more-link:focus-visible { outline: 2px solid #141414; outline-offset: 2px; }
+
+.hc-more { padding: 0 1.5rem 3.5rem; text-align: center; }
+.hc-more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  background: var(--color-primary-800, #ce113b);
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.hc-more-link:hover { background: var(--color-primary-700, #e31c4d); transform: scale(1.04); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hc-tab, .hc-more-link { transition: none; }
+  .hc-more-link:hover { transform: none; }
+}

@@ -9,7 +9,7 @@ import PromoShowcase from "../components/PromoShowcase.astro";
 import TrustSection from "../components/TrustSection.astro";
 import FeatureStrip, { type FeatureItem } from "../components/FeatureStrip.astro";
 import OmviqaHome from "../components/OmviqaHome.astro";
-import CategoryHighlights from "../components/CategoryHighlights.tsx";
+import HomeCuratedByCategory from "../components/HomeCuratedByCategory.tsx";
 import { siteConfig } from "../lib/site-config";
 import { categories as categoryMeta } from "../lib/categories";
 import { categoryImages } from "../lib/category-images";
@@ -45,11 +45,31 @@ const businessStrengths: FeatureItem[] = [
 const omviqaHome = await getOmviqaHome();
 // Solo hace falta para el Home estatico: el de Omviqa trae las suyas.
 const newProducts = omviqaHome ? [] : await getNewProducts(NEW_PRODUCTS_LIMIT);
-// Destacados de muebles del Home estatico: misma instantanea real (Storefront
-// API, via prebuild) que usa /productos/muebles -- nunca precios escritos a
-// mano aqui (ver AGENTS.md: precio/stock/identidad de producto son de SACC
-// via Omviqa).
-const storefrontEntry = omviqaHome ? null : await getEntry("storefrontCatalog", "muebles");
+// Fotos curadas del canal de Telegram, cada una en su categoria: misma instantanea real
+// (Storefront API, via prebuild) que usa /productos/<categoria> -- nunca precios escritos a
+// mano aqui (ver AGENTS.md: precio/stock/identidad de producto son de SACC via Omviqa).
+// Solo viajan los campos que pinta la tarjeta, para no inflar el HTML del Inicio.
+const CURATED_ORDER = ["unas", "capilares", "maquillaje", "facial", "muebles", "corporal", "lifting", "barberia", "accesorios"];
+const curatedEntries = omviqaHome ? [] : await Promise.all(CURATED_ORDER.map((slug) => getEntry("storefrontCatalog", slug)));
+const curatedCategories = curatedEntries
+  .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry))
+  .map((entry) => ({
+    slug: entry.data.categorySlug,
+    label: entry.data.categoryLabel,
+    items: (entry.data.highlights ?? [])
+      .filter((item) => item.imageUrl)
+      .slice(0, 8)
+      .map(({ publicProductId, code, name, slug, brand, publicPrice, imageUrl }) => ({
+        publicProductId,
+        code,
+        name,
+        slug,
+        brand,
+        publicPrice,
+        imageUrl,
+      })),
+  }))
+  .filter((category) => category.items.length > 0);
 
 // Teaser del curso: misma fuente que /cursos (Omviqa editorial, con la
 // coleccion local como respaldo) para que nunca diga un precio o duracion
@@ -182,21 +202,9 @@ const cursoImageUrl = curso && omviqaCourses ? editorialAssetUrl(curso, omviqaCo
   </section>
 
   <SectionReveal as="div" class="bg-blush-50">
-    <CategoryHighlights
-      client:load
-      apiBaseUrl={storefrontBaseUrl() ?? ""}
-      categorySlug="muebles"
-      categoryLabel="Muebles"
-      initialItems={storefrontEntry?.data.highlights ?? []}
-    />
-    <div class="-mt-6 px-6 pb-14 text-center">
-      <a
-        href="/productos/muebles"
-        class="inline-flex items-center gap-2 rounded-full bg-primary-800 px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-primary-700"
-      >
-        Ver todos los muebles →
-      </a>
-    </div>
+    {curatedCategories.length > 0 && (
+      <HomeCuratedByCategory client:visible apiBaseUrl={storefrontBaseUrl() ?? ""} categories={curatedCategories} />
+    )}
   </SectionReveal>
 
   <SectionReveal as="section" id="promociones" class="section-y px-6">
