@@ -14,16 +14,34 @@ const Tag = as;
   <slot />
 </Tag>
 
+{/* Sin JavaScript no hay observador que revele nada, y la pagina entera se
+    quedaria en blanco con el contenido ahi debajo. El contenido manda sobre
+    la animacion. */}
+<noscript>
+  <style>
+    .reveal-on-scroll { opacity: 1 !important; transform: none !important; pointer-events: auto !important; }
+  </style>
+</noscript>
+
 <style>
   .reveal-on-scroll {
     opacity: 0;
     transform: translateY(14px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    /* LO QUE NO SE VE, NO SE PULSA.
+       Mientras la seccion esta transparente sigue ocupando su sitio y sus
+       enlaces siguen respondiendo: una de estas secciones lleva 97. Si por lo
+       que sea no llega a revelarse --el observador que no dispara, la pagina
+       restaurada de la cache del navegador-- queda una franja invisible que
+       se come los clics y manda a quien pulse a cualquier parte. Con esto,
+       los clics la atraviesan hasta que de verdad se ve. */
+    pointer-events: none;
   }
 
   .reveal-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0);
+    pointer-events: auto;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -31,6 +49,7 @@ const Tag = as;
       opacity: 1;
       transform: none;
       transition: none;
+      pointer-events: auto;
     }
   }
 </style>
