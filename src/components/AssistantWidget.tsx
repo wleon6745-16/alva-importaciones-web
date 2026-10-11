@@ -539,8 +539,14 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
         persist({ cursor: cursorRef.current });
         setMessages((prev) => {
           const conocidos = new Set(prev.map((m) => m.id));
+          // Lo que el asistente contesto por el chat ya esta en pantalla, con otro id: el sondeo arranca
+          // un minuto hacia atras y lo trae de vuelta. Repetirlo duplicaba cada respuesta. Solo se
+          // admite de "asistente" lo que NO se ha mostrado; lo de la asesora siempre es nuevo.
+          const norm = (t: string) => t.replace(/\s+/g, " ").trim();
+          const yaMostrados = new Set(prev.filter((m) => m.role === "assistant").map((m) => norm(m.text)));
           const entrantes: UiMessage[] = nuevos
             .filter((m) => !conocidos.has(m.id))
+            .filter((m) => m.de === "asesora" || !yaMostrados.has(norm(m.texto)))
             .map((m) => ({ id: m.id, role: "assistant", text: m.texto, deAsesora: m.de === "asesora" }));
           if (entrantes.length === 0) return prev;
           const next = [...prev, ...entrantes];
