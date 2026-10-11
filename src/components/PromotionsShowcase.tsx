@@ -31,6 +31,12 @@ interface EditorialPromotion {
   startsAt?: string | null;
   endsAt?: string | null;
   enabled?: boolean;
+  /**
+   * Si se anuncia hasta cuándo dura. Programar una promoción y contarle al
+   * cliente su fecha de fin son dos cosas distintas: el negocio puede querer
+   * que caduque el martes sin ponerle cuenta atrás. Por defecto, no se dice.
+   */
+  showValidity?: boolean;
 }
 
 interface EditorialResponse {
@@ -64,7 +70,8 @@ export function vigentes(data: EditorialResponse, ahora = new Date()): Promotion
       body: payload.body,
       imageUrl: payload.imageAssetId ? coleccion.assets[payload.imageAssetId]?.publicUrl ?? null : null,
       imageAlt: payload.imageAlt || payload.title,
-      endsAt: payload.endsAt ?? null,
+      // La fecha solo viaja a la tarjeta si el negocio pidió anunciarla.
+      endsAt: payload.showValidity ? payload.endsAt ?? null : null,
     }));
 }
 
