@@ -68,6 +68,21 @@ export default function CatalogExplorer({
   const [error, setError] = useState(false);
   const [brands, setBrands] = useState<PublicBrandSummary[]>(initialBrands);
   const requestId = useRef(0);
+
+  // Buscador de arriba de la pagina (CategorySearchBar): llega por evento, o por una bandera de
+  // `window` si este explorador aun no se habia hidratado cuando se escribio la busqueda.
+  useEffect(() => {
+    const w = window as unknown as { __alvaCatalogSearch?: string };
+    const apply = (q: string) => {
+      w.__alvaCatalogSearch = undefined;
+      setBrand("");
+      setQuery(q);
+    };
+    if (typeof w.__alvaCatalogSearch === "string") apply(w.__alvaCatalogSearch);
+    const onSearch = (e: Event) => apply(String((e as CustomEvent<{ query?: string }>).detail?.query ?? ""));
+    window.addEventListener("alva:catalog-search", onSearch);
+    return () => window.removeEventListener("alva:catalog-search", onSearch);
+  }, []);
   const isFirstRender = useRef(true);
 
   async function loadPage(targetPage: number, replace: boolean) {

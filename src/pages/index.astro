@@ -13,6 +13,7 @@ import HomeCuratedByCategory from "../components/HomeCuratedByCategory.tsx";
 import { siteConfig } from "../lib/site-config";
 import { categories as categoryMeta } from "../lib/categories";
 import { categoryImages } from "../lib/category-images";
+import { getNavCategories } from "../lib/nav-categories";
 import { getOmviqaHome } from "../lib/omviqa-home";
 import NewProducts from "../components/NewProducts.tsx";
 import { getNewProducts, NEW_PRODUCTS_LIMIT } from "../lib/new-products";
@@ -49,6 +50,9 @@ const newProducts = omviqaHome ? [] : await getNewProducts(NEW_PRODUCTS_LIMIT);
 // (Storefront API, via prebuild) que usa /productos/<categoria> -- nunca precios escritos a
 // mano aqui (ver AGENTS.md: precio/stock/identidad de producto son de SACC via Omviqa).
 // Solo viajan los campos que pinta la tarjeta, para no inflar el HTML del Inicio.
+// Categorias reales sin foto editorial (Barberia, Corporal, Lifting...): van como enlaces bajo el
+// mosaico, sin inventarles foto.
+const extraCategories = omviqaHome ? [] : (await getNavCategories()).filter((c) => !c.curated);
 const CURATED_ORDER = ["unas", "capilares", "maquillaje", "facial", "muebles", "corporal", "lifting", "barberia", "accesorios"];
 const curatedEntries = omviqaHome ? [] : await Promise.all(CURATED_ORDER.map((slug) => getEntry("storefrontCatalog", slug)));
 const curatedCategories = curatedEntries
@@ -194,6 +198,21 @@ const cursoImageUrl = curso && omviqaCourses ? editorialAssetUrl(curso, omviqaCo
           ))
         }
       </div>
+      {
+        extraCategories.length > 0 && (
+          <p class="mt-8 text-center text-ink-muted">
+            También tenemos:{" "}
+            {extraCategories.map((category, i) => (
+              <>
+                <a href={category.href} class="font-semibold text-primary-700 hover:underline">
+                  {category.label}
+                </a>
+                {i < extraCategories.length - 1 ? " · " : ""}
+              </>
+            ))}
+          </p>
+        )
+      }
     </div>
   </SectionReveal>
 

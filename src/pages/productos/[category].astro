@@ -16,6 +16,7 @@ import SectionReveal from "../../components/SectionReveal.astro";
 import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
 import CategoryClosingCTA from "../../components/CategoryClosingCTA.astro";
 import CatalogExplorer from "../../components/CatalogExplorer.tsx";
+import CategorySearchBar from "../../components/CategorySearchBar.tsx";
 import { breadcrumbSchema } from "../../lib/structured-data";
 import { storefrontApiUrl, storefrontBaseUrl, storefrontChannelId } from "../../lib/storefront-config";
 import CategoryHighlights from "../../components/CategoryHighlights.tsx";
@@ -64,6 +65,8 @@ const breadcrumbs = breadcrumbSchema([
     />
   </section>
 
+  <CategorySearchBar client:load categorySlug={categorySlug} categoryLabel={categoryLabel} />
+
   <CategoryHighlights
     client:load
     apiBaseUrl={storefrontBaseUrl() ?? ""}
@@ -72,10 +75,10 @@ const breadcrumbs = breadcrumbSchema([
     initialItems={highlights ?? []}
   />
 
-  <SectionReveal as="section" class="px-6 py-16">
+  <SectionReveal as="section" id="catalogo" class="scroll-mt-24 px-6 py-16">
     <div class="mx-auto max-w-6xl">
       <CatalogExplorer
-        client:visible
+        client:idle
         apiBaseUrl={storefrontApiUrl}
         channelId={storefrontChannelId}
         categorySlug={categorySlug}

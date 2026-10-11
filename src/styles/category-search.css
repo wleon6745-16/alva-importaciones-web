@@ -1,0 +1,59 @@
+/* Buscador superior de categoria (CategorySearchBar). CSS propio en vez de utilidades de Tailwind:
+   el proyecto compila con una lista blanca manual (ver global.css) y las clases nuevas
+   desaparecerian sin avisar. */
+
+.cs-wrap { max-width: 44rem; margin: 0 auto; padding: 1.5rem 1.5rem 0.5rem; }
+
+.cs-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.35rem 0.35rem 1rem;
+  border: 2px solid var(--color-primary-800, #ce113b);
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(18, 18, 18, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+.cs-form:focus-within { box-shadow: 0 8px 28px rgba(206, 17, 59, 0.2); }
+
+.cs-icon { flex: none; color: var(--color-primary-800, #ce113b); }
+.cs-input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  padding: 0.6rem 0.25rem;
+  font: inherit;
+  font-size: 1rem; /* 16px: evita el zoom automatico de iOS al enfocar */
+  color: var(--color-ink, #141414);
+  outline: none;
+}
+.cs-input::placeholder { color: #8a8a93; }
+.cs-btn {
+  flex: none;
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-primary-800, #ce113b);
+  color: #fff;
+  padding: 0.65rem 1.4rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.cs-btn:hover { background: var(--color-primary-700, #e31c4d); }
+.cs-btn:focus-visible { outline: 2px solid #141414; outline-offset: 2px; }
+
+.cs-hint { margin: 0.7rem 0 0; text-align: center; font-size: 0.85rem; color: var(--color-ink-muted, #63636b); }
+.cs-link { color: var(--color-primary-800, #ce113b); font-weight: 600; text-decoration: none; }
+.cs-link:hover { text-decoration: underline; }
+.cs-link:focus-visible { outline: 2px solid #141414; outline-offset: 2px; }
+
+.cs-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+@media (max-width: 480px) {
+  .cs-wrap { padding: 1.25rem 1rem 0.25rem; }
+  .cs-btn { padding: 0.65rem 1rem; }
+}

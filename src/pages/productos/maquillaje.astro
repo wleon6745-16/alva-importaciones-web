@@ -5,6 +5,7 @@ import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
 import CategoryClosingCTA from "../../components/CategoryClosingCTA.astro";
 import ProductCardRich from "../../components/ProductCardRich.astro";
 import CatalogExplorer from "../../components/CatalogExplorer.tsx";
+import CategorySearchBar from "../../components/CategorySearchBar.tsx";
 import { breadcrumbSchema } from "../../lib/structured-data";
 import { siteConfig } from "../../lib/site-config";
 import { getProductsByCategory } from "../../lib/products";
@@ -78,6 +79,8 @@ const breadcrumbs = breadcrumbSchema([
     <WhatsAppCTA label="Consultar por WhatsApp" pulse class="mt-8" message="Hola, quisiera consultar sobre maquillaje" source="category" pageType="category" category="maquillaje" ctaLocation="hero" />
   </section>
 
+  <CategorySearchBar client:load categorySlug="maquillaje" categoryLabel="Maquillaje" />
+
   <CategoryHighlights
     client:load
     apiBaseUrl={storefrontBaseUrl() ?? ""}
@@ -114,7 +117,7 @@ const breadcrumbs = breadcrumbSchema([
 
   {
     storefrontEntry && (
-      <SectionReveal as="section" class="px-6 py-16">
+      <SectionReveal as="section" id="catalogo" class="scroll-mt-24 px-6 py-16">
         <div class="mx-auto max-w-6xl">
           <h2 class="font-display text-3xl text-primary-900">Todo el catálogo de Maquillaje</h2>
           <p class="mt-2 max-w-2xl text-ink-muted">
@@ -122,7 +125,7 @@ const breadcrumbs = breadcrumbSchema([
           </p>
           <div class="mt-8">
             <CatalogExplorer
-              client:visible
+              client:idle
               apiBaseUrl={storefrontApiUrl}
               channelId={storefrontChannelId}
               categorySlug={CATEGORY_SLUG}
