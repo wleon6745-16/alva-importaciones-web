@@ -3,65 +3,27 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import SectionReveal from "../../components/SectionReveal.astro";
 import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
 import CategoryClosingCTA from "../../components/CategoryClosingCTA.astro";
-import ProductCardRich from "../../components/ProductCardRich.astro";
 import CatalogExplorer from "../../components/CatalogExplorer.tsx";
 import CategorySearchBar from "../../components/CategorySearchBar.tsx";
 import { breadcrumbSchema } from "../../lib/structured-data";
 import { siteConfig } from "../../lib/site-config";
-import { getProductsByCategory } from "../../lib/products";
 import { getEntry } from "astro:content";
 import { storefrontApiUrl, storefrontBaseUrl, storefrontChannelId } from "../../lib/storefront-config";
 import CategoryHighlights from "../../components/CategoryHighlights.tsx";
 import { hasMoreProducts } from "../../lib/storefront-snapshot";
-import type { Product } from "../../types/product";
-import { PRECIO_OCULTO, showPrices } from "../../lib/price-visibility";
 
 const CATEGORY_SLUG = "unas";
-const products = await getProductsByCategory("unas");
 
-// Catálogo completo real (SACC vía Storefront API), aparte de la selección
-// curada de arriba -- ver src/lib/storefront-config.ts y scripts/fetch-
-// storefront-snapshot.ts. Se excluyen por código los productos que ya están
-// en la selección curada, para no mostrar la misma pieza dos veces con dos
-// tratamientos visuales distintos.
+// Catálogo real (SACC vía Storefront API) -- ver src/lib/storefront-config.ts y
+// scripts/fetch-storefront-snapshot.ts. Antes esta página tenía además tarjetas de producto escritas
+// a mano en src/content/products/unas (Esmaltes, Acrílicos, Herramientas): quedaron viejas, con
+// productos en la subcategoría equivocada, y duplicaban lo que el catálogo ya trae. Ahora la página
+// sigue el mismo patrón que el resto de categorías: destacados del canal + catálogo en vivo.
 const storefrontEntry = await getEntry("storefrontCatalog", CATEGORY_SLUG);
-const curatedCodes = new Set(products.map((p) => p.code).filter((c): c is string => Boolean(c)));
-const fullCatalogItems = (storefrontEntry?.data.firstPage ?? []).filter(
-  (item) => !item.code || !curatedCodes.has(item.code)
-);
+const fullCatalogItems = storefrontEntry?.data.firstPage ?? [];
 const fullCatalogHasMore = Boolean(
   storefrontEntry && hasMoreProducts(storefrontEntry.data)
 );
-
-const images = import.meta.glob<{ default: ImageMetadata }>(
-  "../../assets/products/unas/*.{jpg,jpeg,png,webp}",
-  { eager: true },
-);
-function imageFor(filename: string): ImageMetadata {
-  const entry = images[`../../assets/products/unas/${filename}`];
-  if (!entry) throw new Error(`Imagen no encontrada para: ${filename}`);
-  return entry.default;
-}
-
-function priceLabel(product: Product): string {
-  if (!showPrices) return PRECIO_OCULTO;
-  if (product.price === undefined) return "Consultar precio";
-  const isWhole = Number.isInteger(product.price);
-  return `$${product.price.toFixed(isWhole ? 0 : 2)}`;
-}
-
-const SUBCATEGORY_TITLES: Record<string, string> = {
-  "acrilicos-y-monomeros": "Acrílicos y monómeros",
-  esmaltes: "Esmaltes",
-  "herramientas-y-equipo": "Herramientas y equipo",
-};
-const SUBCATEGORY_ORDER = Object.keys(SUBCATEGORY_TITLES);
-
-const sections = SUBCATEGORY_ORDER.map((subcategory) => ({
-  subcategory,
-  title: SUBCATEGORY_TITLES[subcategory],
-  items: products.filter((p) => p.subcategory === subcategory),
-})).filter((section) => section.items.length > 0);
 
 const breadcrumbs = breadcrumbSchema([
   { name: "Inicio", path: "/" },
@@ -95,32 +57,6 @@ const breadcrumbs = breadcrumbSchema([
     categoryLabel="Uñas"
     initialItems={storefrontEntry?.data.highlights ?? []}
   />
-
-  {
-    sections.map((section) => (
-      <SectionReveal as="section" id={section.subcategory} class="scroll-mt-24 px-6 py-16">
-        <div class="mx-auto max-w-6xl">
-          <h2 class="font-display text-3xl text-primary-900">{section.title}</h2>
-          <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {section.items.map((item) => (
-              <ProductCardRich
-                slug={item.slug}
-                category={item.category}
-                id={item.id}
-                name={item.name}
-                priceLabel={priceLabel(item)}
-                features={item.features}
-                brand={item.brand}
-                code={item.code}
-                image={imageFor(item.image)}
-                imageAlt={item.imageAlt}
-              />
-            ))}
-          </div>
-        </div>
-      </SectionReveal>
-    ))
-  }
 
   {
     storefrontEntry && (
