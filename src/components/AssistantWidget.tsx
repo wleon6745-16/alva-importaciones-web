@@ -173,6 +173,20 @@ interface PageContext {
   nav: NavItem[];
 }
 
+// Por categoria: el termino con el que el asistente conoce esa categoria y un ejemplo concreto de lo
+// que hay en ella (subcategorias reales del catalogo). Verificado contra el asistente en produccion.
+const CATEGORY_GUIDE: Record<string, { term: string; example?: string }> = {
+  unas: { term: "uñas", example: "Muéstrame esmaltes semipermanentes" },
+  capilares: { term: "capilar", example: "Muéstrame shampoos" },
+  maquillaje: { term: "maquillaje", example: "Muéstrame labiales" },
+  facial: { term: "facial", example: "Muéstrame cremas faciales" },
+  muebles: { term: "muebles", example: "¿Tienen camillas disponibles?" },
+  accesorios: { term: "accesorios" },
+  barberia: { term: "barbería", example: "Muéstrame máquinas de cortar cabello" },
+  corporal: { term: "corporal", example: "Muéstrame ceras para depilar" },
+  lifting: { term: "lifting", example: "Muéstrame pestañas" },
+};
+
 const REOPEN_KEY = "alva.assistant.reopen";
 const TEASER_KEY = "alva.assistant.teaser";
 
@@ -200,10 +214,17 @@ function getPageContext(): PageContext {
   }
   if (seg[0] === "productos" && seg.length === 2) {
     const label = h1 || "esta categoría";
+    const guia = CATEGORY_GUIDE[seg[1]];
+    // El asistente no recibe en que categoria esta el visitante: entiende la pregunta por las palabras
+    // que trae. Por eso cada sugerencia nombra la categoria con SU termino ("capilar", "uñas") y las
+    // preguntas abiertas ("¿que me recomiendas...?") se evitan: probadas, devolvian respuestas vacias.
+    const suggestions = guia
+      ? [`¿Qué marcas de ${guia.term} tienen?`, ...(guia.example ? [guia.example] : []), "Quiero comprar al por mayor", "Quiero hablar con una asesora"]
+      : ["¿Qué marcas tienen?", "Quiero comprar al por mayor", "Quiero hablar con una asesora"];
     return {
       kind: "category",
       intro: `Estás en *${label}*. Te ayudo a elegir.`,
-      suggestions: [`¿Qué me recomiendas en ${label}?`, "¿Qué marcas tienen?", "Quiero comprar al por mayor"],
+      suggestions,
       teaser: `¿Te ayudo a elegir en ${label}?`,
       nav,
     };
