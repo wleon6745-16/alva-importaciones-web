@@ -8,6 +8,15 @@
 import { getCollection } from "astro:content";
 import { categories } from "./categories";
 
+// Texto del menu para las categorias que no estan en lib/categories.ts, escrito a partir de lo que
+// realmente hay publicado en cada una (subcategorias del catalogo). Una categoria nueva sin texto
+// aqui se muestra solo con su nombre.
+const EXTRA_DESCRIPTIONS: Record<string, string> = {
+  barberia: "Máquinas de cortar, navajas, capas y accesorios de barbería.",
+  corporal: "Ceras y cremas para depilar, exfoliantes y cremas para el cuerpo.",
+  lifting: "Lifting de pestañas, pestañas, pinzas de ceja y accesorios.",
+};
+
 export interface NavCategory {
   slug: string;
   /** Nombre corto, para el menu. */
@@ -34,7 +43,7 @@ export async function getNavCategories(): Promise<NavCategory[]> {
     .map((entry) => ({
       slug: entry.data.categorySlug,
       label: entry.data.categoryLabel,
-      description: null,
+      description: EXTRA_DESCRIPTIONS[entry.data.categorySlug] ?? null,
       href: `/productos/${entry.data.categorySlug}`,
       curated: false,
     }))
