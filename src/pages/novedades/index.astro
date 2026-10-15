@@ -1,0 +1,60 @@
+---
+// Todas las novedades (hasta 24): lo ultimo que ALVA publico como NUEVO en su canal de Telegram. El Inicio
+// solo muestra las mas recientes; esta pagina evita que las anteriores queden sin un lugar donde verse.
+// Corre en el Worker (prerender = false): una novedad nueva aparece al publicarse, sin recompilar.
+export const prerender = false;
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import WhatsAppCTA from "../../components/WhatsAppCTA.astro";
+import { getNewProducts, novedadPath, NEW_PRODUCTS_MAX } from "../../lib/new-products";
+import { breadcrumbSchema } from "../../lib/structured-data";
+
+const items = await getNewProducts(NEW_PRODUCTS_MAX);
+const breadcrumbs = breadcrumbSchema([
+  { name: "Inicio", path: "/" },
+  { name: "Novedades", path: "/novedades" },
+]);
+---
+
+<BaseLayout
+  title="Productos nuevos y recién llegados"
+  description="Lo último que llegó a Alva Importaciones, Portoviejo: productos nuevos para uñas, maquillaje, cuidado de la piel y más. Consulta precio y disponibilidad por WhatsApp."
+  path="/novedades"
+  structuredData={[breadcrumbs]}
+>
+  <section class="hero-glow px-6 py-16 text-center">
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Recién llegados</p>
+    <h1 class="mt-4 font-display text-4xl text-primary-900">Productos nuevos</h1>
+    <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-muted">
+      Lo último que llegó a nuestros locales. Toca cualquiera para ver su foto y consultarlo por WhatsApp.
+    </p>
+  </section>
+
+  <section class="px-6 py-14">
+    <div class="mx-auto max-w-6xl">
+      {items.length === 0 ? (
+        <div class="text-center">
+          <p class="text-ink-muted">Estamos actualizando las novedades. Mientras tanto, mira el catálogo completo.</p>
+          <div class="mt-6 flex flex-wrap justify-center gap-4">
+            <a href="/productos" class="inline-flex items-center gap-2 rounded-full bg-primary-800 px-6 py-3 font-semibold text-white hover:bg-primary-700">Ver catálogo</a>
+            <WhatsAppCTA label="Consultar por WhatsApp" source="new_products" pageType="new_products_index" ctaLocation="empty" />
+          </div>
+        </div>
+      ) : (
+        <ul class="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+          {items.map((item) => (
+            <li class="glass-card group flex flex-col overflow-hidden rounded-2xl shadow-md">
+              <a href={novedadPath(item)} class="flex flex-1 flex-col">
+                <div class="relative aspect-[4/5] overflow-hidden bg-white">
+                  <img src={item.imageUrl} alt={item.title} loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <span class="absolute left-3 top-3 rounded-full bg-blush-500 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">Nuevo</span>
+                </div>
+                <p class="p-4 font-display text-base leading-snug text-primary-800">{item.title}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  </section>
+</BaseLayout>

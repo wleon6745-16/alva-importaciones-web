@@ -30,6 +30,6 @@
     // el 2026-10-02: un fetch() de la misma pagina SI llegaba al Worker (200), pero la navegacion
     // normal del navegador daba 404 -- exactamente el sintoma que documenta Cloudflare para este
     // caso (ver developers.cloudflare.com/workers/static-assets/routing/worker-script/).
-    "run_worker_first": ["/productos/*/p/*"]
+    "run_worker_first": ["/productos/*/p/*", "/novedades", "/novedades/*"]
   }
 }

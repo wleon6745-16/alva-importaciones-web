@@ -1,0 +1,137 @@
+---
+// Pagina de una NOVEDAD: una publicacion NUEVO del canal de Telegram de ALVA que Omviqa no pudo enlazar a un
+// producto del catalogo (por eso no tiene precio ni codigo, y nunca se inventan). Antes la tarjeta de
+// "Productos nuevos" no llevaba a ningun lado.
+//
+// Si la novedad SI esta enlazada a un producto, se manda a la ficha de ese producto (precio y stock reales).
+//
+// Como el detalle de producto, corre en el Worker (prerender = false): una novedad nueva tiene pagina en el
+// momento en que se publica, sin recompilar el sitio.
+export const prerender = false;
+
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import WhatsAppCTA from "../../../components/WhatsAppCTA.astro";
+import { getNewProduct, getNewProducts, novedadPath, NEW_PRODUCTS_MAX } from "../../../lib/new-products";
+import { breadcrumbSchema } from "../../../lib/structured-data";
+import { siteConfig } from "../../../lib/site-config";
+
+const { id } = Astro.params;
+const item = id ? await getNewProduct(id) : null;
+
+// Enlazada a un producto real: su ficha es la pagina buena.
+if (item?.product?.category?.slug) {
+  return Astro.redirect(novedadPath(item), 301);
+}
+
+// Ver la nota de la ficha de producto: Astro.rewrite("/404") no se puede desde una ruta on-demand.
+if (!item) Astro.response.status = 404;
+
+const pageUrl = new URL(Astro.url.pathname, siteConfig.url).toString();
+const fecha = item?.postedAt
+  ? new Date(item.postedAt).toLocaleDateString("es-EC", { day: "numeric", month: "long", year: "numeric", timeZone: "America/Guayaquil" })
+  : null;
+
+const whatsappMessage = item
+  ? ["Hola, quisiera consultar sobre este producto nuevo:", `*${item.title}*`, pageUrl, "¿Lo tienen disponible, cuál es el precio y el código?"].join("\n")
+  : "";
+
+const otras = item ? (await getNewProducts(NEW_PRODUCTS_MAX)).filter((n) => n.id !== item.id && !n.product).slice(0, 4) : [];
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Inicio", path: "/" },
+  { name: "Novedades", path: "/novedades" },
+  ...(item ? [{ name: item.title, path: Astro.url.pathname }] : []),
+]);
+---
+
+<BaseLayout
+  title={item ? `${item.title} — Novedad` : "Novedad no disponible"}
+  description={
+    item
+      ? `${item.title}: recién llegado a Alva Importaciones, Portoviejo. Consulta precio y disponibilidad por WhatsApp.`
+      : "Esta novedad ya no está en la lista. Mira los productos nuevos y el catálogo completo de Alva Importaciones."
+  }
+  path={Astro.url.pathname}
+  noindex={!item}
+  structuredData={[breadcrumbs]}
+>
+  {!item && (
+    <section class="px-6 py-24 text-center">
+      <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">Novedad</p>
+      <h1 class="text-display-md mt-4 text-primary-900">Esta novedad ya no está en la lista</h1>
+      <p class="mx-auto mt-4 max-w-xl text-ink-muted">Las novedades se renuevan cada vez que llega mercadería. Mira las más recientes o escríbenos por WhatsApp.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/novedades" class="inline-flex items-center gap-2 rounded-full bg-primary-800 px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-primary-700">
+          Ver las novedades
+        </a>
+        <WhatsAppCTA label="Consultar por WhatsApp" source="new_products" pageType="new_product_not_found" ctaLocation="fallback" />
+      </div>
+    </section>
+  )}
+
+  {item && (
+    <>
+      <nav aria-label="Breadcrumb" class="px-6 pt-8 text-sm text-ink-muted">
+        <ol class="mx-auto flex max-w-5xl flex-wrap items-center gap-2">
+          <li><a href="/" class="hover:text-primary-700">Inicio</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="/novedades" class="hover:text-primary-700">Novedades</a></li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page" class="text-ink">{item.title}</li>
+        </ol>
+      </nav>
+
+      <section class="px-6 py-10">
+        <div class="mx-auto grid max-w-5xl gap-10 lg:grid-cols-2">
+          <div class="overflow-hidden rounded-[2rem] border border-blush-100 bg-white p-8 shadow-lg sm:p-10">
+            <div class="relative aspect-square overflow-hidden">
+              <img src={item.imageUrl} alt={item.title} loading="eager" class="h-full w-full object-contain" />
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-700">Recién llegado</p>
+            <h1 class="text-display-md text-primary-900">{item.title}</h1>
+            {fecha && <p class="text-sm text-ink-muted">Publicado el {fecha}</p>}
+            <p class="text-ink-muted">
+              Producto nuevo en Alva Importaciones. Escríbenos por WhatsApp y te confirmamos el precio, el código y la
+              disponibilidad al instante.
+            </p>
+            <div class="mt-2 flex flex-wrap items-center gap-4">
+              <WhatsAppCTA
+                label="Consultar por WhatsApp"
+                pulse
+                message={whatsappMessage}
+                productName={item.title}
+                source="new_product"
+                pageType="new_product"
+                ctaLocation="detail"
+              />
+              <a href="/productos" class="text-sm font-semibold text-primary-700 hover:underline">Ver el catálogo completo →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {otras.length > 0 && (
+        <section class="bg-blush-50 px-6 py-14">
+          <div class="mx-auto max-w-5xl">
+            <h2 class="font-display text-2xl text-primary-900">Otras novedades</h2>
+            <ul class="mt-8 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+              {otras.map((otra) => (
+                <li class="glass-card flex flex-col overflow-hidden rounded-2xl shadow-md">
+                  <a href={novedadPath(otra)} class="block">
+                    <div class="aspect-square overflow-hidden bg-white">
+                      <img src={otra.imageUrl} alt={otra.title} loading="lazy" class="h-full w-full object-contain" />
+                    </div>
+                    <p class="p-4 font-display text-sm leading-snug text-primary-900">{otra.title}</p>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+    </>
+  )}
+</BaseLayout>

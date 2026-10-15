@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { whatsappLink } from "../lib/site-config";
+import { novedadPath } from "../lib/new-products";
+import { productInquiryMessage } from "../lib/whatsapp-context";
 import { useShowPrices } from "../lib/use-price-visibility";
 import type { NewProductItem } from "../lib/new-products";
 
@@ -55,11 +57,11 @@ export default function NewProducts({ apiBaseUrl, initialItems, limit, eyebrow =
         <ul className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
           {items.map((item) => {
             const categoria = item.product?.category ?? null;
-            const destino = categoria ? `/productos/${categoria.slug}` : null;
+            const destino = novedadPath(item);
             const valor = showPrices ? precio(item) : null;
             return (
               <li key={item.id} className="glass-card group flex flex-col overflow-hidden rounded-2xl shadow-md">
-                <div className="relative aspect-[4/5] overflow-hidden bg-white">
+                <a href={destino} className="relative block aspect-[4/5] overflow-hidden bg-white" aria-label={`Ver ${item.title}`}>
                   <img
                     src={item.imageUrl}
                     alt={item.title}
@@ -69,18 +71,21 @@ export default function NewProducts({ apiBaseUrl, initialItems, limit, eyebrow =
                   <span className="absolute left-3 top-3 rounded-full bg-blush-500 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
                     Nuevo
                   </span>
-                </div>
+                </a>
                 <div className="flex flex-1 flex-col gap-2 p-4">
-                  {destino ? (
-                    <a href={destino} className="font-display text-base leading-snug text-primary-800 hover:text-primary-600">
-                      {item.title}
-                    </a>
-                  ) : (
-                    <p className="font-display text-base leading-snug text-primary-800">{item.title}</p>
-                  )}
+                  <a href={destino} className="font-display text-base leading-snug text-primary-800 hover:text-primary-600">
+                    {item.title}
+                  </a>
                   {valor && <p className="text-lg font-semibold text-ink" data-precio>{valor}</p>}
                   <a
-                    href={whatsappLink(`Hola, quisiera consultar sobre: ${item.title}`)}
+                    href={whatsappLink(
+                      productInquiryMessage({
+                        name: item.product?.name ?? item.title,
+                        code: item.product?.code,
+                        categoryLabel: categoria?.label,
+                        path: destino,
+                      })
+                    )}
                     target="_blank"
                     rel="noopener"
                     className="mt-auto inline-flex w-fit items-center gap-2 rounded-full bg-primary-800 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-700"
@@ -92,6 +97,11 @@ export default function NewProducts({ apiBaseUrl, initialItems, limit, eyebrow =
             );
           })}
         </ul>
+        <p className="mt-10 text-center">
+          <a href="/novedades" className="font-semibold text-primary-700 hover:underline">
+            Ver todas las novedades →
+          </a>
+        </p>
       </div>
     </section>
   );

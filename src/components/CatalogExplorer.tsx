@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import QuoteButton from "./QuoteButton";
 import { whatsappLink } from "../lib/site-config";
+import { productInquiryMessage } from "../lib/whatsapp-context";
 import { useShowPrices } from "../lib/use-price-visibility";
 
 // Filtro de marca, búsqueda y "cargar más" para el catálogo completo real
@@ -249,9 +250,7 @@ export default function CatalogExplorer({
                 </a>
                 <p className="mt-1 text-xl font-semibold text-ink" data-precio>{priceLabel(showPrices ? item.publicPrice : null)}</p>
                 <a
-                  href={whatsappLink(
-                    `Hola, quisiera consultar sobre: ${item.name}${item.code ? ` (Cód: ${item.code})` : ""}`
-                  )}
+                  href={whatsappLink(productInquiryMessage({ name: item.name, code: item.code, brand: item.brand, path: detailHref }))}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-3 inline-flex w-fit items-center gap-2 rounded-full bg-primary-800 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-primary-900/20 transition-transform duration-200 hover:scale-105 hover:bg-primary-700"

@@ -1,0 +1,41 @@
+---
+// Marca de origen en los mensajes de WhatsApp que salen del sitio.
+//
+// Quien recibe el mensaje en WhatsApp no tiene forma de saber si el cliente venia de la pagina o escribio
+// por su cuenta. Este script agrega, al abrir cualquier enlace wa.me, una ultima linea con el origen y la
+// pagina desde la que se escribio:
+//
+//     🌐 Desde alvaimportaciones.com/productos/unas
+//
+// Se hace al HACER CLIC (no al renderizar) para cubrir tambien los enlaces que se arman en el navegador
+// (catalogo, destacados, lista de cotizacion, asistente) sin tocar cada componente, y para conocer la
+// pagina real. No duplica: si el mensaje ya lleva la marca, lo deja igual.
+---
+
+<script is:inline>
+  (function () {
+    var MARCA = "🌐 Desde alvaimportaciones.com";
+    document.addEventListener(
+      "click",
+      function (event) {
+        var el = event.target;
+        var link = el && el.closest ? el.closest('a[href*="wa.me/"]') : null;
+        if (!link) return;
+        try {
+          var url = new URL(link.href);
+          var texto = url.searchParams.get("text") || "";
+          if (texto.indexOf("alvaimportaciones.com") !== -1 && texto.indexOf(MARCA) !== -1) return;
+          var ruta = location.pathname.replace(/\/+$/, "");
+          // Si el mensaje ya trae el enlace de esta misma pagina, la marca no lo repite.
+          var origen = ruta && texto.indexOf(ruta) !== -1 ? MARCA : MARCA + ruta;
+          var nuevo = (texto ? texto + "\n\n" : "") + origen;
+          // encodeURIComponent y no URLSearchParams: este usa "+" para el espacio y WhatsApp no siempre lo entiende.
+          link.href = url.origin + url.pathname + "?text=" + encodeURIComponent(nuevo);
+        } catch (e) {
+          // Un enlace raro se abre como estaba: la marca nunca debe romper un clic.
+        }
+      },
+      true
+    );
+  })();
+</script>

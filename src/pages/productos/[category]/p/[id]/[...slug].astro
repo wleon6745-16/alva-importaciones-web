@@ -22,6 +22,7 @@ import QuoteButton from "../../../../../components/QuoteButton.tsx";
 import { getStorefrontProduct } from "../../../../../lib/storefront-product";
 import { breadcrumbSchema, faqSchema, storefrontProductSchema } from "../../../../../lib/structured-data";
 import { siteConfig } from "../../../../../lib/site-config";
+import { productInquiryMessage } from "../../../../../lib/whatsapp-context";
 import { PRECIO_OCULTO, showPrices } from "../../../../../lib/price-visibility";
 import { categories } from "../../../../../lib/categories";
 import { storefrontBaseUrl } from "../../../../../lib/storefront-config";
@@ -53,7 +54,7 @@ function priceLabel(): string {
 
 const pageUrl = new URL(Astro.url.pathname, siteConfig.url).toString();
 const whatsappMessage = product
-  ? `Hola, quisiera consultar sobre: ${product.name}${product.code ? ` (Cód: ${product.code})` : ""} - ${pageUrl}`
+  ? productInquiryMessage({ name: product.name, code: product.code, brand: product.brand, categoryLabel, path: Astro.url.pathname })
   : "";
 
 const faqs = product

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import QuoteButton from "./QuoteButton";
 import { whatsappLink } from "../lib/site-config";
+import { productInquiryMessage } from "../lib/whatsapp-context";
 import { useShowPrices } from "../lib/use-price-visibility";
 
 // Destacados de cada categoria: los productos cuya foto es un anuncio del
@@ -91,7 +92,7 @@ export default function CategoryHighlights({ apiBaseUrl, categorySlug, categoryL
                   </a>
                   <p className="text-lg font-semibold text-ink" data-precio>{precio(showPrices ? item.publicPrice : null)}</p>
                   <a
-                    href={whatsappLink(`Hola, quisiera consultar sobre: ${item.name}`)}
+                    href={whatsappLink(productInquiryMessage({ name: item.name, code: item.code ?? null, brand: item.brand, path: detailHref }))}
                     target="_blank"
                     rel="noopener"
                     className="mt-auto inline-flex w-fit items-center gap-2 rounded-full bg-primary-800 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-700"

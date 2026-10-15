@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { whatsappLink } from "../lib/site-config";
+import { promotionInquiryMessage } from "../lib/whatsapp-context";
 
 // Promociones del Home, administradas desde Omviqa (Sitio web → Promociones).
 //
@@ -134,7 +135,7 @@ export default function PromotionsShowcase({ apiBaseUrl, initialItems, whatsappC
                 <p className="font-display text-base text-primary-900">{promo.title}</p>
                 <p className="flex-1 text-sm text-ink-muted">{promo.body}</p>
                 <a
-                  href={whatsappLink(`Hola, quisiera consultar sobre la promoción: ${promo.title}`)}
+                  href={whatsappLink(promotionInquiryMessage(promo.title))}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-auto inline-flex w-fit items-center gap-2 rounded-full bg-primary-800 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-700"
