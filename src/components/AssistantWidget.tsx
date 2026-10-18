@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState, type FormEvent, type KeyboardEvent, type ReactNode } from "react";
 import { trackEvent } from "../lib/analytics";
-import { readQuote, useQuote } from "../lib/quote-list";
+import { clearQuote, readQuote, useQuote } from "../lib/quote-list";
 import "../styles/assistant.css";
 
 // Asistente de Alva en la web: habla con el Web Channel de Omviqa (el mismo motor
@@ -373,9 +373,22 @@ function advisorUrl(base: string, messages: UiMessage[]): string {
   }
 }
 
-function onlyHttps(urls: unknown): string[] {
+// Las fotos de producto llegan como ruta RELATIVA al servidor de Omviqa ("/product-images/...") y solo se
+// aceptaba "https://...": se descartaban todas y el chat nunca mostraba la foto del producto elegido.
+// Se resuelven contra el servidor del asistente y se exige https.
+function resolveImages(urls: unknown, base: string): string[] {
   if (!Array.isArray(urls)) return [];
-  return urls.filter((u): u is string => typeof u === "string" && /^https:\/\//.test(u)).slice(0, 4);
+  const out: string[] = [];
+  for (const u of urls) {
+    if (typeof u !== "string") continue;
+    try {
+      const abs = new URL(u, base);
+      if (abs.protocol === "https:") out.push(abs.toString());
+    } catch {
+      // Una direccion invalida se ignora: una foto menos, no un chat roto.
+    }
+  }
+  return out.slice(0, 4);
 }
 
 function friendlyError(status: number): string {
@@ -687,7 +700,9 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
         // propio texto de la respuesta se lo explica al cliente.
         setAtendidaPorPersona(false);
 
-        const botMsg: UiMessage = { id: uuid(), role: "assistant", text: respuesta, images: onlyHttps(data.imagenes), handoff: asksForAdvisor(text), note: quotaNote(data.aviso?.restantes) };
+        const botMsg: UiMessage = { id: uuid(), role: "assistant", text: respuesta, images: resolveImages(data.imagenes, endpoint), handoff: asksForAdvisor(text), note: quotaNote(data.aviso?.restantes) };
+        // La proforma quedo creada en el sistema: la lista de cotizacion ya cumplio su funcion.
+        if (/proforma[^.]*fue creada/i.test(respuesta)) clearQuote();
         const historial = Array.isArray(data.historial) ? (data.historial as Array<{ role?: string }>) : store.current.historial;
         setMessages((prev) => {
           const next = [...prev, botMsg];
@@ -883,7 +898,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
                 </a>
               )}
               {m.images && m.images.length > 0 && (
-                <div className="aa-images">
+                <div className={`aa-images${m.images.length === 1 ? " aa-images-1" : ""}`}>
                   {m.images.map((src) => (
                     <a key={src} href={src} target="_blank" rel="noopener noreferrer">
                       <img src={src} alt="Imagen del producto" loading="lazy" />

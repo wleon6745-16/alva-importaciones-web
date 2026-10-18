@@ -21,9 +21,14 @@ const ASSISTANT_MESSAGE_BUDGET = 900;
 // Un enlace de WhatsApp largo se corta en algunos dispositivos.
 const WHATSAPP_TEXT_BUDGET = 1500;
 
+// La lista no es para siempre: igual que la conversacion con el asistente (que Omviqa expira a las 24 h),
+// pasado un dia sin tocarla se vacia sola. Antes se quedaba guardada en el navegador para siempre.
+export const QUOTE_TTL_MS = 24 * 60 * 60 * 1000;
+
 const EMPTY: QuoteItem[] = [];
 let cacheRaw: string | null = null;
 let cacheItems: QuoteItem[] = EMPTY;
+let cacheStamp = 0;
 
 function sanitize(value: unknown): QuoteItem[] {
   if (!Array.isArray(value)) return EMPTY;
@@ -45,19 +50,48 @@ export function readQuote(): QuoteItem[] {
   } catch {
     // Sin almacenamiento (modo privado, bloqueado): la lista no se recuerda entre paginas.
   }
-  if (raw === cacheRaw) return cacheItems;
-  cacheRaw = raw;
-  try {
-    cacheItems = raw ? sanitize(JSON.parse(raw)) : EMPTY;
-  } catch {
+  if (raw !== cacheRaw) {
+    cacheRaw = raw;
     cacheItems = EMPTY;
+    cacheStamp = 0;
+    if (raw) {
+      try {
+        const parsed = JSON.parse(raw) as unknown;
+        const guardada = Array.isArray(parsed) ? null : (parsed as { updatedAt?: unknown; items?: unknown } | null);
+        cacheItems = sanitize(Array.isArray(parsed) ? parsed : guardada?.items);
+        const sello = typeof guardada?.updatedAt === "number" ? guardada.updatedAt : null;
+        cacheStamp = sello ?? Date.now();
+        if (sello == null && cacheItems.length) {
+          // Formato anterior (sin fecha): se le pone una desde ahora, y de ahi corre su dia.
+          const migrada = JSON.stringify({ updatedAt: cacheStamp, items: cacheItems });
+          try {
+            localStorage.setItem(KEY, migrada);
+            cacheRaw = migrada;
+          } catch {
+            // Ver arriba.
+          }
+        }
+      } catch {
+        cacheItems = EMPTY;
+      }
+    }
+  }
+  if (cacheItems.length > 0 && Date.now() - cacheStamp > QUOTE_TTL_MS) {
+    try {
+      localStorage.removeItem(KEY);
+    } catch {
+      // Ver arriba.
+    }
+    cacheRaw = null;
+    cacheItems = EMPTY;
+    cacheStamp = 0;
   }
   return cacheItems;
 }
 
 function write(items: QuoteItem[]): void {
   try {
-    const raw = items.length ? JSON.stringify(items) : null;
+    const raw = items.length ? JSON.stringify({ updatedAt: Date.now(), items }) : null;
     if (raw) localStorage.setItem(KEY, raw);
     else localStorage.removeItem(KEY);
   } catch {
@@ -101,11 +135,19 @@ function subscribe(onChange: () => void): () => void {
   const onStorage = (e: StorageEvent) => {
     if (e.key === KEY || e.key === null) onChange();
   };
+  // Con la pagina abierta o al volver a la pestana, se revisa si la lista ya caduco.
+  const onVisible = () => {
+    if (document.visibilityState === "visible") onChange();
+  };
+  const timer = window.setInterval(onChange, 60_000);
   window.addEventListener(EVENT, onChange);
   window.addEventListener("storage", onStorage);
+  document.addEventListener("visibilitychange", onVisible);
   return () => {
+    window.clearInterval(timer);
     window.removeEventListener(EVENT, onChange);
     window.removeEventListener("storage", onStorage);
+    document.removeEventListener("visibilitychange", onVisible);
   };
 }
 
