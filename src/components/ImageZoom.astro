@@ -1,0 +1,119 @@
+---
+// Zoom de la foto principal de un producto.
+//
+// Los muebles son lo que cuesta vender: el cliente quiere ver el detalle (la costura, el brazo, la base) antes de
+// venir o de pagar. Cualquier <img data-zoom> se abre grande al tocarla, sobre fondo oscuro; si trae
+// data-zoom-src, se abre esa version (mas grande). Se cierra tocando fuera, con la X o con Escape.
+// Solo las fotos principales llevan data-zoom: las de las tarjetas siguen siendo enlaces a su ficha.
+---
+
+<style is:global>
+  img[data-zoom] { cursor: zoom-in; }
+  .iz-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: rgba(12, 12, 12, 0.9);
+    cursor: zoom-out;
+    animation: iz-in 0.15s ease-out;
+  }
+  .iz-overlay img {
+    max-width: min(96vw, 1500px);
+    max-height: 92dvh;
+    object-fit: contain;
+    border-radius: 0.75rem;
+    background: #fff;
+  }
+  .iz-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .iz-close:hover { background: rgba(255, 255, 255, 0.3); }
+  .iz-close:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+  @keyframes iz-in { from { opacity: 0; } to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .iz-overlay { animation: none; } }
+</style>
+
+<script is:inline>
+  (function () {
+    var abierto = null;
+    var origen = null;
+
+    function cerrar() {
+      if (!abierto) return;
+      abierto.remove();
+      abierto = null;
+      document.documentElement.style.overflow = "";
+      document.removeEventListener("keydown", teclas, true);
+      if (origen && origen.focus) origen.focus({ preventScroll: true });
+    }
+
+    function teclas(e) {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        cerrar();
+      }
+    }
+
+    function abrir(img) {
+      if (abierto) return;
+      origen = img;
+      var overlay = document.createElement("div");
+      overlay.className = "iz-overlay";
+      overlay.setAttribute("role", "dialog");
+      overlay.setAttribute("aria-modal", "true");
+      overlay.setAttribute("aria-label", "Foto ampliada");
+      var grande = document.createElement("img");
+      grande.src = img.getAttribute("data-zoom-src") || img.currentSrc || img.src;
+      grande.alt = img.alt || "";
+      var x = document.createElement("button");
+      x.type = "button";
+      x.className = "iz-close";
+      x.setAttribute("aria-label", "Cerrar la foto");
+      x.textContent = "×";
+      overlay.appendChild(grande);
+      overlay.appendChild(x);
+      overlay.addEventListener("click", cerrar);
+      document.body.appendChild(overlay);
+      document.documentElement.style.overflow = "hidden";
+      document.addEventListener("keydown", teclas, true);
+      x.focus({ preventScroll: true });
+      abierto = overlay;
+    }
+
+    document.addEventListener("click", function (e) {
+      var img = e.target && e.target.closest ? e.target.closest("img[data-zoom]") : null;
+      if (img) abrir(img);
+    });
+
+    // Accesible con teclado: la foto se puede enfocar y se abre con Enter o espacio.
+    function preparar() {
+      document.querySelectorAll("img[data-zoom]").forEach(function (img) {
+        img.setAttribute("tabindex", "0");
+        img.setAttribute("role", "button");
+        if (!img.getAttribute("aria-label")) img.setAttribute("aria-label", "Ampliar la foto: " + (img.alt || "producto"));
+      });
+    }
+    document.addEventListener("keydown", function (e) {
+      if ((e.key === "Enter" || e.key === " ") && e.target && e.target.matches && e.target.matches("img[data-zoom]")) {
+        e.preventDefault();
+        abrir(e.target);
+      }
+    });
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", preparar);
+    else preparar();
+  })();
+</script>

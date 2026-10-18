@@ -95,7 +95,7 @@ const description = `${product.name}${product.brand ? ` (${product.brand})` : ""
   .slice(0, 2)
   .join(", ")}. Precio: ${priceLabel(product)}. Consulta disponibilidad por WhatsApp en Portoviejo, Manabí.`;
 
-const optimizedImage = await getImage({ src: imageFor(product.category, product.image), width: 1200, height: 1200 });
+const optimizedImage = await getImage({ src: imageFor(product.category, product.image), width: 1200, fit: "inside" });
 const imageUrl = new URL(optimizedImage.src, siteConfig.url).toString();
 
 const productLd = productSchema(product, pageUrl, imageUrl);

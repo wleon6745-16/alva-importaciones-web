@@ -66,7 +66,7 @@ export default function NewProducts({ apiBaseUrl, initialItems, limit, eyebrow =
                     src={item.imageUrl}
                     alt={item.title}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                   <span className="absolute left-3 top-3 rounded-full bg-blush-500 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
                     Nuevo

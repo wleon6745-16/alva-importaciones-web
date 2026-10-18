@@ -29,8 +29,9 @@ const { items } = Astro.props;
             <Image
               src={item.image}
               alt={item.imageAlt}
-              width={400}
-              height={400}
+              width={640}
+              height={640}
+              fit="inside"
               class="media-zoom h-full w-full object-contain"
             />
           </div>

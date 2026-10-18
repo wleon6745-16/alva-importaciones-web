@@ -25,7 +25,7 @@ const href = `/productos/${category}/${slug}/`;
 <div class="group glass-card flex flex-col overflow-hidden rounded-2xl shadow-md transition-[transform,box-shadow] duration-[var(--duration-base)] ease-[var(--ease-premium)] hover:-translate-y-1 hover:shadow-xl">
   <a href={href} class="block">
     <div class="aspect-square overflow-hidden bg-white">
-      <Image src={image} alt={imageAlt} width={500} height={500} class="media-zoom h-full w-full object-contain" />
+      <Image src={image} alt={imageAlt} width={800} height={800} fit="inside" class="media-zoom h-full w-full object-contain" />
     </div>
   </a>
   <div class="flex flex-1 flex-col gap-1.5 p-5">

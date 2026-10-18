@@ -10,6 +10,7 @@ import { PRECIO_OCULTO } from "../lib/price-visibility";
 import AssistantWidget from "../components/AssistantWidget.tsx";
 import QuotePanel from "../components/QuotePanel.tsx";
 import WhatsAppOrigin from "../components/WhatsAppOrigin.astro";
+import ImageZoom from "../components/ImageZoom.astro";
 import { assistantEndpoint } from "../lib/assistant-config";
 import { whatsappLink } from "../lib/site-config";
 
@@ -68,6 +69,8 @@ const schemas = [organizationSchema(), ...structuredData];
     <Footer />
     {/* Marca de origen en los mensajes de WhatsApp que salen del sitio (ver el componente). */}
     <WhatsAppOrigin />
+    {/* Zoom de la foto principal de un producto (img[data-zoom]). */}
+    <ImageZoom />
     {/*
       Asistente de Alva (Web Channel de Omviqa). client:idle: no compite con el
       primer render ni con el LCP; el boton flotante aparece cuando el navegador

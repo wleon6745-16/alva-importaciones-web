@@ -82,7 +82,7 @@ const description = `${product.name}. ${product.features.slice(0, 2).join(", ")}
 const sameNameCount = muebles.filter((p) => p.name === product.name).length;
 const pageTitle = sameNameCount > 1 ? `${product.name} - ${priceLabel(product)}` : product.name;
 
-const optimizedImage = await getImage({ src: imageFor(product.image), width: 1200, height: 1200 });
+const optimizedImage = await getImage({ src: imageFor(product.image), width: 1200, fit: "inside" });
 const imageUrl = new URL(optimizedImage.src, siteConfig.url).toString();
 
 const productLd = productSchema(product, pageUrl, imageUrl);
