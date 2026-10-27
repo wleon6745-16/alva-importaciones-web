@@ -34,3 +34,23 @@ export async function getStorefrontProduct(id: string): Promise<StorefrontProduc
     return null;
   }
 }
+
+/**
+ * Existencias reales en este momento, consultadas por Omviqa al sistema de
+ * inventario. Solo el estado: "unknown" cuando no se pudo confirmar, y
+ * entonces la página no dice ni disponible ni agotado.
+ */
+export type StorefrontAvailability = "in_stock" | "out_of_stock" | "unknown";
+
+export async function getStorefrontAvailability(id: string): Promise<StorefrontAvailability> {
+  const base = storefrontBaseUrl();
+  if (!base) return "unknown";
+  try {
+    const res = await fetch(`${base}/products/${id}/availability`, { signal: AbortSignal.timeout(5000) });
+    if (!res.ok) return "unknown";
+    const data = (await res.json()) as { availability?: string };
+    return data.availability === "in_stock" || data.availability === "out_of_stock" ? data.availability : "unknown";
+  } catch {
+    return "unknown";
+  }
+}

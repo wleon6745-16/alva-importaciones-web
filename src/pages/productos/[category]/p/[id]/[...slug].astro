@@ -19,7 +19,7 @@ import BaseLayout from "../../../../../layouts/BaseLayout.astro";
 import SectionReveal from "../../../../../components/SectionReveal.astro";
 import WhatsAppCTA from "../../../../../components/WhatsAppCTA.astro";
 import QuoteButton from "../../../../../components/QuoteButton.tsx";
-import { getStorefrontProduct } from "../../../../../lib/storefront-product";
+import { getStorefrontAvailability, getStorefrontProduct } from "../../../../../lib/storefront-product";
 import { breadcrumbSchema, faqSchema, storefrontProductSchema } from "../../../../../lib/structured-data";
 import { siteConfig } from "../../../../../lib/site-config";
 import { productInquiryMessage } from "../../../../../lib/whatsapp-context";
@@ -29,7 +29,14 @@ import { storefrontBaseUrl } from "../../../../../lib/storefront-config";
 
 const { id, category } = Astro.params;
 
-const product = id ? await getStorefrontProduct(id) : null;
+// Existencias en vivo, en paralelo con la ficha. Regla del negocio: nunca
+// mostrar como disponible algo que no está en físico. Agotado se sigue
+// mostrando (con su etiqueta) pero no se puede añadir a la cotización; si no
+// se pudo confirmar ("unknown"), no se afirma nada y se pregunta por WhatsApp.
+const [product, availability] = id
+  ? await Promise.all([getStorefrontProduct(id), getStorefrontAvailability(id)])
+  : [null, "unknown" as const];
+const agotado = availability === "out_of_stock";
 
 // No se puede usar Astro.rewrite("/404") desde una ruta on-demand hacia una
 // pagina prerenderizada (404.astro se compila a HTML estatico en el build,
@@ -68,7 +75,9 @@ const faqs = product
       },
       {
         question: `¿Alva Importaciones tiene stock de ${product.name} en Portoviejo?`,
-        answer: `La disponibilidad cambia según el inventario real. Escríbenos por WhatsApp con el nombre${product.code ? ` o el código ${product.code}` : ""} y te confirmamos el stock al instante.`,
+        answer: agotado
+          ? `En este momento está agotado. Escríbenos por WhatsApp${product.code ? ` con el código ${product.code}` : ""} y te avisamos cuándo vuelve o te recomendamos una alternativa.`
+          : `La disponibilidad cambia según el inventario real. Escríbenos por WhatsApp con el nombre${product.code ? ` o el código ${product.code}` : ""} y te confirmamos el stock al instante.`,
       },
       {
         question: `¿Cómo comprar ${product.name}?`,
@@ -101,7 +110,7 @@ if (base && product) {
 }
 
 const structuredData = product
-  ? [storefrontProductSchema(product, pageUrl), breadcrumbs, faqSchema(faqs)]
+  ? [storefrontProductSchema(product, pageUrl, availability), breadcrumbs, faqSchema(faqs)]
   : [breadcrumbs];
 ---
 
@@ -109,7 +118,7 @@ const structuredData = product
   title={product ? `${product.name}${product.brand ? ` — ${product.brand}` : ""}` : "Producto no encontrado"}
   description={
     product
-      ? product.shortDescription || `${product.name}, disponible en Alva Importaciones, Portoviejo. Consulta precio y disponibilidad por WhatsApp.`
+      ? product.shortDescription || `${product.name} en Alva Importaciones, Portoviejo. Consulta precio y disponibilidad por WhatsApp.`
       : "Este producto ya no está disponible. Consulta el catálogo completo de Alva Importaciones."
   }
   path={Astro.url.pathname}
@@ -170,12 +179,27 @@ const structuredData = product
         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-700">{categoryLabel}</p>
         <h1 class="text-display-md text-primary-900">{product.name}</h1>
         <p class="text-2xl font-semibold text-ink" data-precio>{priceLabel()}</p>
+        {availability === "in_stock" && (
+          <p class="stock-pill stock-in" data-disponibilidad="in_stock">
+            <span class="stock-dot" aria-hidden="true"></span>
+            Disponible
+          </p>
+        )}
+        {agotado && (
+          <p class="stock-pill stock-out" data-disponibilidad="out_of_stock">
+            <span class="stock-dot" aria-hidden="true"></span>
+            Agotado por ahora
+          </p>
+        )}
         {product.brand && <p class="text-sm text-ink-muted">Marca: {product.brand}</p>}
         {product.code && <p class="text-sm text-ink-muted">Código: {product.code}</p>}
         {product.shortDescription && <p class="text-ink-muted">{product.shortDescription}</p>}
+        {agotado && (
+          <p class="text-sm text-ink-muted">Escríbenos y te avisamos cuando vuelva, o te recomendamos una alternativa similar.</p>
+        )}
         <div class="mt-2 flex flex-wrap items-center gap-4">
           <WhatsAppCTA
-            label="Consultar por WhatsApp"
+            label={agotado ? "Preguntar por reposición" : "Consultar por WhatsApp"}
             pulse
             message={whatsappMessage}
             productId={product.publicProductId}
@@ -185,7 +209,9 @@ const structuredData = product
             pageType="product"
             ctaLocation="detail"
           />
-          <QuoteButton client:idle variant="detail" id={product.publicProductId} code={product.code} name={product.name} source="detail" />
+          {!agotado && (
+            <QuoteButton client:idle variant="detail" id={product.publicProductId} code={product.code} name={product.name} source="detail" />
+          )}
         </div>
       </div>
     </div>
@@ -247,3 +273,31 @@ const structuredData = product
   </>
   )}
 </BaseLayout>
+
+<style>
+  .stock-pill {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .stock-dot {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    background: currentColor;
+  }
+  .stock-in {
+    background: #e7f6ec;
+    color: #17663a;
+  }
+  .stock-out {
+    background: var(--color-blush-100);
+    color: var(--color-ink-muted);
+  }
+</style>

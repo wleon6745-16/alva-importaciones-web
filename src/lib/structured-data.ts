@@ -1,6 +1,6 @@
 import { siteConfig } from "./site-config";
 import type { Product } from "../types/product";
-import type { StorefrontProductDetail } from "./storefront-product";
+import type { StorefrontAvailability, StorefrontProductDetail } from "./storefront-product";
 import { showPrices } from "./price-visibility";
 
 export function organizationSchema() {
@@ -129,7 +129,11 @@ export function productSchema(product: Product, pageUrl: string, imageUrl: strin
 /** Igual que productSchema, pero para un producto real del catálogo en vivo (Storefront API) --
  * ver src/lib/storefront-product.ts. No hay `features` aquí, solo la descripción corta que
  * ya trae la API cuando existe. */
-export function storefrontProductSchema(product: StorefrontProductDetail, pageUrl: string) {
+export function storefrontProductSchema(
+  product: StorefrontProductDetail,
+  pageUrl: string,
+  availability: StorefrontAvailability = "unknown"
+) {
   const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -153,6 +157,9 @@ export function storefrontProductSchema(product: StorefrontProductDetail, pageUr
       url: pageUrl,
       priceCurrency: product.currency || "USD",
       price: product.publicPrice,
+      // Solo con existencias confirmadas en vivo; si no se sabe, no se declara.
+      ...(availability === "in_stock" && { availability: "https://schema.org/InStock" }),
+      ...(availability === "out_of_stock" && { availability: "https://schema.org/OutOfStock" }),
       seller: {
         "@type": "Organization",
         name: siteConfig.name,
