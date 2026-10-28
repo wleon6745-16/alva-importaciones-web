@@ -19,7 +19,7 @@ export default function QuoteButton({ id, code, name, variant = "card", source }
 
   function onClick() {
     const result = addToQuote({ id, code, name });
-    trackEvent("quote_add", { source: source ?? variant, result });
+    trackEvent("quote_add", { source: source ?? variant, result, product_code: id });
     if (result === "full") return;
     // Abre el panel solo desde la ficha: en las tarjetas el contador flotante ya confirma.
     if (variant === "detail") window.dispatchEvent(new Event("alva:open-quote"));

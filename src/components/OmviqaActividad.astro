@@ -1,0 +1,79 @@
+---
+// Actividad del visitante hacia Omviqa: qué producto abrió, desde dónde pulsó WhatsApp y qué cotizó.
+//
+// El negocio lo pidió para saber qué le piden en la web; Omviqa lo guarda (Sitio web -> Actividad) y avisa
+// por Telegram. Las búsquedas no pasan por aquí: Omviqa ya las ve llegar a su API.
+//
+// No toca ningún componente: escucha los mismos eventos que el sitio ya manda a la analítica (trackEvent ->
+// window.dataLayer). Va en el <head>, antes que nada, para estar escuchando cuando la página dispare el
+// primero. El "push" se envuelve con getter/setter porque gtag.js reemplaza dataLayer.push al cargar; así
+// el reemplazo queda debajo del puente en vez de quitarlo.
+//
+// Solo se manda QUÉ pasó y la referencia al producto. El nombre, el código y las existencias los pone
+// Omviqa desde el catálogo. sendBeacon: no frena la navegación ni el clic que abre WhatsApp.
+import { storefrontBaseUrl } from "../lib/storefront-config";
+
+const base = storefrontBaseUrl();
+const endpoint = base ? `${base}/events` : null;
+---
+
+{
+  endpoint && (
+    <script is:inline define:vars={{ endpoint }}>
+      (function () {
+        var TIPOS = {
+          view_product: "product_view",
+          click_whatsapp: "whatsapp_click",
+          quote_add: "quote_add",
+          quote_send: "quote_send",
+        };
+        var visitante = null;
+        try {
+          visitante = localStorage.getItem("alva_actividad_id");
+          if (!visitante) {
+            visitante = (crypto.randomUUID && crypto.randomUUID()) || String(Date.now()) + Math.random().toString(16).slice(2);
+            localStorage.setItem("alva_actividad_id", visitante);
+          }
+        } catch (e) {
+          visitante = null;
+        }
+
+        function enviar(evento) {
+          try {
+            var cuerpo = JSON.stringify(evento);
+            if (navigator.sendBeacon && navigator.sendBeacon(endpoint, cuerpo)) return;
+            fetch(endpoint, { method: "POST", body: cuerpo, keepalive: true, mode: "no-cors" });
+          } catch (e) {
+            // La actividad nunca debe romper la página.
+          }
+        }
+
+        function puente(dato) {
+          if (!dato || typeof dato !== "object" || !TIPOS[dato.event]) return;
+          var evento = { type: TIPOS[dato.event], page: location.pathname.slice(0, 200) };
+          if (visitante) evento.visitorId = visitante;
+          if (dato.product_code) evento.product = String(dato.product_code).slice(0, 80);
+          if (dato.cta_location) evento.cta = String(dato.cta_location).slice(0, 40);
+          if (dato.source) evento.source = String(dato.source).slice(0, 40);
+          if (typeof dato.items === "number") evento.items = dato.items;
+          enviar(evento);
+        }
+
+        var capa = (window.dataLayer = window.dataLayer || []);
+        var original = capa.push;
+        Object.defineProperty(capa, "push", {
+          configurable: true,
+          get: function () {
+            return function () {
+              for (var i = 0; i < arguments.length; i++) puente(arguments[i]);
+              return original.apply(capa, arguments);
+            };
+          },
+          set: function (nuevo) {
+            original = nuevo;
+          },
+        });
+      })();
+    </script>
+  )
+}
