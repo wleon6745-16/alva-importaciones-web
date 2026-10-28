@@ -14,6 +14,8 @@ export interface ProductInquiry {
   categoryLabel?: string | null;
   /** Ruta absoluta o relativa a la pagina del producto (se vuelve absoluta). */
   path?: string | null;
+  /** La ficha lo mostró agotado (existencias en vivo): se pregunta por reposición, no por disponibilidad. */
+  agotado?: boolean;
 }
 
 function absolute(path: string): string {
@@ -31,13 +33,13 @@ function usableBrand(brand?: string | null): string | null {
 }
 
 export function productInquiryMessage(p: ProductInquiry): string {
-  const lines = ["Hola, quisiera consultar sobre este producto:", `*${p.name}*`];
+  const lines = [p.agotado ? "Hola, vi en la página que este producto está agotado:" : "Hola, quisiera consultar sobre este producto:", `*${p.name}*`];
   const meta = [p.code ? `Cód: ${p.code}` : null, usableBrand(p.brand) ? `Marca: ${usableBrand(p.brand)}` : null, p.categoryLabel ?? null]
     .filter(Boolean)
     .join(" · ");
   if (meta) lines.push(meta);
   if (p.path) lines.push(absolute(p.path));
-  lines.push("¿Lo tienen disponible y cuál es el precio?");
+  lines.push(p.agotado ? "¿Cuándo vuelve a llegar o qué alternativa me recomiendan?" : "¿Lo tienen disponible y cuál es el precio?");
   return lines.join("\n");
 }
 

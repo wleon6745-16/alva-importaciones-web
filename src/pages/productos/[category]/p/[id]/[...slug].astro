@@ -61,7 +61,7 @@ function priceLabel(): string {
 
 const pageUrl = new URL(Astro.url.pathname, siteConfig.url).toString();
 const whatsappMessage = product
-  ? productInquiryMessage({ name: product.name, code: product.code, brand: product.brand, categoryLabel, path: Astro.url.pathname })
+  ? productInquiryMessage({ name: product.name, code: product.code, brand: product.brand, categoryLabel, path: Astro.url.pathname, agotado })
   : "";
 
 const faqs = product
