@@ -47,7 +47,7 @@ const image = course ? editorialAssetUrl(course, collection.assets) : null;
       <section class="bg-blush-50 px-6 py-14 text-center">
         <h2 class="font-display text-2xl text-primary-900">¿Lista para reservar tu cupo?</h2>
         <p class="mx-auto mt-3 max-w-xl text-ink-muted">{course.description}</p>
-        <WhatsAppCTA label={course.ctaLabel || "Reservar mi cupo"} class="mt-6" message={course.ctaMessage || `Hola, quiero informacion sobre ${course.title}`} source="course" pageType="course" ctaLocation="bottom" />
+        <WhatsAppCTA label={course.ctaLabel || "Reservar mi cupo"} class="mt-6" message={course.ctaMessage || `Hola, quiero informacion sobre ${course.title}`} source="course" pageType="course" ctaLocation="bottom" extraTrackEvents={["click_course_contact"]} />
       </section>
     </>
   )

@@ -254,6 +254,13 @@ export default function CatalogExplorer({
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-3 inline-flex w-fit items-center gap-2 rounded-full bg-primary-800 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-primary-900/20 transition-transform duration-200 hover:scale-105 hover:bg-primary-700"
+                  data-track-event="click_whatsapp"
+                  data-track-source="catalog"
+                  data-track-page-type="category"
+                  data-track-cta-location="product_card"
+                  data-track-product-code={item.code ?? item.publicProductId}
+                  data-track-product-name={item.name}
+                  data-track-category={categorySlug}
                 >
                   Consultar
                 </a>

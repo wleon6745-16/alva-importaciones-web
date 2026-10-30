@@ -3,7 +3,7 @@
 Guía operativa de la capa de analítica del sitio. Fase SEO-Analytics, 2026-08-16. Pensada para
 que otro desarrollador (o tú mismo en 6 meses) entienda el sistema sin releer el código.
 
-## 1. Cómo funciona GA4 aquí
+## 1. Cómo funciona GA4 y Meta Pixel aquí
 
 El sitio **no traía ningún proveedor de analítica instalado** antes de esta fase (se verificó
 con `grep` de `gtag`/`googletagmanager`/`GTM-`/`dataLayer` en todo `src/` — el único hallazgo
@@ -14,9 +14,12 @@ cuando hubiera un proveedor real).
   (que envuelve literalmente todas las páginas del sitio).
 - Lee `import.meta.env.PUBLIC_GA_MEASUREMENT_ID` en build time.
   - **Si no está definida**: no se renderiza ningún `<script>` de `gtag.js`. El sitio funciona
-    exactamente igual — solo que nada de lo que se trackea llega a ningún lado.
+    exactamente igual — solo que nada de lo que se trackea llega a GA4.
   - **Si está definida**: carga `gtag.js` y llama `gtag('config', ID)`, el patrón oficial de
     Google.
+- Lee `import.meta.env.PUBLIC_META_PIXEL_ID` en build time.
+  - **Si no está definida**: no carga `fbevents.js`.
+  - **Si está definida**: inicializa Meta Pixel y dispara `PageView`.
 - El mismo componente llama `initClickTracking()` e `initViewTracking()` (de
   `src/lib/analytics.ts`) una sola vez, sitewide.
 
@@ -29,6 +32,7 @@ empieza a justificarse; hasta entonces, no.
 
 ```env
 PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+PUBLIC_META_PIXEL_ID=000000000000000
 ```
 
 - Ver `.env.example` en la raíz del repo.
@@ -39,9 +43,9 @@ PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 
 ## 3. La capa central: `src/lib/analytics.ts`
 
-Todo pasa por `trackEvent(eventName, params)`. Ninguna llamada a `gtag()` o
+Todo pasa por `trackEvent(eventName, params)`. Ninguna llamada a `gtag()`, `fbq()` o
 `dataLayer.push()` suelta en componentes — así se evita justo lo que se pidió evitar: docenas de
-`gtag()` dispersos sin abstracción.
+llamadas dispersas sin abstracción.
 
 ```ts
 trackEvent("click_whatsapp", { source: "product", product_code: "8833" });
@@ -49,8 +53,11 @@ trackEvent("click_whatsapp", { source: "product", product_code: "8833" });
 
 - Si `window` no existe (SSR) o algo falla, `trackEvent` no lanza — un error de analítica nunca
   debe romper la página.
-- Internamente hace `window.dataLayer.push({ event: eventName, ...params })`. Si `gtag.js` está
-  cargado (ver §1), GA4 procesa ese push. Si no, el array simplemente crece sin que nadie lo lea.
+- Internamente deja una copia en `window.dataLayer`, llama `gtag("event", eventName, params)`
+  cuando GA4 está cargado y llama `fbq()` cuando Meta Pixel está cargado.
+- Para Meta se envía siempre un evento custom en PascalCase (`quote_send` → `QuoteSend`). Además,
+  algunos eventos se mapean a estándar para optimización: `click_whatsapp` → `Contact`,
+  `quote_send` → `Lead`, `assistant_message` → `Contact`.
 
 ### Dos mecanismos para no repetir código en cada componente
 
@@ -75,6 +82,11 @@ Para agregar tracking a un botón/enlace nuevo: **no escribas JS**, solo agrega 
 | --- | --- | --- | --- |
 | `click_whatsapp` | Cualquier `WhatsAppCTA` (header, hero, producto, categoría, guía, curso, contacto, local, 404, home) | `source`, `page_type`, `cta_location`, `product_code`, `product_name`, `category`, `branch` | Delegación de clic |
 | `click_course_contact` | El botón de WhatsApp de `/cursos` (se dispara **junto con** `click_whatsapp source=course`, no en su lugar) | los mismos que `click_whatsapp` en ese botón | Delegación de clic |
+| `quote_add` | Botón "Agregar a cotización" en tarjetas y ficha de producto | `source`, `result` | React, `QuoteButton` |
+| `quote_send` | "Cotizar con el asistente" y "Enviar a una asesora por WhatsApp" en el panel de cotización | `channel`, `items` | React, `QuotePanel` |
+| `assistant_open` | Apertura del asistente flotante, por CTA o cotización | `source` | React, `AssistantWidget` |
+| `assistant_message` | Mensaje enviado por el visitante al asistente | `page_path` | React, `AssistantWidget` |
+| `assistant_error` | Error de respuesta del asistente | `status` | React, `AssistantWidget` |
 | `click_maps` | Enlaces "Ver en Google Maps" (`LocationsMap`, `/locales`, `/locales/[branch]`) | `source`, `branch` | Delegación de clic |
 | `click_social` | Instagram (Footer, PromoShowcase) y canal de WhatsApp (PromoShowcase) | `platform`, `source` | Delegación de clic |
 | `view_product` | Carga de una página de detalle de producto (`productos/muebles/[slug]` y `productos/[category]/[slug]`), vía `ViewProductTracker.astro` | `product_code`, `product_name`, `category`, `brand` | Dispara una vez al cargar la página (no por hidratación/render de grilla) |
@@ -129,6 +141,10 @@ Sin necesidad de GA4 real:
 Con GA4 real configurado, además: **DebugView** en el panel de GA4 (Configurar → DebugView) con
 la extensión de Chrome "Google Analytics Debugger" activada, o agregando `?debug_mode=true` al
 final de una URL del sitio.
+
+Con Meta Pixel real configurado: usar **Meta Pixel Helper** en Chrome y Events Manager → Test
+events. Deben verse `PageView`, eventos estándar como `Contact`/`Lead` y los custom
+`ClickWhatsapp`, `QuoteAdd`, `QuoteSend`, `AssistantOpen`, etc.
 
 ## 7. Cómo evitar eventos duplicados
 

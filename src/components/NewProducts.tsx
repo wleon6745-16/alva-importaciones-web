@@ -89,6 +89,13 @@ export default function NewProducts({ apiBaseUrl, initialItems, limit, eyebrow =
                     target="_blank"
                     rel="noopener"
                     className="mt-auto inline-flex w-fit items-center gap-2 rounded-full bg-primary-800 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-700"
+                    data-track-event="click_whatsapp"
+                    data-track-source="new_products"
+                    data-track-page-type="home"
+                    data-track-cta-location="product_card"
+                    data-track-product-code={item.product?.code ?? item.product?.publicProductId}
+                    data-track-product-name={item.title}
+                    data-track-category={item.product?.category?.slug}
                   >
                     Consultar
                   </a>

@@ -9,6 +9,7 @@ import sitemap from '@astrojs/sitemap';
 import cloudflare from '@astrojs/cloudflare';
 
 const SITE_URL = 'https://alvaimportaciones.com';
+const PRIVATE_SITEMAP_PATHS = ['/omviqa-preview/'];
 
 // Las fichas de producto del catalogo en vivo son on-demand (no se generan en el
 // build, ver src/pages/productos/[category]/p/**), asi que @astrojs/sitemap no las
@@ -30,7 +31,13 @@ function productSitemapUrls() {
 export default defineConfig({
   // Dominio real, confirmado 2026-08-15 — ya agregado a Cloudflare por el usuario.
   site: SITE_URL,
-  integrations: [react(), sitemap({ customPages: productSitemapUrls() })],
+  integrations: [
+    react(),
+    sitemap({
+      customPages: productSitemapUrls(),
+      filter: (page) => !PRIVATE_SITEMAP_PATHS.some((path) => new URL(page).pathname.startsWith(path)),
+    }),
+  ],
   // El sitio sigue siendo estatico por defecto (cada pagina se sigue generando en
   // build salvo que declare "export const prerender = false"). Este adapter solo
   // habilita ESE opt-in puntual -- hoy usado por las paginas de detalle de producto

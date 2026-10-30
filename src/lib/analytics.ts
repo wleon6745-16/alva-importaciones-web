@@ -1,30 +1,55 @@
-// Capa centralizada de analítica. Todo el sitio pasa por trackEvent() — nada de llamadas a
-// gtag()/dataLayer.push() sueltas en componentes individuales (ver docs/ANALYTICS.md).
+// Capa centralizada de analitica. Todo el sitio pasa por trackEvent() — nada de llamadas a
+// gtag()/fbq()/dataLayer.push() sueltas en componentes individuales (ver docs/ANALYTICS.md).
 //
-// Diseño deliberado: trackEvent() solo empuja a window.dataLayer. Si no hay proveedor
-// configurado (PUBLIC_GA_MEASUREMENT_ID sin definir, ver Analytics.astro), gtag.js nunca se
-// carga y esos pushes no van a ningún lado — no rompen nada, no hacen falta guards por
-// componente. Nunca debe lanzar: un error de analítica no puede tumbar la página.
+// Diseño deliberado: trackEvent() publica en los proveedores configurados (GA4 y/o Meta Pixel)
+// y ademas deja una copia en window.dataLayer para depuracion/GTM futuro. Si no hay proveedor
+// configurado, no rompe nada ni hacen falta guards por componente.
 
 export type TrackParams = Record<string, string | number | boolean | undefined>;
 
 declare global {
   interface Window {
     dataLayer?: unknown[];
+    gtag?: (command: "event", eventName: string, params?: Record<string, string | number | boolean>) => void;
+    fbq?: (command: "track" | "trackCustom", eventName: string, params?: Record<string, string | number | boolean>) => void;
   }
+}
+
+function cleanParams(params: TrackParams): Record<string, string | number | boolean> {
+  const clean: Record<string, string | number | boolean> = {};
+  for (const [key, value] of Object.entries(params)) {
+    if (value !== undefined && value !== "") clean[key] = value;
+  }
+  return clean;
+}
+
+const META_STANDARD_EVENTS: Record<string, string> = {
+  click_whatsapp: "Contact",
+  quote_send: "Lead",
+  assistant_message: "Contact",
+};
+
+function toPascalCase(eventName: string): string {
+  return eventName
+    .split("_")
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join("");
 }
 
 export function trackEvent(eventName: string, params: TrackParams = {}): void {
   if (typeof window === "undefined") return;
   try {
-    const cleanParams: Record<string, string | number | boolean> = {};
-    for (const [key, value] of Object.entries(params)) {
-      if (value !== undefined && value !== "") cleanParams[key] = value;
-    }
+    const clean = cleanParams(params);
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: eventName, ...cleanParams });
+    window.dataLayer.push({ event: eventName, ...clean });
+    window.gtag?.("event", eventName, clean);
+
+    const metaEvent = META_STANDARD_EVENTS[eventName];
+    if (metaEvent) window.fbq?.("track", metaEvent, { event_name: eventName, ...clean });
+    window.fbq?.("trackCustom", toPascalCase(eventName), clean);
   } catch {
-    // La analítica nunca debe romper el sitio.
+    // La analitica nunca debe romper el sitio.
   }
 }
 
