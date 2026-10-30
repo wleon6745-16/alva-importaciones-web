@@ -2,7 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionReveal from "../components/SectionReveal.astro";
 import WhatsAppCTA from "../components/WhatsAppCTA.astro";
+import FaqSection from "./FaqSection.astro";
 import { breadcrumbSchema } from "../lib/structured-data";
+import { businessFaqs, type Faq } from "../lib/faq";
 
 interface Props {
   title: string;
@@ -13,9 +15,11 @@ interface Props {
   heading: string;
   intro: string;
   ctaMessage: string;
+  /** Preguntas propias de la pagina (van antes de las del negocio). */
+  extraFaqs?: Faq[];
 }
 
-const { title, description, path, breadcrumbLabel, kicker, heading, intro, ctaMessage } = Astro.props;
+const { title, description, path, breadcrumbLabel, kicker, heading, intro, ctaMessage, extraFaqs = [] } = Astro.props;
 
 const breadcrumbs = breadcrumbSchema([
   { name: "Inicio", path: "/" },
@@ -32,6 +36,8 @@ const breadcrumbs = breadcrumbSchema([
   </section>
 
   <slot />
+
+  <FaqSection items={[...extraFaqs, ...businessFaqs()]} />
 
   <SectionReveal as="section" class="bg-blush-50 px-6 py-16 text-center">
     <h2 class="font-display text-2xl text-primary-900">¿Tienes dudas?</h2>

@@ -1,6 +1,9 @@
 ---
 import SectionReveal from "../components/SectionReveal.astro";
 import LocalLandingLayout from "../components/LocalLandingLayout.astro";
+import { courseFaqs } from "../lib/faq";
+
+const extraFaqs = await courseFaqs();
 
 // Mismos datos reales que /cursos (ver courseSchema() en structured-data.ts) — esta página no
 // inventa condiciones nuevas, solo re-encuadra el mismo curso para la intención de búsqueda
@@ -14,7 +17,8 @@ const highlights = [
 ---
 
 <LocalLandingLayout
-  title="Cursos de Uñas en Portoviejo"
+  title="Curso de uñas en Portoviejo"
+  extraFaqs={extraFaqs}
   description="Curso profesional de uñas acrílicas en Portoviejo, 6 meses, $60 al mes, matrícula $10. Formación presencial dictada por Alva Importaciones."
   path="/cursos-de-unas-portoviejo"
   breadcrumbLabel="Cursos de uñas en Portoviejo"

@@ -11,6 +11,7 @@ import { siteConfig } from "../../../lib/site-config";
 import { getAllProducts } from "../../../lib/products";
 import type { Product } from "../../../types/product";
 import { PRECIO_OCULTO, showPrices } from "../../../lib/price-visibility";
+import { productMetaDescription, uniqueProductTitle } from "../../../lib/product-title";
 
 // Rutas de esta página dinámica: uñas, capilares y maquillaje. Muebles tiene su propia ruta
 // dedicada (src/pages/productos/muebles/[slug].astro, ver SEO-003) y no se genera aquí.
@@ -88,12 +89,12 @@ const breadcrumbs = breadcrumbSchema([
   { name: product.name, path: pagePath },
 ]);
 
-const sameNameCount = categoryProducts.filter((p) => p.name === product.name).length;
-const pageTitle = sameNameCount > 1 ? `${product.name} - ${priceLabel(product)}` : product.name;
+const pageTitle = uniqueProductTitle(
+  product,
+  categoryProducts.filter((p) => p.name === product.name),
+);
 
-const description = `${product.name}${product.brand ? ` (${product.brand})` : ""}. ${product.features
-  .slice(0, 2)
-  .join(", ")}. Precio: ${priceLabel(product)}. Consulta disponibilidad por WhatsApp en Portoviejo, Manabí.`;
+const description = productMetaDescription(product, priceLabel(product));
 
 const optimizedImage = await getImage({ src: imageFor(product.category, product.image), width: 1200, fit: "inside" });
 const imageUrl = new URL(optimizedImage.src, siteConfig.url).toString();

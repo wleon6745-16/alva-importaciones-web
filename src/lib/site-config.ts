@@ -4,6 +4,14 @@
 export const siteConfig = {
   name: "Alva Importaciones",
   tagline: "Belleza Perfecta",
+  // Como la gente nos escribe y nos busca: "Alva Import", "alvaimport", "Alva Importaciones". Se declaran como
+  // nombres alternos del negocio (schema.org) y se dicen en texto visible, para que buscadores y asistentes
+  // de IA los reconozcan como la misma marca. No se inventan nombres: son las variantes reales del mismo.
+  alternateNames: ["Alva Import", "AlvaImport", "Alva Importaciones Portoviejo", "Alva Importaciones Ecuador"],
+  // Titulo de la portada: marca + lo que vendemos + donde, en una sola linea (el nombre solo no dice nada).
+  homeTitle: "Alva Importaciones (Alva Import) | Belleza y salón en Portoviejo",
+  homeDescription:
+    "Alva Importaciones (Alva Import): muebles para salón de belleza, insumos de uñas, capilares y maquillaje, y curso de uñas en Portoviejo. Consulta por WhatsApp.",
   description:
     "Muebles para salón de belleza (camillas, sillones de peluquería, butacas y mesas de trabajo) e insumos de uñas, capilares y maquillaje en Portoviejo, Manabí. Consulta precios y disponibilidad al instante por WhatsApp.",
   url: "https://alvaimportaciones.com", // dominio real, confirmado 2026-08-15
@@ -52,6 +60,21 @@ export const siteConfig = {
     "Dipaso",
   ],
 } as const;
+
+/**
+ * Ruta canonica tal como la sirve el servidor. Las paginas estaticas viven en carpetas, y Cloudflare
+ * redirige "/contacto" -> "/contacto/" (307), asi que su canonical (y el sitemap) llevan la barra final.
+ * Las rutas bajo demanda (fichas de producto en vivo y novedades) responden 200 sin barra y sin redirigir.
+ * Antes el canonical decia "/contacto" mientras el sitemap decia "/contacto/": dos senales distintas para
+ * la misma pagina, y un canonical que apuntaba a una URL que redirige.
+ */
+export function canonicalPath(path: string): string {
+  if (!path || path === "/") return "/";
+  const onDemand = /^\/(?:productos\/[^/]+\/p\/|novedades(?:\/|$))/.test(path);
+  if (onDemand) return path.replace(/\/+$/, "") || "/";
+  if (/\.[a-z0-9]{2,5}$/i.test(path)) return path; // archivo (xml, txt...)
+  return path.endsWith("/") ? path : `${path}/`;
+}
 
 // Número de la Matriz usado como WhatsApp principal para los CTA generales del sitio.
 export const primaryWhatsappNumber = siteConfig.locations[0].whatsappNumber;

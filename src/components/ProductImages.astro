@@ -1,0 +1,95 @@
+---
+// Foto(s) de un producto del catalogo en vivo. Con una sola foto se ve como siempre; si Omviqa publica mas
+// de una (`images`), se muestran miniaturas debajo y al tocar una pasa a ser la foto grande (que a su vez
+// se abre ampliada con ImageZoom). Cada foto que no cargue cae en "Foto proximamente" por ImageFallback,
+// asi que una miniatura rota no deja la galeria a medias.
+interface Props {
+  name: string;
+  /** Foto principal (siempre existe en la ficha, o es null). */
+  main: string | null;
+  /** Fotos adicionales, si el producto las tiene. */
+  extra?: string[];
+}
+
+const { name, main, extra = [] } = Astro.props;
+const all = Array.from(new Set([main, ...extra].filter((u): u is string => typeof u === "string" && u.length > 0)));
+---
+
+<div class="pi-root" data-galeria>
+  <div class="aspect-square overflow-hidden">
+    {
+      all.length > 0 ? (
+        <img src={all[0]} alt={name} loading="eager" data-zoom data-galeria-principal class="h-full w-full object-contain" />
+      ) : (
+        <div class="flex h-full w-full flex-col items-center justify-center gap-2 bg-blush-50 text-primary-700/50">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <polyline points="21 15 16 10 5 21" />
+          </svg>
+          <span class="text-sm font-medium">Foto próximamente</span>
+        </div>
+      )
+    }
+  </div>
+  {
+    all.length > 1 && (
+      <ul class="pi-thumbs" aria-label="Más fotos del producto">
+        {all.map((url, i) => (
+          <li>
+            <button type="button" class="pi-thumb" data-galeria-miniatura={url} aria-label={`Ver foto ${i + 1} de ${all.length}`} aria-pressed={i === 0 ? "true" : "false"}>
+              <img src={url} alt="" loading="lazy" class="h-full w-full object-contain" />
+            </button>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</div>
+
+<style>
+  .pi-thumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .pi-thumb {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.25rem;
+    border: 2px solid var(--color-blush-100);
+    border-radius: 0.75rem;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+  }
+  .pi-thumb:hover {
+    border-color: color-mix(in srgb, var(--color-primary-700) 50%, transparent);
+  }
+  .pi-thumb[aria-pressed="true"] {
+    border-color: var(--color-primary-700);
+  }
+  .pi-thumb:focus-visible {
+    outline: 2px solid var(--color-primary-700);
+    outline-offset: 2px;
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-galeria]").forEach((root) => {
+    const principal = root.querySelector<HTMLImageElement>("[data-galeria-principal]");
+    if (!principal) return;
+    root.querySelectorAll<HTMLButtonElement>("[data-galeria-miniatura]").forEach((boton) => {
+      boton.addEventListener("click", () => {
+        const url = boton.dataset.galeriaMiniatura;
+        if (!url) return;
+        principal.src = url;
+        principal.removeAttribute("srcset");
+        root.querySelectorAll("[data-galeria-miniatura]").forEach((b) => b.setAttribute("aria-pressed", b === boton ? "true" : "false"));
+      });
+    });
+  });
+</script>

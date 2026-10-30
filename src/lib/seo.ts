@@ -1,4 +1,4 @@
-import { siteConfig } from "./site-config";
+import { siteConfig, canonicalPath } from "./site-config";
 
 export interface SeoProps {
   title: string;
@@ -10,18 +10,21 @@ export interface SeoProps {
 
 export function resolveSeo({
   title,
-  description = siteConfig.description,
+  description,
   path = "/",
   image = "/og-image.jpg",
   noindex = false,
 }: SeoProps) {
-  const fullTitle = title === siteConfig.name ? title : `${title} | ${siteConfig.name}`;
-  const canonicalUrl = new URL(path, siteConfig.url).toString();
+  // La portada usa su propio titulo largo (marca + que vendemos + donde); el resto, "Pagina | Marca".
+  const fullTitle = title === siteConfig.name ? siteConfig.homeTitle : title.includes(siteConfig.name) ? title : `${title} | ${siteConfig.name}`;
+  const isHome = title === siteConfig.name;
+  const finalDescription = description ?? (isHome ? siteConfig.homeDescription : siteConfig.description);
+  const canonicalUrl = new URL(canonicalPath(path), siteConfig.url).toString();
   const imageUrl = new URL(image, siteConfig.url).toString();
 
   return {
     title: fullTitle,
-    description,
+    description: finalDescription,
     canonicalUrl,
     imageUrl,
     noindex,

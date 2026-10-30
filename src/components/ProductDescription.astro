@@ -1,0 +1,145 @@
+---
+// Ficha del producto, ordenada: antes toda la descripcion de Omviqa salia como UN parrafo gigante junto a
+// la foto (y la foto, en la grilla, se estiraba hasta el final). Ahora el resumen va junto a la foto y el
+// resto se ordena en secciones plegables debajo. Todo el texto esta en el HTML (los <details> abiertos o
+// cerrados se indexan igual), asi que no se pierde nada para buscadores ni para asistentes de IA.
+import { parseDescription } from "../lib/product-description";
+
+interface Props {
+  text: string | null | undefined;
+}
+
+const { text } = Astro.props;
+const { sections } = parseDescription(text);
+---
+
+{
+  sections.length > 0 && (
+    <section class="px-6 pb-4" aria-labelledby="detalles-producto">
+      <div class="mx-auto max-w-3xl">
+        <h2 id="detalles-producto" class="font-display text-2xl text-primary-900">Detalles del producto</h2>
+        <div class="pd-list mt-6">
+          {sections.map((section, i) => (
+            <details class="pd-item" open={i === 0}>
+              <summary class="pd-summary">
+                <span>{section.title}</span>
+                <svg class="pd-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </summary>
+              <div class="pd-body">
+                {section.kind === "text" && <p>{section.items[0].text}</p>}
+                {section.kind === "steps" && (
+                  <ol class="pd-steps">
+                    {section.items.map((item) => (
+                      <li>{item.text}</li>
+                    ))}
+                  </ol>
+                )}
+                {section.kind === "list" && (
+                  <ul class="pd-facts">
+                    {section.items.map((item) => (
+                      <li>
+                        {item.label ? (
+                          <>
+                            <strong>{item.label}</strong>
+                            <span>{item.text}</span>
+                          </>
+                        ) : (
+                          <span class="pd-plain">{item.text}</span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+<style>
+  .pd-list {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .pd-item {
+    border: 1px solid var(--color-blush-100);
+    border-radius: 1.25rem;
+    background: #fff;
+    overflow: hidden;
+  }
+  .pd-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--font-display, inherit);
+    font-size: 1.05rem;
+    color: var(--color-primary-900);
+  }
+  .pd-summary::-webkit-details-marker {
+    display: none;
+  }
+  .pd-summary:focus-visible {
+    outline: 2px solid var(--color-primary-700);
+    outline-offset: -2px;
+    border-radius: 1.25rem;
+  }
+  .pd-chevron {
+    flex: none;
+    color: var(--color-primary-700);
+    transition: transform 0.2s ease;
+  }
+  .pd-item[open] > .pd-summary .pd-chevron {
+    transform: rotate(180deg);
+  }
+  .pd-body {
+    padding: 0 1.25rem 1.25rem;
+    color: var(--color-ink-muted);
+    line-height: 1.65;
+  }
+  .pd-steps {
+    margin: 0;
+    padding-left: 1.4rem;
+    list-style: decimal;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .pd-steps li::marker {
+    color: var(--color-primary-700);
+    font-weight: 600;
+  }
+  .pd-facts {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.6rem;
+  }
+  .pd-facts li {
+    display: grid;
+    gap: 0.1rem;
+  }
+  .pd-facts strong {
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+  @media (min-width: 640px) {
+    .pd-facts li:has(strong) {
+      grid-template-columns: minmax(9rem, 12rem) 1fr;
+      gap: 1rem;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pd-chevron {
+      transition: none;
+    }
+  }
+</style>

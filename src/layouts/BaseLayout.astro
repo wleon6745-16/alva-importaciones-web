@@ -12,6 +12,7 @@ import QuotePanel from "../components/QuotePanel.tsx";
 import WhatsAppOrigin from "../components/WhatsAppOrigin.astro";
 import OmviqaActividad from "../components/OmviqaActividad.astro";
 import ImageZoom from "../components/ImageZoom.astro";
+import ImageFallback from "../components/ImageFallback.astro";
 import { assistantEndpoint } from "../lib/assistant-config";
 import { whatsappLink } from "../lib/site-config";
 
@@ -42,9 +43,21 @@ const schemas = [organizationSchema(), ...structuredData];
 
     <title>{seo.title}</title>
     <meta name="description" content={seo.description} />
-    {seo.noindex && <meta name="robots" content="noindex, nofollow" />}
+    {
+      seo.noindex ? (
+        <meta name="robots" content="noindex, nofollow" />
+      ) : (
+        // Permite la vista previa grande en Google (Discover/imagenes) y fragmentos completos en asistentes.
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      )
+    }
+    <link rel="alternate" hreflang="es-EC" href={seo.canonicalUrl} />
+    <link rel="alternate" hreflang="x-default" href={seo.canonicalUrl} />
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
 
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Alva Importaciones" />
+    <meta property="og:image:alt" content={seo.title} />
     <meta property="og:title" content={seo.title} />
     <meta property="og:description" content={seo.description} />
     <meta property="og:url" content={seo.canonicalUrl} />
@@ -74,6 +87,8 @@ const schemas = [organizationSchema(), ...structuredData];
     <WhatsAppOrigin />
     {/* Zoom de la foto principal de un producto (img[data-zoom]). */}
     <ImageZoom />
+    {/* Foto rota => cuadro "Foto próximamente" (ver el componente). */}
+    <ImageFallback />
     {/*
       Asistente de Alva (Web Channel de Omviqa). client:idle: no compite con el
       primer render ni con el LCP; el boton flotante aparece cuando el navegador

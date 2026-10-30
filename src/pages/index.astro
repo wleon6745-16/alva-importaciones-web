@@ -11,6 +11,9 @@ import FeatureStrip, { type FeatureItem } from "../components/FeatureStrip.astro
 import OmviqaHome from "../components/OmviqaHome.astro";
 import HomeCuratedByCategory from "../components/HomeCuratedByCategory.tsx";
 import { siteConfig } from "../lib/site-config";
+import { websiteSchema, localBusinessSchemas } from "../lib/structured-data";
+import FaqSection from "../components/FaqSection.astro";
+import { businessFaqs, courseFaqs } from "../lib/faq";
 import { categories as categoryMeta } from "../lib/categories";
 import { categoryImages } from "../lib/category-images";
 import { getNavCategories } from "../lib/nav-categories";
@@ -84,7 +87,7 @@ const curso = omviqaCourses?.items.find((item) => item.payload.enabled !== false
 const cursoImageUrl = curso && omviqaCourses ? editorialAssetUrl(curso, omviqaCourses.assets) : null;
 ---
 
-<BaseLayout title={siteConfig.name} description={siteConfig.description} path="/">
+<BaseLayout title={siteConfig.name} description={siteConfig.homeDescription} path="/" structuredData={[websiteSchema(), ...localBusinessSchemas()]}>
   {omviqaHome ? (
   <>
     <OmviqaHome home={omviqaHome} />
@@ -360,4 +363,5 @@ const cursoImageUrl = curso && omviqaCourses ? editorialAssetUrl(curso, omviqaCo
   </SectionReveal>
   </>
   )}
+  <FaqSection items={[...businessFaqs(), ...(await courseFaqs()).slice(0, 1)]} class="bg-blush-50" />
 </BaseLayout>

@@ -11,6 +11,7 @@ import { siteConfig } from "../../../lib/site-config";
 import { getProductsByCategory } from "../../../lib/products";
 import type { Product } from "../../../types/product";
 import { PRECIO_OCULTO, showPrices } from "../../../lib/price-visibility";
+import { productMetaDescription, uniqueProductTitle } from "../../../lib/product-title";
 
 // `getStaticPaths` runs in module scope at build time, separate from the rest of this
 // frontmatter (which runs per-render) — it can't close over a `const` declared out here,
@@ -72,15 +73,15 @@ const breadcrumbs = breadcrumbSchema([
   { name: product.name, path: pagePath },
 ]);
 
-const description = `${product.name}. ${product.features.slice(0, 2).join(", ")}. Precio: ${priceLabel(
-  product,
-)}. Consulta disponibilidad por WhatsApp en Portoviejo, Manabí.`;
+const description = productMetaDescription(product, priceLabel(product));
 
 // Varios productos comparten el mismo nombre exacto (p. ej. 4 "Sillón de peluquería" sin código
 // ni modelo distinto en el nombre) — el <title> tiene que ser único aunque el nombre visible del
 // producto se mantenga igual, así que se desambigua con el precio solo cuando hace falta.
-const sameNameCount = muebles.filter((p) => p.name === product.name).length;
-const pageTitle = sameNameCount > 1 ? `${product.name} - ${priceLabel(product)}` : product.name;
+const pageTitle = uniqueProductTitle(
+  product,
+  muebles.filter((p) => p.name === product.name),
+);
 
 const optimizedImage = await getImage({ src: imageFor(product.image), width: 1200, fit: "inside" });
 const imageUrl = new URL(optimizedImage.src, siteConfig.url).toString();

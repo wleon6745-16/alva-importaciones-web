@@ -1,0 +1,33 @@
+---
+// Preguntas frecuentes visibles + el mismo contenido como FAQPage (JSON-LD). Google y los asistentes de IA
+// exigen que lo marcado en el dato estructurado este tambien visible en la pagina; por eso van juntos.
+import { faqSchema } from "../lib/structured-data";
+import type { Faq } from "../lib/faq";
+
+interface Props {
+  title?: string;
+  items: Faq[];
+  class?: string;
+}
+
+const { title = "Preguntas frecuentes", items, class: className = "" } = Astro.props;
+---
+
+{
+  items.length > 0 && (
+    <section class:list={["px-6 py-14", className]} aria-labelledby="faq-titulo">
+      <div class="mx-auto max-w-3xl">
+        <h2 id="faq-titulo" class="font-display text-2xl text-primary-900">{title}</h2>
+        <dl class="mt-8 space-y-6">
+          {items.map((faq) => (
+            <div>
+              <dt class="font-display text-lg text-primary-800">{faq.question}</dt>
+              <dd class="mt-2 text-ink-muted">{faq.answer}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+      <script type="application/ld+json" set:html={JSON.stringify(faqSchema(items))} />
+    </section>
+  )
+}

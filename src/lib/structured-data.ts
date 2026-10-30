@@ -1,16 +1,46 @@
-import { siteConfig } from "./site-config";
+import { siteConfig, canonicalPath } from "./site-config";
 import type { Product } from "../types/product";
 import type { StorefrontAvailability, StorefrontProductDetail } from "./storefront-product";
 import { showPrices } from "./price-visibility";
+import { plainDescription } from "./product-description";
 
 export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
+    // "Alva Import", "alvaimport"...: las otras formas en que nos nombran y buscan.
+    alternateName: [...siteConfig.alternateNames],
     url: siteConfig.url,
     logo: new URL("/brand/alva-icon-512.png", siteConfig.url).toString(),
+    description: siteConfig.description,
+    slogan: siteConfig.tagline,
+    areaServed: { "@type": "City", name: "Portoviejo" },
+    knowsAbout: [
+      "Muebles para salón de belleza",
+      "Camillas estéticas",
+      "Sillas de barbería",
+      "Insumos de uñas",
+      "Productos capilares",
+      "Maquillaje",
+      "Curso de uñas acrílicas en Portoviejo",
+    ],
     sameAs: [siteConfig.instagram],
+  };
+}
+
+/** Nombre del sitio para buscadores (Google lo usa en los resultados): marca + variantes. */
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteConfig.url}/#website`,
+    name: siteConfig.name,
+    alternateName: [...siteConfig.alternateNames],
+    url: siteConfig.url,
+    inLanguage: "es-EC",
+    publisher: { "@id": `${siteConfig.url}/#organization` },
   };
 }
 
@@ -146,7 +176,7 @@ export function storefrontProductSchema(
   };
 
   if (product.imageUrl) schema.image = [product.imageUrl];
-  if (product.shortDescription) schema.description = product.shortDescription;
+  if (product.shortDescription) schema.description = plainDescription(product.shortDescription);
   if (product.code) schema.sku = product.code;
   if (product.category?.label) schema.category = product.category.label;
 
@@ -225,7 +255,7 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: new URL(item.path, siteConfig.url).toString(),
+      item: new URL(canonicalPath(item.path), siteConfig.url).toString(),
     })),
   };
 }

@@ -6,7 +6,9 @@ import SectionReveal from "../components/SectionReveal.astro";
 import WhatsAppCTA from "../components/WhatsAppCTA.astro";
 import OmviqaCoursePage from "../components/OmviqaCoursePage.astro";
 import { getOmviqaEditorial, type OmviqaCourse } from "../lib/omviqa-editorial";
+import FaqSection from "../components/FaqSection.astro";
 import { courseSchema, breadcrumbSchema } from "../lib/structured-data";
+import { courseFaqs, businessFaqs } from "../lib/faq";
 import cursoImage from "../assets/products/hero/cat-curso.jpeg";
 
 const breadcrumbs = breadcrumbSchema([
@@ -18,6 +20,26 @@ const breadcrumbs = breadcrumbSchema([
 const [curso] = await getCollection("cursos");
 const omviqaCourses = await getOmviqaEditorial<OmviqaCourse>("course");
 const { title, description, intro, highlights, ctaLabel, ctaMessage } = curso.data;
+const faqs = [...(await courseFaqs()), ...businessFaqs()];
+
+// La gente busca "curso de uñas" + la ciudad: el titulo y la descripcion siempre lo dicen, venga el texto de la
+// coleccion o del admin de Omviqa (que a veces trae solo el nombre del programa).
+function conBusqueda(text: string, fallback: string, mustHave: RegExp, prefix: string): string {
+  const t = text || fallback;
+  return mustHave.test(t) ? t : `${prefix}${t}`;
+}
+const seoTitle = conBusqueda(
+  omviqaCourses?.items[0]?.payload.seo?.title || omviqaCourses?.items[0]?.payload.title || title,
+  title,
+  /curso\s+(profesional\s+)?de\s+u[ñn]as/i,
+  "Curso de uñas en Portoviejo: ",
+);
+const seoDescription = conBusqueda(
+  omviqaCourses?.items[0]?.payload.seo?.description || omviqaCourses?.items[0]?.payload.description || description,
+  description,
+  /portoviejo/i,
+  "Curso de uñas en Portoviejo con Alva Importaciones. ",
+);
 
 // Valor de un highlight por label -- para no repetir "$60 al mes" a mano en
 // el FAQ/badge cuando ya vive en highlights (misma fuente que la ficha).
@@ -30,8 +52,8 @@ const duracion = highlight("Duración");
 ---
 
 <BaseLayout
-  title={omviqaCourses?.items[0]?.payload.seo?.title || omviqaCourses?.items[0]?.payload.title || title}
-  description={omviqaCourses?.items[0]?.payload.seo?.description || omviqaCourses?.items[0]?.payload.description || description}
+  title={seoTitle}
+  description={seoDescription}
   path="/cursos"
   structuredData={[courseSchema(title, description), breadcrumbs]}
 >
@@ -213,4 +235,5 @@ const duracion = highlight("Duración");
     </SectionReveal>
   </>
   )}
+  <FaqSection items={faqs} />
 </BaseLayout>

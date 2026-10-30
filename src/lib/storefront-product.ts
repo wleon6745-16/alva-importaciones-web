@@ -18,6 +18,8 @@ export interface StorefrontProductDetail {
   publicPrice: number | null;
   currency: string;
   imageUrl: string | null;
+  /** Fotos adicionales, si Omviqa las publica (hoy el producto trae solo `imageUrl`). */
+  images?: string[] | null;
   shortDescription: string | null;
 }
 
