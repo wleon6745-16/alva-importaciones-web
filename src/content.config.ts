@@ -12,6 +12,8 @@ const products = defineCollection({
     category: z.enum(["muebles", "unas", "capilares", "maquillaje"]),
     subcategory: z.string().optional(),
     code: z.string().optional(),
+    // OBSOLETO: el precio NO se escribe a mano. Es del sistema SACC y llega por Omviqa (ver AGENTS.md). Se deja en el
+    // esquema solo para no romper fichas viejas; las fichas curadas no llevan precio y dicen "Consultar precio".
     price: z.number().optional(),
     currency: z.literal("USD").optional(),
     brand: z.string().optional(),

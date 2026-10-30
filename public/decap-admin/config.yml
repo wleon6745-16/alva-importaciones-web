@@ -69,14 +69,13 @@ collections:
     format: "json"
     slug: "{{fields.slug}}"
     identifier_field: "name"
-    summary: "{{name}} — {{price}}"
+    summary: "{{name}}"
     fields: &products-fields
       - { label: "Slug (URL, sin espacios ni tildes)", name: "slug", widget: "string", pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Solo minúsculas, números y guiones"], hint: "No cambiar en un producto ya publicado — cambiarlo mueve la página a otra dirección y rompe cualquier enlace ya compartido o indexado en Google." }
       - { label: "Nombre", name: "name", widget: "string" }
       - { label: "Categoría", name: "category", widget: "hidden", default: "muebles" }
       - { label: "Subcategoría", name: "subcategory", widget: "string", required: false }
       - { label: "Código", name: "code", widget: "string", required: false, hint: "Código interno del negocio. Cambiarlo solo si el producto real cambió de código." }
-      - { label: "Precio (USD)", name: "price", widget: "number", value_type: "float", required: false }
       - { label: "Moneda", name: "currency", widget: "hidden", default: "USD", required: false }
       - { label: "Marca", name: "brand", widget: "string", required: false }
       - { label: "Características", name: "features", widget: "list", field: { label: "Característica", name: "item", widget: "string" }, required: false }
@@ -98,7 +97,6 @@ collections:
       - { label: "Categoría", name: "category", widget: "hidden", default: "unas" }
       - { label: "Subcategoría", name: "subcategory", widget: "string", required: false }
       - { label: "Código", name: "code", widget: "string", required: false, hint: "Código interno del negocio. Cambiarlo solo si el producto real cambió de código." }
-      - { label: "Precio (USD)", name: "price", widget: "number", value_type: "float", required: false }
       - { label: "Moneda", name: "currency", widget: "hidden", default: "USD", required: false }
       - { label: "Marca", name: "brand", widget: "string", required: false }
       - { label: "Características", name: "features", widget: "list", field: { label: "Característica", name: "item", widget: "string" }, required: false }
@@ -120,7 +118,6 @@ collections:
       - { label: "Categoría", name: "category", widget: "hidden", default: "capilares" }
       - { label: "Subcategoría", name: "subcategory", widget: "string", required: false }
       - { label: "Código", name: "code", widget: "string", required: false, hint: "Código interno del negocio. Cambiarlo solo si el producto real cambió de código." }
-      - { label: "Precio (USD)", name: "price", widget: "number", value_type: "float", required: false }
       - { label: "Moneda", name: "currency", widget: "hidden", default: "USD", required: false }
       - { label: "Marca", name: "brand", widget: "string", required: false }
       - { label: "Características", name: "features", widget: "list", field: { label: "Característica", name: "item", widget: "string" }, required: false }
@@ -142,7 +139,6 @@ collections:
       - { label: "Categoría", name: "category", widget: "hidden", default: "maquillaje" }
       - { label: "Subcategoría", name: "subcategory", widget: "string", required: false }
       - { label: "Código", name: "code", widget: "string", required: false, hint: "Código interno del negocio. Cambiarlo solo si el producto real cambió de código." }
-      - { label: "Precio (USD)", name: "price", widget: "number", value_type: "float", required: false }
       - { label: "Moneda", name: "currency", widget: "hidden", default: "USD", required: false }
       - { label: "Marca", name: "brand", widget: "string", required: false }
       - { label: "Características", name: "features", widget: "list", field: { label: "Característica", name: "item", widget: "string" }, required: false }
