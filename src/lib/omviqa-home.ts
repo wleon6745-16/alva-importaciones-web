@@ -1,4 +1,5 @@
 import { storefrontBaseUrl } from "./storefront-config";
+import { storefrontApiUrl } from "./storefront-config";
 import type { NewProductItem } from "./new-products";
 
 export interface OmviqaHomeSection {
@@ -57,4 +58,20 @@ export async function getOmviqaHome(): Promise<OmviqaHomeResponse | null> {
   } catch {
     return null;
   }
+}
+
+export async function getOmviqaHomePreview(token: string): Promise<OmviqaHomeResponse> {
+  if (!storefrontApiUrl) throw new Error("La API de Omviqa no esta configurada.");
+  const base = storefrontApiUrl.replace(/\/+$/, "");
+  // Sin conexion (o sin permiso CORS porque el servidor aun no tiene la vista previa): mensaje claro, no "Failed to fetch".
+  const res = await fetch(`${base}/api/storefront/preview/home?token=${encodeURIComponent(token)}`, { cache: "no-store" }).catch(() => null);
+  if (!res) throw new Error("No se pudo conectar con Omviqa para cargar la vista previa. Intenta de nuevo en un momento.");
+  if (!res.ok) {
+    const data = await res.json().catch(() => ({}));
+    const message = typeof data.error === "string" ? data.error : "La vista previa no esta disponible.";
+    throw new Error(message);
+  }
+  const data = (await res.json()) as { home: OmviqaHomeResponse | null };
+  if (!data.home) throw new Error("La vista previa no tiene contenido.");
+  return data.home;
 }

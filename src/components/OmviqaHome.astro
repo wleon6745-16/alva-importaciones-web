@@ -43,6 +43,12 @@ function eyebrow(section: OmviqaHomeSection): string | null {
   return typeof section.eyebrow === "string" ? section.eyebrow : null;
 }
 
+function items(section: OmviqaHomeSection): Array<{ title?: string; detail?: string }> {
+  return Array.isArray(section.items)
+    ? section.items.filter((item): item is { title?: string; detail?: string } => typeof item === "object" && item !== null)
+    : [];
+}
+
 const sections = [...home.payload.sections].filter((section) => section.enabled).sort((a, b) => a.sortOrder - b.sortOrder);
 ---
 
@@ -173,6 +179,53 @@ const sections = [...home.payload.sections].filter((section) => section.enabled)
               {ctaLabel(section.cta) && <a href={ctaHref(section.cta)} class="mt-8 inline-flex items-center gap-2 rounded-full bg-primary-800 px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-primary-700">{ctaLabel(section.cta)}</a>}
             </div>
             <ChatDemo client:visible />
+          </div>
+        </section>
+      );
+    }
+
+    if (section.type === "featureStrip") {
+      const benefits = items(section);
+      return (
+        <section class="bg-primary-900 px-6 py-10 text-white">
+          <div class="mx-auto grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {benefits.map((item) => (
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <h3 class="font-display text-lg">{item.title}</h3>
+                {item.detail && <p class="mt-2 text-sm text-white/75">{item.detail}</p>}
+              </div>
+            ))}
+          </div>
+        </section>
+      );
+    }
+
+    if (section.type === "promo" || section.type === "course") {
+      const image = assetUrl(section);
+      const sectionSource = section.type === "course" ? "course" : "promotion";
+      return (
+        <section class="section-y px-6">
+          <div class="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
+            <div>
+              {eyebrow(section) && <p class="text-sm font-semibold uppercase tracking-[0.3em] text-primary-700">{eyebrow(section)}</p>}
+              <h2 class="mt-4 font-display text-3xl text-primary-900">{title(section)}</h2>
+              <p class="mt-5 text-ink-muted">{body(section)}</p>
+              {ctaLabel(section.cta) && (
+                <a href={ctaHref(section.cta)} class="mt-8 inline-flex rounded-full bg-primary-800 px-6 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-primary-700">
+                  {ctaLabel(section.cta)}
+                </a>
+              )}
+            </div>
+            {image && (
+              <img
+                src={image}
+                alt={typeof section.imageAlt === "string" ? section.imageAlt : title(section)}
+                class="aspect-[16/10] w-full rounded-3xl object-cover shadow-xl"
+                loading="lazy"
+                data-track-source={sectionSource}
+                data-track-page-type="home"
+              />
+            )}
           </div>
         </section>
       );
