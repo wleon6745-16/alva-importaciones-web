@@ -48,8 +48,15 @@ const endpoint = base ? `${base}/events` : null;
           }
         }
 
+        // Cada objeto se manda UNA vez, aunque pase varias veces por push.
+        var vistos = typeof WeakSet === "function" ? new WeakSet() : null;
+
         function puente(dato) {
           if (!dato || typeof dato !== "object" || !TIPOS[dato.event]) return;
+          if (vistos) {
+            if (vistos.has(dato)) return;
+            vistos.add(dato);
+          }
           var evento = { type: TIPOS[dato.event], page: location.pathname.slice(0, 200) };
           if (visitante) evento.visitorId = visitante;
           if (dato.product_code) evento.product = String(dato.product_code).slice(0, 80);
@@ -59,15 +66,31 @@ const endpoint = base ? `${base}/events` : null;
           enviar(evento);
         }
 
+        // EL BUCLE QUE ESTO EVITA. gtag.js guarda el `push` que encuentra (este
+        // envoltorio) y pone el suyo, que llama al guardado. Si el envoltorio
+        // llamaba entonces a `original` (el de gtag), se volvia a entrar una y
+        // otra vez y cada vuelta mandaba el evento: ~120 copias por clic, y el
+        // panel de ALVA decia 6.747 clics a WhatsApp en un mes cuando fueron 65.
+        // Ahora, si se entra estando dentro, se hace el push normal del arreglo
+        // y nada mas.
         var capa = (window.dataLayer = window.dataLayer || []);
+        var pushDelArreglo = Array.prototype.push;
         var original = capa.push;
+        var dentro = false;
+        function envoltorio() {
+          if (dentro) return pushDelArreglo.apply(capa, arguments);
+          dentro = true;
+          try {
+            for (var i = 0; i < arguments.length; i++) puente(arguments[i]);
+            return original.apply(capa, arguments);
+          } finally {
+            dentro = false;
+          }
+        }
         Object.defineProperty(capa, "push", {
           configurable: true,
           get: function () {
-            return function () {
-              for (var i = 0; i < arguments.length; i++) puente(arguments[i]);
-              return original.apply(capa, arguments);
-            };
+            return envoltorio;
           },
           set: function (nuevo) {
             original = nuevo;
