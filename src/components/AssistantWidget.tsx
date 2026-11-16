@@ -71,7 +71,9 @@ const MAX_HISTORY = 36;
 const AVISO_ASESORA_ID = "aviso-asesora";
 /** Cada cuanto se pregunta por lo que escribio la asesora, con el chat abierto. */
 const SONDEO_MS = 7000;
-const MAX_INPUT = 500;
+// 850 + el contexto de la ficha que se agrega al enviar cabe en los 1000 que
+// acepta Omviqa. Con 500 una lista de 25 productos de uñas se cortaba.
+const MAX_INPUT = 850;
 // Omviqa acepta 1000 caracteres por mensaje; la lista de cotizacion se arma con margen.
 const MAX_QUOTE_MESSAGE = 950;
 // Freno ante abuso casual (la proteccion real vive en el servidor): pausa minima entre
@@ -417,7 +419,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
 
   const store = useRef<Stored | null>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
   const launcherRef = useRef<HTMLButtonElement>(null);
   const contextSentFor = useRef<string | null>(null);
   const sendingRef = useRef(false);
@@ -628,6 +630,8 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
       setSending(true);
       setLastFailed(null);
       setInput("");
+      // El textarea crecio con la lista: vuelve a una linea.
+      if (inputRef.current) inputRef.current.style.height = "";
 
       const userMsg: UiMessage = { id: uuid(), role: "user", text: opts.display ?? text };
       setMessages((prev) => {
@@ -793,7 +797,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
     void send(input);
   }
 
-  function onKey(e: KeyboardEvent<HTMLInputElement>) {
+  function onKey(e: KeyboardEvent<HTMLTextAreaElement>) {
     if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) {
       e.preventDefault();
       void send(input);
@@ -964,16 +968,25 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
           <label className="aa-sr" htmlFor="aa-input">
             Escribe tu consulta
           </label>
-          <input
+          {/* textarea y no <input>: al pegar una lista en un <input> el
+              navegador borra los saltos de linea y Omviqa recibia los 22
+              productos de una clienta como si fueran uno solo. Enter envia;
+              Shift+Enter (o pegar) deja varias lineas. Crece hasta 5. */}
+          <textarea
             id="aa-input"
             ref={inputRef}
             className="aa-input"
-            type="text"
+            rows={1}
             value={input}
             maxLength={MAX_INPUT}
             autoComplete="off"
             placeholder="Escribe tu consulta…"
-            onChange={(e) => setInput(e.target.value)}
+            onChange={(e) => {
+              setInput(e.target.value);
+              const el = e.target;
+              el.style.height = "auto";
+              el.style.height = `${Math.min(el.scrollHeight, 132)}px`;
+            }}
             onKeyDown={onKey}
           />
           <button type="submit" className="aa-send" aria-label="Enviar mensaje" disabled={sending || !input.trim()}>

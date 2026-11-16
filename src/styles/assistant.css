@@ -204,12 +204,19 @@
 .aa-chip:hover:not(:disabled)::after { transform: translateX(3px); }
 .aa-chip:disabled { opacity: 0.6; cursor: not-allowed; }
 
-.aa-form { display: flex; gap: 0.5rem; padding: 0.75rem; border-top: 1px solid var(--aa-line); background: #fff; }
+.aa-form { display: flex; align-items: flex-end; gap: 0.5rem; padding: 0.75rem; border-top: 1px solid var(--aa-line); background: #fff; }
 .aa-input {
   flex: 1;
   min-width: 0;
   border: 1px solid #dcdce0;
-  border-radius: 999px;
+  /* Es un textarea: una linea se ve como antes (pildora) y crece al pegar
+     una lista. */
+  border-radius: 1.35rem;
+  resize: none;
+  overflow-y: auto;
+  max-height: 132px;
+  line-height: 1.35;
+  display: block;
   background: #fff;
   padding: 0.65rem 1rem;
   font: inherit;
