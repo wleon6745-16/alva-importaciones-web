@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useRef, useState, type FormEvent, type KeyboardEvent, type ReactNode } from "react";
 import { trackEvent } from "../lib/analytics";
-import { clearQuote, readQuote, useQuote } from "../lib/quote-list";
+import { addToQuote, buildAssistantMessage, clearQuote, readQuote, useQuote } from "../lib/quote-list";
+import { storefrontBaseUrl } from "../lib/storefront-config";
+import ListaGuiada, { type Eleccion, type RenglonLista } from "./ListaGuiada";
 import "../styles/assistant.css";
 
 // Asistente de Alva en la web: habla con el Web Channel de Omviqa (el mismo motor
@@ -99,7 +101,11 @@ const REQUEST_TIMEOUT_MS = 60_000;
 const WELCOME_TEXT =
   "¡Hola! Soy el asistente de Alva Importaciones. Te ayudo con productos, precios, stock, nuestros locales y el curso de uñas. ¿Qué necesitas?";
 
+// Chip que invita a pegar una lista: no se envia al asistente, explica como hacerlo.
+const CHIP_LISTA = "Cotizar mi lista de productos";
+
 const SUGGESTIONS = [
+  CHIP_LISTA,
   "¿Tienen camillas disponibles?",
   "Quiero precios de esmaltes y geles",
   "¿Dónde están sus locales y horarios?",
@@ -290,6 +296,14 @@ function spotlight(hash: string): boolean {
   return true;
 }
 
+// Tres renglones o mas es una lista. Tambien la que llega pegada en una sola
+// linea con espacios dobles (asi la dejaba el chat de una sola linea).
+function esLista(texto: string): boolean {
+  const lineas = texto.split(/\r?\n/).filter((l) => l.trim().length >= 2);
+  if (lineas.length >= 3) return true;
+  return lineas.length === 1 && (texto.match(/\S {2,}\S/g) ?? []).length >= 2;
+}
+
 const RICH = /(\*\*[^*\n]+\*\*|\*[^*\n]+\*|https?:\/\/[^\s<>"')]+)/g;
 
 // Texto del asistente -> nodos React (nunca HTML crudo): *negrita* al estilo WhatsApp y
@@ -414,6 +428,8 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
   // Una persona del negocio lleva la conversacion: el asistente esta callado y
   // lo que llegue lo escribe ella.
   const [atendidaPorPersona, setAtendidaPorPersona] = useState(false);
+  // Lista guiada en curso (ver ListaGuiada.tsx): no se guarda, es de esta visita.
+  const [lista, setLista] = useState<RenglonLista[] | null>(null);
   /** Fecha del ultimo mensaje ya mostrado: por ahi sigue la bandeja. */
   const cursorRef = useRef<string | null>(null);
 
@@ -493,6 +509,17 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
       else openPanel("cta");
     };
     window.addEventListener("alva:open-assistant", handler);
+    // Viene de "Pedir la proforma oficial" en la pagina de su cotizacion
+    // (?cotizacion=C-0042): se abre el chat y se pide la proforma, que toma
+    // el carrito de esa conversacion. Se quita del enlace para no repetirlo.
+    const cotizacion = new URLSearchParams(location.search).get("cotizacion");
+    if (cotizacion && /^C-\d{1,6}$/.test(cotizacion)) {
+      const url = new URL(location.href);
+      url.searchParams.delete("cotizacion");
+      history.replaceState(history.state, "", url.toString());
+      openPanel("cotizacion");
+      window.setTimeout(() => void sendRef.current?.(`Quiero la proforma de mi cotización ${cotizacion}`), 400);
+    }
     if (w2.__alvaPendingQuote) {
       sendQuote(w2.__alvaPendingQuote);
     } else if (w.__alvaOpenAssistant) {
@@ -792,9 +819,86 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
     }
   };
 
+  function agregarMensaje(m: Omit<UiMessage, "id">) {
+    setMessages((prev) => {
+      const next = [...prev, { ...m, id: uuid() }];
+      persist({ messages: next });
+      return next;
+    });
+  }
+
+  async function pedirOpciones(texto: string): Promise<RenglonLista[] | null> {
+    const base = storefrontBaseUrl();
+    if (!base) return null;
+    try {
+      const res = await fetch(`${base}/lista`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ texto }),
+        signal: AbortSignal.timeout(20_000),
+      });
+      if (!res.ok) return null;
+      const data = (await res.json()) as { renglones?: RenglonLista[] };
+      return Array.isArray(data.renglones) && data.renglones.length > 0 ? data.renglones : null;
+    } catch {
+      return null;
+    }
+  }
+
+  // UNA LISTA NO SE LE DA A ADIVINAR AL ASISTENTE: se muestran las opciones de
+  // cada renglon y elige la persona. Si Omviqa no responde, va como antes.
+  async function abrirListaGuiada(texto: string): Promise<boolean> {
+    if (!esLista(texto) || sendingRef.current) return false;
+    sendingRef.current = true;
+    setSending(true);
+    const renglones = await pedirOpciones(texto);
+    sendingRef.current = false;
+    setSending(false);
+    if (!renglones) return false;
+    setInput("");
+    if (inputRef.current) inputRef.current.style.height = "";
+    agregarMensaje({ role: "user", text: texto });
+    agregarMensaje({
+      role: "assistant",
+      text: `Encontré opciones para tu lista (${renglones.length} productos). Toca la que corresponde en cada uno, así no me confundo de marca ni de presentación. Si alguno no está, escríbelo de otra forma. Al terminar, pulsa *Agregar a mi cotización*.`,
+    });
+    setLista(renglones);
+    trackEvent("assistant_list", { lineas: renglones.length });
+    return true;
+  }
+
+  function confirmarLista(elegidos: Eleccion[]) {
+    for (const { opcion, cantidad } of elegidos) {
+      addToQuote({ id: opcion.publicProductId, code: opcion.code, name: opcion.name }, cantidad);
+    }
+    setLista(null);
+    const todo = readQuote();
+    void quoteRef.current?.({
+      items: todo.map((i) => ({ productId: i.id, quantity: i.qty, name: i.name })),
+      message: buildAssistantMessage(todo),
+      display: `Agregar ${elegidos.length} producto${elegidos.length === 1 ? "" : "s"} a mi cotización`,
+      proformaMessage: "Ver mi carrito con el total",
+    });
+  }
+
   function onSubmit(e: FormEvent) {
     e.preventDefault();
-    void send(input);
+    const texto = input;
+    void abrirListaGuiada(texto).then((guiada) => {
+      if (!guiada) void send(texto);
+    });
+  }
+
+  function onChip(s: string) {
+    if (s === CHIP_LISTA) {
+      agregarMensaje({
+        role: "assistant",
+        text: "Pega o escribe tu lista aquí abajo, un producto por renglón (con la cantidad si la sabes). Te muestro las opciones de cada uno para que elijas, y te armo la cotización con el total.",
+      });
+      inputRef.current?.focus({ preventScroll: true });
+      return;
+    }
+    void send(s);
   }
 
   function onKey(e: KeyboardEvent<HTMLTextAreaElement>) {
@@ -913,12 +1017,22 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
             </div>
           ))}
 
+          {lista && (
+            <ListaGuiada
+              renglones={lista}
+              ocupado={sending}
+              buscarOtraVez={async (t) => (await pedirOpciones(t))?.[0] ?? null}
+              confirmar={confirmarLista}
+              cancelar={() => setLista(null)}
+            />
+          )}
+
           {!hasUserMessage && (
             <>
               <p className="aa-chips-label">Preguntas frecuentes</p>
               <div className="aa-chips" aria-label="Preguntas sugeridas">
                 {ctx.suggestions.map((s) => (
-                  <button key={s} type="button" className="aa-chip" onClick={() => void send(s)} disabled={sending}>
+                  <button key={s} type="button" className="aa-chip" onClick={() => onChip(s)} disabled={sending}>
                     {s}
                   </button>
                 ))}

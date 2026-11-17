@@ -318,3 +318,32 @@
 @media (prefers-reduced-motion: reduce) {
   .aa-panel, .aa-launcher, .aa-teaser, .aa-spot, .aa-typing span { animation: none; transition: none; }
 }
+
+/* Lista guiada (ListaGuiada.tsx): un bloque por renglon de la lista, con sus
+   opciones para tocar. Pensado para el dedo: en el celular es donde mas se
+   pegan listas. */
+.aa-lista { display: flex; flex-direction: column; gap: 0.6rem; margin: 0.25rem 0 0.5rem; }
+.aa-lista-renglon { position: relative; border: 1px solid #e7e5e5; border-radius: 0.9rem; background: #fff; padding: 0.6rem 0.7rem 0.7rem; margin: 0; min-width: 0; }
+.aa-lista-renglon.aa-lista-hecho { border-color: var(--aa-primary); }
+.aa-lista-renglon legend { float: left; width: calc(100% - 6.5rem); padding: 0; font-size: 0.85rem; font-weight: 600; line-height: 1.3; overflow-wrap: anywhere; }
+.aa-lista-num { color: var(--aa-muted); font-weight: 500; }
+.aa-lista-cant { position: absolute; top: 0.45rem; right: 0.6rem; display: flex; align-items: center; gap: 0.2rem; font-size: 0.85rem; }
+.aa-lista-cant button { width: 1.7rem; height: 1.7rem; border: 1px solid #e7e5e5; border-radius: 999px; background: #fff; font: inherit; cursor: pointer; line-height: 1; }
+.aa-lista-cant span { min-width: 1.5rem; text-align: center; font-weight: 600; }
+.aa-lista-opciones { clear: both; display: flex; flex-direction: column; gap: 0.35rem; padding-top: 0.5rem; }
+.aa-lista-op { display: flex; align-items: center; gap: 0.55rem; width: 100%; text-align: left; border: 1px solid #ecebeb; border-radius: 0.7rem; background: var(--aa-soft); padding: 0.35rem 0.5rem; font: inherit; color: var(--aa-ink); cursor: pointer; }
+.aa-lista-op:hover { border-color: #d9d6d6; }
+.aa-lista-op-on { border-color: var(--aa-primary); background: #fff; box-shadow: inset 0 0 0 1px var(--aa-primary); }
+.aa-lista-op img, .aa-lista-sinfoto { flex: none; width: 44px; height: 44px; border-radius: 0.5rem; object-fit: cover; background: var(--aa-line); }
+.aa-lista-txt { display: flex; flex-direction: column; min-width: 0; }
+.aa-lista-nombre { font-size: 0.78rem; line-height: 1.3; overflow-wrap: anywhere; }
+.aa-lista-marca { font-size: 0.7rem; color: var(--aa-muted); }
+.aa-lista-nada { clear: both; margin: 0; padding-top: 0.45rem; font-size: 0.8rem; color: var(--aa-muted); }
+.aa-lista-otra { display: flex; gap: 0.35rem; margin-top: 0.45rem; }
+.aa-lista-otra input { flex: 1; min-width: 0; border: 1px solid #e7e5e5; border-radius: 999px; padding: 0.4rem 0.75rem; font: inherit; font-size: 0.78rem; }
+.aa-lista-otra button { border: 1px solid #e7e5e5; border-radius: 999px; background: #fff; padding: 0.35rem 0.7rem; font: inherit; font-size: 0.78rem; cursor: pointer; }
+.aa-lista-pie { position: sticky; bottom: 0; display: flex; gap: 0.5rem; padding: 0.5rem 0 0.25rem; background: linear-gradient(to bottom, transparent, var(--aa-soft) 30%); }
+.aa-lista-ok { flex: 1; border: 0; border-radius: 999px; background: var(--aa-primary); color: #fff; padding: 0.7rem 1rem; font: inherit; font-weight: 600; font-size: 0.85rem; cursor: pointer; }
+.aa-lista-ok:disabled { background: #d7d4d4; cursor: default; }
+.aa-lista-cancelar { border: 1px solid #e7e5e5; border-radius: 999px; background: #fff; padding: 0.7rem 0.9rem; font: inherit; font-size: 0.85rem; cursor: pointer; }
+.aa-lista-cambiar { margin-top: 0.35rem; border: 0; background: none; padding: 0; color: var(--aa-primary); font: inherit; font-size: 0.78rem; font-weight: 600; cursor: pointer; text-decoration: underline; }
