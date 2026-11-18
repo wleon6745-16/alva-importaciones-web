@@ -97,6 +97,7 @@ function takeQuota(): boolean {
   return true;
 }
 const REQUEST_TIMEOUT_MS = 60_000;
+const REPETIDO_MS = 8_000;
 
 const WELCOME_TEXT =
   "¡Hola! Soy el asistente de Alva Importaciones. Te ayudo con productos, precios, stock, nuestros locales y el curso de uñas. ¿Qué necesitas?";
@@ -105,7 +106,6 @@ const WELCOME_TEXT =
 const CHIP_LISTA = "Cotizar mi lista de productos";
 
 const SUGGESTIONS = [
-  CHIP_LISTA,
   "¿Tienen camillas disponibles?",
   "Quiero precios de esmaltes y geles",
   "¿Dónde están sus locales y horarios?",
@@ -256,7 +256,7 @@ function getPageContext(): PageContext {
     };
   }
   if (onHome) {
-    return { kind: "home", intro: null, suggestions: SUGGESTIONS, teaser: "¿Buscas algo en particular? Te ayudo a encontrarlo.", nav };
+    return { kind: "home", intro: null, suggestions: SUGGESTIONS, teaser: "¿Tienes una lista de productos? Pégala y te armo la cotización con el total.", nav };
   }
   return { kind: "other", intro: null, suggestions: SUGGESTIONS, teaser: "¿Necesitas ayuda? Estoy aquí.", nav };
 }
@@ -302,6 +302,18 @@ function esLista(texto: string): boolean {
   const lineas = texto.split(/\r?\n/).filter((l) => l.trim().length >= 2);
   if (lineas.length >= 3) return true;
   return lineas.length === 1 && (texto.match(/\S {2,}\S/g) ?? []).length >= 2;
+}
+
+// "Necesito un monomero mia secret, un builder de master y un esmalte linda":
+// en una linea, pero son tres productos. Puede serlo; lo decide lo que
+// encuentre el catalogo (dos o mas renglones con opciones).
+function puedeSerLista(texto: string): boolean {
+  if (texto.length > 4000 || texto.trim().length < 8) return false;
+  const partes = texto
+    .replace(/\be\s*(?:&|y)\s*a\b/gi, "E&A")
+    .split(/\s*[,;\n]\s*|\s+(?:y|e)\s+(?=\S)/i)
+    .filter((p) => p.trim().length >= 3);
+  return partes.length >= 2;
 }
 
 const RICH = /(\*\*[^*\n]+\*\*|\*[^*\n]+\*|https?:\/\/[^\s<>"')]+)/g;
@@ -637,7 +649,10 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
 
       // Reintentar un turno fallido (lastFailed) no cuenta como mensaje repetido.
       const retry = lastFailed === text;
-      if (!retry && (Date.now() - lastSendAt.current < MIN_GAP_MS || (!opts.quote && text === lastText.current))) return;
+      // El mismo texto solo se frena si llega de nuevo enseguida (doble toque).
+      // Despues es una respuesta valida: "1" para la opcion y "1" para la cantidad.
+      const desde = Date.now() - lastSendAt.current;
+      if (!retry && (desde < MIN_GAP_MS || (!opts.quote && text === lastText.current && desde < REPETIDO_MS))) return;
       if (!retry && !takeQuota()) {
         setMessages((prev) => [
           ...prev,
@@ -848,13 +863,17 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
   // UNA LISTA NO SE LE DA A ADIVINAR AL ASISTENTE: se muestran las opciones de
   // cada renglon y elige la persona. Si Omviqa no responde, va como antes.
   async function abrirListaGuiada(texto: string): Promise<boolean> {
-    if (!esLista(texto) || sendingRef.current) return false;
+    const segura = esLista(texto);
+    if ((!segura && !puedeSerLista(texto)) || sendingRef.current) return false;
     sendingRef.current = true;
     setSending(true);
     const renglones = await pedirOpciones(texto);
     sendingRef.current = false;
     setSending(false);
     if (!renglones) return false;
+    // Una frase con comas ("hola, tienen acetona?") no es una lista: hace
+    // falta que al menos dos renglones sean productos del catalogo.
+    if (!segura && renglones.filter((r) => r.opciones.length > 0).length < 2) return false;
     setInput("");
     if (inputRef.current) inputRef.current.style.height = "";
     agregarMensaje({ role: "user", text: texto });
@@ -881,21 +900,33 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
     });
   }
 
-  function onSubmit(e: FormEvent) {
-    e.preventDefault();
+  // Enter y el boton enviar hacen lo mismo: antes Enter mandaba la lista
+  // directo al asistente y nunca abria la lista guiada.
+  function enviarLoEscrito() {
     const texto = input;
+    if (!texto.trim() || sendingRef.current) return;
     void abrirListaGuiada(texto).then((guiada) => {
       if (!guiada) void send(texto);
     });
   }
 
+  function onSubmit(e: FormEvent) {
+    e.preventDefault();
+    enviarLoEscrito();
+  }
+
+  function empezarLista() {
+    trackEvent("assistant_list_start", {});
+    agregarMensaje({
+      role: "assistant",
+      text: "Escribe o pega tu lista aquí abajo: un producto por renglón, o separados por comas, con la cantidad si la sabes. Te muestro las opciones de cada uno para que elijas, y te armo la cotización con el total para descargarla en PDF.",
+    });
+    inputRef.current?.focus({ preventScroll: true });
+  }
+
   function onChip(s: string) {
     if (s === CHIP_LISTA) {
-      agregarMensaje({
-        role: "assistant",
-        text: "Pega o escribe tu lista aquí abajo, un producto por renglón (con la cantidad si la sabes). Te muestro las opciones de cada uno para que elijas, y te armo la cotización con el total.",
-      });
-      inputRef.current?.focus({ preventScroll: true });
+      empezarLista();
       return;
     }
     void send(s);
@@ -904,7 +935,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
   function onKey(e: KeyboardEvent<HTMLTextAreaElement>) {
     if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) {
       e.preventDefault();
-      void send(input);
+      enviarLoEscrito();
     }
   }
 
@@ -966,7 +997,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
         <span className="aa-launcher-label">Pregúntale al asistente</span>
       </button>
 
-      <section id="aa-panel" className="aa-panel" role="dialog" aria-label="Asistente de Alva Importaciones" hidden={!open}>
+      <section id="aa-panel" className={`aa-panel${lista ? " aa-panel-lista" : ""}`} role="dialog" aria-label="Asistente de Alva Importaciones" hidden={!open}>
         <header className="aa-head">
           <img className="aa-avatar" src="/brand/alva-icon-96.png" alt="" width="36" height="36" />
           <div className="aa-head-text">
@@ -1027,6 +1058,22 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
             />
           )}
 
+          {!hasUserMessage && !lista && (
+            <button type="button" className="aa-cotizar" onClick={empezarLista} disabled={sending}>
+              <span className="aa-cotizar-icono" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1Z" />
+                  <path d="M8 6H6.5A1.5 1.5 0 0 0 5 7.5v12A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 17.5 6H16" />
+                  <path d="m8.5 13 2 2 4-4.5" />
+                </svg>
+              </span>
+              <span className="aa-cotizar-txt">
+                <strong>Cotiza tu lista de productos</strong>
+                <span>Escríbela como quieras, eliges cada producto y recibes el total en PDF.</span>
+              </span>
+            </button>
+          )}
+
           {!hasUserMessage && (
             <>
               <p className="aa-chips-label">Preguntas frecuentes</p>
@@ -1040,7 +1087,7 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
             </>
           )}
 
-          {ctx.nav.length > 0 && (
+          {ctx.nav.length > 0 && !lista && (
             <>
               <p className="aa-chips-label">Te llevo a</p>
               <div className="aa-nav" aria-label="Ir a una sección">
@@ -1076,6 +1123,19 @@ export default function AssistantWidget({ endpoint, whatsappUrl }: Props) {
           <p className="aa-estado-asesora" role="status">
             Te atiende una asesora. Lo que escribas le llega directamente.
           </p>
+        )}
+
+        {/* Ya conversando, la tarjeta de arriba no se ve: queda este acceso
+            corto encima del cuadro de texto. */}
+        {hasUserMessage && !lista && (
+          <button type="button" className="aa-cotizar-mini" onClick={empezarLista} disabled={sending}>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M9 4h6v2H9z" />
+              <path d="M8 5H6.5A1.5 1.5 0 0 0 5 6.5v13A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 17.5 5H16" />
+              <path d="m8.5 13 2 2 4-4.5" />
+            </svg>
+            Cotizar una lista de productos
+          </button>
         )}
 
         <form className="aa-form" onSubmit={onSubmit}>

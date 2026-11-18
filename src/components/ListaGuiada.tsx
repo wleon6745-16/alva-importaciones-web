@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // LA CLIENTA ELIGE; EL ASISTENTE NO ADIVINA.
 //
@@ -78,8 +78,26 @@ export default function ListaGuiada({ renglones: iniciales, ocupado, buscarOtraV
     if (elegidos.length > 0) confirmar(elegidos);
   }
 
+  const listos = elegido.filter(Boolean).length;
+
+  // Al abrirse, se empieza por el primer renglon (el chat bajaba al final).
+  const raiz = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const t = window.setTimeout(() => raiz.current?.scrollIntoView({ block: "start" }), 60);
+    return () => window.clearTimeout(t);
+  }, []);
+
   return (
-    <div className="aa-lista" aria-label="Elige los productos de tu lista">
+    <div ref={raiz} className="aa-lista" aria-label="Elige los productos de tu lista">
+      <div className="aa-lista-cabeza">
+        <strong>Tu lista</strong>
+        <span>
+          {listos} de {renglones.length} elegido{renglones.length === 1 ? "" : "s"}
+        </span>
+        <span className="aa-lista-barra" aria-hidden="true">
+          <span style={{ width: `${renglones.length ? Math.round((listos / renglones.length) * 100) : 0}%` }} />
+        </span>
+      </div>
       {renglones.map((r, i) => (
         <fieldset key={i} className={`aa-lista-renglon${elegido[i] ? " aa-lista-hecho" : ""}`}>
           <legend>
